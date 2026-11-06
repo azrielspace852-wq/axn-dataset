@@ -1,146 +1,129 @@
 =========================================================
-  PENGERTIAN HEWAN  : BUAYA
+  PENGERTIAN        : JSONL (jsonl)
   PENULIS           : AZRIEL
   TANGGAL           : 04-2026-November
-  DESKRIPSI         : pengertian hewan buaya (BUAYA), jenis jenis nya,
-                      habitat nya, makanan nya, dan lain lain
+  DESKRIPSI         : pengertian bahasa pemrograman jsonl (JSONL),
+                      contoh contoh bahasa nya, kegunaan nya, kelebihan
+                      dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi, perbedaan
+                      dengan JSON (json)
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
 =========================================================
 
 1. PENGERTIAN UMUM
-Buaya adalah sebutan untuk reptil besar semiakuatik dari famili Crocodylidae, yang dalam bahasa Inggris disebut “true crocodiles” untuk membedakannya dari aligator, kaiman, dan gharial [reference:0]. Dalam pengertian yang lebih luas, istilah “buaya” kadang dipakai untuk merujuk pada seluruh anggota ordo Crocodilia, tetapi secara ilmiah “buaya sejati” hanya mencakup famili Crocodylidae [reference:1].
+JSONL adalah singkatan dari JSON Lines, sebuah format teks untuk menyimpan data terstruktur di mana setiap baris berisi satu nilai JSON yang lengkap dan mandiri, biasanya berupa objek. Format ini juga dikenal dengan nama NDJSON (Newline-Delimited JSON) atau LDJSON (Line-Delimited JSON). JSONL bukanlah bahasa pemrograman, melainkan konvensi format data yang memanfaatkan sintaks JSON sebagai blok bangunannya.
 
-Buaya merupakan hewan purba yang telah ada sejak zaman dinosaurus dan hanya sedikit berubah secara morfologis akibat evolusi [reference:2]. Meskipun demikian, buaya bukanlah reptil primitif dalam arti biologis: buaya memiliki korteks serebral dan jantung beruang empat, ciri yang jauh lebih kompleks dibandingkan kebanyakan reptil lain [reference:3]. Buaya juga berkerabat lebih dekat dengan burung dan dinosaurus daripada dengan kebanyakan hewan yang secara umum disebut reptil [reference:4].
+Perbedaan paling fundamental antara JSONL dan JSON biasa terletak pada cara data disusun. Jika JSON membungkus seluruh kumpulan record dalam satu array besar `[{...}, {...}]` atau satu objek tunggal, JSONL meletakkan setiap record sebagai objek JSON mandiri di barisnya sendiri, dipisahkan oleh karakter newline (`\n`). Karena setiap baris berdiri sendiri, file JSONL secara keseluruhan **bukanlah** dokumen JSON yang valid. Namun, justru sifat inilah yang membuat JSONL sangat kuat untuk pemrosesan data secara streaming dan berskala besar.
 
-Buaya memiliki peran penting dalam ekosistem sebagai predator puncak di perairan tropis dan subtropis. Namun, beberapa spesies buaya menghadapi risiko kepunahan akibat perburuan, perdagangan kulit, dan kerusakan habitat [reference:5].
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+JSONL tidak lahir dari satu momen "penemuan" tunggal, melainkan muncul secara organik dari kebutuhan praktis para pengembang dalam menangani data JSON yang besar. Sintaks JSON sendiri dispesifikasikan oleh Douglas Crockford pada 2001, dan pada 2005–2006 popularitasnya meledak berkat AJAX. Namun, seiring pertumbuhan data log dan pipeline, muncul masalah: array JSON konvensional harus diurai seluruhnya sebelum pemrosesan dapat dimulai, yang tidak praktis untuk data berukuran gigabyte.
 
-2. KLASIFIKASI ILMIAH
-Klasifikasi buaya sejati (famili Crocodylidae) adalah sebagai berikut:
-- Kingdom      : Animalia
-- Filum        : Chordata
-- Kelas        : Reptilia
-- Ordo         : Crocodilia
-- Famili       : Crocodylidae
-- Genus        : Crocodylus, Osteolaemus, Mecistops
-- Spesies umum : Crocodylus porosus (buaya muara), Crocodylus siamensis (buaya Siam), Crocodylus novaeguineae (buaya Irian), Crocodylus niloticus (buaya Nil), Crocodylus acutus (buaya Amerika), Crocodylus palustris (buaya rawa), Crocodylus johnstoni (buaya air tawar Australia), Crocodylus mindorensis (buaya Filipina)
+Sekitar 2010–2011, beberapa pengembang secara independen sampai pada solusi yang sama: menempatkan satu objek JSON per baris. Implementasi awal muncul di berbagai komunitas, termasuk implementasi pada bahasa Go yang menggunakan JSON terpisah newline pada April 2010. Format ini kemudian diberi nama yang berbeda-beda di setiap komunitas, seperti JSON Lines, NDJSON, dan LDJSON, sebelum akhirnya "JSON Lines" menjadi nama yang paling luas diadopsi.
 
-Famili Crocodylidae berisi sekitar 16 spesies buaya sejati yang terbagi dalam tiga genus: Crocodylus, Osteolaemus, dan Mecistops [reference:6]. Genus Crocodylus adalah yang paling besar dan mencakup sebagian besar spesies buaya yang dikenal, termasuk buaya muara, buaya Siam, buaya Irian, dan buaya Nil [reference:7].
+Situs web jsonlines.org diluncurkan pada 2013 dan menjadi titik rujukan tidak resmi untuk format ini. Spesifikasi NDJSON yang terpisah di GitHub juga dibuat pada 2013, dengan versi 1.0.0 yang diberi tanggal 19 Oktober 2014 dan tidak direvisi sejak saat itu.
 
-Perlu dicatat bahwa “buaya” dalam pengertian sehari-hari di Indonesia sering kali juga mencakup buaya sepit atau senyulong (Tomistoma schlegelii), yang secara taksonomi termasuk famili Gavialidae, bukan Crocodylidae [reference:8]. Namun, dalam dokumen ini fokus utama diberikan pada buaya sejati, dengan pembahasan perbedaan terhadap kerabat dekatnya pada bagian tersendiri.
+Asal Negara: Tidak dapat dikaitkan dengan satu negara tertentu karena format ini muncul secara terdesentralisasi di komunitas pengembang global. Namun, komunitas yang mempopulerkannya terutama berasal dari ekosistem pengembangan perangkat lunak berbahasa Inggris.
+Tahun Diciptakan: Sekitar 2010–2013 (muncul organik), dengan jsonlines.org dan spesifikasi NDJSON resmi pada 2013.
 
-3. CIRI-CIRI MORFOLOGI
-Buaya sejati memiliki ciri morfologi yang khas dan membedakannya dari kerabat dekatnya:
-- Tubuh besar dan berat, dengan panjang bervariasi dari sekitar 1,5 meter hingga lebih dari 6 meter tergantung spesies. Buaya muara (C. porosus) adalah spesies terbesar dan dapat mencapai panjang 5–7 meter dengan bobot melebihi satu ton [reference:9][reference:10].
-- Moncong berbentuk huruf V yang lebih sempit dan memanjang, berbeda dari aligator dan kaiman yang bermoncong lebih lebar dan berbentuk huruf U [reference:11][reference:12].
-- Rahang atas dan bawah memiliki lebar yang sama, sehingga gigi-gigi rahang bawah terlihat di sisi luar rahang atas ketika mulut tertutup. Gigi keempat dari depan pada rahang bawah berukuran sangat besar dan menonjol [reference:13][reference:14].
-- Kulit bersisik tebal dengan osteoderm (lempeng tulang) di bagian punggung yang berfungsi sebagai perisai.
-- Empat kaki pendek dan kokoh; kaki belakang memiliki selaput renang yang lebih lebar dibandingkan aligator, membantu buaya berenang dan menoleransi air asin [reference:15].
-- Kelenjar garam pada lidah yang berfungsi menyaring kelebihan garam, memungkinkan buaya sejati bertahan di lingkungan air asin—kemampuan yang tidak dimiliki aligator karena kelenjar serupa tidak berfungsi pada famili Alligatoridae [reference:16][reference:17].
-- Mata dengan pupil vertikal dan adaptasi penglihatan malam yang baik.
-- Tidak memiliki kelenjar keringat; buaya melepaskan panas melalui mulutnya dan sering tidur dengan mulut terbuka [reference:18].
+3. VERSI DAN STANDARDISASI
+JSONL tidak memiliki sistem versi seperti bahasa pemrograman atau perangkat lunak. Format ini adalah konvensi terbuka yang bersifat de facto, bukan standar formal yang disahkan oleh badan seperti ISO atau IETF.
 
-4. HABITAT DAN PENYEBARAN
-Buaya sejati hidup di wilayah tropis dan subtropis di Afrika, Asia, Amerika, dan Australia [reference:19]. Mereka adalah hewan semiakuatik yang menghuni berbagai tipe perairan, mulai dari sungai, danau, rawa, lahan basah, hingga perairan payau dan air asin [reference:20].
+Terdapat dua spesifikasi komunitas yang utama:
+- JSON Lines (jsonlines.org, 2013): Spesifikasi ini bersifat tidak berversi (unversioned) dan mendefinisikan tiga aturan inti: encoding UTF-8, setiap baris harus berupa nilai JSON yang valid, dan pemisah baris adalah `\n`. Ekstensi file yang disarankan adalah `.jsonl`, dan MIME type `application/jsonl` disarankan meskipun belum terstandardisasi secara formal.
+- NDJSON (github.com/ndjson/ndjson-spec, 2013–2014): Spesifikasi ini memiliki nomor versi 1.0.0 (19 Oktober 2014). Perbedaan teknis kecil dengan JSON Lines adalah NDJSON secara eksplisit mengizinkan pembaca untuk melewati baris kosong, sedangkan jsonlines.org tidak menyebutkan aturan tersebut secara eksplisit. Ekstensi yang umum adalah `.ndjson` dan MIME type `application/x-ndjson`.
 
-Beberapa spesies memiliki toleransi yang sangat luas terhadap salinitas. Buaya muara (C. porosus), misalnya, mampu hidup di air tawar, air payau, dan air laut, serta dapat berenang jauh dari daratan [reference:21][reference:22]. Kemampuan ini didukung oleh kelenjar garam pada lidahnya [reference:23]. Spesies lain seperti buaya Siam lebih menyukai perairan tawar dengan arus lambat seperti rawa, sungai dataran rendah, dan danau [reference:24]. Buaya Irian juga lebih menyukai habitat air tawar di sungai, rawa, dan danau pedalaman Papua [reference:25].
+Dalam praktiknya, JSONL dan NDJSON merujuk pada format yang sama dan digunakan secara bergantian. Tidak ada "JSONL 2.0" atau pembaruan versi tahunan karena sintaksnya sengaja dibuat minimalis dan stabil.
 
-Selain perairan, buaya juga memanfaatkan habitat darat untuk berjemur, bersarang, dan berpindah. Tanah kering di tepi perairan digunakan untuk mengatur suhu tubuh, sementara vegetasi tepi air mendukung pembuatan sarang dan tempat berlindung .
+4. SINTAKS DAN CONTOH
+Aturan JSONL sangat sederhana: satu nilai JSON per baris fisik, tanpa array pembungkus luar, tanpa koma di antara baris, dan tanpa komentar. Setiap baris harus dapat diurai secara independen oleh parser JSON standar.
 
-5. MAKANAN DAN CARA MAKAN
-Buaya sejati adalah karnivora dan predator penyergap (ambush predator), bukan pemburu aktif yang mengejar mangsa dalam jarak jauh [reference:27]. Strategi utamanya adalah menunggu mangsa mendekat, lalu menyergap dengan gerakan cepat dan rahang yang sangat kuat.
+a. Contoh Dasar: Tiga Record Independen
+```jsonl
+{"id": 1, "nama": "Azriel", "kota": "Jakarta"}
+{"id": 2, "nama": "Budi", "kota": "Bandung"}
+{"id": 3, "nama": "Citra", "kota": "Surabaya"}
+```
 
-Makanan buaya sangat bervariasi tergantung pada spesies, ukuran tubuh, dan usia:
-- Buaya dewasa memangsa ikan, kepiting, reptil, burung, dan mamalia [reference:28].
-- Buaya muda memakan hewan yang lebih kecil seperti kepiting mangrove dan udang [reference:29].
-- Buaya muara dikenal sebagai predator oportunistik yang mampu memakan hampir semua hewan yang dapat ditaklukkannya, termasuk mamalia besar, burung, reptil, dan ikan [reference:30].
-- Buaya Siam memakan invertebrata, katak, reptil, burung, mamalia, dan kadang bangkai [reference:31].
-- Buaya Irian memiliki makanan yang beragam, memangsa hewan apa pun yang dapat ditangkap di habitatnya [reference:32].
+Setiap baris di atas adalah objek JSON yang valid. Jika Anda mengambil satu baris saja dan memberikannya ke parser JSON, ia akan berhasil. Namun, jika Anda memberikan seluruh file tiga baris tersebut ke parser JSON standar sebagai satu dokumen, parser akan gagal pada baris kedua karena tidak mengharapkan nilai JSON tambahan setelah objek pertama.
 
-Buaya liar umumnya mencari makan pada malam hari ketika suhu lingkungan menurun [reference:33]. Frekuensi dan preferensi makan dipengaruhi oleh suhu, salinitas, dan tipe habitat [reference:34].
+b. Contoh dengan Tipe Data Beragam per Baris
+JSONL tidak mengharuskan semua baris memiliki "bentuk" yang sama. Setiap baris dapat berisi tipe JSON apa pun—objek, array, string, angka, boolean, atau null—selama itu adalah nilai JSON yang valid.
 
-6. PERILAKU DAN ADAPTASI
-Buaya memiliki sejumlah perilaku dan adaptasi yang menunjang kehidupannya sebagai predator puncak:
-- Ektoterm: suhu tubuh bergantung pada lingkungan. Buaya berjemur di bawah sinar matahari untuk menghangatkan tubuh dan berlindung di air atau liang saat suhu terlalu tinggi atau rendah.
-- Teritorial: buaya dewasa, terutama jantan, mempertahankan wilayah jelajahnya. Individu dapat menjaga tempat berjemur, situs bersarang, area makan, dan lokasi pembesaran anak .
-- Agresif: buaya sejati memiliki tingkat agresivitas yang lebih tinggi dibandingkan aligator [reference:36]. Buaya muara dan buaya Nil adalah dua spesies yang paling berbahaya bagi manusia [reference:37].
-- Sensitif terhadap dingin: berbeda dari aligator yang lebih toleran terhadap suhu dingin, buaya sejati sangat sensitif terhadap dingin [reference:38].
-- Kemampuan memanjat: beberapa spesies buaya air tawar dilaporkan mampu memanjat pohon untuk berjemur di area yang minim garis pantai [reference:39].
-- Komunikasi dan interaksi sosial: meskipun sering dianggap menyendiri, buaya memiliki interaksi sosial yang kompleks, terutama selama musim kawin dan pengasuhan anak.
+```jsonl
+{"event": "login", "user": "azriel", "timestamp": "2026-11-04T10:00:00Z"}
+{"event": "purchase", "user": "azriel", "amount": 150000, "items": ["buku", "pulpen"]}
+{"event": "logout", "user": "azriel", "timestamp": "2026-11-04T10:05:00Z"}
+```
 
-7. REPRODUKSI DAN DAUR HIDUP
-Buaya berkembang biak secara ovipar atau bertelur. Beberapa aspek penting reproduksinya, dengan buaya muara sebagai contoh yang paling banyak diteliti:
-- Kematangan seksual: buaya muara betina mulai berkembang biak pada usia sekitar 10 tahun, sedangkan jantan pada usia sekitar 15 tahun [reference:40].
-- Musim bertelur: buaya muara betina bertelur pada awal musim hujan, tetapi musim kawin dan bersarang dapat dipengaruhi oleh kondisi lingkungan dan iklim mikro [reference:41].
-- Jumlah telur: sangat bervariasi, antara 10–75 butir, dengan rata-rata 22–44 butir [reference:42].
-- Masa inkubasi: sekitar 78–114 hari, dengan rata-rata sekitar 90 hari [reference:43].
-- Panjang anakan saat menetas: sekitar 20–37 cm [reference:44].
-- Sarang: dibuat dari material organik seperti pelepah pisang, glagah, ranting, semak, dan dedaunan kering, di area yang relatif tidak terpengaruh pasang-surut [reference:45].
-- Tingkat kelangsungan hidup: sangat rendah; diperkirakan kurang dari 1% buaya yang menetas mampu bertahan hingga dewasa dan berkembang biak [reference:46].
-- Umur: buaya muara dapat hidup hingga 60–80 tahun, dengan masa reproduksi potensial antara usia 25–30 tahun [reference:47].
+c. Contoh untuk Log Aplikasi (Skenario Umum)
+JSONL sangat ideal untuk log terstruktur. Setiap entri log adalah satu baris mandiri, sehingga alat seperti grep dapat mencari pola tertentu tanpa harus mengurai seluruh file.
 
-8. JENIS-JENIS BUAYA YANG UMUM
-a. Buaya Muara (Crocodylus porosus)
-Spesies buaya terbesar di dunia, dengan panjang mencapai 5–7 meter dan bobot lebih dari satu ton [reference:48]. Habitatnya sangat luas, mencakup air tawar, payau, dan air asin, mulai dari pantai timur India, Asia Tenggara, Sundaland, hingga Australia utara dan Mikronesia [reference:49]. Di Indonesia, buaya muara tersebar hampir di seluruh wilayah, dari Sabang hingga Merauke [reference:50]. Spesies ini dikenal paling agresif dan berbahaya bagi manusia [reference:51].
+```jsonl
+{"level": "INFO", "service": "api", "message": "Server started", "port": 8080}
+{"level": "WARN", "service": "api", "message": "High memory usage", "usage_mb": 850}
+{"level": "ERROR", "service": "api", "message": "Database timeout", "retry": 3}
+```
 
-b. Buaya Siam (Crocodylus siamensis)
-Buaya berukuran sedang yang hidup di perairan tawar dengan arus lambat seperti rawa, sungai dataran rendah, dan danau [reference:52]. Populasinya tersebar di Indonesia (Kalimantan, mungkin Jawa), Brunei, Malaysia Timur, Laos, Kamboja, Myanmar, Thailand, dan Vietnam [reference:53]. Status konservasinya sangat memprihatinkan: IUCN mengklasifikasikannya sebagai Critically Endangered (Kritis), dengan perkiraan populasi liar global kurang dari 1.000 individu [reference:54][reference:55].
+Aturan ketat yang perlu diperhatikan: setiap record harus berada pada satu baris fisik. JSON yang di-pretty-print (multi-baris dengan indentasi) tidak diizinkan dalam JSONL. Jika sebuah string mengandung karakter newline, karakter tersebut harus di-escape sebagai \n agar tidak memecah record menjadi beberapa baris.
 
-c. Buaya Irian (Crocodylus novaeguineae)
-Buaya endemik Pulau Papua (Indonesia dan Papua Nugini), hidup di perairan tawar pedalaman seperti sungai, rawa, dan danau [reference:56][reference:57]. Ukuran tubuhnya lebih kecil dibandingkan buaya muara: jantan mencapai sekitar 3,35–3,5 meter, betina sekitar 2,65–2,9 meter [reference:58][reference:59]. Spesies ini baru ditemukan secara ilmiah pada tahun 1928 [reference:60].
+5. KEGUNAAN JSONL
+   JSONL dirancang untuk mengatasi keterbatasan JSON dalam skenario data besar dan streaming. Kegunaan utamanya meliputi:
 
-d. Buaya Kalimantan (Crocodylus raninus)
-Spesies yang keberadaannya masih diperdebatkan; diketahui dari Kalimantan Barat dan Selatan, dengan ciri yang mirip buaya air tawar tetapi memiliki beberapa perbedaan [reference:61].
+· Log Aplikasi dan Log Terstruktur: Setiap entri log ditulis sebagai satu baris JSON. Ini memungkinkan log untuk ditambahkan (append) secara terus-menerus tanpa mengubah struktur file, serta memudahkan pencarian dengan alat baris-perintah.
+· Dataset Machine Learning: Dataset pelatihan sering kali terdiri dari jutaan record. JSONL memungkinkan data dimuat secara batch (mini-batch) selama pelatihan tanpa harus memuat seluruh dataset ke dalam memori.
+· Ekspor dan Impor Data Besar: Sistem basis data dan layanan cloud menggunakan JSONL untuk mengekspor data dalam jumlah besar karena file dapat diproses secara paralel dan dipecah menjadi bagian-bagian kecil.
+· Event Streaming dan Message Passing: Dalam arsitektur microservices dan sistem antrean pesan, JSONL menyediakan cara sederhana untuk mengirim aliran objek JSON melalui koneksi TCP atau pipe.
+· Pipeline Data dan ETL: Alat seperti Apache Spark, Pandas (via read_json(lines=True)), dan berbagai framework pemrosesan data mendukung pembacaan JSONL secara native karena setiap baris dapat diproses secara independen.
 
-e. Buaya Sahul (Crocodylus sp. nov.)
-Spesies yang menyebar terbatas di sebelah selatan Papua, sementara buaya Irian mendiami sebelah utara pegunungan tengah [reference:62].
+6. KELEBIHAN DAN KEKURANGAN JSONL
 
-f. Buaya Sepit / Senyulong (Tomistoma schlegelii)
-Meskipun bukan buaya sejati (famili Gavialidae), spesies ini penting disebut karena hidup di Indonesia, terutama Sumatra dan Kalimantan [reference:63][reference:64]. Moncongnya sangat panjang dan ramping, dan makanan utamanya adalah ikan [reference:65].
+Kelebihan JSONL:
 
-Di luar Indonesia, spesies buaya sejati yang penting meliputi buaya Nil (C. niloticus) di Afrika, buaya Amerika (C. acutus) di Amerika Tengah dan Selatan, buaya rawa (C. palustris) di Asia Selatan, buaya air tawar Australia (C. johnstoni), dan buaya Filipina (C. mindorensis) [reference:66].
+· Streamable Sejati: Setiap baris dapat diurai segera setelah dibaca. Program tidak perlu menunggu seluruh file selesai diunduh atau dibaca untuk mulai memproses record pertama.
+· Ramah Append (Append-Only): Menambahkan record baru cukup dengan menulis satu baris baru di akhir file. Tidak perlu mengurai ulang atau menulis ulang seluruh file seperti pada array JSON.
+· Isolasi Kesalahan (Error Isolation): Jika satu baris rusak atau tidak valid, hanya record pada baris tersebut yang hilang. Baris-baris lain tetap dapat diproses. Pada JSON array, satu kesalahan sintaks dapat menggagalkan seluruh dokumen.
+· Hemat Memori: Karena diproses per baris, JSONL tidak memerlukan memori sebesar ukuran file. Ini memungkinkan pemrosesan file berukuran gigabyte pada mesin dengan RAM terbatas.
+· Kompatibel dengan Alat Baris (Line-Oriented Tools): JSONL bekerja sangat baik dengan alat Unix standar seperti grep, awk, sed, head, tail, dan split, karena setiap record adalah satu baris teks.
+· Mudah Dipecah (Splittable): File JSONL dapat dipecah menjadi beberapa bagian untuk diproses secara paralel oleh beberapa worker tanpa perlu memahami struktur global.
 
-9. PERBEDAAN DENGAN “SAUDARA-SAUDARANYA” (KERABAT DEKAT)
-Buaya sering dikelirukan dengan aligator, kaiman, dan gharial. Meskipun semuanya termasuk ordo Crocodilia, mereka berasal dari famili yang berbeda dan memiliki perbedaan morfologi, fisiologi, dan perilaku yang khas.
+Kekurangan JSONL:
 
-a. Buaya Sejati (Famili Crocodylidae) vs Aligator dan Kaiman (Famili Alligatoridae)
-Perbedaan paling mencolok terletak pada bentuk moncong dan susunan gigi. Buaya sejati memiliki moncong yang lebih sempit dan memanjang dengan bentuk menyerupai huruf V, sedangkan aligator dan kaiman memiliki moncong yang lebih lebar dan membulat menyerupai huruf U [reference:67][reference:68].
+· Bukan JSON yang Valid Secara Keseluruhan: File JSONL tidak dapat langsung diberikan ke parser JSON standar sebagai satu dokumen. Ini dapat membingungkan pengguna atau alat yang mengharapkan JSON konvensional.
+· Tidak Ada Metadata Tingkat Atas: JSONL tidak memiliki tempat alami untuk menyimpan metadata global, seperti skema, versi, atau informasi tentang kumpulan data. Setiap baris harus mandiri atau metadata harus disimpan di file terpisah.
+· Tidak Ada Skema Bawaan: Karena setiap baris independen, tidak ada jaminan bahwa semua record memiliki bentuk yang sama. Validasi konsistensi data harus dilakukan secara manual atau dengan alat tambahan.
+· Tidak Ada Pretty-Printing: Setiap record harus berada pada satu baris fisik, sehingga JSONL tidak ramah untuk dibaca manusia dalam arti format yang diindentasi. Keterbacaan lebih rendah dibandingkan JSON yang di-pretty-print.
+· Risiko "Drift" Bentuk Data: Seiring waktu, record dalam file JSONL dapat berubah bentuk (misalnya, penambahan field baru) tanpa ada mekanisme yang mencegahnya, sehingga konsumen data harus siap menghadapi variasi.
 
-Pada buaya sejati, rahang atas dan bawah memiliki lebar yang sama, sehingga ketika mulut tertutup, gigi-gigi rahang bawah terlihat di sisi luar rahang atas. Gigi keempat dari depan pada rahang bawah berukuran besar dan menonjol [reference:69]. Pada aligator dan kaiman, gigi keempat rahang bawah tersebut masuk ke dalam soket pada rahang atas, sehingga ujungnya tersembunyi ketika mulut tertutup [reference:70].
+7. PERBEDAAN JSONL DENGAN JSON
+   JSON dan JSONL sering dibandingkan karena JSONL menggunakan JSON sebagai bahan dasarnya. Perbedaan fundamentalnya terletak pada struktur dan tujuan penggunaan.
 
-Perbedaan fisiologis penting lainnya adalah kelenjar garam. Buaya sejati memiliki kelenjar garam fungsional pada lidah yang memungkinkannya menyaring kelebihan garam dan bertahan di air asin. Aligator dan kaiman memiliki kelenjar serupa, tetapi tidak berfungsi, sehingga mereka tidak mampu bertahan lama di lingkungan air asin [reference:71][reference:72]. Buaya juga memiliki selaput renang yang lebih lebar pada kaki belakang dibandingkan aligator [reference:73].
+Struktur:
 
-Dari segi perilaku, buaya sejati umumnya lebih agresif daripada aligator [reference:74]. Aligator Amerika kurang agresif dan jarang menyerang manusia apabila tidak diganggu [reference:75].
+· JSON adalah satu dokumen tunggal. Sebuah file JSON berisi satu nilai JSON, biasanya berupa objek {...} atau array [{...}, {...}]. Seluruh isi file adalah satu kesatuan yang valid.
+· JSONL adalah kumpulan baris. Setiap baris adalah nilai JSON yang lengkap dan mandiri. File JSONL secara keseluruhan bukanlah dokumen JSON yang valid. Tidak ada array pembungkus luar dan tidak ada koma di antara baris.
 
-b. Buaya Sejati vs Gharial (Famili Gavialidae)
-Gharial (Gavialis gangeticus) dan buaya sepit (Tomistoma schlegelii) memiliki moncong yang sangat panjang dan ramping, jauh lebih panjang secara proporsional dibandingkan buaya sejati. Moncong yang panjang ini merupakan adaptasi untuk menangkap ikan di perairan [reference:76][reference:77]. Gharial hampir sepenuhnya akuatik dan hanya sesekali naik ke darat untuk berjemur [reference:78].
+Cara Pembacaan:
 
-c. Buaya Muara vs Buaya Air Tawar (dalam konteks Indonesia)
-Di Indonesia, perbandingan yang sering muncul adalah antara buaya muara (C. porosus) dan buaya air tawar (misalnya C. siamensis atau C. novaeguineae). Buaya muara jauh lebih besar (5–7 meter, bobot >1 ton) dan mampu hidup di air asin, payau, dan tawar, serta lebih agresif. Buaya air tawar berukuran lebih kecil (sekitar 1,5–3,5 meter), hidup di perairan tawar, dan umumnya lebih pemalu [reference:79][reference:80].
+· JSON harus diurai seluruhnya. Parser harus membaca dari awal hingga akhir, termasuk menunggu kurung kurawal atau kurung siku penutup, sebelum dapat memastikan bahwa dokumen tersebut valid.
+· JSONL dibaca baris per baris. Parser dapat memproses setiap baris segera setelah baris tersebut diterima, tanpa perlu mengetahui isi baris berikutnya.
 
-10. PERAN EKOLOGIS
-Sebagai predator puncak di perairan tropis, buaya memainkan peran penting dalam menjaga keseimbangan ekosistem:
-- Mengendalikan populasi mangsa: buaya memangsa ikan, reptil, burung, dan mamalia, sehingga membantu menjaga keseimbangan rantai makanan [reference:81].
-- Memindahkan nutrisi antar-ekosistem: buaya yang bergerak antara perairan dan daratan membawa nutrisi dari satu habitat ke habitat lain.
-- Menjaga kualitas perairan: dengan memangsa hewan yang lemah atau sakit, buaya secara tidak langsung membantu menjaga kesehatan populasi mangsa.
-- Indikator kesehatan ekosistem: populasi buaya yang stabil menandakan ekosistem perairan yang sehat.
+Kegunaan yang Tepat:
 
-11. HUBUNGAN DENGAN MANUSIA
-Buaya memiliki hubungan yang kompleks dengan manusia, mencakup aspek bahaya, ekonomi, dan konservasi:
-- Bahaya serangan: buaya muara dan buaya Nil adalah spesies yang paling berbahaya bagi manusia, membunuh ratusan orang setiap tahun di Asia Tenggara dan Afrika [reference:82]. Serangan buaya tercatat sebagai salah satu penyebab kematian manusia oleh hewan yang paling signifikan [reference:83].
-- Kulit dan perdagangan: kulit buaya bernilai tinggi dan diolah menjadi produk seperti dompet, tas, ikat pinggang, dan sepatu. Indonesia mengekspor sekitar 15.228 potong kulit buaya pada tahun 2002, dengan sebagian besar berasal dari buaya Irian dan sekitar 90% dari penangkaran [reference:84].
-- Daging: daging buaya dikonsumsi di beberapa negara, termasuk Australia, Etiopia, Thailand, Afrika Selatan, Kuba, dan sebagian wilayah Indonesia [reference:85].
-- Konservasi dan penangkaran: untuk mengurangi tekanan terhadap populasi liar, berbagai upaya penangkaran telah dikembangkan, terutama untuk buaya muara dan buaya Nil [reference:86].
+· JSON lebih cocok untuk respons API, file konfigurasi, dan pertukaran data di mana seluruh dokumen perlu dibaca sekaligus dan ukurannya relatif kecil.
+· JSONL lebih cocok untuk log, dataset besar, event stream, ekspor data, dan skenario apa pun di mana data perlu diproses secara bertahap, ditambahkan secara incremental, atau dipecah untuk pemrosesan paralel.
 
-12. STATUS KONSERVASI
-Status konservasi buaya bervariasi antarspesies. Beberapa spesies menghadapi risiko kepunahan yang serius:
-- Buaya Siam (C. siamensis): Critically Endangered (Kritis), dengan populasi liar global diperkirakan kurang dari 1.000 individu [reference:87]. CITES mencantumkannya dalam Apendiks I [reference:88].
-- Buaya Filipina (C. mindorensis): juga termasuk spesies yang sangat terancam.
-- Buaya muara (C. porosus): meskipun populasinya relatif lebih stabil di beberapa wilayah seperti Australia, spesies ini tetap rentan terhadap perburuan dan kerusakan habitat.
-- Di Indonesia, empat jenis buaya—C. novaeguineae, C. porosus, C. siamensis, dan Tomistoma schlegelii—telah dilindungi oleh undang-undang [reference:89].
+Penanganan Kesalahan:
 
-Ancaman utama terhadap populasi buaya meliputi perburuan liar untuk kulit dan daging, perdagangan hewan hidup, kerusakan habitat akibat pembukaan lahan dan pencemaran perairan, serta konflik dengan manusia.
+· Pada JSON, satu kesalahan sintaks (misalnya koma berlebih atau tanda kutip yang salah) dapat membuat seluruh file tidak valid dan gagal diurai.
+· Pada JSONL, kesalahan pada satu baris hanya memengaruhi record tersebut. Baris lain tetap dapat diproses secara normal.
 
-13. KESIMPULAN
-Buaya adalah reptil besar semiakuatik dari famili Crocodylidae yang telah ada sejak zaman purba namun memiliki biologi yang kompleks, termasuk jantung beruang empat dan korteks serebral. Buaya sejati dibedakan dari aligator, kaiman, dan gharial melalui bentuk moncong (V versus U), susunan gigi yang terlihat saat mulut tertutup, dan keberadaan kelenjar garam fungsional yang memungkinkan beberapa spesies beradaptasi dengan air asin. Di Indonesia, terdapat beberapa spesies buaya yang dilindungi, dengan buaya muara sebagai yang terbesar dan paling berbahaya, serta buaya Siam yang berstatus Kritis. Buaya berperan sebagai predator puncak yang menjaga keseimbangan ekosistem, tetapi menghadapi ancaman serius dari perburuan, perdagangan, dan kerusakan habitat. Pemahaman yang benar tentang biologi, perbedaan dengan kerabat dekatnya, dan status konservasi buaya sangat penting untuk mendukung upaya pelestarian dan pengelolaan konflik antara buaya dan manusia.
+Ekstensi dan MIME Type:
+
+· JSON: .json, application/json.
+· JSONL: .jsonl (paling umum) atau .ndjson; MIME type application/jsonl atau application/x-ndjson (keduanya belum terstandardisasi secara formal oleh IANA).
+
+8. KESIMPULAN
+   JSONL adalah evolusi pragmatis dari JSON yang menjawab tantangan pemrosesan data berskala besar dan streaming. Dengan menempatkan satu nilai JSON per baris, JSONL mengorbankan validitas file secara keseluruhan sebagai dokumen JSON tunggal, tetapi imbalannya adalah kemampuan streaming sejati, isolasi kesalahan, kemudahan penambahan data, dan kompatibilitas dengan alat baris-perintah. Format ini muncul secara organik di komunitas pengembang sekitar 2010–2013, dengan Ian Ward dan komunitas jsonlines.org berperan penting dalam memformalkan konvensinya. Meskipun bukan standar resmi dengan nomor versi, JSONL dan NDJSON telah menjadi standar de facto untuk log, dataset machine learning, dan pipeline data modern. Memahami perbedaannya dengan JSON—bukan sebagai pesaing, melainkan sebagai pelengkap—memungkinkan pengembang memilih format yang tepat sesuai dengan skala dan pola akses data yang dihadapi.
 
 Catatan:
-Dokumen ini disusun secara ringkas namun lengkap sebagai pengertian hewan buaya, termasuk perbedaan dengan kerabat dekatnya (aligator, kaiman, dan gharial). Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian format data JSONL, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi, dan perbedaannya dengan JSON. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

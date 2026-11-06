@@ -1,109 +1,232 @@
 =========================================================
-  PENGERTIAN HEWAN  : TOKEK
+  PENGERTIAN        : CSS (css)
   PENULIS           : AZRIEL
   TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman css (css), contoh contoh bahasa nya,
+                      kegunaan nya, kelebihan dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
 =========================================================
 
 1. PENGERTIAN UMUM
-Tokek adalah sebutan umum untuk kelompok reptil dari famili Gekkonidae yang berukuran lebih besar dibandingkan cicak rumah biasa. Dalam masyarakat Indonesia, “tokek” hampir selalu merujuk pada tokek rumah atau tokay gecko dengan nama ilmiah Gekko gecko[reference:0]. Tokek dikenal karena suaranya yang khas dan keras, “to-kay”, yang sering terdengar pada malam hari[reference:1]. Meskipun masih berkerabat dekat dengan cicak, tokek memiliki tubuh yang jauh lebih besar, rahang yang lebih kuat, dan warna kulit yang lebih mencolok dengan bintik-bintik oranye hingga kemerahan[reference:2].
+CSS adalah singkatan dari Cascading Style Sheets, yaitu bahasa stylesheet yang digunakan untuk mendeskripsikan bagaimana dokumen terstruktur—seperti HTML dan XML—ditampilkan di layar, di atas kertas, atau pada media lainnya . CSS mengatur presentasi visual halaman web, meliputi tata letak (layout), warna, font, ukuran, jarak, border, bayangan, animasi, dan berbagai aspek estetika lainnya .
 
-Tokek rumah adalah reptil nokturnal yang aktif pada malam hari dan sering ditemukan di dinding, plafon, celah bangunan, hingga pepohonan di sekitar permukiman[reference:3]. Keberadaannya di rumah sering dikaitkan dengan berbagai mitos dan kepercayaan budaya, meskipun secara biologis tokek berperan sebagai predator serangga yang membantu mengendalikan populasi hama[reference:4]. Tokek juga merupakan salah satu spesies yang diperdagangkan secara internasional, baik sebagai hewan peliharaan maupun untuk keperluan pengobatan tradisional, sehingga status konservasinya perlu diperhatikan[reference:5][reference:6].
+CSS bukan bahasa pemrograman dalam arti memiliki logika, percabangan, atau perulangan seperti JavaScript atau Python. CSS adalah bahasa deklaratif berbasis aturan (rule-based) yang memberi tahu browser bagaimana elemen tertentu harus dirender. Tanpa CSS, halaman web hanya akan berupa teks polos dan elemen-elemen HTML yang tersusun secara default. CSS memisahkan konten (yang ditulis dalam HTML) dari presentasi (yang ditulis dalam CSS), sehingga halaman web menjadi lebih mudah dipelihara, konsisten, dan fleksibel .
 
-2. KLASIFIKASI ILMIAH
-Klasifikasi tokek rumah (Gekko gecko) adalah sebagai berikut:
-- Kingdom      : Animalia
-- Filum        : Chordata
-- Kelas        : Reptilia
-- Ordo         : Squamata
-- Subordo      : Lacertilia (Sauria)
-- Famili       : Gekkonidae
-- Genus        : Gekko
-- Spesies      : Gekko gecko (Linnaeus, 1758)
-- Subspesies   : Gekko gecko gecko, Gekko gecko azhari
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+CSS pertama kali diusulkan oleh Håkon Wium Lie, seorang ilmuwan komputer berkebangsaan Norwegia, pada tahun 1994 . Saat itu, Lie sedang bekerja di CERN (Organisasi Eropa untuk Riset Nuklir) di Jenewa, Swiss, bersama Tim Berners-Lee, pencipta World Wide Web . Lie menyadari bahwa HTML pada masa itu berkembang dengan cepat namun menjadi semakin berantakan karena banyaknya tag presentasi yang ditambahkan ke dalam markup. Ia mengusulkan CSS sebagai solusi untuk memisahkan struktur dokumen dari gaya presentasinya .
 
-Tokek termasuk dalam famili Gekkonidae, famili yang sama dengan cicak rumah. Namun, Gekko gecko adalah salah satu spesies terbesar dalam famili tersebut, dengan panjang total yang dapat mencapai 30–40 cm[reference:7][reference:8]. Dalam genus Gekko terdapat banyak spesies lain, dan Gekko gecko merupakan jenis yang paling dikenal serta paling sering berinteraksi dengan manusia[reference:9].
+Asal Negara: Norwegia (kebangsaan pencipta); pengembangan awal dilakukan di CERN, Swiss .
+Tahun Diciptakan: Diusulkan pada 1994; standar pertama (CSS1) diterbitkan pada 1996 .
 
-3. CIRI-CIRI MORFOLOGI
-Tokek memiliki ciri morfologi yang membedakannya dari cicak kecil:
-- Ukuran tubuh besar: panjang total dapat mencapai 30–40 cm, dengan sebagian besar panjangnya adalah ekor[reference:10][reference:11].
-- Warna tubuh: abu-abu kebiruan atau kecokelatan dengan bintik-bintik oranye, merah, dan biru yang tersusun teratur[reference:12][reference:13].
-- Kulit bersisik: bagian punggung ditutupi sisik granular kecil yang diselingi sisik besar berbentuk tuberkel atau bintil[reference:14][reference:15].
-- Kepala besar dengan rahang kuat: tokek memiliki gigitan yang kuat dan sulit dilepaskan jika merasa terancam[reference:16][reference:17].
-- Mata besar tanpa kelopak: mata dilindungi membran transparan dan dibersihkan dengan lidah[reference:18].
-- Jari dengan bantalan perekat: jari-jari dilengkapi setae, rambut mikroskopis yang memungkinkan tokek menempel dan berjalan di permukaan vertikal乃至 plafon[reference:19][reference:20].
-- Ekor yang mudah putus: tokek dapat memutuskan ekornya saat terancam (autotomi), dan ekor tersebut dapat tumbuh kembali meskipun dengan bentuk yang berbeda[reference:21][reference:22].
-- Suara khas: tokek jantan mengeluarkan suara keras “to-kay” yang dapat terdengar hingga jarak lebih dari 100 meter[reference:23][reference:24].
+Pada awalnya, ada beberapa proposal bahasa stylesheet lain untuk web pada waktu yang hampir bersamaan. Namun, CSS-lah yang pertama kali mengandung konsep "cascading" atau "layer" (lapisan), yang memungkinkan gaya dari berbagai sumber—stylesheet penulis, stylesheet pengguna, dan stylesheet default browser—saling menimpa dan digabungkan secara terurut . Bersama Bert Bos, Lie terus mengembangkan CSS. W3C (World Wide Web Consortium) kemudian mengambil alih standarisasi CSS, dan pada Desember 1996, CSS Level 1 (CSS1) resmi menjadi Rekomendasi W3C .
 
-4. HABITAT DAN PENYEBARAN
-Tokek memiliki penyebaran yang sangat luas. Secara alami, tokek hidup di hutan tropis lembap, hutan sekunder, perkebunan, savana, dan berbagai tipe lingkungan lainnya, mulai dari ketinggian 0 hingga 1.200 meter di atas permukaan laut[reference:25]. Tokek tidak ditemukan di rawa, sawah, atau habitat perairan yang tidak memiliki pohon di sekitarnya[reference:26].
+3. SEJARAH VERSI CSS
+CSS telah melalui beberapa tahap evolusi:
 
-Namun, tokek juga sangat adaptif terhadap lingkungan manusia. Tokek sering ditemukan di dinding rumah, plafon, celah atap, lubang tiang listrik, dan pepohonan di sekitar permukiman[reference:27][reference:28]. Di Indonesia, tokek tersebar di berbagai wilayah, termasuk Sumatra, Jawa, Sulawesi, Kalimantan, Nusa Tenggara, dan Natuna[reference:29]. Berdasarkan kajian filogenik, nenek moyang tokek rumah diperkirakan berasal dari kawasan Indochina, terutama Thailand dan China bagian selatan, sebelum menyebar ke berbagai wilayah lain[reference:30].
+- CSS Level 1 (CSS1) — 1996: Standar pertama yang mendefinisikan properti dasar seperti font, warna, margin, padding, border, dan selector sederhana .
+- CSS Level 2 (CSS2) — 1998: Menambahkan dukungan untuk media types (screen, print), positioning, z-index, dan selector yang lebih kaya .
+- CSS Level 2.1 — 2011: Revisi dari CSS2 yang memperbaiki bug dan menghapus fitur yang kurang didukung, menjadi standar yang sangat stabil dan lama digunakan.
+- CSS Level 3 (CSS3) — Sejak 1999 dan seterusnya: Berbeda dari versi sebelumnya, CSS3 tidak lagi berupa satu dokumen raksasa. Spesifikasi CSS dipecah menjadi banyak modul independen yang dapat berkembang dengan kecepatan masing-masing. Modul-modul ini mencakup Selectors Level 3, CSS Color Level 3, CSS Backgrounds and Borders Level 3, CSS Fonts Level 3, Media Queries, dan banyak lagi .
+- Setelah CSS3: Tidak ada "CSS4" sebagai satu standar resmi. Sejak CSS3, CSS Working Group (CSSWG) memilih pendekatan modular, di mana setiap modul memiliki nomor levelnya sendiri (Level 4, Level 5, dst.). Istilah "CSS4" tidak pernah ada dan tidak akan pernah ada sebagai versi tunggal . Setiap modul seperti CSS Color Level 4, CSS Fonts Level 4, CSS Selectors Level 4, dan CSS Box Model Level 4 dikembangkan dan distandarisasi secara terpisah .
 
-5. MAKANAN DAN CARA MAKAN
-Tokek adalah hewan karnivora dan insektivora yang memangsa berbagai jenis hewan kecil. Makanannya meliputi:
-- Serangga: ngengat, belalang, kecoak, rayap, jangkrik, nyamuk, dan laba-laba[reference:31].
-- Arthropoda lain: kalajengking dan hewan kecil bercangkang keras lainnya[reference:32].
-- Vertebrata kecil: tokek dapat memangsa tikus kecil, mencit, ular kecil, anak burung, katak, dan bahkan tokek lain yang lebih kecil[reference:33][reference:34][reference:35].
+Versi Terkini (Snapshot): Untuk memberikan gambaran menyeluruh tentang keadaan CSS pada suatu waktu, W3C menerbitkan "CSS Snapshot". CSS Snapshot 2026, yang diterbitkan pada Juni 2026, mengumpulkan semua spesifikasi modul yang dianggap cukup stabil untuk membentuk definisi CSS saat itu . Snapshot ini bukan standar tunggal, melainkan profil dari modul-modul yang sudah mapan .
 
-Tokek berburu pada malam hari dengan cara mengintai dan menyergap mangsa. Lampu rumah yang menyala pada malam hari menarik serangga, sehingga tokek sering menunggu di dekat sumber cahaya untuk memangsa serangga yang datang[reference:36]. Tokek hanya memangsa hewan hidup dan tidak memakan bangkai[reference:37].
+4. SINTAKS DAN CONTOH BAHASA
+CSS terdiri dari aturan-aturan (rules). Setiap aturan memiliki dua bagian utama: selector (pemilih) dan declaration block (blok deklarasi) . Di dalam blok deklarasi terdapat pasangan properti dan nilai .
 
-6. PERILAKU DAN ADAPTASI
-Tokek memiliki beberapa perilaku dan adaptasi yang khas:
-- Nokturnal: aktif pada malam hari dan beristirahat pada siang hari di tempat tersembunyi seperti atap, lubang kayu, atau celah bebatuan[reference:38].
-- Teritorial: tokek jantan mempertahankan wilayahnya dan dapat bersikap agresif terhadap tokek lain atau pengganggu[reference:39].
-- Agresif saat terancam: tokek akan membuka mulut lebar-lebar, menunjukkan lidah merah dan tenggorokan hitam, serta menggigit dengan kuat jika merasa terancam[reference:40].
-- Autotomi: memutuskan ekor untuk mengalihkan perhatian predator[reference:41].
-- Memanjat: kemampuan menempel di permukaan vertikal dan plafon berkat struktur setae pada jari[reference:42].
-- Adaptif terhadap manusia: tokek memanfaatkan bangunan dan lampu sebagai tempat berlindung dan berburu, sehingga populasinya mampu bertahan di tengah perubahan lingkungan[reference:43].
-- Suara komunikasi: suara “to-kay” digunakan untuk menarik pasangan, mempertahankan wilayah, atau memberi peringatan[reference:44].
+Bentuk umum:
+```css
+selector {
+    properti: nilai;
+    properti-lain: nilai-lain;
+}
+```
 
-7. REPRODUKSI DAN DAUR HIDUP
-Tokek berkembang biak secara ovipar atau bertelur. Beberapa aspek reproduksinya:
-- Kematangan seksual: tokek mencapai dewasa pada usia sekitar 3–4 tahun[reference:45].
-- Musim kawin: di beberapa wilayah, musim kawin berlangsung sekitar awal musim semi hingga pertengahan tahun[reference:46].
-- Jumlah telur: tokek betina biasanya bertelur 1–2 butir per kali bertelur[reference:47]. Telur berwarna putih, keras, dan berbentuk agak bulat[reference:48].
-- Peletakan telur: telur dilekatkan pada permukaan vertikal yang terlindungi, seperti celah pohon, dinding, atau langit-langit bangunan[reference:49].
-- Masa inkubasi: sekitar 92–120 hari, tergantung suhu dan kondisi lingkungan[reference:50]. Pada suhu sekitar 29°C dengan kelembapan 70–80%, telur menetas setelah sekitar sepuluh minggu[reference:51].
-- Pertumbuhan: tokek muda tumbuh cepat, terutama pada tiga bulan pertama setelah menetas. Tokek jantan tumbuh lebih cepat daripada betina, dan setelah usia satu tahun, panjang tubuh jantan rata-rata 28% lebih panjang daripada betina[reference:52].
-- Umur: tokek dapat hidup sekitar 7–10 tahun[reference:53].
+a. Selektor Elemen (Type Selector)
+Selektor ini memilih semua elemen dengan nama tag tertentu.
 
-8. JENIS-JENIS TOKEK YANG UMUM
-Selain tokek rumah (Gekko gecko), terdapat beberapa jenis tokek lain yang ada di Indonesia dan wilayah sekitarnya:
-- Tokek rumah (Gekko gecko): jenis paling umum, berukuran besar, bersuara keras, dan sering ditemukan di rumah[reference:54].
-- Tokek berbintik (Gekko monarchus): tokek yang tersebar di Indonesia, tercatat di 23 provinsi[reference:55].
-- Gekko gecko azhari: subspesies tokek yang berasal dari wilayah tertentu[reference:56].
-- Tokek hutan dan tokek batu: beberapa spesies Gekko lain yang hidup di habitat hutan dan bebatuan, tidak selalu berasosiasi dengan rumah[reference:57].
+```css
+/* Semua paragraf berwarna abu-abu gelap */
+p {
+    color: #333;
+    line-height: 1.6;
+}
 
-Perlu dicatat bahwa tidak semua “tokek” dalam genus Gekko berukuran besar. Ada puluhan spesies Gekko di dunia, dan Gekko gecko adalah salah satu yang paling dikenal serta paling besar[reference:58].
+/* Semua heading level 1 berukuran 2rem dan rata tengah */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+```
 
-9. PERAN EKOLOGIS
-Tokek memiliki peran penting dalam ekosistem:
-- Predator serangga: tokek memangsa berbagai serangga dan arthropoda, sehingga membantu mengendalikan populasi hama seperti belalang, jangkrik, nyamuk, dan ngengat.
-- Mangsa bagi predator lain: tokek dapat menjadi mangsa bagi ular, burung pemangsa, dan mamalia kecil.
-- Indikator lingkungan: keberadaan tokek di suatu area menunjukkan ketersediaan serangga dan tempat berlindung yang memadai.
-- Pengendali populasi hewan kecil: tokek juga memangsa tikus kecil dan ular kecil, sehingga berperan dalam rantai makanan di lingkungan permukiman maupun hutan[reference:60].
+b. Selektor Kelas (Class Selector)
+Selektor kelas diawali dengan tanda titik (.) dan memilih elemen yang memiliki atribut class tertentu. Satu kelas dapat digunakan pada banyak elemen .
 
-10. HUBUNGAN DENGAN MANUSIA
-Tokek sering hidup berdampingan dengan manusia dan memiliki hubungan yang beragam:
-- Dianggap membawa keberuntungan: sebagian masyarakat percaya bahwa tokek yang hidup di rumah membawa rezeki atau keberuntungan bagi penghuninya[reference:61][reference:62].
-- Sumber suara yang menakutkan: suara tokek yang keras dan tiba-tiba dapat mengejutkan atau menakutkan sebagian orang[reference:63].
-- Gigitan yang kuat: tokek dapat menggigit jika merasa terancam. Gigitannya kuat dan dapat melukai, tetapi tokek tidak berbisa dan tidak beracun[reference:64][reference:65].
-- Perdagangan dan pengobatan: tokek, terutama Gekko gecko, diperdagangkan untuk keperluan pengobatan tradisional dan sebagai hewan peliharaan. Perdagangan ini telah menyebabkan penurunan populasi lokal di beberapa daerah[reference:66][reference:67].
-- Pengendalian serangga: tokek membantu mengurangi populasi serangga di rumah, sehingga bermanfaat bagi penghuni[reference:68].
+```css
+/* Elemen dengan class "tombol" memiliki latar biru dan teks putih */
+.tombol {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 
-11. MITOS DAN FAKTA
-Berikut beberapa mitos yang beredar tentang tokek beserta faktanya:
-- Mitos: suara tokek dapat meramal nasib atau rezeki. Fakta: suara tokek adalah panggilan kawin atau komunikasi teritorial, bukan pertanda supernatural[reference:69].
-- Mitos: tokek berbisa atau beracun. Fakta: tokek tidak memiliki kelenjar racun. Gigitannya kuat secara mekanis, tetapi tidak berbahaya secara kimiawi[reference:70][reference:71].
-- Mitos: gigitan tokek tidak akan lepas kecuali mendengar suara petir. Fakta: tokek akan melepaskan gigitannya jika merasa aman. Mitos ini muncul karena kuatnya rahang tokek, bukan karena hal gaib[reference:72][reference:73].
-- Mitos: tokek dapat menyembuhkan HIV/AIDS atau penyakit kulit. Fakta: belum ada bukti ilmiah yang mendukung klaim ini. WHO telah menyangkal anggapan bahwa tokek dapat menyembuhkan HIV/AIDS[reference:74].
-- Mitos: tokek hanya ada satu jenis. Fakta: ada banyak spesies tokek dalam genus Gekko, dan Gekko gecko hanyalah salah satunya[reference:75].
+/* Elemen dengan class "peringatan" */
+.peringatan {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+}
+```
 
-12. STATUS KONSERVASI
-Status konservasi tokek rumah (Gekko gecko) menurut IUCN adalah Least Concern atau Risiko Rendah (2019)[reference:76]. Populasinya secara global masih besar dan tokek mampu bertoleransi terhadap perubahan habitat. Namun, tokek rumah telah dimasukkan ke dalam CITES Apendiks II, yang berarti perdagangan internasionalnya dipantau dan diatur untuk mencegah eksploitasi berlebihan[reference:77][reference:78]. Di beberapa daerah, penangkapan liar untuk perdagangan obat tradisional dan hewan peliharaan telah menyebabkan penurunan populasi lokal[reference:79].
+c. Selektor ID (ID Selector)
+Selektor ID diawali dengan tanda pagar (#) dan memilih satu elemen unik dengan atribut id tertentu. Dalam satu halaman, setiap ID harus unik .
 
-13. KESIMPULAN
-Tokek adalah reptil besar dari famili Gekkonidae, dengan tokek rumah (Gekko gecko) sebagai spesies yang paling dikenal. Tokek memiliki tubuh besar, warna kulit mencolok, rahang kuat, dan kemampuan memanjat permukaan vertikal berkat struktur setae pada jari-jarinya. Tokek aktif pada malam hari, memakan serangga dan hewan kecil lainnya, serta memiliki suara khas yang keras. Meskipun sering dikaitkan dengan berbagai mitos, tokek sebenarnya tidak berbisa dan berperan penting sebagai pengendali serangga. Keberadaannya perlu dipahami secara ilmiah, terutama karena tokek menghadapi tekanan dari perdagangan dan perubahan habitat.
+```css
+/* Elemen dengan id "header-utama" */
+#header-utama {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 40px;
+}
+```
+
+d. Selektor Atribut (Attribute Selector)
+Memilih elemen berdasarkan keberadaan atau nilai atribut.
+
+```css
+/* Semua tautan yang memiliki atribut target */
+a[target] {
+    color: orange;
+}
+
+/* Input tipe teks */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+```
+
+e. Contoh Stylesheet Lengkap
+Berikut adalah contoh file CSS sederhana yang mengatur tampilan halaman profil:
+
+```css
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f4f9;
+    color: #222;
+    line-height: 1.5;
+}
+
+.kartu-profil {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.kartu-profil img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kartu-profil .info {
+    padding: 20px;
+}
+
+.kartu-profil h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.kartu-profil p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.tombol-kontak {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.tombol-kontak:hover {
+    background-color: #1e3c72;
+}
+```
+
+CSS di atas dapat diterapkan pada HTML berikut:
+
+```html
+<div class="kartu-profil">
+    <img src="foto.jpg" alt="Foto Profil">
+    <div class="info">
+        <h2>Azriel</h2>
+        <p>Penulis dan pengembang web.</p>
+        <a href="#" class="tombol-kontak">Hubungi</a>
+    </div>
+</div>
+```
+
+5. KEGUNAAN CSS
+   CSS memiliki kegunaan yang sangat luas dalam pengembangan web:
+
+· Memisahkan Konten dari Presentasi: HTML mengurus struktur dan makna konten, sedangkan CSS mengurus tampilan. Pemisahan ini membuat kode lebih bersih, mudah dibaca, dan mudah dipelihara .
+· Konsistensi Desain: Satu file CSS eksternal dapat digunakan oleh banyak halaman, memastikan tampilan yang seragam di seluruh situs. Jika ada perubahan desain, cukup ubah satu file, dan semua halaman yang terhubung akan ikut berubah .
+· Tata Letak yang Fleksibel: CSS menyediakan sistem layout modern seperti Flexbox dan Grid yang memungkinkan pembuatan tata letak kompleks dengan kode yang relatif sederhana.
+· Desain Responsif: Media queries memungkinkan halaman web menyesuaikan tampilannya berdasarkan ukuran layar perangkat, sehingga situs dapat diakses dengan baik di ponsel, tablet, dan desktop.
+· Efisiensi Bandwidth: File CSS berukuran kecil dan dapat di-cache oleh browser. Ketika pengguna berpindah antarhalaman, file CSS yang sama tidak perlu diunduh ulang, sehingga menghemat bandwidth dan mempercepat waktu muat .
+· Animasi dan Interaktivitas Visual: CSS menyediakan transisi (transition), animasi (animation), dan transformasi (transform) yang memungkinkan efek visual halus tanpa memerlukan JavaScript.
+· Meningkatkan SEO: Dengan memisahkan presentasi dari markup, ukuran file HTML menjadi lebih kecil dan strukturnya lebih bersih, yang membantu mesin pencari mengindeks konten dengan lebih efisien .
+
+6. KELEBIHAN DAN KEKURANGAN CSS
+
+Kelebihan CSS:
+
+· Mudah Dipelajari dan Digunakan: Sintaks dasar CSS sangat sederhana dan intuitif, sehingga pemula dapat segera melihat hasilnya .
+· Ukuran File Kecil: File CSS jauh lebih kecil dibandingkan jika gaya ditulis inline di setiap elemen HTML, sehingga menghemat bandwidth dan mempercepat pemuatan halaman .
+· Konsistensi dan Kemudahan Pemeliharaan: Dengan satu file CSS eksternal, perubahan desain dapat diterapkan secara global ke seluruh situs tanpa harus mengedit setiap halaman satu per satu .
+· Kemampuan yang Kaya: CSS modern mendukung layout kompleks (Grid, Flexbox), animasi, transisi, filter, dan efek visual yang dulu memerlukan gambar atau JavaScript .
+· Dukungan Komunitas dan Ekosistem: CSS didukung oleh semua browser modern, memiliki dokumentasi yang melimpah, dan menjadi dasar bagi berbagai framework seperti Bootstrap, Tailwind CSS, dan Bulma.
+· Aksesibilitas: CSS memungkinkan pengembang menyesuaikan tampilan untuk kebutuhan aksesibilitas, seperti mode kontras tinggi atau ukuran font yang dapat diperbesar.
+
+Kekurangan CSS:
+
+· Perbedaan Tampilan Antar-Browser: Meskipun sudah jauh lebih baik dibandingkan era 2000-an, beberapa properti CSS tertentu masih dapat dirender berbeda oleh browser yang berbeda, terutama pada browser lama atau versi tertentu .
+· Kurva Belajar untuk Layout Kompleks: Meskipun dasar CSS mudah, menguasai layout yang rumit, positioning, dan desain responsif memerlukan pemahaman yang mendalam dan pengalaman.
+· Tidak Ada Logika Pemrograman: CSS tidak memiliki variabel (sebelum CSS Custom Properties), fungsi, atau kontrol alur seperti bahasa pemrograman. Untuk perilaku dinamis, CSS harus dipadukan dengan JavaScript.
+· Kesulitan Debugging pada Proyek Besar: Pada proyek dengan stylesheet yang sangat besar, melacak mengapa suatu gaya diterapkan (atau tidak diterapkan) bisa menjadi tantangan, meskipun DevTools browser sangat membantu.
+· "Kekurangan" Parent Selector (Historis): Sebelum munculnya selektor :has(), CSS tidak memiliki cara langsung untuk memilih elemen induk berdasarkan keberadaan anaknya. Ini sering dianggap sebagai keterbatasan, meskipun kini sudah ada solusinya di browser modern .
+· Ketergantungan pada Browser: CSS hanya berfungsi jika browser mendukung properti yang digunakan. Fitur-fitur terbaru mungkin memerlukan waktu untuk diadopsi secara luas.
+
+7. PERKEMBANGAN TERKINI DAN MODUL MODERN
+   CSS terus berevolusi melalui modul-modulnya. Beberapa modul dan fitur yang aktif dikembangkan atau baru distabilkan hingga 2026 meliputi:
+
+· CSS Color Level 4 dan Level 5: Mendukung ruang warna modern seperti lab(), lch(), oklab(), dan color() yang memungkinkan representasi warna yang lebih kaya dan akurat .
+· CSS Selectors Level 4: Menambahkan selektor canggih seperti :is(), :where(), :has(), dan :nth-child(An+B of S) .
+· CSS Nesting: Memungkinkan penulisan aturan CSS bersarang secara native, menyerupai preprocessor seperti Sass, sehingga kode lebih ringkas dan terstruktur.
+· Container Queries: Memungkinkan gaya diterapkan berdasarkan ukuran kontainer induk, bukan hanya viewport, membuka jalan bagi komponen yang benar-benar responsif dan modular.
+· CSS Anchor Positioning: Modul yang memungkinkan penempatan elemen relatif terhadap "anchor" tertentu, sangat berguna untuk tooltip, popover, dan menu .
+· Popover API dan Invoker Commands: Meskipun bukan murni CSS, integrasi dengan HTML dan CSS memungkinkan pembuatan komponen UI seperti popover tanpa JavaScript yang rumit .
+
+8. KESIMPULAN
+   CSS adalah bahasa stylesheet fundamental yang menjadi tulang punggung desain web modern. Diciptakan oleh Håkon Wium Lie pada 1994 di CERN dan distandarisasi oleh W3C sejak 1996, CSS telah berevolusi dari standar tunggal (CSS1, CSS2) menjadi kumpulan modul independen yang terus berkembang. CSS memisahkan presentasi dari konten, memungkinkan pengembang membuat halaman web yang konsisten, responsif, efisien, dan estetis. Meskipun memiliki keterbatasan dalam hal logika dan potensi perbedaan rendering antar-browser, CSS tetap menjadi teknologi yang tak tergantikan dalam pengembangan web. Dengan hadirnya fitur-fitur modern seperti Grid, Flexbox, Custom Properties, Nesting, dan Container Queries, CSS terus memperluas batas apa yang mungkin dilakukan di sisi front-end, menjadikannya keterampilan esensial bagi setiap pengembang web.
 
 Catatan:
-Dokumen ini disusun secara ringkas namun lengkap sebagai pengertian hewan tokek. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa stylesheet CSS, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, dan status versi terkini. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

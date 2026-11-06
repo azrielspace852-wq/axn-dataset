@@ -1,169 +1,127 @@
 =========================================================
-  PENGERTIAN HEWAN  : KECOAK
+  PENGERTIAN        : HTML (html)
   PENULIS           : AZRIEL
   TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman html (HTML), contoh contoh bahasa nya,
+                      kegunaan nya, kelebihan dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
 =========================================================
 
 1. PENGERTIAN UMUM
-Kecoak adalah sebutan umum untuk kelompok serangga dari ordo Blattodea. Dalam masyarakat Indonesia, “kecoak” biasanya merujuk pada serangga berkulit keras, berwarna cokelat atau hitam, bertubuh pipih oval, memiliki antena panjang, dan sering ditemukan di rumah, dapur, kamar mandi, gudang, saluran air, serta tempat-tempat lembap dan gelap. Kecoak dikenal sebagai hewan omnivora dan pemakan bangkai atau scavenger yang mampu memakan berbagai jenis bahan organik.
+HTML adalah singkatan dari HyperText Markup Language, yaitu bahasa markup standar yang digunakan untuk membuat dan menyusun halaman web yang ditampilkan di browser [reference:0]. HTML bukan bahasa pemrograman dalam arti memiliki logika dan komputasi, melainkan bahasa penanda (markup) yang mendeskripsikan struktur dan konten dokumen, seperti judul, paragraf, tautan, gambar, tabel, dan formulir.
 
-Kecoak bukan kelompok hewan yang terdiri atas satu spesies saja. Ada ribuan spesies kecoak di dunia, tetapi hanya sebagian kecil yang beradaptasi dengan lingkungan manusia dan menjadi hama rumah tangga. Spesies yang paling umum dijumpai di Indonesia antara lain kecoak Amerika (Periplaneta americana), kecoak Jerman (Blattella germanica), kecoak Australia (Periplaneta australasiae), dan kecoak belang cokelat (Supella longipalpa). Kecoak termasuk serangga purba karena kelompok ini telah ada sejak ratusan juta tahun lalu dan mampu bertahan di berbagai kondisi lingkungan.
+HTML menggunakan serangkaian "tag" atau penanda untuk membungkus bagian-bagian konten sehingga browser dapat memahami peran setiap bagian. Misalnya, teks yang dibungkus dengan `<h1>` dianggap sebagai judul utama, sedangkan teks di dalam `<p>` dianggap sebagai paragraf. HTML menjadi fondasi dari hampir semua halaman web yang ada di internet [reference:1].
 
-Secara ekologis, kecoak berperan sebagai pengurai bahan organik dan mangsa bagi hewan lain. Namun, dalam lingkungan rumah, keberadaan kecoak dapat menjadi masalah karena mengotori makanan, menimbulkan alergi, dan berpotensi membawa mikroorganisme patogen secara mekanis. Karena itu, kecoak digolongkan sebagai hama permukiman, bukan hewan peliharaan.
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+HTML diciptakan oleh Sir Timothy John "Tim" Berners-Lee, seorang ilmuwan komputer berkebangsaan Inggris yang lahir pada 8 Juni 1955 [reference:2]. Pada saat itu, Berners-Lee bekerja sebagai insinyur perangkat lunak di CERN (Organisasi Eropa untuk Riset Nuklir), sebuah laboratorium fisika partikel di dekat Jenewa, Swiss [reference:3][reference:4].
 
-2. KLASIFIKASI ILMIAH
-Klasifikasi kecoak secara umum adalah sebagai berikut:
-- Kingdom      : Animalia
-- Filum        : Arthropoda
-- Kelas        : Insecta
-- Ordo         : Blattodea
-- Famili       : Blattidae, Ectobiidae (Blattellidae), Blaberidae, dan famili terkait
-- Genus        : Periplaneta, Blattella, Supella, Blaberus, dan lain-lain
-- Spesies umum : Periplaneta americana, Blattella germanica, Periplaneta australasiae, Supella longipalpa
+Asal Negara: Swiss (CERN, Jenewa), oleh pencipta berkebangsaan Inggris [reference:5].
+Tahun Diciptakan: Konsep dimulai pada 1989, pengembangan pada 1990, dan rilis publik pertama pada 1991 [reference:6].
 
-Catatan penting: Ordo Blattodea juga mencakup rayap (sebagai kelompok yang secara evolusi dekat dengan kecoak), tetapi istilah “kecoak” dalam kehidupan sehari-hari biasanya dipakai untuk anggota Blattodea yang bertubuh pipih, berkaki berduri, dan bukan rayap. Famili Blattidae umumnya berukuran lebih besar, sedangkan Ectobiidae/Blattellidae banyak mencakup kecoak kecil seperti kecoak Jerman.
+Pada Maret 1989, Berners-Lee menulis proposal berjudul "Information Management: A Proposal" yang menguraikan ide sistem berbagi informasi berbasis hypertext melalui internet [reference:7]. Proposal ini awalnya tidak langsung diterima, tetapi pada September 1990 ia mulai mengembangkan idenya [reference:8]. Dalam proses tersebut, ia menciptakan HTML sebagai bahasa untuk membuat halaman web, serta HTTP (HyperText Transfer Protocol) untuk mentransfer data antara server dan pengguna [reference:9]. Pada 6 Agustus 1991, situs web pertama di dunia, "The World Wide Web Project", resmi dipublikasikan dan dapat diakses di alamat info.cern.ch [reference:10][reference:11].
 
-3. CIRI-CIRI MORFOLOGI
-Kecoak memiliki bentuk tubuh yang khas dan mudah dikenali. Ciri-ciri morfologinya antara lain:
-- Tubuh berbentuk oval, pipih dorsoventral, dan bersegmen.
-- Warna umumnya cokelat, cokelat kemerahan, hitam, atau kekuningan, tergantung spesies.
-- Kepala kecil dan tertutup sebagian oleh pronotum atau pelat dada depan.
-- Memiliki antena panjang dan tipis yang berfungsi sebagai alat peraba dan pendeteksi getaran.
-- Mata majemuk dan mulut tipe pengunyah (mandibulata).
-- Sayap depan berbentuk seperti kulit keras dan disebut tegmina; sayap belakang tipis dan digunakan untuk terbang pada spesies tertentu.
-- Tidak semua kecoak dewasa dapat terbang dengan baik; beberapa spesies lebih sering berlari daripada terbang.
-- Kaki ramping dan berduri, berfungsi untuk berlari cepat, memanjat, dan mencengkeram permukaan.
-- Memiliki cerci atau sepasang embelan kecil di ujung abdomen yang peka terhadap getaran dan aliran udara.
-- Ukuran tubuh bervariasi, umumnya sekitar 1–5 cm, tergantung spesies. Kecoak Amerika dapat mencapai sekitar 4–5 cm, sedangkan kecoak Jerman lebih kecil.
-- Kecoak tidak memiliki sengat dan umumnya tidak berbisa. Pertahanan utamanya adalah berlari cepat, bersembunyi, dan memanfaatkan celah sempit.
+3. SEJARAH VERSI HTML
+Sejak kemunculannya, HTML mengalami beberapa kali evolusi versi:
+- HTML (1991–1992): Versi awal yang sangat sederhana, hanya mendukung teks, judul, paragraf, dan tautan dasar.
+- HTML 2.0 (1995): Standar pertama yang disepakati secara luas, menambahkan formulir dan elemen seperti `<form>`, `<input>`, serta tabel dasar.
+- HTML 3.2 (1997): Menambahkan fitur seperti tabel yang lebih kompleks, applet, dan penulisan script sederhana.
+- HTML 4.01 (1999): Versi yang sangat stabil dan lama digunakan, memperkenalkan pemisahan yang lebih jelas antara struktur dan presentasi (meskipun CSS belum sepenuhnya dominan).
+- XHTML (2000): Upaya untuk menerapkan HTML dengan aturan XML yang lebih ketat. XHTML 1.0 dan 1.1 sempat populer, tetapi kurang fleksibel dibandingkan HTML biasa.
+- HTML5 (2014): Lompatan besar yang memperkenalkan elemen semantik (`<header>`, `<nav>`, `<article>`, `<footer>`), dukungan audio/video native (`<audio>`, `<video>`), canvas, penyimpanan lokal, dan API JavaScript yang lebih kaya [reference:12].
 
-4. HABITAT DAN PENYEBARAN
-Kecoak memiliki penyebaran luas di daerah tropis, subtropis, dan banyak wilayah beriklim sedang. Habitat alaminya meliputi lantai hutan, celah bebatuan, kayu lapuk, gua, dan tumpukan bahan organik. Namun, beberapa spesies telah beradaptasi dengan lingkungan manusia dan menjadi spesies sinantropik, yaitu spesies yang hidup dekat dengan permukiman manusia.
+Sejak 28 Mei 2019, W3C secara resmi mengumumkan bahwa WHATWG HTML Living Standard adalah satu-satunya versi HTML yang berlaku [reference:13]. Artinya, HTML tidak lagi memiliki nomor versi resmi seperti "HTML5.2" atau "HTML6". Spesifikasi HTML kini diperbarui secara berkelanjutan (living standard) dan versi terbarunya dapat dilihat di html.spec.whatwg.org [reference:14]. Meskipun demikian, istilah "HTML5" tetap populer di kalangan pengembang dan sering merujuk pada kumpulan teknologi web modern (HTML Living Standard, CSS, JavaScript API) [reference:15].
 
-Di dalam rumah, kecoak menyukai tempat yang:
-- Gelap atau remang-remang.
-- Lembap dan hangat.
-- Dekat dengan sumber makanan dan air.
-- Memiliki celah sempit untuk bersembunyi.
+4. SINTAKS DAN CONTOH BAHASA
+Dokumen HTML disusun dari elemen-elemen yang ditandai dengan tag pembuka dan penutup. Berikut adalah struktur dasar dokumen HTML5:
 
-Tempat yang sering menjadi persembunyian kecoak antara lain:
-- Dapur, terutama di balik lemari, bawah wastafel, dan dekat tempat sampah.
-- Kamar mandi dan saluran air.
-- Gudang, kotak kardus, dan tumpukan barang lama.
-- Celah dinding, lantai, plafon, dan pipa.
-- Balik peralatan rumah tangga seperti kulkas, mesin cuci, dan oven.
-- Tempat sampah dan area pengelolaan limbah.
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Contoh</title>
+</head>
+<body>
 
-Kecoak Jerman sering ditemukan di dapur dan kamar mandi serta mampu berkembang biak cepat di dalam bangunan. Kecoak Amerika lebih sering berhubungan dengan saluran air, got, dan area lembap. Kecoak Australia sering dijumpai di sekitar bangunan dan area lembap. Kecoak belang cokelat cenderung menyukai tempat yang lebih kering dan hangat, seperti lemari dan plafon.
+    <header>
+        <h1>Selamat Datang di Website Saya</h1>
+    </header>
 
-5. MAKANAN DAN CARA MAKAN
-Kecoak adalah hewan omnivora dan scavenger. Makanannya sangat beragam, meliputi:
-- Sisa makanan manusia, seperti nasi, roti, gula, dan makanan berlemak.
-- Buah dan sayur yang membusuk.
-- Bahan organik hewan dan tumbuhan.
-- Kertas, karton, dan lem.
-- Sabun, pasta gigi, dan bahan rumah tangga tertentu.
-- Rambut, kulit mati, dan kotoran.
-- Bangkai serangga kecil atau hewan kecil.
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+        </ul>
+    </nav>
 
-Kecoak memiliki mulut pengunyah dan dapat memakan hampir semua bahan organik yang tersedia. Kecoak sangat bergantung pada air, terutama kecoak Jerman. Karena itu, kebocoran air dan sisa makanan lembap menjadi faktor yang menarik kecoak masuk ke rumah. Kecoak biasanya mencari makan pada malam hari dan kembali bersembunyi sebelum pagi. Jika populasi tinggi atau makanan terbatas, kecoak dapat terlihat pada siang hari.
+    <main>
+        <section id="beranda">
+            <h2>Beranda</h2>
+            <p>Ini adalah paragraf pertama saya dalam <strong>HTML</strong>.</p>
+            <img src="gambar.jpg" alt="Deskripsi gambar">
+        </section>
 
-6. PERILAKU DAN ADAPTASI
-Beberapa perilaku dan adaptasi penting pada kecoak:
-- Nokturnal: aktif pada malam hari dan menghindari cahaya terang.
-- Fototaksis negatif: cenderung menjauhi cahaya dan mencari tempat gelap.
-- Thigmotaksis: menyukai kontak dengan permukaan sempit, seperti celah dinding dan sudut ruangan.
-- Gregarius: kecoak cenderung hidup berkelompok dan berkomunikasi melalui feromon.
-- Berlari cepat: kecoak dapat bergerak sangat cepat untuk menghindari ancaman.
-- Mampu memipihkan tubuh: tubuhnya yang pipih memungkinkan masuk ke celah sempit.
-- Memanjat: beberapa spesies dapat memanjat permukaan halus, terutama kecoak Jerman.
-- Terbang: sebagian kecoak dewasa dapat terbang, terutama kecoak Amerika pada kondisi hangat.
-- Deteksi getaran: antena dan cerci membantu kecoak mendeteksi gerakan dan getaran di sekitarnya.
-- Ketahanan hidup: kecoak dapat bertahan tanpa makanan dalam waktu tertentu, tetapi tetap membutuhkan air. Kemampuan bertahan ini membuat kecoak sulit dikendalikan jika sumber makanan dan air tidak dihilangkan.
+        <section id="tentang">
+            <h2>Tentang</h2>
+            <p>HTML digunakan untuk menyusun struktur halaman web.</p>
+        </section>
+    </main>
 
-7. REPRODUKSI DAN DAUR HIDUP
-Kecoak mengalami metamorfosis tidak sempurna atau hemimetabola. Daur hidupnya terdiri atas tiga tahap:
-1. Telur
-2. Nimfa
-3. Dewasa
+    <footer>
+        <p>&copy; 2026 Azriel</p>
+    </footer>
 
-Kecoak betina umumnya menghasilkan telur dalam struktur khusus berbentuk kapsul yang disebut ooteka. Jumlah telur dalam satu ooteka bervariasi, sekitar 6–40 butir, tergantung spesies. Ooteka biasanya diletakkan di tempat tersembunyi, lembap, dan aman. Pada beberapa spesies, betina membawa ooteka sampai telur menetas; pada spesies lain, ooteka diletakkan lebih awal.
+</body>
+</html>
+```
 
-Setelah telur menetas, muncul nimfa yang berbentuk mirip kecoak dewasa tetapi lebih kecil, belum memiliki sayap sempurna, dan lebih terang warnanya. Nimfa mengalami beberapa kali pergantian kulit atau molting sebelum menjadi dewasa. Jumlah molting bervariasi menurut spesies. Kecoak muda sering terlihat berwarna lebih pucat, bahkan hampir putih, segera setelah molting; warna akan menggelap setelah kulit mengeras.
+Penjelasan singkat elemen-elemen utama:
 
-Masa perkembangan dari telur hingga dewasa berkisar beberapa bulan, tergantung spesies, suhu, dan ketersediaan makanan. Kecoak dewasa dapat hidup beberapa bulan hingga lebih dari satu tahun. Reproduksi kecoak sangat cepat, terutama pada kecoak Jerman, sehingga populasi dapat meningkat pesat jika kondisi mendukung. Beberapa spesies kecoak juga dapat mengalami partenogenesis, yaitu perkembangan telur tanpa pembuahan, meskipun tidak semua spesies melakukannya.
+· <!DOCTYPE html>: Mendeklarasikan bahwa dokumen menggunakan HTML5 (Living Standard) .
+· <html>: Elemen akar yang membungkus seluruh dokumen.
+· <head>: Berisi metadata, judul halaman, charset, dan tautan ke stylesheet atau script.
+· <body>: Berisi konten yang terlihat oleh pengguna.
+· <h1> hingga <h6>: Heading atau judul dengan tingkat kepentingan yang berbeda.
+· <p>: Paragraf teks.
+· <a>: Tautan (anchor) ke halaman lain atau bagian dalam halaman.
+· <img>: Menampilkan gambar.
+· <ul>, <ol>, <li>: Daftar tidak berurutan, berurutan, dan item daftar.
+· <section>, <article>, <header>, <footer>, <nav>, <main>: Elemen semantik untuk menyusun struktur halaman dengan makna yang jelas.
 
-8. JENIS-JENIS KECOAK YANG UMUM
-Beberapa jenis kecoak yang umum dijumpai, khususnya di Indonesia dan daerah tropis, antara lain:
-- Kecoak Amerika (Periplaneta americana): berukuran besar, berwarna cokelat kemerahan, sering ditemukan di saluran air, got, dan area lembap. Dapat terbang pada kondisi hangat.
-- Kecoak Jerman (Blattella germanica): berukuran kecil, berwarna cokelat muda dengan dua garis gelap di belakang kepala, sering ditemukan di dapur dan kamar mandi. Berkembang biak cepat dan sering menjadi hama utama di bangunan.
-- Kecoak Australia (Periplaneta australasiae): mirip kecoak Amerika, berwarna cokelat dengan pola kuning di tepi depan sayap. Sering ditemukan di area lembap dan sekitar bangunan.
-- Kecoak belang cokelat (Supella longipalpa): berukuran kecil, memiliki pola belang pada tubuh, menyukai tempat hangat dan kering seperti lemari dan plafon.
-- Kecoak kayu atau kecoak hutan: hidup di kayu lapuk, daun kering, dan lingkungan lembap; umumnya tidak menjadi hama rumah utama.
-- Kecoak gua dan kecoak raksasa: beberapa spesies hidup di gua atau hutan dan berperan sebagai pengurai; tidak semua berhubungan dengan permukiman.
+5. KEGUNAAN HTML
+   HTML memiliki kegunaan utama sebagai berikut:
 
-9. PERAN EKOLOGIS
-Di alam, kecoak memiliki peran ekologis yang penting:
-- Sebagai pengurai bahan organik, kecoak membantu menguraikan daun busuk, kayu lapuk, bangkai, dan kotoran.
-- Sebagai mangsa bagi predator seperti burung, reptil, amfibi, serangga predator, dan mamalia kecil.
-- Membantu siklus nutrisi di ekosistem hutan dan gua.
-- Beberapa spesies kecoak gua berperan dalam rantai makanan ekosistem gua.
+· Membangun Struktur Halaman Web: HTML mendefinisikan kerangka dasar halaman, termasuk judul, paragraf, daftar, tabel, gambar, dan tautan.
+· Menghubungkan Halaman (Hyperlink): Melalui elemen <a>, HTML memungkinkan navigasi antarhalaman web, yang menjadi inti dari World Wide Web.
+· Menyematkan Media: HTML5 memungkinkan penyematan audio, video, dan grafik (canvas) secara langsung tanpa plugin tambahan.
+· Formulir Interaktif: Elemen <form>, <input>, <select>, dan <textarea> memungkinkan pengumpulan data dari pengguna.
+· Fondasi untuk CSS dan JavaScript: HTML menyediakan struktur yang kemudian dihias oleh CSS dan diberi perilaku interaktif oleh JavaScript. Tanpa HTML, CSS dan JavaScript tidak memiliki "kerangka" untuk bekerja.
+· Aksesibilitas dan SEO: HTML semantik membantu mesin pencari memahami konten dan membantu pembaca layar (screen reader) menavigasi halaman.
 
-Namun, di lingkungan rumah, peran ekologis tersebut berubah menjadi masalah karena kecoak dapat mengotori makanan, meninggalkan bau, dan menimbulkan alergi. Karena itu, pengendalian kecoak di rumah perlu dilakukan dengan pendekatan kebersihan dan pengelolaan lingkungan, bukan sekadar membunuh kecoak yang terlihat.
+6. KELEBIHAN DAN KEKURANGAN HTML
 
-10. HUBUNGAN DENGAN MANUSIA
-Kecoak sering dianggap menjijikkan dan mengganggu. Di rumah, kecoak dapat:
-- Mengotori makanan dan peralatan makan.
-- Meninggalkan kotoran berupa bintik-bintik hitam di dinding, lantai, atau lemari.
-- Menimbulkan bau tidak sedap pada area yang banyak kecoak.
-- Memicu alergi dan asma pada sebagian orang.
-- Menjadi sumber stres dan rasa tidak nyaman.
+Kelebihan HTML:
 
-Kecoak bukan hewan yang menggigit atau menyengat manusia. Namun, kecoak dapat berperan sebagai vektor mekanis, yaitu membawa mikroorganisme dari tempat kotor ke makanan atau permukaan rumah. Bakteri yang pernah dikaitkan dengan kecoak antara lain Salmonella, Escherichia coli, dan Staphylococcus, meskipun risiko penularan penyakit melalui kecoak tidak sebesar risiko dari sanitasi yang buruk. Pencegahan utama adalah menjaga kebersihan rumah, menyimpan makanan dalam wadah tertutup, membuang sampah secara rutin, dan memperbaiki kebocoran air.
+· Mudah Dipelajari: Sintaks HTML relatif sederhana dan ramah pemula, sehingga menjadi bahasa pertama yang dipelajari banyak pengembang web .
+· Open Source dan Gratis: HTML adalah standar terbuka yang dapat digunakan tanpa biaya lisensi .
+· Didukung Semua Browser: Semua browser modern (Chrome, Firefox, Safari, Edge) mendukung HTML .
+· Komunitas dan Sumber Daya Melimpah: Dokumentasi, tutorial, dan forum diskusi tentang HTML sangat banyak dan mudah diakses .
+· Mudah Diintegrasikan: HTML dapat dengan mudah digabungkan dengan bahasa backend seperti PHP, Node.js, dan Python, serta dengan CSS dan JavaScript .
+· Ringan dan Cepat: File HTML berukuran kecil dan cepat dimuat oleh browser.
 
-11. KESEHATAN DAN KEBERSIHAN
-Kecoak dapat menimbulkan dampak kesehatan melalui:
-- Kontaminasi makanan dan permukaan dengan kotoran, air liur, dan bagian tubuh kecoak.
-- Alergen dari kotoran, kulit yang terkelupas, dan air liur kecoak yang dapat memicu reaksi alergi.
-- Pemicu serangan asma pada orang yang sensitif, terutama anak-anak.
-- Kemungkinan penyebaran bakteri patogen secara mekanis.
+Kekurangan HTML:
 
-Langkah kebersihan yang dianjurkan:
-- Simpan makanan dalam wadah tertutup dan rapat.
-- Bersihkan sisa makanan dan remah-remah setiap hari.
-- Buang sampah secara rutin dan tutup tempat sampah.
-- Perbaiki kebocoran air dan jaga area dapur serta kamar mandi tetap kering.
-- Kurangi tumpukan kardus, kertas, dan barang lama yang menjadi tempat persembunyian.
-- Bersihkan kotoran kecoak dengan sarung tangan dan bahan pembersih, lalu cuci tangan.
-- Hindari memegang kecoak secara langsung.
+· Hanya untuk Konten Statis: HTML murni tidak dapat membuat halaman yang dinamis (misalnya, konten yang berubah berdasarkan input pengguna atau data dari database). Untuk itu, diperlukan JavaScript atau bahasa backend .
+· Tidak Memiliki Logika: HTML tidak mendukung percabangan, perulangan, atau operasi matematika. Semua halaman harus dibuat secara terpisah atau dihasilkan oleh server .
+· Keterbatasan Presentasi: HTML bukan alat desain yang kuat; untuk tata letak dan gaya yang kompleks, CSS sangat diperlukan.
+· Perbedaan Dukungan Fitur: Beberapa fitur HTML terbaru mungkin belum didukung sepenuhnya oleh semua browser lama, meskipun browser modern umumnya sudah kompatibel .
 
-12. PENGENDALIAN KECOAK
-Pengendalian kecoak paling efektif dilakukan dengan pendekatan terpadu atau Integrated Pest Management (IPM), yaitu menggabungkan sanitasi, pengaturan lingkungan, dan pengendalian kimia bila diperlukan. Langkah-langkahnya antara lain:
-- Sanitasi: membersihkan dapur, kamar mandi, gudang, dan tempat sampah secara rutin.
-- Penyimpanan makanan: menggunakan wadah kedap udara.
-- Pengelolaan air: memperbaiki pipa bocor dan menghilangkan genangan.
-- Penutupan celah: menutup retakan dinding, celah lantai, dan celah pipa.
-- Perangkap: menggunakan perangkap lem atau perangkap feromon.
-- Umpan gel atau bait: umpan kecoak yang mengandung insektisida dan atraktan.
-- Insektisida: digunakan sesuai petunjuk, dengan hati-hati, dan tidak berlebihan.
-- Jasa profesional: jika populasi kecoak tinggi atau sulit dikendalikan, pertimbangkan bantuan petugas pengendalian hama.
-
-Pengendalian kimia sebaiknya tidak menjadi satu-satunya cara. Jika hanya membunuh kecoak yang terlihat tanpa memperbaiki kondisi lingkungan, populasi kecoak dapat kembali muncul. Penggunaan insektisida harus mengikuti label, menjaga ventilasi, menjauhkan dari anak-anak dan hewan peliharaan, serta tidak mencemari makanan.
-
-13. MITOS DAN FAKTA
-Beberapa mitos tentang kecoak yang beredar di masyarakat:
-- Mitos: kecoak akan bertahan hidup setelah ledakan nuklir. Fakta: kecoak memang lebih tahan terhadap radiasi dibandingkan manusia, tetapi tidak berarti mampu bertahan dari ledakan nuklir secara langsung.
-- Mitos: kecoak putih adalah spesies baru. Fakta: kecoak putih biasanya adalah kecoak yang baru saja mengalami molting; warna tubuhnya belum mengeras dan menggelap.
-- Mitos: kecoak hanya hidup di rumah kotor. Fakta: kecoak dapat masuk ke rumah bersih jika ada makanan, air, dan celah untuk bersembunyi.
-- Mitos: kecoak selalu terbang. Fakta: hanya beberapa spesies dan pada kondisi tertentu kecoak terbang; banyak kecoak lebih sering berlari.
-- Mitos: kecoak tidak berguna. Fakta: di alam, kecoak berperan sebagai pengurai, meskipun di rumah keberadaannya merugikan.
-- Mitos: satu kecoak berarti sarangnya hanya satu. Fakta: kecoak yang terlihat di siang hari sering menandakan populasi yang cukup banyak atau kondisi makanan dan tempat persembunyian yang mendukung.
-
-14. STATUS KONSERVASI
-Sebagian besar spesies kecoak yang menjadi hama rumah tangga tidak termasuk hewan yang dilindungi karena populasinya melimpah dan adaptif. Namun, tidak semua kecoak adalah hama. Beberapa spesies kecoak gua, kecoak hutan, atau kecoak raksasa tertentu memiliki peran ekologis dan dapat terancam oleh kerusakan habitat. Dalam konteks rumah tangga, kecoak lebih tepat dikategorikan sebagai hama permukiman yang perlu dikendalikan, bukan hewan yang dilindungi.
-
-15. KESIMPULAN
-Kecoak adalah serangga dari ordo Blattodea yang memiliki tubuh pipih, antena panjang, kaki berduri, dan kemampuan berlari cepat. Kecoak mengalami metamorfosis tidak sempurna dengan tahap telur, nimfa, dan dewasa. Kecoak bersifat nokturnal, omnivora, dan scavenger, serta mampu beradaptasi dengan lingkungan manusia. Di alam, kecoak berperan sebagai pengurai, tetapi di rumah kecoak dapat menjadi hama karena mengotori makanan, menimbulkan alergi, dan berpotensi membawa mikroorganisme secara mekanis. Pengendalian kecoak paling efektif dilakukan dengan menjaga kebersihan, menutup celah, mengelola makanan dan air, serta menggunakan umpan atau insektisida secara bijak. Pemahaman yang benar tentang kecoak membantu membedakan fakta dan mitos serta mengambil tindakan yang tepat dalam menjaga kebersihan lingkungan.
+7. STATUS DAN VERSI TERKINI
+   Saat ini, HTML bukan lagi bahasa dengan nomor versi statis. Sejak 2019, WHATWG HTML Living Standard menjadi spesifikasi tunggal yang terus diperbarui . Versi terbaru dari spesifikasi ini dapat dilihat langsung di html.spec.whatwg.org, dan pembaruan dilakukan secara berkelanjutan seiring dengan perkembangan web . Istilah "HTML5" tetap digunakan secara luas untuk merujuk pada generasi HTML modern yang mencakup elemen semantik, media native, dan API JavaScript yang kaya, tetapi secara teknis, tidak ada lagi "HTML6" atau "HTML5.3" dalam pengertian standar formal.
+8. KESIMPULAN
+   HTML adalah bahasa markup fundamental yang menjadi tulang punggung World Wide Web. Diciptakan oleh Tim Berners-Lee di CERN pada awal 1990-an, HTML telah berevolusi dari bahasa sederhana dengan sedikit tag menjadi standar hidup (living standard) yang kaya akan elemen semantik dan kemampuan multimedia. HTML mudah dipelajari, gratis, dan didukung oleh semua browser, menjadikannya pintu gerbang bagi siapa pun yang ingin membangun halaman web. Meskipun HTML memiliki keterbatasan dalam hal logika dan konten dinamis, kombinasi HTML dengan CSS dan JavaScript menghasilkan pengalaman web yang lengkap dan interaktif. Memahami HTML adalah langkah pertama yang esensial dalam perjalanan pengembangan web.
 
 Catatan:
-Dokumen ini disusun secara ringkas namun lengkap sebagai pengertian hewan kecoak. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa markup HTML, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, dan status versi terkini. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

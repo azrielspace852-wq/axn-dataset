@@ -1,0 +1,134 @@
+=========================================================
+  PENGERTIAN        : BASH (bash)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman bash (BASH), contoh contoh bahasa nya,
+                      kegunaan nya, kelebihan dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+Bash, singkatan dari "Bourne-Again SHell", adalah sebuah shell Unix dan bahasa perintah (command language) yang merupakan proyek perangkat lunak bebas dari GNU Project [reference:1]. Bash adalah penerjemah baris perintah (command interpreter) default untuk sebagian besar distribusi Linux dan menjadi salah satu antarmuka utama bagi pengguna untuk berinteraksi dengan sistem operasi, menjalankan perintah, dan mengotomatiskan tugas-tugas melalui skrip [reference:2][reference:3].
+
+Sebagai sebuah bahasa pemrograman, Bash dirancang untuk mengendalikan eksekusi perintah eksternal dan menggabungkan utilitas baris perintah (seperti `grep`, `sed`, `awk`) melalui pipa (pipes) dan pengalihan (redirection) [reference:4]. Bash adalah "superset" dari shell Bourne (`sh`), yang berarti Bash mewarisi hampir semua sintaks dan fitur `sh` sambil menambahkan berbagai ekstensi dan peningkatan fungsionalitas [reference:5].
+
+2. SEJARAH DAN ASAL USUL
+Bash diciptakan sebagai bagian dari upaya GNU Project untuk menyediakan sistem operasi yang sepenuhnya bebas. Shell Bourne (`sh`) yang menjadi standar pada sistem Unix saat itu memiliki lisensi yang tidak sepenuhnya bebas, sehingga Richard Stallman dari Free Software Foundation memprakarsai pembuatan pengganti yang bebas [reference:7].
+
+Penciptaan Bash dipercayakan kepada Brian Fox, seorang programmer Amerika kelahiran tahun 1959 [reference:8][reference:9]. Fox mulai menulis kode Bash pada 10 Januari 1988, dan versi beta pertama diumumkan pada Juni 1989 [reference:10][reference:11]. Ia terus menjadi pengelola utama (maintainer) Bash hingga setidaknya awal tahun 1993 [reference:12].
+
+Asal Negara: Amerika Serikat (proyek GNU Project) [reference:13].
+Tahun Diciptakan: Pengembangan dimulai 1988, rilis beta pertama Juni 1989 [reference:14][reference:15].
+
+3. FILOSOFI DAN DESAIN
+Bash mengikuti filosofi Unix: "tulis program yang melakukan satu hal dan melakukannya dengan baik" serta "gabungkan program-program tersebut". Bash unggul dalam mengorkestrasi proses (process orchestration), yaitu memanggil utilitas sistem, menghubungkan keluaran satu perintah ke perintah lain melalui pipa, dan mengelola alur eksekusi [reference:16]. Bash bukanlah bahasa untuk manipulasi data yang kompleks atau komputasi numerik intensif; untuk tugas-tugas tersebut, Bash biasanya memanggil alat lain seperti `awk`, `bc`, atau bahasa seperti Python [reference:17].
+
+4. SINTAKS DAN CONTOH BAHASA
+Bash memiliki sintaks yang khas untuk shell scripting. Berikut adalah beberapa contoh konstruksi dasar:
+
+a. Skrip Dasar dan Variabel
+Setiap skrip Bash biasanya diawali dengan baris shebang `#!/bin/bash` untuk menunjukkan interpreter yang digunakan.
+
+```bash
+#!/bin/bash
+# Skrip sederhana untuk menyapa pengguna
+NAMA="Dunia"
+echo "Halo, $NAMA!"
+```
+
+b. Percabangan (if-else)
+Bash mendukung struktur kondisi if, elif, dan else dengan menggunakan [[ ]] (bashisme) atau [ ] (POSIX).
+
+```bash
+#!/bin/bash
+read -p "Masukkan sebuah angka: " ANGKA
+if [[ $ANGKA -gt 10 ]]; then
+    echo "Angka lebih besar dari 10"
+elif [[ $ANGKA -eq 10 ]]; then
+    echo "Angka sama dengan 10"
+else
+    echo "Angka lebih kecil dari 10"
+fi
+```
+
+c. Perulangan (Loop)
+Perulangan for sangat umum digunakan untuk mengulang serangkaian perintah untuk setiap item dalam daftar atau array .
+
+```bash
+#!/bin/bash
+# Perulangan for dengan array
+declare -a WARNA=("merah" "hijau" "biru")
+for WARNA in "${WARNA[@]}"; do
+    echo "Warna: $WARNA"
+done
+```
+
+d. Fungsi
+Fungsi memungkinkan pengelompokan kode untuk digunakan kembali.
+
+```bash
+#!/bin/bash
+sapa() {
+    local NAMA=$1
+    echo "Halo, $NAMA dari dalam fungsi!"
+}
+sapa "Azriel"
+```
+
+e. Array
+Bash mendukung array satu dimensi, yang dapat dideklarasikan dan diakses seperti contoh di atas .
+
+5. KEGUNAAN BASH
+   Bash memiliki beragam kegunaan, terutama dalam konteks sistem operasi mirip Unix:
+
+a. Administrasi Sistem
+Bash adalah alat utama bagi administrator sistem untuk mengelola server. Skrip Bash digunakan untuk otomatisasi tugas-tugas rutin seperti manajemen akun pengguna, pencadangan (backup), pemantauan sistem, dan penerapan perangkat lunak .
+
+b. Otomatisasi Tugas (Automation)
+Segala pekerjaan yang dapat dilakukan di baris perintah dapat diotomatiskan dengan skrip Bash, mulai dari penggantian nama file massal hingga penjadwalan tugas dengan cron atau systemd timers .
+
+c. Orkestrasi Proses
+Bash sangat efisien untuk menggabungkan berbagai utilitas baris perintah menjadi satu alur kerja yang kompleks .
+
+d. Interaksi Langsung (Command Line Interface)
+Sebagai shell default, Bash menyediakan antarmuka interaktif untuk menjalankan perintah, menavigasi sistem file, dan mengelola proses .
+
+6. KELEBIHAN DAN KEKURANGAN
+
+Kelebihan:
+
+· Ketersediaan Universal: Bash adalah shell default di hampir semua distribusi Linux dan macOS, sehingga skrip Bash dapat dijalankan di hampir semua sistem mirip Unix tanpa perlu instalasi tambahan .
+· Kecepatan Pengembangan: Untuk tugas-tugas orkestrasi dan otomatisasi sederhana, menulis skrip Bash jauh lebih cepat daripada menulis program dalam bahasa seperti C atau Java .
+· Integrasi Sistem yang Mendalam: Bash memiliki akses langsung ke perintah sistem, utilitas, dan sistem file, menjadikannya sempurna untuk tugas administrasi .
+· Waktu Mulai (Startup) Cepat: Bash memulai lebih cepat daripada interpreter Python, sehingga cocok untuk skrip yang dijalankan secara sering .
+
+Kekurangan:
+
+· Kinerja Eksekusi: Bash menginterpretasikan perintah, bukan mengompilasinya, sehingga eksekusi loop atau manipulasi string yang intensif bisa jauh lebih lambat dibandingkan bahasa yang dikompilasi .
+· Tipe Data Terbatas: Bash pada dasarnya hanya memiliki tipe data string. Semua variabel diperlakukan sebagai string, yang membuat operasi aritmatika menjadi canggung .
+· Aturan Kutipan (Quoting) yang Rumit: Salah satu kesulitan terbesar dalam Bash adalah memahami aturan kutipan yang kompleks, yang sering menjadi sumber bug dan masalah keamanan .
+· Penanganan Kesalahan: Secara default, Bash tidak berhenti saat terjadi kesalahan. Penanganan kesalahan yang ketat memerlukan opsi seperti set -euo pipefail .
+· Kurang Cocok untuk Tugas Kompleks: Untuk manipulasi data yang rumit, pemrosesan JSON, atau komputasi numerik, Bash sangat tidak efisien dan cenderung menghasilkan kode yang sulit dipelihara .
+
+7. VERSI
+   Bash terus dikembangkan hingga saat ini. Versi stabil terbaru adalah Bash 5.3, yang dirilis pada Juli 2025 . Versi ini membawa sejumlah peningkatan, terutama pada performa skrip, sintaks substitusi perintah yang baru, serta peningkatan kepatuhan terhadap standar POSIX .
+
+Salah satu fitur penting di Bash 5.3 adalah substitusi perintah dalam shell (${ command; }) yang memungkinkan eksekusi perintah tanpa membuat subshell (fork), sehingga meningkatkan performa secara signifikan . Versi ini juga beralih ke standar C23 untuk kompilasi .
+
+8. PERBANDINGAN DENGAN SHELL LAIN (SH)
+   Bash sering dibandingkan dengan sh (Bourne shell). Bash adalah superset dari sh, yang berarti sebagian besar skrip sh dapat dijalankan di Bash tanpa modifikasi . Namun, Bash menambahkan banyak fitur yang tidak ada di sh, antara lain:
+
+· Array (tipe data array tidak ada di sh standar) .
+· Konstruksi [[ ]] untuk pengujian kondisi yang lebih kuat .
+· Fungsi dengan kata kunci function dan perintah local .
+· Substitusi proses <(command) .
+· Riwayat perintah (command history) dan pengeditan baris perintah yang lebih canggih .
+
+9. KESIMPULAN
+   Bash adalah tulang punggung interaksi baris perintah di dunia Linux dan Unix. Sejak diciptakan oleh Brian Fox pada 1989 untuk GNU Project, Bash telah menjadi alat esensial bagi administrator sistem, pengembang, dan pengguna biasa untuk mengotomatiskan tugas dan mengendalikan sistem. Dengan sintaks yang kuat namun terkadang rumit, Bash unggul dalam orkestrasi proses dan integrasi utilitas sistem. Meskipun memiliki keterbatasan untuk tugas-tugas komputasi yang kompleks, Bash tetap menjadi bahasa skrip pilihan utama untuk administrasi sistem dan otomatisasi di lingkungan Unix-like. Perkembangan berkelanjutannya, dengan rilis terbaru Bash 5.3 pada 2025, menunjukkan bahwa Bash masih relevan dan terus berevolusi untuk memenuhi kebutuhan penggunanya.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa pemrograman Bash, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, dan versi terbaru. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+
+```
