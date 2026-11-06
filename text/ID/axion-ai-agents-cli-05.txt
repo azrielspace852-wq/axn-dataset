@@ -33,7 +33,7 @@ Khusus untuk "axion-cli update":
 
 C. TESTING
 Saya sudah menyiapkan API KEY Google AI Studio untuk testing (API KEY sementara). Gunakan API KEY berikut untuk melakukan testing chat dengan AI:
-API KEY: AQ.Ab8RN6KqUMXeZOmJHs_FNU_fYVi8pZ8ehGY3FWtneKfi1FTD2A
+API KEY: AQ.AbKYH8RKAs2NF_e8hfUOtVNUTDf18qFni6pXWYiZFee_JZm3GM
 
 D. KETENTUAN AKHIR
 - Silakan kerjakan seluruh instruksi di atas.
