@@ -1,0 +1,263 @@
+# PROMPT UNTUK QWEN3.5-MAX — WEB TRANSLATE OFFLINE (VANILLA)
+
+## PERAN
+Kamu adalah Senior Front-End Engineer + UI/UX Designer. Tugasmu membangun aplikasi web **translate offline** (tanpa server, tanpa API online, tanpa dependensi framework berat) yang berjalan murni di browser (client-side only). Hasil akhir harus lengkap, bisa langsung dibuka via `file://` atau `http://localhost`, dan berfungsi penuh saat offline.
+
+## TUJUAN
+Buat aplikasi web translate offline yang cara kerjanya mirip fitur terjemahan di HP (kamus lokal), tetapi dengan sistem library yang bisa di-load/di-install/update oleh pengguna. Semua data diterjemahkan berasal dari file JSON lokal (dictionary), bukan mesin AI/online.
+
+## TECH STACK (WAJIB)
+- HTML5 + CSS3 + JavaScript ES2020+ (Vanilla, tanpa framework, tanpa bundler).
+- Modul JS menggunakan `type="module"` (ESM).
+- Penyimpanan: **IndexedDB** (wajib) + **OPFS** (opsional, fallback ke IndexedDB jika tidak didukung).
+- Ikon: **SVG inline** (dilarang memakai emoji di teks/UI/ikon).
+- Tidak boleh memakai CDN eksternal saat runtime (harus benar-benar offline setelah aset lokal diunduh). Boleh menyertakan file SVG/font lokal di folder `assets/`.
+- Tidak memakai build tool. Cukup buka `index.html`.
+
+## STRUKTUR FILE (WAJIB DIPISAH)
+```
+
+/project-root
+├── index.html                # Halaman utama (translator)
+├── library.html              # Halaman manajemen library
+├── /css
+│   ├── base.css              # Reset, variabel warna, tipografi, layout dasar
+│   ├── index.css             # Style khusus halaman index
+│   ├── library.css           # Style khusus halaman library
+│   └── components.css        # Tombol, modal, toast, card, badge, dsb.
+├── /js
+│   ├── app.js                # Entry point index.html
+│   ├── library-page.js       # Entry point library.html
+│   ├── translator.js         # Logika terjemahan (tokenizer + lookup)
+│   ├── storage.js            # Abstraksi IndexedDB + OPFS
+│   ├── loader.js             # Load library (URL / file lokal)
+│   ├── updater.js            # Cek versi & update library
+│   ├── ui.js                 # Helper UI (toast, modal, render list, dsb.)
+│   └── config.js             # Konstanta (nama DB, URL manifest, versi app)
+├── /assets
+│   ├── /icons                # File SVG ikon (bukan emoji)
+│   └── favicon.svg
+└── README.md                 # Cara pakai + cara format library
+
+```
+
+## HALAMAN 1 — `index.html` (Translator Utama)
+Elemen wajib:
+1. **Header** dengan judul aplikasi + tombol navigasi ke `library.html` (ikon SVG).
+2. **Pemilih Bahasa**: dua dropdown.
+   - Dropdown A: "Dari" (source).
+   - Dropdown B: "Ke" (target).
+   - Isi dropdown diambil dari library yang **sudah terpasang** (parse field `translate` menjadi `"X To Y"` → source `X`, target `Y`).
+   - Jika pasangan source/target dipilih dan library-nya ada → aktif. Jika tidak ada → tampilkan info "Library belum tersedia, buka halaman Library".
+   - Tombol tukar (swap) dengan ikon SVG.
+3. **Area Input**: `<textarea>` multi-baris, placeholder "Masukkan teks...".
+4. **Area Output**: `<textarea readonly>` atau `<div>` hasil, dengan tombol copy (SVG).
+5. **Tombol Aksi**: "Terjemahkan", "Hapus", "Salin".
+6. **Status bar kecil** di bawah: menampilkan jumlah karakter, status "Offline Ready", dan indikator library aktif.
+7. Semua aksi tanpa reload halaman. Responsif (mobile-first) dan aksesibel (label, aria, focus ring).
+
+Logika terjemahan wajib:
+- Lookup **frasa terpanjang dulu** (multi-kata) → baru per kata.
+- Case-insensitive untuk lookup, tetapi pertahankan kapitalisasi output.
+- Pertahankan tanda baca di akhir kalimat.
+- Jika kata tidak ditemukan → biarkan kata asli (tidak error).
+- Terjemahan berjalan tanpa jaringan.
+
+## HALAMAN 2 — `library.html` (Manajemen Library)
+Elemen wajib:
+1. **Header** dengan tombol kembali ke `index.html` (SVG).
+2. **Tab / Section**:
+   - **Tersedia Online** (dari URL manifest GitHub Releases).
+   - **Terpasang** (dari IndexedDB/OPFS).
+3. **Section "Tersedia Online"**:
+   - Ambil daftar manifest JSON dari `https://github.com/azrielspace852-wq/releases` (boleh di-config di `config.js`, contoh default: manifest URL dapat diarahkan ke raw JSON rilis).
+   - Render setiap item sebagai card: nama translate (misal "Indonesia To English"), versi, tombol aksi.
+   - Tombol berubah otomatis:
+     - Jika belum terpasang → **"Install"**.
+     - Jika sudah terpasang dan versi sama → **"Terpasang"** (disabled).
+     - Jika sudah terpasang dan versi berbeda → **"Update"** (highlight).
+   - Klik Install/Update → unduh file JSON library → simpan ke storage → refresh state.
+4. **Section "Terpasang"**:
+   - List library terpasang: nama, versi, ukuran, jumlah entri, tombol "Hapus".
+   - Tombol "Hapus" minta konfirmasi modal dulu.
+5. **Load dari File Lokal (Internal Storage)**:
+   - Tombol "Impor dari File" → `<input type="file" accept=".json,application/json">`.
+   - Validasi isi file: harus objek `{ "input": "output", ... }` (string ke string). Tolak jika tidak sesuai.
+   - Simpan ke IndexedDB/OPFS.
+   - Minta nama library + source/target jika metadata tidak ada di file. Simpan metadata.
+6. **Indikator Storage**:
+   - Tampilkan status "OPFS Aktif" atau "Fallback: IndexedDB".
+   - Tampilkan estimasi ukuran terpakai (`navigator.storage.estimate()`).
+
+## FORMAT DATA (WAJIB DIIKUTI)
+
+### 1. File Library (kamus) — format internal:
+```json
+{"input":"...","output":"..."}
+```
+
+Contoh:
+
+```json
+{
+  "kucing": "cat",
+  "rumah": "house",
+  "selamat pagi": "good morning"
+}
+```
+
+· Semua key & value bertipe string.
+· Boleh berisi frasa multi-kata.
+
+2. Manifest Link Library (dipakai untuk halaman "Tersedia Online"):
+
+```json
+{
+  "translate": "Indonesia To English",
+  "version": "1.0.0",
+  "link": ["https://.../id-en-1.0.0.json"]
+}
+```
+
+Ketentuan:
+
+· translate: format wajib "<Source> To <Target>" (dipisah  To ).
+· version: string semver (x.y.z).
+· link: array URL ke file library (boleh >1, misalnya dipecah per kategori; aplikasi harus merge seluruh link menjadi satu dictionary). Jika array >1, ukuran total ditampilkan di UI.
+· Manifest bisa berupa array berisi banyak objek seperti di atas (list library), atau satu objek tunggal. Tangani keduanya.
+
+ALUR KERJA (WAJIB DIIMPLEMENTASI)
+
+A. Load dari Manifest Online
+
+1. Fetch manifest dari config.js (MANIFEST_URL, default menuju https://github.com/azrielspace852-wq/releases).
+2. Parse jadi array library.
+3. Bandingkan dengan library terpasang (match berdasarkan translate):
+   · Tidak ada → status Install.
+   · Ada & version sama → Terpasang.
+   · Ada & version beda → Update.
+4. Klik Install/Update → fetch semua URL di link → merge jadi satu objek dictionary → simpan ke storage beserta metadata { translate, version, installedAt, entryCount, sizeBytes }.
+
+B. Load dari File Lokal
+
+1. Pilih file .json via <input type="file">.
+2. Baca file, cek validasi (objek, value string).
+3. Minta pengguna mengisi translate (dropdown source/target) + version (default "1.0.0").
+4. Simpan ke storage + metadata.
+
+C. Update
+
+· Jika user telah install "Indonesia To English" v1.0.0, dan manifest menampilkan v1.1.0 → tombol berubah jadi Update.
+· Klik Update → unduh versi baru → timpa versi lama → tampilkan toast "Berhasil diperbarui ke v1.1.0".
+· Rollback tidak perlu, tapi konfirmasi sebelum overwrite.
+
+D. Translate (di halaman index)
+
+1. Ambil library aktif dari storage (berdasarkan pasangan source/target).
+2. Normalisasi input (lowercase untuk lookup, simpan original untuk output).
+3. Tokenisasi: coba frasa (2-4 kata) dulu, lalu 1 kata.
+4. Hasil dirakit, kapitalisasi disesuaikan, tanda baca dipertahankan.
+5. Tampilkan hasil di area output.
+
+PENYIMPANAN (WAJIB)
+
+IndexedDB
+
+· Nama DB: offline-translator-db (di config.js).
+· Object store:
+  · libraries — key: translate (misal "Indonesia To English"), value: { translate, version, source, target, installedAt, entryCount, sizeBytes, data } (data berupa objek dictionary).
+  · meta — key-value kecil (misal lastManifestFetch, preferredPair).
+· Gunakan wrapper storage.js dengan API async: saveLibrary, getLibrary, getAllLibraries, deleteLibrary, getMeta, setMeta.
+
+OPFS (dengan fallback)
+
+· Deteksi dukungan: 'storage' in navigator && 'getDirectory' in navigator.storage.
+· Jika didukung: simpan file library sebagai file JSON di OPFS (/libraries/<slug>.json), dan simpan metadata kecil di IndexedDB.
+· Jika tidak didukung: semua data disimpan di IndexedDB (termasuk data di object libraries).
+· Aplikasi wajib tetap berfungsi penuh saat OPFS tidak tersedia.
+· Tampilkan status sumber storage di UI (OPFS / IndexedDB).
+
+UI / UX (WAJIB)
+
+Prinsip
+
+· Bersih, smooth, rapi, profesional, tidak membuat mata lelah.
+· Mobile-first, responsif hingga desktop lebar.
+· Transisi halus: transition: 150–200ms ease, tidak berlebihan.
+· Tanpa animasi berkedip, tanpa warna neon.
+· Semua ikon berupa SVG inline (stroke/fill) dari folder /assets/icons. DILARANG memakai emoji di UI, teks, placeholder, tooltip, atau console log.
+· Fokus state jelas (:focus-visible dengan outline lembut).
+· Kontras teks memenuhi WCAG AA minimum.
+
+Tema (contoh palet, boleh disesuaikan tapi harus lembut)
+
+· Mode terang (default):
+  · Background: #F7F8FA / #FFFFFF
+  · Surface card: #FFFFFF
+  · Border: #E3E6EB
+  · Text primary: #1F2430
+  · Text secondary: #5C6370
+  · Aksen primary: #3B6FF5 (biru lembut)
+  · Aksen success: #1F9D55
+  · Aksen warning: #C98A00
+  · Aksen danger: #C0392B
+· Mode gelap otomatis via prefers-color-scheme: dark dengan palet lembut (bukan hitam pekat; gunakan #16181D background, #E6E8EC text).
+
+Tipografi
+
+· Font sistem: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif.
+· Ukuran dasar 15–16px, line-height 1.5.
+· Heading jangan terlalu tebal (600 max).
+
+Komponen wajib (di components.css)
+
+· Tombol (primary, secondary, ghost, danger) dengan ikon SVG opsional.
+· Card library.
+· Badge status: Install, Terpasang, Update (warna berbeda: biru, hijau, kuning).
+· Modal konfirmasi.
+· Toast notifikasi (pojok kanan bawah, auto-dismiss 3 detik).
+· Empty state (SVG + teks lembut) untuk "Belum ada library terpasang".
+· Spinner/loading ringan (CSS-only, tanpa library eksternal).
+
+ERROR HANDLING & VALIDASI (WAJIB)
+
+· Fetch manifest gagal (offline / CORS) → tampilkan pesan ramah: "Gagal memuat daftar library. Periksa koneksi atau URL manifest." + tombol "Coba lagi".
+· File library tidak valid (bukan objek / value bukan string) → tolak + pesan jelas.
+· Library dengan translate duplikat saat install lokal → tanya: timpa atau batalkan.
+· File kosong / 0 entri → tolak.
+· Saat OPFS gagal inisialisasi → otomatis fallback IndexedDB (log info, bukan error).
+· Saat user menekan Translate tapi library belum terpasang → arahkan ke halaman library.
+· Semua try/catch wajib menangani error storage & fetch.
+
+KUALITAS KODE (WAJIB)
+
+· Kode bersih, modular, mudah dibaca, ada komentar singkat di fungsi penting.
+· Tidak ada console.log sisa (kecuali di mode debug lewat flag di config.js).
+· Tidak ada variabel global liar (pakai modul ESM).
+· Nama fungsi & variabel deskriptif (bahasa Inggris untuk kode, UI bahasa Indonesia).
+· Aksesibilitas: aria-label untuk tombol ikon, role untuk modal/toast, keyboard navigasi untuk modal (Esc close).
+· Performa: debounce saat translate (opsional), lazy render untuk list library panjang (>100 item).
+· Manifest boleh di-cache di meta (misal 24 jam) agar tidak fetch berulang; ada tombol "Refresh" manual.
+
+CHECKLIST AKHIR (HARUS SEMUA TERPENUHI)
+
+☐ index.html dan library.html berfungsi penuh secara offline.
+☐ Semua aset lokal (CSS, JS, SVG) — tidak ada dependensi CDN saat runtime.
+☐ Tidak ada satu pun emoji di UI, kode, atau console.
+☐ Semua ikon memakai SVG dari /assets/icons.
+☐ Fitur translate bekerja tanpa jaringan setelah library terpasang.
+☐ Load library dari URL manifest berjalan (dengan status Install/Terpasang/Update yang benar).
+☐ Load library dari file lokal berjalan + validasi.
+☐ Pilih translate X ke Y dinamis dari library terpasang.
+☐ IndexedDB berfungsi sebagai storage utama.
+☐ OPFS dipakai jika didukung; fallback ke IndexedDB jika tidak — aplikasi tetap berfungsi 100%.
+☐ Update versi terdeteksi otomatis (versi sama = Terpasang, versi beda = Update).
+☐ Tampilan bersih, profesional, responsif, kontras lembut (light + dark mode).
+☐ Semua file terpisah (HTML, CSS, JS) sesuai struktur yang ditentukan.
+☐ README.md berisi cara pakai + cara membuat library JSON + cara meng-host manifest.
+
+OUTPUT YANG DIMINTA
+
+Berikan seluruh kode lengkap siap tempel untuk setiap file sesuai struktur di atas, beserta README.md. Jangan memberi potongan setengah-setengah — tulis semua file secara penuh, dari awal hingga akhir, siap dijalankan. Jika ada bagian yang panjang (misal translator.js, storage.js), tetap tulis penuh tanpa placeholder // ... isi kode di sini.
+
+```

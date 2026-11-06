@@ -1,0 +1,116 @@
+Bertindaklah sebagai Senior Principal Software Engineer dan System Architect yang ahli dalam pengembangan aplikasi CLI, Node.js, TypeScript, dan arsitektur Autonomous AI Agents. 
+
+Tugas Anda adalah merancang, merencanakan, dan menuliskan kode lengkap untuk proyek bernama **AXION AI Agents CLI**. 
+
+Berikut adalah spesifikasi detail dan kebutuhan proyek yang harus Anda penuhi:
+
+### 1. Konteks & Deskripsi Proyek
+- **Nama Proyek**: AXION AI Agents CLI
+- **Fungsi Utama**: Autonomous AI Agent berbasis CLI yang dioptimalkan untuk lingkungan Termux dan sistem Unix-like.
+- **Command Eksekusi Global**: `axion-cli`
+- **Repository Target**: https://github.com/azrielspace852-wq/axion-ai-agents-cli
+- **Lisensi**: GPLv3
+- **Tech Stack**: TypeScript, Node.js LTS.
+
+### 2. Antarmuka Pengguna (UI/UX Terminal)
+- Tampilan terminal harus berupa REPL (Read-Eval-Print Loop) interaktif yang menyerupai aplikasi chat CLI pada umumnya.
+- **Startup Banner**: Saat `axion-cli` dijalankan, tampilkan banner teks besar "AXION CLI", dengan sub-judul "AI Agents CLI By AXION Neuralis" di bawahnya.
+- **Bahasa Default**: English.
+- **Bahasa yang Didukung**: English, Indonesian (bisa diubah via command).
+
+### 3. Manajemen Data & Penyimpanan (State Management)
+Semua data konfigurasi, riwayat, dan memori pengguna harus disimpan di direktori tersembunyi `.axn-cli/` (di `$HOME` pengguna). Pastikan proses baca/tulis tidak mengganggu file sistem atau file pribadi pengguna lainnya.
+
+**Struktur Direktori `.axn-cli/`:**
+```text
+.axn-cli/
+├── memory/
+├── conversations/
+├── instructions/
+├── config.json (Menyimpan API key, provider, bahasa, permissions, custom models)
+└── ... file konfigurasi agen lainnya
+```
+
+**Skema Data JSON:**
+- **Percakapan (Conversations)**: Setiap sesi percakapan disimpan sebagai 1 file JSON terpisah di folder `conversations/`.
+```json
+{
+  "conversation-id": "uuid-v4",
+  "conversation-name": "Nama Sesi",
+  "messages": [
+    {
+      "message-number": 1,
+      "role": "user | assistant | system",
+      "content": "Isi pesan",
+      "timestamp": "ISO-8601"
+    }
+  ]
+}
+```
+- **Memori (Memory)**: Disimpan di folder `memory/` dalam format JSON yang sudah diringkas oleh AI untuk keperluan personalisasi konteks jangka panjang.
+```json
+{
+  "memory-id": "uuid-v4",
+  "about": "Topik/Kategori memori",
+  "memories": [
+    {
+      "memory-number": 1,
+      "content": "Fakta, preferensi, atau instruksi pengguna yang telah diringkas",
+      "timestamp": "ISO-8601"
+    }
+  ]
+}
+```
+
+### 4. Fitur & Command Slash (/)
+Saat berada di dalam sesi chat, pengguna dapat memicu fitur menggunakan command slash:
+- `/models`: Menampilkan daftar model default, memilih model, dan **menambahkan lebih dari satu model custom**. Model custom harus disimpan secara permanen di `config.json`.
+- `/thinking`: Mengatur *thinking level* / *reasoning budget* AI (Pilihan: low, medium, high, max).
+- `/instructions`: Mengatur *custom instructions* (system prompt) untuk personalisasi AI.
+- `/memory`: Mengakses, melihat, atau mengelola memori AI.
+- `/api-key`: Mengatur atau memperbarui API Key (Google AI Studio atau provider lain).
+- `/permissions`: Mengatur izin agen (misal: izin baca/tulis folder saat ini, izin eksekusi command shell, dll).
+- `/provider`: Mengganti atau mengatur custom LLM provider selain Google AI Studio (misal: OpenAI-compatible endpoint).
+- `/clear`: Membersihkan layar dan konteks percakapan saat ini (tanpa menghapus file riwayat).
+- `/conversation`: Melihat daftar riwayat percakapan, masuk ke percakapan lama, menghapus, atau mem-backup percakapan.
+- `/language`: Mengganti bahasa antarmuka tool (English, Indonesian).
+- `/help`: Menampilkan daftar command dan bantuan.
+- `/exit`: Keluar dari aplikasi dengan aman (graceful shutdown).
+
+### 5. Kemampuan AI Agent (Tools & Otonomi)
+- **Web Scraping**: AI harus memiliki *tool* bawaan untuk melakukan *scraping* halaman web menggunakan `curl` atau *library* HTTP agar bisa membaca konten URL yang diberikan user.
+- **Google Search Scraping**: AI harus bisa melakukan pencarian Google (melalui scraping) untuk mendapatkan informasi *real-time* (Up To Date) sebelum menjawab jika pertanyaan membutuhkan data terkini.
+- **Autonomous Agent**: AI harus bisa memutuskan secara mandiri kapan harus memanggil *tools* (scraping/search/eksekusi) berdasarkan意图 (intent) pengguna.
+
+### 6. Model LLM Default
+Berikut adalah model default yang harus tersedia di dalam kode (pastikan menangani API Google AI Studio dengan benar):
+- `gemma-4-31b-it`
+- `gemma-4-26b-a4b-it`
+- `gemini-3.5-flash`
+- `gemini-3.5-flash-lite`
+- `gemini-3.1-flash`
+- `gemini-3.1-flash-lite`
+
+### 7. Sistem Instalasi (Installer)
+- Sediakan script bash bernama `install.sh`.
+- Pengguna harus bisa menginstal hanya dengan satu baris command `curl` yang mengunduh dan mengeksekusi `install.sh` tersebut.
+- `install.sh` harus menangani: pengecekan dependensi (Node.js LTS, npm), instalasi package, kompilasi TypeScript, dan penautan (symlink) command `axion-cli` ke `$PATH` (seperti `/usr/bin` atau `~/.local/bin` di Termux) agar bisa dijalankan dari mana saja.
+
+### 8. Dokumentasi (README.md)
+- Buatlah file `README.md` yang sangat profesional dalam **Bahasa Inggris** untuk repository GitHub.
+- Sertakan: Deskripsi, Fitur Utama, Model yang didukung, Cara Instalasi (Curl command), Cara Penggunaan, Struktur Data `.axn-cli/`, dan Lisensi GPLv3.
+
+---
+
+### INSTRUKSI EKSEKUSI UNTUK ANDA (AI):
+Berdasarkan spesifikasi di atas, hasilkan output berikut secara berurutan dan lengkap:
+1. **Struktur Proyek**: Tuliskan struktur direktori proyek (file & folder) secara lengkap.
+2. **Konfigurasi (`package.json` & `tsconfig.json`)**: Berikan isi file konfigurasi dengan dependensi yang tepat (misal: `ink`, `readline`, `chalk`, `axios`, `cheerio`, `commander`, dll).
+3. **Kode Sumber Inti (TypeScript)**: 
+   - Entry point (CLI REPL, Banner, & Router untuk command `/`).
+   - Modul Agent (Integrasi Google AI Studio, Tool Calling untuk Web/Search).
+   - Modul Storage (Handler untuk membaca/menulis JSON Conversation & Memory).
+4. **Script Instalasi**: Tuliskan isi `install.sh` secara lengkap, aman, dan kompatibel dengan Termux.
+5. **Dokumentasi**: Tuliskan isi `README.md` secara utuh dalam bahasa Inggris.
+
+Pastikan kode bersifat modular, *error-handling* ditangani dengan baik (tidak mudah crash di Termux), dan siap untuk di-copy-paste langsung ke dalam environment pengembangan.

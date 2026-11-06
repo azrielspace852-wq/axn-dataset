@@ -1,0 +1,137 @@
+=========================================================
+  PENGERTIAN        : JAVA (java)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman java (JAVA),
+                      contoh contoh bahasa nya, kegunaan nya, kelebihan
+                      dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi, perbedaan
+                      dengan JAVASCRIPT (Javascript/js)
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+Java adalah bahasa pemrograman tingkat tinggi yang bersifat statically typed, berorientasi objek (object-oriented), dan dirancang untuk dapat dijalankan di berbagai platform melalui Java Virtual Machine (JVM). Slogan terkenalnya, "Write Once, Run Anywhere" (WORA), mencerminkan filosofi utamanya: kode Java yang telah dikompilasi menjadi bytecode dapat berjalan di sistem operasi apa pun yang memiliki JVM, tanpa perlu kompilasi ulang[reference:0].
+
+Java bukan sekadar bahasa, melainkan sebuah platform yang terdiri atas tiga komponen utama: Java Development Kit (JDK) untuk pengembangan, Java Runtime Environment (JRE) untuk menjalankan aplikasi, dan Java Virtual Machine (JVM) yang menjadi mesin eksekusi bytecode. Java digunakan secara luas dalam pengembangan aplikasi enterprise, backend server, aplikasi Android, sistem big data, dan perangkat tertanam (embedded systems). Hingga 2025, Java masih digunakan oleh sekitar 29,4% responden survei Stack Overflow dan menjadi bahasa utama bagi sekitar 3,52 juta repositori baru di GitHub, terutama di domain enterprise[reference:1].
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+Java diciptakan oleh James Gosling, seorang ilmuwan komputer kelahiran Calgary, Alberta, Kanada, pada 19 Mei 1955[reference:2]. Gosling meraih gelar B.Sc di bidang Ilmu Komputer dari University of Calgary pada 1977 dan Ph.D dari Carnegie Mellon University pada 1983[reference:3]. Ia bergabung dengan Sun Microsystems pada 1984 dan di sanalah ia memimpin proyek yang melahirkan Java[reference:4].
+
+Asal Negara: Kanada (kebangsaan pencipta); pengembangan dilakukan di Sun Microsystems, Amerika Serikat.
+Tahun Diciptakan: 1991 (desain awal), dirilis secara resmi pada 23 Mei 1995[reference:5].
+
+Proyek awal Java dikenal dengan nama "Green Project" yang dimulai pada 1990. Tujuannya adalah menciptakan bahasa pemrograman untuk perangkat elektronik konsumen seperti set-top box dan televisi interaktif. Bahasa yang dikembangkan saat itu awalnya bernama "Oak", tetapi nama tersebut sudah digunakan oleh bahasa lain, sehingga diganti menjadi "Java" — konon terinspirasi dari kopi Jawa yang diminum Gosling[reference:6]. Pada 23 Mei 1995, Sun Microsystems secara resmi mengumumkan Java dan browser HotJava di konvensi SunWorld '95, dan sejak saat itu Java melesat menjadi salah satu bahasa pemrograman paling berpengaruh di dunia[reference:7].
+
+3. SEJARAH VERSI DAN RILIS TERKINI
+Java mengikuti siklus rilis yang teratur. Hingga 2026, versi-versi penting dan terbaru adalah sebagai berikut:
+
+- Java 1.0 (1996): Rilis publik pertama.
+- Java 5 (2004): Memperkenalkan generics, annotations, dan autoboxing.
+- Java 8 (2014): Lompatan besar dengan lambda expressions dan Stream API.
+- Java 11 (2018): Versi LTS pertama setelah perubahan siklus rilis.
+- Java 17 (2021): LTS dengan sealed classes dan pattern matching untuk switch (preview).
+- Java 21 (2023): LTS dengan record patterns, virtual threads, dan pattern matching for switch (final).
+- Java 25 (September 2025): LTS terbaru. Membawa penyederhanaan sintaks yang signifikan, termasuk compact source files, instance main methods, kelas java.lang.IO untuk input/output sederhana, dan module import declarations.
+- Java 26 (Maret 2026): Rilis non-LTS. Menghadirkan 10 JDK Enhancement Proposal (JEP), termasuk Pattern Matching untuk tipe primitif (preview keempat), Structured Concurrency (preview keenam), dukungan HTTP/3 pada HTTP Client API, dan peningkatan performa garbage collector G1[reference:10][reference:11].
+- Java 27 (September 2026): Rilis non-LTS terbaru. Berfokus pada keamanan pasca-kuantum (Post-Quantum Hybrid Key Exchange untuk TLS 1.3), Structured Concurrency (preview ketujuh), Primitive Types in Patterns (preview kelima), Lazy Constants (preview ketiga), dan Compact Object Headers yang mengurangi ukuran header per objek dari 64 bit menjadi 32 bit[reference:12][reference:13][reference:14].
+
+Java 29 diproyeksikan menjadi LTS berikutnya pada September 2027[reference:15].
+
+4. SINTAKS DAN CONTOH BAHASA
+Java modern (Java 21 hingga 27) telah banyak berubah dari Java klasik yang verbose. Berikut beberapa contoh konstruksi sintaks yang representatif.
+
+a. Struktur Kelas Klasik (Hingga Java 21)
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+b. Compact Source Files dan Instance Main Methods (Java 25+)
+Java 25 memperkenalkan cara yang jauh lebih sederhana untuk menulis program, terutama bagi pemula. Tidak perlu lagi mendeklarasikan kelas secara eksplisit atau menggunakan static dan String[] pada metode main.
+
+```java
+// Cukup tulis ini dalam file .java
+void main() {
+    IO.println("Hello, World!");
+}
+```
+
+Kelas java.lang.IO menyediakan metode sederhana seperti IO.println() dan IO.readln() untuk menggantikan System.out.println dan Scanner.
+
+c. Record dan Pattern Matching (Java 21+)
+Record adalah kelas data ringkas yang secara otomatis menghasilkan constructor, getter, equals(), hashCode(), dan toString(). Record patterns memungkinkan dekomposisi data secara elegan dalam instanceof dan switch.
+
+```java
+record Point(int x, int y) {}
+
+// Pattern matching untuk instanceof
+static void printSum(Object o) {
+    if (o instanceof Point(int x, int y)) {
+        System.out.println(x + y);
+    }
+}
+
+// Pattern matching untuk switch (Java 21+)
+static String quadrant(Object o) {
+    return switch (o) {
+        case Point(int x, int y) when x == 0 && y == 0 -> "origin";
+        case Point(int x, int y) when x > 0 && y > 0 -> "kuadran I";
+        // ... kasus lainnya
+        default -> "bukan titik";
+    };
+}
+```
+
+Contoh di atas didasarkan pada dokumentasi resmi Oracle untuk record patterns dan pattern matching.
+
+d. Primitive Types in Patterns (Java 26/27, Preview)
+Java 26 dan 27 melanjutkan preview untuk memungkinkan tipe primitif digunakan dalam konteks pattern, misalnya pada instanceof dan switch, sehingga mengurangi kebutuhan boxing dan casting manual.
+
+5. KEGUNAAN JAVA
+   Java memiliki cakupan penggunaan yang sangat luas di industri perangkat lunak:
+
+· Aplikasi Enterprise dan Backend Server: Java adalah tulang punggung banyak sistem perbankan, e-commerce, dan layanan pemerintah. Framework seperti Spring Boot, Jakarta EE, dan Hibernate menjadikan Java pilihan utama untuk arsitektur microservices dan sistem terdistribusi.
+· Pengembangan Aplikasi Android: Java adalah bahasa resmi pertama untuk Android dan masih digunakan secara luas, meskipun Kotlin kini juga populer.
+· Big Data dan Pemrosesan Data: Apache Hadoop, Apache Spark, dan Apache Kafka—yang menjadi fondasi infrastruktur data modern—dibangun di atas JVM dan sangat erat dengan Java.
+· Aplikasi Desktop: JavaFX dan Swing memungkinkan pembuatan aplikasi desktop lintas platform.
+· Sistem Tertanam dan IoT: Java ME (Micro Edition) dan Java Card digunakan pada perangkat dengan sumber daya terbatas.
+· Ilmu Pengetahuan dan Komputasi: Java digunakan dalam simulasi ilmiah, pemodelan, dan aplikasi komputasi kinerja tinggi.
+
+6. KELEBIHAN DAN KEKURANGAN JAVA
+
+Kelebihan Java:
+
+· Portabilitas Lintas Platform (WORA): Berkat JVM, bytecode Java dapat berjalan di Windows, Linux, macOS, dan arsitektur perangkat keras apa pun tanpa perubahan kode.
+· Ekosistem yang Matang dan Besar: Java memiliki pustaka (library) dan framework yang sangat kaya, komunitas global yang besar, serta dukungan jangka panjang dari Oracle dan komunitas OpenJDK.
+· Manajemen Memori Otomatis: Garbage collector Java secara otomatis mengelola alokasi dan pembebasan memori, mengurangi risiko kebocoran memori (memory leak) dan kesalahan pointer.
+· Keamanan: Model keamanan Java, termasuk sandbox dan verifikasi bytecode, menjadikannya pilihan populer untuk aplikasi yang menghadapi jaringan publik.
+· Stabilitas dan Dukungan Enterprise: Java sangat stabil untuk aplikasi jangka panjang, dengan komitmen kuat terhadap kompatibilitas mundur (backward compatibility).
+· Multithreading Bawaan: Java menyediakan dukungan konkurensi yang kuat sejak awal, dan kini diperkaya dengan virtual threads (Java 21) serta structured concurrency (preview) untuk pemrograman paralel yang lebih sederhana.
+
+Kekurangan Java:
+
+· Verbositas (Boilerplate): Java cenderung memerlukan lebih banyak kode untuk tugas yang sama dibandingkan bahasa seperti Python atau Go, meskipun fitur-fitur modern seperti record dan compact source files secara bertahap mengurangi masalah ini.
+· Kinerja dan Waktu Startup: Meskipun JVM sangat teroptimasi, Java memiliki overhead startup yang lebih tinggi dibandingkan bahasa yang dikompilasi secara native seperti C++ atau Rust, terutama untuk aplikasi berumur pendek atau microservices ringan.
+· Konsumsi Memori: JVM sendiri membutuhkan memori yang relatif besar, sehingga kurang ideal untuk lingkungan dengan sumber daya sangat terbatas.
+· Kurva Pembelajaran: Konsep berorientasi objek yang ketat dan ekosistem yang besar bisa terasa menakutkan bagi pemula.
+· Orientasi Objek yang Sangat Ketat: Java "memaksa" hampir segala hal menjadi objek, yang terkadang terasa berlebihan untuk skrip kecil atau prototipe sederhana.
+
+7. PERBEDAAN JAVA DENGAN JAVASCRIPT
+   Meskipun namanya mirip, Java dan JavaScript adalah dua bahasa yang sama sekali berbeda—seperti "kucing dan ikan". Berikut perbedaan utamanya:
+
+· Asal dan Pencipta: Java diciptakan oleh James Gosling di Sun Microsystems (1995). JavaScript diciptakan oleh Brendan Eich di Netscape (1995). Keduanya lahir pada tahun yang sama tetapi di perusahaan yang berbeda dan untuk tujuan yang berbeda.
+· Filosofi dan Penggunaan: Java adalah bahasa pemrograman statically typed yang dirancang untuk aplikasi skala besar, portabilitas, dan kinerja. JavaScript adalah bahasa skrip dinamis yang awalnya dirancang untuk interaktivitas halaman web di browser, tetapi kini telah meluas ke backend (Node.js), mobile, dan desktop.
+· Eksekusi: Kode Java harus dikompilasi menjadi bytecode terlebih dahulu, lalu dijalankan oleh JVM. Kode JavaScript dikirim sebagai teks dan diinterpretasikan langsung oleh mesin JavaScript di browser atau runtime seperti Node.js.
+· Sistem Tipe: Java menggunakan static typing (tipe variabel diperiksa saat kompilasi). JavaScript menggunakan dynamic typing (tipe diperiksa saat runtime dan bersifat longgar).
+· Model Objek: Java menggunakan pewarisan berbasis kelas (class-based inheritance). JavaScript menggunakan pewarisan berbasis prototipe (prototype-based inheritance).
+· Hubungan Nama: "Java" dalam "JavaScript" hanyalah alasan pemasaran. JavaScript bukanlah subset, versi sederhana, atau turunan dari Java. Keduanya tidak memiliki hubungan teknis selain nama yang mirip.
+
+8. KESIMPULAN
+   Java adalah bahasa pemrograman yang telah bertahan lebih dari tiga dekade dan tetap menjadi fondasi bagi sebagian besar infrastruktur perangkat lunak dunia. Diciptakan oleh James Gosling pada 1991 dan dirilis pada 1995, Java membawa gagasan revolusioner "Write Once, Run Anywhere" melalui JVM. Kini, Java terus berevolusi dengan siklus rilis yang cepat: Java 25 (LTS 2025) menyederhanakan sintaks, Java 26 (Maret 2026) menghadirkan peningkatan performa dan HTTP/3, dan Java 27 (September 2026) memperkuat keamanan pasca-kuantum serta efisiensi runtime. Dengan ekosistem enterprise yang masif, dukungan komunitas yang kuat, dan pembaruan bahasa yang konsisten, Java tetap menjadi pilihan utama untuk sistem yang menuntut stabilitas, skalabilitas, dan keamanan. Perbedaannya dengan JavaScript—meskipun namanya sering disalahartikan—menegaskan bahwa Java adalah bahasa untuk membangun fondasi, sementara JavaScript adalah bahasa untuk menghidupkan antarmuka.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa pemrograman Java, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi terbaru, dan perbedaannya dengan JavaScript. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

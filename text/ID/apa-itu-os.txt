@@ -1,0 +1,377 @@
+OS atau Operating System adalah perangkat lunak sistem yang mengelola sumber daya perangkat keras komputer.
+OS menyediakan antarmuka antara program pengguna dan komponen fisik mesin.
+Fungsi mendasar OS adalah membuat komputer dapat dijalankan, dijadwalkan, dan dimanfaatkan secara praktis.
+Tanpa OS, setiap aplikasi harus mengatur CPU, memori, penyimpanan, dan perangkat masukan sendiri-sendiri.
+OS menjadi lapisan abstraksi yang menyembunyikan kompleksitas perangkat keras dari perangkat lunak aplikasi.
+Abstraksi ini membuat program dapat berpindah dari satu mesin ke mesin lain dengan gangguan yang lebih kecil.
+OS mengelola proses, thread, memori, berkas, perangkat I/O, keamanan, dan komunikasi antarsistem.
+OS juga menentukan bagaimana aplikasi saling berbagi sumber daya tanpa saling merusak.
+Dalam istilah sederhana, OS adalah manajer lalu lintas internal sebuah komputer.
+OS memastikan program tidak memakan memori yang bukan haknya.
+OS memastikan perangkat tidak diakses oleh dua aplikasi secara tidak aman.
+OS memastikan sistem dapat tetap stabil meskipun satu aplikasi gagal.
+OS dapat dijalankan pada laptop, server, ponsel, konsol, mobil, pesawat, hingga perangkat tertanam.
+OS bukan aplikasi pengguna, melainkan fondasi tempat aplikasi pengguna berjalan.
+OS dapat bersifat komersial, open source, atau dikembangkan untuk keperluan khusus.
+OS modern selalu menyediakan mekanisme untuk menjalankan banyak program secara praktis.
+OS modern juga menyediakan model keamanan untuk melindungi pengguna, proses, dan data.
+OS menyimpan informasi penting tentang status sistem agar dapat dikelola dan dipulihkan.
+OS menentukan kapan sebuah program boleh memakai prosesor.
+OS menentukan berapa besar memori yang dapat dipakai sebuah program.
+OS menentukan bagaimana data ditulis dan dibaca dari penyimpanan.
+OS menentukan bagaimana jaringan digunakan oleh aplikasi.
+OS menyediakan logika agar sistem dapat berhenti, bangun, dan pulih dengan benar.
+OS dapat menjadi tempat integrasi antara perangkat keras, pustaka, dan ekosistem aplikasi.
+OS adalah salah satu komponen paling kritis dalam komputasi modern.
+OS dapat dipandang sebagai platform, bukan hanya perangkat lunak pendukung.
+OS menjadi tempat kebijakan manajemen sistem dieksekusi.
+OS menjadi dasar dari virtualisasi, container, cloud computing, dan komputasi tertanam.
+OS dapat memiliki banyak varian tergantung tujuan penggunaannya.
+OS desktop berfokus pada interaksi pengguna, multimedia, dan produktivitas.
+OS server berfokus pada keandalan, keamanan, jaringan, dan skalabilitas.
+OS ponsel berfokus pada efisiensi energi, interaksi sentuh, dan manajemen izin.
+OS embedded berfokus pada determinisme, sumber daya minim, dan ketergantungan perangkat keras khusus.
+OS real time berfokus pada ketepatan waktu eksekusi dan keterprediksian perilaku sistem.
+Fungsi pertama OS adalah manajemen proses, yaitu membuat, menjadwalkan, menunggu, dan menghentikan program.
+Proses adalah instance program yang sedang berjalan beserta statusnya di dalam memori.
+Thread adalah unit eksekusi yang lebih ringan di dalam sebuah proses.
+OS menyimpan data proses dalam struktur yang sering disebut PCB atau process control block.
+PCB berisi status register, prioritas, identitas, memori, handle berkas, dan informasi penjadwalan.
+OS menggunakan mekanisme preemption untuk dapat merebut kontrol dari proses yang sedang berjalan.
+OS menggunakan mekanisme non-preemptive saat proses dibiarkan sampai titik tertentu.
+Multiprogramming adalah kemampuan OS menjalankan beberapa proses secara bergiliran agar CPU tetap sibuk.
+Multitasking adalah bentuk multiprogramming yang membuat pengguna merasa banyak program berjalan bersamaan.
+Concurrency berarti beberapa aktivitas dapat berkembang dalam interval waktu yang saling tumpang tindih.
+Parallelism berarti beberapa aktivitas benar-benar berjalan pada saat yang sama.
+Satu CPU hanya dapat menjalankan satu instruksi dalam satu waktu, sehingga multitasking bergantung pada penjadwalan cepat.
+CPU multicore memungkinkan banyak thread benar-benar dieksekusi simultan.
+OS harus menangani kondisi saat beberapa proses ingin mengakses sumber daya yang sama.
+Sinkronisasi adalah mekanisme agar proses atau thread tidak saling mengganggu saat berbagi data.
+Mutex adalah kunci yang memastikan hanya satu thread memasuki bagian kritis pada satu waktu.
+Semaphore adalah penanda terhitung yang membatasi akses ke sumber daya bersama.
+Spinlock adalah lock busy-wait yang menahan CPU selama menunggu.
+Monitor adalah struktur sinkronisasi yang menggabungkan kondisi dan mutex.
+Race condition terjadi ketika hasil program bergantung pada urutan eksekusi yang tidak ditentukan.
+Deadlock terjadi ketika beberapa proses saling menunggu sumber daya yang tidak pernah dilepas.
+Empat kondisi deadlock adalah mutual exclusion, hold and wait, no preemption, dan circular wait.
+Starvation terjadi ketika proses terus kalah prioritas dan tidak pernah mendapat CPU.
+Priority inversion terjadi ketika proses berprioritas tinggi kalah oleh proses berprioritas rendah melalui mekanisme tidak langsung.
+OS dapat mendeteksi deadlock, mencegahnya, menyembuhkannya, atau hanya mengabaikannya.
+Strategi pencegahan deadlock dapat menggunakan ordering sumber daya.
+Strategi pemulihan deadlock dapat melibatkan penghentian proses atau pembebasan sumber daya paksa.
+OS modern sering memakai heuristic karena deteksi deadlock sempurna terlalu mahal.
+Scheduling adalah kebijakan OS memilih proses mana yang mendapat CPU berikutnya.
+Sistem operasi dapat memiliki scheduler jangka panjang, jangka menengah, dan jangka pendek.
+Scheduler jangka panjang menentukan proses mana yang boleh masuk ke memori.
+Scheduler jangka menengah mengatur swapping keluar masuk memori.
+Scheduler jangka pendek memilih proses siap untuk dijalankan pada CPU.
+FCFS menjalankan proses sesuai urutan kedatangan.
+SJF memilih proses dengan durasi CPU burst terpendek berikutnya.
+SRTF adalah versi preemption dari SJF.
+Round Robin memberi quantum waktu kepada tiap proses secara bergantian.
+Quantum terlalu kecil memperbesar overhead konteks.
+Quantum terlalu besar membuat responsivitas menurun.
+Scheduling prioritas menempatkan proses bernilai penting lebih dulu.
+MLFQ memindahkan proses antar antrean berdasarkan perilaku historis.
+CFS di Linux memilih proses dengan credit virtual terkecil.
+Real time scheduling mengejar deadline, bukan sekadar fairness.
+Rate Monotonic Scheduling memberi prioritas lebih tinggi pada periode lebih pendek.
+Earliest Deadline First memilih proses dengan deadline paling dekat.
+RTOS memisahkan penjadwalan deterministik dari penjadwalan general purpose.
+Jitter adalah variasi waktu eksekusi yang menjadi perhatian utama sistem real time.
+Latency adalah waktu tunggu sebelum respons dimulai.
+Throughput adalah jumlah pekerjaan yang dapat diselesaikan dalam interval waktu.
+Responsiveness adalah seberapa cepat sistem bereaksi terhadap input pengguna.
+Fairness berarti setiap proses mendapat kesempatan sesuai kebijakan OS.
+OS memilih penjadwal berdasarkan target beban kerja, bukan hanya nama algoritma.
+Manajemen memori adalah fungsi OS mengalokasikan dan melindungi RAM.
+OS membuat proses tidak bebas menulis ke alamat memori milik proses lain.
+OS memetakan alamat logika program ke alamat fisik perangkat keras.
+Memory protection menjaga integritas data proses satu dari proses lain.
+Paging membagi memori menjadi halaman logis dan frame fisik.
+Segmentation membagi memori berdasarkan segmen seperti kode, data, dan stack.
+Paging memudahkan alokasi non-kontigu.
+Segmentation lebih intuitif bagi programmer, tetapi dapat menyulitkan manajemen.
+Sistem modern umumnya menggabungkan keduanya.
+Page table menyimpan pemetaan dari halaman logis ke frame fisik.
+TLB menyimpan entri page table yang sering dipakai agar akses cepat.
+Page fault terjadi ketika halaman yang dibutuhkan belum ada di memori fisik.
+Demand paging mengaktifkan halaman hanya ketika benar-benar diperlukan.
+Swap adalah memindahkan halaman ke penyimpanan untuk mengosongkan RAM.
+Thrashing terjadi ketika sistem lebih banyak memindahkan halaman daripada menjalankan proses.
+Working set model membantu OS memahami halaman yang sedang aktif dipakai proses.
+OS dapat memakai page replacement seperti LRU, FIFO, CLOCK, atau variannya.
+Fragmentasi internal terjadi karena pembulatan alokasi halaman.
+Fragmentasi eksternal terjadi karena celah kecil di memori tidak cukup dipakai.
+Buddy allocator membantu pengelolaan memori berdasar pangkat dua.
+Slab allocator membantu alokasi objek kernel berukuran kecil.
+Memory-mapped file memungkinkan berkas dipakai seperti memori.
+OS menyediakan shared memory untuk komunikasi antar proses.
+Copy-on-write menghemat duplikasi halaman sampai benar-benar terjadi tulisan.
+Kasus khusus seperti embedded dapat meminimalkan overhead manajemen memori kompleks.
+Virtual memory adalah ilusi bahwa proses punya lebih banyak ruang alamat daripada fisik yang tersedia.
+Virtual memory membuat isolasi dan fleksibilitas menjadi lebih baik.
+MMU adalah perangkat keras yang menerjemahkan alamat virtual ke fisik.
+Privilege level memungkinkan kernel berjalan pada mode yang lebih berkuasa daripada aplikasi.
+Ring 0, ring 1, ring 2, dan ring 3 adalah cara klasik memisahkan hak akses prosesor.
+Kernel space adalah tempat kode OS paling percaya diri dan paling berkuasa.
+User space adalah tempat aplikasi dibatasi oleh kebijakan OS.
+System call adalah pintu resmi dari user space ke kernel space.
+System call memungkinkan aplikasi meminta layanan OS secara terkendali.
+Context switch adalah pemindahan status eksekusi dari satu proses ke proses lain.
+Overhead context switch dapat memengaruhi kinerja jika terlalu sering.
+Kernel dapat menangani interupsi, timer, DMA, dan aktivitas sistem latar belakang.
+Device file memberi tampilan seragam terhadap perangkat dalam Unix.
+Dalam Windows, banyak sumber daya direpresentasikan melalui object manager dan handle.
+File system mengatur cara data disimpan dan ditelusuri di penyimpanan.
+File system menyediakan konsep berkas, direktori, path, atribut, dan izin.
+Inode adalah struktur metadata yang menggambarkan berkas pada sistem Unix.
+Directory menyimpan pemetaan nama ke inode.
+Path adalah cara program merujuk lokasi berkas.
+Permission menentukan siapa boleh membaca, menulis, atau mengeksekusi.
+Journaling membantu file system pulih dengan lebih cepat setelah crash.
+FSFS menjaga konsistensi struktur pohon direktori pada sistem tertentu.
+Copy-on-write filesystem seperti ZFS memberi keuntungan snapshot dan integritas.
+NTFS mendukung ACL, transaksi, dan kompresi.
+ext4 mendukung banyak fitur untuk Linux dan perangkat penyimpanan.
+FAT masih relevan pada media portabel dan embedded sederhana.
+APFS dirancang untuk perangkat Apple dengan fokus efisiensi dan enkripsi.
+Cache file system mempercepat akses dengan menyimpan data yang sering dibaca.
+Buffer cache adalah memori yang dipakai untuk menyimpan halaman berkas.
+Disk scheduler dapat mengatur urutan permintaan baca dan tulis.
+SSD mengubah cara berpikir klasik tentang seek time dan rotational latency.
+RAID membantu performa, redundansi, atau keduanya.
+Btrfs, ext4, XFS, ZFS, dan NTFS menunjukkan perbedaan filosofi penyimpanan.
+OS harus memutuskan seberapa agresif melakukan write-back.
+Write-back meningkatkan throughput, tetapi berisiko data hilang saat daya mati.
+Write-through lebih aman secara sinkronisasi, tetapi lebih lambat.
+fsync memungkinkan aplikasi memastikan data benar-benar sampai ke penyimpanan.
+I/O adalah komunikasi OS dengan perangkat seperti keyboard, disk, jaringan, dan layar.
+Program biasanya tidak menyentuh perangkat secara langsung karena alasan keamanan dan abstraksi.
+Device driver adalah modul yang menerjemahkan layanan OS ke bahasa perangkat spesifik.
+Driver dapat berjalan di kernel atau di user space tergantung desain sistem.
+USB, PCIe, SATA, NVMe, dan jaringan Ethernet adalah contoh area yang bergantung pada driver.
+Interrupt adalah sinyal perangkat keras yang meminta perhatian CPU.
+Polling adalah alternatif interupsi dengan memeriksa status perangkat berulang kali.
+DMA memungkinkan perangkat memindahkan data ke memori tanpa ikut campur CPU tiap byte.
+Buffering membantu menyerap perbedaan kecepatan antara produsen dan konsumen data.
+Stream I/O memperlakukan data sebagai aliran byte berkelanjutan.
+Block I/O memperlakukan data sebagai unit berukuran tetap.
+OS menjaga konsistensi operasi ketika program tidak dapat melanjutkan.
+Boot adalah proses memulai sistem dari keadaan mati menjadi siap.
+Firmware seperti BIOS atau UEFI menyiapkan perangkat awal.
+Bootloader memuat kernel dan inisiasi ke memori.
+GRUB umum dipakai di Linux.
+systemd-boot menjadi alternatif modern pada beberapa distro.
+Windows Boot Manager menangani sistem Windows.
+U-Boot lazim di perangkat embedded.
+Kernel diinisialisasi sebelum ruang pengguna aktif.
+init, systemd, launchd, atau shell menjadi fondasi layanan sistem.
+Runlevel menandai keadaan operasional sistem.
+Target systemd adalah cara deklaratif mengatur startup layanan.
+Service dapat dimulai secara paralel jika ketergantungan dipenuhi.
+Logging menjadi fondasi diagnostik sistem.
+systemd mencatat journal di bawah banyak distro Linux.
+rsyslog dan syslog-ng populer untuk pengiriman log.
+Windows Event Log menjadi tempat pencatatan kejadian sistem.
+macOS memakai unified logging untuk menaruh data diagnostik.
+Cron dan systemd timer menjadwalkan tugas otomatis.
+Daemon adalah proses latar belakang yang tidak terikat pada terminal.
+Zombie process adalah proses yang selesai tetapi statusnya belum diambil oleh parent.
+Orphan process adalah proses yang parent-nya berakhir dan perlu diambil oleh init.
+Process tree menggambarkan hubungan antar proses.
+Fork membuat duplikat proses pada Unix.
+Exec menggantikan program dalam proses yang ada.
+Pipes memungkinkan aliran data antar proses.
+Socket dapat dipakai untuk IPC lokal maupun jaringan.
+Signals adalah interupsi asinkron untuk proses.
+POSIX API menyediakan standar kompatibilitas antar sistem mirip Unix.
+Shell adalah interpreter perintah untuk berinteraksi dengan OS.
+Bash, Zsh, Fish, PowerShell, dan cmd adalah contoh shell yang berbeda filosofi.
+CLI memberi kontrol rinci dan otomasi yang kuat.
+GUI memberi aksesibilitas visual melalui jendela, tombol, dan pointer.
+OS desktop biasanya menyediakan kompositor, window manager, dan sistem input.
+Wayland adalah alternatif dari X11 untuk lingkungan grafis Linux.
+Windows Desktop Window Manager mengatur tampilan dan komposisi jendela.
+Aqua menjadi antarmuka utama macOS.
+Android memakai kerangka kerja berbasis kernel Linux dan runtime ART.
+iOS dibangun di atas XNU yang menggabungkan mach, BSD, dan I/O Kit.
+Windows NT memisahkan desain dari Windows 9x yang lebih legacy.
+Linux adalah kernel, sedangkan distro adalah OS lengkap dengan paket dan tools.
+Ubuntu, Fedora, Debian, Arch, dan openSUSE adalah contoh distro Linux.
+FreeBSD mengutamakan konsistensi sistem dan kestabilan server.
+OpenBSD menekankan keamanan konservatif dan audit.
+NetBSD menekankan portabilitas.
+Solaris atau Oracle Solaris mewarisi banyak konsep server klasik.
+Android adalah OS mobile berbasis kernel Linux dengan lapisan runtime dan framework khusus.
+iOS dan iPadOS memakai kernel XNU dan model keamanan ketat.
+HarmonyOS adalah OS modern yang berfokus pada lintas perangkat.
+ChromeOS mengandalkan browser sebagai pusat pengalaman dengan basis Linux.
+Windows Server menyediakan peran domain, file server, web, dan virtualisasi.
+macOS Server atau layanan miripnya kini sering dipecah ke fungsi lain.
+Unix lahir sebagai ekosistem penting yang memengaruhi banyak OS modern.
+Multics adalah sistem multiuser zaman awal yang menginspirasi Unix.
+Ken Thompson dan Dennis Ritchie sering disebut sebagai tokoh utama Unix.
+Bahasa C membantu portabilitas Unix ke banyak arsitektur.
+BSD membawa variasi turunan Unix ke dunia jaringan dan workstation.
+Windows NT dikembangkan sebagai sistem 32-bit modern dengan model kernel terpisah.
+Windows 95 mempopulerkan GUI massal di PC.
+Linux kernel dimulai oleh Linus Torvalds pada 1991.
+Kernel Linux bersifat monolitik modular dengan banyak driver dalam satu ruang.
+macOS memakai pendekatan hybrid yang menggabungkan mach microkernel dan komponen BSD.
+QNX adalah RTOS microkernel yang sering dipakai di kendaraan dan industri.
+VxWorks adalah RTOS yang sering dipakai untuk sistem tertanam kritis.
+RTOS bukan selalu berarti cepat, tetapi terutama predictable terhadap waktu.
+Determinisme berarti sistem dapat menjamin batas waktu respons.
+Hard real time berarti melewati deadline adalah kegagalan.
+Soft real time berarti melewati deadline merugikan, tetapi tidak fatal.
+Microkernel memisahkan layanan ke proses terpisah.
+Microkernel meningkatkan isolasi tetapi dapat menambah IPC overhead.
+Monolithic kernel menggabungkan banyak fungsi dalam satu alamat kernel.
+Hybrid kernel mencari kompromi antara performa dan modularitas.
+Exokernel adalah ide eksperimental yang menyerahkan manajemen sumber daya rendah ke library aplikasi.
+Library OS mengompilasi banyak fungsi OS ke dalam aplikasi itu sendiri.
+Unikernel merangkum satu aplikasi dan runtime menjadi image minimal.
+Containerization memakai isolasi pada tingkat OS, bukan virtualisasi penuh.
+Docker LXC dan podman populer untuk container.
+cgroups membatasi CPU, memori, dan perangkat.
+namespaces mengisolasi view sistem seperti PID network mount.
+OCI Runtime menyediakan standardisasi runtime container.
+Kubernetes menjadi orkestrator container yang mengabstraksi banyak host.
+Hypervisor tipe 1 berjalan langsung di perangkat keras.
+Hypervisor tipe 2 berjalan di atas OS host.
+KVM mengubah Linux menjadi fondasi virtualisasi.
+Xen dan Hyper-V digunakan untuk infrastruktur virtual berskala besar.
+VMware dikenal di lingkungan enterprise.
+VirtualBox populer untuk desktop dan pengujian.
+Nested virtualization menjalankan VM di dalam VM.
+Live migration memungkinkan VM berpindah antar host tanpa downtime signifikan.
+Cloud OS adalah sistem yang dioptimalkan untuk hosting dan skala.
+Serverless masih bergantung pada OS di balik layar.
+Container image tidak memiliki kernel sendiri, melainkan memakai kernel host.
+VM memiliki kernel sendiri sehingga isolasinya lebih tegas.
+OS modern harus mampu menangani keamanan yang terus berubah.
+Access control membatasi hak proses dan pengguna.
+Authentication menjawab siapa yang mengakses.
+Authorization menjawab apa yang boleh dilakukan.
+Accounting mencatat tindakan pengguna untuk audit.
+SELinux menerapkan mandatory access control pada Linux.
+AppArmor menerapkan profil kemampuan pada aplikasi.
+Windows Access Control List mengatur izin objek.
+seccomp menyaring system call agar aplikasi lebih aman.
+Namespaces dan cgroups membantu sandboxing.
+Sandbox membatasi dampak jika aplikasi berhasil dieksploitasi.
+ASLR mengacak lokasi memori untuk menyulitkan eksploitasi.
+DEP atau NX membuat halaman data tidak bisa dieksekusi.
+Stack canary mendeteksi pemrosesan buffer yang rusak.
+Kernel address space layout randomization memperkuat perlindungan kernel.
+Secure boot memastikan rantai startup hanya menjalankan komponen tepercaya.
+TPM menyediakan penyimpanan kunci dan pengukuran boot.
+Measured boot dapat menghasilkan bukti bahwa sistem tidak dimodifikasi.
+Enkripsi disk melindungi data saat perangkat hilang.
+LUKS menjadi standar enkripsi volume di banyak Linux.
+BitLocker adalah enkripsi disk pada Windows.
+FileVault adalah enkripsi disk pada macOS.
+Enkripsi file dapat juga dilakukan pada level filesystem.
+Firewall membatasi lalu lintas jaringan masuk dan keluar.
+Netfilter iptables nftables adalah fondasi packet filtering Linux.
+Windows Defender Firewall mengatur koneksi berdasarkan profil jaringan.
+DNS resolver menjadi bagian penting dari OS modern.
+Stack jaringan OS mengimplementasikan TCP IP dan protokol lain.
+Socket API menjadi titik komunikasi aplikasi dengan jaringan.
+OS dapat memakai multiplexing agar satu proses menangani banyak koneksi.
+HTTP server sering memanfaatkan event loop atau thread pool yang disediakan OS.
+Keamanan jaringan tidak hanya bergantung pada firewall, tetapi juga update dan konfigurasi.
+Side channel adalah serangan yang memanfaatkan waktu, cache, atau kebocoran lain.
+Mitigasi modern pada OS mencakup pemisahan page table dan kontrol speculative execution.
+Container escape terjadi ketika proses melarikan diri dari isolasi.
+Kernel panic adalah keadaan darurat ketika sistem berhenti beroperasi.
+Blue screen atau kernel failure pada Windows menandakan kesalahan fatal.
+Panic pada sistem kritis dapat memicu reboot otomatis atau failover.
+Crash dump digunakan untuk analisis pasca kegagalan.
+Kdump dan Windows memory dump membantu diagnosis.
+Core dump meniru keadaan memori proses ketika crash terjadi.
+Strace dan ltrace melacak system call dan pustaka.
+Perf dapat mengukur aktivitas CPU dan kernel.
+Top, htop, btop, dan Task Manager memberi gambaran sumber daya.
+Latency histogram lebih bermakna daripada hanya rata-rata.
+Saturation menunjukkan sumber daya mendekati batas.
+Bottleneck dapat berada pada CPU, memori, disk, atau jaringan.
+Overhead context switch dapat menjadi sumber performa buruk.
+Cache miss dapat menurunkan kinerja tanpa terlihat jelas.
+Memory leak terjadi ketika proses terus meminta memori tanpa melepaskannya.
+Race condition sering muncul hanya saat beban tinggi.
+Kernel logging harus dikendalikan agar tidak membanjiri disk.
+OS dapat memiliki model update paket dan keamanan.
+APT dan dpkg umum di Debian dan Ubuntu.
+DNF dan RPM umum di Fedora dan turunannya.
+Pacman dikenal di Arch.
+Zypper dikenal di openSUSE.
+Package manager membantu konsistensi versi dan dependensi.
+Patch rutin sering menjadi komponen keamanan utama.
+Rollback dapat dilakukan dengan snapshot dan repositori paket.
+Immutable OS seperti sistem appliance membatasi perubahan runtime.
+OSTree dan A/B update membantu pembaruan yang aman.
+OS embedded sering memakai image tetap dengan update terkontrol.
+OTA update penting untuk IoT dan kendaraan.
+Watchdog timer dapat merestart sistem jika OS tidak merespons.
+Firmware dan OS harus saling memahami batas tanggung jawab.
+Driver GPU sering menjadi komponen paling kompleks dalam sistem grafis.
+GPU computing mengubah cara OS menjadwalkan akselerasi perangkat.
+Display manager mengatur sesi login dan desktop.
+Wayland membuat compositor menjadi pusat tampilan.
+X11 memisahkan server X, window manager, dan aplikasi.
+PulseAudio dan PipeWire menangani audio di Linux.
+Core Audio menjadi sistem audio macOS dan iOS.
+WASAPI dan audio stack Windows menangani audio dan game.
+Input handling adalah jalur keyboard mouse touchscreen joystick dan sensor.
+OS dapat memberi umpan balik kepada pengembang lewat profiler dan tracer.
+OS dapat menyimpan metadata proses untuk forensik.
+OS dapat mengelola izin privasi pada perangkat mobile.
+Lokasi kamera mikrofon dan notifikasi adalah contoh domain izin OS ponsel.
+Sandbox aplikasi pada iOS dan Android membatasi akses sumber daya pengguna.
+App permissions memberi transparansi kepada pengguna.
+Model izin menunjukkan perbedaan filosofi desktop dan mobile.
+Server headless tetap memerlukan OS untuk konfigurasi dan kontrol jarak jauh.
+OS modern juga harus menangani sleep resume dan manajemen daya.
+Hibernasi menyimpan keadaan ke disk.
+Sleep mempertahankan daya ke RAM.
+C-state dan P-state menjadi bagian dari manajemen daya CPU.
+OS dapat menyetel governor CPU untuk efisiensi atau kinerja.
+Manajemen termal penting untuk laptop dan ponsel.
+OS dapat memutuskan kapan memindahkan proses ke core berdaya rendah.
+Komputasi heterogen membutuhkan OS yang memahami GPU NPU dan akselerator lain.
+OS menjadi tempat kebijakan penjadwalan dan alokasi akselerator hidup bersama.
+Virtual memory dan page replacement membuat OS terasa memiliki memori lebih besar.
+OS menyediakan model kegagalan agar kesalahan tidak menjalar ke seluruh sistem.
+OS adalah tempat konsep isolasi, scheduling, dan keamanan bertemu.
+Pemahaman OS membantu debugging masalah yang tidak bisa dijelaskan oleh aplikasi saja.
+Pemahaman OS membantu memilih alat yang tepat untuk beban kerja.
+Pemahaman OS penting untuk merancang sistem yang tangguh dan efisien.
+OS dapat menjadi sumber kebenaran perilaku runtime sebuah sistem.
+OS bukan sekadar pelengkap, melainkan inti dari eksekusi komputer.
+OS menentukan bagaimana sistem berpikir tentang CPU, memori, dan perangkat.
+OS dapat menjadi pembeda antara kegagalan kecil dan kegagalan sistem total.
+OS yang matang mampu menjaga sistem tetap beroperasi dalam gangguan.
+OS yang buruk dapat membuat hardware mahal terasa lambat.
+OS yang baik membuat hardware sederhana terasa berguna.
+OS menyediakan ruang bagi eksperimen, rilis, dan pemulihan.
+OS adalah fondasi tempat cloud, container, dan edge computing bertumpu.
+OS mengikat perangkat keras, proses, memori, penyimpanan, dan jaringan dalam satu kebijakan.
+OS dapat dipelajari dari sisi konsep, implementasi, atau praktik operasional.
+OS memiliki bahasa yang sama di berbagai sistem: proses, memori, berkas, perangkat, dan izin.
+OS memisahkan mekanisme dan kebijakan agar sistem lebih fleksibel.
+Mekanisme menjawab bagaimana kerja dilakukan, kebijakan menjawab kapan dan seberapa banyak.
+OS dapat menjalankan banyak proses tetapi hanya sebagian yang benar-benar berjalan pada satu waktu.
+OS memberi ilusi concurrency, tetapi di bawahnya ada urutan keputusan penjadwalan.
+OS adalah tempat banyak trade-off dilakukan: latensi versus throughput, fairness versus responsivitas, isolasi versus biaya.
+OS dapat berubah dari monolitik ke modular tanpa mengubah seluruh model pengguna.
+OS dapat menambahkan fitur keamanan baru dengan mempertahankan kompatibilitas.
+OS terus menjadi salah topik paling penting dalam ilmu komputer.
+OS dapat dipelajari dari Linux, Windows, macOS, Android, iOS, BSD, hingga RTOS khusus.
+OS bukan hanya teori, tetapi praktik yang langsung memengaruhi kinerja aplikasi sehari-hari.
+OS dapat menjadi alat diagnostik sekaligus tempat sumber masalah paling sulit.
+OS adalah lapisan abstraksi yang memungkinkan sistem komputer besar tetap terkelola.
+OS mengubah perangkat keras pasif menjadi platform eksekusi yang aman dan produktif.
+OS memberi aplikasi kontrak tentang cara menggunakan mesin tanpa merusak mesin itu sendiri.
+OS adalah dasar bagi hampir semua software modern yang berjalan di atasnya.

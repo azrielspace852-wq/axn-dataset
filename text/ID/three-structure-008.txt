@@ -1,0 +1,1110 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 8
+Bahasa: Indonesia
+Catatan: Generasi 6 sudah dibuat sebelumnya. Generasi ini adalah kelanjutan logis dari Generasi 7, dengan pendalaman arsitektur aplikasi Android dan variasi struktur berdasarkan skenario produksi nyata.
+Fokus: Arsitektur aplikasi Android mendalam (Clean Architecture, MVVM, MVI, MVP, hexagonal), state management, coroutines/Flow, offline-first, real-time, dan variasi struktur untuk berbagai skenario bisnis.
+Cakupan: Sembilan skenario produksi berbeda (startup MVP, enterprise, offline-first, real-time chat, e-commerce, companion IoT, media streaming, fintech, health) dengan struktur pohon lengkap dan pemetaan fungsi.
+Tujuan: Melatih AI agar dapat memilih dan merancang struktur Android yang sesuai dengan karakteristik domain bisnis, bukan sekadar mengikuti satu pola.
+
+BAGIAN 1: NARASI PENDALAMAN ARSITEKTUR ANDROID
+Arsitektur adalah seperangkat aturan tentang bagaimana komponen berinteraksi.
+Arsitektur menentukan arah dependensi.
+Arsitektur menentukan batas tanggung jawab.
+Arsitektur menentukan cara data mengalir.
+Arsitektur menentukan cara state dikelola.
+Arsitektur menentukan cara kesalahan ditangani.
+Arsitektur menentukan cara pengujian dilakukan.
+Arsitektur bukan sekadar folder.
+Arsitektur adalah keputusan yang tercermin dalam folder.
+Folder yang salah dapat merusak arsitektur yang baik.
+Folder yang tepat dapat memperkuat arsitektur yang baik.
+AI harus memahami prinsip arsitektur sebelum menyarankan struktur.
+AI harus memahami konsekuensi dari setiap pola arsitektur.
+AI harus memahami bahwa tidak ada satu arsitektur untuk semua proyek.
+AI harus memahami bahwa arsitektur dapat berevolusi seiring waktu.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan bisnis.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan tim.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan operasional.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan pengujian.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan performa.
+AI harus memahami bahwa arsitektur harus mendukung kebutuhan keamanan.
+
+BAGIAN 2: PRINSIP ARSITEKTUR ANDROID MENDALAM
+Prinsip 1: Pemisahan tanggung jawab.
+Setiap kelas harus memiliki satu alasan untuk berubah.
+Setiap modul harus memiliki satu tanggung jawab utama.
+Setiap layer harus memiliki batas yang jelas.
+
+Prinsip 2: Arah dependensi.
+Dependensi harus mengarah ke lapisan yang lebih stabil.
+Lapisan presentasi bergantung pada domain.
+Lapisan data bergantung pada domain.
+Lapisan infrastruktur bergantung pada domain.
+Domain tidak bergantung pada lapisan lain.
+Domain memuat aturan bisnis murni.
+Domain tidak memuat framework.
+Domain tidak memuat Android.
+Domain dapat diuji tanpa Android.
+
+Prinsip 3: Inversi dependensi.
+Domain mendefinisikan antarmuka repositori.
+Data mengimplementasikan antarmuka repositori.
+Presentasi memakai antarmuka repositori melalui domain.
+Implementasi dapat diganti tanpa mengubah domain.
+Pengujian dapat memakai implementasi palsu.
+
+Prinsip 4: Single source of truth.
+State UI berasal dari satu sumber.
+Sumber dapat berupa ViewModel.
+Sumber dapat berupa repositori.
+Sumber dapat berupa basis data lokal.
+Sumber harus konsisten.
+Sumber harus dapat diobservasi.
+
+Prinsip 5: Unidirectional data flow.
+Data mengalir dari sumber ke UI.
+Event mengalir dari UI ke sumber.
+UI tidak memodifikasi state secara langsung.
+UI mengirim intent atau event.
+Sumber memproses event.
+Sumber menghasilkan state baru.
+UI merender state baru.
+
+Prinsip 6: Immutability.
+State UI sebaiknya immutable.
+Model domain sebaiknya immutable.
+Immutable mengurangi bug.
+Immutable memudahkan pengujian.
+Immutable memudahkan debugging.
+
+Prinsip 7: Explicit state.
+State UI harus eksplisit.
+State UI mencakup loading, success, error, empty.
+State UI tidak boleh implisit.
+State UI tidak boleh tersembunyi di banyak boolean.
+State UI harus dapat direpresentasikan sebagai sealed class atau data class.
+
+Prinsip 8: Error handling.
+Kesalahan harus ditangani secara eksplisit.
+Kesalahan jaringan berbeda dari kesalahan validasi.
+Kesalahan harus dipetakan ke pesan pengguna.
+Kesalahan harus dicatat untuk diagnosis.
+Kesalahan tidak boleh menyebabkan crash diam-diam.
+
+Prinsip 9: Testability.
+Setiap komponen harus dapat diuji.
+Setiap komponen harus memiliki dependensi yang dapat diganti.
+Setiap komponen harus memiliki batas yang jelas.
+Pengujian harus cepat dan deterministik.
+
+Prinsip 10: Observability.
+Setiap komponen penting harus dapat diamati.
+Log harus terstruktur.
+Metrik harus tersedia.
+Trace harus tersedia untuk alur kritis.
+
+BAGIAN 3: POLA ARSITEKTUR ANDROID
+Pola MVVM (Model-View-ViewModel).
+View adalah Activity, Fragment, atau Composable.
+ViewModel menyimpan state UI.
+ViewModel memanggil use case atau repositori.
+Model adalah data dan aturan bisnis.
+MVVM cocok untuk sebagian besar aplikasi Android.
+MVVM didukung oleh Android Jetpack.
+MVVM mudah diuji.
+MVVM mudah dipahami.
+
+Pola MVI (Model-View-Intent).
+View mengirim Intent.
+Intent diproses oleh reducer atau ViewModel.
+State dihasilkan dari Intent.
+State bersifat immutable.
+MVI cocok untuk UI kompleks.
+MVI cocok untuk alur yang membutuhkan prediktabilitas.
+MVI menuntut disiplin dalam pengelolaan state.
+MVI dapat dipadukan dengan MVVM.
+
+Pola MVP (Model-View-Presenter).
+View pasif.
+Presenter mengelola logika presentasi.
+MVP umum pada proyek lama.
+MVP sudah jarang dipakai pada proyek baru.
+MVP masih ditemukan pada warisan kode.
+AI harus mengenali MVP saat membaca struktur lama.
+
+Pola Clean Architecture.
+Lapisan entities, use cases, interface adapters, frameworks.
+Entities adalah aturan bisnis perusahaan.
+Use cases adalah aturan bisnis aplikasi.
+Interface adapters menjembatani domain dan framework.
+Frameworks adalah detail implementasi.
+Clean Architecture menekankan arah dependensi.
+Clean Architecture cocok untuk sistem kompleks.
+Clean Architecture menuntut disiplin tinggi.
+
+Pola Hexagonal (Ports and Adapters).
+Domain adalah inti.
+Port adalah antarmuka.
+Adapter adalah implementasi.
+Adapter primer menangani input.
+Adapter sekunder menangani output.
+Hexagonal cocok untuk sistem dengan banyak integrasi.
+
+Pola Layered Architecture.
+Lapisan presentasi, aplikasi, domain, infrastruktur.
+Layered cocok untuk sebagian besar aplikasi.
+Layered mudah dipahami.
+Layered mudah diimplementasikan.
+Layered dapat dikombinasikan dengan Clean Architecture.
+
+BAGIAN 4: STATE MANAGEMENT MENDALAM
+State adalah representasi UI pada satu waktu.
+State harus dapat direproduksi.
+State harus dapat diuji.
+State harus dapat dipulihkan.
+State harus dapat disimpan.
+State harus dapat dipulihkan setelah process death.
+SavedStateHandle menyimpan state ringan.
+SavedStateHandle harus menyimpan data kecil.
+SavedStateHandle tidak boleh menyimpan data besar.
+SavedStateHandle tidak boleh menyimpan rahasia.
+StateFlow adalah aliran state yang selalu memiliki nilai.
+StateFlow cocok untuk state UI.
+StateFlow harus dikoleksi dengan lifecycle-aware.
+SharedFlow adalah aliran event.
+SharedFlow cocok untuk event sekali pakai.
+SharedFlow harus dikoleksi dengan hati-hati.
+Channel cocok untuk event satu konsumen.
+Channel tidak boleh dipakai untuk state.
+LiveData adalah aliran lifecycle-aware lama.
+LiveData masih dipakai pada proyek lama.
+LiveData tidak cocok untuk alur reaktif kompleks.
+State hoisting memindahkan state ke pemanggil.
+State hoisting memudahkan pengujian.
+State hoisting memudahkan penggunaan ulang.
+State hoisting harus konsisten.
+State lokal hanya untuk state yang tidak dibagi.
+State harus diangkat ke ViewModel jika dipakai di banyak layar.
+State harus diangkat ke repositori jika dipakai lintas fitur.
+
+BAGIAN 5: COROUTINES DAN FLOW MENDALAM
+Coroutines adalah model konkurensi Kotlin.
+Coroutines membutuhkan dispatcher.
+Dispatcher default untuk CPU.
+Dispatcher IO untuk I/O.
+Dispatcher Main untuk UI.
+Dispatcher harus disuntikkan untuk pengujian.
+Dispatcher harus tidak di-hardcode.
+Structured concurrency memastikan coroutine dibatalkan dengan benar.
+CoroutineScope harus dikelola dengan lifecycle.
+viewModelScope untuk ViewModel.
+lifecycleScope untuk Activity atau Fragment.
+repeatOnLifecycle untuk koleksi Flow.
+repeatOnLifecycle harus dipakai untuk menghindari kebocoran.
+Flow dingin dijalankan saat dikoleksi.
+Flow dingin cocok untuk query basis data.
+Flow panas dijalankan saat dibuat.
+StateFlow dan SharedFlow adalah Flow panas.
+Flow harus dipetakan ke state UI.
+Flow harus ditangani kesalahannya dengan catch.
+Flow harus di-retry jika perlu.
+Flow harus di-debounce jika perlu.
+Flow harus di-distinctUntilChanged jika perlu.
+Flow harus di-flatMapLatest untuk pencarian.
+Flow harus di-combine untuk menggabungkan sumber.
+Flow harus di-collectLatest untuk koleksi terbaru.
+Flow tidak boleh dikoleksi di background tanpa alasan.
+Flow tidak boleh dikoleksi berulang tanpa alasan.
+Flow harus diuji dengan Turbine atau test dispatcher.
+
+BAGIAN 6: OFFLINE-FIRST ARCHITECTURE
+Offline-first berarti aplikasi dapat berfungsi tanpa jaringan.
+Offline-first membutuhkan basis data lokal.
+Offline-first membutuhkan sinkronisasi.
+Offline-first membutuhkan resolusi konflik.
+Offline-first membutuhkan antrean operasi.
+Offline-first membutuhkan indikator status.
+Offline-first membutuhkan strategi cache.
+Offline-first membutuhkan strategi retry.
+Offline-first membutuhkan strategi backoff.
+Offline-first membutuhkan strategi prioritas.
+Offline-first membutuhkan strategi pembersihan.
+Offline-first membutuhkan strategi migrasi.
+Offline-first membutuhkan strategi keamanan lokal.
+Offline-first membutuhkan strategi observability.
+Offline-first membutuhkan pengujian khusus.
+Offline-first harus diuji tanpa jaringan.
+Offline-first harus diuji dengan jaringan lambat.
+Offline-first harus diuji dengan jaringan putus.
+Offline-first harus diuji dengan konflik.
+Offline-first harus diuji dengan data besar.
+Offline-first harus diuji dengan migrasi.
+Offline-first harus diuji dengan process death.
+
+BAGIAN 7: REAL-TIME ARCHITECTURE
+Real-time berarti aplikasi menerima data segera.
+Real-time membutuhkan WebSocket atau SSE.
+Real-time membutuhkan penanganan koneksi.
+Real-time membutuhkan penanganan reconnect.
+Real-time membutuhkan penanganan backoff.
+Real-time membutuhkan penanganan heartbeat.
+Real-time membutuhkan penanganan pesan duplikat.
+Real-time membutuhkan penanganan pesan hilang.
+Real-time membutuhkan penanganan urutan pesan.
+Real-time membutuhkan penanganan state.
+Real-time membutuhkan penanganan notifikasi.
+Real-time membutuhkan penanganan izin.
+Real-time membutuhkan penanganan baterai.
+Real-time membutuhkan penanganan data besar.
+Real-time membutuhkan penanganan data sensitif.
+Real-time membutuhkan pengujian khusus.
+Real-time harus diuji dengan koneksi tidak stabil.
+Real-time harus diuji dengan pesan besar.
+Real-time harus diuji dengan pesan cepat.
+Real-time harus diuji dengan banyak pengguna.
+
+BAGIAN 8: SKENARIO 1 — STARTUP MVP ANDROID
+Karakteristik:
+- Tim kecil, 1 sampai 3 pengembang.
+- Waktu rilis cepat.
+- Fitur inti sedikit.
+- Anggaran terbatas.
+- Fokus validasi ide.
+- Refaktor ditunda sampai ada traction.
+Struktur yang disarankan: satu modul dengan paket modular.
+Risiko: struktur tidak siap tumbuh.
+Mitigasi: catat utang teknis, siapkan rencana refaktor.
+
+proyek-startup-mvp/
+├── README.md
+├── .gitignore
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/com/contoh/mvp/
+│       │   │   ├── Aplikasi.kt
+│       │   │   ├── MainActivity.kt
+│       │   │   ├── data/
+│       │   │   │   ├── Api.kt
+│       │   │   │   ├── Dao.kt
+│       │   │   │   ├── BasisData.kt
+│       │   │   │   └── Repositori.kt
+│       │   │   ├── domain/
+│       │   │   │   ├── Model.kt
+│       │   │   │   └── UseCase.kt
+│       │   │   └── ui/
+│       │   │       ├── beranda/
+│       │   │       │   ├── BerandaScreen.kt
+│       │   │       │   └── BerandaViewModel.kt
+│       │   │       └── komponen/
+│       │   │           └── Tombol.kt
+│       │   └── res/
+│       │       ├── values/
+│       │       └── drawable/
+│       ├── test/
+│       │   └── java/com/contoh/mvp/
+│       │       ├── BerandaViewModelTest.kt
+│       │       └── RepositoriTest.kt
+│       └── androidTest/
+│           └── java/com/contoh/mvp/
+│               └── AlurUtamaTest.kt
+└── docs/
+    ├── index.md
+    └── utang-teknis.md
+
+BAGIAN 9: SKENARIO 2 — ENTERPRISE ANDROID
+Karakteristik:
+- Tim besar, banyak squads.
+- Banyak fitur.
+- Kebutuhan audit dan kepatuhan.
+- Kebutuhan stabilitas tinggi.
+- Siklus rilis terencana.
+- Dokumentasi wajib.
+- Modularisasi wajib.
+Struktur yang disarankan: modular dengan api/impl, convention plugin, version catalog, ADR.
+
+proyek-enterprise/
+├── README.md
+├── CHANGELOG.md
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── .gitignore
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiPlugin.kt
+│           ├── AndroidPustakaPlugin.kt
+│           └── AndroidFeaturePlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/enterprise/
+│           ├── Aplikasi.kt
+│           ├── MainActivity.kt
+│           └── navigasi/Grafik.kt
+├── feature/
+│   ├── login/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── dashboard/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── laporan/
+│   │   ├── api/
+│   │   └── impl/
+│   └── pengaturan/
+│       ├── api/
+│       └── impl/
+├── core/
+│   ├── common/
+│   ├── domain/
+│   ├── data/
+│   ├── ui/
+│   ├── navigasi/
+│   ├── jaringan/
+│   ├── keamanan/
+│   ├── observability/
+│   ├── audit/
+│   └── pengujian/
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── keputusan/
+│   │   ├── 0001-modularisasi.md
+│   │   ├── 0002-convention-plugin.md
+│   │   └── 0003-keamanan.md
+│   └── kepatuhan.md
+└── scripts/
+    ├── periksa-struktur.sh
+    └── build-release.sh
+
+BAGIAN 10: SKENARIO 3 — OFFLINE-FIRST ANDROID
+Karakteristik:
+- Pengguna sering tanpa jaringan.
+- Data harus tersedia lokal.
+- Sinkronisasi harus dapat diandalkan.
+- Konflik harus ditangani.
+- Basis data lokal menjadi sumber utama.
+Struktur yang disarankan: core/data dengan Room + WorkManager + sinkronisasi.
+
+proyek-offline-first/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/offline/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/domain/
+│   │       ├── model/
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── Dao.kt
+│   │       │   ├── Entitas.kt
+│   │       │   └── Konversi.kt
+│   │       ├── jarak-jauh/
+│   │       │   ├── Api.kt
+│   │       │   └── Dto.kt
+│   │       ├── repositori/
+│   │       │   ├── RepositoriImpl.kt
+│   │       │   └── SumberData.kt
+│   │       ├── sinkronisasi/
+│   │       │   ├── SinkronisasiWorker.kt
+│   │       │   ├── AntreanOperasi.kt
+│   │       │   ├── ResolusiKonflik.kt
+│   │       │   └── Penjadwal.kt
+│   │       └── di/
+│   ├── ui/
+│   │   └── src/main/kotlin/com/contoh/ui/
+│   │       ├── tema/
+│   │       └── komponen/
+│   │           └── IndikatorStatus.kt
+│   └── pengujian/
+│       └── src/main/kotlin/com/contoh/pengujian/
+│           ├── FakeRepositori.kt
+│           └── AturanSinkronisasi.kt
+├── feature/
+│   └── daftar/
+│       └── src/main/kotlin/com/contoh/daftar/
+│           ├── DaftarScreen.kt
+│           └── DaftarViewModel.kt
+├── tests/
+│   ├── sinkronisasi/
+│   │   ├── test_tanpa_jaringan.kt
+│   │   ├── test_konflik.kt
+│   │   └── test_retry.kt
+│   └── migrasi/
+│       └── test_migrasi.kt
+└── docs/
+    ├── sinkronisasi.md
+    └── resolusi-konflik.md
+
+BAGIAN 11: SKENARIO 4 — REAL-TIME CHAT ANDROID
+Karakteristik:
+- Pesan harus diterima segera.
+- Koneksi harus stabil.
+- Pesan harus diantrekan saat offline.
+- Status pesan harus akurat.
+- Notifikasi harus andal.
+Struktur yang disarankan: core/realtime dengan WebSocket + Room + WorkManager.
+
+proyek-chat/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/chat/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/chat/domain/
+│   │       ├── model/
+│   │       │   ├── Pesan.kt
+│   │       │   ├── Percakapan.kt
+│   │       │   └── StatusPesan.kt
+│   │       ├── repositori/
+│   │       │   └── AntarmukaPesan.kt
+│   │       └── gunakan/
+│   │           ├── KirimPesan.kt
+│   │           └── AmatiPesan.kt
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/chat/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── DaoPesan.kt
+│   │       │   └── EntitasPesan.kt
+│   │       ├── realtime/
+│   │       │   ├── KlienWebSocket.kt
+│   │       │   ├── ManajerKoneksi.kt
+│   │       │   ├── PenanganPesan.kt
+│   │       │   └── AntreanKirim.kt
+│   │       ├── repositori/
+│   │       │   └── RepositoriPesanImpl.kt
+│   │       └── di/
+│   ├── notifikasi/
+│   │   └── src/main/kotlin/com/contoh/chat/notifikasi/
+│   │       ├── LayananNotifikasi.kt
+│   │       └── SaluranNotifikasi.kt
+│   └── ui/
+│       └── src/main/kotlin/com/contoh/chat/ui/
+│           ├── tema/
+│           └── komponen/
+│               ├── GelembungPesan.kt
+│               └── IndikatorMengetik.kt
+├── feature/
+│   ├── percakapan/
+│   │   └── src/main/kotlin/com/contoh/chat/percakapan/
+│   │       ├── PercakapanScreen.kt
+│   │       └── PercakapanViewModel.kt
+│   └── daftar-chat/
+│       └── src/main/kotlin/com/contoh/chat/daftar/
+│           └── DaftarChatViewModel.kt
+└── docs/
+    ├── realtime.md
+    └── antrean-kirim.md
+
+BAGIAN 12: SKENARIO 5 — E-COMMERCE ANDROID
+Karakteristik:
+- Banyak layar produk.
+- Keranjang belanja.
+- Pembayaran.
+- Pelacakan pesanan.
+- Notifikasi.
+- Personalisasi.
+Struktur yang disarankan: modular dengan fitur terpisah, core/data dengan cache, core/keamanan untuk pembayaran.
+
+proyek-ecommerce/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/toko/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── feature/
+│   ├── katalog/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── detail-produk/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── keranjang/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── checkout/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── pesanan/
+│   │   ├── api/
+│   │   └── impl/
+│   ├── profil/
+│   │   ├── api/
+│   │   └── impl/
+│   └── pencarian/
+│       ├── api/
+│       └── impl/
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/toko/domain/
+│   │       ├── model/
+│   │       │   ├── Produk.kt
+│   │       │   ├── Keranjang.kt
+│   │       │   ├── Pesanan.kt
+│   │       │   └── Pembayaran.kt
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/toko/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── DaoProduk.kt
+│   │       │   ├── DaoKeranjang.kt
+│   │       │   └── DaoPesanan.kt
+│   │       ├── jarak-jauh/
+│   │       │   ├── ApiKatalog.kt
+│   │       │   ├── ApiKeranjang.kt
+│   │       │   ├── ApiPesanan.kt
+│   │       │   └── ApiPembayaran.kt
+│   │       ├── cache/
+│   │       │   └── CacheProduk.kt
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── pembayaran/
+│   │   └── src/main/kotlin/com/contoh/toko/pembayaran/
+│   │       ├── AntarmukaPembayaran.kt
+│   │       ├── PembayaranKartu.kt
+│   │       └── PembayaranDompet.kt
+│   ├── keamanan/
+│   │   └── src/main/kotlin/com/contoh/toko/keamanan/
+│   │       ├── PenyimpananToken.kt
+│   │       └── PemeriksaIntegritas.kt
+│   ├── ui/
+│   │   └── src/main/kotlin/com/contoh/toko/ui/
+│   │       ├── tema/
+│   │       └── komponen/
+│   └── notifikasi/
+│       └── src/main/kotlin/com/contoh/toko/notifikasi/
+│           └── LayananPesanan.kt
+├── docs/
+│   ├── pembayaran.md
+│   └── keamanan.md
+└── scripts/
+    └── build-release.sh
+
+BAGIAN 13: SKENARIO 6 — COMPANION IOT ANDROID
+Karakteristik:
+- Komunikasi dengan perangkat.
+- Bluetooth atau Wi-Fi.
+- Sinkronisasi data perangkat.
+- Firmware update.
+- Notifikasi.
+- Pengaturan perangkat.
+Struktur yang disarankan: core/perangkat dengan Bluetooth/Wi-Fi, core/sinkronisasi, core/keamanan.
+
+proyek-iot/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/iot/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/iot/domain/
+│   │       ├── model/
+│   │       │   ├── Perangkat.kt
+│   │       │   ├── StatusPerangkat.kt
+│   │       │   └── Firmware.kt
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/iot/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   └── DaoPerangkat.kt
+│   │       ├── perangkat/
+│   │       │   ├── KlienBluetooth.kt
+│   │       │   ├── KlienWifi.kt
+│   │       │   ├── PenemuanPerangkat.kt
+│   │       │   └── Protokol.kt
+│   │       ├── firmware/
+│   │       │   ├── PengunduhFirmware.kt
+│   │       │   └── PengunggahFirmware.kt
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── izin/
+│   │   └── src/main/kotlin/com/contoh/iot/izin/
+│   │       ├── ManajerIzin.kt
+│   │       └── Penjelasan.kt
+│   ├── keamanan/
+│   │   └── src/main/kotlin/com/contoh/iot/keamanan/
+│   │       ├── PasanganPerangkat.kt
+│   │       └── PenyimpananKunci.kt
+│   └── ui/
+│       └── src/main/kotlin/com/contoh/iot/ui/
+│           ├── tema/
+│           └── komponen/
+├── feature/
+│   ├── pemindaian/
+│   │   └── src/main/kotlin/com/contoh/iot/pemindaian/
+│   │       └── PemindaianViewModel.kt
+│   ├── kontrol/
+│   │   └── src/main/kotlin/com/contoh/iot/kontrol/
+│   │       └── KontrolViewModel.kt
+│   ├── firmware/
+│   │   └── src/main/kotlin/com/contoh/iot/firmware/
+│   │       └── FirmwareViewModel.kt
+│   └── pengaturan-perangkat/
+│       └── src/main/kotlin/com/contoh/iot/pengaturan/
+│           └── PengaturanViewModel.kt
+├── docs/
+│   ├── protokol.md
+│   └── firmware.md
+└── tests/
+    ├── bluetooth/
+    └── firmware/
+
+BAGIAN 14: SKENARIO 7 — MEDIA STREAMING ANDROID
+Karakteristik:
+- Pemutaran audio/video.
+- Buffering.
+- Kualitas adaptif.
+- Offline download.
+- Kontrol media.
+- Notifikasi media.
+- Chromecast.
+Struktur yang disarankan: core/pemutar dengan ExoPlayer, core/unduhan, core/media sesi.
+
+proyek-streaming/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/streaming/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/streaming/domain/
+│   │       ├── model/
+│   │       │   ├── Media.kt
+│   │       │   ├── Playlist.kt
+│   │       │   └── Unduhan.kt
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/streaming/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── DaoMedia.kt
+│   │       │   └── DaoUnduhan.kt
+│   │       ├── jarak-jauh/
+│   │       │   ├── ApiKatalog.kt
+│   │       │   └── ApiStreaming.kt
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── pemutar/
+│   │   └── src/main/kotlin/com/contoh/streaming/pemutar/
+│   │       ├── PemutarMedia.kt
+│   │       ├── ManajerKualitas.kt
+│   │       ├── ManajerBuffer.kt
+│   │       └── SesiMedia.kt
+│   ├── unduhan/
+│   │   └── src/main/kotlin/com/contoh/streaming/unduhan/
+│   │       ├── ManajerUnduhan.kt
+│   │       ├── AntreanUnduhan.kt
+│   │       └── PenyimpananUnduhan.kt
+│   ├── kast/
+│   │   └── src/main/kotlin/com/contoh/streaming/kast/
+│   │       └── ManajerKast.kt
+│   └── ui/
+│       └── src/main/kotlin/com/contoh/streaming/ui/
+│           ├── tema/
+│           └── komponen/
+│               ├── KontrolPemutar.kt
+│               └── KartuMedia.kt
+├── feature/
+│   ├── beranda/
+│   ├── pencarian/
+│   ├── pustaka/
+│   ├── unduhan/
+│   └── pengaturan/
+├── docs/
+│   ├── pemutar.md
+│   └── unduhan.md
+└── tests/
+    ├── pemutar/
+    └── unduhan/
+
+BAGIAN 15: SKENARIO 8 — FINTECH ANDROID
+Karakteristik:
+- Keamanan tinggi.
+- Kepatuhan regulasi.
+- Autentikasi kuat.
+- Transaksi.
+- Audit.
+- Deteksi penipuan.
+- Enkripsi.
+Struktur yang disarankan: modular dengan core/keamanan ekstensif, core/audit, core/kriptografi, core/autentikasi.
+
+proyek-fintech/
+├── README.md
+├── SECURITY.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/fintech/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/fintech/domain/
+│   │       ├── model/
+│   │       │   ├── Akun.kt
+│   │       │   ├── Transaksi.kt
+│   │       │   └── Tagihan.kt
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/fintech/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── DaoAkun.kt
+│   │       │   └── DaoTransaksi.kt
+│   │       ├── jarak-jauh/
+│   │       │   ├── ApiAkun.kt
+│   │       │   ├── ApiTransaksi.kt
+│   │       │   └── ApiPembayaran.kt
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── keamanan/
+│   │   └── src/main/kotlin/com/contoh/fintech/keamanan/
+│   │       ├── Kriptografi.kt
+│   │       ├── PenyimpananKunci.kt
+│   │       ├── PemeriksaIntegritas.kt
+│   │       ├── DeteksiRoot.kt
+│   │       ├── DeteksiEmulator.kt
+│   │       ├── Penyamaran.kt
+│   │       └── SidikJari.kt
+│   ├── autentikasi/
+│   │   └── src/main/kotlin/com/contoh/fintech/autentikasi/
+│   │       ├── AlurLogin.kt
+│   │       ├── Biometrik.kt
+│   │       ├── OTP.kt
+│   │       └── SesiPengguna.kt
+│   ├── audit/
+│   │   └── src/main/kotlin/com/contoh/fintech/audit/
+│   │       ├── PencatatAudit.kt
+│   │       └── SimpanAudit.kt
+│   ├── deteksi-penipuan/
+│   │   └── src/main/kotlin/com/contoh/fintech/penipuan/
+│   │       ├── PenilaiRisiko.kt
+│   │       └── AturanRisiko.kt
+│   ├── observability/
+│   │   └── src/main/kotlin/com/contoh/fintech/observability/
+│   │       ├── Pencatat.kt
+│   │       └── Metrik.kt
+│   └── ui/
+│       └── src/main/kotlin/com/contoh/fintech/ui/
+│           ├── tema/
+│           └── komponen/
+├── feature/
+│   ├── beranda/
+│   ├── transfer/
+│   ├── tagihan/
+│   ├── riwayat/
+│   ├── kartu/
+│   └── pengaturan/
+├── docs/
+│   ├── keamanan.md
+│   ├── autentikasi.md
+│   ├── audit.md
+│   └── kepatuhan.md
+└── tests/
+    ├── keamanan/
+    ├── autentikasi/
+    └── audit/
+
+BAGIAN 16: SKENARIO 9 — HEALTH ANDROID
+Karakteristik:
+- Data sensitif.
+- Kepatuhan privasi.
+- Integrasi perangkat kesehatan.
+- Sinkronisasi.
+- Notifikasi pengingat.
+- Aksesibilitas tinggi.
+Struktur yang disarankan: modular dengan core/privasi, core/kesehatan, core/notifikasi, core/aksesibilitas.
+
+proyek-health/
+├── README.md
+├── SECURITY.md
+├── PRIVACY.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/health/
+│           ├── Aplikasi.kt
+│           └── MainActivity.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/health/domain/
+│   │       ├── model/
+│   │       │   ├── Pasien.kt
+│   │       │   ├── Pengukuran.kt
+│   │       │   └── JadwalObat.kt
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/health/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   └── DaoPengukuran.kt
+│   │       ├── kesehatan/
+│   │       │   ├── HealthConnect.kt
+│   │       │   └── SinkronisasiKesehatan.kt
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── privasi/
+│   │   └── src/main/kotlin/com/contoh/health/privasi/
+│   │       ├── Persetujuan.kt
+│   │       ├── Penyamaran.kt
+│   │       └── EnkripsiData.kt
+│   ├── notifikasi/
+│   │   └── src/main/kotlin/com/contoh/health/notifikasi/
+│   │       ├── PengingatObat.kt
+│   │       └── SaluranNotifikasi.kt
+│   ├── aksesibilitas/
+│   │   └── src/main/kotlin/com/contoh/health/aksesibilitas/
+│   │       ├── PembacaLayar.kt
+│   │       └── UkuranTeks.kt
+│   └── ui/
+│       └── src/main/kotlin/com/contoh/health/ui/
+│           ├── tema/
+│           └── komponen/
+├── feature/
+│   ├── beranda/
+│   ├── pengukuran/
+│   ├── obat/
+│   ├── riwayat/
+│   ├── pengaturan/
+│   └── darurat/
+├── docs/
+│   ├── privasi.md
+│   ├── aksesibilitas.md
+│   └── integrasi-kesehatan.md
+└── tests/
+    ├── privasi/
+    └── aksesibilitas/
+
+BAGIAN 17: PERBANDINGAN STRUKTUR ANTAR SKENARIO
+Startup MVP: satu modul, paket modular, cepat, sederhana.
+Enterprise: modular api/impl, convention plugin, ADR, audit.
+Offline-first: core/data dengan Room + WorkManager + resolusi konflik.
+Real-time chat: core/realtime dengan WebSocket + antrean kirim.
+E-commerce: banyak fitur, core/pembayaran, core/keamanan.
+IoT: core/perangkat dengan Bluetooth/Wi-Fi, core/firmware.
+Streaming: core/pemutar, core/unduhan, core/kast.
+Fintech: core/keamanan ekstensif, core/autentikasi, core/audit, deteksi penipuan.
+Health: core/privasi, core/kesehatan, core/notifikasi, core/aksesibilitas.
+Setiap skenario membutuhkan core yang berbeda.
+Setiap skenario membutuhkan fitur yang berbeda.
+Setiap skenario membutuhkan pengujian yang berbeda.
+Setiap skenario membutuhkan dokumentasi yang berbeda.
+AI harus memilih skenario berdasarkan konteks.
+AI harus menyesuaikan struktur dengan skenario.
+AI harus menjelaskan alasan pemilihan.
+AI harus menjelaskan konsekuensi pemilihan.
+
+BAGIAN 18: LATIHAN PENALARAN GENERASI 8
+Latihan 1: Pilih pola arsitektur.
+Diberikan aplikasi dengan UI kompleks dan state banyak.
+AI harus menyarankan MVI atau MVVM dengan state eksplisit.
+Diberikan aplikasi sederhana dengan sedikit state.
+AI harus menyarankan MVVM sederhana.
+
+Latihan 2: Pilih skenario.
+Diberikan aplikasi chat dengan pesan real-time.
+AI harus menyarankan struktur skenario real-time chat.
+Diberikan aplikasi tanpa jaringan yang andal.
+AI harus menyarankan struktur offline-first.
+
+Latihan 3: Deteksi arsitektur terbalik.
+Diberikan modul domain bergantung pada modul data.
+AI harus mendeteksi pelanggaran arah dependensi.
+AI harus menyarankan inversi dependensi.
+
+Latihan 4: Deteksi state tidak eksplisit.
+Diberikan ViewModel dengan banyak boolean.
+AI harus menyarankan sealed class atau data class state.
+AI harus menyarankan satu sumber kebenaran.
+
+Latihan 5: Deteksi flow tidak aman.
+Diberikan Flow dikoleksi tanpa repeatOnLifecycle.
+AI harus menyarankan repeatOnLifecycle.
+AI harus menjelaskan risiko kebocoran.
+
+Latihan 6: Deteksi konflik offline.
+Diberikan dua sumber data tanpa resolusi konflik.
+AI harus menyarankan strategi resolusi konflik.
+AI harus menyarankan pengujian konflik.
+
+Latihan 7: Deteksi WebSocket tanpa reconnect.
+Diberikan klien WebSocket tanpa backoff.
+AI harus menyarankan reconnect dan backoff.
+AI harus menyarankan pengujian koneksi tidak stabil.
+
+Latihan 8: Deteksi keamanan fintech.
+Diberikan aplikasi fintech tanpa deteksi root.
+AI harus menyarankan deteksi root.
+AI harus menyarankan Play Integrity.
+AI harus menyarankan enkripsi data.
+
+Latihan 9: Deteksi privasi health.
+Diberikan aplikasi kesehatan tanpa persetujuan.
+AI harus menyarankan alur persetujuan.
+AI harus menyarankan penyamaran data di log.
+
+Latihan 10: Deteksi aksesibilitas.
+Diberikan aplikasi kesehatan tanpa contentDescription.
+AI harus menyarankan contentDescription.
+AI harus menyarankan tes aksesibilitas.
+
+Latihan 11: Deteksi streaming tanpa offline.
+Diberikan aplikasi streaming tanpa unduhan.
+AI harus menyarankan modul unduhan.
+AI harus menyarankan WorkManager.
+
+Latihan 12: Deteksi IoT tanpa izin.
+Diberikan aplikasi IoT memakai Bluetooth tanpa izin.
+AI harus menyarankan manajer izin.
+AI harus menyarankan penjelasan izin.
+
+Latihan 13: Deteksi e-commerce tanpa cache.
+Diberikan katalog produk tanpa cache.
+AI harus menyarankan cache.
+AI harus menyarankan strategi refresh.
+
+Latihan 14: Deteksi enterprise tanpa ADR.
+Diberikan proyek enterprise tanpa catatan keputusan.
+AI harus menyarankan ADR.
+AI harus menyarankan template ADR.
+
+Latihan 15: Deteksi MVP yang perlu refaktor.
+Diberikan proyek MVP dengan 50 file di satu modul.
+AI harus menyarankan refaktor bertahap.
+AI harus menyarankan pemisahan paket.
+AI harus menyarankan pemetaan path.
+
+BAGIAN 19: ATURAN UNTUK AI
+AI harus memahami pola arsitektur sebelum menyarankan struktur.
+AI harus memahami skenario bisnis sebelum menyarankan struktur.
+AI harus memahami ukuran tim sebelum menyarankan struktur.
+AI harus memahami siklus rilis sebelum menyarankan struktur.
+AI harus memahami kebutuhan keamanan sebelum menyarankan struktur.
+AI harus memahami kebutuhan privasi sebelum menyarankan struktur.
+AI harus memahami kebutuhan aksesibilitas sebelum menyarankan struktur.
+AI harus memahami kebutuhan performa sebelum menyarankan struktur.
+AI harus memahami kebutuhan pengujian sebelum menyarankan struktur.
+AI harus memahami kebutuhan operasional sebelum menyarankan struktur.
+AI harus memahami kebutuhan dokumentasi sebelum menyarankan struktur.
+AI harus selalu mengutamakan arah dependensi.
+AI harus selalu mengutamakan pemisahan tanggung jawab.
+AI harus selalu mengutamakan single source of truth.
+AI harus selalu mengutamakan unidirectional data flow.
+AI harus selalu mengutamakan immutability.
+AI harus selalu mengutamakan explicit state.
+AI harus selalu mengutamakan error handling eksplisit.
+AI harus selalu mengutamakan testability.
+AI harus selalu mengutamakan observability.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan privasi.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan dokumentasi.
+
+BAGIAN 20: RINGKASAN GENERASI 8
+Generasi kedelapan memperdalam arsitektur aplikasi Android.
+AI belajar prinsip arsitektur Android.
+AI belajar pola MVVM, MVI, MVP, Clean Architecture, Hexagonal, Layered.
+AI belajar state management.
+AI belajar coroutines dan Flow.
+AI belajar offline-first architecture.
+AI belajar real-time architecture.
+AI belajar sembilan skenario produksi berbeda.
+AI belajar memilih struktur sesuai skenario.
+AI belajar memetakan fungsi ke struktur yang berbeda.
+AI belajar mendeteksi pelanggaran arsitektur.
+AI belajar menyarankan perbaikan yang aman.
+AI dilatih untuk menjawab pertanyaan "mengapa" pada tingkat arsitektur.
+AI dilatih untuk memahami konsekuensi bisnis dari struktur.
+AI dilatih untuk memahami konsekuensi teknis dari struktur.
+AI dilatih untuk memahami konsekuensi operasional dari struktur.
+Dengan generasi kedelapan ini, AI memiliki pemahaman mendalam tentang arsitektur Android.
+AI dapat menavigasi struktur proyek Android dengan pemahaman skenario bisnis.
+AI dapat menjelaskan alasan arsitektur di balik setiap keputusan struktur.
+AI dapat menyarankan struktur yang sesuai dengan karakteristik domain.
+Akhir generasi 8.

@@ -1,0 +1,128 @@
+tolong buatkan prompt untuk Chat GPT. dalam bahasa inggris.
+format markdown. di dalam blok : ```markdown ...```
+
+sempurnakan juga kata, atau kalimat saya.
+
+```text
+buatkan project BIBLE, BLUEPRINT, ROADMAP: AXION AI API, dan AXION AI API Command.
+penjelasan singkat :
+AXION AI API adalah workers untuk memanggil API AI dari bberapa provider OpenAI Compatible.
+dan bisa di panggil melalui OpenAI Compatible.
+AXION AI API Command. adalah halaman Admin.
+
+AXION AI API :
+tetap mempertahankan arsitektur worker 3 lapis.
+
+1. provider
+ - Google AI Studio
+ - Nvidia NIM
+2. model.
+nanti akam menggunakan model yang cukup banyak.
+ - Google AI Studio
+  - gemini-embedding-2
+  - gemma-4-31b-it
+  - gemma-4-26b-a4b-it
+  - gemini-3.1-flash
+  - gemini-3.1-flash-lite
+  - gemini-3.5-flash
+  - gemini-3.5-flash-lite
+ - Nvidia NIM
+```markdown
+## A. Multimodal / VLM
+
+| Nama model | Reasoning | Thinking level / kontrol | Context window |
+|---|---|---|---|
+| `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | Ya, omnimodal | ON/OFF via `enable_thinking`; Thinking mode dan Instruct mode | Input teks 256K; output rekomendasi 4.096+; `max_tokens` 20.480 saat Thinking, 1.024 saat Instruct |
+| `nvidia/cosmos3-nano-reasoner` | Ya, structured reasoning | Tidak ada hierarki low/med/high; kontrol thinking tidak tersedia | Input teks 256K; output 4.096+ |
+| `google/gemma-3-27b-it` | Ya, kualitas tinggi | Tidak tersedia | 256K |
+| Gemma 4 31B IT (ID tidak dirinci di PDF) | Ya, multimodal reasoning | Tidak tersedia | 256K |
+| `meta/muse-glimmer-30b` | Ya, mengeluarkan proses penalaran terpisah | `reasoning_effort`: none, minimal, low, medium, high, max | Tidak tersedia |
+| `moonshotai/Kimi-K2.5` | Ya, native multimodal agentic | ON/OFF thinking; `reasoning_effort`: low/high/max | 128K |
+| `moonshotai/Kimi-K2.6` | Ya, native multimodal agentic | ON/OFF thinking; `reasoning_effort`: low/high/max | 256K |
+| `moonshotai/Kimi-K3` | Ya | ON/OFF thinking; `reasoning_effort`: low/high/max | Tidak tersedia |
+| `qwen/qwen3.5-122b-a10b` | Ya, untuk agensi & visual understanding | Tidak tersedia | 256K |
+
+## B. Khusus coding / agentic
+
+| Nama model | Reasoning | Thinking level / kontrol | Context window |
+|---|---|---|---|
+| `minimaxai/minimax-m2.7` | Ya, untuk agensi rekayasa perangkat lunak | Tidak tersedia | 200K–204K |
+| `mistralai/devstral-2-123b-instruct` | Ya, unggul di coding | Tidak ada parameter resmi | 256K |
+| `deepseek-ai/deepseek-v4-flash-0731` | Ya | Non-think, Think High, Think Max via `chat_template_kwargs` | 1 juta |
+| `deepseek-ai/deepseek-r1-distill-*` | Ya | Tidak tersedia | Tidak tersedia |
+| `z-ai/glm-5.2` | Ya | High/Max Effort | 1 juta |
+| `z-ai/glm-5.3` | Ya | `reasoning_effort`: low/high/max | 1 juta |
+| `nvidia/nemotron-3-super-120b-a12b` | Ya, sangat kuat | ON/OFF `enable_thinking`; Low Effort; `reasoning_budget` 256–16.384 | Input/output 1 juta; catatan PDF: performa dapat menurun di atas 128K total konteks |
+| `nvidia/nemotron-3-ultra-550b-a55b` | Ya, frontier-level | ON/OFF `enable_thinking`; Medium Effort | Input 1 juta; output contoh 32.768 |
+| `nvidia/nemotron-3.5-lightning-30b-a3b` | Ya | ON/OFF `enable_thinking`; `reasoning_budget` default 16.384, max 32.768 | 1 juta |
+| `nvidia/nemotron-3-nano-30b-a3b` | Ya, untuk coding, math, long context | Tidak tersedia | 1 juta |
+
+## C. Reasoning umum / efisiensi tinggi
+
+| Nama model | Reasoning | Thinking level / kontrol | Context window |
+|---|---|---|---|
+| `meta/llama-3.1-...` | Ya, inheren kuat | Tidak ada parameter resmi | 128K |
+| `meta/llama-3.3-...` | Ya, inheren kuat | Tidak ada parameter resmi | 128K |
+| `nvidia/llama-3.3-nemotron-super-49b-v1.5` | Ya, dikontrol | On/Off via `detailed thinking on/off` atau `chat_template_kwargs` | 128K |
+| `ibm/granite-3.3-8b-instruct` | Ya, dioptimalkan | Tag `think`/`</think>` | 128K |
+| `microsoft/phi-4-mini-instruct` | Ya, untuk reason, math, code | Tidak ada parameter resmi | 128K |
+| `mistralai/mistral-neomo-12b-instruct` | Ya, state-of-the-art untuk ukurannya | Tidak ada parameter resmi | 128K |
+```
+penjelasan (semua model):
+---
+nanti akan di bagi untuk pengelompokan model yang model nya di rotate otomatis saat API di panggil
+
+- flash
+- flash-lite
+model tanpa reasoning/mengaktifkan reasoning
+- pro-lite
+reasoning yang tidak memiliki thinking level.
+- pro-flash
+reasoning low
+- pro
+reasoning medium, model besar.
+- pro-advanced
+reasoning high, model besar.
+- selected
+hanya memanggil model yang di butuhkan.
+
+dan bisa di panggil sepwrti API AI pada umum nya.
+Catatan. kita tidak memberikan memory per percakapan.
+melainlan per request. setelah request selesai. maka tidak ada memory yang di simpan.
+gemini-embedding-2 di gunakan untuk memory external untuk semua model.
+---
+
+3. penggunaan gemini-embedding-2
+ - di gunakan untuk memory external jika konteks per request sangat panjang
+ - sebagai "jembatan" untuk model teks only agar bisa melihat, dan mendengar, dsb.
+ - deteksi konten
+
+4. konten yang di larang secara eklips.
+ - pornografi
+ - kekerasan
+ - perbuatan melanggar hukum/kriminal
+jika mebgandung konten di atas. maka request harus di hentikan dan kirim pesan jika konten melanggar kebijakan dalam bahasa english, dan harus di dokumentasikan.
+
+5. memory
+kita tidak menyediakan memory per percakapan.
+tapi per request. dan setelah request complete. tidak ada memory yang tersimpan.
+
+6. database
+ - turso 1 : untuk simpan vector gemini-embedding-2. kapasitas 4.85GB (bersih 4.83GB)
+ - turso 2 : knowladge AI kapasitas 150MB (bersih 100MB)
+ - firestore : untuk menyimpan API KEY, dan queues.
+
+7. hosting & backend
+ - backend : cloudflare worker
+ - frontend : cloudflare pages
+
+8. CPU Time & Durable Object
+mengenai keterbatasan CPU Time hanya 10ms. kita harus bisa memaksimalkan nya.
+dan setahu saya 10ms adalah waktu eksekusi kode. bukan menunggu response.
+ - cloudflare tidak mengizimkan menulis/mengatur CPU Time walaupun 10ms atau di bawah 10ms
+ - Durable Object di gunakan untuk eksekusi kode saat Ada request pemanggilan AI.
+
+9. Search
+ - untuk search tidak bisa di matikan.
+ - menggunakan AXION Search
+   untuk SDK nya anda bisa download : 

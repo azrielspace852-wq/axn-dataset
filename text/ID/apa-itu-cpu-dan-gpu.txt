@@ -1,0 +1,384 @@
+APA ITU CPU: DEFINISI DAN PERAN UTAMA
+CPU singkatan dari Central Processing Unit atau unit pemrosesan pusat dalam komputer.
+CPU sering dijuluki "otak" komputer karena menjalankan sebagian besar instruksi program.
+Fungsi utama CPU adalah mengambil instruksi dari memori, menafsirkannya, lalu mengeksekusinya.
+Setiap instruksi yang dijalankan prosesor harus melewati siklus ambil-deksekusi.
+Siklus klasik CPU terdiri dari fetch, decode, execute, memory access, dan write back.
+CPU modern mampu menjalankan miliaran instruksi per detik.
+Semua program mulai dari sistem operasi hingga aplikasi hanya bisa berjalan jika CPU mengeksekusi instruksinya.
+CPU mengatur koordinasi antara komponen lain seperti RAM, penyimpanan, dan perangkat masukan.
+Unit CPU bersifat umum sehingga dapat menangani berbagai jenis tugas secara bergantian.
+CPU dioptimalkan untuk kecepatan respons rendah, bukan jumlah operasi paralel besar.
+Sistem komputer dapat memiliki lebih dari satu CPU yang disebut multiprosesor.
+Jumlah CPU dan core dalam sebuah sistem menentukan kapasitas komputasi paralel kasar.
+Kualitas CPU diukur dari kinerja, efisiensi energi, dan skalabilitas.
+CPU bukan sekadar satu chip karena dulu berupa perangkat keras besar sebelum era mikroprosesor.
+Mikroprosesor adalah implementasi CPU dalam satu atau beberapa keping silikon.
+
+ARSITEKTUR INTERNAL CPU
+Arsitektur von Neumann menempatkan instruksi dan data dalam satu memori bersama.
+Arsitektur Harvard memisahkan jalur memori instruksi dan data sehingga keduanya dapat diakses simultan.
+Harvard dimodifikasi menjadi bentuk yang paling umum dipakai CPU modern.
+Bagian utama CPU adalah unit kontrol, unit aritmetika dan logika, serta register.
+Unit kontrol mengarahkan aliran data dan mengoordinasikan seluruh bagian CPU.
+ALU melakukan operasi aritmetika seperti penjumlahan serta operasi logika seperti AND dan OR.
+FPU atau floating point unit khusus menangani perhitungan bilangan desimal presisi tinggi.
+Register adalah penyimpanan tercepat di dalam CPU dengan akses satu siklus atau kurang.
+Program counter menyimpan alamat instruksi berikutnya yang akan dieksekusi.
+Instruksi register menampung instruksi yang sedang diproses.
+Accumulator menyimpan hasil sementara operasi aritmetika.
+Register khusus seperti status flag menyimpan kondisi hasil operasi.
+CPU juga memiliki bus internal yang menghubungkan register, ALU, dan unit kontrol.
+Lebar bus menentukan berapa banyak data yang dapat dipindahkan sekaligus dalam CPU.
+Prefetcher menyiapkan instruksi dan data sebelum benar-benar dibutuhkan.
+Branch predictor menebak arah percabangan agar pipeline tidak kosong.
+Eksekusi out-of-order menyusun ulang instruksi yang tidak bergantung untuk mempercepat proses.
+Pipelining memecah eksekusi menjadi tahap-tahap agar instruksi berikutnya masuk sebelum yang lama selesai.
+Pipeline yang terlalu dalam meningkatkan penalti saat prediksi cabang salah.
+Microcode menerjemahkan instruksi kompleks menjadi operasi mikro internal.
+
+CORE, THREAD, DAN KECEPATAN
+Core adalah unit pemrosesan independen di dalam satu CPU.
+Setiap core mampu mengeksekusi instruksinya sendiri secara bersamaan.
+CPU dual core memiliki dua core, quad core empat, dan seterusnya hingga puluhan core.
+Thread adalah jalur instruksi yang dapat ditangani satu core secara bergantian.
+Hyper-Threading dari Intel dan SMT dari AMD memungkinkan satu core menangani dua thread.
+SMT meningkatkan pemanfaatan unit eksekusi yang sedang menganggur.
+Kecepatan clock dinyatakan dalam hertz, umumnya GHz pada CPU modern.
+Clock speed adalah jumlah siklus detak per detik yang menentukan ritme eksekusi.
+Frekuensi boost meningkat otomatis saat beban ringan dan kondisi termal memungkinkan.
+Menaikkan clock tidak selalu menaikkan kinerja jika arsitektur tidak mendukung.
+Instruksi per siklus disebut IPC yang bersama clock menentukan kecepatan aktual.
+Rumusan kasar kinerja adalah clock dikali IPC dikali jumlah core.
+Kode multi-threaded tidak otomatis cepat jika program bersifat serial.
+Hukum Amdahl membatasi kecepatan maksimal program paralel karena ada bagian serial.
+Jumlah core fisik dan thread logis sering dicantumkan berbeda dalam lembar spesifikasi.
+CPU desktop umumnya memiliki lebih sedikit core dibanding prosesor server.
+Prosesor server dapat mencapai puluhan hingga ratusan core untuk beban paralel masif.
+Keseimbangan antara jumlah core dan kecepatan clock ditentukan oleh target penggunaannya.
+Overclocking menaikkan frekuensi di atas pengaturan resmi dengan risiko panas dan ketidakstabilan.
+Tuning dan undervolting menurunkan voltase untuk efisiensi yang lebih baik.
+
+SET INSTRUKSI DAN KLASIFIKASI ISA
+Set instruksi atau instruction set architecture adalah antarmuka antara perangkat keras dan perangkat lunak.
+ISA menentukan instruksi, register, dan format data yang dapat dijalankan CPU.
+Arsitektur x86 dikembangkan Intel sejak 1978 dan menjadi dominan di PC dan server.
+x86-64 atau AMD64 adalah ekstensi 64-bit yang dibuat AMD kemudian diadopsi Intel.
+AMD merupakan pemilik 64-bit pertama di keluarga x86 melalui prosesor Athlon 64.
+x86 diklasifikasikan sebagai CISC karena instruksinya kompleks dan bervariasi panjangnya.
+ARM merupakan arsitektur RISC berdaya rendah yang dominan di ponsel.
+RISC menggunakan instruksi yang seragam dan pendek sehingga lebih hemat energi.
+ARM tidak menjual chip, melainkan lisensi arsitektur ke Apple, Qualcomm, MediaTek, dan lain-lain.
+Apple rancangan ARM dengan seri M menunjukkan kinerja tinggi di laptop.
+RISC-V adalah ISA terbuka yang bebas royalti dan berkembang untuk riset serta IoT.
+MIPS digunakan dalam jaringan, embedded, dan sistem tertanam tertentu.
+PowerPC dan kemudian POWER dipakai pada server IBM serta konsol game lama.
+Instruksi SIMD memproses banyak data sekaligus dalam satu instruksi.
+SSE, AVX, AVX-512 dari Intel dan NEON dari ARM merupakan contoh ekstensi SIMD.
+AVX-512 populer dalam beban kerja AI dan pemrosesan ilmiah.
+Perluasan ISA seperti AMX di beberapa Intel menambah matriks akselerasi di dalam CPU.
+Kompatibilitas mundur menjadi kekuatan besar ekosistem x86.
+
+MEMORI CACHE CPU
+Cache adalah penyimpanan cepat di dekat core untuk mengurangi waktu akses memori.
+Hierarki cache terdiri dari L1, L2, dan L3 dengan kecepatan dan ukuran berbeda.
+L1 cache adalah yang paling kecil tetapi paling cepat dan biasanya per core.
+L1 sering dipisah menjadi cache instruksi dan cache data.
+L2 berukuran lebih besar dengan latensi lebih tinggi dibanding L1.
+L3 adalah cache bersama yang dapat diakses beberapa core secara simultan.
+Cache bekerja dengan prinsip lokalitas waktu dan ruang.
+Prinsip lokalitas menyatakan data yang baru digunakan cenderung diakses lagi.
+Kasus cache hit berarti data ditemukan di cache sehingga CPU menunggu lebih sedikit.
+Cache miss memaksa CPU mengambil dari RAM yang jauh lebih lambat.
+Konsistensi cache antar core dijaga oleh protokol seperti MESI.
+Ukuran cache total menjadi faktor penting pada kinerja game dan beban kerja berdata besar.
+Cache besar membantu beban kerja dengan cabang yang sering dan memori tidak terduga.
+L4 cache jarang dipakai tetapi pernah muncul pada beberapa produk notebook.
+Prefetcher perangkat keras membawa data ke cache sebelum diminta.
+
+SEJARAH DAN PERKEMBANGAN CPU
+Sebelum mikroprosesor, komputer menggunakan tabung hampa dan rangkaian diskrit.
+Intel 4004 tahun 1971 adalah mikroprosesor komersial pertama dengan 4 bit.
+Intel 8086 tahun 1978 memulai keluarga x86 yang masih bertahan hingga sekarang.
+IBM PC tahun 1981 yang menggunakan Intel membuka pasar mikrokomputer besar-besaran.
+Intel 80386 merupakan prosesor 32-bit pertama pada keluarga x86.
+80486 memperkenalkan cache dan FPU terintegrasi yang signifikan.
+Pentium membawa kinerja tinggi ke PC rumah pada 1993.
+Persaingan clock speed Intel dan AMD pada awal 2000-an terkenal sebagai perang megahertz.
+Peralihan ke multicore dimulai ketika peningkatan clock menemui batas panas.
+Core 2 Duo tahun 2006 menandai pergeseran fokus ke efisiensi dan banyak core.
+Prosesor 64-bit konsumen populer dimulai pada 2003.
+Intel Xeon dan AMD EPYC mendominasi segmen server modern.
+AMD Zen sejak 2017 memulihkan daya saing di CPU desktop dan server.
+Pendekatan chiplet memungkinkan ukuran yang lebih besar dan hasil produksi yang lebih tinggi.
+TSMC menjadi pabrik utama banyak prosesor modern dengan litografi canggih.
+Apple Silicon tahun 2020 memindahkan Mac dari Intel ke ARM.
+Qualcomm Snapdragon X Elite membawa ARM ke laptop Windows.
+Proses fabrikasi diukur dalam nanometer, meskipun angka kini bersifat nama generasi.
+
+APA ITU GPU: DEFINISI DAN PERAN UTAMA
+GPU singkatan dari Graphics Processing Unit atau unit pemrosesan grafis.
+GPU pada awalnya dirancang khusus untuk mempercepat render grafis dan gambar.
+GPU adalah prosesor dengan arsitektur paralel masif.
+Fokus utama GPU adalah throughput, yaitu memproses banyak elemen data sekaligus.
+GPU modern juga dipakai untuk komputasi umum seperti machine learning dan fisika.
+GPU dapat menangani ratusan ribu thread sederhana pada saat yang sama.
+Berbeda dengan CPU, GPU memprioritaskan banyak tugas kecil yang seragam.
+GPU umumnya membutuhkan CPU untuk menyiapkan dan mengatur pekerjaan.
+GPU tidak menjalankan sistem operasi desktop dengan sendirinya.
+Istilah kartu grafis merujuk pada papan PCB yang memuat GPU, memori, dan pendingin.
+GPU juga bisa tertanam dalam CPU sebagai grafis terintegrasi.
+Sebagian besar GPU memiliki VRAM khusus untuk menyimpan tekstur dan frame buffer.
+Frame buffer adalah area memori yang berisi gambar yang akan dikirim ke layar.
+GPU juga berfungsi sebagai pengendali tampilan ke monitor.
+Penggunaan GPU untuk kerja non-grafis sering disebut GPGPU.
+
+ARSITEKTUR INTERNAL GPU
+GPU dibangun dari banyak unit pemrosesan kecil yang identik.
+NVIDIA menyebut unit dasar ini CUDA core dan AMD menyebut stream processor.
+CUDA core adalah ALU sederhana yang mampu satu operasi per siklus.
+Ratusan hingga ribuan CUDA core dikelompokkan dalam Streaming Multiprocessor.
+SM berisi core, penjadwal, cache register, dan unit khusus.
+GPU menggunakan model eksekusi SIMT di mana kelompok thread disebut warp.
+Satu warp terdiri dari 32 thread yang berjalan seragam pada NVIDIA.
+AMD menggunakan wavefront dengan 32 atau 64 thread tergantung generasi.
+Model SIMD melaksanakan satu instruksi terhadap banyak data sekaligus.
+GPU memiliki penjadwal yang sangat ringan karena konteks per thread minimal.
+GPU memilih menunda eksekusi daripada menyimpan status besar-besaran.
+Strategi ini membuat GPU unggul pada beban kerja yang sangat paralel.
+Kinerja GPU meningkat saat banyak thread siap dieksekusi disebut occupancy.
+Register file GPU besar untuk menyimpan banyak thread aktif.
+Synchronization barrier wajib dalam pemrograman kernel GPU.
+
+MEMORI GPU DAN BANDWIDTH
+VRAM adalah memori khusus yang menempel pada GPU.
+GPU kelas atas menggunakan GDDR6 atau GDDR6X dengan kecepatan tinggi.
+GPU pusat data sering memakai HBM yang memiliki bandwidth sangat besar.
+Bandwidth memori GPU jauh lebih tinggi dibanding bandwidth sistem CPU.
+Lebar bus memori GPU dapat mencapai ratusan bit dibanding dua kanal pada platform biasa.
+Memori bersama antar semua thread disebut shared memory di beberapa arsitektur.
+L2 cache GPU bersifat global dan dibagikan ke semua SM.
+Tekstur dan buffer dalam game sering menjadi penyebab bottleneck memori.
+Kapasitas VRAM membatasi resolusi tekstur, ukuran model AI, dan frame buffer.
+GPU terintegrasi berbagi RAM sistem sehingga bandwidthnya lebih terbatas.
+Arsitektur memori terpadu Apple memungkinkan GPU memakai sebagian besar RAM bersama.
+Pemindahan data CPU ke GPU melalui PCIe menjadi biaya utama aplikasi heterogen.
+NVLink memberikan bandwidth lebih tinggi dibanding PCIe antar GPU.
+
+KOMPONEN KHUSUS GPU MODERN
+RT core khusus untuk akselerasi penelusuran sinar.
+Tensor core mempercepat operasi matriks yang menjadi inti jaringan saraf.
+ROP menangani operasi raster akhir seperti blending dan output ke frame buffer.
+Texture Mapping Unit bertanggung jawab atas sampling tekstur.
+Unit tessellation memecah permukaan menjadi geometri lebih halus.
+Media engine melakukan encode dan decode video secara perangkat keras.
+NVENC adalah encoder video NVIDIA dan VCN milik AMD.
+Quick Sync Video adalah akselerator multimedia Intel.
+Display engine mengontrol sinyal keluaran ke beberapa monitor.
+GPU memiliki unit untuk kompresi, cache memori, dan rasterizer.
+Fungsionalitas khusus memungkinkan GPU jauh lebih efisien untuk tugas grafis.
+
+SEJARAH GPU
+GPU awal berasal dari chip pengolah grafis sederhana di arcade dan konsol.
+Istilah GPU dipopulerkan saat NVIDIA merilis GeForce 256 pada 1999.
+GeForce 256 diklaim sebagai GPU pertama karena memindahkan transformasi geometri ke perangkat keras.
+Sebelum itu, CPU masih banyak mengerjakan perhitungan vertex.
+3dfx Voodoo populer pada 1996 untuk akselerasi 3D konsumen.
+Pipeline shader yang dapat diprogram muncul pada awal 2000-an.
+DirectX 8 dan OpenGL 1.3 membuka akses pemrograman shader.
+Shader Model memungkinkan efek visual semakin realistis.
+CUDA rilis tahun 2007 membuat GPU dapat dipakai untuk komputasi umum.
+Kartu G80 merupakan GPU pertama dengan dukungan CUDA.
+OpenCL menjadi standar alternatif lintas vendor untuk komputasi GPU.
+Tren komputasi异构 mempercepat supercomputer sejak akhir 2000-an.
+Bitcoin mining mendorong lonjakan harga GPU pada 2017 dan 2021.
+Deep learning mulai tahun 2012 membuat GPU menjadi kebutuhan utama riset AI.
+Arsitektur Ampere, Hopper, dan Blackwell menandai era AI modern.
+RDNA berfokus pada game sementara CDNA untuk komputasi.
+Intel Arc menandai kembalinya Intel ke pasar GPU diskret.
+
+PERBEDAAN FUNGSIONAL CPU DAN GPU
+CPU memiliki sedikit core yang sangat kompleks sedangkan GPU memiliki ribuan core sederhana.
+CPU dirancang untuk latensi rendah dan GPU untuk throughput tinggi.
+CPU dioptimalkan untuk cabang, loop kecil, dan eksekusi serial yang tidak terduga.
+GPU dioptimalkan untuk satu instruksi pada banyak data dengan cabang minimal.
+Rasio area kontrol logika CPU jauh lebih besar dibanding GPU.
+GPU mengorbankan kontrol untuk menambah unit hitung.
+Cache dan prediktor besar khas CPU, sedangkan register file besar khas GPU.
+Context switching CPU mahal, GPU beralih antar thread hampir seketika.
+CPU memakai RAM sistem sementara GPU biasanya memakai VRAM tersendiri.
+Program CPU umumnya serial dengan paralelisme terbatas.
+Kernel GPU memerlukan ribuan thread agar perangkat kerasnya termanfaatkan.
+Sistem operasi dijadwalkan oleh CPU dan GPU berperan sebagai perangkat.
+GPU tidak menjalankan browser atau office dengan sendirinya.
+CPU lebih cocok untuk logika bisnis, database transaksional, dan OS.
+GPU lebih cocok untuk grafiks, simulasi, dan pelatihan model AI.
+CPU unggul pada tugas dengan alur kontrol tidak beraturan.
+GPU unggul pada tugas yang strukturnya seragam dan dapat dipecah bebas.
+Pemilihan perangkat menentukan efisiensi energi yang signifikan.
+
+PERBANDINGAN PRAKTIS
+Contoh sederhana adalah membandingkan CPU dengan ahli matematika yang sangat cepat dan GPU dengan ribuan anak sekolah dasar.
+Ahli matematika dapat menyelesaikan soal rumit sementara ribuan orang mengerjakan soal mudah bersamaan.
+Untuk menjumlahkan dua angka besar, CPU lebih tepat.
+Untuk menjumlahkan dua miliar pasang angka, GPU lebih tepat.
+Dalam rendering gambar, GPU menghitung setiap piksel secara simultan.
+Dalam menjalankan program spreadsheet biasa, CPU lebih sesuai.
+Dalam game, CPU menghitung logika, fisika, dan AI pemain, sementara GPU menghitung piksel dan vertex.
+Bottleneck game muncul jika salah satu tidak seimbang dengan yang lain.
+Resolusi tinggi biasanya lebih membebani GPU.
+Game dengan banyak karakter dan AI lebih membebani CPU.
+Perangkat lunak tanpa paralelisme hampir tidak mendapat manfaat dari GPU.
+Video transcoding diuntungkan karena tugas per frame bersifat paralel.
+Training model neural network adalah beban yang sangat sesuai dengan GPU.
+
+PROGRAMASI DAN EKOSISTEM GPU
+Pemrograman GPU umumnya dilakukan melalui CUDA, OpenCL, HIP, atau SYCL.
+CUDA hanya mendukung perangkat keras NVIDIA.
+HIP dari AMD memungkinkan portabilitas sebagian besar kode CUDA.
+OpenCL bersifat lintas vendor namun performanya bervariasi.
+Vulkan dan Direct3D 12 memberikan akses compute shader lintas perangkat.
+Metal adalah API grafis dan compute khusus perangkat Apple.
+cuBLAS dan cuDNN adalah pustaka NVIDIA untuk aljabar linier dan deep learning.
+ROCm merupakan platform software AMD untuk komputasi GPU.
+PyTorch dan TensorFlow mengeksekusi operasi tensor pada GPU secara transparan.
+Compiler GPU harus memperhatikan penataan memori agar aksesnya terkoalesensi.
+Akses memori yang tersebar menjadi penyebab umum kernel GPU lambat.
+Load balancing menjadi tantangan saat thread memiliki beban berbeda.
+GPU virtualisasi seperti MIG membagi satu GPU fisik menjadi beberapa bagian.
+
+PERAN CPU DAN GPU DI PUSAT DATA
+Server modern sering menggabungkan CPU dan GPU dalam satu node.
+CPU menyediakan virtualisasi, keamanan, dan kontrol.
+GPU dan akselerator lain menangani inferensi, pelatihan, dan rendering.
+Kartu seperti H100 dan MI300 dirancang untuk beban kerja AI.
+Interconnect antar GPU menentukan skalabilitas pelatihan model besar.
+Pendinginan air dan cair menjadi umum untuk rack berdensitas tinggi.
+Efisiensi energi diukur dalam kinerja per watt.
+TPU Google adalah akselerator khusus yang menyaingi GPU untuk TensorFlow.
+NPU hadir di CPU dan smartphone modern untuk beban AI ringan.
+FPGA digunakan untuk akselerasi spesifik yang tidak cocok dengan GPU.
+Top500 supercomputer didominasi sistem heterogen CPU plus akselerator.
+Keamanan AI melibatkan isolasi model dan data pada tingkat perangkat keras.
+
+GPU DAN GRAFIS TERINTEGRASI
+Grafis terintegrasi tertanam dalam paket CPU.
+iGPU cukup untuk tampilan desktop, video, dan game ringan.
+iGPU hemat energi karena tidak memerlukan kartu tambahan.
+AMD menyebut APU untuk gabungan CPU dan GPU dalam satu paket.
+Grafis terintegrasi semakin mampu berkat arsitektur modern seperti RDNA.
+Laptop tipis umumnya mengandalkan iGPU untuk efisiensi baterai.
+dGPU aktif saat beban tinggi pada laptop hibrida.
+eGPU adalah GPU eksternal yang terhubung melalui Thunderbolt atau PCIe.
+Komposisi tampilan mengatur pergantian antara iGPU dan dGPU.
+Performa eGPU biasanya lebih rendah dibanding internal karena keterbatasan bandwidth.
+
+EFEK PANAS DAN DAYA LISTRIK
+TDP menggambarkan panas yang harus dihilangkan saat beban berkelanjutan.
+GPU kelas atas dapat memiliki TDP ratusan watt.
+Keterbatasan panas membatasi clock pada perangkat tipis.
+Thermal throttling menurunkan kecepatan saat suhu melewati ambang.
+Boost clock bergantung pada headroom termal dan listrik.
+Pendinginan udara menggunakan heatsink dan kipas.
+Pendinginan air memberikan kinerja lebih tinggi tetapi lebih rumit.
+Konsumsi daya CPU dan GPU menentukan waktu pakai baterai.
+Kinerja per watt kini menjadi metrik penting dalam memilih hardware.
+Efisiensi arsitektur biasanya lebih berpengaruh daripada ukuran node saja.
+Undervolting menurunkan daya tanpa kehilangan kinerja berarti jika dilakukan tepat.
+
+MANUFAKTUR DAN PROSES FABRIKASI
+Transistor dalam chip dibuat melalui fotolitografi pada wafer silikon.
+ASML memproduksi mesin EUV yang penting untuk node canggih.
+Ukuran transistor semakin kecil seiring kemajuan teknologi.
+Jumlah transistor modern dapat mencapai puluhan hingga ratusan miliar.
+GPU flagship AD102 NVIDIA memiliki sekitar 76 miliar transistor.
+Chiplet memisahkan bagian fungsi menjadi beberapa keping kecil.
+Teknik packaging memungkinkan penumpukan memori dan logika.
+Silicon interposer menjadi dasar HBM dan chiplet berperforma tinggi.
+Hasil produksi menentukan biaya manufaktur dan pasokan.
+Defek wafer lebih umum pada ukuran die yang besar.
+Riset transistor 2 nanometer membuka generasi efisiensi berikutnya.
+
+KASUS PENGGUNAAN CPU
+CPU menjalankan sistem operasi, driver, dan layanan latar belakang.
+CPU menangani logika game, AI, input pemain, dan fisika sederhana.
+Basis data OLTP dengan transaksi kecil dan acak diuntungkan oleh kinerja per core tinggi.
+Aplikasi perkantoran, peramban, dan kompiler bergantung pada CPU.
+Rendering pemodelan CAD juga membutuhkan kecepatan single thread yang baik.
+Encoding audio, kompresi, dan enkripsi biasanya berjalan pada CPU.
+Tugas dengan banyak percabangan lebih efisien di CPU.
+Server web memproses banyak koneksi melalui CPU dan memori.
+Virtual machine dan kontainer dijadwalkan oleh hypervisor pada CPU.
+CPU umum dipakai di perangkat IoT dan embedded sederhana.
+
+KASUS PENGGUNAAN GPU
+GPU digunakan untuk render film, game 3D, dan visualisasi ilmiah.
+GPU mempercepat deep learning baik training maupun inferensi batch besar.
+Simulasi fluida, partikel, molekul, dan meteorologi memanfaatkan GPU.
+Penambangan kripto dahulu dominan memakai GPU sebelum beralih ke ASIC.
+Protein folding, analisis genom, dan riset farmasi memakai GPU.
+GPU mempercepat pemrosesan citra medis dan rekonstruksi tomografi.
+Computer vision real time pada mobil swakemudi memanfaatkan GPU.
+Ray tracing dan path tracing menjadi realistis berkat akselerasi perangkat keras.
+GPU dipakai untuk simulasi dunia virtual dan metaverse.
+Video editing dan compositing menggunakan akselerasi GPU dan media engine.
+Rendering cloud gaming menjalankan GPU di pusat data dan mengirimnya ke klien.
+
+METRIK DAN BENCHMARK
+Kecepatan CPU diukur dengan clock, IPC, skor single thread, dan skor multi thread.
+GPU diukur dalam FLOPS, bandwidth memori, dan throughput beban tertentu.
+FLOPS menyatakan miliar atau triliun operasi titik mengambang per detik.
+TFLOPS pada GPU sering dihitung untuk titik mengambang 16 bit.
+Inferensi AI umumnya memakai presisi rendah untuk throughput lebih tinggi.
+Presisi FP64 penting bagi sains dan simulasi fisik.
+SPEC, Cinebench, Geekbench, dan PassMark adalah benchmark umum CPU.
+3DMark, Blender, dan benchmark ray tracing mengevaluasi kinerja GPU.
+FPS rata-rata dan persen 1 rendah penting dalam pengukuran game.
+Waktu konvergensi dan energi per epoch relevan untuk training AI.
+Benchmark yang ideal harus mencerminkan beban kerja nyata pengguna.
+Hasil benchmark tidak boleh dibandingkan lintas presisi tanpa penyesuaian.
+
+ISTILAH KUNCI DALAM CPU DAN GPU
+Pipeline adalah serangkaian tahap eksekusi instruksi.
+Clock domain menandakan wilayah waktu sinyal pada chip.
+Register file menyimpan banyak nilai cepat untuk thread aktif.
+Coalesced access adalah pola akses memori GPU yang teratur.
+Occupancy menyatakan seberapa penuh SM dengan thread aktif.
+Bottleneck berarti titik yang membatasi kinerja sistem.
+Heterogeneous computing adalah sistem yang memakai CPU dan akselerator bersama.
+Unified memory adalah arsitektur yang membagi memori yang sama.
+PCIe adalah antarmuka ekspansi standar kartu grafis.
+Bandwidth adalah volume data yang dapat dipindahkan per satuan waktu.
+Latency adalah jeda sampai hasil pertama tersedia.
+Throughput adalah jumlah pekerjaan yang diselesaikan per satuan waktu.
+Warp divergence terjadi saat thread dalam satu warp mengambil cabang berbeda.
+Kernel adalah fungsi yang dieksekusi di GPU.
+Discrete graphics adalah GPU terpisah dari CPU dalam satu kartu.
+
+TREN DAN MASA DEPAN
+Batas scaling transistor klasik mendorong inovasi packaging dan chiplet.
+AI menjadi motor utama permintaan akselerator paralel.
+Model besar membuat inferensi dan training menjadi beban utama pusat data.
+GPU semakin menyatu dengan komponen akselerasi khusus seperti tensor core.
+Komputasi kuantum dan akselerator neurosemorfik muncul sebagai alternatif riset.
+Neuromorphic meniru arsitektur otak untuk efisiensi beban tertentu.
+CPU modern kini menyertakan NPU untuk tugas AI ringan.
+Edge computing menempatkan GPU kecil pada perangkat terbatas.
+Perangkat lunak open source dan portabilitas menjadi kunci adopsi.
+Ketergantungan rantai pasok memicu investasi pabrik di berbagai negara.
+Efisiensi energi menjadi pertimbangan lingkungan dan biaya.
+Pembelajaran mesin digunakan untuk merancang chip itu sendiri.
+Kinerja per watt diprediksi menjadi metrik paling penting bagi pusat data.
+
+PENUTUP DAN REFLEKSI
+CPU dan GPU memiliki tujuan desain berbeda meski keduanya memproses data.
+CPU unggul dalam tugas umum, serial, dan latensi rendah.
+GPU unggul dalam tugas paralel, repetitif, dan throughput tinggi.
+Komputer modern tidak memilih salah satu tetapi memadukan keduanya.
+Memahami perbedaan arsitektur membantu memilih perangkat yang tepat.
+Pemrograman yang buruk dapat membuang potensi paralel GPU yang mahal.
+Hardware terbaik tidak menjamin kinerja jika beban kerja tidak cocok.
+Evaluasi kebutuhan seperti grafis, sains, AI, atau aplikasi bisnis wajib dilakukan lebih dulu.
+Kecenderungan komputasi bergeser dari CPU murni ke sistem heterogen.
+Literasi hardware digital berguna bagi profesional maupun pengguna biasa.
+Perbedaan CPU dan GPU pada akhirnya adalah pertukaran antara kompleksitas kontrol dan jumlah unit hitung.

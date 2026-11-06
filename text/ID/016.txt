@@ -1,0 +1,180 @@
+=========================================================
+  PENGERTIAN        : SQL (sql)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman sql (SQL),
+                      contoh contoh bahasa nya, kegunaan nya,
+                      kelebihan dan kekurangan, sejarah, pencipta,
+                      asal usul, asal negara, tahun di ciptakan,
+                      versi, perbedaan dengan SQLite (sqlite), framework
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+SQL adalah singkatan dari Structured Query Language, yaitu bahasa domain-spesifik (domain-specific language) yang digunakan untuk mengelola data, terutama dalam sistem manajemen basis data relasional (RDBMS). SQL memungkinkan pengguna untuk membuat, membaca, memperbarui, dan menghapus data (CRUD), serta mendefinisikan struktur basis data dan mengatur hak akses.
+
+SQL bukanlah bahasa pemrograman general-purpose seperti Java atau Python. SQL adalah bahasa deklaratif (declarative language): pengguna cukup mendeskripsikan **apa** hasil yang diinginkan, bukan **bagaimana** cara mencapainya. Contohnya, perintah `SELECT nama FROM pelanggan WHERE kota = 'Jakarta'` tidak menjelaskan langkah-langkah pengambilan data, tetapi langsung menyatakan hasil yang diharapkan. Meskipun demikian, SQL modern juga mengandung elemen prosedural (seperti stored procedures dan trigger) pada implementasi tertentu.
+
+SQL adalah fondasi dari hampir semua sistem basis data relasional modern, termasuk MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, dan SQLite.
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+SQL dikembangkan pada awal 1970-an di IBM oleh **Donald D. Chamberlin** dan **Raymond F. Boyce**. Keduanya bekerja di laboratorium penelitian IBM dan terinspirasi oleh makalah revolusioner Edgar F. Codd pada 1970, "A Relational Model of Data for Large Shared Data Banks", yang memperkenalkan model relasional untuk basis data.
+
+Asal Negara: Amerika Serikat (IBM).
+Tahun Diciptakan: 1973–1974 (versi pertama muncul pada 1973; nama SEQUEL digunakan pada 1974).
+
+Bahasa ini awalnya dinamai **SEQUEL** (Structured English Query Language), tetapi karena nama "SEQUEL" sudah menjadi merek dagang perusahaan lain, namanya diubah menjadi **SQL**. SQL pertama kali dikomersialkan pada 1979 melalui produk Oracle V2.
+
+SQL kemudian menjadi standar resmi: **ANSI** (American National Standards Institute) mengadopsinya pada **1986**, dan **ISO** (International Organization for Standardization) pada **1987**. Sejak itu, standar SQL direvisi secara berkala.
+
+3. SEJARAH VERSI STANDAR SQL
+SQL distandarisasi oleh ISO/IEC JTC 1/SC 32. Versi-versi utama standar SQL adalah:
+- **SQL-86** (1986): Standar ANSI pertama.
+- **SQL-89** (1989): Revisi minor dengan integritas referensial.
+- **SQL-92** (1992): Standar besar yang memperkenalkan JOIN yang lebih kaya, tipe data baru, dan dynamic SQL.
+- **SQL:1999** (SQL3): Menambahkan fitur berorientasi objek, recursive queries, dan trigger.
+- **SQL:2003**: Memperkenalkan XML, window functions, dan auto-generated values.
+- **SQL:2006, SQL:2008, SQL:2011**: Penyempurnaan bertahap, termasuk temporal data dan OLAP.
+- **SQL:2016**: Menambahkan JSON, row pattern recognition, dan polymorphic table functions.
+- **SQL:2023**: Standar stabil terbaru hingga 2026, diterbitkan Juni 2023, mencakup properti JSON yang lebih kaya dan fitur-fitur baru.
+
+Hingga 2026, belum ada standar "SQL:2026" yang dipublikasikan secara resmi; SQL:2023 masih menjadi rujukan standar terkini. Setiap sistem basis data (MySQL, PostgreSQL, Oracle, SQL Server) mengimplementasikan dialek SQL-nya sendiri yang mungkin tidak sepenuhnya sesuai standar, tetapi umumnya kompatibel pada perintah inti seperti SELECT, INSERT, UPDATE, DELETE, dan JOIN.
+
+4. SINTAKS DAN CONTOH
+SQL terdiri atas beberapa sublanguages: DQL (Data Query Language, SELECT), DML (Data Manipulation Language: INSERT, UPDATE, DELETE), DDL (Data Definition Language: CREATE, ALTER, DROP), dan DCL (Data Control Language: GRANT, REVOKE).
+
+a. Membuat Tabel (DDL)
+```sql
+CREATE TABLE pelanggan (
+    id INT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    kota VARCHAR(50),
+    tanggal_daftar DATE DEFAULT CURRENT_DATE
+);
+```
+
+b. Menyisipkan Data (INSERT)
+
+```sql
+INSERT INTO pelanggan (id, nama, email, kota)
+VALUES (1, 'Azriel', 'azriel@example.com', 'Jakarta');
+
+INSERT INTO pelanggan (id, nama, email, kota) VALUES
+(2, 'Budi', 'budi@example.com', 'Bandung'),
+(3, 'Citra', 'citra@example.com', 'Surabaya');
+```
+
+c. Membaca Data (SELECT) dengan Filter dan Urutan
+
+```sql
+SELECT nama, kota
+FROM pelanggan
+WHERE kota = 'Jakarta'
+ORDER BY nama ASC;
+```
+
+d. Menggabungkan Tabel (JOIN)
+
+```sql
+SELECT p.nama AS nama_pelanggan, o.total
+FROM pelanggan p
+INNER JOIN pesanan o ON p.id = o.pelanggan_id
+WHERE o.total > 100000;
+```
+
+e. Memperbarui Data (UPDATE)
+
+```sql
+UPDATE pelanggan
+SET kota = 'Yogyakarta'
+WHERE id = 2;
+```
+
+f. Menghapus Data (DELETE)
+
+```sql
+DELETE FROM pelanggan
+WHERE id = 3;
+```
+
+g. Agregasi dan Pengelompokan (GROUP BY)
+
+```sql
+SELECT kota, COUNT(*) AS jumlah_pelanggan
+FROM pelanggan
+GROUP BY kota
+HAVING COUNT(*) > 1;
+```
+
+5. KEGUNAAN SQL
+   SQL memiliki kegunaan yang sangat luas dalam pengelolaan data:
+
+· Mengelola Basis Data Relasional: Membuat, mengubah, dan menghapus tabel, indeks, view, dan skema.
+· Manipulasi Data (CRUD): Menyisipkan, membaca, memperbarui, dan menghapus baris data.
+· Kueri Kompleks: Menggabungkan beberapa tabel, melakukan agregasi, subquery, CTE (Common Table Expressions), dan window functions.
+· Analitik dan Pelaporan: SQL digunakan oleh analis data untuk mengekstrak insight dari basis data, sering kali melalui alat seperti Tableau, Power BI, atau Jupyter Notebook.
+· Backend Aplikasi: Hampir semua aplikasi web dan mobile menggunakan SQL untuk menyimpan dan mengambil data melalui driver basis data atau ORM.
+· Kontrol Akses: DCL (GRANT/REVOKE) mengatur siapa yang boleh membaca atau mengubah data.
+· Integritas Data: Constraint seperti PRIMARY KEY, FOREIGN KEY, UNIQUE, dan CHECK menjaga konsistensi data.
+
+6. KELEBIHAN DAN KEKURANGAN SQL
+
+Kelebihan SQL:
+
+· Standar dan Portabel: SQL adalah standar ANSI/ISO, sehingga keterampilan SQL dapat digunakan di berbagai RDBMS (MySQL, PostgreSQL, Oracle, SQL Server) dengan penyesuaian dialek yang minimal.
+· Deklaratif dan Mudah Dipahami: Pengguna tidak perlu memikirkan algoritma eksekusi; cukup menyatakan hasil yang diinginkan.
+· Kaya Fitur: Mendukung JOIN, agregasi, subquery, window functions, CTE, transaksi, dan constraint.
+· Ekosistem Matang: Tersedia puluhan tahun, dengan dokumentasi, alat, dan komunitas yang sangat besar.
+· Kinerja Teroptimasi: Basis data relasional modern memiliki query optimizer yang canggih, sehingga SQL yang ditulis dengan baik dapat dieksekusi sangat efisien pada data besar.
+
+Kekurangan SQL:
+
+· Kurang Fleksibel untuk Data Non-Relasional: SQL dirancang untuk data terstruktur dalam tabel; untuk data dokumen, grafik, atau key-value murni, model NoSQL mungkin lebih sesuai.
+· Perbedaan Dialek: Meskipun ada standar, setiap RDBMS memiliki ekstensi dan perilaku yang berbeda (misalnya T-SQL di SQL Server, PL/pgSQL di PostgreSQL), sehingga portabilitas penuh tidak selalu tercapai.
+· Kompleksitas pada Skala Besar: Kueri yang sangat kompleks dengan banyak JOIN dan subquery dapat sulit dioptimalkan dan dipelihara.
+· Bukan Bahasa General-Purpose: SQL tidak dapat digunakan untuk membangun antarmuka pengguna, logika aplikasi umum, atau komputasi ilmiah; ia harus dipadukan dengan bahasa lain.
+· Kurva Belajar untuk Kueri Analitik: Meskipun SELECT dasar mudah, menguasai window functions, recursive CTE, dan optimasi kueri memerlukan latihan.
+
+7. PERBEDAAN SQL DENGAN SQLITE
+   Ini adalah perbedaan yang paling sering disalahpahami. SQL adalah bahasa, sedangkan SQLite adalah sebuah RDBMS (implementasi mesin basis data). SQLite "berbicara" dalam bahasa SQL, tetapi SQL bukanlah SQLite.
+
+· SQL: Bahasa standar (ANSI/ISO) yang mendefinisikan sintaks dan semantik untuk mengelola basis data relasional. SQL tidak memiliki mesin eksekusi sendiri; ia adalah spesifikasi.
+· SQLite: Pustaka perangkat lunak C yang menyediakan mesin basis data relasional embedded. SQLite adalah salah satu implementasi dari SQL, bersama MySQL, PostgreSQL, Oracle, dan SQL Server.
+
+Karakteristik SQLite yang membedakannya dari RDBMS client-server:
+
+· Embedded, bukan client-server: SQLite tidak berjalan sebagai proses server terpisah. Ia tertanam langsung di dalam aplikasi dan menyimpan seluruh basis data dalam satu file di disk.
+· Zero configuration: Tidak perlu instalasi, konfigurasi, atau administrasi server.
+· Single-user, single-writer: SQLite dioptimalkan untuk skenario satu pengguna atau embedded. Ia tidak cocok untuk konkurensi tulis tinggi pada banyak pengguna simultan.
+· Tipe data fleksibel (flexible typing): Tipe data di SQLite bersifat "advisory"; kolom dapat menyimpan nilai dengan tipe yang berbeda, meskipun fitur STRICT TABLE tersedia untuk pengetatan.
+· Fitur SQL yang lebih terbatas: SQLite tidak mengimplementasikan seluruh standar SQL; beberapa fitur seperti RIGHT JOIN (sebelum versi tertentu) dan stored procedures tidak tersedia atau berbeda.
+
+SQLite sangat ideal untuk aplikasi mobile (Android/iOS), aplikasi desktop, perangkat IoT, prototyping, dan pengujian. Untuk aplikasi web dengan banyak pengguna dan penulisan konkuren, PostgreSQL atau MySQL lebih tepat.
+
+8. FRAMEWORK DAN EKOSISTEM SQL
+   Dalam pengembangan aplikasi modern, SQL jarang ditulis mentah sepenuhnya. Pengembang menggunakan framework atau library untuk berinteraksi dengan basis data, yang dapat dikelompokkan menjadi dua kategori besar: ORM (Object-Relational Mapper) dan Query Builder.
+
+ORM memetakan tabel basis data ke objek dalam bahasa pemrograman, sehingga pengembang dapat bekerja dengan objek tanpa menulis SQL secara manual. Contoh populer (per 2026):
+
+· Prisma (Node.js/TypeScript): Schema-first, type-safe generated client, Prisma Studio. Cocok untuk tim yang mengutamakan developer experience dan proyek baru.
+· Drizzle ORM (TypeScript): SQL-like syntax, ringan, zero engine, sangat cocok untuk edge runtime dan tim yang fasih SQL.
+· SQLAlchemy (Python): ORM paling kuat di ekosistem Python, mendukung async dan Alembic untuk migrasi.
+· Django ORM (Python): Terintegrasi erat dengan framework Django.
+· Hibernate / JPA (Java/Kotlin): Standar enterprise untuk aplikasi Spring Boot dan Jakarta EE.
+· Entity Framework Core (.NET): ORM utama untuk ekosistem .NET, dengan dukungan LINQ.
+· GORM (Go): ORM paling populer di ekosistem Go.
+
+Query Builder tidak memetakan objek, tetapi menyediakan API untuk menyusun kueri SQL secara terprogram dengan type safety. Contoh:
+
+· Kysely (TypeScript): Query builder murni, type-safe, tanpa manajemen skema.
+· Knex.js (JavaScript): Query builder database-agnostic dengan migration runner.
+· JOOQ (Java): Type-safe SQL DSL yang dihasilkan dari skema basis data.
+
+Pemilihan antara ORM dan query builder bergantung pada filosofi tim: ORM memberikan abstraksi tingkat tinggi dan kecepatan pengembangan, sedangkan query builder memberikan kontrol lebih dekat ke SQL dan transparansi kinerja. Banyak proyek modern, terutama di ekosistem TypeScript, kini beralih ke pendekatan "SQL-first" seperti Drizzle dan Kysely karena prediktabilitas dan kinerja runtime yang lebih baik.
+
+9. KESIMPULAN
+   SQL adalah bahasa standar untuk mengelola basis data relasional yang telah menjadi tulang punggung industri data selama lebih dari lima dekade. Diciptakan oleh Donald Chamberlin dan Raymond Boyce di IBM pada 1973–1974, SQL distandarisasi oleh ANSI (1986) dan ISO (1987), dengan revisi terbaru SQL:2023. Sifatnya yang deklaratif, kaya fitur, dan portabel menjadikannya keterampilan esensial bagi pengembang backend, analis data, dan administrator basis data. Perbedaan fundamental antara SQL (bahasa) dan SQLite (mesin basis data embedded) perlu dipahami agar tidak tertukar: SQL adalah "bahasa", SQLite adalah salah satu "penuturnya". Ekosistem framework modern—dari ORM seperti Prisma dan SQLAlchemy hingga query builder seperti Drizzle dan Kysely—terus memperluas cara pengembang berinteraksi dengan SQL, memungkinkan penulisan kueri yang type-safe, efisien, dan mudah dipelihara. Meskipun menghadapi tantangan dari model data non-relasional, SQL tetap menjadi fondasi yang tak tergantikan bagi sistem informasi modern.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa SQL, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi standar, perbedaan dengan SQLite, dan ekosistem framework. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

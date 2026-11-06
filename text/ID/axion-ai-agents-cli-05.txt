@@ -1,0 +1,47 @@
+PENTING — BACA SEBELUM MENGERJAKAN:
+- Jangan mengarang hal yang tidak Anda yakini atau tidak Anda ketahui.
+- Kerjakan seluruh instruksi di bawah ini tanpa melewatkan satu poin pun.
+- Gunakan bahasa Indonesia saat berbicara dengan saya.
+- Letakkan perhatian utama pada bagian "Issues (High Priority)" dan "Ketentuan Akhir".
+
+TUGAS: UPDATE AXION AI Agents CLI
+
+Anda diminta untuk memperbaiki dan mengembangkan proyek "Axion AI Agents CLI". Terdapat beberapa issue kritis dan fitur baru yang harus dikerjakan. Perhatikan gambar yang saya lampirkan sebagai referensi visual.
+
+A. ISSUES (HIGH PRIORITY) — WAJIB DIPERBAIKI
+1. Kolom input pengguna terus bertambah setiap request.
+   - Seharusnya kolom input hanya satu dan tidak bertambah.
+   - Perhatikan gambar yang saya lampirkan: model tidak memberikan jawaban. Ketika pengguna mengirim "halo", tidak ada output apa pun.
+
+2. Tampilan berantakan jika pengguna sudah banyak melakukan request.
+   - Bagian atas layar kosong. Seharusnya bagian tersebut digunakan untuk menampilkan jawaban AI, animasi berpikir, dan elemen terkait.
+   - Perbaiki agar tampilan tetap rapi dan teratur meskipun percakapan sudah panjang.
+
+B. FITUR BARU — COMMAND TANPA MENJALANKAN AXION-CLI TERLEBIH DAHULU
+Tambahkan command berikut agar dapat dijalankan langsung dari terminal:
+- axion-cli --help          → menampilkan bantuan
+- axion-cli --version       → menampilkan versi yang sedang digunakan
+- axion-cli update --info   → mencari informasi update versi terbaru dari update-info.json
+- axion-cli update          → melakukan update ke versi terbaru
+- axion-cli                 → masuk ke mode chat
+- axion-cli --feedback      → langsung menuju feedback
+
+Khusus untuk "axion-cli update":
+- Pastikan install.sh memeriksa apakah pengguna sudah pernah menginstal (karena perintahnya tetap menggunakan curl yang sama).
+- Lalu uninstall paket tanpa menghilangkan atau menghapus data pengguna, untuk menghindari bentrok.
+- Setelah itu otomatis menginstal kembali.
+
+C. TESTING
+Saya sudah menyiapkan API KEY Google AI Studio untuk testing (API KEY sementara). Gunakan API KEY berikut untuk melakukan testing chat dengan AI:
+API KEY: AQ.Ab8RN6KqUMXeZOmJHs_FNU_fYVi8pZ8ehGY3FWtneKfi1FTD2A
+
+D. KETENTUAN AKHIR
+- Silakan kerjakan seluruh instruksi di atas.
+- Jangan ada satu poin pun yang terlewat.
+- Gunakan bahasa Indonesia saat berbicara dengan saya.
+- Jika sudah selesai, kirimkan hasilnya kepada saya sebagai file ZIP.
+
+CATATAN PENTING:
+- Jangan mengarang hal yang tidak Anda yakini atau tidak Anda ketahui.
+- Jika ada bagian yang membutuhkan klarifikasi, sampaikan dengan jelas.
+- Pastikan seluruh poin di atas dikerjakan dan tidak ada yang terlewat.

@@ -1,0 +1,129 @@
+=========================================================
+  PENGERTIAN        : JSONL (jsonl)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman jsonl (JSONL),
+                      contoh contoh bahasa nya, kegunaan nya, kelebihan
+                      dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi, perbedaan
+                      dengan JSON (json)
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+JSONL adalah singkatan dari JSON Lines, sebuah format teks untuk menyimpan data terstruktur di mana setiap baris berisi satu nilai JSON yang lengkap dan mandiri, biasanya berupa objek. Format ini juga dikenal dengan nama NDJSON (Newline-Delimited JSON) atau LDJSON (Line-Delimited JSON). JSONL bukanlah bahasa pemrograman, melainkan konvensi format data yang memanfaatkan sintaks JSON sebagai blok bangunannya.
+
+Perbedaan paling fundamental antara JSONL dan JSON biasa terletak pada cara data disusun. Jika JSON membungkus seluruh kumpulan record dalam satu array besar `[{...}, {...}]` atau satu objek tunggal, JSONL meletakkan setiap record sebagai objek JSON mandiri di barisnya sendiri, dipisahkan oleh karakter newline (`\n`). Karena setiap baris berdiri sendiri, file JSONL secara keseluruhan **bukanlah** dokumen JSON yang valid. Namun, justru sifat inilah yang membuat JSONL sangat kuat untuk pemrosesan data secara streaming dan berskala besar.
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+JSONL tidak lahir dari satu momen "penemuan" tunggal, melainkan muncul secara organik dari kebutuhan praktis para pengembang dalam menangani data JSON yang besar. Sintaks JSON sendiri dispesifikasikan oleh Douglas Crockford pada 2001, dan pada 2005–2006 popularitasnya meledak berkat AJAX. Namun, seiring pertumbuhan data log dan pipeline, muncul masalah: array JSON konvensional harus diurai seluruhnya sebelum pemrosesan dapat dimulai, yang tidak praktis untuk data berukuran gigabyte.
+
+Sekitar 2010–2011, beberapa pengembang secara independen sampai pada solusi yang sama: menempatkan satu objek JSON per baris. Implementasi awal muncul di berbagai komunitas, termasuk implementasi pada bahasa Go yang menggunakan JSON terpisah newline pada April 2010. Format ini kemudian diberi nama yang berbeda-beda di setiap komunitas, seperti JSON Lines, NDJSON, dan LDJSON, sebelum akhirnya "JSON Lines" menjadi nama yang paling luas diadopsi.
+
+Situs web jsonlines.org diluncurkan pada 2013 dan menjadi titik rujukan tidak resmi untuk format ini. Spesifikasi NDJSON yang terpisah di GitHub juga dibuat pada 2013, dengan versi 1.0.0 yang diberi tanggal 19 Oktober 2014 dan tidak direvisi sejak saat itu.
+
+Asal Negara: Tidak dapat dikaitkan dengan satu negara tertentu karena format ini muncul secara terdesentralisasi di komunitas pengembang global. Namun, komunitas yang mempopulerkannya terutama berasal dari ekosistem pengembangan perangkat lunak berbahasa Inggris.
+Tahun Diciptakan: Sekitar 2010–2013 (muncul organik), dengan jsonlines.org dan spesifikasi NDJSON resmi pada 2013.
+
+3. VERSI DAN STANDARDISASI
+JSONL tidak memiliki sistem versi seperti bahasa pemrograman atau perangkat lunak. Format ini adalah konvensi terbuka yang bersifat de facto, bukan standar formal yang disahkan oleh badan seperti ISO atau IETF.
+
+Terdapat dua spesifikasi komunitas yang utama:
+- JSON Lines (jsonlines.org, 2013): Spesifikasi ini bersifat tidak berversi (unversioned) dan mendefinisikan tiga aturan inti: encoding UTF-8, setiap baris harus berupa nilai JSON yang valid, dan pemisah baris adalah `\n`. Ekstensi file yang disarankan adalah `.jsonl`, dan MIME type `application/jsonl` disarankan meskipun belum terstandardisasi secara formal.
+- NDJSON (github.com/ndjson/ndjson-spec, 2013–2014): Spesifikasi ini memiliki nomor versi 1.0.0 (19 Oktober 2014). Perbedaan teknis kecil dengan JSON Lines adalah NDJSON secara eksplisit mengizinkan pembaca untuk melewati baris kosong, sedangkan jsonlines.org tidak menyebutkan aturan tersebut secara eksplisit. Ekstensi yang umum adalah `.ndjson` dan MIME type `application/x-ndjson`.
+
+Dalam praktiknya, JSONL dan NDJSON merujuk pada format yang sama dan digunakan secara bergantian. Tidak ada "JSONL 2.0" atau pembaruan versi tahunan karena sintaksnya sengaja dibuat minimalis dan stabil.
+
+4. SINTAKS DAN CONTOH
+Aturan JSONL sangat sederhana: satu nilai JSON per baris fisik, tanpa array pembungkus luar, tanpa koma di antara baris, dan tanpa komentar. Setiap baris harus dapat diurai secara independen oleh parser JSON standar.
+
+a. Contoh Dasar: Tiga Record Independen
+```jsonl
+{"id": 1, "nama": "Azriel", "kota": "Jakarta"}
+{"id": 2, "nama": "Budi", "kota": "Bandung"}
+{"id": 3, "nama": "Citra", "kota": "Surabaya"}
+```
+
+Setiap baris di atas adalah objek JSON yang valid. Jika Anda mengambil satu baris saja dan memberikannya ke parser JSON, ia akan berhasil. Namun, jika Anda memberikan seluruh file tiga baris tersebut ke parser JSON standar sebagai satu dokumen, parser akan gagal pada baris kedua karena tidak mengharapkan nilai JSON tambahan setelah objek pertama.
+
+b. Contoh dengan Tipe Data Beragam per Baris
+JSONL tidak mengharuskan semua baris memiliki "bentuk" yang sama. Setiap baris dapat berisi tipe JSON apa pun—objek, array, string, angka, boolean, atau null—selama itu adalah nilai JSON yang valid.
+
+```jsonl
+{"event": "login", "user": "azriel", "timestamp": "2026-11-04T10:00:00Z"}
+{"event": "purchase", "user": "azriel", "amount": 150000, "items": ["buku", "pulpen"]}
+{"event": "logout", "user": "azriel", "timestamp": "2026-11-04T10:05:00Z"}
+```
+
+c. Contoh untuk Log Aplikasi (Skenario Umum)
+JSONL sangat ideal untuk log terstruktur. Setiap entri log adalah satu baris mandiri, sehingga alat seperti grep dapat mencari pola tertentu tanpa harus mengurai seluruh file.
+
+```jsonl
+{"level": "INFO", "service": "api", "message": "Server started", "port": 8080}
+{"level": "WARN", "service": "api", "message": "High memory usage", "usage_mb": 850}
+{"level": "ERROR", "service": "api", "message": "Database timeout", "retry": 3}
+```
+
+Aturan ketat yang perlu diperhatikan: setiap record harus berada pada satu baris fisik. JSON yang di-pretty-print (multi-baris dengan indentasi) tidak diizinkan dalam JSONL. Jika sebuah string mengandung karakter newline, karakter tersebut harus di-escape sebagai \n agar tidak memecah record menjadi beberapa baris.
+
+5. KEGUNAAN JSONL
+   JSONL dirancang untuk mengatasi keterbatasan JSON dalam skenario data besar dan streaming. Kegunaan utamanya meliputi:
+
+· Log Aplikasi dan Log Terstruktur: Setiap entri log ditulis sebagai satu baris JSON. Ini memungkinkan log untuk ditambahkan (append) secara terus-menerus tanpa mengubah struktur file, serta memudahkan pencarian dengan alat baris-perintah.
+· Dataset Machine Learning: Dataset pelatihan sering kali terdiri dari jutaan record. JSONL memungkinkan data dimuat secara batch (mini-batch) selama pelatihan tanpa harus memuat seluruh dataset ke dalam memori.
+· Ekspor dan Impor Data Besar: Sistem basis data dan layanan cloud menggunakan JSONL untuk mengekspor data dalam jumlah besar karena file dapat diproses secara paralel dan dipecah menjadi bagian-bagian kecil.
+· Event Streaming dan Message Passing: Dalam arsitektur microservices dan sistem antrean pesan, JSONL menyediakan cara sederhana untuk mengirim aliran objek JSON melalui koneksi TCP atau pipe.
+· Pipeline Data dan ETL: Alat seperti Apache Spark, Pandas (via read_json(lines=True)), dan berbagai framework pemrosesan data mendukung pembacaan JSONL secara native karena setiap baris dapat diproses secara independen.
+
+6. KELEBIHAN DAN KEKURANGAN JSONL
+
+Kelebihan JSONL:
+
+· Streamable Sejati: Setiap baris dapat diurai segera setelah dibaca. Program tidak perlu menunggu seluruh file selesai diunduh atau dibaca untuk mulai memproses record pertama.
+· Ramah Append (Append-Only): Menambahkan record baru cukup dengan menulis satu baris baru di akhir file. Tidak perlu mengurai ulang atau menulis ulang seluruh file seperti pada array JSON.
+· Isolasi Kesalahan (Error Isolation): Jika satu baris rusak atau tidak valid, hanya record pada baris tersebut yang hilang. Baris-baris lain tetap dapat diproses. Pada JSON array, satu kesalahan sintaks dapat menggagalkan seluruh dokumen.
+· Hemat Memori: Karena diproses per baris, JSONL tidak memerlukan memori sebesar ukuran file. Ini memungkinkan pemrosesan file berukuran gigabyte pada mesin dengan RAM terbatas.
+· Kompatibel dengan Alat Baris (Line-Oriented Tools): JSONL bekerja sangat baik dengan alat Unix standar seperti grep, awk, sed, head, tail, dan split, karena setiap record adalah satu baris teks.
+· Mudah Dipecah (Splittable): File JSONL dapat dipecah menjadi beberapa bagian untuk diproses secara paralel oleh beberapa worker tanpa perlu memahami struktur global.
+
+Kekurangan JSONL:
+
+· Bukan JSON yang Valid Secara Keseluruhan: File JSONL tidak dapat langsung diberikan ke parser JSON standar sebagai satu dokumen. Ini dapat membingungkan pengguna atau alat yang mengharapkan JSON konvensional.
+· Tidak Ada Metadata Tingkat Atas: JSONL tidak memiliki tempat alami untuk menyimpan metadata global, seperti skema, versi, atau informasi tentang kumpulan data. Setiap baris harus mandiri atau metadata harus disimpan di file terpisah.
+· Tidak Ada Skema Bawaan: Karena setiap baris independen, tidak ada jaminan bahwa semua record memiliki bentuk yang sama. Validasi konsistensi data harus dilakukan secara manual atau dengan alat tambahan.
+· Tidak Ada Pretty-Printing: Setiap record harus berada pada satu baris fisik, sehingga JSONL tidak ramah untuk dibaca manusia dalam arti format yang diindentasi. Keterbacaan lebih rendah dibandingkan JSON yang di-pretty-print.
+· Risiko "Drift" Bentuk Data: Seiring waktu, record dalam file JSONL dapat berubah bentuk (misalnya, penambahan field baru) tanpa ada mekanisme yang mencegahnya, sehingga konsumen data harus siap menghadapi variasi.
+
+7. PERBEDAAN JSONL DENGAN JSON
+   JSON dan JSONL sering dibandingkan karena JSONL menggunakan JSON sebagai bahan dasarnya. Perbedaan fundamentalnya terletak pada struktur dan tujuan penggunaan.
+
+Struktur:
+
+· JSON adalah satu dokumen tunggal. Sebuah file JSON berisi satu nilai JSON, biasanya berupa objek {...} atau array [{...}, {...}]. Seluruh isi file adalah satu kesatuan yang valid.
+· JSONL adalah kumpulan baris. Setiap baris adalah nilai JSON yang lengkap dan mandiri. File JSONL secara keseluruhan bukanlah dokumen JSON yang valid. Tidak ada array pembungkus luar dan tidak ada koma di antara baris.
+
+Cara Pembacaan:
+
+· JSON harus diurai seluruhnya. Parser harus membaca dari awal hingga akhir, termasuk menunggu kurung kurawal atau kurung siku penutup, sebelum dapat memastikan bahwa dokumen tersebut valid.
+· JSONL dibaca baris per baris. Parser dapat memproses setiap baris segera setelah baris tersebut diterima, tanpa perlu mengetahui isi baris berikutnya.
+
+Kegunaan yang Tepat:
+
+· JSON lebih cocok untuk respons API, file konfigurasi, dan pertukaran data di mana seluruh dokumen perlu dibaca sekaligus dan ukurannya relatif kecil.
+· JSONL lebih cocok untuk log, dataset besar, event stream, ekspor data, dan skenario apa pun di mana data perlu diproses secara bertahap, ditambahkan secara incremental, atau dipecah untuk pemrosesan paralel.
+
+Penanganan Kesalahan:
+
+· Pada JSON, satu kesalahan sintaks (misalnya koma berlebih atau tanda kutip yang salah) dapat membuat seluruh file tidak valid dan gagal diurai.
+· Pada JSONL, kesalahan pada satu baris hanya memengaruhi record tersebut. Baris lain tetap dapat diproses secara normal.
+
+Ekstensi dan MIME Type:
+
+· JSON: .json, application/json.
+· JSONL: .jsonl (paling umum) atau .ndjson; MIME type application/jsonl atau application/x-ndjson (keduanya belum terstandardisasi secara formal oleh IANA).
+
+8. KESIMPULAN
+   JSONL adalah evolusi pragmatis dari JSON yang menjawab tantangan pemrosesan data berskala besar dan streaming. Dengan menempatkan satu nilai JSON per baris, JSONL mengorbankan validitas file secara keseluruhan sebagai dokumen JSON tunggal, tetapi imbalannya adalah kemampuan streaming sejati, isolasi kesalahan, kemudahan penambahan data, dan kompatibilitas dengan alat baris-perintah. Format ini muncul secara organik di komunitas pengembang sekitar 2010–2013, dengan Ian Ward dan komunitas jsonlines.org berperan penting dalam memformalkan konvensinya. Meskipun bukan standar resmi dengan nomor versi, JSONL dan NDJSON telah menjadi standar de facto untuk log, dataset machine learning, dan pipeline data modern. Memahami perbedaannya dengan JSON—bukan sebagai pesaing, melainkan sebagai pelengkap—memungkinkan pengembang memilih format yang tepat sesuai dengan skala dan pola akses data yang dihadapi.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian format data JSONL, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi, dan perbedaannya dengan JSON. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

@@ -1,0 +1,1090 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 6
+Bahasa: Indonesia
+Fokus: Proyek Android tingkat lanjut dengan Java, Kotlin, dan Gradle.
+Cakupan: CI/CD Android, versioning dan signing, distribusi, dependency injection, Compose navigation, feature flags, observability, performance, keamanan, aksesibilitas, internasionalisasi, Gradle lanjutan, modularisasi lanjutan, Kotlin Multiplatform, dynamic feature, screenshot testing, baseline profiles, dan tata kelola rilis.
+
+Tujuan: Melatih AI agar mampu merancang, membaca, memvalidasi, dan merefaktor struktur proyek Android tingkat lanjut tanpa melanggar konvensi Android Gradle Plugin, tanpa membocorkan rahasia, dan tanpa merusak alur rilis.
+
+BAGIAN 1: NARASI LANJUTAN ANDROID
+Pada generasi kelima, AI belajar struktur Android dasar dan modular.
+Pada generasi keenam, AI belajar struktur Android untuk kebutuhan produksi skala nyata.
+Aplikasi Android produksi membutuhkan lebih dari sekadar kode dan resource.
+Aplikasi produksi membutuhkan alur build yang dapat diulang.
+Aplikasi produksi membutuhkan penandatanganan artefak yang aman.
+Aplikasi produksi membutuhkan distribusi ke penguji dan ke Play Store.
+Aplikasi produksi membutuhkan observability untuk mengetahui crash dan performa.
+Aplikasi produksi membutuhkan keamanan jaringan dan penyimpanan lokal.
+Aplikasi produksi membutuhkan aksesibilitas dan internasionalisasi.
+Aplikasi produksi membutuhkan pengujian berlapis.
+Aplikasi produksi membutuhkan dokumentasi rilis dan rollback.
+Aplikasi produksi membutuhkan tata kelola versi.
+Aplikasi produksi membutuhkan pemantauan ukuran APK atau AAB.
+Aplikasi produksi membutuhkan strategi feature flag.
+Aplikasi produksi membutuhkan strategi rollout bertahap.
+Aplikasi produksi membutuhkan strategi migrasi data lokal.
+Aplikasi produksi membutuhkan strategi migrasi modul.
+Struktur folder Android tingkat lanjut mencerminkan semua kebutuhan tersebut.
+AI harus memahami bahwa struktur folder bukan sekadar estetika.
+Struktur folder adalah kontrak operasional dan kontrak rilis.
+Struktur folder yang buruk memperlambat rilis dan menaikkan risiko.
+Struktur folder yang baik mempercepat rilis dan menurunkan risiko.
+AI harus mampu membaca struktur untuk menyimpulkan alur rilis.
+AI harus mampu membaca struktur untuk menyimpulkan strategi distribusi.
+AI harus mampu membaca struktur untuk menyimpulkan strategi pengujian.
+AI harus mampu membaca struktur untuk menyimpulkan strategi observability.
+AI harus mampu membaca struktur untuk menyimpulkan strategi keamanan.
+AI harus mampu membaca struktur untuk menyimpulkan strategi internasionalisasi.
+AI harus mampu membaca struktur untuk menyimpulkan strategi aksesibilitas.
+AI harus mampu membaca struktur untuk menyimpulkan strategi performa.
+
+BAGIAN 2: ISTILAH PENTING TAMBAHAN ANDROID
+CI adalah integrasi berkelanjutan.
+CD adalah pengiriman atau penerapan berkelanjutan.
+Pipeline CI Android biasanya menjalankan lint, detekt, tes unit, dan build debug.
+Pipeline CD Android biasanya menghasilkan AAB rilis dan mengunggah ke Play Console.
+Play Console adalah konsol distribusi aplikasi Android.
+Play App Signing memisahkan kunci aplikasi dan kunci upload.
+Upload keystore tidak boleh disimpan di repositori.
+Keystore harus disimpan di manajer rahasia.
+Keystore harus dirotasi jika bocor.
+versionCode harus selalu naik untuk setiap rilis ke Play Store.
+versionName adalah versi yang terlihat pengguna.
+Semantic versioning umumnya dipakai untuk versionName.
+versionCode dapat dinaikkan secara otomatis di CI.
+Build number dapat dipakai sebagai versionCode.
+Signing config harus dibaca dari variabel lingkungan atau file lokal.
+Signing config tidak boleh ditulis langsung di build.gradle.kts.
+Firebase App Distribution adalah saluran distribusi ke penguji.
+Internal testing track adalah saluran Play Console untuk penguji internal.
+Closed testing track adalah saluran Play Console untuk penguji terbatas.
+Open testing track adalah saluran Play Console untuk publik terbatas.
+Production track adalah saluran rilis penuh.
+Staged rollout adalah peluncuran bertahap ke persentase pengguna.
+Halt rollout adalah penghentian peluncuran jika ada masalah.
+Rollback di Play Store umumnya dilakukan dengan merilis versi baru, bukan menurunkan versi.
+Crashlytics adalah layanan pelaporan crash dari Firebase.
+Sentry, Bugsnag, dan Instabug adalah alternatif pelaporan crash.
+Analytics mencatat perilaku pengguna secara agregat.
+Logging lokal mencatat kejadian di perangkat.
+Remote logging mengirim kejadian ke server.
+Feature flag memungkinkan menyalakan atau mematikan fitur tanpa rilis baru.
+Remote config menyimpan konfigurasi dinamis.
+Play Integrity memverifikasi integritas perangkat dan aplikasi.
+Network Security Config menentukan aturan TLS dan pinning.
+Certificate pinning meningkatkan keamanan jaringan.
+EncryptedSharedPreferences menyimpan preferensi terenkripsi.
+DataStore adalah penyimpanan preferensi modern.
+Room mendukung enkripsi dengan SQLCipher.
+Aksesibilitas mencakup contentDescription, ukuran sentuh, kontras, dan urutan fokus.
+Internasionalisasi mencakup strings.xml per bahasa dan RTL.
+Locale Config menentukan bahasa yang didukung.
+Pseudo-locale membantu pengujian terjemahan.
+Screenshot testing membandingkan tampilan dengan gambar referensi.
+Paparazzi dan Roborazzi adalah alat screenshot testing untuk Compose.
+Baseline Profile meningkatkan performa startup.
+Macrobenchmark mengukur performa aplikasi secara keseluruhan.
+Microbenchmark mengukur performa fungsi tertentu.
+Profil startup mencatat jalur startup.
+R8 adalah penyusut dan pengoptimal kode.
+Full mode R8 mengoptimalkan lebih agresif.
+Resource shrinking menghapus resource tidak terpakai.
+Bundle size adalah ukuran AAB.
+APK size adalah ukuran APK per perangkat.
+App Bundle Explorer menampilkan ukuran per konfigurasi.
+Gradle build cache menyimpan hasil tugas build.
+Gradle configuration cache menyimpan hasil konfigurasi.
+Gradle parallel execution menjalankan tugas paralel.
+Gradle daemon menjaga proses Gradle tetap hidup.
+Gradle scan menganalisis performa build.
+Kotlin Multiplatform berbagi kode antar Android, iOS, desktop, dan web.
+Shared module adalah modul Kotlin Multiplatform.
+Expect dan actual adalah mekanisme deklarasi lintas platform.
+Compose Multiplatform berbagi UI lintas platform.
+Dynamic feature adalah modul yang diunduh sesuai permintaan.
+Instant App adalah varian tanpa instalasi.
+Wear OS, Android TV, dan Android Auto adalah target khusus.
+App startup library mengelola urutan inisialisasi.
+WorkManager menjalankan tugas latar belakang yang andal.
+Foreground Service menjalankan tugas yang terlihat pengguna.
+Alarm Manager menjadwalkan tugas pada waktu tertentu.
+
+BAGIAN 3: STRUKTUR POHON ANDROID TINGKAT LANJUT
+Struktur ini menggabungkan modularisasi, CI/CD, distribusi, observability, performance, keamanan, dan tata kelola rilis.
+Struktur ini cocok untuk aplikasi produksi dengan banyak tim.
+
+proyek-android-produksi/
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── local.properties.example
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── release.yml
+│   │   ├── internal-distribution.yml
+│   │   ├── nightly.yml
+│   │   ├── dependabot.yml
+│   │   └── codeql.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── CODEOWNERS
+├── .circleci/
+│   └── config.yml
+├── .gitlab-ci.yml
+├── .fastlane/
+│   ├── Fastfile
+│   ├── Appfile
+│   └── Pluginfile
+├── gradle/
+│   ├── libs.versions.toml
+│   ├── wrapper/
+│   │   ├── gradle-wrapper.jar
+│   │   └── gradle-wrapper.properties
+│   └── verification-metadata.xml
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiConventionPlugin.kt
+│           ├── AndroidPustakaConventionPlugin.kt
+│           ├── AndroidComposeConventionPlugin.kt
+│           ├── AndroidFeatureConventionPlugin.kt
+│           ├── AndroidHiltConventionPlugin.kt
+│           ├── AndroidRoomConventionPlugin.kt
+│           ├── AndroidJvmConventionPlugin.kt
+│           └── AndroidKmpConventionPlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── consumer-rules.pro
+│   ├── baseline-prof.txt
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── java/com/contoh/produksi/
+│   │   │   │   ├── AplikasiProduksi.kt
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   ├── StartupInisialisasi.kt
+│   │   │   │   ├── navigasi/
+│   │   │   │   │   ├── GrafikUtama.kt
+│   │   │   │   │   └── Navigator.kt
+│   │   │   │   ├── fitur-flag/
+│   │   │   │   │   ├── FiturFlag.kt
+│   │   │   │   │   └── FiturFlagDefault.kt
+│   │   │   │   ├── observability/
+│   │   │   │   │   ├── Pencatat.kt
+│   │   │   │   │   ├── PelaporCrash.kt
+│   │   │   │   │   └── Analitik.kt
+│   │   │   │   └── di/
+│   │   │   │       └── ModulAplikasi.kt
+│   │   │   └── res/
+│   │   │       ├── drawable/
+│   │   │       ├── layout/
+│   │   │       ├── mipmap-anydpi-v26/
+│   │   │       ├── mipmap-hdpi/
+│   │   │       ├── mipmap-mdpi/
+│   │   │       ├── mipmap-xhdpi/
+│   │   │       ├── mipmap-xxhdpi/
+│   │   │       ├── mipmap-xxxhdpi/
+│   │   │       ├── values/
+│   │   │       │   ├── colors.xml
+│   │   │       │   ├── dimens.xml
+│   │   │       │   ├── strings.xml
+│   │   │       │   ├── styles.xml
+│   │   │       │   ├── themes.xml
+│   │   │       │   └── locales_config.xml
+│   │   │       ├── values-b+in/
+│   │   │       │   └── strings.xml
+│   │   │       ├── values-b+en/
+│   │   │       │   └── strings.xml
+│   │   │       ├── values-night/
+│   │   │       │   └── themes.xml
+│   │   │       ├── xml/
+│   │   │       │   ├── backup_rules.xml
+│   │   │       │   ├── data_extraction_rules.xml
+│   │   │       │   ├── network_security_config.xml
+│   │   │       │   └── locales_config.xml
+│   │   │       └── raw/
+│   │   ├── debug/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── res/values/strings.xml
+│   │   ├── staging/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── res/values/strings.xml
+│   │   ├── release/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── res/values/strings.xml
+│   │   ├── internal/
+│   │   │   └── res/values/strings.xml
+│   │   ├── beta/
+│   │   │   └── res/values/strings.xml
+│   │   ├── prod/
+│   │   │   └── res/values/strings.xml
+│   │   ├── test/
+│   │   │   └── java/com/contoh/produksi/
+│   │   │       ├── FiturFlagTest.kt
+│   │   │       └── NavigatorTest.kt
+│   │   └── androidTest/
+│   │       ├── java/com/contoh/produksi/
+│   │       │   ├── AlurUtamaTest.kt
+│   │       │   ├── AlurPembelianTest.kt
+│   │       │   └── HiltTestRunner.kt
+│   │       └── assets/
+│   │           └── data_uji.json
+├── feature/
+│   ├── beranda/
+│   │   ├── build.gradle.kts
+│   │   ├── proguard-rules.pro
+│   │   ├── api/
+│   │   │   └── build.gradle.kts
+│   │   ├── impl/
+│   │   │   ├── build.gradle.kts
+│   │   │   └── src/main/
+│   │   │       ├── AndroidManifest.xml
+│   │   │       ├── java/com/contoh/beranda/impl/
+│   │   │       │   ├── BerandaRoute.kt
+│   │   │       │   ├── BerandaScreen.kt
+│   │   │       │   ├── BerandaViewModel.kt
+│   │   │       │   └── BerandaNavigasi.kt
+│   │   │       └── res/values/strings.xml
+│   │   └── src/test/java/com/contoh/beranda/impl/
+│   │       └── BerandaViewModelTest.kt
+│   ├── detail/
+│   │   ├── build.gradle.kts
+│   │   ├── api/
+│   │   │   └── build.gradle.kts
+│   │   ├── impl/
+│   │   │   ├── build.gradle.kts
+│   │   │   └── src/main/
+│   │   │       └── java/com/contoh/detail/impl/
+│   │   │           ├── DetailRoute.kt
+│   │   │           └── DetailViewModel.kt
+│   │   └── src/test/java/com/contoh/detail/impl/
+│   │       └── DetailViewModelTest.kt
+│   └── pengaturan/
+│       ├── build.gradle.kts
+│       ├── api/
+│       │   └── build.gradle.kts
+│       └── impl/
+│           ├── build.gradle.kts
+│           └── src/main/
+│               └── java/com/contoh/pengaturan/impl/
+│                   └── PengaturanViewModel.kt
+├── core/
+│   ├── common/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/common/
+│   │       ├── Hasil.kt
+│   │       ├── Ekstensi.kt
+│   │       └── Dispatcher.kt
+│   ├── domain/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/domain/
+│   │       ├── model/
+│   │       │   └── Pengguna.kt
+│   │       ├── repositori/
+│   │       │   └── AntarmukaRepositoriPengguna.kt
+│   │       └── gunakan/
+│   │           ├── AmbilPengguna.kt
+│   │           └── SimpanPengguna.kt
+│   ├── data/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/data/
+│   │       ├── lokal/
+│   │       │   ├── BasisData.kt
+│   │       │   ├── DaoPengguna.kt
+│   │       │   ├── EntitasPengguna.kt
+│   │       │   └── KonversiTipe.kt
+│   │       ├── jarak-jauh/
+│   │       │   ├── ApiLayanan.kt
+│   │       │   ├── DtoPengguna.kt
+│   │       │   ├── PencegatAuth.kt
+│   │       │   └── PencegatLog.kt
+│   │       ├── repositori/
+│   │       │   └── RepositoriPenggunaImpl.kt
+│   │       ├── preferensi/
+│   │       │   └── PreferensiPengguna.kt
+│   │       └── di/
+│   │           ├── ModulData.kt
+│   │           ├── ModulBasisData.kt
+│   │           └── ModulJaringan.kt
+│   ├── ui/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/ui/
+│   │       ├── tema/
+│   │       │   ├── Warna.kt
+│   │       │   ├── Tema.kt
+│   │       │   ├── Tipografi.kt
+│   │       │   └── Bentuk.kt
+│   │       ├── komponen/
+│   │       │   ├── TombolUtama.kt
+│   │       │   ├── Kartu.kt
+│   │       │   ├── MedanTeks.kt
+│   │       │   └── IndikatorMuat.kt
+│   │       ├── aksesibilitas/
+│   │       │   ├── Deskripsi.kt
+│   │       │   └── Semantik.kt
+│   │       └── pratinjau/
+│   │           └── Pratinjau.kt
+│   ├── navigasi/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/navigasi/
+│   │       ├── Rute.kt
+│   │       ├── Arah.kt
+│   │       └── KontrakNavigasi.kt
+│   ├── jaringan/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/jaringan/
+│   │       ├── KlienHttp.kt
+│   │       ├── PenanganKesalahan.kt
+│   │       └── Pencegat.kt
+│   ├── keamanan/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/keamanan/
+│   │       ├── PenyimpananAman.kt
+│   │       ├── PemeriksaIntegritas.kt
+│   │       └── Penyamaran.kt
+│   ├── observability/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/observability/
+│   │       ├── Pencatat.kt
+│   │       ├── Analitik.kt
+│   │       └── Metrik.kt
+│   ├── konfigurasi/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/konfigurasi/
+│   │       ├── PemuatKonfigurasi.kt
+│   │       └── Lingkungan.kt
+│   ├── datastore/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/datastore/
+│   │       └── PreferensiDataStore.kt
+│   ├── sinkronisasi/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/sinkronisasi/
+│   │       ├── SinkronisasiWorker.kt
+│   │       └── Penjadwal.kt
+│   └── pengujian/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/com/contoh/core/pengujian/
+│           ├── AturanTes.kt
+│           ├── DispatcherTes.kt
+│           └── HiltTestRunner.kt
+├── testing/
+│   ├── fixtures/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/testing/fixtures/
+│   │       ├── DataPengguna.kt
+│   │       └── DataKesalahan.kt
+│   └── screenshot/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/com/contoh/testing/screenshot/
+│           └── KonfigurasiScreenshot.kt
+├── shared/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── src/
+│       ├── commonMain/kotlin/com/contoh/shared/
+│       │   ├── model/
+│       │   │   └── Pengguna.kt
+│       │   └── logika/
+│       │       └── ValidatorPengguna.kt
+│       ├── androidMain/kotlin/com/contoh/shared/
+│       │   └── platform/
+│       │       └── PenyimpananAndroid.kt
+│       └── commonTest/kotlin/com/contoh/shared/
+│           └── ValidatorPenggunaTest.kt
+├── benchmark/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/benchmark/
+│           ├── StartupBenchmark.kt
+│           └── DaftarBenchmark.kt
+├── baselineprofile/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/baselineprofile/
+│           └── GeneratorProfil.kt
+├── macrob enchmark/
+│   └── README.md
+├── configurations/
+│   ├── debug/
+│   │   └── konfigurasi.json
+│   ├── staging/
+│   │   └── konfigurasi.json
+│   ├── internal/
+│   │   └── konfigurasi.json
+│   ├── beta/
+│   │   └── konfigurasi.json
+│   └── prod/
+│       └── konfigurasi.json
+├── keystore/
+│   └── README.md
+├── dist/
+│   ├── README.md
+│   └── catatan-rilis/
+│       ├── 1.0.0.md
+│       └── 1.1.0.md
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── struktur-folder.md
+│   ├── alur-rilis.md
+│   ├── alur-ci-cd.md
+│   ├── keamanan.md
+│   ├── aksesibilitas.md
+│   ├── internasionalisasi.md
+│   ├── performa.md
+│   ├── observability.md
+│   ├── feature-flag.md
+│   ├── migrasi.md
+│   ├── rollback.md
+│   ├── keputusan/
+│   │   ├── 0001-modularisasi.md
+│   │   ├── 0002-version-catalog.md
+│   │   └── 0003-convention-plugin.md
+│   └── api/
+│       └── referensi.md
+├── scripts/
+│   ├── build-debug.sh
+│   ├── build-release.sh
+│   ├── jalankan-tes.sh
+│   ├── detekt.sh
+│   ├── ktlint.sh
+│   ├── screenshot.sh
+│   ├── periksa-struktur.sh
+│   └── README.md
+├── tools/
+│   ├── pemeriksa/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/tools/pemeriksa/
+│   │       ├── PeriksaStruktur.kt
+│   │       └── PeriksaDependensi.kt
+│   └── generator/
+│       └── buat-modul-fitur.sh
+└── performance/
+    ├── laporan/
+    │   └── .gitkeep
+    └── README.md
+
+BAGIAN 4: PENJELASAN FOLDER DAN FILE KUNCI
+app/ adalah modul aplikasi utama.
+app/src/main/ adalah source set utama.
+app/src/main/AndroidManifest.xml mendeklarasikan komponen utama.
+app/src/main/java/com/contoh/produksi/ memuat kode aplikasi.
+AplikasiProduksi.kt adalah kelas Application.
+MainActivity.kt adalah Activity utama.
+StartupInisialisasi.kt mengatur inisialisasi pustaka.
+navigasi/ memuat grafik navigasi dan navigator.
+fitur-flag/ memuat definisi feature flag dan default.
+observability/ memuat pencatat, pelapor crash, dan analitik.
+di/ memuat modul Hilt tingkat aplikasi.
+app/src/debug/ adalah source set debug.
+app/src/staging/ adalah source set staging.
+app/src/release/ adalah source set release.
+app/src/internal/ adalah source set varian internal.
+app/src/beta/ adalah source set varian beta.
+app/src/prod/ adalah source set varian produksi.
+app/src/test/ adalah source set tes unit.
+app/src/androidTest/ adalah source set tes instrumen.
+app/src/androidTest/java/.../HiltTestRunner.kt menjalankan tes dengan Hilt.
+app/proguard-rules.pro memuat aturan R8 untuk modul aplikasi.
+app/consumer-rules.pro memuat aturan yang diekspos jika modul menjadi pustaka.
+app/baseline-prof.txt memuat profil baseline.
+build-logic/ memuat plugin konvensi Gradle.
+build-logic/convention/src/main/kotlin/ memuat plugin konvensi Android.
+build-logic/convention/src/main/kotlin/AndroidAplikasiConventionPlugin.kt mengatur konfigurasi modul aplikasi.
+build-logic/convention/src/main/kotlin/AndroidPustakaConventionPlugin.kt mengatur konfigurasi modul pustaka.
+build-logic/convention/src/main/kotlin/AndroidComposeConventionPlugin.kt mengatur Compose.
+build-logic/convention/src/main/kotlin/AndroidFeatureConventionPlugin.kt mengatur modul fitur.
+build-logic/convention/src/main/kotlin/AndroidHiltConventionPlugin.kt mengatur Hilt.
+build-logic/convention/src/main/kotlin/AndroidRoomConventionPlugin.kt mengatur Room.
+build-logic/convention/src/main/kotlin/AndroidJvmConventionPlugin.kt mengatur modul JVM murni.
+build-logic/convention/src/main/kotlin/AndroidKmpConventionPlugin.kt mengatur modul Kotlin Multiplatform.
+gradle/libs.versions.toml adalah katalog versi.
+gradle/verification-metadata.xml memverifikasi checksum dependensi.
+gradle/wrapper/ memastikan versi Gradle konsisten.
+feature/ memuat modul fitur.
+feature/beranda/api/ memuat kontrak fitur beranda.
+feature/beranda/impl/ memuat implementasi fitur beranda.
+feature/detail/api/ memuat kontrak fitur detail.
+feature/detail/impl/ memuat implementasi fitur detail.
+feature/pengaturan/ memuat fitur pengaturan.
+core/common/ memuat utilitas umum.
+core/domain/ memuat model domain dan antarmuka repositori.
+core/data/ memuat implementasi repositori, basis data, jaringan, dan preferensi.
+core/ui/ memuat tema, komponen, aksesibilitas, dan pratinjau.
+core/navigasi/ memuat rute dan kontrak navigasi.
+core/jaringan/ memuat klien HTTP dan pencegat.
+core/keamanan/ memuat penyimpanan aman dan pemeriksa integritas.
+core/observability/ memuat pencatat, analitik, dan metrik.
+core/konfigurasi/ memuat pemuat konfigurasi dan lingkungan.
+core/datastore/ memuat preferensi DataStore.
+core/sinkronisasi/ memuat sinkronisasi latar belakang.
+core/pengujian/ memuat utilitas pengujian.
+testing/fixtures/ memuat data contoh untuk tes.
+testing/screenshot/ memuat konfigurasi screenshot testing.
+shared/ memuat modul Kotlin Multiplatform.
+shared/src/commonMain/ memuat kode lintas platform.
+shared/src/androidMain/ memuat kode khusus Android.
+shared/src/commonTest/ memuat tes lintas platform.
+benchmark/ memuat modul Macrobenchmark.
+baselineprofile/ memuat modul generator baseline profile.
+configurations/ memuat konfigurasi per lingkungan.
+keystore/ memuat dokumentasi keystore, bukan keystore itu sendiri.
+dist/ memuat catatan rilis.
+docs/ memuat dokumentasi proyek.
+docs/alur-rilis.md menjelaskan langkah rilis.
+docs/alur-ci-cd.md menjelaskan pipeline.
+docs/keamanan.md menjelaskan penanganan rahasia.
+docs/aksesibilitas.md menjelaskan pedoman aksesibilitas.
+docs/internasionalisasi.md menjelaskan pedoman terjemahan.
+docs/performa.md menjelaskan pedoman performa.
+docs/observability.md menjelaskan pencatatan dan analitik.
+docs/feature-flag.md menjelaskan penggunaan feature flag.
+docs/migrasi.md menjelaskan migrasi data dan modul.
+docs/rollback.md menjelaskan rencana rollback.
+docs/keputusan/ memuat catatan keputusan arsitektur.
+scripts/ memuat skrip otomasi.
+scripts/periksa-struktur.sh menjalankan pemeriksaan struktur.
+tools/pemeriksa/ memuat alat pemeriksa struktur dan dependensi.
+tools/generator/ memuat generator modul fitur.
+performance/laporan/ memuat laporan performa.
+
+BAGIAN 5: STRUKTUR CI/CD ANDROID
+Pipeline CI Android harus menjalankan langkah berikut secara berurutan.
+Langkah 1: checkout repositori.
+Langkah 2: siapkan JDK.
+Langkah 3: siapkan Gradle cache.
+Langkah 4: jalankan Gradle wrapper.
+Langkah 5: jalankan lint.
+Langkah 6: jalankan detekt.
+Langkah 7: jalankan ktlint.
+Langkah 8: jalankan tes unit.
+Langkah 9: jalankan build debug.
+Langkah 10: unggah laporan tes.
+Langkah 11: unggah laporan lint.
+Langkah 12: unggah artefak debug.
+Pipeline CD Android harus menjalankan langkah berikut.
+Langkah 1: jalankan CI terlebih dahulu.
+Langkah 2: siapkan keystore dari manajer rahasia.
+Langkah 3: jalankan build release.
+Langkah 4: jalankan tes instrumen pada emulator jika perlu.
+Langkah 5: hasilkan AAB.
+Langkah 6: verifikasi tanda tangan AAB.
+Langkah 7: unggah AAB ke track internal.
+Langkah 8: jalankan uji asap pada track internal.
+Langkah 9: promosikan ke closed testing.
+Langkah 10: promosikan ke open testing.
+Langkah 11: promosikan ke produksi dengan staged rollout.
+Langkah 12: pantau crash dan metrik.
+Langkah 13: hentikan rollout jika ada masalah.
+Langkah 14: catat rilis di changelog.
+Langkah 15: unggah mapping R8 untuk deobfuscation.
+Langkah 16: unggah simbol native jika ada.
+Langkah 17: simpan artefak rilis untuk audit.
+Langkah 18: tandai commit dengan tag versi.
+
+BAGIAN 6: STRUKTUR FILE CI/CD YANG DIREKOMENDASIKAN
+ci.yml menjalankan lint, detekt, ktlint, tes unit, dan build debug.
+release.yml menjalankan build release, tanda tangan, dan unggah AAB.
+internal-distribution.yml mengunggah build ke Firebase App Distribution.
+nightly.yml menjalankan tes instrumen dan benchmark setiap malam.
+dependabot.yml memperbarui dependensi secara otomatis.
+codeql.yml menjalankan analisis keamanan kode.
+Fastfile memuat lane untuk rilis.
+Appfile memuat metadata aplikasi.
+Pluginfile memuat plugin fastlane.
+CODEOWNERS menentukan pemilik folder.
+PULL_REQUEST_TEMPLATE.md memuat daftar periksa kontribusi.
+Issue template memandu pelaporan bug dan permintaan fitur.
+
+BAGIAN 7: STRUKTUR VERSIONING DAN SIGNING
+versionCode harus naik setiap rilis.
+versionName mengikuti semantic versioning.
+Tag Git harus cocok dengan versionName.
+CHANGELOG.md mencatat perubahan per versi.
+dist/catatan-rilis/ mencatat detail rilis.
+keystore/README.md menjelaskan cara memperoleh keystore.
+Keystore tidak boleh berada di repositori.
+Keystore harus berada di manajer rahasia.
+Signing config harus dibaca dari variabel lingkungan.
+Signing config tidak boleh ditulis di build.gradle.kts.
+Play App Signing harus diaktifkan.
+Upload key harus dirotasi jika bocor.
+Mapping R8 harus diunggah ke Play Console.
+Simbol native harus diunggah jika ada.
+Proguard rules harus diuji pada build rilis.
+Build rilis harus diuji pada perangkat nyata sebelum rilis.
+
+BAGIAN 8: STRUKTUR OBSERVABILITY
+core/observability/Pencatat.kt menyediakan antarmuka pencatatan.
+core/observability/Analitik.kt menyediakan antarmuka analitik.
+core/observability/Metrik.kt menyediakan antarmuka metrik.
+app/observability/PelaporCrash.kt mengimplementasikan pelaporan crash.
+app/observability/Analitik.kt mengimplementasikan analitik.
+Pencatatan tidak boleh memuat data pribadi.
+Analitik harus menghormati persetujuan pengguna.
+Pelaporan crash harus menyertakan versi aplikasi dan perangkat.
+Pelaporan crash harus dapat dimatikan untuk build debug.
+Log debug harus dihapus pada build rilis.
+Log rilis harus ringkas dan aman.
+
+BAGIAN 9: STRUKTUR PERFORMANCE
+benchmark/ memuat Macrobenchmark.
+baselineprofile/ memuat generator baseline profile.
+performance/laporan/ memuat laporan performa.
+app/baseline-prof.txt memuat baseline profile yang dipakai aplikasi.
+Pengukuran startup harus mencakup cold start dan warm start.
+Pengukuran harus dijalankan pada perangkat referensi.
+Hasil benchmark harus dicatat dan dibandingkan antar rilis.
+Baseline profile harus diperbarui saat fitur berubah.
+R8 full mode harus diuji pada build rilis.
+Resource shrinking harus diuji pada build rilis.
+Ukuran AAB harus dipantau per rilis.
+Ukuran APK per konfigurasi harus dipantau.
+Startup library harus dipakai untuk inisialisasi awal.
+Inisialisasi berat harus dipindahkan ke background.
+
+BAGIAN 10: STRUKTUR KEAMANAN ANDROID
+core/keamanan/PenyimpananAman.kt membungkus EncryptedSharedPreferences.
+core/keamanan/PemeriksaIntegritas.kt memverifikasi Play Integrity.
+core/keamanan/Penyamaran.kt menyamarkan data sensitif di log.
+network_security_config.xml menentukan aturan TLS.
+Certificate pinning harus dikonfigurasi dengan hati-hati.
+Pinning harus memiliki rencana rotasi sertifikat.
+Rahasia tidak boleh disimpan di BuildConfig.
+Rahasia tidak boleh disimpan di resource.
+Rahasia tidak boleh disimpan di strings.xml.
+Rahasia tidak boleh disimpan di google-services.json yang dilacak.
+Rahasia tidak boleh disimpan di keystore yang dilacak.
+Rahasia harus disimpan di manajer rahasia.
+Rahasia harus dirotasi jika bocor.
+Build rilis harus menonaktifkan debug.
+Build rilis harus menonaktifkan logging verbose.
+Build rilis harus menonaktifkan WebView debugging.
+Build rilis harus menonaktifkan backup sensitif.
+backup_rules.xml harus mengecualikan data sensitif.
+data_extraction_rules.xml harus mengecualikan data sensitif.
+Aplikasi harus meminta izin seminimal mungkin.
+Aplikasi harus menjelaskan izin yang diminta.
+Aplikasi harus memakai scoped storage.
+Aplikasi harus memakai FileProvider untuk berbagi file.
+Aplikasi harus memvalidasi masukan pengguna.
+Aplikasi harus memvalidasi deep link.
+Aplikasi harus memvalidasi intent eksternal.
+Aplikasi harus menandatangani AAB sebelum unggah.
+Aplikasi harus memverifikasi tanda tangan saat instalasi.
+Aplikasi harus memakai Play Integrity untuk operasi sensitif.
+
+BAGIAN 11: STRUKTUR INTERNASIONALISASI DAN AKSESIBILITAS
+strings.xml utama berisi string default.
+values-b+in/strings.xml berisi string bahasa Indonesia.
+values-b+en/strings.xml berisi string bahasa Inggris.
+values-b+ar/strings.xml berisi string bahasa Arab untuk RTL.
+locales_config.xml menentukan bahasa yang didukung.
+Locale Config harus dideklarasikan di manifest.
+Semua string yang terlihat pengguna harus berada di strings.xml.
+String tidak boleh ditulis langsung di Compose.
+String tidak boleh ditulis langsung di layout XML.
+String dinamis harus memakai format string.
+Jumlah harus memakai plural.
+Tanggal dan angka harus memakai formatter locale.
+Arah tata letak harus mendukung RTL.
+Ikon harus menyediakan varian RTL jika perlu.
+Gambar harus memiliki contentDescription.
+Tombol harus memiliki label yang jelas.
+Ukuran sentuh harus minimal 48dp.
+Kontras harus memenuhi pedoman WCAG.
+Urutan fokus harus logis.
+Semantik Compose harus dideklarasikan jika perlu.
+Tes aksesibilitas harus dijalankan pada layar utama.
+Uji terjemahan harus memakai pseudo-locale.
+Uji RTL harus memakai bahasa Arab atau pseudo-RTL.
+
+BAGIAN 12: VARIASI STRUKTUR ANDROID TINGKAT LANJUT
+Variasi Lanjutan 1: Modular dengan kontrak api/impl.
+Ciri: setiap fitur memiliki api/ dan impl/.
+Ciri: modul api hanya berisi antarmuka dan rute.
+Ciri: modul impl berisi implementasi.
+Cocok untuk tim besar.
+AI harus memahami bahwa api/ tidak boleh bergantung pada impl/.
+
+Variasi Lanjutan 2: Modular dengan dynamic feature.
+Ciri: ada modul feature yang bertanda dynamicFeature.
+Ciri: modul dapat diunduh sesuai permintaan.
+Cocok untuk aplikasi besar dengan fitur opsional.
+
+Variasi Lanjutan 3: Modular dengan Kotlin Multiplatform.
+Ciri: ada shared/ dengan commonMain dan androidMain.
+Ciri: modul Android bergantung pada shared/.
+Cocok untuk aplikasi lintas platform.
+
+Variasi Lanjutan 4: Modular dengan Compose Multiplatform.
+Ciri: ada shared/ dengan Compose UI bersama.
+Ciri: Android dan iOS berbagi UI.
+Cocok untuk tim kecil dengan target lintas platform.
+
+Variasi Lanjutan 5: Satu modul dengan paket modular.
+Ciri: hanya satu modul app/.
+Ciri: paket di dalam app/ dipisahkan berdasarkan fitur.
+Cocok untuk aplikasi kecil sampai menengah.
+AI harus menyarankan migrasi ke multi-modul saat proyek membesar.
+
+Variasi Lanjutan 6: Modular dengan convention plugin.
+Ciri: build-logic/ memuat plugin konvensi.
+Ciri: setiap modul menerapkan plugin konvensi.
+Cocok untuk proyek dengan banyak modul.
+
+Variasi Lanjutan 7: Modular dengan version catalog.
+Ciri: gradle/libs.versions.toml memuat semua versi.
+Ciri: build.gradle.kts merujuk ke katalog.
+Cocok untuk semua proyek modern.
+
+Variasi Lanjutan 8: Modular dengan build cache dan configuration cache.
+Ciri: gradle.properties mengaktifkan cache.
+Ciri: build lebih cepat.
+Cocok untuk semua proyek modern.
+
+BAGIAN 13: ANTI-POLA ANDROID TINGKAT LANJUT
+Anti-pola L1: Rahasia di BuildConfig.
+Ciri: API key ditulis di build.gradle.kts.
+Perbaikan: gunakan local.properties atau variabel lingkungan.
+
+Anti-pola L2: Keystore di repositori.
+Ciri: file .jks dilacak Git.
+Perbaikan: hapus dari Git, rotasi keystore, gunakan manajer rahasia.
+
+Anti-pola L3: google-services.json dilacak.
+Ciri: file google-services.json dilacak Git.
+Perbaikan: hapus dari Git, gunakan variabel lingkungan atau file lokal.
+
+Anti-pola L4: Log verbose di build rilis.
+Ciri: Log.d dipanggil di build rilis.
+Perbaikan: gunakan wrapper logging yang menonaktifkan log di rilis.
+
+Anti-pola L5: Debug diaktifkan di rilis.
+Ciri: android:debuggable="true" di manifest rilis.
+Perbaikan: hapus dari manifest rilis.
+
+Anti-pola L6: Backup data sensitif.
+Ciri: backup_rules.xml tidak mengecualikan token.
+Perbaikan: kecualikan data sensitif dari backup.
+
+Anti-pola L7: Tanpa mapping R8 yang diunggah.
+Ciri: crash rilis tidak dapat dibaca.
+Perbaikan: unggah mapping ke Play Console dan crash reporter.
+
+Anti-pola L8: Tanpa baseline profile.
+Ciri: startup lambat.
+Perbaikan: buat baseline profile dan verifikasi dengan benchmark.
+
+Anti-pola L9: Tanpa tes instrumen untuk alur utama.
+Ciri: hanya ada tes unit.
+Perbaikan: tambahkan tes instrumen untuk alur kritis.
+
+Anti-pola L10: Tanpa tes unit untuk ViewModel.
+Ciri: logika ViewModel tidak diuji.
+Perbaikan: tambahkan tes unit dengan coroutines test.
+
+Anti-pola L11: String ditulis langsung di Compose.
+Ciri: Text("Halo") tanpa stringResource.
+Perbaikan: gunakan stringResource.
+
+Anti-pola L12: Tanpa contentDescription.
+Ciri: Image tanpa contentDescription.
+Perbaikan: tambahkan contentDescription atau null jika dekoratif.
+
+Anti-pola L13: Ukuran sentuh terlalu kecil.
+Ciri: tombol 24dp.
+Perbaikan: gunakan minimal 48dp.
+
+Anti-pola L14: Tanpa dukungan RTL.
+Ciri: padding kiri-kanan tetap.
+Perbaikan: gunakan start dan end.
+
+Anti-pola L15: Tanpa lokalisasi.
+Ciri: hanya ada strings.xml default.
+Perbaikan: tambahkan values-b+xx untuk bahasa target.
+
+Anti-pola L16: Dependensi api berlebihan.
+Ciri: semua dependensi memakai api.
+Perbaikan: gunakan implementation secara default.
+
+Anti-pola L17: Modul api bergantung pada impl.
+Ciri: feature/beranda/api bergantung pada feature/beranda/impl.
+Perbaikan: hapus dependensi tersebut.
+
+Anti-pola L18: Modul fitur bergantung pada modul fitur lain.
+Ciri: feature/beranda bergantung pada feature/detail.
+Perbaikan: gunakan core/navigasi untuk kontrak.
+
+Anti-pola L19: Modul core bergantung pada fitur.
+Ciri: core/ui bergantung pada feature/beranda.
+Perbaikan: pindahkan kode ke modul yang tepat.
+
+Anti-pola L20: Version code tidak naik.
+Ciri: versionCode sama untuk dua rilis.
+Perbaikan: naikkan versionCode secara otomatis di CI.
+
+Anti-pola L21: Tag Git tidak cocok dengan versionName.
+Ciri: tag v1.0.0 tetapi versionName 1.0.1.
+Perbaikan: sinkronkan tag dan versionName.
+
+Anti-pola L22: CHANGELOG tidak diperbarui.
+Ciri: rilis tanpa catatan perubahan.
+Perbaikan: perbarui CHANGELOG dan dist/catatan-rilis/.
+
+Anti-pola L23: Rollback tanpa rencana.
+Ciri: tidak ada dokumentasi rollback.
+Perbaikan: tulis rencana rollback di docs/rollback.md.
+
+Anti-pola L24: Feature flag tanpa default.
+Ciri: feature flag tidak memiliki nilai default.
+Perbaikan: tetapkan default di FiturFlagDefault.kt.
+
+Anti-pola L25: Feature flag tanpa pembersihan.
+Ciri: feature flag lama menumpuk.
+Perbaikan: hapus feature flag setelah fitur stabil.
+
+Anti-pola L26: Remote config tanpa validasi.
+Ciri: nilai remote config dipakai langsung.
+Perbaikan: validasi nilai sebelum dipakai.
+
+Anti-pola L27: Analytics tanpa persetujuan.
+Ciri: analytics berjalan sebelum persetujuan.
+Perbaikan: hormati persetujuan pengguna.
+
+Anti-pola L28: Crash reporter tanpa deobfuscation.
+Ciri: stack trace rilis tidak dapat dibaca.
+Perbaikan: unggah mapping R8.
+
+Anti-pola L29: Build cache tidak diaktifkan.
+Ciri: setiap build lambat.
+Perbaikan: aktifkan build cache dan configuration cache.
+
+Anti-pola L30: Tes instrumen dijalankan di setiap commit tanpa sharding.
+Ciri: CI lambat.
+Perbaikan: gunakan sharding atau jalankan tes instrumen pada nightly.
+
+BAGIAN 14: POLA REFAKTOR ANDROID TINGKAT LANJUT
+Pola L-R1: Memindahkan fitur ke modul sendiri.
+Pindahkan kode fitur ke feature/<nama>/impl/.
+Pindahkan kontrak ke feature/<nama>/api/.
+Perbarui dependensi di app/.
+Uji build dan tes.
+
+Pola L-R2: Memisahkan kontrak dan implementasi.
+Buat modul api/ untuk antarmuka dan rute.
+Buat modul impl/ untuk implementasi.
+Pastikan api/ tidak bergantung pada impl/.
+Pastikan app/ bergantung pada api/ dan impl/.
+
+Pola L-R3: Memindahkan konfigurasi ke convention plugin.
+Buat plugin di build-logic/.
+Terapkan plugin di setiap modul.
+Hapus konfigurasi duplikat.
+
+Pola L-R4: Memindahkan versi ke version catalog.
+Tambahkan entri di gradle/libs.versions.toml.
+Perbarui build.gradle.kts.
+Uji build.
+
+Pola L-R5: Menambahkan baseline profile.
+Buat modul baselineprofile/.
+Jalankan generator pada perangkat.
+Salin baseline-prof.txt ke app/.
+Verifikasi dengan Macrobenchmark.
+
+Pola L-R6: Menambahkan screenshot testing.
+Tambahkan modul testing/screenshot/.
+Konfigurasikan Paparazzi atau Roborazzi.
+Tambahkan tes screenshot untuk layar utama.
+Jalankan di CI.
+
+Pola L-R7: Menambahkan observability.
+Tambahkan core/observability/.
+Tambahkan implementasi di app/observability/.
+Ganti log langsung dengan wrapper.
+Uji di build debug dan rilis.
+
+Pola L-R8: Menambahkan feature flag.
+Tambahkan app/fitur-flag/.
+Definisikan default di FiturFlagDefault.kt.
+Bungkus fitur dengan pemeriksaan flag.
+Uji dengan flag menyala dan mati.
+
+Pola L-R9: Menambahkan Play Integrity.
+Tambahkan core/keamanan/PemeriksaIntegritas.kt.
+Panggil sebelum operasi sensitif.
+Tangani kegagalan dengan aman.
+
+Pola L-R10: Menambahkan migrasi data lokal.
+Tambahkan Room Migration.
+Uji migrasi dari versi lama.
+Dokumentasikan migrasi di docs/migrasi.md.
+
+BAGIAN 15: LATIHAN PENALARAN ANDROID TINGKAT LANJUT
+Latihan 1: Deteksi rahasia.
+Diberikan build.gradle.kts memuat API key langsung.
+AI harus mendeteksi anti-pola L1.
+AI harus menyarankan local.properties atau variabel lingkungan.
+
+Latihan 2: Deteksi keystore di repositori.
+Diberikan file release.jks di repositori.
+AI harus mendeteksi anti-pola L2.
+AI harus menyarankan rotasi keystore dan pemindahan ke manajer rahasia.
+
+Latihan 3: Deteksi dependensi terbalik.
+Diberikan feature/beranda/api bergantung pada feature/beranda/impl.
+AI harus mendeteksi anti-pola L17.
+AI harus menyarankan penghapusan dependensi.
+
+Latihan 4: Deteksi modul fitur saling bergantung.
+Diberikan feature/beranda bergantung pada feature/detail.
+AI harus mendeteksi anti-pola L18.
+AI harus menyarankan core/navigasi.
+
+Latihan 5: Deteksi versionCode tidak naik.
+Diberikan dua rilis dengan versionCode sama.
+AI harus mendeteksi anti-pola L20.
+AI harus menyarankan otomasi versionCode di CI.
+
+Latihan 6: Deteksi ketiadaan baseline profile.
+Diberikan aplikasi dengan startup lambat.
+AI harus menyarankan modul baselineprofile/.
+AI harus menyarankan Macrobenchmark.
+AI harus menyarankan verifikasi startup.
+
+Latihan 7: Deteksi ketiadaan mapping R8.
+Diberikan crash rilis tanpa deobfuscation.
+AI harus mendeteksi anti-pola L27.
+AI harus menyarankan unggah mapping.
+
+Latihan 8: Deteksi log verbose.
+Diberikan Log.d di kode produksi.
+AI harus mendeteksi anti-pola L4.
+AI harus menyarankan wrapper logging.
+
+Latihan 9: Deteksi backup tidak aman.
+Diberikan backup_rules.xml tanpa pengecualian.
+AI harus mendeteksi anti-pola L6.
+AI harus menyarankan pengecualian data sensitif.
+
+Latihan 10: Deteksi aksesibilitas.
+Diberikan Image tanpa contentDescription.
+AI harus mendeteksi anti-pola L12.
+AI harus menyarankan contentDescription atau null jika dekoratif.
+
+Latihan 11: Deteksi i18n.
+Diberikan hanya strings.xml default tanpa values-b+xx.
+AI harus mendeteksi anti-pola L15.
+AI harus menyarankan penambahan bahasa target.
+
+Latihan 12: Pilih struktur.
+Diberikan tim besar dengan banyak fitur.
+AI harus menyarankan modular dengan api/impl.
+Diberikan tim kecil dengan target lintas platform.
+AI harus menyarankan Kotlin Multiplatform.
+Diberikan aplikasi besar dengan fitur opsional.
+AI harus menyarankan dynamic feature.
+
+Latihan 13: Migrasi ke version catalog.
+Diberikan banyak modul dengan versi berbeda.
+AI harus menyarankan version catalog.
+AI harus menyarankan pemetaan versi lama dan baru.
+AI harus menyarankan pengujian build.
+
+Latihan 14: Migrasi ke convention plugin.
+Diberikan banyak modul dengan konfigurasi duplikat.
+AI harus menyarankan build-logic/.
+AI harus menyarankan plugin konvensi.
+AI harus menyarankan penghapusan duplikasi.
+
+Latihan 15: Rencana rilis.
+Diberikan rilis 1.2.0.
+AI harus menyarankan langkah rilis.
+AI harus menyarankan versionCode naik.
+AI harus menyarankan changelog.
+AI harus menyarankan staged rollout.
+AI harus menyarankan pemantauan crash.
+AI harus menyarankan rollback jika perlu.
+
+BAGIAN 16: ATURAN TAMBAHAN UNTUK AI
+AI harus memahami alur rilis sebelum menyarankan perubahan struktur.
+AI harus memahami alur CI/CD sebelum menyarankan perubahan path.
+AI harus memahami signing sebelum menyarankan perubahan build.
+AI harus memahami distribusi sebelum menyarankan perubahan varian.
+AI harus memahami observability sebelum menyarankan perubahan logging.
+AI harus memahami performance sebelum menyarankan perubahan modul.
+AI harus memahami keamanan sebelum menyarankan perubahan konfigurasi.
+AI harus memahami aksesibilitas sebelum menyarankan perubahan UI.
+AI harus memahami i18n sebelum menyarankan perubahan string.
+AI harus memahami modularisasi sebelum menyarankan perubahan paket.
+AI harus memahami Gradle sebelum menyarankan perubahan build.
+AI harus memahami Kotlin Multiplatform sebelum menyarankan perubahan shared/.
+AI harus memahami dynamic feature sebelum menyarankan perubahan manifest.
+AI harus memahami version catalog sebelum menyarankan perubahan dependensi.
+AI harus memahami convention plugin sebelum menyarankan perubahan build-logic/.
+AI harus selalu mengutamakan keamanan rahasia.
+AI harus selalu mengutamakan reproduksibilitas rilis.
+AI harus selalu mengutamakan keterbacaan manusia.
+AI harus selalu mengutamakan konsistensi modul.
+AI harus selalu mengutamakan pengujian.
+AI harus selalu mengutamakan dokumentasi.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan performa.
+AI harus selalu mengutamakan observability.
+AI harus selalu mengutamakan rencana rollback.
+
+BAGIAN 17: RINGKASAN GENERASI 6
+Proyek Android produksi membutuhkan struktur yang mendukung CI/CD.
+Proyek Android produksi membutuhkan struktur yang mendukung signing.
+Proyek Android produksi membutuhkan struktur yang mendukung distribusi.
+Proyek Android produksi membutuhkan struktur yang mendukung observability.
+Proyek Android produksi membutuhkan struktur yang mendukung performance.
+Proyek Android produksi membutuhkan struktur yang mendukung keamanan.
+Proyek Android produksi membutuhkan struktur yang mendukung aksesibilitas.
+Proyek Android produksi membutuhkan struktur yang mendukung internasionalisasi.
+Proyek Android produksi membutuhkan struktur yang mendukung modularisasi.
+Proyek Android produksi membutuhkan struktur yang mendukung version catalog.
+Proyek Android produksi membutuhkan struktur yang mendukung convention plugin.
+Proyek Android produksi membutuhkan struktur yang mendukung Kotlin Multiplatform jika perlu.
+Proyek Android produksi membutuhkan struktur yang mendukung dynamic feature jika perlu.
+Struktur folder mencerminkan kesiapan operasional proyek.
+AI harus membaca struktur untuk menyimpulkan kesiapan rilis.
+AI harus membaca struktur untuk mendeteksi risiko keamanan.
+AI harus membaca struktur untuk mendeteksi risiko performa.
+AI harus membaca struktur untuk mendeteksi risiko aksesibilitas.
+AI harus membaca struktur untuk mendeteksi risiko i18n.
+AI harus membaca struktur untuk mendeteksi risiko dependensi.
+AI harus membaca struktur untuk mendeteksi risiko migrasi.
+AI harus membaca struktur untuk menyarankan perbaikan yang aman.
+AI harus membaca struktur untuk menyarankan rencana migrasi.
+AI harus membaca struktur untuk menyarankan rencana rollback.
+Dengan generasi keenam ini, AI dilatih untuk memahami Android pada tingkat produksi.
+AI dilatih untuk merancang struktur yang siap rilis.
+AI dilatih untuk merancang struktur yang aman.
+AI dilatih untuk merancang struktur yang cepat.
+AI dilatih untuk merancang struktur yang mudah diakses.
+AI dilatih untuk merancang struktur yang siap internasionalisasi.
+AI dilatih untuk merancang struktur yang mudah diobservasi.
+AI dilatih untuk merancang struktur yang mudah dirawat.
+Akhir generasi 6.

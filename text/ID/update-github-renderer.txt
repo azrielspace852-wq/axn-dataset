@@ -1,0 +1,978 @@
+GITHUB CONTENT RENDERER — MULTI-FORMAT RENDERING ENGINE & HIGH-QUALITY OUTPUT
+
+ROLE
+
+Act as a Senior Rendering Engine Architect, JavaScript Runtime Engineer, HTML/CSS Rendering Specialist, FFmpeg Engineer, and GitHub Actions Infrastructure Engineer.
+
+Your task is to upgrade the existing GitHub Content Renderer into a high-quality, multi-format rendering engine.
+
+The renderer must support two independent content rendering modes:
+
+1. Pure JavaScript Rendering
+2. HTML/CSS/JavaScript Rendering
+
+Both modes must be integrated into the same rendering system and accessible through GitHub Actions.
+
+The objective is to allow users to create animated content using either the existing JavaScript Canvas-based approach or standard web technologies such as HTML, CSS, and JavaScript.
+
+All user-facing communication, README documentation, CHANGELOG entries, and technical explanations must be written in Indonesian.
+
+Source code, identifiers, and technical comments may use English.
+
+==================================================
+1. EXISTING PROJECT AUDIT
+==================================================
+
+Before modifying anything, inspect the complete existing GitHub Content Renderer repository.
+
+The current project already includes:
+
+- Pure JavaScript rendering.
+- Canvas-based scene rendering.
+- PureImage integration.
+- Raw RGBA frame streaming.
+- FFmpeg video encoding.
+- PNG and JPG image output.
+- Automatic JavaScript content discovery.
+- Configurable resolution.
+- Configurable aspect ratio.
+- Configurable FPS.
+- Custom video duration.
+- Progress bar reporting.
+- Configurable logging modes.
+- GitHub Actions workflow_dispatch.
+- Benchmarking functionality.
+- Existing setup(), render(), and dispose() lifecycle support.
+
+Inspect the latest repository version supplied by the user.
+
+Do not assume that previous implementation details are still accurate.
+
+Verify the actual source code, configuration, dependencies, workflow files, tests, and documentation.
+
+Identify the current rendering architecture before introducing the new rendering mode.
+
+Do not remove existing functionality or performance optimizations.
+
+==================================================
+2. MULTI-FORMAT RENDERING ARCHITECTURE
+==================================================
+
+The renderer must support two rendering engines.
+
+A. PURE JAVASCRIPT MODE
+
+Preserve the existing rendering system.
+
+Users must still be able to create JavaScript-based content using the existing Canvas rendering API and lifecycle.
+
+Maintain backward compatibility with existing JavaScript content files.
+
+Existing projects must continue working without requiring users to rewrite their source code.
+
+Preserve:
+
+- setup(params)
+- render(params)
+- dispose()
+- Canvas context compatibility.
+- Raw RGBA frame streaming.
+- FFmpeg integration.
+- Existing animation behavior.
+- Existing configuration options.
+
+Do not replace the existing JavaScript renderer with the HTML renderer.
+
+Both rendering modes must coexist.
+
+B. HTML/CSS/JAVASCRIPT MODE
+
+Introduce a new rendering engine capable of rendering standard web content.
+
+Users must be able to create content using:
+
+- HTML for document structure.
+- CSS for visual styling and layout.
+- JavaScript for animation and interaction logic.
+
+The engine must correctly render:
+
+- HTML elements.
+- CSS layouts.
+- CSS animations.
+- CSS transitions.
+- JavaScript-driven animations.
+- Canvas elements inside HTML documents.
+- SVG elements.
+- Images.
+- Custom fonts.
+- Gradients.
+- Shadows.
+- Borders.
+- Rounded corners.
+- Filters.
+- Transformations.
+- Opacity.
+- Text.
+- Responsive layouts where supported.
+
+The HTML rendering engine must produce actual visual frames, not merely convert HTML into a static screenshot.
+
+It must support continuous rendering over time for animated content.
+
+==================================================
+3. SUPPORTED PROJECT STRUCTURES
+==================================================
+
+Support multiple ways of organizing HTML-based content.
+
+A. SINGLE-FILE HTML PROJECT
+
+Users may place all content inside one HTML file.
+
+Example:
+
+content/
+└── my-animation/
+    └── index.html
+
+The HTML file may contain:
+
+- Inline CSS inside <style>.
+- Inline JavaScript inside <script>.
+- HTML markup.
+
+The renderer must discover and render this project automatically.
+
+B. SEPARATED HTML, CSS, AND JAVASCRIPT
+
+Users may organize their content into separate files.
+
+Example:
+
+content/
+└── my-animation/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── assets/
+        ├── background.png
+        └── character.svg
+
+The HTML document should be able to reference its CSS, JavaScript, images, fonts, and other local assets using relative paths.
+
+C. MULTIPLE CSS AND JAVASCRIPT FILES
+
+Also support projects containing multiple stylesheets and JavaScript modules.
+
+Example:
+
+content/
+└── my-animation/
+    ├── index.html
+    ├── css/
+    │   ├── reset.css
+    │   ├── style.css
+    │   └── animation.css
+    ├── js/
+    │   ├── main.js
+    │   ├── animation.js
+    │   └── effects.js
+    └── assets/
+
+The renderer must respect the references and loading order defined by the HTML document.
+
+Do not assume that every project uses filenames such as style.css or script.js.
+
+The HTML entry point should be configurable.
+
+Default entry point:
+
+index.html
+
+Allow users to specify another HTML entry point when necessary.
+
+==================================================
+4. HTML RENDERING BACKEND
+==================================================
+
+Investigate and select an appropriate rendering backend for HTML/CSS/JavaScript.
+
+This is a critical architecture decision.
+
+The selected backend must support the actual web technologies required by the project.
+
+Evaluate:
+
+- HTML parsing and layout.
+- CSS rendering.
+- JavaScript execution.
+- CSS animation timing.
+- Canvas support.
+- SVG rendering.
+- Font rendering.
+- Image loading.
+- Frame capture.
+- Deterministic rendering.
+- Memory consumption.
+- Rendering performance.
+- GitHub Actions Linux compatibility.
+- Dependency installation.
+- Runtime stability.
+
+Do not assume that the existing PureImage implementation can render HTML and CSS.
+
+Do not attempt to implement a complete browser engine manually.
+
+A genuine browser rendering engine may be necessary for accurate HTML/CSS output.
+
+Chromium or another suitable browser-based rendering backend may be evaluated specifically for the HTML rendering mode.
+
+If a browser engine is selected:
+
+- Keep it isolated from the existing pure JavaScript rendering backend.
+- Do not make the existing JavaScript mode depend on Chromium.
+- Install browser dependencies automatically in GitHub Actions.
+- Use a compatible headless rendering approach.
+- Ensure the browser can run reliably in a Linux GitHub Actions environment.
+- Document browser installation requirements.
+- Avoid unnecessary browser instances.
+- Reuse the browser process where safe.
+- Close pages, contexts, and browser processes correctly.
+
+The use of Chromium for HTML rendering must not silently change the architecture of the existing Pure JavaScript renderer.
+
+If alternative backends are technically viable, compare them before selecting one.
+
+Document the reasons for the final choice.
+
+==================================================
+5. CLEAN VIEWPORT — NO BROWSER UI IN OUTPUT
+==================================================
+
+This is a critical visual requirement.
+
+The generated video and images must contain only the content defined by the user's HTML project.
+
+The following must NEVER appear in the output:
+
+- Browser tabs.
+- Address bar.
+- Browser toolbar.
+- Navigation buttons.
+- Bookmarks bar.
+- Browser menus.
+- Developer tools.
+- Browser window borders.
+- Operating system desktop.
+- Taskbar.
+- Dock.
+- Mouse cursor, unless intentionally rendered by the content itself.
+- Browser notifications.
+- Unexpected browser overlays.
+
+The renderer must capture the actual page viewport or rendered content surface.
+
+It must not capture a screenshot of the entire desktop or browser window.
+
+Use a controlled viewport with explicitly configured dimensions.
+
+For example:
+
+1920 × 1080
+
+The captured output must match the configured resolution exactly.
+
+Do not include additional browser interface pixels.
+
+The browser should operate in a proper headless mode where appropriate.
+
+Verify that no browser UI or desktop elements are present in generated frames.
+
+==================================================
+6. HIGH-QUALITY OUTPUT
+==================================================
+
+The output must prioritize visual quality.
+
+The renderer must not produce blurry, stretched, incorrectly scaled, or unexpectedly cropped content.
+
+Implement a consistent rendering quality configuration.
+
+Evaluate and configure:
+
+A. VIEWPORT AND DIMENSIONS
+
+- Exact output dimensions.
+- Correct aspect ratio.
+- Correct viewport size.
+- Consistent scaling.
+- No unintended cropping.
+- No unintended stretching.
+
+B. DEVICE SCALE FACTOR
+
+Evaluate deviceScaleFactor and its effect on:
+
+- Text sharpness.
+- CSS pixels.
+- Canvas dimensions.
+- Image rendering.
+- Final output resolution.
+- Memory usage.
+
+Ensure that device scale factor does not accidentally produce output dimensions different from the requested resolution.
+
+C. FONT RENDERING
+
+Ensure:
+
+- Fonts load before rendering begins.
+- Local font files are supported.
+- Font loading is verified.
+- Text is not captured before fonts are ready.
+- Font substitutions are handled predictably.
+- Text remains sharp at the target resolution.
+
+D. IMAGE QUALITY
+
+Ensure:
+
+- Local images load before rendering.
+- Images are not captured before decoding finishes.
+- Correct image scaling is maintained.
+- High-resolution assets are handled correctly.
+- SVG images render correctly.
+
+E. CSS RENDERING
+
+Preserve the intended appearance of:
+
+- Gradients.
+- Shadows.
+- Filters.
+- Transparency.
+- Blend modes.
+- Borders.
+- Rounded corners.
+- Transformations.
+- Animations.
+- Transitions.
+
+Do not arbitrarily disable visual effects to improve performance.
+
+F. VIDEO ENCODING
+
+Preserve high-quality H.264 encoding.
+
+Evaluate appropriate:
+
+- CRF.
+- Preset.
+- Pixel format.
+- Color handling.
+- Frame rate.
+- Output dimensions.
+- Fast-start support.
+
+Avoid reducing quality merely to make rendering faster.
+
+Document the relationship between encoding quality, file size, and rendering time.
+
+==================================================
+7. ANIMATION TIMING AND FRAME SYNCHRONIZATION
+==================================================
+
+HTML-based animations must be rendered consistently at the requested FPS.
+
+Do not rely entirely on uncontrolled real-time browser playback.
+
+Investigate deterministic frame rendering.
+
+For each frame:
+
+1. Calculate the intended timestamp.
+2. Advance the animation to the corresponding timestamp.
+3. Allow required rendering and compositing operations to complete.
+4. Capture the frame.
+5. Submit the frame to the video encoding pipeline.
+
+Evaluate suitable browser mechanisms such as:
+
+- Page animation time control.
+- requestAnimationFrame synchronization.
+- CSS animation timeline control.
+- Web Animations API.
+- Virtual time or equivalent deterministic scheduling mechanisms.
+
+Do not assume that simply waiting for a fixed number of milliseconds produces deterministic frames.
+
+Avoid:
+
+- Missing frames.
+- Duplicate frames.
+- Inconsistent animation speed.
+- Timing drift.
+- Uncontrolled playback speed.
+- Capturing frames before the browser finishes rendering.
+
+Support the requested FPS accurately.
+
+For example:
+
+30 FPS:
+Frame 0 = 0 ms
+Frame 1 = 33.333 ms
+Frame 2 = 66.667 ms
+
+60 FPS:
+Frame 0 = 0 ms
+Frame 1 = 16.667 ms
+Frame 2 = 33.333 ms
+
+The final video duration and frame count must be consistent with the selected configuration.
+
+Document any browser animation features that cannot be controlled deterministically.
+
+==================================================
+8. FRAME CAPTURE AND FFMPEG PIPELINE
+==================================================
+
+Evaluate the most efficient way to transfer HTML-rendered frames into FFmpeg.
+
+Prefer a pipeline that avoids unnecessary intermediate files.
+
+Investigate:
+
+- Browser screenshot capture.
+- Raw RGBA frame extraction where technically supported.
+- PNG or JPEG screenshot encoding overhead.
+- Direct raw frame streaming.
+- FFmpeg stdin.
+- Backpressure.
+- Buffer reuse.
+- Memory consumption.
+- Browser-to-Node.js data transfer.
+
+Do not assume that browser screenshots can be converted to raw RGBA without decoding.
+
+Measure the actual cost of the selected approach.
+
+If screenshots are used:
+
+- Avoid unnecessary disk writes.
+- Avoid unbounded frame buffering.
+- Process frames sequentially.
+- Use appropriate image decoding.
+- Preserve output quality.
+
+If raw frame extraction is possible without compromising correctness, evaluate it.
+
+Do not sacrifice visual accuracy for a theoretically faster pipeline.
+
+The HTML rendering backend must integrate with the existing FFmpeg encoding architecture.
+
+Keep the rendering pipeline modular so that both rendering modes can use shared video encoding components where appropriate.
+
+==================================================
+9. RENDERING MODE SELECTION
+==================================================
+
+Provide a clear way to select the rendering mode.
+
+For example:
+
+RENDER_MODE=javascript
+
+or:
+
+RENDER_MODE=html
+
+The default mode must preserve backward compatibility with existing JavaScript content.
+
+If the user does not explicitly configure a mode, use a safe automatic detection strategy where appropriate.
+
+Automatic detection must not create ambiguous behavior.
+
+For example:
+
+- JavaScript content files using the existing lifecycle should use the JavaScript renderer.
+- HTML projects containing an index.html entry point should use the HTML renderer when selected or when unambiguous auto-detection is enabled.
+
+If a project contains both types of content, require an explicit mode or clear project configuration.
+
+Provide useful error messages when the selected rendering mode does not match the supplied content.
+
+==================================================
+10. CONFIGURATION
+==================================================
+
+Preserve all existing configuration options.
+
+Add HTML-specific configuration where necessary.
+
+Evaluate options such as:
+
+RENDER_MODE=javascript
+HTML_ENTRY=index.html
+VIEWPORT_WIDTH=1920
+VIEWPORT_HEIGHT=1080
+DEVICE_SCALE_FACTOR=1
+HTML_WAIT_FOR_FONTS=true
+HTML_WAIT_FOR_IMAGES=true
+HTML_WAIT_FOR_NETWORK_IDLE=true
+HTML_RENDER_TIMEOUT_MS=30000
+
+The configuration design must:
+
+- Have sensible defaults.
+- Validate input values.
+- Avoid conflicting settings.
+- Preserve existing environment variables.
+- Provide clear error messages.
+- Be documented in Indonesian.
+
+Do not add unnecessary configuration options without a technical reason.
+
+==================================================
+11. PROGRESS BAR AND LOGGING
+==================================================
+
+Preserve the existing centralized progress reporting system.
+
+The HTML rendering mode must integrate with the same progress reporter.
+
+During normal rendering, show only periodic progress updates.
+
+The progress bar should represent actual frame processing.
+
+Example:
+
+[HTML Rendering] [====================--------------------] 50% | 3600/7200 frames
+
+The progress system must also identify the current stage when appropriate:
+
+- Browser initialization.
+- Page loading.
+- Asset preparation.
+- Frame rendering.
+- FFmpeg encoding.
+- Finalization.
+
+Do not print a new log line for every frame.
+
+Do not expose verbose browser or FFmpeg output during normal operation.
+
+Preserve:
+
+- LOG_LEVEL=quiet
+- LOG_LEVEL=normal
+- LOG_LEVEL=verbose
+
+Detailed browser diagnostics must remain available in verbose mode or when an error occurs.
+
+==================================================
+12. RESOURCE MANAGEMENT
+==================================================
+
+HTML rendering can consume substantial memory and CPU resources.
+
+Implement reliable resource management.
+
+Ensure:
+
+- Browser instances are not created unnecessarily.
+- Pages and browser contexts are reused where safe.
+- Temporary pages are closed.
+- Browser processes are terminated after rendering.
+- FFmpeg processes are cleaned up.
+- Temporary files are removed.
+- Memory does not grow continuously with frame count.
+- Frames are processed sequentially or with strictly bounded concurrency.
+- Failed renders do not leave orphaned browser processes.
+
+Avoid launching one browser process per frame.
+
+Use one controlled browser session per rendering job unless a different design is technically justified.
+
+Implement proper cleanup for:
+
+- Successful completion.
+- Rendering errors.
+- FFmpeg failures.
+- Browser crashes.
+- Timeouts.
+- User cancellation.
+- GitHub Actions termination where cleanup is possible.
+
+==================================================
+13. SECURITY AND CONTENT ISOLATION
+==================================================
+
+HTML projects may contain JavaScript and external resource references.
+
+Audit the security implications of executing user-provided content.
+
+Implement reasonable isolation and resource controls.
+
+Evaluate:
+
+- Local file access.
+- External network requests.
+- Local filesystem exposure.
+- Browser sandboxing.
+- Process permissions.
+- Resource limits.
+- Navigation restrictions.
+- Unexpected redirects.
+- External script loading.
+
+Do not expose GitHub Actions secrets or sensitive environment variables to rendered content.
+
+Do not pass the entire process environment into the browser page.
+
+Document the security model and known limitations.
+
+Do not claim that arbitrary untrusted HTML is completely safe.
+
+==================================================
+14. GITHUB ACTIONS INTEGRATION
+==================================================
+
+Integrate both rendering modes into the existing workflow.
+
+Preserve:
+
+- workflow_dispatch as the only trigger.
+- Existing configuration.
+- Automatic dependency installation.
+- FFmpeg installation.
+- Artifact upload.
+- Centralized progress reporting.
+- Logging modes.
+- Error handling.
+- Configurable timeout.
+
+Add browser installation only when the HTML rendering mode requires it.
+
+Avoid installing or launching Chromium unnecessarily for pure JavaScript jobs.
+
+Allow users to select the rendering mode through workflow inputs where appropriate.
+
+Ensure that both rendering modes can run in GitHub Actions Linux environments.
+
+Do not solve performance problems merely by increasing the timeout.
+
+==================================================
+15. BACKWARD COMPATIBILITY
+==================================================
+
+This requirement is mandatory.
+
+Do not break the existing JavaScript rendering system.
+
+Preserve:
+
+- Existing JavaScript content files.
+- Existing Canvas API compatibility.
+- setup(params).
+- render(params).
+- dispose().
+- Raw RGBA streaming.
+- FFmpeg encoding.
+- PNG output.
+- JPG output.
+- Automatic content discovery.
+- Configurable duration.
+- Configurable FPS.
+- Configurable resolution.
+- Aspect ratio configuration.
+- Benchmarking.
+- Progress bar.
+- Logging modes.
+- Existing GitHub Actions workflow.
+
+Do not silently change existing configuration names or behavior.
+
+If an API change is necessary:
+
+- Explain why.
+- Implement a compatibility layer.
+- Update documentation.
+- Provide migration instructions.
+
+==================================================
+16. REQUIRED TESTS
+==================================================
+
+Implement and execute tests for both rendering modes.
+
+A. EXISTING JAVASCRIPT MODE
+
+Verify:
+
+- Existing content discovery.
+- Existing lifecycle compatibility.
+- Canvas rendering.
+- Raw RGBA streaming.
+- FFmpeg integration.
+- PNG/JPG output.
+- Video output.
+- Progress reporting.
+- Error handling.
+
+Use the existing production JavaScript scene as a regression test where available.
+
+B. HTML MODE
+
+Create representative test projects for:
+
+1. Single-file HTML with inline CSS and JavaScript.
+2. Separated index.html, style.css, and script.js.
+3. Multiple CSS files.
+4. Multiple JavaScript files.
+5. Local images.
+6. Local fonts.
+7. SVG graphics.
+8. Canvas inside HTML.
+9. CSS gradients and shadows.
+10. CSS animations.
+11. JavaScript-driven animations.
+12. Web Animations API.
+13. Relative asset paths.
+14. Custom HTML entry points.
+15. Missing assets.
+16. Invalid HTML entry points.
+17. Browser initialization failures.
+18. Browser crashes.
+19. Rendering timeouts.
+
+C. VISUAL QUALITY TESTS
+
+Verify:
+
+- Exact output dimensions.
+- Correct aspect ratio.
+- No browser interface in output.
+- No desktop elements in output.
+- Correct font loading.
+- Correct image loading.
+- Correct animation timing.
+- No unexpected blank frames.
+- No missing frames.
+- No duplicate frames.
+- Correct output frame count.
+- Correct video duration.
+
+Use frame comparison or image analysis where possible.
+
+Create reference frames for representative test projects.
+
+D. FFMPEG TESTS
+
+Verify:
+
+- MP4 output.
+- H.264 codec.
+- Correct dimensions.
+- Correct FPS.
+- Correct duration.
+- Correct frame count.
+- Valid MP4 container.
+- Successful finalization.
+
+E. RESOURCE TESTS
+
+Measure:
+
+- Peak memory usage.
+- Browser process memory.
+- Node.js memory.
+- CPU utilization where available.
+- Rendering time.
+- Frame throughput.
+- FFmpeg encoding time.
+
+Do not fabricate test results.
+
+Clearly identify tests that cannot be executed in the available environment.
+
+==================================================
+17. BENCHMARKING
+==================================================
+
+Extend the existing benchmarking system to compare both rendering modes.
+
+Use equivalent visual workloads where possible.
+
+Benchmark:
+
+- Pure JavaScript rendering.
+- HTML/CSS/JavaScript rendering.
+- 720p at 30 FPS.
+- 1080p at 30 FPS.
+- 1080p at 60 FPS where supported.
+- Short-duration rendering.
+- Representative animated content.
+
+Measure:
+
+- Initialization time.
+- Asset loading time.
+- Frame rendering time.
+- Frame capture time.
+- FFmpeg encoding time.
+- Total processing time.
+- Average FPS.
+- Peak memory.
+- CPU utilization where available.
+
+Separate browser initialization, browser rendering, screenshot capture, and FFmpeg encoding costs.
+
+Do not compare unrelated workloads as if they were equivalent.
+
+Do not claim that one rendering mode is faster without actual benchmark evidence.
+
+==================================================
+18. DOCUMENTATION
+==================================================
+
+Update README.md comprehensively.
+
+Explain:
+
+- Supported rendering modes.
+- When to use Pure JavaScript.
+- When to use HTML/CSS/JavaScript.
+- Single-file HTML projects.
+- Separated HTML/CSS/JS projects.
+- Project directory structure.
+- HTML entry point configuration.
+- Browser rendering architecture.
+- Viewport configuration.
+- Output quality settings.
+- Animation timing.
+- Asset loading.
+- FFmpeg integration.
+- Progress reporting.
+- Logging configuration.
+- GitHub Actions usage.
+- Security considerations.
+- Performance considerations.
+- Known limitations.
+- Troubleshooting.
+
+Create or update:
+
+- CHANGELOG.md
+- Rendering architecture documentation.
+- HTML rendering guide.
+- Benchmark documentation.
+
+All documentation must be written in Indonesian.
+
+Keep the MIT License intact.
+
+==================================================
+19. WORKING PROCEDURE
+==================================================
+
+Follow these phases strictly.
+
+PHASE 1 — COMPLETE SOURCE AUDIT
+
+Inspect the entire repository and all existing rendering components.
+
+PHASE 2 — ARCHITECTURE ANALYSIS
+
+Determine how to integrate HTML rendering without breaking the existing JavaScript renderer.
+
+PHASE 3 — BACKEND EVALUATION
+
+Evaluate suitable HTML rendering backends and document the selected architecture.
+
+PHASE 4 — ENGINE DESIGN
+
+Design a modular architecture with two independent rendering modes and shared encoding components where appropriate.
+
+PHASE 5 — IMPLEMENTATION
+
+Implement HTML/CSS/JavaScript rendering while preserving the existing JavaScript mode.
+
+PHASE 6 — QUALITY AND TIMING VALIDATION
+
+Verify viewport isolation, visual quality, asset loading, and deterministic animation timing.
+
+PHASE 7 — TESTING
+
+Run all applicable regression, integration, visual, and resource tests.
+
+PHASE 8 — BENCHMARKING
+
+Measure both rendering modes and document actual results.
+
+PHASE 9 — DOCUMENTATION
+
+Update README.md, CHANGELOG.md, and technical guides.
+
+PHASE 10 — DELIVERY
+
+Package the complete updated repository into a ZIP file.
+
+Provide:
+
+- ZIP download link.
+- Summary of architecture changes.
+- Supported project structures.
+- Test results.
+- Benchmark results.
+- Known limitations.
+
+Do not omit necessary files.
+
+==================================================
+20. STRICT ENGINEERING RULES
+==================================================
+
+- Do not break the existing Pure JavaScript renderer.
+- Do not force JavaScript projects to use Chromium.
+- Do not assume PureImage can render HTML or CSS.
+- Do not implement a browser engine manually.
+- Do not capture the browser window or desktop.
+- Do not include browser UI in generated output.
+- Do not reduce resolution or FPS to hide performance problems.
+- Do not remove visual effects to simplify rendering.
+- Do not sacrifice visual quality without explicit justification.
+- Do not use uncontrolled real-time playback as the only animation timing mechanism.
+- Do not accumulate all frames in memory.
+- Do not launch one browser per frame.
+- Do not expose GitHub Actions secrets to rendered HTML.
+- Do not discard browser or FFmpeg errors.
+- Do not remove the existing progress bar or logging system.
+- Do not introduce unnecessary dependencies.
+- Do not silently change existing APIs.
+- Do not fabricate test results.
+- Do not fabricate benchmark results.
+- Do not claim visual accuracy without verification.
+- Do not consider the task complete merely because the code compiles.
+
+==================================================
+FINAL OBJECTIVE
+==================================================
+
+Deliver a unified GitHub Content Renderer that supports both:
+
+1. Pure JavaScript Canvas-based rendering.
+2. HTML/CSS/JavaScript web-based rendering.
+
+Users must be able to choose whichever approach best fits their content.
+
+The HTML renderer must produce clean, high-quality video and image output containing only the intended page content.
+
+No browser interface, desktop UI, or unrelated screen elements may appear in the generated output.
+
+Both rendering modes must work reliably through GitHub Actions, preserve existing functionality, provide accurate progress reporting, and manage memory and resources safely.
+
+The final implementation must be tested, documented, and delivered as a complete ZIP archive.
+
+Begin with PHASE 1 — COMPLETE SOURCE AUDIT.

@@ -1,0 +1,59 @@
+TUGAS: PEMBARUAN FITUR "AXION AI AGENTS CLI"
+
+Konteks:
+Proyek "Axion AI Agents CLI" perlu diperbarui dengan serangkaian fitur baru serta peningkatan pengalaman pengguna (UX). Kerjakan seluruh poin di bawah ini secara berurutan. Jangan ada satu poin pun yang terlewat.
+
+Instruksi:
+
+1. Command /feedback
+   - Tambahkan command /feedback yang menampilkan informasi berikut:
+     - axionneuralis@gmail.com
+     - azrielspace852@gmail.com
+     - https://github.com/azrielspace852-wq/axion-ai-agents-cli/issues
+
+2. Peningkatan Tampilan Chat
+   a. Saat AI sedang berpikir, tampilkan animasi indikator.
+   b. Saat perintah "axion-cli" dijalankan, layar dibersihkan (clear) dan aplikasi berjalan dalam mode full screen.
+   c. Kolom chat berbentuk persegi panjang dengan sudut tumpul (rounded), diposisikan:
+      - Tepat di atas keyboard (khusus Termux / mobile)
+      - Di bagian bawah layar (khusus desktop)
+   d. Saat AI menjalankan kode atau perintah, tampilkan kode/perintah yang dieksekusi untuk transparansi.
+
+3. Command /acces
+   - Tambahkan command /acces untuk memilih cakupan akses:
+     - Hanya direktori saat ini, atau
+     - Global
+
+4. Navigasi Opsi dengan Tombol Panah
+   - Opsi dapat dipilih menggunakan ArrowUp dan ArrowDown.
+   - Tekan Enter untuk mengonfirmasi pilihan.
+
+5. Bantuan Otomatis Saat Pertama Dijalankan
+   - Menu help langsung muncul saat "axion-cli" pertama kali dijalankan.
+
+6. Izin Shell Default
+   - Izin shell diatur aktif secara default.
+
+7. Memory
+   - Pastikan memory tersimpan dengan benar.
+   - Tambahkan fitur untuk mengedit memory.
+   - Tambahkan fitur untuk menghapus memory.
+
+8. System Prompt
+   - Gunakan system prompt (bukan Custom Instructions).
+   - Buat agar AI dapat mengenali dan memahami workspace-nya.
+   - Terapkan proteksi anti-halusinasi yang kuat.
+
+9. Task Otomatis
+   - AI harus otomatis membuat daftar tugas jika suatu tugas bersifat panjang dan kompleks.
+
+10. Custom Model
+    - Tambahkan fitur edit untuk mengubah: nama, basename, provider, dan atribut terkait lainnya.
+    - Tambahkan fitur delete (hanya berlaku untuk custom model, bukan model bawaan).
+
+11. Eksekusi dan Pengujian
+    - Kerjakan seluruh instruksi di atas.
+    - Jalankan pengujian secara lokal di latar belakang untuk memastikan semua fitur berfungsi dengan baik.
+
+Catatan:
+Jika ada bagian kode, konfigurasi, dependensi, atau detail teknis yang tidak Anda ketahui atau tidak yakin, mohon jangan mengarang. Sampaikan dengan jelas bagian mana yang membutuhkan klarifikasi atau informasi tambahan dari saya.

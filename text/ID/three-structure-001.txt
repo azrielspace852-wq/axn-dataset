@@ -1,0 +1,564 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 1
+Bahasa: Indonesia
+Tujuan: Mengajarkan model AI tentang konsep folder, file, path, hierarki, penamaan, dan organisasi proyek.
+Cakupan: Narasi konseptual, contoh struktur pohon, penjelasan setiap folder dan file, aturan penamaan, serta ringkasan pembelajaran.
+
+BAGIAN 1: NARASI KONSEPTUAL
+Folder adalah wadah yang digunakan untuk mengelompokkan file dan folder lain.
+Folder sering disebut direktori.
+Folder dapat berisi file, subfolder, atau keduanya.
+Struktur folder adalah susunan folder dan file dalam sebuah proyek.
+Struktur folder membantu manusia dan AI memahami lokasi suatu komponen.
+Struktur folder yang baik membuat proyek mudah dibaca, dirawat, dan dikembangkan.
+File adalah unit penyimpanan data yang memiliki nama dan ekstensi.
+Ekstensi file menunjukkan jenis atau format file.
+Contoh ekstensi adalah .md, .py, .yaml, .json, .csv, dan .ipynb.
+File teks menyimpan informasi yang dapat dibaca manusia.
+File kode menyimpan instruksi yang dijalankan komputer.
+File konfigurasi menyimpan pengaturan aplikasi.
+File dokumentasi menjelaskan cara menggunakan atau memahami proyek.
+File data menyimpan bahan yang diolah oleh program.
+File tes memeriksa apakah program berjalan sesuai harapan.
+File log mencatat kejadian selama program berjalan.
+File artefak menyimpan hasil proses seperti model, laporan, atau checkpoint.
+Path adalah alamat lokasi file atau folder.
+Path absolut dimulai dari akar sistem file.
+Path relatif dimulai dari lokasi saat ini.
+Pemisah path pada sistem operasi dapat berbeda.
+Di Linux dan macOS, pemisah path umumnya garis miring biasa.
+Di Windows, pemisah path umumnya garis miring terbalik.
+Struktur pohon menggambarkan hierarki folder dan file.
+Akar pohon adalah folder utama proyek.
+Cabang pohon adalah subfolder.
+Daun pohon adalah file.
+Semakin dalam suatu folder, semakin spesifik isinya.
+Semakin dekat ke akar, semakin umum perannya.
+Prinsip utama struktur folder adalah pemisahan tanggung jawab.
+Setiap folder sebaiknya memiliki satu tujuan yang jelas.
+Nama folder sebaiknya singkat, jelas, dan konsisten.
+Nama file sebaiknya menggambarkan isi atau fungsinya.
+Hindari nama file yang terlalu umum seperti data.txt tanpa konteks.
+Gunakan huruf kecil dan pemisah yang konsisten untuk nama file.
+Gunakan tanda hubung atau garis bawah sesuai konvensi proyek.
+Jangan mencampur banyak konvensi penamaan dalam satu proyek.
+Folder sumber kode biasanya diberi nama src.
+Folder pengujian biasanya diberi nama tests.
+Folder dokumentasi biasanya diberi nama docs.
+Folder konfigurasi biasanya diberi nama configs.
+Folder data biasanya diberi nama data.
+Folder skrip bantu biasanya diberi nama scripts.
+Folder model tersimpan biasanya diberi nama models.
+Folder laporan biasanya diberi nama reports.
+Folder log biasanya diberi nama logs.
+Folder artefak biasanya diberi nama artifacts.
+Folder deployment biasanya diberi nama deployments.
+Folder integrasi berkelanjutan biasanya diberi nama .github.
+File README.md biasanya menjelaskan gambaran umum proyek.
+File LICENSE biasanya menjelaskan lisensi penggunaan.
+File .gitignore biasanya menentukan file yang tidak dilacak Git.
+File .env.example biasanya memberi contoh variabel lingkungan.
+File requirements.txt biasanya mencantumkan dependensi Python.
+File pyproject.toml biasanya mengatur metadata dan alat proyek Python.
+File Makefile biasanya menyediakan perintah otomatis.
+File Dockerfile biasanya mendefinisikan image kontainer.
+File docker-compose.yml biasanya mengatur beberapa layanan kontainer.
+Folder data/raw biasanya menyimpan data mentah yang tidak diubah.
+Folder data/interim biasanya menyimpan data sementara hasil antara.
+Folder data/processed biasanya menyimpan data siap pakai.
+Folder data/external biasanya menyimpan data dari sumber luar.
+Folder data/samples biasanya menyimpan contoh data kecil.
+Folder notebooks biasanya menyimpan notebook eksplorasi.
+Notebook sebaiknya tidak menjadi tempat logika produksi utama.
+Logika produksi sebaiknya dipindahkan ke folder src.
+Folder src/core biasanya menyimpan komponen inti.
+Folder src/data biasanya menyimpan kode pemrosesan data.
+Folder src/model biasanya menyimpan kode pelatihan dan evaluasi model.
+Folder src/layanan biasanya menyimpan kode API atau layanan.
+Folder src/utilitas biasanya menyimpan fungsi bantu umum.
+Folder tests/unit biasanya menguji unit kode secara terpisah.
+Folder tests/integrasi biasanya menguji interaksi antar komponen.
+Folder tests/fixtures biasanya menyimpan data contoh untuk pengujian.
+File conftest.py biasanya menyediakan konfigurasi khusus pytest.
+File __init__.py menandai folder Python sebagai paket.
+File .gitkeep biasanya mempertahankan folder kosong di Git.
+Folder logs biasanya tidak menyimpan log permanen di repositori.
+Folder models biasanya menyimpan model hasil pelatihan.
+Folder artifacts/checkpoints biasanya menyimpan checkpoint pelatihan.
+Folder artifacts/ekspor biasanya menyimpan hasil ekspor model.
+Folder deployments/kubernetes biasanya menyimpan manifes Kubernetes.
+Folder deployments/docker biasanya menyimpan konfigurasi tambahan Docker.
+Folder .github/workflows biasanya menyimpan alur CI/CD.
+CI adalah integrasi berkelanjutan.
+CD adalah pengiriman atau penerapan berkelanjutan.
+Struktur folder yang konsisten memudahkan pencarian.
+Struktur folder yang konsisten memudahkan otomasi.
+Struktur folder yang konsisten memudahkan kolaborasi.
+AI dapat belajar mengenali pola dari struktur folder.
+AI dapat belajar membedakan folder data, kode, tes, dan dokumentasi.
+AI dapat belajar memahami hubungan antara nama file dan fungsinya.
+AI dapat belajar membaca path relatif dan absolut.
+AI dapat belajar menyarankan lokasi file yang tepat.
+AI dapat belajar mendeteksi file yang salah tempat.
+AI dapat belajar mengusulkan struktur proyek baru.
+AI harus memahami bahwa tidak semua proyek memakai struktur yang sama.
+Struktur akhir harus disesuaikan dengan kebutuhan proyek.
+Namun prinsip dasar pemisahan peran tetap penting.
+Dokumentasi struktur folder sebaiknya ditulis dalam docs/struktur-folder.md.
+Setiap folder penting sebaiknya memiliki README.md singkat.
+README singkat menjelaskan tujuan folder dan aturan isinya.
+File konfigurasi sebaiknya tidak menyimpan rahasia secara langsung.
+Rahasia sebaiknya disimpan di variabel lingkungan.
+File contoh konfigurasi boleh disimpan sebagai .env.example.
+Data mentah sebaiknya tidak diubah secara langsung.
+Data mentah sebaiknya disalin atau diproses ke folder interim.
+Hasil proses sebaiknya disimpan di folder processed.
+File besar sebaiknya tidak dimasukkan ke repositori tanpa strategi khusus.
+File sementara sebaiknya diabaikan oleh Git.
+File log sebaiknya diabaikan oleh Git.
+File model besar sebaiknya diabaikan atau disimpan di penyimpanan khusus.
+Struktur pohon membantu AI memahami konteks proyek secara keseluruhan.
+Dengan struktur pohon, AI dapat menelusuri dari akar ke daun.
+Dengan struktur pohon, AI dapat memahami induk dan anak folder.
+Dengan struktur pohon, AI dapat memahami kedalaman folder.
+Dengan struktur pohon, AI dapat memahami tetangga file.
+Dengan struktur pohon, AI dapat memahami peran file berdasarkan lokasinya.
+Pohon folder adalah representasi hierarki.
+Hierarki berarti ada tingkat atas dan tingkat bawah.
+Induk folder adalah folder yang memuat folder lain.
+Anak folder adalah folder yang berada di dalam folder lain.
+Saudara file adalah file lain dalam folder yang sama.
+Path lengkap menggabungkan nama folder dan nama file.
+Contoh path relatif adalah src/data/pemuat.py.
+Contoh path absolut adalah /home/pengguna/proyek/src/data/pemuat.py.
+Path relatif bergantung pada lokasi kerja saat ini.
+Path absolut tidak bergantung pada lokasi kerja saat ini.
+Dalam proyek, path relatif lebih mudah dipindahkan.
+Namun path absolut berguna untuk keperluan diagnostik.
+AI harus berhati-hati membedakan file dan folder.
+Folder biasanya tidak memiliki ekstensi.
+File biasanya memiliki ekstensi.
+Namun ada juga file tanpa ekstensi.
+Ada juga folder yang namanya mengandung titik.
+Karena itu, AI tidak boleh hanya bergantung pada ekstensi.
+AI harus membaca konteks dan struktur pohon.
+AI harus memahami bahwa .git adalah folder metadata Git.
+Folder .git biasanya tidak ditampilkan atau diubah manual.
+Folder virtualenv biasanya tidak dimasukkan ke repositori.
+Folder cache biasanya tidak dimasukkan ke repositori.
+File build biasanya dihasilkan ulang dan tidak perlu dilacak.
+File sumber adalah file yang ditulis dan dirawat manusia.
+File turunan adalah file yang dihasilkan dari proses otomatis.
+Pisahkan file sumber dan file turunan.
+Simpan file turunan di folder yang jelas.
+Gunakan nama folder yang mencerminkan peran.
+Gunakan nama file yang mencerminkan isi.
+Gunakan dokumentasi untuk menjelaskan keputusan struktur.
+Gunakan tes untuk menjaga kualitas kode.
+Gunakan konfigurasi untuk memisahkan pengaturan dari kode.
+Gunakan skrip untuk tugas yang sering diulang.
+Gunakan folder deployment untuk kebutuhan operasional.
+Gunakan folder reports untuk hasil analisis dan evaluasi.
+Gunakan folder docs untuk pengetahuan jangka panjang.
+Gunakan folder tests untuk kepercayaan pada perubahan.
+Gunakan folder src untuk logika utama.
+Gunakan folder data untuk bahan dan hasil pengolahan.
+Gunakan folder artifacts untuk hasil proses yang dapat diunduh.
+Gunakan folder models untuk model yang siap dipakai.
+Gunakan folder logs untuk catatan runtime.
+Gunakan folder configs untuk variasi lingkungan.
+Gunakan folder scripts untuk otomasi tingkat proyek.
+Gunakan folder notebooks untuk eksplorasi interaktif.
+Gunakan folder .github untuk otomasi repositori.
+Struktur folder adalah bahasa komunikasi antar kontributor.
+Struktur folder adalah peta bagi AI untuk bernavigasi.
+Struktur folder harus stabil tetapi tetap dapat berkembang.
+Perubahan struktur sebaiknya didokumentasikan.
+Perubahan struktur sebaiknya dijelaskan dalam pesan commit.
+Perubahan struktur sebaiknya diuji dampaknya.
+Perubahan struktur sebaiknya tidak memutus path penting.
+Jika path berubah, perbarui dokumentasi dan konfigurasi.
+Jika file dipindah, perbarui impor dan referensi.
+Jika folder dihapus, pastikan tidak ada dependensi tertinggal.
+AI harus dapat menyarankan struktur yang sederhana terlebih dahulu.
+Hindari struktur terlalu dalam tanpa alasan.
+Hindari struktur terlalu datar jika proyek besar.
+Kedalaman folder sebaiknya mencerminkan kompleksitas.
+Jumlah file dalam satu folder sebaiknya tetap wajar.
+Folder dengan terlalu banyak file sulit dipahami.
+Pecah folder berdasarkan domain atau tanggung jawab.
+Pisahkan kode aplikasi, data, tes, dan dokumentasi.
+Pisahkan konfigurasi umum dan konfigurasi lingkungan.
+Pisahkan file sumber dan file hasil.
+Pisahkan antarmuka publik dan detail implementasi.
+Gunakan nama yang dapat diprediksi.
+Nama yang dapat diprediksi memudahkan otomasi.
+Nama yang dapat diprediksi memudahkan pencarian.
+Nama yang dapat diprediksi memudahkan AI menebak lokasi.
+Contoh: kode pemuatan data ada di src/data/pemuat.py.
+Contoh: tes pemuatan data ada di tests/unit/test_pemuat.py.
+Contoh: konfigurasi default ada di configs/default.yaml.
+Contoh: dokumentasi struktur ada di docs/struktur-folder.md.
+Contoh: skrip pelatihan ada di scripts/latih_model.sh.
+Contoh: alur CI ada di .github/workflows/ci.yml.
+Contoh: model hasil pelatihan ada di models/.
+Contoh: laporan evaluasi ada di reports/laporan-evaluasi.md.
+Contoh: data mentah ada di data/raw/.
+Contoh: data siap pakai ada di data/processed/.
+Contoh: checkpoint ada di artifacts/checkpoints/.
+Contoh: manifes Kubernetes ada di deployments/kubernetes/.
+AI harus memahami bahwa struktur ini adalah contoh.
+Struktur nyata dapat berbeda sesuai teknologi dan kebutuhan.
+AI harus fleksibel membaca struktur baru.
+AI harus mencari pola, bukan hanya menghafal nama.
+AI harus memahami konteks proyek sebelum menilai struktur.
+AI harus menjelaskan alasan di balik saran struktur.
+AI harus menghindari saran yang terlalu rumit.
+AI harus mengutamakan kejelasan.
+AI harus mengutamakan konsistensi.
+AI harus mengutamakan kemudahan perawatan.
+AI harus mengutamakan keamanan data sensitif.
+AI harus mengutamakan keterbacaan bagi manusia.
+AI harus mengutamakan reproduksibilitas proses.
+Struktur folder yang baik adalah investasi jangka panjang.
+Struktur folder yang baik mengurangi kebingungan.
+Struktur folder yang baik mengurangi kesalahan path.
+Struktur folder yang baik mempercepat onboarding.
+Struktur folder yang baik membantu debugging.
+Struktur folder yang baik membantu pengujian.
+Struktur folder yang baik membantu deployment.
+Struktur folder yang baik membantu audit.
+Struktur folder yang baik membantu dokumentasi.
+Struktur folder yang baik membantu kolaborasi AI dan manusia.
+
+BAGIAN 2: STRUKTUR FOLDER POHON
+proyek-pra-pelatihan-ai/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .env.example
+├── pyproject.toml
+├── requirements.txt
+├── Makefile
+├── Dockerfile
+├── docker-compose.yml
+├── configs/
+│   ├── default.yaml
+│   ├── development.yaml
+│   ├── production.yaml
+│   └── logging.yaml
+├── data/
+│   ├── raw/
+│   │   ├── .gitkeep
+│   │   └── README.md
+│   ├── interim/
+│   │   └── .gitkeep
+│   ├── processed/
+│   │   └── .gitkeep
+│   ├── external/
+│   │   └── .gitkeep
+│   └── samples/
+│       ├── contoh_data.csv
+│       └── README.md
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── panduan-instalasi.md
+│   ├── panduan-kontribusi.md
+│   ├── struktur-folder.md
+│   └── api/
+│       ├── referensi-api.md
+│       └── contoh-request.md
+├── notebooks/
+│   ├── 01-eksplorasi-data.ipynb
+│   ├── 02-praproses.ipynb
+│   └── README.md
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── cli.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── konfigurasi.py
+│   │   ├── logger.py
+│   │   └── pengecualian.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── pemuat.py
+│   │   ├── pembersih.py
+│   │   └── validasi.py
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── pelatihan.py
+│   │   ├── evaluasi.py
+│   │   └── prediksi.py
+│   ├── layanan/
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   └── skema.py
+│   └── utilitas/
+│       ├── __init__.py
+│       ├── file.py
+│       └── waktu.py
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── unit/
+│   │   ├── test_pemuat.py
+│   │   ├── test_pembersih.py
+│   │   └── test_validasi.py
+│   ├── integrasi/
+│   │   ├── test_api.py
+│   │   └── test_pelatihan.py
+│   └── fixtures/
+│       ├── data_contoh.csv
+│       └── konfigurasi_contoh.yaml
+├── scripts/
+│   ├── unduh_data.sh
+│   ├── latih_model.sh
+│   └── bersihkan_cache.sh
+├── models/
+│   ├── .gitkeep
+│   └── README.md
+├── reports/
+│   ├── figures/
+│   │   └── .gitkeep
+│   └── laporan-evaluasi.md
+├── logs/
+│   └── .gitkeep
+├── artifacts/
+│   ├── checkpoints/
+│   │   └── .gitkeep
+│   └── ekspor/
+│       └── .gitkeep
+├── deployments/
+│   ├── kubernetes/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   └── docker/
+│       └── nginx.conf
+└── .github/
+    └── workflows/
+        ├── ci.yml
+        └── cd.yml
+
+BAGIAN 3: PENJELASAN SETIAP FOLDER DAN FILE
+README.md adalah pintu masuk dokumentasi proyek.
+README.md menjelaskan tujuan, cara memasang, dan cara menjalankan proyek.
+LICENSE menjelaskan hak dan batasan penggunaan kode.
+.gitignore menentukan file dan folder yang tidak dilacak Git.
+.env.example memberi contoh variabel lingkungan tanpa rahasia asli.
+pyproject.toml mengatur metadata proyek dan alat Python.
+requirements.txt mencantumkan dependensi Python.
+Makefile menyediakan perintah singkat untuk tugas umum.
+Dockerfile mendefinisikan cara membangun image kontainer.
+docker-compose.yml mengatur layanan kontainer untuk pengembangan.
+configs/ menyimpan file konfigurasi.
+configs/default.yaml berisi pengaturan default.
+configs/development.yaml berisi pengaturan lingkungan pengembangan.
+configs/production.yaml berisi pengaturan lingkungan produksi.
+configs/logging.yaml berisi pengaturan pencatatan log.
+data/ menyimpan data proyek.
+data/raw/ menyimpan data mentah.
+data/interim/ menyimpan data sementara hasil antara.
+data/processed/ menyimpan data yang siap digunakan.
+data/external/ menyimpan data dari sumber pihak ketiga.
+data/samples/ menyimpan contoh data kecil.
+.gitkeep menjaga folder kosong tetap ada di repositori.
+docs/ menyimpan dokumentasi.
+docs/index.md adalah halaman utama dokumentasi.
+docs/arsitektur.md menjelaskan arsitektur sistem.
+docs/panduan-instalasi.md menjelaskan cara memasang proyek.
+docs/panduan-kontribusi.md menjelaskan cara berkontribusi.
+docs/struktur-folder.md menjelaskan struktur folder proyek.
+docs/api/ menyimpan dokumentasi API.
+notebooks/ menyimpan notebook untuk eksplorasi.
+notebooks/01-eksplorasi-data.ipynb digunakan untuk memahami data.
+notebooks/02-praproses.ipynb digunakan untuk mencoba praproses.
+src/ menyimpan kode sumber utama.
+src/main.py adalah titik masuk aplikasi.
+src/cli.py menyediakan antarmuka baris perintah.
+src/core/ menyimpan komponen inti.
+src/core/konfigurasi.py memuat dan memvalidasi konfigurasi.
+src/core/logger.py mengatur pencatatan log.
+src/core/pengecualian.py mendefinisikan pengecualian khusus.
+src/data/ menyimpan kode pengolahan data.
+src/data/pemuat.py memuat data dari sumber.
+src/data/pembersih.py membersihkan data.
+src/data/validasi.py memvalidasi kualitas data.
+src/model/ menyimpan kode model.
+src/model/pelatihan.py melatih model.
+src/model/evaluasi.py mengevaluasi model.
+src/model/prediksi.py menghasilkan prediksi.
+src/layanan/ menyimpan kode layanan.
+src/layanan/api.py mendefinisikan endpoint API.
+src/layanan/skema.py mendefinisikan skema data API.
+src/utilitas/ menyimpan fungsi bantu.
+src/utilitas/file.py membantu operasi file.
+src/utilitas/waktu.py membantu operasi waktu.
+tests/ menyimpan pengujian.
+tests/conftest.py menyediakan fixture pytest.
+tests/unit/ menyimpan tes unit.
+tests/integrasi/ menyimpan tes integrasi.
+tests/fixtures/ menyimpan data contoh untuk tes.
+scripts/ menyimpan skrip otomasi.
+scripts/unduh_data.sh mengunduh data.
+scripts/latih_model.sh menjalankan pelatihan model.
+scripts/bersihkan_cache.sh membersihkan cache.
+models/ menyimpan model hasil pelatihan.
+reports/ menyimpan laporan.
+reports/figures/ menyimpan gambar laporan.
+reports/laporan-evaluasi.md berisi laporan evaluasi.
+logs/ menyimpan log runtime.
+artifacts/ menyimpan artefak proses.
+artifacts/checkpoints/ menyimpan checkpoint model.
+artifacts/ekspor/ menyimpan hasil ekspor.
+deployments/ menyimpan konfigurasi deployment.
+deployments/kubernetes/ menyimpan manifes Kubernetes.
+deployments/docker/ menyimpan konfigurasi Docker tambahan.
+.github/ menyimpan konfigurasi repositori GitHub.
+.github/workflows/ menyimpan alur CI/CD.
+ci.yml menjalankan integrasi berkelanjutan.
+cd.yml menjalankan pengiriman atau penerapan berkelanjutan.
+
+BAGIAN 4: ATURAN MEMBACA STRUKTUR POHON
+Baca dari akar ke daun.
+Akar adalah folder paling atas.
+Garis vertikal menunjukkan tingkat hierarki.
+Cabang menunjukkan subfolder.
+Daun menunjukkan file.
+Nama yang diakhiri garis miring adalah folder.
+Nama yang memiliki ekstensi biasanya adalah file.
+Titik di awal nama menunjukkan file atau folder tersembunyi.
+File .gitignore adalah file tersembunyi.
+Folder .github adalah folder tersembunyi.
+File .env.example adalah file contoh lingkungan.
+Folder .git adalah metadata Git dan biasanya tidak ditampilkan.
+Indentasi menunjukkan kedalaman.
+Semakin menjorok ke kanan, semakin dalam lokasinya.
+Satu folder dapat memiliki banyak anak.
+Satu file tidak dapat memiliki anak.
+Path dibentuk dari akar sampai file.
+Contoh path: src/data/pemuat.py.
+Contoh path: tests/unit/test_pemuat.py.
+Contoh path: configs/default.yaml.
+Contoh path: deployments/kubernetes/deployment.yaml.
+Path harus ditulis konsisten.
+Gunakan garis miring biasa dalam dokumentasi lintas platform.
+Hindari spasi pada nama file dan folder.
+Gunakan huruf kecil untuk nama file dan folder.
+Gunakan tanda hubung untuk nama deskriptif.
+Gunakan garis bawah jika konvensi proyek menghendaki.
+Jangan memakai karakter khusus yang menyulitkan shell.
+Jangan memakai nama yang berbeda hanya karena huruf besar-kecil.
+Jangan menaruh rahasia di file yang dilacak Git.
+Jangan menaruh data besar di repositori tanpa aturan.
+Jangan menaruh file hasil build di folder sumber.
+Jangan menaruh kode produksi di folder notebook.
+Jangan menaruh tes di folder src.
+Jangan menaruh dokumentasi di folder data.
+Jangan menaruh data mentah di folder processed.
+Jangan menaruh log permanen di repositori.
+Jangan menaruh cache di repositori.
+Jangan menaruh virtualenv di repositori.
+Jangan menaruh file sementara di folder sumber.
+Jangan mengubah struktur tanpa memperbarui dokumentasi.
+Jangan memindahkan file tanpa memperbarui referensi.
+Jangan menghapus folder tanpa memeriksa dependensi.
+Jangan menggabungkan banyak tanggung jawab dalam satu folder.
+Jangan membuat folder terlalu dalam tanpa alasan.
+Jangan membuat folder terlalu datar untuk proyek besar.
+Jangan menggunakan nama folder yang ambigu.
+Jangan menggunakan singkatan yang tidak dijelaskan.
+Jangan menggunakan nama file yang sama untuk peran berbeda.
+Jangan mengandalkan urutan file untuk memahami proyek.
+Gunakan dokumentasi untuk menjelaskan konteks.
+Gunakan README untuk menjelaskan folder penting.
+Gunakan tes untuk menjaga perilaku kode.
+Gunakan konfigurasi untuk memisahkan lingkungan.
+Gunakan skrip untuk tugas berulang.
+Gunakan CI untuk memeriksa perubahan.
+Gunakan CD untuk menerapkan hasil.
+Gunakan laporan untuk menyimpan evaluasi.
+Gunakan artefak untuk hasil yang dapat diproduksi ulang.
+Gunakan model untuk menyimpan model siap pakai.
+Gunakan logs untuk diagnosis runtime.
+Gunakan data/raw untuk data asli.
+Gunakan data/processed untuk data siap model.
+Gunakan data/interim untuk hasil antara.
+Gunakan data/external untuk data pihak ketiga.
+Gunakan data/samples untuk contoh kecil.
+Gunakan docs untuk pengetahuan jangka panjang.
+Gunakan tests untuk kepercayaan pada perubahan.
+Gunakan src untuk logika utama.
+Gunakan configs untuk variasi pengaturan.
+Gunakan deployments untuk kebutuhan operasional.
+Gunakan .github untuk otomasi repositori.
+
+BAGIAN 5: RINGKASAN UNTUK MODEL AI
+Struktur folder adalah hierarki folder dan file.
+Folder mengelompokkan file berdasarkan peran.
+File menyimpan data, kode, konfigurasi, dokumentasi, atau hasil.
+Path menunjukkan lokasi file atau folder.
+Path relatif bergantung pada lokasi kerja.
+Path absolut dimulai dari akar sistem file.
+Akar proyek adalah folder utama.
+Subfolder adalah anak dari folder induk.
+File adalah daun dalam pohon.
+Nama folder dan file harus jelas dan konsisten.
+Pisahkan kode, data, tes, dokumentasi, konfigurasi, dan hasil.
+Simpan rahasia di luar repositori.
+Simpan data besar di luar repositori atau kelola khusus.
+Simpan file turunan di folder yang jelas.
+Dokumentasikan struktur folder.
+Perbarui dokumentasi saat struktur berubah.
+Gunakan README pada folder penting.
+Gunakan .gitignore untuk file yang tidak perlu dilacak.
+Gunakan .gitkeep untuk folder kosong yang perlu dipertahankan.
+Gunakan tests untuk memeriksa kode.
+Gunakan configs untuk mengatur lingkungan.
+Gunakan scripts untuk otomasi.
+Gunakan artifacts untuk hasil proses.
+Gunakan reports untuk laporan.
+Gunakan models untuk model.
+Gunakan logs untuk catatan runtime.
+Gunakan deployments untuk penerapan.
+Gunakan .github/workflows untuk CI/CD.
+AI harus membaca pohon dari akar ke daun.
+AI harus memahami induk, anak, dan saudara.
+AI harus memahami kedalaman dan path.
+AI harus mengenali peran file dari lokasi dan namanya.
+AI harus fleksibel terhadap variasi struktur proyek.
+AI harus menjelaskan alasan saran struktur.
+AI harus mengutamakan kejelasan, konsistensi, dan perawatan.
+AI harus menghindari struktur yang terlalu rumit.
+AI harus menghindari saran yang merusak referensi.
+AI harus membantu manusia memahami proyek.
+Struktur folder yang baik mempercepat pemahaman.
+Struktur folder yang baik mengurangi kesalahan.
+Struktur folder yang baik membantu kolaborasi.
+Struktur folder yang baik adalah peta proyek.
+Peta proyek membantu AI bernavigasi.
+Peta proyek membantu manusia berkontribusi.
+Peta proyek harus dijaga dan diperbarui.
+Dengan demikian, model AI dapat belajar dari narasi dan pohon ini.
+Model AI dapat belajar membedakan folder dan file.
+Model AI dapat belajar membaca path.
+Model AI dapat belajar menyarankan lokasi file.
+Model AI dapat belajar mendeteksi penempatan yang tidak tepat.
+Model AI dapat belajar memahami konteks proyek.
+Model AI dapat belajar menghormati konvensi proyek.
+Model AI dapat belajar menghasilkan struktur folder baru.
+Model AI dapat belajar menjelaskan struktur folder kepada pengguna.
+Model AI harus selalu memeriksa konteks sebelum menyimpulkan.
+Model AI harus selalu mengutamakan keamanan data.
+Model AI harus selalu mengutamakan keterbacaan manusia.
+Model AI harus selalu mengutamakan konsistensi.
+Model AI harus selalu mengutamakan kemudahan perawatan.
+Model AI harus selalu mengutamakan reproduksibilitas.
+Model AI harus selalu mengutamakan kejelasan peran.
+Model AI harus selalu mengutamakan dokumentasi.
+Model AI harus selalu mengutamakan pengujian.
+Model AI harus selalu mengutamakan pemisahan tanggung jawab.
+Model AI harus selalu mengutamakan struktur yang dapat berkembang.
+Akhir generasi 1.

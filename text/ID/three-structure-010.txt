@@ -1,0 +1,812 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 10
+Bahasa: Indonesia
+Fokus: Proyek Android dengan Java, Kotlin, dan Gradle — modernisasi, migrasi, multi-target form factor, pengembangan library/SDK, developer experience, dan tata kelola tim.
+Cakupan: Katalog migrasi (Java→Kotlin, XML→Compose, Support→AndroidX, MVP→MVVM, KAPT→KSP, Groovy→KTS, Dagger→Hilt, LiveData→Flow, SharedPreferences→DataStore, Gson→Moshi/kotlinx.serialization, Picasso→Coil), strategi multi-target (phone, tablet, foldable, Wear OS, Android TV, Android Auto, XR), struktur pengembangan library AAR dan SDK internal, build performance, tooling internal, dan tata kelola tim dengan CODEOWNERS.
+Tujuan: Melatih AI agar dapat merancang dan mengevaluasi struktur Android untuk proyek yang sedang dimodernisasi, proyek multi-target, proyek library, dan proyek dengan banyak tim — tanpa merusak kompatibilitas, tanpa merusak pengalaman pengguna, dan tanpa merusak alur rilis.
+
+BAGIAN 1: NARASI PENDALAMAN MODERNISASI
+Modernisasi Android bukan satu peristiwa, melainkan rangkaian perpindahan bertahap.
+Modernisasi Android menyentuh bahasa, UI, pustaka, arsitektur, build, dan proses.
+Setiap perpindahan membawa risiko.
+Risiko dapat dikelola jika ada strategi migrasi.
+Strategi migrasi membutuhkan pemetaan aset lama ke aset baru.
+Strategi migrasi membutuhkan pengujian regresi.
+Strategi migrasi membutuhkan dokumentasi keputusan.
+Strategi migrasi membutuhkan jalur rollback.
+Struktur folder harus mencerminkan tahap migrasi.
+Struktur folder harus menyediakan ruang untuk kode lama.
+Struktur folder harus menyediakan ruang untuk kode baru.
+Struktur folder harus menyediakan ruang untuk adaptor sementara.
+Struktur folder harus menyediakan ruang untuk uji kompatibilitas.
+Struktur folder harus menyediakan ruang untuk catatan migrasi.
+Struktur folder harus menyediakan ruang untuk checklist.
+AI harus mampu membaca struktur untuk menyimpulkan tahap migrasi.
+AI harus mampu menyimpulkan apakah migrasi selesai, berjalan, atau baru dimulai.
+AI harus mampu mendeteksi kode lama yang masih tersisa.
+AI harus mampu mendeteksi adaptor yang belum dibersihkan.
+AI harus mampu menyarankan langkah migrasi berikutnya.
+AI harus mampu menyarankan pengujian untuk migrasi.
+AI harus mampu menyarankan dokumentasi untuk migrasi.
+AI harus mampu menghindari saran yang merusak kompatibilitas.
+AI harus mampu menghindari saran yang memperbesar risiko.
+AI harus mampu menghindari saran yang menunda migrasi tanpa alasan.
+AI harus mampu menghindari saran yang memaksa migrasi besar-besaran.
+AI harus mengutamakan migrasi bertahap, kecil, dan dapat diuji.
+
+BAGIAN 2: NARASI PENDALAMAN MULTI-TARGET
+Android bukan hanya ponsel.
+Android mencakup tablet, foldable, Wear OS, Android TV, Android Auto, dan XR.
+Setiap form factor memiliki kebutuhan UI, resource, interaksi, dan pengujian yang berbeda.
+Setiap form factor memiliki batasan performa dan memori yang berbeda.
+Setiap form factor memiliki pedoman desain yang berbeda.
+Setiap form factor memiliki kebutuhan rilis yang berbeda.
+Struktur folder harus mencerminkan target form factor.
+Struktur folder harus menyediakan ruang untuk kode bersama.
+Struktur folder harus menyediakan ruang untuk kode khusus target.
+Struktur folder harus menyediakan ruang untuk resource khusus target.
+Struktur folder harus menyediakan ruang untuk tes khusus target.
+Struktur folder harus menyediakan ruang untuk konfigurasi rilis khusus target.
+AI harus mampu membaca struktur untuk menyimpulkan target yang didukung.
+AI harus mampu membaca struktur untuk menyimpulkan tingkat kesiapan multi-target.
+AI harus mampu menyarankan pemisahan kode bersama dan kode target.
+AI harus mampu menyarankan struktur modular untuk multi-target.
+AI harus mampu menyarankan penggunaan Kotlin Multiplatform jika sesuai.
+AI harus mampu menyarankan penggunaan Compose Multiplatform jika sesuai.
+AI harus mampu menghindari saran yang mengasumsikan hanya ponsel.
+AI harus mampu menghindari saran yang mengabaikan perbedaan resource.
+
+BAGIAN 3: NARASI PENDALAMAN LIBRARY DAN SDK
+Android bukan hanya aplikasi.
+Android juga mencakup library AAR dan SDK internal yang dipakai banyak aplikasi.
+Library dan SDK memiliki kebutuhan khusus.
+Library harus memiliki API publik yang stabil.
+Library harus memiliki semantic versioning yang ketat.
+Library harus memiliki dokumentasi API.
+Library harus memiliki contoh penggunaan.
+Library harus memiliki tes unit dan tes integrasi.
+Library harus memiliki tes kompatibilitas terhadap banyak versi Android.
+Library harus memiliki aturan R8 consumer.
+Library harus memiliki consumer rules yang jelas.
+Library harus memiliki baseline profile jika relevan.
+Library harus memisahkan API publik dan implementasi internal.
+Library harus memisahkan kode sumber dan kode yang dihasilkan.
+Library harus memisahkan modul API dan modul implementasi.
+Library harus memiliki proses publish yang dapat diulang.
+Library harus memiliki proses versi yang jelas.
+Library harus memiliki proses deprekasi API lama.
+Library harus memiliki proses penghapusan API lama.
+Struktur folder harus mencerminkan pemisahan ini.
+AI harus mampu membaca struktur untuk menyimpulkan kualitas library.
+AI harus mampu mendeteksi pelanggaran batas API.
+AI harus mampu mendeteksi kode internal yang bocor ke API publik.
+AI harus mampu mendeteksi versi yang tidak konsisten.
+AI harus mampu mendeteksi consumer rules yang hilang.
+AI harus mampu menyarankan struktur library yang baik.
+
+BAGIAN 4: NARASI PENDALAMAN DEVELOPER EXPERIENCE
+Developer experience menentukan kecepatan tim.
+Developer experience mencakup waktu build, waktu tes, waktu sinkronisasi, waktu instalasi.
+Developer experience mencakup kualitas error, kualitas dokumentasi, kualitas tooling.
+Developer experience mencakup kemudahan onboarding.
+Developer experience mencakup kemudahan debugging.
+Developer experience mencakup kemudahan profiling.
+Developer experience mencakup kemudahan migrasi.
+Developer experience mencakup kemudahan kontribusi.
+Struktur folder harus mendukung developer experience.
+Struktur folder yang baik mengurangi waktu pencarian.
+Struktur folder yang baik mengurangi waktu build inkremental.
+Struktur folder yang baik mengurangi konflik merge.
+Struktur folder yang baik memudahkan otomasi.
+Struktur folder yang baik memudahkan review.
+Struktur folder yang baik memudahkan onboarding.
+AI harus mampu membaca struktur untuk menyimpulkan kualitas developer experience.
+AI harus mampu mendeteksi hambatan developer experience.
+AI harus mampu menyarankan perbaikan developer experience.
+
+BAGIAN 5: NARASI PENDALAMAN TATA KELOLA TIM
+Proyek Android besar dikerjakan banyak tim.
+Setiap tim memiliki domain kepemilikan.
+Setiap tim memiliki batas modul.
+Setiap tim memiliki hak review.
+Setiap tim memiliki tanggung jawab rilis.
+Setiap tim memiliki metrik kualitas.
+Setiap tim memiliki pedoman kontribusi.
+Struktur folder harus mencerminkan kepemilikan.
+Struktur folder harus mendukung CODEOWNERS.
+Struktur folder harus mendukung pemisahan rilis.
+Struktur folder harus mendukung pemisahan dokumentasi.
+Struktur folder harus mendukung pemisahan tes.
+Struktur folder harus mendukung pemisahan metrik.
+Struktur folder harus mendukung pemisahan ADR.
+AI harus mampu membaca struktur untuk menyimpulkan kepemilikan.
+AI harus mampu mendeteksi folder tanpa pemilik.
+AI harus mampu menyarankan CODEOWNERS.
+AI harus mampu menyarankan pemisahan modul per tim.
+AI harus mampu menyarankan dokumentasi kepemilikan.
+
+BAGIAN 6: KATALOG MIGRASI MODERNISASI ANDROID
+Migrasi M1: Java ke Kotlin.
+Ciri lama: file .java dengan sintaks Java.
+Ciri baru: file .kt dengan sintaks Kotlin.
+Strategi: migrasi per file, uji setiap migrasi.
+Adaptor: kelas Java tetap dipanggil dari Kotlin.
+Risiko: perubahan perilaku nullability.
+Pengujian: tes unit sebelum dan sesudah.
+Dokumentasi: catatan migrasi di docs/migrasi/java-ke-kotlin.md.
+
+Migrasi M2: Support Library ke AndroidX.
+Ciri lama: import android.support.*.
+Ciri baru: import androidx.*.
+Strategi: refaktor otomatis dengan Android Studio.
+Adaptor: Jetifier untuk dependensi lama.
+Risiko: konflik resource.
+Pengujian: build dan tes lengkap.
+
+Migrasi M3: XML layout ke Jetpack Compose.
+Ciri lama: file layout XML.
+Ciri baru: fungsi @Composable.
+Strategi: migrasi per layar, pertahankan View system selama transisi.
+Adaptor: ComposeView di dalam XML, atau XML di dalam Compose.
+Risiko: perbedaan perilaku UI.
+Pengujian: screenshot test sebelum dan sesudah.
+
+Migrasi M4: MVP ke MVVM atau MVI.
+Ciri lama: Presenter dengan View interface.
+Ciri baru: ViewModel dengan StateFlow.
+Strategi: migrasi per layar, pertahankan Presenter lama selama transisi.
+Adaptor: Presenter membungkus ViewModel sementara.
+Risiko: perubahan alur state.
+Pengujian: tes Presenter lama, tes ViewModel baru.
+
+Migrasi M5: KAPT ke KSP.
+Ciri lama: kapt untuk Room, Hilt, Moshi.
+Ciri baru: ksp untuk pustaka yang mendukung.
+Strategi: migrasi per modul, uji setiap modul.
+Adaptor: beberapa pustaka masih membutuhkan KAPT.
+Risiko: perbedaan hasil generate.
+Pengujian: build dan tes lengkap.
+
+Migrasi M6: Groovy ke Kotlin DSL.
+Ciri lama: build.gradle dengan sintaks Groovy.
+Ciri baru: build.gradle.kts dengan sintaks Kotlin.
+Strategi: migrasi per file, uji setiap migrasi.
+Adaptor: konfigurasi campuran selama transisi.
+Risiko: perbedaan tipe dan resolusi.
+Pengujian: build lengkap.
+
+Migrasi M7: Dagger ke Hilt.
+Ciri lama: komponen Dagger manual.
+Ciri baru: @HiltAndroidApp dan @AndroidEntryPoint.
+Strategi: migrasi per modul, mulai dari modul aplikasi.
+Adaptor: modul Dagger tetap dipakai oleh Hilt.
+Risiko: perbedaan scope dan lifecycle.
+Pengujian: tes unit dan tes instrumen.
+
+Migrasi M8: LiveData ke StateFlow.
+Ciri lama: LiveData dan Observer.
+Ciri baru: StateFlow dan collect.
+Strategi: migrasi per ViewModel, mulai dari ViewModel sederhana.
+Adaptor: asLiveData dan asStateFlow untuk interoperabilitas.
+Risiko: perbedaan lifecycle.
+Pengujian: tes ViewModel.
+
+Migrasi M9: SharedPreferences ke DataStore.
+Ciri lama: SharedPreferences.
+Ciri baru: Preferences DataStore atau Proto DataStore.
+Strategi: migrasi per preferensi, mulai dari preferensi sederhana.
+Adaptor: migrasi otomatis dari SharedPreferences ke DataStore.
+Risiko: kehilangan data jika migrasi gagal.
+Pengujian: tes migrasi data.
+
+Migrasi M10: Gson ke Moshi atau kotlinx.serialization.
+Ciri lama: Gson dengan refleksi.
+Ciri baru: Moshi codegen atau kotlinx.serialization.
+Strategi: migrasi per model, mulai dari model sederhana.
+Adaptor: konverter Gson di Retrofit selama transisi.
+Risiko: perbedaan perilaku nullability.
+Pengujian: tes serialisasi dan deserialisasi.
+
+Migrasi M11: Picasso atau Glide ke Coil.
+Ciri lama: Picasso atau Glide.
+Ciri baru: Coil dengan Compose.
+Strategi: migrasi per layar, mulai dari layar utama.
+Adaptor: wrapper pemuatan gambar selama transisi.
+Risiko: perbedaan cache dan transformasi.
+Pengujian: tes UI dan screenshot.
+
+Migrasi M12: Satu modul ke multi-modul.
+Ciri lama: satu modul app/ dengan banyak paket.
+Ciri baru: banyak modul feature/ dan core/.
+Strategi: migrasi per domain, mulai dari domain yang paling independen.
+Adaptor: modul app/ bergantung pada modul baru.
+Risiko: dependensi melingkar.
+Pengujian: build dan tes per modul.
+
+BAGIAN 7: STRUKTUR POHON MODERNISASI ANDROID
+proyek-android-modernisasi/
+├── README.md
+├── MIGRATION.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── .gitignore
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiPlugin.kt
+│           └── AndroidPustakaPlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/modern/
+│           ├── Aplikasi.kt
+│           ├── MainActivity.kt
+│           └── navigasi/
+├── legacy/
+│   ├── README.md
+│   ├── java/
+│   │   └── com/contoh/legacy/
+│   │       ├── PresenterLama.kt
+│   │       └── AdapterLama.kt
+│   └── res/
+│       └── layout/
+├── modern/
+│   ├── README.md
+│   ├── compose/
+│   │   └── src/main/kotlin/com/contoh/modern/compose/
+│   │       ├── BerandaScreen.kt
+│   │       └── DetailScreen.kt
+│   ├── viewmodel/
+│   │   └── src/main/kotlin/com/contoh/modern/viewmodel/
+│   │       ├── BerandaViewModel.kt
+│   │       └── DetailViewModel.kt
+│   └── datastore/
+│       └── src/main/kotlin/com/contoh/modern/datastore/
+│           └── PreferensiDataStore.kt
+├── adaptor/
+│   ├── README.md
+│   ├── src/main/kotlin/com/contoh/adaptor/
+│   │   ├── PresenterKeViewModel.kt
+│   │   ├── LiveDataKeFlow.kt
+│   │   ├── ComposeDiXml.kt
+│   │   └── XmlDiCompose.kt
+│   └── src/test/kotlin/com/contoh/adaptor/
+│       └── AdaptorTest.kt
+├── core/
+│   ├── domain/
+│   ├── data/
+│   ├── ui/
+│   └── pengujian/
+├── tests/
+│   ├── kompatibilitas/
+│   │   └── test_adaptor.kt
+│   ├── regresi/
+│   │   └── test_alur_utama.kt
+│   └── migrasi/
+│       ├── test_migrasi_preferensi.kt
+│       └── test_migrasi_layout.kt
+├── docs/
+│   ├── index.md
+│   ├── migrasi/
+│   │   ├── java-ke-kotlin.md
+│   │   ├── xml-ke-compose.md
+│   │   ├── mvp-ke-mvvm.md
+│   │   ├── kapt-ke-ksp.md
+│   │   ├── livedata-ke-flow.md
+│   │   └── sharedprefs-ke-datastore.md
+│   ├── keputusan/
+│   │   ├── 0001-migrasi-bertahap.md
+│   │   └── 0002-adaptor-sementara.md
+│   └── checklist.md
+└── scripts/
+    ├── periksa-adaptor.sh
+    └── periksa-migrasi.sh
+
+BAGIAN 8: PEMETAAN MODERNISASI
+legacy/ memuat kode lama yang belum dimigrasikan.
+legacy/java/ memuat kelas Java atau Kotlin lama.
+legacy/res/layout/ memuat layout XML lama.
+modern/ memuat kode baru.
+modern/compose/ memuat layar Compose baru.
+modern/viewmodel/ memuat ViewModel baru.
+modern/datastore/ memuat DataStore baru.
+adaptor/ memuat jembatan antara lama dan baru.
+adaptor/src/main/kotlin/com/contoh/adaptor/PresenterKeViewModel.kt menjembatani Presenter ke ViewModel.
+adaptor/src/main/kotlin/com/contoh/adaptor/LiveDataKeFlow.kt menjembatani LiveData ke Flow.
+adaptor/src/main/kotlin/com/contoh/adaptor/ComposeDiXml.kt menyisipkan Compose ke XML.
+adaptor/src/main/kotlin/com/contoh/adaptor/XmlDiCompose.kt menyisipkan XML ke Compose.
+tests/kompatibilitas/ memverifikasi adaptor.
+tests/regresi/ memverifikasi alur utama.
+tests/migrasi/ memverifikasi migrasi data.
+docs/migrasi/ menjelaskan langkah migrasi per topik.
+docs/checklist.md adalah daftar periksa migrasi.
+MIGRATION.md adalah panduan migrasi tingkat atas.
+scripts/periksa-adaptor.sh mendeteksi adaptor yang sudah tidak dipakai.
+scripts/periksa-migrasi.sh mendeteksi sisa kode lama.
+
+BAGIAN 9: STRUKTUR POHON MULTI-TARGET ANDROID
+proyek-android-multitarget/
+├── README.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app-phone/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/phone/
+│           └── MainActivityPhone.kt
+├── app-tablet/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/tablet/
+│           └── MainActivityTablet.kt
+├── app-foldable/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/foldable/
+│           └── MainActivityFoldable.kt
+├── app-wear/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/wear/
+│           └── MainActivityWear.kt
+├── app-tv/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/tv/
+│           └── MainActivityTv.kt
+├── app-auto/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/auto/
+│           └── LayananAuto.kt
+├── app-xr/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/multi/xr/
+│           └── MainActivityXr.kt
+├── core/
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/multi/domain/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/multi/data/
+│   ├── ui-phone/
+│   │   └── src/main/kotlin/com/contoh/multi/ui/phone/
+│   ├── ui-tablet/
+│   │   └── src/main/kotlin/com/contoh/multi/ui/tablet/
+│   ├── ui-wear/
+│   │   └── src/main/kotlin/com/contoh/multi/ui/wear/
+│   ├── ui-tv/
+│   │   └── src/main/kotlin/com/contoh/multi/ui/tv/
+│   ├── ui-common/
+│   │   └── src/main/kotlin/com/contoh/multi/ui/common/
+│   └── pengujian/
+├── resources/
+│   ├── common/
+│   ├── phone/
+│   ├── tablet/
+│   ├── wear/
+│   └── tv/
+├── docs/
+│   ├── multitarget.md
+│   └── per-form-factor.md
+└── scripts/
+    └── build-semua-target.sh
+
+BAGIAN 10: STRUKTUR POHON LIBRARY DAN SDK ANDROID
+proyek-android-library/
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── api/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       └── kotlin/com/contoh/sdk/api/
+│           ├── KlienSdk.kt
+│           ├── KonfigurasiSdk.kt
+│           └── AntarmukaPublik.kt
+├── impl/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       └── kotlin/com/contoh/sdk/impl/
+│           ├── KlienSdkImpl.kt
+│           ├── InternalApi.kt
+│           └── di/
+├── sampel/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       └── kotlin/com/contoh/sdk/sampel/
+│           └── ContohPenggunaan.kt
+├── tests/
+│   ├── api/
+│   │   └── src/test/kotlin/com/contoh/sdk/api/
+│   │       └── KontrakApiTest.kt
+│   ├── impl/
+│   │   └── src/test/kotlin/com/contoh/sdk/impl/
+│   │       └── KlienSdkTest.kt
+│   └── kompatibilitas/
+│       └── src/test/kotlin/com/contoh/sdk/kompatibilitas/
+│           └── VersiAndroidTest.kt
+├── docs/
+│   ├── index.md
+│   ├── api/
+│   │   ├── referensi.md
+│   │   └── contoh.md
+│   ├── consumer-rules.md
+│   ├── versi.md
+│   └── deprekasi.md
+├── publishing/
+│   ├── maven-publish.gradle.kts
+│   └── signing.gradle.kts
+├── samples/
+│   └── aplikasi-contoh/
+│       └── src/main/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       ├── publish.yml
+│       └── release.yml
+└── scripts/
+    ├── publish-lokal.sh
+    └── publish-maven.sh
+
+BAGIAN 11: PEMETAAN LIBRARY DAN SDK
+api/ memuat antarmuka publik SDK.
+api/src/main/kotlin/ memuat kode publik.
+api/KlienSdk.kt adalah titik masuk SDK.
+api/KonfigurasiSdk.kt mengatur konfigurasi SDK.
+impl/ memuat implementasi internal.
+impl/InternalApi.kt adalah API internal yang tidak boleh bocor.
+impl/di/ memuat modul dependency injection internal.
+sampel/ memuat contoh penggunaan.
+sampel/ContohPenggunaan.kt menunjukkan cara memakai SDK.
+tests/api/ memverifikasi kontrak API.
+tests/impl/ memverifikasi implementasi.
+tests/kompatibilitas/ memverifikasi kompatibilitas versi Android.
+docs/api/referensi.md mendokumentasikan API publik.
+docs/consumer-rules.md mendokumentasikan consumer rules.
+docs/deprekasi.md mendokumentasikan proses deprekasi.
+publishing/ memuat konfigurasi publish.
+publishing/maven-publish.gradle.kts mengatur publish ke Maven.
+publishing/signing.gradle.kts mengatur signing artefak publish.
+.github/workflows/publish.yml menjalankan publish ke Maven.
+.github/workflows/release.yml menjalankan rilis SDK.
+scripts/publish-lokal.sh mempublikasikan ke Maven lokal.
+scripts/publish-maven.sh mempublikasikan ke Maven remote.
+
+BAGIAN 12: STRUKTUR POHON DEVELOPER EXPERIENCE
+proyek-android-dx/
+├── README.md
+├── ONBOARDING.md
+├── TOOLING.md
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle.properties
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiPlugin.kt
+│           ├── AndroidPustakaPlugin.kt
+│           ├── AndroidBenchmarkPlugin.kt
+│           ├── AndroidScreenshotPlugin.kt
+│           └── AndroidTestPlugin.kt
+├── tooling/
+│   ├── README.md
+│   ├── scripts/
+│   │   ├── setup-lokal.sh
+│   │   ├── periksa-versi.sh
+│   │   ├── periksa-dependensi.sh
+│   │   ├── periksa-struktur.sh
+│   │   └── bersihkan.sh
+│   ├── templates/
+│   │   ├── modul-baru/
+│   │   └── catatan-rilis/
+│   ├── generator/
+│   │   └── buat-modul.sh
+│   └── sample/
+│       └── PR_CONTOH.md
+├── docs/
+│   ├── onboarding.md
+│   ├── tooling.md
+│   ├── build-performa.md
+│   ├── konvensi.md
+│   └── faq.md
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .vscode/
+│   ├── settings.json
+│   └── extensions.json
+├── .idea/
+│   └── codeStyles/
+│       └── Project.xml
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── build-performa.yml
+│   │   └── dependabot.yml
+│   └── PULL_REQUEST_TEMPLATE.md
+└── scripts/
+    ├── build-debug.sh
+    ├── build-release.sh
+    ├── jalankan-tes-unit.sh
+    └── jalankan-tes-instrumen.sh
+
+BAGIAN 13: PEMETAAN DEVELOPER EXPERIENCE
+build-logic/ memusatkan konvensi build.
+tooling/scripts/ menyimpan skrip untuk developer.
+tooling/templates/ menyimpan templat modul baru.
+tooling/generator/ menyimpan generator modul.
+tooling/sample/ menyimpan contoh PR.
+docs/onboarding.md memandu developer baru.
+docs/tooling.md menjelaskan tooling.
+docs/build-performa.md menjelaskan cara mengukur build.
+docs/konvensi.md menjelaskan konvensi kode dan struktur.
+docs/faq.md menjawab pertanyaan umum.
+.devcontainer/ memuat lingkungan pengembangan.
+.vscode/ memuat pengaturan editor.
+.idea/codeStyles/ memuat gaya kode Android Studio.
+.github/workflows/ci.yml menjalankan CI.
+.github/workflows/build-performa.yml mengukur build performance.
+.github/workflows/dependabot.yml memperbarui dependensi.
+.github/PULL_REQUEST_TEMPLATE.md memandu kontribusi.
+
+BAGIAN 14: STRUKTUR POHON TATA KELOLA TIM
+proyek-android-tim/
+├── README.md
+├── CODEOWNERS
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+├── app/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/tim/
+├── feature/
+│   ├── beranda/
+│   │   ├── OWNERS.md
+│   │   ├── api/
+│   │   └── impl/
+│   ├── detail/
+│   │   ├── OWNERS.md
+│   │   ├── api/
+│   │   └── impl/
+│   ├── pembayaran/
+│   │   ├── OWNERS.md
+│   │   ├── api/
+│   │   └── impl/
+│   └── profil/
+│       ├── OWNERS.md
+│       ├── api/
+│       └── impl/
+├── core/
+│   ├── OWNERS.md
+│   ├── domain/
+│   ├── data/
+│   └── ui/
+├── infra/
+│   ├── OWNERS.md
+│   └── deployments/
+├── docs/
+│   ├── OWNERS.md
+│   ├── index.md
+│   ├── tim.md
+│   ├── kepemilikan.md
+│   └── keputusan/
+│       ├── 0001-pemisahan-modul.md
+│       └── 0002-kepemilikan.md
+├── .github/
+│   ├── CODEOWNERS
+│   └── workflows/
+│       ├── ci.yml
+│       └── release.yml
+└── scripts/
+    └── periksa-kepemilikan.sh
+
+BAGIAN 15: PEMETAAN TATA KELOLA TIM
+CODEOWNERS tingkat atas menentukan pemilik folder.
+.github/CODEOWNERS menentukan pemilik tingkat GitHub.
+OWNERS.md per folder menjelaskan kepemilikan, tanggung jawab, kontak.
+docs/tim.md menjelaskan struktur tim.
+docs/kepemilikan.md menjelaskan aturan kepemilikan.
+docs/keputusan/ menyimpan ADR yang memengaruhi banyak tim.
+scripts/periksa-kepemilikan.sh memeriksa apakah semua folder punya OWNERS.md.
+Setiap modul fitur memiliki OWNERS.md.
+Modul core memiliki OWNERS.md.
+Modul infra memiliki OWNERS.md.
+Dokumentasi memiliki OWNERS.md.
+Setiap perubahan pada modul membutuhkan review dari pemilik.
+Setiap perubahan pada modul core membutuhkan review lintas tim.
+Setiap perubahan pada infra membutuhkan review tim infra.
+
+BAGIAN 16: BUILD PERFORMANCE DAN TOOLING
+Build performance diukur dengan waktu build.
+Waktu build dipengaruhi oleh jumlah modul.
+Waktu build dipengaruhi oleh konfigurasi Gradle.
+Waktu build dipengaruhi oleh dependensi.
+Waktu build dipengaruhi oleh plugin.
+Waktu build dipengaruhi oleh cache.
+Build cache lokal harus diaktifkan.
+Build cache remote harus diaktifkan di CI.
+Configuration cache harus diaktifkan.
+Parallel execution harus diaktifkan.
+Kotlin incremental harus diaktifkan.
+KSP harus dipakai daripada KAPT.
+Modul harus dijaga agar tidak melingkar.
+Dependensi harus diminimalkan.
+Task yang tidak perlu harus dinonaktifkan.
+Lint harus dijalankan pada CI, bukan setiap build lokal.
+Detekt harus dijalankan pada CI, bukan setiap build lokal.
+Tes instrumen harus dijalankan pada nightly, bukan setiap commit.
+Benchmark harus dijalankan pada nightly, bukan setiap commit.
+Gradle scan harus dipakai untuk menemukan bottleneck.
+Gradle profile harus dipakai untuk menemukan bottleneck.
+Build scan harus diunggah untuk analisis.
+Hasil build harus dicatat per commit.
+Regresi build harus dideteksi.
+Regresi build harus ditangani.
+Tooling harus diuji.
+Tooling harus didokumentasikan.
+Tooling harus dimiliki oleh tim.
+
+BAGIAN 17: LATIHAN PENALARAN GENERASI 10
+Latihan 1: Deteksi tahap migrasi.
+Diberikan struktur dengan legacy/ dan modern/.
+AI harus menyimpulkan migrasi berjalan.
+AI harus menyarankan urutan migrasi.
+
+Latihan 2: Deteksi adaptor yang tidak perlu.
+Diberikan adaptor PresenterKeViewModel.kt padahal semua Presenter sudah dihapus.
+AI harus menyarankan penghapusan adaptor.
+AI harus menyarankan pengujian regresi.
+
+Latihan 3: Deteksi kode lama tersisa.
+Diberikan legacy/res/layout/ masih dipakai di beberapa layar.
+AI harus menyarankan migrasi bertahap.
+AI harus menyarankan daftar layar yang perlu dimigrasikan.
+
+Latihan 4: Deteksi multi-target tidak lengkap.
+Diberikan app-wear/ tanpa resource khusus Wear.
+AI harus menyarankan resource Wear.
+AI harus menyarankan tes Wear.
+
+Latihan 5: Deteksi library tanpa consumer rules.
+Diberikan library AAR tanpa consumer rules.
+AI harus menyarankan consumer rules.
+AI harus menyarankan pengujian rilis.
+
+Latihan 6: Deteksi API internal bocor.
+Diberikan impl/InternalApi.kt dipakai oleh api/.
+AI harus mendeteksi pelanggaran batas.
+AI harus menyarankan pemindahan.
+
+Latihan 7: Deteksi DX buruk.
+Diberikan onboarding tanpa dokumentasi.
+AI harus menyarankan docs/onboarding.md.
+AI harus menyarankan .devcontainer/.
+AI harus menyarankan skrip setup.
+
+Latihan 8: Deteksi build lambat.
+Diberikan build 15 menit tanpa cache.
+AI harus menyarankan build cache.
+AI harus menyarankan configuration cache.
+AI harus menyarankan parallel execution.
+AI harus menyarankan KSP.
+
+Latihan 9: Deteksi kepemilikan tidak jelas.
+Diberikan modul tanpa OWNERS.md.
+AI harus menyarankan OWNERS.md.
+AI harus menyarankan CODEOWNERS.
+
+Latihan 10: Deteksi versi tidak konsisten.
+Diberikan library A memakai 1.0.0, library B memakai 1.2.0.
+AI harus menyarankan version catalog.
+AI harus menyarankan sinkronisasi versi.
+
+Latihan 11: Deteksi migrasi yang terhenti.
+Diberikan legacy/ masih ada setelah satu tahun.
+AI harus menyarankan evaluasi ulang.
+AI harus menyarankan pembersihan atau penyelesaian.
+
+Latihan 12: Deteksi multi-target tanpa core bersama.
+Diberikan setiap app-* memiliki kode duplikat.
+AI harus menyarankan core/ui-common/.
+AI harus menyarankan pemisahan.
+
+Latihan 13: Deteksi SDK tanpa contoh.
+Diberikan library tanpa sampel/.
+AI harus menyarankan sampel/.
+AI harus menyarankan dokumentasi contoh.
+
+Latihan 14: Deteksi tooling tidak diuji.
+Diberikan skrip di tooling/scripts/ tanpa tes.
+AI harus menyarankan tes tooling.
+AI harus menyarankan CI tooling.
+
+Latihan 15: Deteksi kepemilikan konflik.
+Diberikan dua tim memiliki modul yang sama.
+AI harus menyarankan pembagian ulang.
+AI harus menyarankan OWNERS.md yang jelas.
+
+BAGIAN 18: ATURAN UNTUK AI
+AI harus memahami tahap migrasi sebelum menyarankan perubahan.
+AI harus memahami target form factor sebelum menyarankan struktur.
+AI harus memahami jenis library sebelum menyarankan struktur.
+AI harus memahami DX sebelum menyarankan struktur.
+AI harus memahami tata kelola tim sebelum menyarankan struktur.
+AI harus selalu mengutamakan migrasi bertahap.
+AI harus selalu mengutamakan adaptor sementara.
+AI harus selalu mengutamakan pengujian regresi.
+AI harus selalu mengutamakan dokumentasi migrasi.
+AI harus selalu mengutamakan pemisahan kode bersama dan kode target.
+AI harus selalu mengutamakan pemisahan API publik dan implementasi.
+AI harus selalu mengutamakan consumer rules.
+AI harus selalu mengutamakan build performance.
+AI harus selalu mengutamakan tooling yang diuji.
+AI harus selalu mengutamakan kepemilikan yang jelas.
+AI harus selalu mengutamakan onboarding yang mudah.
+AI harus selalu mengutamakan dokumentasi yang lengkap.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan privasi.
+
+BAGIAN 19: RINGKASAN GENERASI 10
+Generasi kesepuluh memperdalam modernisasi, multi-target, library, DX, dan tata kelola tim.
+AI belajar katalog migrasi Android.
+AI belajar strategi migrasi bertahap.
+AI belajar adaptor sementara.
+AI belajar struktur multi-target.
+AI belajar pengembangan library dan SDK.
+AI belajar build performance dan tooling.
+AI belajar tata kelola tim dan kepemilikan.
+AI dilatih untuk membaca struktur untuk menyimpulkan tahap migrasi.
+AI dilatih untuk menyimpulkan kesiapan multi-target.
+AI dilatih untuk menyimpulkan kualitas library.
+AI dilatih untuk menyimpulkan kualitas DX.
+AI dilatih untuk menyimpulkan kejelasan kepemilikan.
+AI dilatih untuk menyarankan perbaikan yang aman dan terukur.
+Dengan generasi kesepuluh ini, AI memiliki pemahaman lengkap tentang siklus hidup proyek Android.
+AI dapat menavigasi struktur proyek Android dari prototipe hingga dewasa.
+AI dapat menavigasi struktur proyek Android dari satu target hingga banyak target.
+AI dapat menavigasi struktur proyek Android dari satu tim hingga banyak tim.
+AI dapat menjelaskan alasan migrasi di balik setiap keputusan struktur.
+AI dapat menyarankan struktur yang siap modernisasi, siap multi-target, siap dipublikasikan, dan siap dikelola banyak tim.
+Akhir generasi 10.

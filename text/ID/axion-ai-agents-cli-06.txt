@@ -1,0 +1,205 @@
+AWAL - BAGIAN PALING PENTING (WAJIB DIPATUHI, JANGAN DILANGGAR)
+
+1. Jangan mengarang apa pun yang tidak Anda yakini atau tidak Anda ketahui. Jika informasi tidak tersedia, tulis UNKNOWN, jelaskan apa yang dibutuhkan, dan minta bukti/akses yang diperlukan.
+2. Jangan melewatkan satu pun dari 11 poin wajib di bawah ini. Semua poin harus dikerjakan, diverifikasi, dan dilaporkan.
+3. Jangan mengklaim file terkirim, zip terkirim, test PASSED, build sukses, atau fitur berfungsi jika belum benar-benar dilakukan atau belum ada bukti output/hasil eksekusi.
+4. Jika lingkungan kerja tidak memiliki akses ke kode, filesystem, terminal, git, atau kemampuan membuat/mengirim zip, jelaskan keterbatasan secara jujur dan berikan langkah alternatif yang dapat diverifikasi.
+5. Prioritas utama: SAFETY, CORRECTNESS, EVIDENCE, MAINTAINABILITY, SIMPLICITY, PERFORMANCE, CONVENIENCE, NOVELTY.
+6. Semua output harus menggunakan Bahasa Indonesia. Istilah teknis seperti command, path, filename, API, key, variable, dan error message tetap ditulis apa adanya.
+7. Jika ada konflik antara instruksi teknis di tengah prompt dan aturan wajib di awal atau akhir prompt, aturan di awal dan akhir yang menang.
+
+TUGAS UNTUK NEMOTRON 3 ULTRA 550B a55B
+
+Anda diminta mengerjakan update menyeluruh untuk proyek AXION AI Agents CLI. Kerjakan sebagai agen rekayasa senior yang disiplin, tidak halusinasi, dan selalu berbasis bukti.
+
+Tujuan utama:
+UPDATE AXION AI Agents CLI agar seluruh fitur wajib di bawah ini tersedia, tersimpan permanen, teruji secara lokal, terdokumentasi, dan siap dikirim sebagai zip jika lingkungan memungkinkan.
+
+DAFTAR FITUR WAJIB (SEMUA HARUS DIKERJAKAN)
+
+1. Custom Provider (High)
+   - Buat fitur Custom Provider agar pengguna dapat menambah lebih dari 1 Custom Provider.
+   - Saat pengguna berganti ke provider yang sudah pernah ditambahkan, pengguna tidak perlu mengisi ulang baseUrl atau API KEY.
+   - Nama Custom Provider tidak boleh sama. Harus ada validasi uniqueness.
+   - Semua Custom Provider yang ditambahkan harus disimpan secara permanen, bukan hanya untuk sesi berjalan.
+   - Pastikan data provider yang disimpan mencakup minimal: nama provider, baseUrl, API KEY, model default jika ada, dan metadata konfigurasi lain yang relevan.
+   - Jika provider aktif diganti, sistem harus memuat konfigurasi provider tersebut dari penyimpanan permanen.
+
+2. UI/UX (High)
+   - Ubah tampilan output agar yang ditampilkan adalah langkah-langkah yang sedang dilakukan AI, bukan kode mentah yang sedang dikerjakan AI.
+   - Output harus berbentuk step by step yang mudah dipahami, misalnya: membaca file, menganalisis struktur, merencanakan perubahan, mengedit file, menjalankan test, melaporkan hasil.
+   - Jika ada perubahan file, tampilkan ringkasan perubahan, path file, dan statusnya, bukan memuntahkan seluruh isi kode secara default.
+   - Jika pengguna ingin melihat detail kode atau diff, sediakan mekanisme yang jelas dan eksplisit, tetapi output utama tetap berupa langkah-langkah AI.
+
+3. Confirm (High)
+   - Buat fitur baru pada command /permissions.
+   - Fitur ini mengatur tindakan berbahaya yang dilakukan AI, seperti rm -rf, git push, git push --force, menghapus file, menimpa file penting, atau command berisiko tinggi lainnya.
+   - Harus tersedia pilihan:
+     - Always Allow
+     - Always Ask
+     - Always Deny
+   - Permission yang dipilih pengguna harus tersimpan permanen.
+   - Jangan pernah menjalankan command berbahaya tanpa konfirmasi yang sesuai dengan aturan permission.
+   - Jika sebuah command berisiko tinggi tetapi belum ada aturan permission-nya, default harus Always Ask atau minta konfirmasi eksplisit.
+
+4. Lihat folder dan file (Medium)
+   - Saat aplikasi dijalankan, AI harus diberi tahu struktur folder di dalam folder user saat itu.
+   - Sistem harus menampilkan atau mengirim ringkasan struktur folder working directory ke konteks AI.
+   - AI harus dapat meminta aksi: baca file, edit file, tulis file, buat file, hapus file jika diizinkan, list directory, dan operasi filesystem lain yang relevan.
+   - Jangan membaca, mengubah, atau menghapus file tanpa mekanisme izin yang benar.
+   - Jika struktur folder terlalu besar, buat ringkasan yang aman, misalnya kedalaman terbatas, dengan opsi memperluas jika diperlukan.
+
+5. Jalankan test secara lokal
+   - Jalankan test secara lokal untuk memastikan semua fitur berfungsi sesuai requirement.
+   - Jika test belum ada, buat test yang proporsional untuk fitur penting: custom provider, persistence konfigurasi, permissions, ESC cancel, system prompt vs custom instructions, dan output UI step by step.
+   - Jika test tidak dapat dijalankan karena lingkungan tidak mendukung, tulis status NOT_RUN atau BLOCKED, sebutkan alasannya, dan berikan command test yang seharusnya dijalankan.
+   - Jangan menyebut semua berfungsi jika belum ada bukti test atau verifikasi.
+
+6. Update file versi
+   - Update version.json agar menjadi versi 1.4.0.
+   - Update version-info.json agar konsisten dengan versi 1.4.0.
+   - Jika format file sudah ada, ikuti format yang ada tanpa mengubah schema secara sembarangan.
+   - Jika file belum ada, buat file yang sesuai dengan struktur proyek yang ditemukan, atau jelaskan jika struktur proyek tidak diketahui.
+
+7. Update CHANGELOG, README.md, dan file terkait lainnya
+   - Update CHANGELOG dengan semua perubahan versi 1.4.0.
+   - Update README.md agar menjelaskan fitur baru, perubahan perilaku, dan cara penggunaan fitur penting.
+   - Update file dokumentasi lain yang relevan jika ada, misalnya docs, configuration guide, permissions guide, atau installation notes.
+   - Dokumentasi harus akurat, tidak melebih-lebihkan, dan sesuai implementasi nyata.
+
+8. ESC
+   - Tambahkan fitur tekan ESC untuk membatalkan AI yang sedang berjalan.
+   - Pembatalan harus menghentikan proses aktif secara aman.
+   - Pastikan pembatalan tidak menyebabkan corrupt pada file, config, atau state penting.
+   - Jika proses sedang menjalankan command berbahaya atau operasi filesystem, hentikan dengan mekanisme yang aman dan laporkan statusnya.
+   - Jika pembatalan penuh tidak mungkin secara teknis, jelaskan batasan dan implementasikan graceful stop sebaik mungkin.
+
+9. Persistence konfigurasi pengguna
+   - Pastikan semua konfigurasi yang diatur pengguna tersimpan permanen.
+   - Konfigurasi ini mencakup, tetapi tidak terbatas pada:
+     - provider aktif
+     - daftar custom provider
+     - baseUrl
+     - API KEY
+     - model
+     - max token
+     - permissions
+     - custom instructions
+     - pengaturan tampilan atau preferensi pengguna lain yang relevan
+   - Konfigurasi tidak boleh hanya bertahan untuk 1 sesi.
+   - Gunakan lokasi konfigurasi yang konsisten dan dapat ditemukan oleh pengguna.
+   - Jangan menyimpan API KEY di tempat yang mudah bocor, jangan commit secrets, dan jangan menampilkan API KEY secara jelas di log atau output.
+
+10. install.sh
+   - Buat atau update install.sh agar setelah instalasi selesai dan sukses, install.sh menghapus dirinya sendiri jika tugasnya sudah selesai.
+   - Penghapusan hanya boleh terjadi setelah instalasi benar-benar sukses.
+   - Jika instalasi gagal, install.sh tidak boleh menghapus dirinya sendiri, agar pengguna dapat memeriksa atau menjalankan ulang.
+   - Tambahkan log yang jelas sebelum dan sesudah instalasi.
+   - Pastikan script aman, idempotent jika memungkinkan, dan tidak melakukan operasi merusak di luar proses instalasi.
+
+11. Bedakan System Prompt dan Custom Instructions
+   - System Prompt tidak bisa diubah oleh pengguna.
+   - System Prompt ditentukan oleh sistem/pengembang, misalnya berisi aturan anti halusinasi, keamanan, larangan mengarang, dan aturan perilaku inti.
+   - Custom Instructions adalah instruksi tambahan yang dibuat oleh pengguna.
+   - Custom Instructions dapat diatur melalui command /instructions.
+   - Custom Instructions tidak boleh menimpa, melemahkan, atau membatalkan aturan inti dari System Prompt.
+   - Jika ada konflik antara Custom Instructions dan System Prompt, System Prompt harus menang.
+
+ALUR KERJA YANG HARUS DIIKUTI
+
+1. Observasi dulu:
+   - Periksa struktur repository atau folder proyek.
+   - Cari file konfigurasi, entry point CLI, folder source, test folder, version.json, version-info.json, CHANGELOG, README.md, dan install.sh.
+   - Jika proyek tidak ditemukan atau tidak dapat diakses, hentikan implementasi dan minta akses atau file yang diperlukan.
+
+2. Buat rencana perubahan:
+   - Tulis file atau komponen yang akan diubah.
+   - Tulis dampak perubahan terhadap konfigurasi, permission, UI, dan testing.
+   - Jangan langsung menulis kode sebelum rencana jelas.
+
+3. Implementasikan perubahan secara minimal dan aman:
+   - Jangan melakukan refactor besar jika tidak diperlukan.
+   - Jangan mengubah kontrak publik secara diam-diam.
+   - Jangan menghapus fungsi lama yang masih dipakai tanpa migrasi yang jelas.
+   - Jaga kompatibilitas konfigurasi lama jika memungkinkan.
+
+4. Tambahkan persistence:
+   - Pastikan semua custom provider, konfigurasi provider aktif, permission, dan custom instructions tersimpan permanen.
+   - Gunakan format penyimpanan yang stabil, misalnya JSON, YAML, TOML, atau format yang sudah dipakai proyek.
+   - Ikuti mekanisme penyimpanan yang sudah ada jika tersedia.
+
+5. Tambahkan fitur UI step by step:
+   - Buat output AI berupa daftar langkah, bukan kode mentah.
+   - Pastikan pengguna dapat memahami apa yang sedang dilakukan AI.
+   - Jika ada error, tampilkan pesan error yang jelas dan langkah yang gagal.
+
+6. Tambahkan fitur /permissions:
+   - Buat command /permissions dapat digunakan untuk melihat dan mengubah aturan permission.
+   - Sediakan pilihan Always Allow, Always Ask, dan Always Deny.
+   - Simpan aturan permission secara permanen.
+
+7. Tambahkan ESC cancel:
+   - Implementasikan handler ESC.
+   - Pastikan proses aktif dapat dibatalkan secara aman.
+   - Laporkan status pembatalan ke pengguna.
+
+8. Pisahkan System Prompt dan Custom Instructions:
+   - Buat mekanisme agar System Prompt tidak dapat diubah pengguna.
+   - Buat command /instructions untuk mengatur Custom Instructions.
+   - Pastikan Custom Instructions tidak bisa menimpa aturan inti System Prompt.
+
+9. Update version dan dokumentasi:
+   - Set version.json dan version-info.json ke 1.4.0.
+   - Update CHANGELOG.
+   - Update README.md.
+   - Update dokumen terkait jika ada.
+
+10. Jalankan test lokal:
+   - Jalankan unit test, integration test, atau smoke test yang relevan.
+   - Jika memungkinkan, jalankan CLI secara lokal dan verifikasi perilaku utama.
+   - Catat output test atau bukti verifikasi.
+
+11. Siapkan deliverable:
+   - Jika lingkungan mendukung pengiriman file/zip, buat package zip yang berisi seluruh hasil perubahan.
+   - Jika lingkungan tidak mendukung pengiriman zip, jangan mengaku telah mengirim zip. Sebagai gantinya, tampilkan daftar file lengkap, isi perubahan penting, dan command yang dapat digunakan pengguna untuk membuat zip sendiri.
+   - Jika repository menggunakan git, jangan melakukan git push, merge, force push, delete branch, atau perubahan remote tanpa persetujuan eksplisit.
+
+KRITERIA SELESAI
+
+Pekerjaan dianggap selesai hanya jika:
+1. Semua fitur dari poin 1 sampai 11 sudah diimplementasikan.
+2. Tidak ada requirement yang dilewati.
+3. Konfigurasi pengguna tersimpan permanen dan dapat dimuat ulang setelah aplikasi dijalankan kembali.
+4. Custom Provider dapat ditambah lebih dari satu, nama unik, dan konfigurasi tidak perlu diisi ulang saat berpindah provider.
+5. Output utama CLI menampilkan langkah-langkah AI, bukan kode mentah.
+6. /permissions memiliki Always Allow, Always Ask, dan Always Deny untuk tindakan berbahaya.
+7. Struktur folder user tersedia sebagai konteks awal AI.
+8. ESC dapat membatalkan proses AI yang sedang berjalan secara aman.
+9. System Prompt terkunci dan tidak bisa diubah pengguna, sedangkan Custom Instructions dapat diatur lewat /instructions.
+10. version.json dan version-info.json sudah 1.4.0.
+11. CHANGELOG dan README.md sudah diperbarui.
+12. install.sh menghapus dirinya sendiri hanya setelah instalasi sukses.
+13. Test lokal dijalankan, atau jika tidak bisa dijalankan, status dan alasannya dilaporkan dengan jujur.
+14. Jika zip dapat dibuat, zip disiapkan. Jika tidak dapat dibuat, jelaskan keterbatasan dan berikan instruksi yang dapat diverifikasi.
+
+FORMAT LAPORAN AKHIR
+
+Laporan akhir harus mencakup:
+1. Ringkasan perubahan.
+2. Daftar file yang dibuat, diubah, atau dihapus.
+3. Status setiap poin dari 1 sampai 11: DONE, PARTIAL, BLOCKED, atau NOT_STARTED.
+4. Bukti test atau status test: PASSED, FAILED, NOT_RUN, atau BLOCKED.
+5. Risiko yang masih tersisa.
+6. Hal yang belum diketahui atau membutuhkan keputusan pengguna.
+7. Cara menjalankan aplikasi dan mencoba fitur baru.
+8. Jika zip tersedia: nama file zip dan lokasi relatifnya. Jika zip tidak tersedia: command untuk membuat zip.
+
+AKHIR - BAGIAN PALING PENTING (WAJIB DIPATUHI, JANGAN DILANGGAR)
+
+1. Ulangi dan pastikan: jangan mengarang fitur, file, hasil test, status git, output terminal, struktur proyek, atau kemampuan lingkungan yang tidak dapat Anda buktikan.
+2. Jangan mengatakan semua selesai jika masih ada satu poin saja yang belum dikerjakan atau belum diverifikasi.
+3. Jangan mengirim zip jika lingkungan tidak benar-benar dapat membuat atau mengirim file zip. Jika tidak bisa, nyatakan dengan jujur dan berikan alternatif yang valid.
+4. Jangan menjalankan command berbahaya seperti rm -rf, git push, git push --force, atau penghapusan massal tanpa izin eksplisit dan mekanisme permission yang benar.
+5. Jika ada ketidakpastian yang berdampak besar, hentikan dulu, ajukan pertanyaan singkat maksimal 3, dan gunakan safe default hanya jika aman.
+6. Semua konfigurasi pengguna harus permanen, semua fitur harus sesuai requirement, dan semua klaim harus didukung bukti.
+7. Kirimkan hasil akhir sebagai zip hanya jika benar-benar berhasil dibuat; jika tidak, laporkan keterbatasan secara jujur dan lengkap.

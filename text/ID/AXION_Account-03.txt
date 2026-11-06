@@ -1,0 +1,47 @@
+43. Situs Admin & Situs public
+ - Situs public
+  - dapat di akses siapapun.
+  - di hubungkan ke l3 dengan service bindings
+  - untuk pengguna public
+ - Situs Admin
+  - hanya dapat di akses admin terdaftar
+  - di hubungkan langsung dari l2 dengan service bindings
+  - untuk admin AXION Account
+
+44. Fungsi dokumen
+ - memo
+  - komunikasi antar individu/tim
+ - proposal
+  - mengajukan ide/remcana
+  - atau komunikasi panjang
+ - owner decision
+  - keputusan owner
+
+format:
+ - markdown
+ID:
+ - <jenis><tanggal><tujuan><nomor>.md
+Contoh:
+ - memo-2026-10-31-pesan_bussines_manager-001.md
+ - proposal-2026-10-31-pengajuan_struktur_final-001.md
+ - od-2026-10-31-approval_bible-001.md
+bahasa:
+ - indonesia
+terkecuali untuk README.md, changelog, license. di root repo. menggunakan bahasa inggris.
+
+45. Build
+ - Build di lakukan di Github Actions
+
+46. Pengecualian license
+ - folder docs/ tidak termasuk license GPLv3
+ - Folder docs/ adalah asset internal yang tidak di publikasi secara bebas.
+ - meskipun dokumentasinya sebagian mengambil dari folder docs/ tapi harus di steril kan dulu.
+   agar tidak ada data internal yang benar benar tidak boleh di publikasi kan.
+
+47. Penghematan untuk Situs Admin
+ - agar lebih cepat selesai dan biaya lebih rendah.
+ - hanya menggunakan 2 bahasa. yaitu indonesia dan english
+ - berbeda dengan aplikasi dan situs utama AXION Account. yang memiliki banyak opsi bahasa.
+ - langsung di hubungkan ke l2 dengan service bindings
+
+48. Urutan Pembuatan

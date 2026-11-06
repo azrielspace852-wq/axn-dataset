@@ -1,0 +1,1110 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 11
+Bahasa: Indonesia
+Fokus: Proyek Android dengan Java, Kotlin, dan Gradle — pendalaman Kotlin lanjutan, Compose runtime, pola arsitektur reaktif, API Android lanjutan, keamanan lanjutan, Gradle lanjutan, aksesibilitas lanjutan, dan internasionalisasi lanjutan.
+Cakupan: Coroutines context, Flow operators, sealed hierarchy, inline/value class, contracts, context receivers, Compose stability, recomposition, side effects, snapshot state, MVI reducer, event sourcing, CQRS, WorkManager berantai, Foreground Service, Health Connect, Credential Manager, Passkeys, Play Billing, Play Integrity, ML Kit, CameraX, Media3, obfuscation lanjutan, cryptography, network security, custom Gradle tasks, artifact transforms, included builds, aksesibilitas WCAG, RTL, pluralisasi, dan pseudo-locale.
+
+Tujuan: Melatih AI agar memahami Android pada tingkat mendalam — bukan hanya struktur, tetapi juga perilaku runtime, keamanan, dan ekosistem pustaka Android modern. AI harus mampu membaca struktur untuk menyimpulkan kualitas Kotlin, kualitas Compose, kualitas arsitektur reaktif, kualitas keamanan, dan kualitas aksesibilitas. AI harus mampu menyarankan struktur yang mendukung semua hal tersebut tanpa melanggar konvensi Android Gradle Plugin.
+
+BAGIAN 1: NARASI PENDALAMAN
+Pada generasi sebelumnya, AI belajar struktur Android, Gradle, arsitektur, performa, pengujian, rilis, modernisasi, multi-target, library, DX, dan tata kelola tim.
+Pada generasi kesebelas ini, AI belajar perilaku runtime dan ekosistem lanjutan.
+Pilar pertama adalah Kotlin lanjutan.
+Pilar kedua adalah Compose runtime.
+Pilar ketiga adalah pola arsitektur reaktif.
+Pilar keempat adalah API Android lanjutan.
+Pilar kelima adalah keamanan lanjutan.
+Pilar keenam adalah Gradle lanjutan.
+Pilar ketujuh adalah aksesibilitas lanjutan.
+Pilar kedelapan adalah internasionalisasi lanjutan.
+Kedelapan pilar ini menentukan kualitas aplikasi modern.
+Struktur folder harus mencerminkan kedelapan pilar ini.
+Struktur folder yang baik menyediakan tempat untuk kode Kotlin lanjutan.
+Struktur folder yang baik menyediakan tempat untuk Compose runtime.
+Struktur folder yang baik menyediakan tempat untuk pola arsitektur reaktif.
+Struktur folder yang baik menyediakan tempat untuk API Android lanjutan.
+Struktur folder yang baik menyediakan tempat untuk keamanan lanjutan.
+Struktur folder yang baik menyediakan tempat untuk Gradle lanjutan.
+Struktur folder yang baik menyediakan tempat untuk aksesibilitas lanjutan.
+Struktur folder yang baik menyediakan tempat untuk internasionalisasi lanjutan.
+AI harus memahami bahwa kesalahan Kotlin lanjutan dapat menyebabkan kebocoran memori.
+AI harus memahami bahwa kesalahan Compose dapat menyebabkan recomposition berlebihan.
+AI harus memahami bahwa kesalahan arsitektur reaktif dapat menyebabkan state tidak konsisten.
+AI harus memahami bahwa kesalahan API Android dapat menyebabkan crash atau penolakan Play Store.
+AI harus memahami bahwa kesalahan keamanan dapat menyebabkan kebocoran data.
+AI harus memahami bahwa kesalahan Gradle dapat menyebabkan build tidak deterministik.
+AI harus memahami bahwa kesalahan aksesibilitas dapat menyebabkan aplikasi tidak dapat dipakai.
+AI harus memahami bahwa kesalahan i18n dapat menyebabkan aplikasi tidak dapat dipahami.
+
+BAGIAN 2: KOTLIN LANJUTAN
+Coroutine context adalah kumpulan elemen yang menyertai coroutine.
+Coroutine context mencakup Job, Dispatcher, CoroutineName, dan elemen kustom.
+Coroutine context dapat digabungkan dengan operator plus.
+Coroutine context dapat diwarisi oleh coroutine anak.
+Coroutine context harus dipahami untuk menghindari kebocoran.
+Job mengelola siklus hidup coroutine.
+Job dapat dibatalkan.
+Job dapat menunggu anak-anaknya.
+SupervisorJob mengisolasi kegagalan anak.
+SupervisorJob harus dipakai untuk ViewModel.
+SupervisorJob harus dipakai untuk scope yang berjalan lama.
+Dispatcher menentukan thread eksekusi.
+Dispatchers.Default untuk CPU.
+Dispatchers.IO untuk I/O.
+Dispatchers.Main untuk UI.
+Dispatchers.Unconfined harus dihindari di produksi.
+Dispatcher harus disuntikkan untuk pengujian.
+CoroutineExceptionHandler menangani exception yang tidak tertangkap.
+CoroutineExceptionHandler tidak menggantikan try-catch.
+CoroutineExceptionHandler harus mencatat ke observability.
+Flow adalah aliran data dingin.
+Flow baru berjalan saat dikoleksi.
+Flow dapat dibatalkan saat koleksi dibatalkan.
+Flow dapat di-transformasi dengan operator.
+Operator flow terdiri dari intermediate dan terminal.
+Intermediate operator mengembalikan Flow baru.
+Terminal operator memicu eksekusi.
+map mengubah elemen.
+filter menyaring elemen.
+flatMapLatest memetakan dan membatalkan aliran sebelumnya.
+flatMapMerge memetakan dan menggabungkan aliran.
+flatMapConcat memetakan secara berurutan.
+combine menggabungkan beberapa Flow.
+zip memasangkan elemen dari beberapa Flow.
+debounce menunda emisi.
+distinctUntilChanged menyaring duplikat berurutan.
+buffer memisahkan produsen dan konsumen.
+conflate mengambil elemen terbaru saja.
+catch menangani exception di Flow.
+retry mengulang koleksi saat exception.
+retryWhen mengulang dengan strategi kustom.
+onStart menjalankan aksi sebelum koleksi.
+onCompletion menjalankan aksi setelah koleksi.
+onEach menjalankan aksi untuk setiap elemen.
+launchIn menjalankan koleksi di scope tertentu.
+shareIn membagikan Flow ke banyak kolektor.
+stateIn mengubah Flow menjadi StateFlow.
+StateFlow adalah Flow panas yang selalu memiliki nilai.
+StateFlow cocok untuk state UI.
+SharedFlow adalah Flow panas tanpa nilai awal.
+SharedFlow cocok untuk event.
+SharedFlow dapat memiliki replay dan buffer.
+Channel cocok untuk event satu konsumen.
+Channel tidak cocok untuk state.
+Sealed class mewakili hierarki tertutup.
+Sealed class cocok untuk state UI.
+Sealed interface adalah alternatif sealed class.
+Sealed class harus dipakai untuk hasil operasi.
+Sealed class harus dipakai untuk error.
+Sealed class harus dipakai untuk event.
+Inline class adalah wrapper tanpa alokasi.
+Value class menggantikan inline class pada Kotlin modern.
+Value class cocok untuk tipe domain.
+Value class tidak boleh membungkus tipe yang sama berulang.
+Value class harus didokumentasikan.
+Type alias menyederhanakan tipe kompleks.
+Type alias tidak membuat tipe baru.
+Type alias harus dipakai dengan hati-hati.
+Contracts memberi tahu compiler tentang perilaku fungsi.
+Contracts dapat membantu smart cast.
+Contracts harus akurat.
+Context receivers memungkinkan fungsi membutuhkan konteks.
+Context receivers berguna untuk DSL.
+Context receivers harus dipakai dengan hati-hati.
+Delegation memungkinkan komposisi.
+Delegation by lazy untuk inisialisasi tertunda.
+Delegation by observable untuk reaksi perubahan.
+Delegation by vetoable untuk validasi perubahan.
+Delegation harus dipakai dengan pemahaman.
+Extension function menambah fungsi tanpa mengubah kelas.
+Extension function harus ditempatkan di file yang jelas.
+Extension function harus didokumentasikan.
+Scope function seperti let, run, with, apply, also.
+Scope function harus dipakai konsisten.
+Scope function tidak boleh disarangkan berlebihan.
+Inline function mengurangi overhead lambda.
+Inline function harus dipakai untuk fungsi kecil.
+Inline function tidak boleh memanggil fungsi non-inline yang besar.
+Reified type parameter memungkinkan akses tipe saat runtime.
+Reified harus dipakai dengan hati-hati.
+Kotlin serialization adalah pustaka serialisasi resmi.
+Kotlin serialization membutuhkan plugin.
+Kotlin serialization mendukung JSON, ProtoBuf, CBOR.
+Kotlin serialization harus dipakai untuk DTO baru.
+Kotlin serialization harus dikonfigurasi di version catalog.
+
+BAGIAN 3: COMPOSE RUNTIME LANJUTAN
+Compose menggunakan model deklaratif.
+Compose merender UI dari state.
+Compose melakukan recomposition saat state berubah.
+Recomposition harus minimal.
+Recomposition berlebihan menyebabkan jank.
+Stability menentukan apakah Composable dapat dilewati.
+Tipe stabil dapat dilewati.
+Tipe tidak stabil selalu direkomposisi.
+Tipe tidak stabil harus dihindari.
+Tipe tidak stabil mencakup List, Map, Set.
+Tipe tidak stabil harus diganti dengan ImmutableList atau PersistentList.
+Compose compiler dapat melaporkan stabilitas.
+Metrics harus diperiksa secara berkala.
+Strong skipping mengoptimalkan recomposition.
+Strong skipping harus diuji.
+Strong skipping dapat mengubah perilaku.
+State hoisting memindahkan state ke pemanggil.
+State hoisting memudahkan pengujian.
+State hoisting memudahkan penggunaan ulang.
+State lokal hanya untuk state yang tidak dibagi.
+remember menyimpan state antar recomposition.
+rememberSaveable menyimpan state antar process death.
+remember harus dipakai dengan benar.
+remember tidak boleh dipakai untuk state yang bergantung pada parameter yang berubah.
+LaunchedEffect menjalankan side effect berdasarkan key.
+LaunchedEffect harus dipakai untuk side effect yang perlu coroutine.
+LaunchedEffect harus dibatalkan saat key berubah.
+DisposableEffect menjalankan side effect dengan pembersihan.
+DisposableEffect harus dipakai untuk listener.
+SideEffect menjalankan aksi setelah setiap komposisi berhasil.
+SideEffect harus dipakai dengan hati-hati.
+rememberCoroutineScope menyediakan scope untuk event.
+rememberCoroutineScope harus dipakai untuk aksi pengguna.
+derivedStateOf menghitung state turunan.
+derivedStateOf mengurangi recomposition.
+derivedStateOf harus dipakai untuk state yang mahal.
+snapshotFlow mengubah state Compose menjadi Flow.
+snapshotFlow harus dipakai untuk menghubungkan Compose ke Flow.
+produceState menghasilkan state dari sumber eksternal.
+produceState harus dipakai dengan hati-hati.
+CompositionLocal menyediakan nilai ke seluruh hierarki.
+CompositionLocal harus dipakai untuk tema, locale, dan konfigurasi.
+CompositionLocal tidak boleh dipakai untuk state bisnis.
+CompositionLocal harus memiliki nilai default.
+CompositionLocal harus didokumentasikan.
+Compose navigation menghubungkan layar.
+Compose navigation harus memakai rute bertipe.
+Compose navigation harus memakai argumen bertipe.
+Compose navigation harus memakai test tag.
+Compose testing memakai compose test rule.
+Compose testing harus memakai test tag.
+Compose testing harus memakai idling resource.
+Compose testing harus memakai semantic matcher.
+Compose testing harus dijalankan di CI.
+Compose preview harus memakai @Preview.
+Compose preview harus memakai data contoh.
+Compose preview harus dipisahkan dari kode produksi.
+Compose preview harus didokumentasikan.
+
+BAGIAN 4: POLA ARSITEKTUR REAKTIF
+MVI reducer memisahkan intent, state, dan efek.
+Intent adalah aksi pengguna.
+State adalah representasi UI.
+Effect adalah side effect satu kali.
+Reducer memproses intent dan menghasilkan state baru.
+Reducer harus murni.
+Reducer harus dapat diuji tanpa Android.
+Reducer harus deterministik.
+Effect handler menjalankan side effect.
+Effect handler harus dapat dibatalkan.
+Effect handler harus dapat diuji.
+MVI reducer cocok untuk UI kompleks.
+MVI reducer cocok untuk alur yang membutuhkan prediktabilitas.
+Event sourcing menyimpan semua event.
+Event sourcing memungkinkan rekonstruksi state.
+Event sourcing membutuhkan penyimpanan event.
+Event sourcing membutuhkan snapshot.
+Event sourcing cocok untuk sistem audit.
+Event sourcing kompleks untuk aplikasi biasa.
+CQRS memisahkan baca dan tulis.
+CQRS memungkinkan optimasi baca.
+CQRS memungkinkan optimasi tulis.
+CQRS membutuhkan konsistensi tertunda.
+CQRS cocok untuk sistem besar.
+CQRS kompleks untuk aplikasi biasa.
+Offline-first sinkronisasi membutuhkan antrean operasi.
+Antrean operasi harus idempoten.
+Antrean operasi harus dapat diulang.
+Antrean operasi harus memiliki prioritas.
+Antrean operasi harus memiliki retry.
+Antrean operasi harus memiliki backoff.
+Antrean operasi harus memiliki batas.
+Antrean operasi harus diuji dengan konflik.
+Antrean operasi harus diuji dengan jaringan putus.
+Antrean operasi harus diuji dengan data besar.
+Unidirectional data flow memastikan state konsisten.
+Event mengalir dari UI ke ViewModel.
+State mengalir dari ViewModel ke UI.
+Effect mengalir dari ViewModel ke UI sekali.
+UI tidak boleh memodifikasi state langsung.
+UI tidak boleh memanggil repositori langsung.
+UI tidak boleh memegang referensi ViewModel.
+Immutable state mengurangi bug.
+Immutable state memudahkan debugging.
+Immutable state memudahkan pengujian.
+
+BAGIAN 5: API ANDROID LANJUTAN
+WorkManager menjalankan tugas yang dapat ditunda.
+WorkManager mendukung constraint jaringan.
+WorkManager mendukung constraint baterai.
+WorkManager mendukung constraint charging.
+WorkManager mendukung retry.
+WorkManager mendukung backoff.
+WorkManager mendukung chaining.
+WorkManager mendukung unique work.
+WorkManager mendukung periodic work.
+WorkManager harus dipakai untuk sinkronisasi.
+WorkManager harus dipakai untuk unggahan.
+WorkManager harus dipakai untuk pembersihan.
+WorkManager tidak cocok untuk tugas real-time.
+WorkManager harus diuji dengan TestDriver.
+WorkManager harus diuji dengan WorkManagerTestInitHelper.
+Foreground Service menjalankan tugas yang terlihat pengguna.
+Foreground Service membutuhkan notifikasi.
+Foreground Service membutuhkan izin pada Android 14+.
+Foreground Service harus dipakai hanya jika perlu.
+Foreground Service harus dihentikan dengan benar.
+Foreground Service harus diuji pada semua versi Android.
+Health Connect menyediakan data kesehatan.
+Health Connect membutuhkan izin khusus.
+Health Connect harus mematuhi privasi.
+Health Connect harus diuji dengan data contoh.
+Credential Manager menyediakan autentikasi.
+Credential Manager mendukung passkeys.
+Credential Manager mendukung password.
+Credential Manager harus dipakai untuk login modern.
+Credential Manager harus diuji dengan akun uji.
+Passkeys menggantikan password.
+Passkeys memakai kriptografi kunci publik.
+Passkeys harus didaftarkan di server.
+Passkeys harus didukung di semua perangkat.
+Passkeys harus memiliki fallback.
+Play Billing menangani pembelian dalam aplikasi.
+Play Billing membutuhkan konfigurasi di Play Console.
+Play Billing harus memverifikasi pembelian di server.
+Play Billing harus menangani pembatalan.
+Play Billing harus menangani refund.
+Play Billing harus menangani retry.
+Play Billing harus diuji dengan akun uji.
+Play Integrity memverifikasi integritas perangkat.
+Play Integrity membutuhkan Google Cloud Project.
+Play Integrity harus dipanggil untuk operasi sensitif.
+Play Integrity harus menangani kegagalan.
+Play Integrity harus diuji dengan perangkat nyata.
+ML Kit menyediakan model ML siap pakai.
+ML Kit mendukung teks, wajah, objek, bahasa.
+ML Kit berjalan di perangkat.
+ML Kit harus mempertimbangkan ukuran.
+ML Kit harus mempertimbangkan performa.
+ML Kit harus diuji dengan data nyata.
+CameraX menyediakan API kamera.
+CameraX mendukung preview, capture, analysis.
+CameraX harus menangani izin.
+CameraX harus menangani rotasi.
+CameraX harus diuji di banyak perangkat.
+Media3 menyediakan pemutaran media.
+Media3 menggantikan ExoPlayer.
+Media3 mendukung audio, video, streaming.
+Media3 harus diuji dengan konten nyata.
+Media3 harus menangani buffering.
+Media3 harus menangani lifecycle.
+
+BAGIAN 6: KEAMANAN LANJUTAN
+Obfuscation mengganti nama kelas dan metode.
+Obfuscation tidak cukup untuk melindungi rahasia.
+Obfuscation harus dikombinasikan dengan enkripsi.
+Obfuscation harus diuji dengan build rilis.
+String encryption menyembunyikan string sensitif.
+String encryption harus dipakai untuk API key sementara.
+String encryption tidak boleh menggantikan manajer rahasia.
+Anti-tamper mendeteksi modifikasi APK.
+Anti-tamper harus dipakai untuk aplikasi sensitif.
+Anti-tamper harus diuji.
+Anti-debug mendeteksi debugger.
+Anti-debug harus dipakai dengan hati-hati.
+Anti-debug dapat mengganggu developer.
+Anti-root mendeteksi perangkat root.
+Anti-root harus dipakai untuk aplikasi sensitif.
+Anti-root tidak boleh menjadi satu-satunya perlindungan.
+Anti-emulator mendeteksi emulator.
+Anti-emulator harus dipakai untuk aplikasi sensitif.
+Anti-emulator dapat menghasilkan false positive.
+Network security config menentukan aturan TLS.
+Network security config harus menolak cleartext pada rilis.
+Network security config harus memakai certificate pinning jika perlu.
+Certificate pinning harus memiliki rencana rotasi.
+Certificate pinning dapat menyebabkan crash jika salah.
+Certificate pinning harus diuji dengan server nyata.
+Cryptography harus memakai API Android Keystore.
+Android Keystore menyimpan kunci di hardware.
+Android Keystore mendukung AES, RSA, EC.
+Android Keystore harus dipakai untuk data sensitif.
+Android Keystore harus dipakai untuk passkeys.
+Android Keystore harus diuji pada perangkat nyata.
+Enkripsi data lokal harus memakai SQLCipher.
+Enkripsi data lokal harus memakai EncryptedSharedPreferences.
+Enkripsi data lokal harus memakai EncryptedFile.
+Enkripsi data lokal harus diuji dengan data besar.
+Enkripsi data lokal harus diuji dengan migrasi.
+Sertifikat harus dirotasi sebelum kedaluwarsa.
+Sertifikat harus dipantau.
+Rahasia harus disimpan di manajer rahasia.
+Rahasia harus dirotasi jika bocor.
+Rahasia tidak boleh berada di log.
+Rahasia tidak boleh berada di crash report.
+Rahasia tidak boleh berada di analytics.
+
+BAGIAN 7: GRADLE LANJUTAN
+Custom task memungkinkan otomasi khusus.
+Custom task harus dideklarasikan dengan input dan output.
+Custom task harus mendukung cache.
+Custom task harus mendukung configuration cache.
+Custom task harus diuji.
+Custom task harus didokumentasikan.
+Artifact transform mengubah artefak saat resolusi.
+Artifact transform harus dideklarasikan dengan jelas.
+Artifact transform harus mendukung cache.
+Artifact transform harus diuji.
+Included build memungkinkan build terpisah.
+Included build harus dipakai untuk build-logic.
+Included build harus dipakai untuk plugin internal.
+Included build harus dipakai dengan hati-hati.
+Included build harus didokumentasikan.
+Composite build menggabungkan beberapa build.
+Composite build harus dipakai untuk monorepo.
+Composite build harus diuji.
+Build service menyediakan layanan bersama antar task.
+Build service harus dipakai untuk resource bersama.
+Build service harus didokumentasikan.
+Provider API memungkinkan lazy configuration.
+Provider API harus dipakai untuk konfigurasi modern.
+Provider API harus dipakai di convention plugin.
+Provider API harus dipakai di custom task.
+Property API memungkinkan properti Gradle.
+Property API harus dipakai untuk parameter task.
+Property API harus dipakai untuk konfigurasi plugin.
+Configuration cache mendukung build cepat.
+Configuration cache harus diaktifkan.
+Configuration cache membutuhkan plugin yang kompatibel.
+Configuration cache harus diuji pada proyek.
+Build cache menyimpan hasil task.
+Build cache lokal harus diaktifkan.
+Build cache remote harus diaktifkan di CI.
+Build cache harus aman.
+Build cache tidak boleh memuat rahasia.
+Gradle Kotlin DSL lebih aman daripada Groovy.
+Gradle Kotlin DSL mendukung autocomplete.
+Gradle Kotlin DSL harus dipakai untuk proyek baru.
+
+BAGIAN 8: AKSESIBILITAS LANJUTAN
+WCAG memiliki empat prinsip: perceivable, operable, understandable, robust.
+Perceivable berarti konten dapat dipersepsikan.
+Operable berarti UI dapat dioperasikan.
+Understandable berarti UI dapat dipahami.
+Robust berarti UI bekerja dengan teknologi bantu.
+Content description harus mendeskripsikan elemen visual.
+Content description tidak boleh menduplikasi teks yang terlihat.
+Content description harus null untuk elemen dekoratif.
+Touch target harus minimal 48dp.
+Touch target harus memiliki jarak yang cukup.
+Kontras harus memenuhi rasio 4.5:1 untuk teks normal.
+Kontras harus memenuhi rasio 3:1 untuk teks besar.
+Kontras harus diuji dengan alat.
+Urutan fokus harus logis.
+Urutan fokus harus diuji dengan TalkBack.
+TalkBack harus diuji pada layar utama.
+TalkBack harus diuji dengan data nyata.
+Switch Access harus diuji pada layar utama.
+Voice Access harus diuji pada layar utama.
+Font scaling harus diuji hingga 200 persen.
+Font scaling harus mempertahankan layout.
+Dark mode harus diuji.
+Bold text harus diuji.
+Reduce motion harus dihormati.
+Reduce transparency harus dihormati.
+Caption harus disediakan untuk video.
+Transcript harus disediakan untuk audio.
+Form harus memiliki label.
+Form harus memiliki error message yang jelas.
+Error message harus dikaitkan dengan field.
+Loading state harus diumumkan.
+Error state harus diumumkan.
+Aksesibilitas harus diuji di CI.
+Aksesibilitas harus menjadi bagian dari definisi selesai.
+
+BAGIAN 9: INTERNASIONALISASI LANJUTAN
+String harus berada di strings.xml.
+String tidak boleh berada di kode.
+String harus memakai format argumen.
+String harus memakai plural untuk jumlah.
+Plural harus didefinisikan per bahasa.
+Plural harus diuji dengan angka 0, 1, 2, dan banyak.
+String harus memakai placeholder bernama.
+String harus menghindari konkatenasi.
+String harus menghindari HTML mentah.
+String harus memakai CDATA untuk HTML.
+Tanggal harus diformat dengan locale.
+Angka harus diformat dengan locale.
+Mata uang harus diformat dengan locale.
+Satuan harus diformat dengan locale.
+Alamat harus diformat dengan locale.
+Nama harus diurutkan dengan locale.
+RTL harus didukung.
+RTL membutuhkan start dan end, bukan left dan right.
+RTL membutuhkan ikon yang dapat dicerminkan.
+RTL harus diuji dengan bahasa Arab atau Ibrani.
+Pseudo-locale membantu mendeteksi hardcoded string.
+Pseudo-locale harus diuji di CI.
+Locale Config menentukan bahasa yang didukung.
+Locale Config harus dideklarasikan di manifest.
+Locale harus dapat diubah di pengaturan.
+Bahasa per aplikasi harus didukung pada Android 13+.
+Format string harus diverifikasi dengan lint.
+Terjemahan harus diverifikasi dengan mesin dan manusia.
+Terjemahan harus diperbarui saat string berubah.
+Terjemahan harus memiliki konteks.
+Terjemahan harus memiliki screenshot.
+Terjemahan harus diuji di perangkat.
+
+BAGIAN 10: STRUKTUR POHON ANDROID LANJUTAN
+proyek-android-ekosistem/
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── PRIVACY.md
+├── ACCESSIBILITY.md
+├── I18N.md
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── release.yml
+│   │   ├── nightly.yml
+│   │   ├── accessibility.yml
+│   │   ├── i18n.yml
+│   │   ├── security.yml
+│   │   └── dependabot.yml
+│   └── CODEOWNERS
+├── gradle/
+│   ├── libs.versions.toml
+│   ├── verification-metadata.xml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiPlugin.kt
+│           ├── AndroidPustakaPlugin.kt
+│           ├── AndroidComposePlugin.kt
+│           ├── AndroidFeaturePlugin.kt
+│           ├── AndroidKotlinPlugin.kt
+│           ├── AndroidKeamananPlugin.kt
+│           └── AndroidAksesibilitasPlugin.kt
+├── build-tools/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   ├── tasks/
+│   │   └── src/main/kotlin/com/contoh/build/tasks/
+│   │       ├── PeriksaStringTask.kt
+│   │       ├── PeriksaAksesibilitasTask.kt
+│   │       └── PeriksaRahasiaTask.kt
+│   └── transforms/
+│       └── src/main/kotlin/com/contoh/build/transforms/
+│           └── TransformResource.kt
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── consumer-rules.pro
+│   ├── baseline-prof.txt
+│   ├── startup-prof.txt
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── kotlin/com/contoh/ekosistem/
+│       │   │   ├── Aplikasi.kt
+│       │   │   ├── MainActivity.kt
+│       │   │   ├── kotlin-ekstensi/
+│       │   │   │   ├── FlowEkstensi.kt
+│       │   │   │   ├── CoroutineEkstensi.kt
+│       │   │   │   └── HasilEkstensi.kt
+│       │   │   ├── kotlin-tipe/
+│       │   │   │   ├── IdPengguna.kt
+│       │   │   │   ├── Email.kt
+│       │   │   │   └── Uang.kt
+│       │   │   ├── compose-runtime/
+│       │   │   │   ├── CompositionLocalAplikasi.kt
+│       │   │   │   ├── EfekSamping.kt
+│       │   │   │   └── SnapshotFlow.kt
+│       │   │   ├── mvi/
+│       │   │   │   ├── BerandaIntent.kt
+│       │   │   │   ├── BerandaState.kt
+│       │   │   │   ├── BerandaEffect.kt
+│       │   │   │   └── BerandaReducer.kt
+│       │   │   ├── offline/
+│       │   │   │   ├── AntreanOperasi.kt
+│       │   │   │   ├── ResolusiKonflik.kt
+│       │   │   │   └── SinkronisasiEngine.kt
+│       │   │   ├── work/
+│       │   │   │   ├── SinkronisasiWorker.kt
+│       │   │   │   ├── UnggahWorker.kt
+│       │   │   │   └── RantaiWorker.kt
+│       │   │   ├── foreground/
+│       │   │   │   └── LayananUnggah.kt
+│       │   │   ├── kesehatan/
+│       │   │   │   ├── HealthConnectKlien.kt
+│       │   │   │   └── IzinKesehatan.kt
+│       │   │   ├── autentikasi/
+│       │   │   │   ├── CredentialManager.kt
+│       │   │   │   ├── Passkey.kt
+│       │   │   │   └── SesiPengguna.kt
+│       │   │   ├── billing/
+│       │   │   │   ├── KlienBilling.kt
+│       │   │   │   └── VerifikasiPembelian.kt
+│       │   │   ├── integritas/
+│       │   │   │   └── PlayIntegrity.kt
+│       │   │   ├── ml/
+│       │   │   │   ├── TeksMlKit.kt
+│       │   │   │   └── GambarMlKit.kt
+│       │   │   ├── kamera/
+│       │   │   │   ├── CameraXKonfigurasi.kt
+│       │   │   │   └── AnalisisGambar.kt
+│       │   │   ├── media/
+│       │   │   │   ├── PemutarMedia3.kt
+│       │   │   │   └── SesiMedia.kt
+│       │   │   ├── keamanan/
+│       │   │   │   ├── PenyimpananKeystore.kt
+│       │   │   │   ├── EnkripsiString.kt
+│       │   │   │   ├── AntiTamper.kt
+│       │   │   │   ├── AntiRoot.kt
+│       │   │   │   └── AntiEmulator.kt
+│       │   │   ├── i18n/
+│       │   │   │   ├── FormatterTanggal.kt
+│       │   │   │   ├── FormatterAngka.kt
+│       │   │   │   └── FormatterMataUang.kt
+│       │   │   ├── aksesibilitas/
+│       │   │   │   ├── Deskripsi.kt
+│       │   │   │   └── UkuranSentuh.kt
+│       │   │   └── di/
+│       │   │       └── ModulAplikasi.kt
+│       │   └── res/
+│       │       ├── values/
+│       │       │   ├── strings.xml
+│       │       │   ├── plurals.xml
+│       │       │   ├── colors.xml
+│       │       │   ├── dimens.xml
+│       │       │   ├── themes.xml
+│       │       │   └── locales_config.xml
+│       │       ├── values-b+in/strings.xml
+│       │       ├── values-b+en/strings.xml
+│       │       ├── values-b+ar/strings.xml
+│       │       ├── values-b+ar-rEG/strings.xml
+│       │       ├── values-night/themes.xml
+│       │       ├── values-b+in/plurals.xml
+│       │       ├── values-b+en/plurals.xml
+│       │       ├── layout/
+│       │       ├── drawable/
+│       │       └── xml/
+│       │           ├── backup_rules.xml
+│       │           ├── data_extraction_rules.xml
+│       │           └── network_security_config.xml
+│       ├── debug/
+│       │   └── java/com/contoh/ekosistem/
+│       │       ├── StrictModeConfig.kt
+│       │       └── DebugRahasia.kt
+│       ├── release/
+│       │   └── java/com/contoh/ekosistem/
+│       │       └── ReleaseStartup.kt
+│       ├── test/
+│       │   └── java/com/contoh/ekosistem/
+│       │       ├── kotlin/
+│       │       │   └── FlowEkstensiTest.kt
+│       │       ├── mvi/
+│       │       │   └── BerandaReducerTest.kt
+│       │       ├── offline/
+│       │       │   ├── AntreanOperasiTest.kt
+│       │       │   └── ResolusiKonflikTest.kt
+│       │       ├── work/
+│       │       │   └── SinkronisasiWorkerTest.kt
+│       │       ├── autentikasi/
+│       │       │   └── SesiPenggunaTest.kt
+│       │       ├── billing/
+│       │       │   └── VerifikasiPembelianTest.kt
+│       │       ├── i18n/
+│       │       │   ├── FormatterTanggalTest.kt
+│       │       │   └── FormatterAngkaTest.kt
+│       │       └── keamanan/
+│       │           └── EnkripsiStringTest.kt
+│       └── androidTest/
+│           ├── java/com/contoh/ekosistem/
+│           │   ├── e2e/
+│           │   │   └── AlurUtamaE2ETest.kt
+│           │   ├── aksesibilitas/
+│           │   │   ├── TalkBackTest.kt
+│           │   │   └── KontrasTest.kt
+│           │   ├── i18n/
+│           │   │   ├── RtlTest.kt
+│           │   │   └── PseudoLocaleTest.kt
+│           │   ├── billing/
+│           │   │   └── PembelianTest.kt
+│           │   ├── health/
+│           │   │   └── HealthConnectTest.kt
+│           │   └── HiltTestRunner.kt
+│           └── assets/
+│               └── data_uji.json
+├── feature/
+│   ├── beranda/
+│   │   ├── api/
+│   │   └── impl/
+│   │       ├── src/main/kotlin/com/contoh/beranda/
+│   │       │   ├── BerandaScreen.kt
+│   │       │   ├── BerandaViewModel.kt
+│   │       │   └── BerandaReducer.kt
+│   │       └── src/test/kotlin/com/contoh/beranda/
+│   │           ├── BerandaReducerTest.kt
+│   │           └── BerandaViewModelTest.kt
+│   ├── pembayaran/
+│   │   ├── api/
+│   │   └── impl/
+│   └── profil/
+│       ├── api/
+│       └── impl/
+├── core/
+│   ├── common/
+│   ├── domain/
+│   ├── data/
+│   ├── ui/
+│   ├── ui-test/
+│   ├── navigasi/
+│   ├── jaringan/
+│   ├── keamanan/
+│   ├── observability/
+│   ├── i18n/
+│   ├── aksesibilitas/
+│   ├── pengujian/
+│   └── tipe/
+├── testing/
+│   ├── fixtures/
+│   ├── screenshot/
+│   ├── fuzzing/
+│   ├── contract/
+│   ├── aksesibilitas/
+│   └── i18n/
+├── benchmark/
+│   └── src/main/
+│       └── java/com/contoh/benchmark/
+│           ├── StartupCold.kt
+│           └── BaselineProfileGenerator.kt
+├── baselineprofile/
+│   └── src/main/
+│       └── java/com/contoh/baselineprofile/
+│           └── GeneratorProfil.kt
+├── observability/
+│   ├── dashboard/
+│   ├── alert/
+│   └── runbook/
+├── incidents/
+├── dist/
+│   ├── catatan-rilis/
+│   ├── rollout/
+│   └── rollback/
+├── docs/
+│   ├── index.md
+│   ├── kotlin-lanjutan.md
+│   ├── compose-runtime.md
+│   ├── mvi.md
+│   ├── offline-first.md
+│   ├── workmanager.md
+│   ├── foreground-service.md
+│   ├── health-connect.md
+│   ├── credential-manager.md
+│   ├── passkeys.md
+│   ├── play-billing.md
+│   ├── play-integrity.md
+│   ├── ml-kit.md
+│   ├── camerax.md
+│   ├── media3.md
+│   ├── keamanan-lanjutan.md
+│   ├── gradle-lanjutan.md
+│   ├── aksesibilitas-lanjutan.md
+│   ├── i18n-lanjutan.md
+│   └── keputusan/
+│       ├── 0001-mvi-reducer.md
+│       ├── 0002-value-class.md
+│       └── 0003-certificate-pinning.md
+├── tools/
+│   ├── pemeriksa/
+│   │   └── src/main/kotlin/com/contoh/tools/
+│   │       ├── PeriksaString.kt
+│   │       ├── PeriksaAksesibilitas.kt
+│   │       └── PeriksaRahasia.kt
+│   └── generator/
+│       └── buat-modul.sh
+└── scripts/
+    ├── build-debug.sh
+    ├── build-release.sh
+    ├── jalankan-tes.sh
+    ├── jalankan-aksesibilitas.sh
+    ├── jalankan-i18n.sh
+    ├── jalankan-keamanan.sh
+    └── README.md
+
+BAGIAN 11: PEMETAAN KOTLIN LANJUTAN
+core/common/ memuat utilitas Kotlin umum.
+core/tipe/ memuat value class domain.
+core/tipe/IdPengguna.kt adalah value class untuk ID pengguna.
+core/tipe/Email.kt adalah value class untuk email.
+core/tipe/Uang.kt adalah value class untuk uang.
+app/kotlin-ekstensi/ memuat extension function.
+app/kotlin-ekstensi/FlowEkstensi.kt memuat operator Flow kustom.
+app/kotlin-ekstensi/CoroutineEkstensi.kt memuat utilitas coroutine.
+app/kotlin-ekstensi/HasilEkstensi.kt memuat utilitas hasil.
+core/domain/ memuat sealed class untuk hasil dan error.
+core/domain/Hasil.kt adalah sealed class hasil.
+core/domain/Kesalahan.kt adalah sealed class error.
+Value class harus dipakai untuk ID dan unit.
+Value class tidak boleh membungkus tipe yang sama berulang.
+Extension function harus berada di file yang jelas.
+Extension function harus didokumentasikan.
+Sealed class harus dipakai untuk state UI.
+Sealed class harus dipakai untuk hasil operasi.
+Sealed class harus dipakai untuk event.
+
+BAGIAN 12: PEMETAAN COMPOSE RUNTIME
+app/compose-runtime/ memuat utilitas Compose.
+app/compose-runtime/CompositionLocalAplikasi.kt mendefinisikan CompositionLocal.
+app/compose-runtime/EfekSamping.kt memuat pola LaunchedEffect dan DisposableEffect.
+app/compose-runtime/SnapshotFlow.kt menghubungkan Compose ke Flow.
+core/ui/ memuat komponen Compose bersama.
+core/ui-test/ memuat utilitas pengujian Compose.
+Setiap layar harus memakai state hoisting.
+Setiap layar harus memakai test tag.
+Setiap layar harus memiliki preview.
+Setiap layar harus diuji dengan screenshot test.
+Setiap layar harus diuji dengan compose test rule.
+
+BAGIAN 13: PEMETAAN MVI
+app/mvi/ memuat pola MVI.
+app/mvi/BerandaIntent.kt mendefinisikan intent.
+app/mvi/BerandaState.kt mendefinisikan state.
+app/mvi/BerandaEffect.kt mendefinisikan effect.
+app/mvi/BerandaReducer.kt memproses intent menjadi state.
+feature/beranda/impl/ memakai MVI.
+feature/beranda/impl/BerandaReducer.kt adalah reducer.
+Reducer harus murni.
+Reducer harus diuji tanpa Android.
+Reducer harus deterministik.
+Effect handler harus diuji.
+Effect handler harus dapat dibatalkan.
+
+BAGIAN 14: PEMETAAN OFFLINE-FIRST DAN WORKMANAGER
+app/offline/ memuat logika offline-first.
+app/offline/AntreanOperasi.kt mengelola antrean operasi.
+app/offline/ResolusiKonflik.kt mengelola konflik.
+app/offline/SinkronisasiEngine.kt mengelola sinkronisasi.
+app/work/ memuat Worker.
+app/work/SinkronisasiWorker.kt menyinkronkan data.
+app/work/UnggahWorker.kt mengunggah data.
+app/work/RantaiWorker.kt merantai pekerjaan.
+app/foreground/ memuat Foreground Service.
+app/foreground/LayananUnggah.kt menjalankan unggahan yang terlihat pengguna.
+WorkManager harus diuji dengan TestDriver.
+WorkManager harus diuji dengan WorkManagerTestInitHelper.
+Foreground Service harus diuji pada Android 14+.
+
+BAGIAN 15: PEMETAAN API ANDROID LANJUTAN
+app/kesehatan/ memuat integrasi Health Connect.
+app/kesehatan/HealthConnectKlien.kt membungkus Health Connect.
+app/kesehatan/IzinKesehatan.kt mengelola izin.
+app/autentikasi/ memuat autentikasi modern.
+app/autentikasi/CredentialManager.kt membungkus Credential Manager.
+app/autentikasi/Passkey.kt mengelola passkeys.
+app/autentikasi/SesiPengguna.kt mengelola sesi.
+app/billing/ memuat Play Billing.
+app/billing/KlienBilling.kt membungkus Play Billing.
+app/billing/VerifikasiPembelian.kt memverifikasi di server.
+app/integritas/ memuat Play Integrity.
+app/integritas/PlayIntegrity.kt membungkus Play Integrity.
+app/ml/ memuat ML Kit.
+app/ml/TeksMlKit.kt membungkus pengenalan teks.
+app/ml/GambarMlKit.kt membungkus analisis gambar.
+app/kamera/ memuat CameraX.
+app/kamera/CameraXKonfigurasi.kt mengonfigurasi CameraX.
+app/kamera/AnalisisGambar.kt menganalisis gambar.
+app/media/ memuat Media3.
+app/media/PemutarMedia3.kt membungkus Media3.
+app/media/SesiMedia.kt mengelola sesi media.
+
+BAGIAN 16: PEMETAAN KEAMANAN LANJUTAN
+app/keamanan/ memuat keamanan lanjutan.
+app/keamanan/PenyimpananKeystore.kt membungkus Android Keystore.
+app/keamanan/EnkripsiString.kt menyembunyikan string sensitif.
+app/keamanan/AntiTamper.kt mendeteksi modifikasi APK.
+app/keamanan/AntiRoot.kt mendeteksi root.
+app/keamanan/AntiEmulator.kt mendeteksi emulator.
+res/xml/network_security_config.xml menentukan aturan TLS.
+Certificate pinning harus memiliki rencana rotasi.
+Keystore harus dipakai untuk data sensitif.
+Rahasia tidak boleh berada di log.
+Rahasia tidak boleh berada di crash report.
+Rahasia tidak boleh berada di analytics.
+Rahasia harus dirotasi jika bocor.
+
+BAGIAN 17: PEMETAAN GRADLE LANJUTAN
+build-tools/ memuat build tools kustom.
+build-tools/tasks/ memuat custom task.
+build-tools/tasks/PeriksaStringTask.kt memeriksa hardcoded string.
+build-tools/tasks/PeriksaAksesibilitasTask.kt memeriksa aksesibilitas.
+build-tools/tasks/PeriksaRahasiaTask.kt memeriksa rahasia.
+build-tools/transforms/ memuat artifact transform.
+build-tools/transforms/TransformResource.kt mengubah resource.
+build-logic/ memuat convention plugin.
+build-logic/convention/src/main/kotlin/ memuat plugin.
+Provider API harus dipakai di custom task.
+Configuration cache harus diaktifkan.
+Build cache harus diaktifkan.
+Build cache remote harus diaktifkan di CI.
+Included build harus dipakai untuk build-logic.
+Composite build harus dipakai untuk monorepo.
+
+BAGIAN 18: PEMETAAN AKSESIBILITAS LANJUTAN
+core/aksesibilitas/ memuat utilitas aksesibilitas.
+core/aksesibilitas/Deskripsi.kt menyediakan contentDescription.
+core/aksesibilitas/UkuranSentuh.kt menyediakan ukuran sentuh minimum.
+app/aksesibilitas/ memuat implementasi aksesibilitas.
+app/aksesibilitas/Deskripsi.kt mengimplementasikan contentDescription.
+app/aksesibilitas/UkuranSentuh.kt mengimplementasikan ukuran sentuh.
+tests/androidTest/aksesibilitas/ memuat tes aksesibilitas.
+tests/androidTest/aksesibilitas/TalkBackTest.kt menguji TalkBack.
+tests/androidTest/aksesibilitas/KontrasTest.kt menguji kontras.
+docs/aksesibilitas-lanjutan.md menjelaskan pedoman.
+ACCESSIBILITY.md adalah panduan aksesibilitas tingkat atas.
+
+BAGIAN 19: PEMETAAN INTERNASIONALISASI LANJUTAN
+app/i18n/ memuat utilitas i18n.
+app/i18n/FormatterTanggal.kt memformat tanggal.
+app/i18n/FormatterAngka.kt memformat angka.
+app/i18n/FormatterMataUang.kt memformat mata uang.
+res/values-b+in/strings.xml memuat string Indonesia.
+res/values-b+en/strings.xml memuat string Inggris.
+res/values-b+ar/strings.xml memuat string Arab.
+res/values-b+ar-rEG/strings.xml memuat string Arab Mesir.
+res/values-b+in/plurals.xml memuat plural Indonesia.
+res/values-b+en/plurals.xml memuat plural Inggris.
+res/values/locales_config.xml menentukan bahasa yang didukung.
+tests/androidTest/i18n/ memuat tes i18n.
+tests/androidTest/i18n/RtlTest.kt menguji RTL.
+tests/androidTest/i18n/PseudoLocaleTest.kt menguji pseudo-locale.
+docs/i18n-lanjutan.md menjelaskan pedoman.
+I18N.md adalah panduan i18n tingkat atas.
+
+BAGIAN 20: VARIASI STRUKTUR LANJUTAN
+Variasi L1: Compose murni dengan MVI.
+Cocok untuk aplikasi baru.
+Risiko: kompleksitas awal.
+
+Variasi L2: Compose dan View campuran.
+Cocok untuk migrasi.
+Risiko: dua pola state.
+
+Variasi L3: Offline-first dengan WorkManager.
+Cocok untuk aplikasi lapangan.
+Risiko: kompleksitas sinkronisasi.
+
+Variasi L4: Real-time dengan WebSocket dan Flow.
+Cocok untuk aplikasi chat.
+Risiko: kompleksitas koneksi.
+
+Variasi L5: Media dengan Media3 dan sesi media.
+Cocok untuk aplikasi streaming.
+Risiko: kompleksitas pemutaran.
+
+Variasi L6: Fintech dengan keamanan ekstensif.
+Cocok untuk aplikasi keuangan.
+Risiko: kompleksitas keamanan.
+
+Variasi L7: Health dengan Health Connect.
+Cocok untuk aplikasi kesehatan.
+Risiko: kompleksitas izin dan privasi.
+
+Variasi L8: ML dengan ML Kit.
+Cocok untuk aplikasi cerdas.
+Risiko: ukuran dan performa.
+
+Variasi L9: Billing dengan Play Billing.
+Cocok untuk aplikasi berlangganan.
+Risiko: kompleksitas verifikasi.
+
+Variasi L10: Multi-target dengan core bersama.
+Cocok untuk aplikasi lintas form factor.
+Risiko: kompleksitas resource.
+
+BAGIAN 21: LATIHAN PENALARAN GENERASI 11
+Latihan 1: Deteksi kebocoran coroutine.
+Diberikan ViewModel memakai GlobalScope.
+AI harus mendeteksi kebocoran.
+AI harus menyarankan viewModelScope.
+AI harus menyarankan SupervisorJob.
+
+Latihan 2: Deteksi Flow tidak aman.
+Diberikan Flow dikoleksi di lifecycleScope tanpa repeatOnLifecycle.
+AI harus mendeteksi kebocoran.
+AI harus menyarankan repeatOnLifecycle.
+
+Latihan 3: Deteksi Compose tidak stabil.
+Diberikan Composable menerima List.
+AI harus mendeteksi tipe tidak stabil.
+AI harus menyarankan ImmutableList.
+AI harus menyarankan pemeriksaan metrics.
+
+Latihan 4: Deteksi recomposition berlebihan.
+Diberikan Composable dijalankan berkali-kali.
+AI harus menyarankan derivedStateOf.
+AI harus menyarankan remember.
+
+Latihan 5: Deteksi MVI tidak murni.
+Diberikan reducer memanggil repositori.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan pemisahan.
+
+Latihan 6: Deteksi WorkManager salah.
+Diberikan WorkManager dipakai untuk real-time.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan WebSocket.
+
+Latihan 7: Deteksi Foreground Service berlebihan.
+Diberikan Foreground Service untuk tugas singkat.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan WorkManager.
+
+Latihan 8: Deteksi Health Connect tanpa izin.
+Diberikan Health Connect tanpa izin.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan izin.
+
+Latihan 9: Deteksi Credential Manager tidak dipakai.
+Diberikan autentikasi manual.
+AI harus menyarankan Credential Manager.
+AI harus menyarankan passkeys.
+
+Latihan 10: Deteksi Play Billing tanpa verifikasi.
+Diberikan pembelian tanpa verifikasi server.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan verifikasi server.
+
+Latihan 11: Deteksi Play Integrity tidak dipakai.
+Diberikan operasi sensitif tanpa Play Integrity.
+AI harus menyarankan Play Integrity.
+
+Latihan 12: Deteksi Media3 lifecycle.
+Diberikan pemutaran tanpa lifecycle.
+AI harus menyarankan lifecycle-aware.
+AI harus menyarankan sesi media.
+
+Latihan 13: Deteksi CameraX tanpa izin.
+Diberikan CameraX tanpa izin.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan izin.
+
+Latihan 14: Deteksi keamanan lemah.
+Diberikan string sensitif hardcoded.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan string encryption.
+AI harus menyarankan manajer rahasia.
+
+Latihan 15: Deteksi network security lemah.
+Diberikan cleartext diizinkan.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan network security config.
+
+Latihan 16: Deteksi Gradle tidak optimal.
+Diberikan custom task tanpa input dan output.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan Property API.
+AI harus menyarankan configuration cache.
+
+Latihan 17: Deteksi aksesibilitas.
+Diberikan tombol tanpa label.
+AI harus menyarankan label.
+AI harus menyarankan tes TalkBack.
+
+Latihan 18: Deteksi kontras.
+Diberikan teks dengan kontras rendah.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan kontras WCAG.
+
+Latihan 19: Deteksi i18n.
+Diberikan string tanpa plural.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan plural.
+
+Latihan 20: Deteksi RTL.
+Diberikan padding kiri-kanan.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan start dan end.
+
+BAGIAN 22: ATURAN UNTUK AI
+AI harus memahami Kotlin lanjutan sebelum menyarankan struktur.
+AI harus memahami Compose runtime sebelum menyarankan struktur.
+AI harus memahami MVI sebelum menyarankan struktur.
+AI harus memahami offline-first sebelum menyarankan struktur.
+AI harus memahami WorkManager sebelum menyarankan struktur.
+AI harus memahami Foreground Service sebelum menyarankan struktur.
+AI harus memahami Health Connect sebelum menyarankan struktur.
+AI harus memahami Credential Manager sebelum menyarankan struktur.
+AI harus memahami Play Billing sebelum menyarankan struktur.
+AI harus memahami Play Integrity sebelum menyarankan struktur.
+AI harus memahami ML Kit sebelum menyarankan struktur.
+AI harus memahami CameraX sebelum menyarankan struktur.
+AI harus memahami Media3 sebelum menyarankan struktur.
+AI harus memahami keamanan lanjutan sebelum menyarankan struktur.
+AI harus memahami Gradle lanjutan sebelum menyarankan struktur.
+AI harus memahami aksesibilitas lanjutan sebelum menyarankan struktur.
+AI harus memahami i18n lanjutan sebelum menyarankan struktur.
+AI harus selalu mengutamakan kebocoran memori.
+AI harus selalu mengutamakan recomposition minimal.
+AI harus selalu mengutamakan state konsisten.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan privasi.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan i18n.
+AI harus selalu mengutamakan dokumentasi.
+AI harus selalu mengutamakan pengujian.
+
+BAGIAN 23: RINGKASAN GENERASI 11
+Generasi kesebelas memperdalam Kotlin, Compose runtime, MVI, offline-first, API Android lanjutan, keamanan lanjutan, Gradle lanjutan, aksesibilitas lanjutan, dan i18n lanjutan.
+AI belajar coroutine context.
+AI belajar Flow operators.
+AI belajar sealed class, value class, dan contracts.
+AI belajar Compose stability, recomposition, side effects, dan snapshot state.
+AI belajar MVI reducer, event sourcing, CQRS.
+AI belajar WorkManager, Foreground Service.
+AI belajar Health Connect, Credential Manager, Passkeys.
+AI belajar Play Billing, Play Integrity.
+AI belajar ML Kit, CameraX, Media3.
+AI belajar obfuscation, string encryption, anti-tamper, anti-root, anti-emulator.
+AI belajar network security config, certificate pinning, cryptography.
+AI belajar custom task, artifact transform, included build.
+AI belajar WCAG, TalkBack, kontras, font scaling.
+AI belajar pluralisasi, RTL, pseudo-locale.
+AI dilatih untuk membaca struktur untuk menyimpulkan kualitas Kotlin.
+AI dilatih untuk menyimpulkan kualitas Compose.
+AI dilatih untuk menyimpulkan kualitas arsitektur reaktif.
+AI dilatih untuk menyimpulkan kualitas keamanan.
+AI dilatih untuk menyimpulkan kualitas aksesibilitas.
+AI dilatih untuk menyimpulkan kualitas i18n.
+Dengan generasi kesebelas ini, AI memiliki pemahaman mendalam tentang ekosistem Android modern.
+AI dapat menavigasi struktur proyek Android dari kode Kotlin hingga keamanan.
+AI dapat menavigasi struktur proyek Android dari Compose hingga aksesibilitas.
+AI dapat menavigasi struktur proyek Android dari Gradle hingga i18n.
+AI dapat menjelaskan alasan teknis di balik setiap keputusan struktur.
+AI dapat menyarankan struktur yang aman, cepat, mudah diakses, mudah diterjemahkan, dan mudah dirawat.
+Akhir generasi 11.

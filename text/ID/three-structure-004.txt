@@ -1,0 +1,863 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 4
+Bahasa: Indonesia
+Fokus: Anti-pola struktur, pola refaktor, struktur berbasis domain aplikasi, proyek poliglot, metadata struktur, dan evolusi struktur dari waktu ke waktu.
+Tujuan: Melatih AI agar tidak hanya mengenali struktur yang baik, tetapi juga mendeteksi struktur yang buruk, memahami cara memperbaikinya, dan menyesuaikan struktur dengan domain proyek yang berbeda.
+
+BAGIAN 1: NARASI TENTANG ANTI-POLA STRUKTUR
+Anti-pola adalah pola yang tampak wajar tetapi menimbulkan masalah jangka panjang.
+Anti-pola struktur folder sering muncul karena proyek tumbuh tanpa rencana.
+Anti-pola struktur folder juga muncul karena peniruan struktur tanpa memahami konteks.
+AI harus mampu mendeteksi anti-pola.
+AI harus mampu menjelaskan mengapa sesuatu disebut anti-pola.
+AI harus mampu menyarankan perbaikan yang minimal dan aman.
+AI harus mampu memperkirakan dampak perbaikan.
+AI harus mampu memprioritaskan perbaikan.
+Tidak semua anti-pola harus segera diperbaiki.
+Beberapa anti-pola dapat ditoleransi pada prototipe.
+Namun anti-pola harus dicatat sebagai utang teknis.
+Utang teknis struktur harus dikelola seperti utang teknis kode.
+Anti-pola yang paling berbahaya adalah anti-pola yang menyembunyikan risiko keamanan.
+Anti-pola kedua adalah anti-pola yang menyulitkan pengujian.
+Anti-pola ketiga adalah anti-pola yang menyulitkan deployment.
+Anti-pola keempat adalah anti-pola yang menyulitkan onboarding.
+Anti-pola kelima adalah anti-pola yang menyulitkan otomasi.
+Anti-pola keenam adalah anti-pola yang menyebabkan duplikasi.
+Anti-pola ketujuh adalah anti-pola yang menyebabkan dependensi melingkar.
+Anti-pola kedelapan adalah anti-pola yang mencampur lingkungan.
+Anti-pola kesembilan adalah anti-pola yang mencampur data dengan kode.
+Anti-pola kesepuluh adalah anti-pola yang mencampur artefak dengan sumber.
+
+BAGIAN 2: KATALOG ANTI-POLA STRUKTUR
+Anti-pola A1: Folder sampah.
+Ciri: ada folder misc/, temp/, old/, backup/, baru/, coba/, test2/.
+Masalah: tidak jelas isinya, sulit dibersihkan, mudah menumpuk.
+Perbaikan: pindahkan isi ke folder yang jelas atau hapus.
+Jika masih dibutuhkan, ganti nama dengan nama yang menjelaskan tujuan.
+
+Anti-pola A2: Folder terlalu dalam.
+Ciri: kedalaman lebih dari 6 tingkat tanpa alasan jelas.
+Contoh: src/app/modul/sub/fitur/detail/versi/file.py.
+Masalah: path panjang, sulit dibaca, sulit diotomasi.
+Perbaikan: ratakan dengan menggabungkan folder yang tidak perlu.
+Gunakan struktur berbasis domain untuk memangkas kedalaman.
+
+Anti-pola A3: Folder terlalu datar.
+Ciri: ratusan file berada dalam satu folder.
+Masalah: sulit dicari, sulit diuji, sulit dipahami.
+Perbaikan: kelompokkan berdasarkan peran atau domain.
+Pecah secara bertahap, jangan sekaligus.
+
+Anti-pola A4: Duplikasi peran.
+Ciri: ada tests/ dan test/ sekaligus.
+Ciri: ada config/ dan configs/ sekaligus.
+Ciri: ada src/ dan source/ sekaligus.
+Masalah: membingungkan, memecah perhatian, menyulitkan otomasi.
+Perbaikan: pilih satu konvensi, migrasikan yang lain, perbarui referensi.
+
+Anti-pola A5: File kode di folder data.
+Ciri: file .py atau .js berada di data/.
+Masalah: mencampur sumber dan bahan, menyulitkan build.
+Perbaikan: pindahkan kode ke src/ atau scripts/.
+
+Anti-pola A6: File data di folder kode.
+Ciri: file .csv atau .parquet berada di src/.
+Masalah: mengotori kode, memperbesar repositori, menyulitkan build.
+Perbaikan: pindahkan ke data/ atau data/samples/.
+
+Anti-pola A7: File tes di folder sumber.
+Ciri: test_pelatihan.py berada di src/model/.
+Masalah: tes ikut terpasang di produksi, mengaburkan batas.
+Perbaikan: pindahkan ke tests/unit/ atau ke folder tes paket.
+
+Anti-pola A8: File konfigurasi di dokumentasi.
+Ciri: production.yaml berada di docs/.
+Masalah: risiko rahasia, sulit ditemukan, mudah usang.
+Perbaikan: pindahkan ke configs/ atau infra/.
+
+Anti-pola A9: Rahasia di repositori.
+Ciri: file .env, credentials.json, service-account.json dilacak Git.
+Masalah: kebocoran rahasia, risiko keamanan serius.
+Perbaikan: hapus dari Git, rotasi rahasia, gunakan manajer rahasia.
+Tambahkan pola ke .gitignore.
+Periksa riwayat Git, rahasia mungkin masih ada.
+Gunakan alat pemindai rahasia.
+
+Anti-pola A10: Data besar di repositori.
+Ciri: file data berukuran ratusan MB atau GB dilacak Git.
+Masalah: repositori membengkak, clone lambat, sulit dipindahkan.
+Perbaikan: gunakan penyimpanan objek, DVC, atau Git LFS.
+Dokumentasikan cara memperoleh data.
+Simpan hanya data contoh kecil di repositori.
+
+Anti-pola A11: Artefak di repositori.
+Ciri: model .pkl besar, checkpoint, file build, log dilacak Git.
+Masalah: repositori kotor, riwayat membengkak, sulit dirawat.
+Perbaikan: abaikan artefak, simpan di penyimpanan terpisah.
+Gunakan CI untuk menghasilkan ulang artefak.
+
+Anti-pola A12: Vendor tanpa lisensi.
+Ciri: folder vendor/ atau third_party/ tanpa catatan lisensi.
+Masalah: risiko hukum, sulit melacak asal kode.
+Perbaikan: catat lisensi setiap paket pihak ketiga.
+Simpan file LICENSE pihak ketiga di folder yang jelas.
+
+Anti-pola A13: Cache di repositori.
+Ciri: folder __pycache__/, .pytest_cache/, node_modules/, .mypy_cache/ dilacak Git.
+Masalah: repositori membengkak, cepat usang, tidak deterministik.
+Perbaikan: tambahkan ke .gitignore, hapus dari indeks Git.
+
+Anti-pola A14: Build di folder sumber.
+Ciri: file .class, .o, .so, .dll berada di src/.
+Masalah: mencampur sumber dan hasil, sulit diprediksi.
+Perbaikan: arahkan output build ke dist/ atau build/.
+
+Anti-pola A15: Struktur tidak konsisten antar paket.
+Ciri: paket A memakai src/, paket B memakai lib/.
+Masalah: membingungkan kontributor, menyulitkan otomasi.
+Perbaikan: pilih satu konvensi untuk semua paket.
+
+Anti-pola A16: Nama folder ambigu.
+Ciri: ada folder umum/, lain/, berbagai/, miscellaneous/.
+Masalah: tidak jelas perannya, mudah menumpuk.
+Perbaikan: ganti dengan nama yang menjelaskan peran.
+
+Anti-pola A17: Nama file tidak deskriptif.
+Ciri: file1.py, coba.py, baru.py, fix.py, fix2.py, final.py.
+Masalah: tidak jelas isinya, sulit dicari, mudah salah pakai.
+Perbaikan: ganti dengan nama yang menjelaskan isi atau aksi.
+
+Anti-pola A18: Dependensi melingkar antar folder.
+Ciri: paket A mengimpor paket B, paket B mengimpor paket A.
+Masalah: sulit diuji, sulit dipecah, sulit dipahami.
+Perbaikan: pindahkan kode bersama ke paket netral.
+Arahkan dependensi ke lapisan yang lebih stabil.
+
+Anti-pola A19: Logika bisnis di lapisan presentasi.
+Ciri: aturan bisnis berada di file api.py atau rute/.
+Masalah: sulit diuji tanpa server, sulit dipakai ulang.
+Perbaikan: pindahkan aturan bisnis ke domain/ atau layanan/.
+
+Anti-pola A20: Akses basis data di lapisan presentasi.
+Ciri: SQL langsung di file rute/.
+Masalah: sulit diuji, sulit diganti, sulit diamankan.
+Perbaikan: pindahkan akses data ke repositori/ atau infrastruktur/.
+
+Anti-pola A21: Konfigurasi produksi di file yang dilacak.
+Ciri: configs/production.yaml memuat kredensial asli.
+Masalah: kebocoran rahasia, risiko keamanan.
+Perbaikan: gunakan variabel lingkungan, templat konfigurasi, dan manajer rahasia.
+
+Anti-pola A22: Folder kosong tanpa .gitkeep.
+Ciri: folder dibuat tetapi hilang saat clone karena Git tidak melacak folder kosong.
+Masalah: struktur tidak konsisten antar checkout.
+Perbaikan: tambahkan .gitkeep atau file README.md.
+
+Anti-pola A23: File .gitkeep di folder yang berisi file.
+Ciri: .gitkeep tetap ada padahal folder sudah berisi file.
+Masalah: kebingungan kecil, tidak berbahaya, sebaiknya dirapikan.
+Perbaikan: hapus .gitkeep jika sudah tidak perlu.
+
+Anti-pola A24: Migrasi yang diubah setelah rilis.
+Ciri: file migrasi lama diedit, bukan ditambah migrasi baru.
+Masalah: basis data tidak konsisten antar lingkungan.
+Perbaikan: tambahkan migrasi baru, jangan edit migrasi lama.
+
+Anti-pola A25: Struktur tidak terdokumentasi.
+Ciri: tidak ada README atau docs/struktur-folder.md.
+Masalah: onboarding lambat, keputusan struktur hilang.
+Perbaikan: tulis dokumentasi struktur, perbarui saat berubah.
+
+BAGIAN 3: POLA REFAKTOR STRUKTUR
+Pola R1: Pindahkan, jangan salin.
+Pindahkan file dengan Git mv agar riwayat terjaga.
+Jangan salin lalu hapus manual.
+Perbarui impor, tes, konfigurasi, skrip, dan dokumentasi.
+Jalankan tes setelah pemindahan.
+
+Pola R2: Satu langkah, satu tujuan.
+Lakukan satu perubahan struktur per commit.
+Jangan mencampur refaktor struktur dengan perubahan logika.
+Pesan commit harus menjelaskan alasan perubahan.
+
+Pola R3: Migrasi bertahap.
+Jika struktur besar, migrasikan per paket atau per fitur.
+Gunakan re-export sementara untuk kompatibilitas.
+Hapus re-export setelah semua referensi diperbarui.
+
+Pola R4: Pemetaan path.
+Sebelum migrasi, buat tabel path lama dan path baru.
+Gunakan tabel untuk memperbarui referensi.
+Simpan tabel di changelog atau docs/struktur-folder.md.
+
+Pola R5: Pemeriksaan referensi menyeluruh.
+Cari path lama di kode, tes, konfigurasi, skrip, CI, dan dokumentasi.
+Gunakan grep atau alat pencarian repositori.
+Perbaiki semua referensi sebelum menghapus path lama.
+
+Pola R6: Kontrak uji sebagai jaring pengaman.
+Pastikan tes mencakup perilaku utama sebelum refaktor.
+Jalankan tes sebelum dan sesudah refaktor.
+Jika tes gagal, perbaiki sebelum melanjutkan.
+
+Pola R7: Deprekasi bertahap.
+Tandai path lama sebagai deprecated.
+Berikan peringatan saat path lama dipakai.
+Hapus path lama setelah periode transisi.
+
+Pola R8: Penghapusan yang aman.
+Sebelum menghapus, cari semua referensi.
+Pastikan tidak ada impor atau pemanggilan.
+Jalankan tes penuh.
+Dokumentasikan penghapusan di changelog.
+
+Pola R9: Rename dengan metadata.
+Gunakan Git mv untuk mempertahankan riwayat.
+Perbarui nama di dokumentasi dan konfigurasi.
+Periksa nama di skrip CI.
+Periksa nama di dependensi.
+
+Pola R10: Pemisahan bertahap.
+Jika satu folder terlalu besar, pecah menjadi beberapa subfolder.
+Pecah berdasarkan domain atau peran.
+Pindahkan tes bersama file yang diuji.
+Perbarui dokumentasi setelah pemecahan.
+
+Pola R11: Penggabungan terkendali.
+Jika ada folder duplikat, gabungkan secara bertahap.
+Pastikan tidak ada konflik nama file.
+Perbarui semua referensi.
+Uji setelah penggabungan.
+
+Pola R12: Struktur yang dapat diulang.
+Buat templat struktur proyek baru.
+Gunakan generator untuk membuat struktur konsisten.
+Dokumentasikan templat di tools/generator/.
+
+BAGIAN 4: STRUKTUR BERBASIS DOMAIN APLIKASI
+Setiap domain aplikasi memiliki kebutuhan struktur yang berbeda.
+AI harus mengenali domain dari konteks dan menyesuaikan saran.
+
+DOMAIN D1: Aplikasi web full-stack.
+Kebutuhan: frontend, backend, API, basis data, aset, deployment.
+Struktur umum:
+proyek-web/
+├── README.md
+├── frontend/
+│   ├── package.json
+│   ├── src/
+│   │   ├── komponen/
+│   │   ├── halaman/
+│   │   ├── layanan/
+│   │   └── utilitas/
+│   └── public/
+├── backend/
+│   ├── pyproject.toml
+│   ├── src/
+│   │   ├── rute/
+│   │   ├── layanan/
+│   │   ├── model/
+│   │   └── konfigurasi.py
+│   └── tests/
+├── database/
+│   └── migrations/
+├── deployments/
+│   ├── docker-compose.yml
+│   └── nginx.conf
+└── docs/
+
+DOMAIN D2: Aplikasi seluler.
+Kebutuhan: Android, iOS, aset, terjemahan, build, distribusi.
+Struktur umum:
+proyek-seluler/
+├── README.md
+├── android/
+│   ├── app/
+│   └── gradle/
+├── ios/
+│   ├── Proyek.xcodeproj/
+│   └── Proyek/
+├── shared/
+│   └── src/
+├── assets/
+│   ├── ikon/
+│   └── gambar/
+├── locales/
+│   ├── id.json
+│   └── en.json
+├── fastlane/
+│   ├── Fastfile
+│   └── Appfile
+└── docs/
+
+DOMAIN D3: Alat baris perintah (CLI).
+Kebutuhan: perintah, subperintah, konfigurasi, distribusi.
+Struktur umum:
+proyek-cli/
+├── README.md
+├── pyproject.toml
+├── src/
+│   └── proyek_cli/
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── perintah/
+│       │   ├── __init__.py
+│       │   ├── jalankan.py
+│       │   └── konfigurasi.py
+│       └── utilitas/
+├── tests/
+├── docs/
+└── scripts/
+
+DOMAIN D4: Pustaka (library).
+Kebutuhan: API publik, dokumentasi, contoh, versi, distribusi.
+Struktur umum:
+proyek-pustaka/
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── pyproject.toml
+├── src/
+│   └── nama_pustaka/
+│       ├── __init__.py
+│       └── modul.py
+├── tests/
+├── docs/
+│   ├── index.md
+│   ├── referensi-api.md
+│   └── contoh/
+├── examples/
+└── benchmarks/
+
+DOMAIN D5: Proyek pembelajaran mesin.
+Kebutuhan: data, model, eksperimen, evaluasi, pipeline, artefak.
+Struktur umum:
+proyek-ml/
+├── README.md
+├── pyproject.toml
+├── configs/
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   ├── processed/
+│   └── samples/
+├── notebooks/
+├── src/
+│   ├── data/
+│   ├── fitur/
+│   ├── model/
+│   └── evaluasi/
+├── pipelines/
+├── models/
+├── artifacts/
+├── reports/
+├── tests/
+└── deployments/
+
+DOMAIN D6: Proyek gim.
+Kebutuhan: aset, kode, adegan, audio, build, distribusi.
+Struktur umum:
+proyek-gim/
+├── README.md
+├── assets/
+│   ├── gambar/
+│   ├── audio/
+│   ├── model3d/
+│   └── animasi/
+├── scenes/
+├── scripts/
+├── sumber/
+│   └── kode/
+├── build/
+├── tests/
+├── docs/
+└── deployments/
+
+DOMAIN D7: Proyek tertanam (embedded).
+Kebutuhan: firmware, driver, konfigurasi papan, uji perangkat keras.
+Struktur umum:
+proyek-tertanam/
+├── README.md
+├── papan/
+│   ├── papan_a/
+│   └── papan_b/
+├── driver/
+├── aplikasi/
+├── konfigurasi/
+├── tes/
+│   ├── unit/
+│   ├── perangkat-keras/
+│   └── integrasi/
+├── skrip/
+├── dokumentasi/
+└── deployments/
+
+DOMAIN D8: Proyek infrastruktur.
+Kebutuhan: modul, lingkungan, variabel, uji, dokumentasi.
+Struktur umum:
+proyek-infra/
+├── README.md
+├── modules/
+│   ├── jaringan/
+│   └── basis-data/
+├── environments/
+│   ├── dev/
+│   ├── staging/
+│   └── prod/
+├── tests/
+├── docs/
+└── scripts/
+
+DOMAIN D9: Proyek data pipeline.
+Kebutuhan: sumber, transformasi, tujuan, jadwal, uji data.
+Struktur umum:
+proyek-data/
+├── README.md
+├── pipelines/
+├── sumber/
+├── transformasi/
+├── tujuan/
+├── jadwal/
+├── tes/
+│   ├── tes_data/
+│   └── tes_pipeline/
+├── docs/
+└── deployments/
+
+DOMAIN D10: Proyek dokumentasi.
+Kebutuhan: konten, tema, aset, pencarian, publikasi.
+Struktur umum:
+proyek-dokumentasi/
+├── README.md
+├── konten/
+│   ├── index.md
+│   ├── panduan/
+│   └── referensi/
+├── tema/
+├── aset/
+├── konfigurasi/
+├── skrip/
+└── deployments/
+
+BAGIAN 5: STRUKTUR PROYEK POLIGLOT
+Proyek poliglot memakai lebih dari satu bahasa pemrograman.
+Kebutuhan: pemisahan bahasa, antarmuka antar bahasa, build, tes.
+AI harus mengenali batas bahasa dan batas antarmuka.
+Struktur umum proyek poliglot:
+proyek-poliglot/
+├── README.md
+├── Makefile
+├── python/
+│   ├── pyproject.toml
+│   ├── src/
+│   └── tests/
+├── typescript/
+│   ├── package.json
+│   ├── src/
+│   └── tests/
+├── rust/
+│   ├── Cargo.toml
+│   ├── src/
+│   └── tests/
+├── protobuf/
+│   ├── skema.proto
+│   └── generated/
+├── antarmuka/
+│   ├── dokumentasi.md
+│   └── kontrak.md
+├── integrasi/
+│   ├── test_lintas_bahasa.py
+│   └── test_kontrak.py
+├── docs/
+└── deployments/
+Aturan proyek poliglot:
+Pisahkan setiap bahasa dalam folder sendiri.
+Jangan mencampur file sumber bahasa berbeda dalam satu folder.
+Gunakan folder antarmuka untuk kontrak.
+Gunakan protobuf atau skema serupa untuk kontrak data.
+Bangun setiap bahasa dengan alat bawaannya.
+Sediakan Makefile atau skrip tingkat atas untuk orkestrasi.
+Tes kontrak dijalankan lintas bahasa.
+Dokumentasikan cara build dan tes setiap bahasa.
+
+BAGIAN 6: METADATA DAN VALIDASI STRUKTUR
+Struktur folder dapat dijelaskan dengan metadata.
+Metadata membantu AI dan alat otomasi memahami aturan.
+Contoh metadata: file konfigurasi struktur.
+struktur.yaml
+├── akar: proyek-pra-pelatihan
+├── aturan:
+│   ├── folder_wajib: [src, tests, docs, configs]
+│   ├── larangan:
+│   │   ├── file_py_di_data
+│   │   ├── file_csv_di_src
+│   │   ├── rahasia_di_repositori
+│   │   └── tes_di_src
+│   └── penamaan:
+│       ├── folder: [huruf-kecil, tanda-hubung]
+│       └── file_py: [huruf-kecil, garis-bawah]
+├── pemetaan_fungsi:
+│   ├── F1: src/data/pemuat.py
+│   ├── F3: src/model/pelatihan.py
+│   └── F5: src/layanan/api.py
+└── riwayat:
+    ├── 2024-01-01: struktur-awal
+    └── 2024-06-01: pemisahan-fitur
+
+Dengan metadata, AI dapat:
+- Memeriksa apakah struktur memenuhi aturan.
+- Mendeteksi pelanggaran aturan.
+- Menyarankan perbaikan yang konsisten.
+- Menghasilkan laporan audit struktur.
+- Memetakan fungsi ke path aktual.
+- Melacak evolusi struktur dari waktu ke waktu.
+
+Alat validasi struktur dapat berupa skrip.
+Contoh skrip: tools/periksa_struktur.py.
+Skrip memeriksa:
+- Folder wajib ada.
+- Folder terlarang tidak ada.
+- Penamaan konsisten.
+- Tidak ada rahasia di file terlacak.
+- Tidak ada file besar di repositori.
+- Fungsi acuan lengkap.
+Skrip menghasilkan laporan.
+Laporan dapat dijalankan di CI.
+Jika ada pelanggaran berat, CI gagal.
+Jika ada pelanggaran ringan, CI memberi peringatan.
+
+BAGIAN 7: EVOLUSI STRUKTUR DARI WAKTU KE WAKTU
+Struktur folder berevolusi.
+Evolusi dapat terjadi karena pertumbuhan proyek.
+Evolusi dapat terjadi karena perubahan tim.
+Evolusi dapat terjadi karena perubahan teknologi.
+Evolusi dapat terjadi karena perubahan kebutuhan bisnis.
+Evolusi harus dikelola, bukan dibiarkan liar.
+AI harus memahami tahap evolusi struktur.
+
+Tahap T1: Prototipe.
+Struktur datar.
+Satu pengembang.
+Fokus kecepatan.
+Risiko: struktur tidak siap tumbuh.
+Tindakan: catat utang teknis struktur.
+
+Tahap T2: Proyek awal.
+Struktur berbasis peran.
+Beberapa pengembang.
+Fokus kejelasan.
+Risiko: duplikasi peran mulai muncul.
+Tindakan: tetapkan konvensi penamaan.
+
+Tahap T3: Proyek menengah.
+Struktur berbasis domain atau fitur.
+Tim mulai terbagi.
+Fokus batas modul.
+Risiko: dependensi antar fitur.
+Tindakan: tetapkan aturan dependensi.
+
+Tahap T4: Proyek besar.
+Struktur monorepo atau layanan.
+Banyak tim.
+Fokus kontrak dan versioning.
+Risiko: kompleksitas koordinasi.
+Tindakan: dokumentasikan keputusan arsitektur.
+
+Tahap T5: Proyek matang.
+Struktur stabil, modular, terdokumentasi.
+Banyak kontributor.
+Fokus keberlanjutan.
+Risiko: kelelahan perawatan.
+Tindakan: otomasi validasi struktur.
+
+Setiap tahap memiliki risiko khas.
+AI harus menyarankan tindakan sesuai tahap.
+AI harus memperkirakan kapan struktur perlu direfaktor.
+Indikator struktur perlu direfaktor:
+- Folder mulai berisi banyak file serupa.
+- Nama file mulai tidak konsisten.
+- Path mulai panjang dan berbelit.
+- Duplikasi kode antar folder mulai muncul.
+- Tes mulai lambat dijalankan.
+- Onboarding mulai memakan waktu lama.
+- Perubahan kecil mulai menyentuh banyak folder.
+- Deploy mulai sering gagal karena path salah.
+- Konfigurasi mulai tersebar di banyak tempat.
+- Dokumentasi mulai tidak sinkron dengan struktur.
+
+BAGIAN 8: STRUKTUR CONTOH EVOLUSI
+Struktur awal (T1) sederhana:
+proyek/
+├── app.py
+├── data.csv
+├── latih.py
+├── test_app.py
+└── README.md
+
+Struktur setelah refaktor (T2):
+proyek/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── data/
+│   │   └── pemuat.py
+│   ├── model/
+│   │   └── pelatihan.py
+│   └── layanan/
+│       └── api.py
+├── data/
+│   └── samples/
+│       └── contoh.csv
+└── tests/
+    ├── test_pemuat.py
+    └── test_api.py
+
+Struktur setelah refaktor (T3):
+proyek/
+├── README.md
+├── pyproject.toml
+├── configs/
+│   ├── default.yaml
+│   └── production.yaml
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── samples/
+├── src/
+│   ├── data/
+│   │   ├── pemuat.py
+│   │   ├── pembersih.py
+│   │   └── validasi.py
+│   ├── model/
+│   │   ├── pelatihan.py
+│   │   └── evaluasi.py
+│   └── layanan/
+│       └── api.py
+├── tests/
+│   ├── unit/
+│   └── integrasi/
+├── docs/
+├── scripts/
+├── artifacts/
+│   └── checkpoints/
+├── reports/
+└── deployments/
+    └── docker-compose.yml
+
+Struktur setelah refaktor (T4):
+proyek/
+├── README.md
+├── package.json
+├── pnpm-workspace.yaml
+├── apps/
+│   ├── api/
+│   └── dashboard/
+├── packages/
+│   ├── pustaka-data/
+│   ├── pustaka-model/
+│   └── pustaka-konfigurasi/
+├── services/
+│   └── layanan-prediksi/
+├── configs/
+├── data/
+├── tests/
+├── docs/
+├── infra/
+├── deployments/
+└── scripts/
+
+Struktur setelah refaktor (T5):
+proyek/
+├── README.md
+├── struktur.yaml
+├── apps/
+├── packages/
+├── services/
+├── configs/
+├── data/
+├── tests/
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── struktur-folder.md
+│   └── keputusan/
+├── infra/
+├── deployments/
+├── tools/
+│   └── periksa_struktur.py
+├── scripts/
+└── .github/
+    └── workflows/
+
+Dengan contoh ini, AI belajar bahwa struktur berubah secara bertahap.
+AI belajar bahwa setiap tahap memiliki kebutuhan berbeda.
+AI belajar bahwa refaktor harus direncanakan.
+AI belajar bahwa dokumentasi harus diperbarui setiap tahap.
+
+BAGIAN 9: LATIHAN PENALARAN GENERASI 4
+Latihan 1: Deteksi anti-pola.
+Diberikan pohon:
+proyek/
+├── src/
+│   ├── data/
+│   │   └── data_mentah.csv
+│   ├── model/
+│   │   └── test_pelatihan.py
+│   └── .env
+├── old/
+│   └── coba.py
+├── configs/
+│   └── production.yaml
+└── tests/
+    └── test_api.py
+
+AI harus mendeteksi:
+- data_mentah.csv berada di src/data/ (A6).
+- test_pelatihan.py berada di src/model/ (A7).
+- .env berada di src/ (A9).
+- folder old/ berisi coba.py (A1 dan A17).
+- tests/ hanya berisi test_api.py padahal ada kode lain (A25 atau A7).
+
+AI harus menyarankan:
+- Pindahkan data_mentah.csv ke data/raw/.
+- Pindahkan test_pelatihan.py ke tests/unit/.
+- Hapus .env dari Git, rotasi rahasia, tambahkan ke .gitignore.
+- Hapus folder old/ atau ganti nama sesuai tujuan.
+- Tambahkan tes untuk kode data dan model.
+
+Latihan 2: Pilih pola refaktor.
+Diberikan struktur dengan dua folder tests/ dan test/.
+AI harus memilih Pola R11 (Penggabungan terkendali).
+AI harus membuat tabel pemetaan path lama dan baru.
+AI harus memperbarui referensi dan dokumentasi.
+
+Latihan 3: Pilih struktur domain.
+Diberikan proyek yang membutuhkan API, antarmuka web, dan basis data.
+AI harus menyarankan Domain D1 (web full-stack) atau Domain D4 (pustaka) jika hanya API.
+AI harus menjelaskan alasan pilihan.
+AI harus menyertakan folder wajib.
+
+Latihan 4: Proyek poliglot.
+Diberikan proyek yang memakai Python untuk model dan TypeScript untuk dashboard.
+AI harus menyarankan struktur poliglot dengan python/ dan typescript/ terpisah.
+AI harus menyarankan folder antarmuka/ untuk kontrak.
+AI harus menyarankan Makefile untuk orkestrasi.
+AI harus menyarankan tes kontrak lintas bahasa.
+
+Latihan 5: Metadata struktur.
+Diberikan kebutuhan validasi otomatis.
+AI harus menyarankan file struktur.yaml.
+AI harus menyarankan skrip tools/periksa_struktur.py.
+AI harus menyarankan integrasi ke CI.
+AI harus menjelaskan aturan yang diperiksa.
+
+Latihan 6: Evolusi struktur.
+Diberikan proyek dengan struktur datar berisi 40 file.
+AI harus mengenali tahap T1 atau T2.
+AI harus menyarankan refaktor bertahap ke T2.
+AI harus menyarankan pemisahan src/, tests/, dan data/.
+AI harus menyarankan pemetaan path.
+AI harus menyarankan pengujian setelah refaktor.
+
+Latihan 7: Anti-pola keamanan.
+Diberikan file .env dilacak Git.
+AI harus memprioritaskan perbaikan ini di atas anti-pola lain.
+AI harus menyarankan rotasi rahasia.
+AI harus menyarankan pemindaian riwayat Git.
+AI harus menyarankan penambahan .gitignore.
+AI harus menyarankan penggantian dengan .env.example.
+
+Latihan 8: Anti-pola data besar.
+Diberikan file data berukuran 5 GB dilacak Git.
+AI harus menyarankan strategi penyimpanan data besar.
+AI harus menyarankan DVC atau Git LFS atau penyimpanan objek.
+AI harus menyarankan menyimpan hanya data contoh kecil di repositori.
+AI harus menyarankan dokumentasi cara memperoleh data.
+
+Latihan 9: Struktur tertanam.
+Diberikan proyek firmware untuk dua papan berbeda.
+AI harus menyarankan Domain D7.
+AI harus menyarankan pemisahan papan/.
+AI harus menyarankan driver/ untuk driver bersama.
+AI harus menyarankan tes/ dengan subfolder perangkat-keras/.
+
+Latihan 10: Struktur infrastruktur.
+Diberikan proyek Terraform dengan tiga lingkungan.
+AI harus menyarankan Domain D8.
+AI harus menyarankan modules/ untuk modul.
+AI harus menyarankan environments/ untuk lingkungan.
+AI harus menyarankan pemisahan variabel per lingkungan.
+AI harus menyarankan tes dan dokumentasi.
+
+BAGIAN 10: ATURAN UMUM UNTUK AI
+AI harus mendeteksi anti-pola sebelum menyarankan struktur baru.
+AI harus memprioritaskan anti-pola keamanan.
+AI harus memprioritaskan anti-pola yang menghalangi pengujian.
+AI harus memprioritaskan anti-pola yang menghalangi deployment.
+AI harus memprioritaskan anti-pola yang menghalangi onboarding.
+AI harus menghormati konteks prototipe.
+AI harus mencatat utang teknis pada prototipe.
+AI harus menyarankan refaktor bertahap.
+AI harus membuat tabel pemetaan path saat refaktor.
+AI harus memperbarui referensi di seluruh repositori.
+AI harus menjalankan tes setelah refaktor.
+AI harus memperbarui dokumentasi setelah refaktor.
+AI harus mencatat perubahan di changelog.
+AI harus menjelaskan alasan setiap saran.
+AI harus menghindari saran yang merusak riwayat Git.
+AI harus menghindari saran yang mengejutkan pengguna.
+AI harus meminta konfirmasi sebelum tindakan destruktif.
+AI harus mengenali domain proyek.
+AI harus menyesuaikan struktur dengan domain.
+AI harus mengenali proyek poliglot.
+AI harus memisahkan bahasa dalam folder sendiri.
+AI harus menyediakan kontrak antar bahasa.
+AI harus menyediakan metadata struktur jika diminta.
+AI harus menyediakan validasi struktur jika diminta.
+AI harus memahami tahap evolusi struktur.
+AI harus menyarankan tindakan sesuai tahap.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan kejelasan.
+AI harus selalu mengutamakan konsistensi.
+AI harus selalu mengutamakan keterbacaan.
+AI harus selalu mengutamakan perawatan.
+AI harus selalu mengutamakan reproduksibilitas.
+AI harus selalu mengutamakan dokumentasi.
+AI harus selalu mengutamakan pengujian.
+
+BAGIAN 11: RINGKASAN GENERASI 4
+Anti-pola struktur harus dikenali dan dikelola.
+Anti-pola keamanan adalah prioritas tertinggi.
+Anti-pola data besar dan artefak harus ditangani dengan strategi khusus.
+Anti-pola duplikasi peran harus dikonsolidasikan.
+Anti-pola file salah tempat harus dipindahkan.
+Pola refaktor membantu migrasi yang aman.
+Pola pemetaan path membantu melacak perubahan.
+Pola deprekasi membantu transisi.
+Pola validasi membantu menjaga kualitas.
+Domain aplikasi memengaruhi struktur.
+Aplikasi web membutuhkan frontend, backend, database, deployment.
+Aplikasi seluler membutuhkan android, ios, shared, assets, locales.
+CLI membutuhkan perintah dan subperintah yang terpisah.
+Pustaka membutuhkan API publik, dokumentasi, contoh, versi.
+Proyek ML membutuhkan data, model, pipeline, artefak, laporan.
+Gim membutuhkan aset, adegan, kode, build, distribusi.
+Tertanam membutuhkan papan, driver, aplikasi, tes perangkat keras.
+Infrastruktur membutuhkan modul, lingkungan, uji, dokumentasi.
+Data pipeline membutuhkan sumber, transformasi, tujuan, jadwal, uji data.
+Dokumentasi membutuhkan konten, tema, aset, publikasi.
+Proyek poliglot memisahkan bahasa dan kontrak.
+Metadata struktur membantu validasi otomatis.
+Validasi struktur dapat dijalankan di CI.
+Struktur berevolusi dari prototipe ke matang.
+Setiap tahap evolusi memiliki risiko dan tindakan.
+AI harus mengenali tahap dan menyarankan tindakan yang sesuai.
+AI harus memahami bahwa struktur adalah alat, bukan tujuan.
+Tujuan akhir adalah proyek yang aman, jelas, konsisten, mudah dirawat, mudah diuji, mudah dipahami, dan mudah dikembangkan.
+Dengan generasi keempat ini, AI dilatih untuk mendeteksi struktur yang bermasalah.
+AI dilatih untuk memilih pola refaktor yang tepat.
+AI dilatih untuk menyesuaikan struktur dengan domain proyek.
+AI dilatih untuk mendukung proyek poliglot.
+AI dilatih untuk menggunakan metadata dan validasi struktur.
+AI dilatih untuk memahami evolusi struktur dari waktu ke waktu.
+Akhir generasi 4.

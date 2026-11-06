@@ -1,0 +1,65 @@
+Buatkan prompt untuk Chat GPT.
+menggunakan bahasa indonesia. format teks.
+di dalam blok: ```text ...```
+
+sempurnakan juga kata atau kalimat saya. agar lebih mudah di pahami.
+jangan mengarang hal yang anda tidak ketahui, atau tidak yakin.
+
+```text
+UPDATE AXION AI Agents CLI.
+
+saat penginstalan. muncul eror berikut:
+```bash
+curl -fsSL https://raw.githubusercontent.com/azrielspace852-wq/axion-ai-agents-cli/main/install.sh | bash
+[INFO] AXION AI Agents CLI installer
+[ OK ] Node.js v24.22.2 and npm 12.2.1 detected
+[INFO] Downloading source from https://github.com/azrielspace852-wq/axion-ai-agents-cli (main)...
+[INFO] Installing dependencies (npm install)...
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+
+added 55 packages in 54s
+[INFO] Building and running regression tests (npm test)...
+npm notice run axion-ai-agents-cli@1.0.1 test
+npm notice run npm run build && node --test tests/*.test.cjs
+npm notice run axion-ai-agents-cli@1.0.1 build
+npm notice run tsc -p tsconfig.json
+src/agent/providers/GoogleAIProvider.ts:2:30 - error TS7016: Could not find a declaration file for module 'uuid'. '/data/data/com.termux/files/home/.axion/.app.stage.22735/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+
+2 import { v4 as uuidv4 } from 'uuid';
+                               ~~~~~~
+
+src/agent/providers/OpenAICompatProvider.ts:2:30 - error TS7016: Could not find a declaration file for module 'uuid'. '/data/data/com.termux/files/home/.axion/.app.stage.22735/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+
+2 import { v4 as uuidv4 } from 'uuid';
+                               ~~~~~~
+
+src/storage/ConversationStore.ts:3:30 - error TS7016: Could not find a declaration file for module 'uuid'. '/data/data/com.termux/files/home/.axion/.app.stage.22735/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+
+3 import { v4 as uuidv4 } from 'uuid';
+                               ~~~~~~
+
+src/storage/MemoryStore.ts:3:30 - error TS7016: Could not find a declaration file for module 'uuid'. '/data/data/com.termux/files/home/.axion/.app.stage.22735/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+
+3 import { v4 as uuidv4 } from 'uuid';
+                               ~~~~~~
+
+
+Found 4 errors in 4 files.
+
+Errors  Files
+     1  src/agent/providers/GoogleAIProvider.ts:2
+     1  src/agent/providers/OpenAICompatProvider.ts:2
+     1  src/storage/ConversationStore.ts:3
+     1  src/storage/MemoryStore.ts:3
+[FAIL] Build or regression tests failed. The previous installation has been left untouched.
+```
+
+silahkan anda analisis dan perbaiki.
+lalu UPDATE juga README.md atau CHANGELOG.
+Jangan terlewatkan 1 pun.
+jika sudah selesai. kirimkan sebagai zip.
+```

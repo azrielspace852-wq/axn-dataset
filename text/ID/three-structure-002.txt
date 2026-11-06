@@ -1,0 +1,803 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 2
+Bahasa: Indonesia
+Fokus: Struktur lanjutan, monorepo, pemisahan domain, paket bersama, lingkungan, pengujian, dan tata kelola.
+Tujuan: Melatih AI membaca struktur folder kompleks, memahami peran setiap folder dan file, serta menyarankan struktur yang konsisten.
+
+BAGIAN 1: NARASI LANJUTAN
+Pada generasi pertama, AI belajar bahwa folder adalah wadah dan file adalah unit data.
+Pada generasi kedua, AI belajar bahwa struktur folder dapat memiliki banyak lapisan peran.
+Struktur folder bukan hanya daftar nama.
+Struktur folder adalah representasi organisasi proyek.
+Struktur folder adalah kontrak kerja antar kontributor.
+Struktur folder adalah peta navigasi bagi manusia dan AI.
+Proyek kecil dapat memakai struktur sederhana.
+Proyek besar membutuhkan struktur yang lebih terurai.
+Semakin besar proyek, semakin penting pemisahan tanggung jawab.
+Pemisahan tanggung jawab berarti setiap folder punya tujuan jelas.
+Tujuan folder harus dapat dijelaskan dalam satu kalimat.
+Jika tujuan folder tidak jelas, folder tersebut perlu ditinjau.
+Monorepo adalah repositori tunggal yang memuat banyak paket atau aplikasi.
+Monorepo membantu berbagi kode dan konfigurasi.
+Monorepo menuntut aturan struktur yang lebih ketat.
+Dalam monorepo, folder apps/ biasanya memuat aplikasi yang dapat dijalankan.
+Folder packages/ biasanya memuat pustaka bersama.
+Folder services/ biasanya memuat layanan mandiri.
+Folder infra/ biasanya memuat konfigurasi infrastruktur.
+Folder tools/ biasanya memuat alat bantu pengembangan.
+Folder docs/ biasanya memuat dokumentasi lintas paket.
+Folder tests/ biasanya memuat pengujian lintas paket.
+Folder data/ biasanya memuat data contoh atau data bersama.
+Folder configs/ biasanya memuat konfigurasi bersama.
+Folder scripts/ biasanya memuat skrip otomasi tingkat repositori.
+Folder .github/ biasanya memuat alur CI/CD.
+Folder .devcontainer/ biasanya memuat konfigurasi lingkungan pengembangan.
+Folder .vscode/ biasanya memuat pengaturan editor.
+Folder migrations/ biasanya memuat migrasi basis data.
+Folder schemas/ biasanya memuat skema data atau API.
+Folder public/ biasanya memuat aset publik.
+Folder assets/ biasanya memuat aset yang diproses aplikasi.
+Folder static/ biasanya memuat file statis.
+Folder templates/ biasanya memuat templat teks atau HTML.
+Folder locales/ biasanya memuat terjemahan.
+Folder fixtures/ biasanya memuat data contoh untuk tes.
+Folder mocks/ biasanya memuat tiruan layanan eksternal.
+Folder benchmarks/ biasanya memuat pengukuran performa.
+Folder examples/ biasanya memuat contoh penggunaan.
+Folder playground/ biasanya memuat ruang eksperimen.
+Folder sandbox/ biasanya memuat uji coba terisolasi.
+Folder vendor/ biasanya memuat kode pihak ketiga.
+Folder third_party/ juga dapat memuat kode pihak ketiga.
+Folder generated/ biasanya memuat kode hasil pembangkitan.
+Folder dist/ biasanya memuat hasil build.
+Folder build/ biasanya memuat artefak build.
+Folder coverage/ biasanya memuat laporan cakupan tes.
+Folder tmp/ biasanya memuat file sementara.
+Folder cache/ biasanya memuat cache.
+Folder out/ biasanya memuat keluaran proses.
+Folder bin/ biasanya memuat skrip atau biner yang dapat dijalankan.
+Folder lib/ biasanya memuat pustaka.
+Folder src/ biasanya memuat kode sumber utama.
+Folder test/ dan tests/ sama-sama umum, tetapi harus konsisten.
+Pilih satu konvensi dan gunakan di seluruh repositori.
+Jangan mencampur tests/ dan test/ tanpa alasan.
+Jangan mencampur src/ dan source/ tanpa alasan.
+Jangan mencampur config/ dan configs/ tanpa alasan.
+Konsistensi lebih penting daripada preferensi pribadi.
+Nama folder sebaiknya menggunakan huruf kecil.
+Nama folder sebaiknya menggunakan tanda hubung untuk kata majemuk.
+Nama file sebaiknya menggunakan huruf kecil dan tanda hubung.
+Nama modul Python sebaiknya menggunakan garis bawah.
+Nama kelas sebaiknya menggunakan CamelCase.
+Nama variabel sebaiknya menggunakan snake_case.
+Nama konstanta sebaiknya menggunakan HURUF_BESAR.
+AI harus memahami bahwa konvensi berbeda antar bahasa.
+Python umumnya memakai snake_case untuk modul dan fungsi.
+JavaScript dan TypeScript umumnya memakai camelCase untuk variabel.
+Komponen React umumnya memakai PascalCase.
+File konfigurasi YAML umumnya memakai huruf kecil dan tanda hubung.
+File dokumentasi Markdown umumnya memakai huruf kecil dan tanda hubung.
+File pengujian Python umumnya diawali test_.
+File pengujian JavaScript umumnya berakhiran .test.js atau .spec.js.
+File pengujian TypeScript umumnya berakhiran .test.ts atau .spec.ts.
+File antarmuka TypeScript umumnya berakhiran .d.ts.
+File konfigurasi lingkungan umumnya berakhiran .env.
+File contoh lingkungan umumnya bernama .env.example.
+File rahasia tidak boleh disimpan di repositori.
+File rahasia harus disimpan di manajer rahasia.
+File contoh boleh memuat nama variabel tanpa nilai rahasia.
+File README.md harus ada di akar repositori.
+README.md menjelaskan tujuan repositori.
+README.md menjelaskan cara memasang dependensi.
+README.md menjelaskan cara menjalankan aplikasi.
+README.md menjelaskan cara menjalankan tes.
+README.md menjelaskan struktur folder utama.
+README.md menautkan dokumentasi lebih rinci.
+Setiap paket dalam monorepo sebaiknya memiliki README.md sendiri.
+README paket menjelaskan tanggung jawab paket.
+README paket menjelaskan cara memakai paket.
+README paket menjelaskan batasan paket.
+Setiap aplikasi dalam monorepo sebaiknya memiliki README.md sendiri.
+README aplikasi menjelaskan cara menjalankan aplikasi.
+README aplikasi menjelaskan konfigurasi yang dibutuhkan.
+README aplikasi menjelaskan endpoint atau antarmuka utama.
+Folder docs/ sebaiknya memuat indeks dokumentasi.
+Dokumentasi arsitektur menjelaskan batas antar modul.
+Dokumentasi keputusan menjelaskan alasan keputusan teknis.
+Dokumentasi struktur menjelaskan aturan penempatan file.
+Dokumentasi kontribusi menjelaskan alur kerja Git.
+Dokumentasi rilis menjelaskan proses versioning.
+Dokumentasi keamanan menjelaskan penanganan rahasia.
+Dokumentasi operasi menjelaskan cara deployment.
+Dokumentasi pemulihan menjelaskan cara rollback.
+Folder infra/ sebaiknya memisahkan lingkungan.
+Folder infra/dev/ memuat konfigurasi pengembangan.
+Folder infra/staging/ memuat konfigurasi staging.
+Folder infra/prod/ memuat konfigurasi produksi.
+Jangan mencampur konfigurasi produksi dan pengembangan.
+Jangan menaruh kredensial produksi di repositori.
+Gunakan variabel lingkungan untuk nilai sensitif.
+Gunakan templat konfigurasi untuk nilai yang berubah.
+Gunakan validasi konfigurasi saat aplikasi mulai.
+Gagal cepat jika konfigurasi tidak valid.
+Folder schemas/ memuat definisi kontrak data.
+Skema membantu validasi masukan dan keluaran.
+Skema membantu AI memahami bentuk data.
+Skema harus diberi versi jika berubah.
+Folder migrations/ memuat perubahan basis data.
+Migrasi harus berurutan dan dapat dilacak.
+Migrasi harus memiliki deskripsi jelas.
+Migrasi tidak boleh diubah setelah diterapkan di produksi.
+Folder tests/ sebaiknya mencerminkan struktur src/.
+Jika kode ada di src/data/pemuat.py, tes ada di tests/unit/data/test_pemuat.py.
+Jika kode ada di src/model/pelatihan.py, tes ada di tests/unit/model/test_pelatihan.py.
+Tes unit menguji fungsi kecil secara terisolasi.
+Tes integrasi menguji interaksi antar komponen.
+Tes end-to-end menguji alur pengguna.
+Tes kontrak menguji kesesuaian API.
+Tes performa menguji batas kecepatan dan memori.
+Tes keamanan menguji validasi dan akses.
+Tes regresi mencegah bug lama muncul kembali.
+Fixture adalah data atau objek contoh untuk tes.
+Mock adalah tiruan objek atau layanan.
+Stub adalah tiruan sederhana dengan jawaban tetap.
+Fake adalah implementasi ringan yang berfungsi.
+Gunakan fixture untuk mengurangi duplikasi.
+Gunakan mock untuk layanan eksternal.
+Jangan menguji layanan eksternal secara langsung di tes unit.
+Pisahkan tes cepat dan tes lambat.
+Tes cepat dijalankan pada setiap perubahan.
+Tes lambat dijalankan pada CI atau nightly.
+Folder benchmarks/ memuat skrip pengukuran performa.
+Benchmark harus dapat dijalankan ulang.
+Benchmark harus mencatat lingkungan pengujian.
+Benchmark harus membandingkan hasil secara adil.
+Folder examples/ memuat contoh penggunaan yang dapat dijalankan.
+Contoh harus sederhana dan fokus.
+Contoh harus menggunakan data contoh.
+Contoh tidak boleh bergantung pada rahasia.
+Folder scripts/ memuat skrip operasional.
+Skrip harus memiliki nama yang menjelaskan aksi.
+Skrip harus menangani kesalahan dengan jelas.
+Skrip harus mencetak bantuan penggunaan.
+Skrip harus aman dijalankan berulang.
+Skrip destruktif harus meminta konfirmasi.
+Skrip harus mencatat langkah penting.
+Folder tools/ memuat alat pengembangan internal.
+Alat internal harus didokumentasikan.
+Alat internal harus diuji.
+Alat internal tidak boleh mengganggu kode produksi.
+Folder packages/ memuat pustaka yang dapat dipakai ulang.
+Paket harus memiliki batas antarmuka yang jelas.
+Paket harus memiliki versi.
+Paket harus memiliki changelog.
+Paket harus memiliki tes.
+Paket harus memiliki dokumentasi.
+Paket tidak boleh mengimpor aplikasi secara langsung.
+Aplikasi boleh mengimpor paket.
+Paket bersama sebaiknya tidak bergantung pada aplikasi tertentu.
+Ketergantungan harus mengarah ke lapisan yang lebih stabil.
+Folder apps/ memuat aplikasi yang dapat dijalankan.
+Aplikasi boleh bergantung pada paket bersama.
+Aplikasi tidak boleh saling mengimpor secara langsung.
+Jika aplikasi perlu berbagi kode, pindahkan ke packages/.
+Folder services/ memuat layanan yang memiliki batas proses sendiri.
+Layanan berkomunikasi melalui API atau pesan.
+Layanan tidak boleh mengakses basis data layanan lain secara langsung.
+Setiap layanan sebaiknya memiliki konfigurasi sendiri.
+Setiap layanan sebaiknya memiliki tes sendiri.
+Setiap layanan sebaiknya memiliki dokumentasi sendiri.
+Folder deployments/ memuat konfigurasi penerapan.
+Deployments/kubernetes/ memuat manifes Kubernetes.
+Deployments/helm/ memuat chart Helm.
+Deployments/terraform/ memuat konfigurasi Terraform.
+Deployments/ansible/ memuat playbook Ansible.
+Deployments/docker/ memuat konfigurasi Docker tambahan.
+Jangan mencampur alat deployment tanpa alasan.
+Pisahkan konfigurasi lingkungan dalam subfolder.
+Gunakan nama file yang mencerminkan lingkungan.
+Folder .github/workflows/ memuat alur CI/CD.
+ci.yml menjalankan lint, tes, dan build.
+cd.yml menjalankan penerapan setelah CI berhasil.
+Gunakan cache dependensi untuk mempercepat CI.
+Gunakan matriks versi untuk menguji banyak versi.
+Gunakan artefak CI untuk menyimpan hasil build.
+Jangan menyimpan rahasia di file workflow.
+Gunakan secrets milik repositori.
+Batasi izin token CI.
+Folder .devcontainer/ memuat konfigurasi kontainer pengembangan.
+Devcontainer membantu menyeragamkan lingkungan.
+Devcontainer harus memiliki README.
+Devcontainer tidak boleh memuat rahasia.
+Folder .vscode/ memuat pengaturan editor.
+Pengaturan editor sebaiknya bersifat opsional.
+Jangan memaksa pengaturan pribadi ke semua kontributor.
+Folder public/ memuat aset yang disajikan langsung.
+Folder assets/ memuat aset yang diproses build.
+Folder static/ memuat file statis.
+Folder locales/ memuat file terjemahan.
+Nama file terjemahan mengikuti kode bahasa.
+Contoh: id.json, en.json.
+Folder templates/ memuat templat yang dapat diisi.
+Templat harus dipisahkan dari logika.
+Folder generated/ memuat file hasil pembangkitan.
+File generated tidak boleh diedit manual.
+File generated harus dapat dibuat ulang.
+Folder dist/ memuat hasil build yang siap dipakai.
+Folder dist/ biasanya diabaikan Git.
+Folder build/ juga biasanya diabaikan Git.
+Folder coverage/ biasanya diabaikan Git.
+Folder tmp/ biasanya diabaikan Git.
+Folder cache/ biasanya diabaikan Git.
+Folder vendor/ kadang dilacak, kadang tidak.
+Keputusan vendor harus didokumentasikan.
+Folder third_party/ harus memiliki lisensi.
+Lisensi pihak ketiga harus dicatat.
+Folder logs/ biasanya diabaikan Git.
+Folder artifacts/ biasanya diabaikan Git.
+Folder models/ biasanya diabaikan Git jika besar.
+Folder data/raw/ biasanya diabaikan Git jika besar.
+Data contoh kecil boleh dilacak.
+Data sensitif tidak boleh dilacak.
+Gunakan .gitignore untuk mengatur pengecualian.
+Gunakan .gitattributes untuk mengatur perilaku Git.
+Gunakan .editorconfig untuk menyeragamkan format.
+Gunakan .pre-commit-config.yaml untuk pemeriksaan sebelum commit.
+Gunakan linter untuk menjaga gaya kode.
+Gunakan formatter untuk menjaga format kode.
+Gunakan type checker untuk menjaga tipe data.
+Gunakan tes untuk menjaga perilaku.
+Gunakan dokumentasi untuk menjaga pengetahuan.
+Gunakan review untuk menjaga kualitas.
+Gunakan changelog untuk mencatat perubahan penting.
+Gunakan semantic versioning untuk versi paket.
+MAJOR berubah jika ada ketidakcocokan.
+MINOR berubah jika ada fitur baru yang kompatibel.
+PATCH berubah jika ada perbaikan yang kompatibel.
+AI harus memahami hubungan antara struktur dan versioning.
+AI harus memahami bahwa path adalah bagian dari kontrak.
+Memindahkan file dapat memutus impor.
+Mengganti nama folder dapat memutus konfigurasi.
+Menghapus file dapat memutus dokumentasi.
+Setiap perubahan struktur harus diperiksa dampaknya.
+Cari referensi path di kode.
+Cari referensi path di konfigurasi.
+Cari referensi path di dokumentasi.
+Cari referensi path di skrip.
+Cari referensi path di CI.
+Perbarui semua referensi secara konsisten.
+Jalankan tes setelah perubahan struktur.
+Jalankan lint setelah perubahan struktur.
+Jalankan build setelah perubahan struktur.
+Perbarui README setelah perubahan struktur.
+Perbarui docs/struktur-folder.md setelah perubahan struktur.
+Catat perubahan struktur di changelog.
+Jelaskan alasan perubahan struktur di pesan commit.
+Pisahkan perubahan struktur dari perubahan logika jika memungkinkan.
+Perubahan struktur yang besar sebaiknya melalui diskusi.
+Perubahan struktur yang besar sebaiknya memiliki rencana migrasi.
+Rencana migrasi menjelaskan langkah dan risiko.
+Rencana migrasi menjelaskan cara rollback.
+AI harus menyarankan struktur yang sederhana terlebih dahulu.
+AI harus menambahkan kompleksitas hanya jika perlu.
+AI harus menghindari folder yang tidak pernah dipakai.
+AI harus menghindari file duplikat.
+AI harus menghindari nama yang membingungkan.
+AI harus menghindari singkatan yang tidak jelas.
+AI harus menghindari struktur yang terlalu dalam.
+AI harus menghindari struktur yang terlalu datar.
+AI harus mendeteksi folder kosong yang tidak disengaja.
+AI harus mendeteksi file yang salah tempat.
+AI harus mendeteksi rahasia yang mungkin bocor.
+AI harus mendeteksi file besar yang tidak semestinya dilacak.
+AI harus mendeteksi konflik penamaan.
+AI harus mendeteksi inkonsistensi konvensi.
+AI harus memberikan alasan di balik setiap saran.
+AI harus menunjukkan contoh path yang benar.
+AI harus menunjukkan contoh path yang salah.
+AI harus menjelaskan dampak perubahan.
+AI harus meminta konfirmasi sebelum menghapus.
+AI harus menghormati struktur yang sudah ada.
+AI harus memahami bahwa setiap proyek memiliki konteks.
+Struktur folder adalah alat, bukan tujuan akhir.
+Tujuan akhir adalah proyek yang mudah dipahami dan dirawat.
+
+BAGIAN 2: STRUKTUR FOLDER POHON MONOREPO
+monorepo-pra-pelatihan-ai/
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── .env.example
+├── .pre-commit-config.yaml
+├── pyproject.toml
+├── package.json
+├── pnpm-workspace.yaml
+├── Makefile
+├── docker-compose.yml
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── README.md
+├── .vscode/
+│   ├── settings.json
+│   └── extensions.json
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── cd.yml
+│   │   ├── security.yml
+│   │   └── release.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── PULL_REQUEST_TEMPLATE.md
+├── apps/
+│   ├── api-pra-pelatihan/
+│   │   ├── README.md
+│   │   ├── pyproject.toml
+│   │   ├── src/
+│   │   │   ├── __init__.py
+│   │   │   ├── main.py
+│   │   │   ├── konfigurasi.py
+│   │   │   ├── rute/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── kesehatan.py
+│   │   │   │   └── prediksi.py
+│   │   │   ├── layanan/
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── prediksi_layanan.py
+│   │   │   └── skema/
+│   │   │       ├── __init__.py
+│   │   │       └── prediksi_skema.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       ├── unit/
+│   │       │   └── test_prediksi_layanan.py
+│   │       └── integrasi/
+│   │           └── test_rute_prediksi.py
+│   ├── dashboard-admin/
+│   │   ├── README.md
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── komponen/
+│   │   │   │   ├── TabelModel.tsx
+│   │   │   │   └── KartuStatistik.tsx
+│   │   │   ├── halaman/
+│   │   │   │   ├── Beranda.tsx
+│   │   │   │   └── Evaluasi.tsx
+│   │   │   └── utilitas/
+│   │   │       └── format.ts
+│   │   └── tests/
+│   │       └── komponen/
+│   │           └── TabelModel.test.tsx
+│   └── worker-pelatihan/
+│       ├── README.md
+│       ├── pyproject.toml
+│       ├── src/
+│       │   ├── __init__.py
+│       │   ├── pekerja.py
+│       │   └── antrean.py
+│       └── tests/
+│           └── test_pekerja.py
+├── packages/
+│   ├── pustaka-data/
+│   │   ├── README.md
+│   │   ├── pyproject.toml
+│   │   ├── CHANGELOG.md
+│   │   ├── src/
+│   │   │   └── pustaka_data/
+│   │   │       ├── __init__.py
+│   │   │       ├── pemuat.py
+│   │   │       ├── pembersih.py
+│   │   │       └── validasi.py
+│   │   └── tests/
+│   │       ├── test_pemuat.py
+│   │       ├── test_pembersih.py
+│   │       └── test_validasi.py
+│   ├── pustaka-model/
+│   │   ├── README.md
+│   │   ├── pyproject.toml
+│   │   ├── CHANGELOG.md
+│   │   ├── src/
+│   │   │   └── pustaka_model/
+│   │   │       ├── __init__.py
+│   │   │       ├── pelatihan.py
+│   │   │       ├── evaluasi.py
+│   │   │       └── prediksi.py
+│   │   └── tests/
+│   │       ├── test_pelatihan.py
+│   │       └── test_evaluasi.py
+│   ├── pustaka-ui/
+│   │   ├── README.md
+│   │   ├── package.json
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── tombol.tsx
+│   │   │   └── tabel.tsx
+│   │   └── tests/
+│   │       └── tombol.test.tsx
+│   └── pustaka-konfigurasi/
+│       ├── README.md
+│       ├── pyproject.toml
+│       └── src/
+│           └── pustaka_konfigurasi/
+│               ├── __init__.py
+│               ├── pemuat.py
+│               └── validasi.py
+├── services/
+│   ├── layanan-prediksi/
+│   │   ├── README.md
+│   │   ├── Dockerfile
+│   │   ├── src/
+│   │   │   ├── main.py
+│   │   │   └── konfigurasi.py
+│   │   └── tests/
+│   │       └── test_layanan.py
+│   └── layanan-monitoring/
+│       ├── README.md
+│       ├── Dockerfile
+│       ├── src/
+│       │   └── main.py
+│       └── tests/
+│           └── test_monitoring.py
+├── configs/
+│   ├── default.yaml
+│   ├── development.yaml
+│   ├── staging.yaml
+│   ├── production.yaml
+│   └── logging.yaml
+├── data/
+│   ├── raw/
+│   │   ├── .gitkeep
+│   │   └── README.md
+│   ├── interim/
+│   │   └── .gitkeep
+│   ├── processed/
+│   │   └── .gitkeep
+│   ├── external/
+│   │   └── .gitkeep
+│   └── samples/
+│       ├── contoh_data.csv
+│       └── README.md
+├── schemas/
+│   ├── prediksi-request.schema.json
+│   ├── prediksi-response.schema.json
+│   └── README.md
+├── migrations/
+│   ├── 001_buat_tabel_prediksi.sql
+│   ├── 002_tambah_indeks.sql
+│   └── README.md
+├── infra/
+│   ├── dev/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   ├── staging/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   ├── prod/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   └── README.md
+├── deployments/
+│   ├── kubernetes/
+│   │   ├── api-deployment.yaml
+│   │   ├── api-service.yaml
+│   │   └── worker-deployment.yaml
+│   ├── helm/
+│   │   └── pra-pelatihan/
+│   │       ├── Chart.yaml
+│   │       └── values.yaml
+│   └── docker/
+│       └── nginx.conf
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── struktur-folder.md
+│   ├── panduan-instalasi.md
+│   ├── panduan-kontribusi.md
+│   ├── panduan-rilis.md
+│   ├── keamanan.md
+│   ├── operasi.md
+│   ├── keputusan/
+│   │   ├── 0001-monorepo.md
+│   │   └── 0002-pemisahan-paket.md
+│   └── api/
+│       ├── referensi-api.md
+│       └── contoh-request.md
+├── scripts/
+│   ├── pasang.sh
+│   ├── lint.sh
+│   ├── tes.sh
+│   ├── build.sh
+│   ├── unduh_data.sh
+│   ├── latih_model.sh
+│   ├── bersihkan.sh
+│   └── README.md
+├── tools/
+│   ├── generator/
+│   │   ├── README.md
+│   │   └── buat_modul.py
+│   └── pemeriksa/
+│       ├── README.md
+│       └── periksa_struktur.py
+├── tests/
+│   ├── integrasi/
+│   │   ├── test_alur_prediksi.py
+│   │   └── test_alur_pelatihan.py
+│   ├── kontrak/
+│   │   └── test_skema_prediksi.py
+│   ├── performa/
+│   │   └── test_beban_prediksi.py
+│   └── fixtures/
+│       ├── data_contoh.csv
+│       └── konfigurasi_contoh.yaml
+├── benchmarks/
+│   ├── benchmark_prediksi.py
+│   └── README.md
+├── examples/
+│   ├── contoh_prediksi.py
+│   ├── contoh_pelatihan.py
+│   └── README.md
+├── artifacts/
+│   ├── checkpoints/
+│   │   └── .gitkeep
+│   └── ekspor/
+│       └── .gitkeep
+├── models/
+│   ├── .gitkeep
+│   └── README.md
+├── reports/
+│   ├── figures/
+│   │   └── .gitkeep
+│   └── laporan-evaluasi.md
+├── logs/
+│   └── .gitkeep
+├── tmp/
+│   └── .gitkeep
+└── cache/
+    └── .gitkeep
+
+BAGIAN 3: PENJELASAN FOLDER PENTING PADA GENERASI 2
+apps/ memuat aplikasi yang dapat dijalankan.
+apps/api-pra-pelatihan/ adalah aplikasi API.
+apps/dashboard-admin/ adalah aplikasi antarmuka admin.
+apps/worker-pelatihan/ adalah aplikasi pekerja latar belakang.
+Setiap aplikasi memiliki README.md sendiri.
+Setiap aplikasi memiliki tes sendiri.
+Setiap aplikasi memiliki konfigurasi sendiri jika perlu.
+packages/ memuat pustaka yang dipakai ulang.
+packages/pustaka-data/ memuat kode pemrosesan data.
+packages/pustaka-model/ memuat kode model.
+packages/pustaka-ui/ memuat komponen antarmuka.
+packages/pustaka-konfigurasi/ memuat pembacaan konfigurasi.
+Paket tidak boleh mengimpor aplikasi.
+Aplikasi boleh mengimpor paket.
+Paket harus memiliki versi dan changelog.
+services/ memuat layanan mandiri.
+services/layanan-prediksi/ menyediakan prediksi.
+services/layanan-monitoring/ menyediakan pemantauan.
+Layanan memiliki Dockerfile sendiri.
+Layanan memiliki tes sendiri.
+configs/ memuat konfigurasi bersama.
+configs/default.yaml adalah nilai default.
+configs/development.yaml adalah nilai pengembangan.
+configs/staging.yaml adalah nilai staging.
+configs/production.yaml adalah nilai produksi.
+configs/logging.yaml mengatur log.
+data/ memuat data proyek.
+data/raw/ adalah data mentah.
+data/interim/ adalah data antara.
+data/processed/ adalah data siap pakai.
+data/external/ adalah data pihak ketiga.
+data/samples/ adalah contoh data kecil.
+schemas/ memuat skema kontrak data.
+migrations/ memuat migrasi basis data.
+infra/ memuat konfigurasi infrastruktur.
+infra/dev/ untuk pengembangan.
+infra/staging/ untuk staging.
+infra/prod/ untuk produksi.
+deployments/ memuat konfigurasi penerapan.
+deployments/kubernetes/ memuat manifes Kubernetes.
+deployments/helm/ memuat chart Helm.
+deployments/docker/ memuat konfigurasi Docker tambahan.
+docs/ memuat dokumentasi.
+docs/keputusan/ memuat catatan keputusan arsitektur.
+docs/api/ memuat dokumentasi API.
+scripts/ memuat skrip otomasi.
+tools/ memuat alat pengembangan internal.
+tests/ memuat pengujian lintas paket.
+tests/integrasi/ menguji alur antar komponen.
+tests/kontrak/ menguji kesesuaian skema.
+tests/performa/ menguji beban.
+benchmarks/ memuat pengukuran performa.
+examples/ memuat contoh penggunaan.
+artifacts/ memuat artefak proses.
+models/ memuat model tersimpan.
+reports/ memuat laporan.
+logs/ memuat log runtime.
+tmp/ memuat file sementara.
+cache/ memuat cache.
+.devcontainer/ memuat lingkungan pengembangan.
+.github/workflows/ memuat CI/CD.
+.github/ISSUE_TEMPLATE/ memuat templat issue.
+.github/PULL_REQUEST_TEMPLATE.md memuat templat pull request.
+
+BAGIAN 4: ATURAN POHON MONOREPO
+Baca akar sebagai nama repositori.
+Baca folder tingkat satu sebagai kelompok peran.
+Baca folder tingkat dua sebagai unit kerja.
+Baca folder src/ sebagai kode sumber.
+Baca folder tests/ sebagai pengujian.
+Baca folder configs/ sebagai konfigurasi.
+Baca folder docs/ sebagai dokumentasi.
+Baca folder infra/ sebagai infrastruktur.
+Baca folder deployments/ sebagai penerapan.
+Baca folder packages/ sebagai pustaka bersama.
+Baca folder apps/ sebagai aplikasi.
+Baca folder services/ sebagai layanan.
+Jangan menaruh kode aplikasi di packages/.
+Jangan menaruh pustaka bersama di apps/.
+Jangan menaruh konfigurasi produksi di docs/.
+Jangan menaruh rahasia di configs/.
+Jangan menaruh data besar di packages/.
+Jangan menaruh tes aplikasi di tests/ pusat jika tes tersebut spesifik aplikasi.
+Tes spesifik aplikasi sebaiknya berada di dekat aplikasi.
+Tes lintas aplikasi boleh berada di tests/ pusat.
+Fixture bersama boleh berada di tests/fixtures/.
+Fixture khusus paket sebaiknya berada di paket tersebut.
+Dokumentasi paket sebaiknya berada di paket tersebut.
+Dokumentasi lintas paket sebaiknya berada di docs/.
+Skrip paket sebaiknya berada di paket tersebut.
+Skrip repositori sebaiknya berada di scripts/.
+Alat internal repositori sebaiknya berada di tools/.
+Contoh penggunaan sebaiknya berada di examples/.
+Benchmark sebaiknya berada di benchmarks/.
+Artefak sebaiknya berada di artifacts/.
+Model sebaiknya berada di models/.
+Laporan sebaiknya berada di reports/.
+Log sebaiknya berada di logs/.
+File sementara sebaiknya berada di tmp/.
+Cache sebaiknya berada di cache/.
+Semua folder yang tidak perlu dilacak harus masuk .gitignore.
+Semua folder kosong yang perlu dilacak harus berisi .gitkeep.
+Semua paket harus memiliki README.md.
+Semua aplikasi harus memiliki README.md.
+Semua layanan harus memiliki README.md.
+Semua skrip harus memiliki dokumentasi penggunaan.
+Semua perubahan struktur harus memperbarui docs/struktur-folder.md.
+Semua perubahan path harus diperiksa di kode, tes, konfigurasi, dan CI.
+Semua perubahan besar harus melalui review.
+Semua keputusan arsitektur harus dicatat di docs/keputusan/.
+Semua rahasia harus berada di luar repositori.
+Semua dependensi harus dicatat.
+Semua versi harus konsisten.
+Semua tes harus dapat dijalankan dari akar repositori.
+Semua build harus dapat diulang.
+Semua deployment harus dapat dilacak.
+Semua lingkungan harus terpisah.
+Semua nama harus konsisten.
+Semua path harus jelas.
+Semua file harus memiliki tujuan.
+Semua folder harus memiliki alasan.
+Jika alasan tidak ada, folder atau file perlu ditinjau.
+
+BAGIAN 5: CONTOH PENALARAN AI
+Jika AI melihat apps/api-pra-pelatihan/src/rute/prediksi.py, AI menyimpulkan itu rute API prediksi.
+Jika AI melihat packages/pustaka-model/src/pustaka_model/pelatihan.py, AI menyimpulkan itu logika pelatihan yang dapat dipakai ulang.
+Jika AI melihat tests/kontrak/test_skema_prediksi.py, AI menyimpulkan itu tes kontrak skema prediksi.
+Jika AI melihat configs/production.yaml, AI menyimpulkan itu konfigurasi produksi dan tidak boleh memuat rahasia.
+Jika AI melihat data/raw/README.md, AI menyimpulkan ada dokumentasi data mentah.
+Jika AI melihat deployments/kubernetes/api-deployment.yaml, AI menyimpulkan ada manifes Kubernetes untuk API.
+Jika AI melihat .github/workflows/ci.yml, AI menyimpulkan ada integrasi berkelanjutan.
+Jika AI melihat docs/keputusan/0001-monorepo.md, AI menyimpulkan ada catatan keputusan monorepo.
+Jika AI melihat scripts/latih_model.sh, AI menyimpulkan ada skrip pelatihan model.
+Jika AI melihat artifacts/checkpoints/, AI menyimpulkan checkpoint pelatihan disimpan di sana.
+Jika AI melihat models/README.md, AI menyimpulkan model disimpan dengan dokumentasi.
+Jika AI melihat reports/laporan-evaluasi.md, AI menyimpulkan ada laporan evaluasi.
+Jika AI melihat tmp/.gitkeep, AI menyimpulkan folder sementara dipertahankan tetapi isinya diabaikan.
+Jika AI melihat cache/.gitkeep, AI menyimpulkan folder cache dipertahankan tetapi isinya diabaikan.
+Jika AI melihat file .env.example, AI menyimpulkan ada contoh variabel lingkungan.
+Jika AI melihat file .env, AI harus memperingatkan potensi rahasia.
+Jika AI melihat file data besar di data/raw/, AI harus menyarankan strategi penyimpanan.
+Jika AI melihat file test di src/, AI harus menyarankan memindahkannya ke tests/.
+Jika AI melihat file konfigurasi produksi di docs/, AI harus menyarankan memindahkannya ke configs/ atau infra/.
+Jika AI melihat paket mengimpor aplikasi, AI harus menyarankan pemisahan dependensi.
+Jika AI melihat aplikasi mengimpor aplikasi lain, AI harus menyarankan pemindahan kode bersama ke packages/.
+Jika AI melihat dua folder dengan peran sama, AI harus menyarankan konsolidasi.
+Jika AI melihat nama folder tidak konsisten, AI harus menyarankan konvensi tunggal.
+Jika AI melihat struktur terlalu dalam, AI harus menyarankan penyederhanaan.
+Jika AI melihat struktur terlalu datar, AI harus menyarankan pemisahan berdasarkan domain.
+Jika AI melihat folder tanpa README, AI harus menyarankan dokumentasi singkat.
+Jika AI melihat skrip tanpa dokumentasi, AI harus menyarankan README atau bantuan penggunaan.
+Jika AI melihat rahasia di file terlacak, AI harus menyarankan rotasi dan pemindahan rahasia.
+Jika AI melihat file generated diedit manual, AI harus memperingatkan.
+Jika AI melihat migrasi yang diubah setelah rilis, AI harus memperingatkan.
+Jika AI melihat versi paket tidak konsisten, AI harus menyarankan sinkronisasi.
+Jika AI melihat changelog tidak diperbarui, AI harus menyarankan pembaruan.
+Jika AI melihat CI tidak menjalankan tes, AI harus menyarankan penambahan tes.
+Jika AI melihat deployment tanpa rollback, AI harus menyarankan rencana rollback.
+Jika AI melihat konfigurasi tanpa validasi, AI harus menyarankan validasi.
+Jika AI melihat data tanpa dokumentasi, AI harus menyarankan README data.
+Jika AI melihat model tanpa metadata, AI harus menyarankan metadata model.
+Jika AI melihat laporan tanpa tanggal, AI harus menyarankan tanggal dan konteks.
+Jika AI melihat benchmark tanpa lingkungan, AI harus menyarankan pencatatan lingkungan.
+Jika AI melihat contoh tanpa instruksi, AI harus menyarankan langkah menjalankan.
+Jika AI melihat tes tanpa fixture jelas, AI harus menyarankan fixture yang dinamai baik.
+Jika AI melihat mock berlebihan, AI harus menyarankan pengujian yang lebih bermakna.
+Jika AI melihat folder kosong tanpa .gitkeep, AI harus menjelaskan konsekuensi Git.
+Jika AI melihat file .gitkeep di folder berisi file, AI harus menyarankan penghapusan jika tidak perlu.
+Jika AI melihat README terlalu umum, AI harus menyarankan detail tujuan dan cara pakai.
+Jika AI melihat dokumentasi usang, AI harus menyarankan pembaruan.
+Jika AI melihat path absolut di kode, AI harus menyarankan path relatif atau konfigurasi.
+Jika AI melihat path relatif rapuh, AI harus menyarankan resolusi dari akar proyek.
+Jika AI melihat nama file dengan spasi, AI harus menyarankan tanda hubung.
+Jika AI melihat nama file dengan huruf besar-kecil campur, AI harus menyarankan konsistensi.
+Jika AI melihat duplikasi kode antar aplikasi, AI harus menyarankan paket bersama.
+Jika AI melihat dependensi melingkar, AI harus menyarankan pemisahan lapisan.
+Jika AI melihat folder tests/ tanpa struktur, AI harus menyarankan unit, integrasi, dan kontrak.
+Jika AI melihat folder docs/ tanpa indeks, AI harus menyarankan index.md.
+Jika AI melihat folder infra/ tanpa pemisahan lingkungan, AI harus menyarankan dev, staging, prod.
+Jika AI melihat folder deployments/ tanpa README, AI harus menyarankan dokumentasi penerapan.
+Jika AI melihat folder scripts/ tanpa penanganan error, AI harus menyarankan perbaikan.
+Jika AI melihat folder tools/ tanpa tes, AI harus menyarankan tes alat.
+Jika AI melihat folder examples/ tanpa data contoh, AI harus menyarankan data kecil.
+Jika AI melihat folder benchmarks/ tanpa hasil, AI harus menyarankan penyimpanan hasil.
+Jika AI melihat folder artifacts/ dilacak Git, AI harus menyarankan pengabaian.
+Jika AI melihat folder models/ dilacak Git tanpa aturan, AI harus menyarankan strategi model.
+Jika AI melihat folder logs/ dilacak Git, AI harus menyarankan pengabaian.
+Jika AI melihat folder cache/ dilacak Git, AI harus menyarankan pengabaian.
+Jika AI melihat folder tmp/ dilacak Git, AI harus menyarankan pengabaian.
+
+BAGIAN 6: RINGKASAN GENERASI 2
+Struktur folder dapat berupa monorepo dengan banyak aplikasi dan paket.
+Apps memuat aplikasi yang dapat dijalankan.
+Packages memuat pustaka bersama.
+Services memuat layanan mandiri.
+Configs memuat konfigurasi.
+Data memuat bahan dan hasil pengolahan.
+Schemas memuat kontrak data.
+Migrations memuat perubahan basis data.
+Infra memuat infrastruktur.
+Deployments memuat penerapan.
+Docs memuat dokumentasi.
+Scripts memuat otomasi.
+Tools memuat alat internal.
+Tests memuat pengujian lintas komponen.
+Benchmarks memuat pengukuran performa.
+Examples memuat contoh penggunaan.
+Artifacts memuat artefak proses.
+Models memuat model.
+Reports memuat laporan.
+Logs memuat log runtime.
+Tmp memuat file sementara.
+Cache memuat cache.
+Setiap unit harus memiliki tujuan jelas.
+Setiap paket harus memiliki README dan changelog.
+Setiap aplikasi harus memiliki README dan tes.
+Setiap layanan harus memiliki README dan tes.
+Setiap perubahan struktur harus diperiksa dampaknya.
+Setiap path harus diperbarui secara konsisten.
+Setiap rahasia harus berada di luar repositori.
+Setiap file besar harus dikelola dengan strategi khusus.
+Setiap folder kosong yang perlu dilacak harus berisi .gitkeep.
+Setiap file turunan harus dapat dibuat ulang.
+Setiap keputusan arsitektur harus dicatat.
+Setiap konvensi harus konsisten.
+AI harus membaca pohon dari akar ke daun.
+AI harus memahami peran folder dari nama dan lokasinya.
+AI harus memahami hubungan antar lapisan.
+AI harus memahami dependensi yang diperbolehkan.
+AI harus mendeteksi pelanggaran struktur.
+AI harus menyarankan perbaikan yang minimal dan aman.
+AI harus menjelaskan alasan setiap saran.
+AI harus menghormati konteks proyek.
+AI harus mengutamakan kejelasan, konsistensi, keamanan, dan perawatan.
+Dengan generasi kedua ini, AI dilatih untuk memahami struktur folder yang lebih kompleks.
+AI juga dilatih untuk tidak hanya menghafal nama, tetapi memahami peran dan hubungan.
+Akhir generasi 2.

@@ -1,0 +1,58 @@
+Buatkan sebuah tool/script khusus GitHub Actions untuk merender video dan foto secara otomatis. Tujuannya agar kita tidak perlu terus-menerus membuat file YAML atau script baru setiap kali ingin merender video/foto. Cukup tulis file JavaScript di folder content/, lalu jalankan workflow-nya.
+
+Spesifikasi lengkap:
+
+1. Deteksi File Otomatis
+   - Tool harus bisa memindai folder content/ dan mencari semua file JavaScript (.js) di dalamnya untuk dirender.
+   - Setiap file .js dianggap sebagai satu "scene"/konten yang siap dirender.
+
+2. Opsi Render
+   Tool harus menyediakan dua mode render:
+
+   A. Mode Video
+      - Format output: hanya MP4.
+      - Pengaturan yang bisa dikonfigurasi:
+        • FPS: 10fps, 20fps, 30fps, 60fps
+        • Resolusi: 360p, 480p, 720p, 1080p, 2160p
+        • Rasio aspek: 16:9, 9:16, 1:1
+        • Durasi: custom (bebas, ditentukan pengguna)
+
+   B. Mode Foto (Gambar)
+      - Format output: PNG atau JPG.
+      - Pengaturan yang bisa dikonfigurasi:
+        • Rasio aspek: 16:9, 9:16, 1:1
+        • Resolusi: 12MP, 24MP, 48MP, 108MP
+
+3. Aturan Konten (content/)
+   - Hanya mendukung file JavaScript (.js).
+   - Format lain (TS, JSX, dll.) tidak diproses.
+
+4. Teknis Render
+   - Tidak menggunakan browser Chromium (headless browser dilarang).
+   - Rendering dilakukan dengan JavaScript murni (pure JS).
+   - Kombinasi FFMPEG + Canvas API untuk menghasilkan frame dan menggabungkannya menjadi video/gambar.
+
+5. Perilaku Workflow
+   - Workflow TIDAK boleh berjalan otomatis (tidak ada trigger push/pull_request).
+   - Workflow hanya berjalan saat pengguna menekan tombol "Run workflow" di tab Actions (menggunakan workflow_dispatch).
+
+6. Persyaratan (Requirements)
+   - Sertakan file README.md yang lengkap dan jelas, berisi:
+     • Panduan instalasi dan penggunaan
+     • Cara menulis file .js di folder content/ agar bisa dirender
+     • Daftar opsi (FPS, resolusi, rasio aspek, durasi)
+     • Contoh struktur file dan contoh konfigurasi
+     • Syarat-syarat yang WAJIB dipenuhi agar file .js berhasil dirender (misalnya struktur export, API canvas yang didukung, batasan FFMPEG, dll.)
+   - Jelaskan dengan tegas bahwa syarat tersebut bersifat wajib, bukan opsional.
+
+7. Auto-Install Dependensi
+   - Jika file .js menggunakan library/paket pihak ketiga (misalnya lewat import atau require), workflow harus mendeteksinya dan menginstal dependensi tersebut secara otomatis sebelum proses render dimulai.
+   - Pastikan proses instalasi berjalan tanpa intervensi manual.
+
+Output yang diharapkan:
+- Struktur repository yang rapi (folder workflows, content, scripts, dll.)
+- File workflow .yml GitHub Actions yang siap pakai
+- Script renderer (Node.js atau shell) yang menangani video dan foto
+- README.md lengkap sesuai poin nomor 6
+- Kode dan dokumentasi ditulis dengan jelas, ringkas, dan mudah dipahami.
+di dalam zip

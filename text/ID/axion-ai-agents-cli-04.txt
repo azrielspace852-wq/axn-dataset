@@ -1,0 +1,62 @@
+PENTING — BACA SEBELUM MENGERJAKAN:
+- Jangan mengarang hal yang tidak Anda yakini atau tidak Anda ketahui.
+- Kerjakan seluruh instruksi di bawah ini tanpa melewatkan satu poin pun.
+- Gunakan bahasa Indonesia saat berbicara dengan saya.
+- Buat daftar tugas di workspace Anda agar tidak lupa atau melewatkan poin tertentu.
+
+TUGAS: UPDATE AXION AI Agents CLI
+
+1. Perbaiki Bug
+   a. Perbaiki bug thinking loop yang masih terjadi meskipun fitur thinking dimatikan.
+   b. Saat pengguna mengetik command yang memiliki opsi, setelah selesai memilih, tampilan opsi tidak tertutup dan tetap terbuka. Perbaiki agar tampilan opsi langsung tertutup setelah pengguna selesai memilih.
+   c. Perbaiki bug di mana balasan AI tidak muncul.
+   d. Perbaiki bug yang membuat pengguna tidak bisa mengedit model.
+   e. Perbaiki bug yang membuat pengguna tidak bisa menghapus model.
+
+2. UI/UX
+   a. Tampilkan balasan AI dari atas ke bawah (seperti percakapan chat pada umumnya), bukan menyatu di bawah bersama kolom input pengguna.
+   b. Setelah pengguna mengirim pesan, jangan membuat kolom input baru; kosongkan kembali kolom input yang sama (seperti aplikasi AI chat pada umumnya).
+   c. Buat tampilan lebih rapi, profesional, halus (smooth), dan tidak membuat mata lelah.
+
+3. Saran Command
+   a. Saat pengguna mengetik "/" di baris pertama, tampilkan saran command.
+   b. Saran dapat dipilih dengan ArrowUp atau ArrowDown, lalu Enter untuk mengonfirmasi.
+   c. Jika pengguna menghapus "/", tutup tampilan saran.
+
+4. Conversation
+   - Simpan percakapan per sesi percakapan, bukan per pesan.
+
+5. Version Checking
+   a. Sediakan command: axn-cli --version
+   b. Buat file version.json yang tidak terlihat atau tidak mengganggu pengguna, untuk menyimpan versi saat ini.
+   c. Buat file update-info.json untuk mengecek versi terbaru.
+
+6. Fast Update
+   - Sediakan command: axn-cli update
+   - Secara teknis tetap menggunakan curl seperti biasa, tetapi diberi alias.
+   - URL curl tetap sama: https://raw.githubusercontent.com/azrielspace852-wq/axion-ai-agents-cli/main/install.sh
+
+7. Command /privacy-policy
+   - Buat command /privacy-policy untuk menampilkan informasi keamanan dan privasi.
+   - Informasi harus lengkap dan jujur.
+
+8. Command /max-tool-call
+   - Buat command /max-tool-call untuk mengatur jumlah maksimal tool yang boleh dipanggil per request.
+   - Default: 30 per request.
+
+9. Command /max-token
+   - Buat command /max-token untuk mengatur maksimal token dan output token.
+
+10. Tampilan /models
+    - Saat pengguna menjalankan command /models, tampilkan hanya model yang tersedia di provider yang sedang digunakan pengguna, bukan semua provider.
+
+11. Eksekusi
+    - Silakan kerjakan seluruh instruksi di atas.
+    - Jangan ada satu poin pun yang terlewat.
+    - Gunakan bahasa Indonesia saat berbicara dengan saya.
+    - Jika sudah selesai, kirimkan hasilnya kepada saya sebagai file ZIP.
+
+CATATAN PENTING:
+- Jangan mengarang hal yang tidak Anda yakini atau tidak Anda ketahui.
+- Jika ada bagian yang membutuhkan klarifikasi, sampaikan dengan jelas.
+- Pastikan seluruh poin di atas dikerjakan dan tidak ada yang terlewat.

@@ -1,0 +1,483 @@
+APA ITU DNS
+DNS atau Domain Name System adalah sistem penamaan terdesentralisasi yang menerjemahkan nama domain yang mudah diingat menjadi alamat IP yang dipahami mesin.
+DNS membuat pengguna dapat membuka situs dengan mengetik contoh.com alih-alih angka seperti 93.184.216.34.
+DNS juga menyimpan jenis informasi lain seperti lokasi server surat, lokasi layanan, dan kunci keamanan.
+Fungsi paling dasar DNS adalah menjadi buku telepon global yang selalu dapat dicari.
+DNS bekerja berlapis sehingga tidak ada satu titik pusat tunggal yang menyimpan seluruh nama dunia.
+Desain terdistribusi membuat DNS tahan terhadap gangguan lokal.
+DNS merupakan protokol aplikasi yang berjalan di atas UDP dan TCP pada port 53.
+DNS juga dapat berjalan melalui kanal terenkripsi seperti HTTPS dan TLS.
+Tanpa DNS, infrastruktur internet modern menjadi tidak manusiawi untuk dipakai.
+DNS bukan layanan penyimpanan halaman web, melainkan layanan penamaan dan pemetaan.
+DNS menjawab pertanyaan tentang nama, bukan menyajikan isi.
+Banyak kegagalan yang terasa seperti situs mati sebenarnya adalah kegagalan DNS.
+Memahami DNS membantu mendiagnosis masalah jaringan dengan lebih cepat.
+DNS menjadi jembatan antara bahasa manusia dan bahasa jaringan.
+DNS juga menopang fungsi routing, keamanan email, dan penyeimbangan beban.
+SEJARAH DAN LATAR BELAKANG DNS
+Sebelum DNS ada, pemetaan nama ke alamat dikelola melalui satu berkas teks yang diunduh berkala.
+Berkas HOSTS.TXT dipakai pada awal internet dan diperbarui secara manual.
+Model berkas tunggal menjadi tidak praktis saat jumlah host bertambah pesat.
+Paul Mockapetris merancang DNS pada tahun 1983 sebagai pengganti skema yang tidak skalabel.
+Spesifikasi awal DNS dituangkan dalam RFC 1034 dan RFC 1035.
+DNS memperkenalkan gagasan pohon nama berjenjang dari bawah ke atas.
+Gaya penamaan terstruktur memungkinkan pembagian wewenang ke banyak organisasi.
+Sejak saat itu DNS menjadi salah satu fondasi paling awet internet.
+Banyak desain modern DNS lahir dari kebutuhan keamanan dan privasi tambahan.
+Perluasan fungsi DNS membuktikan bahwa protokol sederhana dapat berevolusi luas.
+PERAN DNS DALAM INTERNET
+DNS adalah salah satu dari sedikit layanan yang harus ada agar internet dapat digunakan manusia.
+Setiap kunjungan web umumnya dimulai dengan permintaan DNS.
+DNS menentukan ke server mana sebuah permintaan seharusnya diarahkan.
+DNS menjadi titik awal bagi koneksi ke situs, email, dan aplikasi.
+DNS dipakai untuk menemukan server surat sebelum pesan dapat dikirim.
+DNS dipakai untuk menemukan layanan dalam protokol lain lewat catatan SRV.
+DNS membantu sistem menemukan kontroler domain dan sumber daya jaringan internal.
+DNS menjadi alat penamaan dalam sistem awan, kontainer, dan klaster.
+DNS menjadi dasar verifikasi kepemilikan domain untuk banyak layanan.
+DNS dapat digunakan untuk menyebarkan konfigurasi kecil ke perangkat.
+DNS ikut menentukan apakah suatu nama dianggap ada atau tidak.
+DNS juga ikut menentukan alamat mana yang lebih sering dipilih klien.
+DNS menjadi perantara untuk mengarahkan trafik ke lokasi terdekat.
+DNS adalah tempat banyak kebijakan aplikasi dapat dieksekusi.
+Tanpa DNS, hampir seluruh layanan internet tidak akan dapat ditemukan dengan nyaman.
+KOMPONEN UTAMA SISTEM DNS
+Nama domain adalah label yang dapat dibaca manusia untuk menunjuk suatu sumber.
+Zona DNS adalah bagian dari pohon nama yang dikelola satu otoritas.
+Server otoritatif menyimpan catatan resmi untuk zona yang ia layani.
+Server rekursif bertugas mencari jawaban atas nama yang diminta.
+Stub resolver adalah komponen di dalam komputer pengguna yang mengajukan pertanyaan.
+Resolusi DNS adalah gabungan antara klien, server perantara, dan server otoritatif.
+Kata kunci yang sering tertukar adalah domain, zona, host, dan resolver.
+Pohon nama DNS disusun dari akar, domain tingkat atas, domain kedua, hingga subdomain.
+Penulisan DNS lengkap sering diakhiri titik untuk menandakan akar absolut.
+Format pesan DNS berisi header, pertanyaan, jawaban, wewenang, dan tambahan.
+Komponen-komponen ini harus saling kompatibel agar DNS dapat berfungsi.
+PENAMAAN DOMAIN DAN STRUKTUR Pohon
+Akar adalah titik paling atas pohon nama.
+Domain tingkat atas berada di bawah akar, misalnya com, org, id, atau net.
+Domain tingkat kedua berada di bawah TLD, misalnya contoh dalam contoh.com.
+Subdomain dapat dibuat berlapis sesuai kebutuhan organisasi.
+Label di dalam nama tidak boleh melebihi enam puluh tiga karakter.
+Nama lengkap tidak boleh melebihi dua ratus lima puluh lima karakter.
+DNS bersifat tidak peka besar kecil untuk banyak konteks operasional.
+Pengurutan label dibaca dari kanan ke kiri.
+Titik di akhir nama mengubah pemaknaan menjadi alamat mutlak.
+Nama yang tidak memakai titik akhir dapat dianggap relatif oleh resolver.
+Pemisahan zona memungkinkan organisasi mengelola cabang pohon tanpa mengganggu cabang lain.
+Delegasi menjadi cara pohon nama dipecah ke pengelola yang berbeda.
+PENULISAN DAN PERSIAPAN NAMA
+Domain yang baik cenderung singkat, jelas, dan mudah diingat.
+Domain bisnis biasanya memakai tanda hubung untuk keterbacaan.
+Punycode memungkinkan karakter non-Latin ditampilkan dalam bentuk ASCII.
+Homoglyph dapat menciptakan alamat yang tampak mirip tetapi berbeda.
+Registrasi nama bergantung pada kebijakan registri TLD masing-masing.
+Nama yang telah kedaluwarsa dapat jatuh ke pendaftaran ulang oleh pihak lain.
+Nama internal tidak harus berada di ruang publik.
+Penggunaan TLD privat membantu memisahkan layanan internal dari internet.
+Perencanaan nama yang buruk dapat memindahkan masalah ke operasional jangka panjang.
+JENIS SERVER DNS
+Server akar adalah titik awal untuk mencari TLD.
+Server TLD menyimpan delegasi ke domain tingkat kedua.
+Server otoritatif menyimpan data resmi untuk zona tertentu.
+Server rekursif menerima pertanyaan dan mencari jawaban hingga tuntas.
+Server forwarder meneruskan pertanyaan ke server lain tanpa banyak logika pencarian sendiri.
+Server caching hanya menyimpan jawaban sementara.
+Server DNS internal dapat berisi nama privat yang tidak ada di internet.
+Split-horizon DNS menjawab berbeda tergantung asal penanya.
+Server sekunder memperoleh salinan zona dari server primer.
+Server tersier dapat mengambil salinan dari server sekunder.
+Primary name server menjadi tempat suntingan dilakukan.
+Server anonim menyembunyikan identitas resolver dari server otoritatif.
+Resolver publik berbeda dari resolver yang disediakan ISP.
+Penamaan server membantu membedakan peran meskipun satu perangkat bisa menjalankan lebih dari satu peran.
+SERVER AKAR DAN INFRASTRUKTURNYA
+Akar DNS dikelola melalui koordinasi global.
+IANA menyimpan berkas petunjuk untuk server akar.
+Banyak server akar dijalankan oleh organisasi yang berbeda.
+Setiap huruf akar diwakili oleh kumpulan instance dengan alamat anycast.
+Server akar tidak berisi seluruh internet, hanya menunjuk ke TLD.
+Jumlah huruf akar terbatas karena alasan desain protokol awal.
+Desain akar sangat konservatif karena satu perubahan berdampak luas.
+Keamanan akar menjadi perhatian dunia, bukan satu negara saja.
+Resiliensi akar adalah salah satu alasan DNS tetap hidup puluhan tahun.
+DOMAIN TINGKAT ATAS
+TLD generik seperti com dan org tersedia untuk pendaftaran umum.
+TLD negara seperti id, uk, jp, atau de dikelola menurut aturan lokal.
+TLD baru telah menambah jumlah opsi nama secara signifikan.
+Registri TLD mengatur kebijakan harga, perpanjangan, dan transfer.
+Registrar adalah perusahaan yang menjual pendaftaran atas nama registri.
+Delegasi TLD ke server otoritatif dilakukan dengan catatan NS dan sometimes glue.
+Kebijakan TLD memengaruhi ketersediaan, privasi WHOIS, dan keamanan.
+TLD tertentu membatasi registrasi berdasarkan identitas atau lokasi.
+TLD privat dapat dipakai untuk jaringan internal tanpa tumpang tindih.
+MEMILIH REGISTRAR DAN REGISTRI
+Registrar yang berbeda dapat memberi kenyamanan dan harga yang berbeda.
+Registrasi harus memperbarui data penagihan dan kontak teknis.
+Perpanjangan yang terlambat dapat menyebabkan hilangnya nama.
+Grace period, redemption, dan pending delete adalah tahap berbeda setelah kedaluwarsa.
+Transfer domain memerlukan kode otorisasi dan persetujuan pemilik.
+Kunci domain dapat mencegah transfer tanpa izin.
+Privasi WHOIS menyamarkan data pemilik di banyak yurisdiksi.
+Data pemilik dapat diminta secara sah oleh pihak berwenang.
+Registrasi adalah kontrak, bukan kepemilikan permanen yang bebas aturan.
+JENIS CATATAN DNS
+Catatan A memetakan nama ke alamat IPv4.
+Catatan AAAA memetakan nama ke alamat IPv6.
+Catatan CNAME menjadikan satu nama sebagai alias untuk nama lain.
+Catatan MX menentukan server surat masuk untuk domain.
+Catatan TXT menyimpan teks bebas yang sering dipakai untuk verifikasi.
+Catatan NS menentukan server otoritatif untuk zona.
+Catatan SOA menyimpan parameter otoritas zona.
+Catatan PTR memetakan alamat IP ke nama, biasanya untuk pemeriksaan balik.
+Catatan SRV memetakan layanan dan port untuk protokol tertentu.
+Catatan NAPTR memetakan layanan dengan aturan substitusi.
+Catatan CAA menyatakan sertifikat mana yang boleh diterbitkan untuk domain.
+Catatan DS menautkan kepercayaan DNSSEC pada zona anak.
+Catatan DNSKEY menyimpan kunci publik DNSSEC.
+Catatan RRSIG menyimpan tanda tangan DNSSEC.
+Catatan NSEC atau NSEC3 membuktikan bahwa nama tidak ada.
+Catatan LOC menyimpan posisi geografis.
+Catatan SPF adalah penggunaan TXT khusus untuk kontrol pengirim surat.
+Kombinasi jenis catatan membentuk fungsi domain yang utuh.
+CATATAN A DAN AAAA
+Catatan A menjadi jenis paling sering dipakai.
+Beberapa nilai A dapat ditempatkan pada satu nama.
+Kumpulan nilai itu memungkinkan klien memilih alamat yang tersedia.
+Catatan AAAA menjadi penting untuk layanan dengan IPv6.
+Kombinasi A dan AAAA dapat menyebabkan masalah jika salah satu sisi tidak berfungsi.
+Kebijakan happy eyeballs membuat klien menguji IPv6 dan IPv4 secara bersamaan.
+Alamat IPv4 publik masih menjadi tulang punggung banyak layanan.
+Satu nama dapat menunjuk ke satu alamat atau banyak alamat.
+Catatan A tidak harus menunjuk ke IP yang sama dengan CNAME tujuan.
+CATATAN CNAME
+CNAME menunjuk satu nama ke nama lain yang harus diresolusi lagi.
+CNAME pada titik zona biasanya tidak diperbolehkan jika ada catatan lain.
+CNAME tidak dapat dipakai secara bebas bersamaan dengan MX atau TXT pada nama yang sama.
+CNAME berguna untuk mengarahkan www ke nama utama.
+CNAME berguna untuk mengarahkan layanan ke titik CDN.
+CNAME menambah satu langkah pencarian dalam resolusi.
+Beberapa layanan menerapkan CNAME flattening agar terlihat seperti A biasa.
+CNAME tidak menunjuk ke alamat langsung, tetapi ke nama lain.
+Siklus CNAME adalah kesalahan konfigurasi yang harus dihindari.
+CATATAN MX
+Catatan MX menentukan server penerima email untuk domain.
+Nilai prefereance menentukan prioritas tujuan surat.
+Server dengan angka preference lebih rendah dipilih lebih dulu.
+Satu domain dapat memiliki beberapa MX dengan prioritas berbeda.
+MX tidak boleh menunjuk ke CNAME menurut aturan tradisional.
+MX penting untuk memastikan surat masuk diterima dengan benar.
+Kesalahan MX sering menyebabkan email menolak masuk.
+Dokumen SPF, DKIM, dan DMARC membantu melindungi reputasi pengirim.
+CATATAN TXT
+TXT menyimpan teks yang dapat dibaca mesin.
+TXT dipakai untuk memverifikasi kepemilikan domain.
+TXT dipakai untuk SPF dan konfigurasi layanan.
+TXT dapat berisi beberapa bagian teks.
+Banyak DNS membatasi panjang TXT per catatan.
+TXT sering dipakai sebagai saluran konfigurasi sederhana.
+TXT juga dapat dipakai untuk menandai kehadiran layanan tertentu.
+Keamanan DNSSEC dapat menandatangani TXT.
+CATATAN NS DAN SOA
+NS menentukan siapa otoritas resmi untuk zona.
+Delegasi memakai NS untuk menunjuk server anak.
+SOA menyimpan informasi kunci zona pada awal file.
+SOA memuat primary, email penanggung jawab, serial, dan parameter waktu.
+Serial harus bertambah setiap zona diubah.
+Refresh memberi tahu server sekunder kapan mengecek pembaruan.
+Retry memberi jeda ketika server primer tidak dapat dijangkau.
+Expire menentukan kapan salinan dianggap tidak dapat dipercaya.
+Minimum negatif cache memengaruhi cara jawaban tidak ditemukan disimpan.
+Perubahan parameter ini memengaruhi konsistensi replika.
+CATATAN PTR
+PTR memetakan alamat IP ke nama host.
+PTR dipakai untuk pemeriksaan balik pada email dan log.
+PTR berada di bawah zona khusus dalam arsitektur in-addr.
+Zona IPv4 memakai oktet terbalik dengan akhiran khusus.
+Zona IPv6 memakai representasi nibble terbalik.
+PTR yang buruk dapat menurunkan kepercayaan sistem lain.
+ISP atau pemilik blok IP biasanya menyediakan zona PTR sendiri.
+Catatan PTR bukan pengganti pencocokan forward.
+CATATAN SRV
+SRV memetakan layanan ke nama host dan port.
+Format penamaan SRV menyertakan layanan, protokol, dan nama.
+SRV dipakai oleh protokol seperti SIP dan XMPP.
+SRV dapat menyediakan prioritas dan bobot untuk pemilihan tujuan.
+SRV berguna ketika port tidak standar harus diumumkan.
+SRV memberi cara mencari endpoint tanpa hardcode alamat.
+SRV menjadi penting dalam klaster layanan.
+SRV dapat menjadi sumber masalah bila port salah diisi.
+CATATAN CAA
+CAA membatasi otoritas yang boleh menerbitkan sertifikat.
+CAA dapat menyatakan tipe penerbitan yang diizinkan.
+CAA membantu mengurangi penerbitan sertifikat yang tidak sah.
+CAA dapat dipakai bersamaan dengan catatan dari parent.
+Beberapa CA menghormati CAA lebih ketat daripada yang lain.
+CAA tidak menggantikan validasi kepemilikan secara keseluruhan.
+CAA berguna sebagai lapisan kebijakan tambahan.
+ZONA DNS DAN BERKAS ZONA
+Zona adalah unit kewenangan yang dapat dikelola dan ditransfer.
+Berkas zona adalah representasi teks dari isi zona.
+Berkas zona memuat header, catatan, dan penyingkatan nama.
+At-sign merujuk pada nama zona itu sendiri.
+Nama titik hanya berarti kosong dalam konteks tertentu.
+Berkas zona mendukung direktif $ORIGIN dan $TTL.
+Editor zona yang baik dapat menangkap kesalahan penulisan.
+Perubahan zona harus direview sebelum diterapkan.
+Zona yang berbeda dapat berada di server yang sama.
+Zona dapat dipecah untuk delegasi yang lebih kecil.
+DELEGASI DAN GLUE RECORD
+Delegasi memindahkan wewenang dari parent ke child.
+Parent menyimpan NS untuk child.
+Parent sering menyimpan alamat tambahan sebagai glue.
+Glue diperlukan bila NS child berada di dalam zona child itu sendiri.
+Tanpa glue, pencarian dapat berputar tanpa awal.
+Delegasi adalah dasar skalabilitas DNS.
+Salah menuliskan NS dapat memutus layanan.
+Pemindahan server otoritatif harus dikoordinasikan dengan glue.
+Glue dapat memengaruhi pemilihan alamat yang dijawab.
+RESOLUSI DNS LANGKAH DEMI LANGKAH
+Klien mengirim pertanyaan ke stub resolver sistem.
+Resolver sistem dapat mencari cache lokal terlebih dahulu.
+Jika belum ada, pertanyaan diteruskan ke resolver rekursif.
+Resolver dapat memulai dari akar jika cache-nya kosong.
+Akar menunjuk ke TLD yang relevan.
+TLD menunjuk ke server otoritatif domain.
+Server otoritatif menjawab dengan data resmi.
+Jawaban disimpan dalam cache untuk waktu tertentu.
+Hasil akhirnya dikembalikan ke aplikasi pengguna.
+Setiap hops dapat menambah latensi jika cache tidak membantu.
+CACHE DAN PROPAGASI
+Cache mempercepat jawaban berulang dan mengurangi beban server.
+Waktu hidup cache ditentukan oleh TTL catatan.
+Cache negatif menyimpan hasil tidak ditemukan.
+Cache negatif memakai aturan waktu dari zona terkait.
+TTL sangat pendek dapat menaikkan beban query.
+TTL sangat panjang membuat perubahan lama tampak di seluruh internet.
+Propagasi adalah istilah awam untuk waktu cache menyusut.
+Penyebaran berubah tergantung jalur penanya.
+Tidak ada tombol global yang memaksa semua cache berubah seketika.
+Perencana perubahan harus memperhitungkan TTL lama.
+Menurunkan TTL sebelum perubahan besar adalah praktik yang baik.
+Perubahan mendadak lebih cepat terasa pada pengguna dengan cache segar.
+ITERATIF DAN REKURSIF
+Server rekursif berjanji memberi jawaban akhir atau pesan galat.
+Server iteratif hanya mengarahkan ke server berikutnya.
+Resolver publik biasanya bersifat rekursif bagi klien.
+Server akar bersifat iteratif dan tidak menjawab data akhir.
+Banyak server otoritatif menolak permintaan rekursif.
+Perbedaan ini memengaruhi beban dan cara pencarian.
+Kombinasi keduanya menghasilkan pencarian berjenjang yang efisien.
+EDNS DAN UKURAN PAKET
+UDP menjadi media utama untuk query singkat.
+Paket UDP dapat terpotong jika melebihi kapasitas jaringan.
+EDNS memungkinkan ukuran pesan lebih besar dari batas lama.
+EDNS juga membawa opsi tambahan pada header.
+EDNS Client Subnet memberi petunjuk lokasi klien ke server otoritatif.
+ECS dapat meningkatkan akurasi routing geografis.
+ECS juga menimbulkan perdebatan privasi.
+Beberapa jaringan memblokir EDNS tertentu.
+TCP dipakai ketika respons besar atau transfer zona dilakukan.
+DNS dan MTU dapat menjadi sumber masalah yang sulit terlihat.
+KEAMANAN DNS
+DNS terbuka dan sering menjadi target manipulasi.
+Serangan yang paling klasik adalah pemalsuan jawaban.
+Cache poisoning dapat menaruh IP salah pada banyak pengguna.
+Kunci transaksi yang acak membantu menahan pemalsuan.
+Sumber port acak memberi lapisan pengaman lain.
+Validasi jawaban yang ketat membuat resolver lebih aman.
+DNSSEC menambah tanda tangan agar jawaban dapat diverifikasi.
+DNSSEC tidak mengenkripsi isi, hanya menjamin keaslian.
+DNSSEC memakai rantai kepercayaan dari akar ke zona anak.
+Kunci zona dan kunci penanda menjadi bagian inti DNSSEC.
+Kehilangan DS di parent dapat memutus validasi zona anak.
+Rolling kunci harus direncanakan agar tidak memutus layanan.
+NSEC dapat membocorkan isi zona jika tidak diperhatikan.
+NSEC3 mengurangi kebocoran dengan hashing tetapi tetap perlu dikonfigurasi.
+DNSSEC bukan pengganti HTTPS.
+HTTPS menjaga isi pertukaran, DNSSEC menjaga asal jawaban.
+PRIVASI DNS
+Query DNS tradisional dapat diamati oleh pihak di jalur.
+DoH mengirim DNS melalui HTTPS.
+DoT mengirim DNS melalui TLS.
+DoQ memanfaatkan UDP yang aman dari QUIC.
+Resolver privat dapat menyembunyikan asal query.
+QNAME minimization hanya bertanya sesuai keperluan.
+Anonymization mengurangi keterkaitan identitas pengguna.
+Logging di resolver dapat menjadi sumber risiko privasi.
+Pemilihan resolver adalah keputusan keamanan, bukan sekadar kecepatan.
+Banyak aplikasi kini memakai DoH di dalam sistem operasi.
+DoH dapat sulit diblokir oleh jaringan karena menyatu dengan HTTPS biasa.
+Serangan DNS
+DNS tunneling menyelundupkan data melalui query DNS.
+DNS amplification memakai respons besar sebagai senjata DDoS.
+Rebinding memanfaatkan perubahan nama untuk menembus asumsi asal.
+Domain squatting mengambil nama yang sudah tidak diperpanjang.
+Phishing sering memakai nama mirip yang menipu mata.
+Penyerangan zona transfer dapat mengungkap peta jaringan.
+Transfers zona harus dibatasi hanya ke pihak yang berhak.
+DNS menjadi vektor serangan karena kepercayaan sistem terlalu sering diandalkan.
+DNS UNTUK BEBAN DAN ROUTING
+Round-robin DNS bisa sebar klien ke beberapa IP.
+Round-robin tidak menjamin distribusi yang seimbang.
+Beberapa resolver hanya memilih satu jawaban dari daftar.
+Bobot DNS membantu mengarahkan persentase trafik.
+Geo DNS memilih alamat berdasarkan lokasi perkiraan.
+Anycast membuat satu alamat tersedia dari banyak tempat.
+Failover memakai TTL singkat agar pemindahan terasa cepat.
+Health check dapat mengubah jawaban DNS otomatis.
+DNS routing sederhana tetapi sering dipakai untuk sistem besar.
+DNS DAN CDN
+CDN memakai CNAME untuk menarik lalu lintas ke jaringan distribusi.
+Sistem CDN menyesuaikan jawaban agar pengguna diarahkan ke node terdekat.
+CNAME flattening membuat jawaban lebih praktis bagi klien.
+DNS berperan penting bagi performa situs modern.
+Tanpa DNS, CDN kehilangan banyak kemampuannya.
+Perubahan TTL dan jawaban memengaruhi perilaku cache CDN.
+DNS DAN EMAIL
+Email bergantung pada MX untuk menemukan penerima.
+SPF menyatakan server yang boleh mengirim atas nama domain.
+DKIM menandatangani pesan agar keaslian dapat diperiksa.
+DMARC menetapkan kebijakan dan pelaporan pelanggaran.
+Ketiganya bekerja lewat catatan DNS.
+Reputasi domain sering ditentukan oleh kombinasi ini.
+Salah konfigurasi DNS email menyebabkan surat ditolak atau dianggap spam.
+DNS DAN LAYANAN TERKOMODIFIKASI
+Dynamic DNS memetakan alamat yang berubah secara real time.
+Layanan ini berguna untuk kamera, server rumah, dan lab.
+Pembaruan harus aman agar tidak disalahgunakan.
+Kunci autentikasi menjadi bagian dari keamanan.
+Banyak perangkat memiliki klien DDNS bawaan.
+DNS DAN KUBERNETES
+Cluster memakai DNS internal untuk menemukan layanan.
+Nama servis dibuat sesuai konvensi namespace dan cluster.
+CoreDNS menjadi resolver umum dalam distribusi modern.
+Service discovery sangat bergantung pada DNS.
+Penulisan FQDN yang salah menjadi sumber kegagalan sering terjadi.
+Perubahan DNS internal dapat memengaruhi aplikasi dalam cluster.
+DNS DAN JARINGAN ENTERPRISE
+Server internal menamai host dalam organisasi.
+Pencatatan PTR membantu jejak audit dan log.
+Kebijakan split-horizon memisahkan nama publik dan privat.
+Forwarder dapat meneruskan query ke sistem lama.
+DNS dapat menjadi bagian dari kontroler domain Windows.
+DNS membantu menemukan gateway, proxy, dan sistem file.
+Perencanaan zona internal harus mengikuti topologi tim.
+PERANGKAT DAN IMPLEMENTASI
+BIND menjadi server otoritatif dan rekursif klasik.
+Unbound dikenal kuat untuk resolver rekursif dengan validasi DNSSEC.
+PowerDNS memakai backend basis data untuk zona.
+Knot menjadi server otoritatif modern.
+NSD dikenal ringan untuk otoritatif.
+dnsmasq sering dipakai di jaringan kecil dan IoT.
+CoreDNS populer di lingkungan kontainer.
+Microsoft DNS menjadi tulang punggung Active Directory.
+BIND memiliki konfigurasi teks yang kaya tetapi sensitif.
+PowerDNS memakai skema basis data untuk skalabilitas tinggi.
+Konfigurasi yang salah dapat melumpuhkan layanan dalam sekejap.
+TRIK DAN PERENCANAAN
+Selalu uji perubahan zona dari banyak resolver.
+Gunakan TTL yang konsisten antar catatan terkait.
+Jangan pakai CNAME pada titik yang sudah punya catatan penting.
+Dokumenkan pemisahan zona dan siapa yang dapat mengedit.
+Pantau lonjakan query sebagai sinyal kesalahan konfigurasi.
+Simpan riwayat perubahan agar rollback mudah.
+Gunakan serial yang dapat diaudit.
+Periksa jawaban PTR dan forward secara terpisah.
+Uji DNSSEC di lingkungan yang aman sebelum aktif di produksi.
+Gunakan resolver kedua untuk validasi silang.
+PERANGKAT DIAGNOSTIK
+dig menampilkan query dan jawaban per server.
+nslookup memberi tampilan sederhana untuk klien umum.
+drill berfungsi mirip dig dengan dukungan DNSSEC.
+kdig memberikan kontrol yang lebih detail.
+host dapat dipakai untuk pencarian cepat dari shell.
+tcpdump dapat menangkap paket DNS di jaringan.
+wireshark memperlihatkan struktur pesan dan waktu.
+Perbedaan jawaban antara resolver lokal dan otoritatif menjadi petunjuk penting.
+Perbedaan antara TLD dan parent juga sering menunjukkan delegasi salah.
+Pemahaman alat bantu ini mempercepat diagnosis masalah DNS.
+METRIK DAN MONITORING
+Query per detik menunjukkan beban resolver.
+Waktu respons DNS memengaruhi latensi halaman.
+Rasio cache hit menandakan kesehatan caching.
+Tingkat kegagalan dapat mengungkap masalah delegasi.
+Perbandingan waktu antar server membantu mencari sumber lambat.
+Alerting pada lonjakan NXDOMAIN dapat menangkap error aplikasi.
+Pemantauan zona harus memeriksa serial dan jawaban kunci.
+Pemantauan DNS penting karena DNS adalah titik awal hampir semua koneksi.
+REGULASI DAN TATA KELOLA
+ICANN mengoordinasi sistem nama dan alamat global.
+IANA mengelola ruang delegasi yang mendasar.
+Registri dan registrar beroperasi dalam model berlapis.
+Kebijakan TLD dapat memengaruhi privasi dan pasar nama.
+Keputusan tata kelola DNS berdampak luas ke bisnis dan negara.
+Perubahan akar harus melalui proses yang sangat berhati-hati.
+DNS sebagai infrastruktur kritis mendapat perhatian regulator.
+Masa Depan DNS
+DNS terus berkembang ke arah enkripsi dan privasi.
+Keragaman metode transport membuat DNS lebih aman.
+Sistem otomatis dan kecerdasan buatan membantu pengelolaan zona.
+Standar DNS akan tetap menjadi fondasi penamaan internet.
+Perubahan desain kecil dapat berdampak sangat besar.
+DNS harus tetap sederhana untuk klien tetapi tangguh untuk operator.
+Inovasi di area DNS lebih banyak di sisi keamanan daripada di penamaan dasar.
+DNS adalah salah satu layanan yang tidak pernah benar-benar selesai ditingkatkan.
+GLOSARIUM INTI
+Resolver adalah pihak yang mencari jawaban.
+Stub resolver adalah komponen klien di sistem operasi.
+Recursive resolver melakukan pencarian penuh atas nama.
+Authoritative server menjawab dari data resmi.
+TTL adalah waktu hidup cache jawaban.
+Glue adalah alamat tambahan pada delegasi.
+Zone transfer adalah pemindahan data zona antar server.
+Query adalah permintaan yang dikirim ke DNS.
+NXDOMAIN berarti nama tidak ditemukan.
+SERVFAIL berarti server gagal menjawab.
+Refused berarti permintaan ditolak.
+Timeout berarti tidak ada jawaban dalam batas waktu.
+Serial adalah versi zona otoritatif.
+RRset adalah himpunan catatan dengan nama dan tipe sama.
+Signature adalah tanda tangan DNSSEC.
+Chain of trust adalah rantai validasi DNSSEC.
+CNAME adalah alias ke nama lain.
+Punycode adalah pengkodean Unicode ke ASCII.
+Anycast adalah satu alamat dari banyak titik.
+Split-horizon adalah jawaban berbeda per sisi jaringan.
+DoH adalah DNS lewat HTTPS.
+DoT adalah DNS lewat TLS.
+DoQ adalah DNS lewat QUIC.
+RDATA adalah isi catatan.
+RCLASS adalah kelas data.
+OPT adalah opsi EDNS.
+QTYPE adalah jenis yang diminta.
+QNAME adalah nama yang diminta.
+Flag adalah penanda dalam header pesan.
+Truncation berarti jawaban dipotong dan perlu TCP.
+Negative cache menyimpan hasil tidak ada.
+Prefereance menentukan urutan tujuan MX.
+Round-robin menyebarkan jawaban yang tersedia.
+Glue record adalah alamat tambahan untuk NS internal.
+Zone file adalah teks isi zona.
+Delegation adalah penyerahan wewenang ke child.
+Root hint adalah titik awal pencarian akar.
+TLD adalah domain tingkat atas.
+Registrar adalah penjual pendaftaran domain.
+Registry adalah pengelola TLD.
+DNS adalah salah satu fondasi paling penting dalam internet modern.
+DNS sering tidak terlihat, tetapi hampir tidak bisa hilang tanpa mengganggu banyak hal.
+Memahami DNS berarti memahami cara nama, kepercayaan, dan routing saling bertemu.
+Masalah DNS dapat menyamar sebagai masalah aplikasi, jaringan, atau server.
+Solusi DNS yang tepat hampir selalu dimulai dari pertanyaan yang tepat.
+DNS yang terkelola dengan baik membuat internet terasa cepat dan dapat dipercaya.
+DNS yang buruk dapat membuat layanan yang sebenarnya hidup terasa mati.
+Ketika pengguna tidak menemukan situs, DNS hampir selalu menjadi tersangka pertama.
+Ketika email gagal masuk, DNS dan reputasi domain menjadi pemeriksa utama.
+Ketika aplikasi terasa lambat, query DNS bisa menjadi bagian dari alasan.
+Ketika sistem aman terganggu, DNS dapat menjadi sumber fakta yang penting.
+DNS adalah bahasa alamat dunia digital.
+DNS adalah sistem yang membuat internet dapat digunakan tanpa menghafal angka.
+DNS akan terus ada selama manusia membutuhkan nama untuk menemukan layanan.
+Keberhasilan DNS terletak pada kesederhanaan di klien dan kedalaman di balik layar.
+DNS bukan sekadar protokol, melainkan fondasi kepercayaan dalam jaringan.
+DNS yang stabil adalah hasil banyak keputusan kecil yang dijaga dengan disiplin.

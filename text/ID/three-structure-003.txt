@@ -1,0 +1,430 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 3
+Bahasa: Indonesia
+Fokus: Berbagai variasi struktur folder yang berbeda tetapi memiliki fungsi yang sama.
+Tujuan: Melatih AI agar memahami bahwa fungsi proyek bersifat invarian, sedangkan struktur folder bersifat variabel.
+AI harus mampu memetakan satu fungsi ke banyak lokasi berbeda.
+AI harus mampu membandingkan struktur yang berbeda dan menyimpulkan kesetaraan fungsinya.
+AI harus mampu menerjemahkan path dari satu struktur ke struktur lain.
+AI harus mampu menyarankan struktur baru tanpa kehilangan fungsi penting.
+AI harus memahami bahwa tidak ada satu struktur yang paling benar untuk semua proyek.
+Struktur yang baik adalah struktur yang jelas, konsisten, aman, dan mudah dirawat.
+
+BAGIAN 1: KONSEP DASAR VARIASI STRUKTUR
+Fungsi adalah kemampuan yang harus dimiliki proyek.
+Struktur adalah cara kemampuan tersebut ditempatkan dalam folder dan file.
+Fungsi bersifat stabil.
+Struktur bersifat fleksibel.
+Dua proyek dapat memiliki fungsi sama tetapi struktur berbeda.
+Perbedaan struktur dapat disebabkan oleh ukuran proyek.
+Perbedaan struktur dapat disebabkan oleh teknologi yang dipakai.
+Perbedaan struktur dapat disebabkan oleh preferensi tim.
+Perbedaan struktur dapat disebabkan oleh gaya arsitektur.
+Perbedaan struktur dapat disebabkan oleh kebutuhan deployment.
+Perbedaan struktur dapat disebabkan oleh kebutuhan pengujian.
+Perbedaan struktur dapat disebabkan oleh kebutuhan kolaborasi.
+AI tidak boleh menghafal satu struktur saja.
+AI harus mengenali pola fungsi dari nama file, isi file, dan lokasi file.
+AI harus memahami konteks sebelum menilai struktur.
+AI harus mampu melihat ekuivalensi antar struktur.
+Ekuivalensi berarti fungsi yang sama dapat berada di path yang berbeda.
+Contoh ekuivalensi: memuat data dapat berada di src/data/pemuat.py.
+Contoh ekuivalensi: memuat data dapat berada di fitur/data/pemuat.py.
+Contoh ekuivalensi: memuat data dapat berada di infrastruktur/pemuat.py.
+Contoh ekuivalensi: memuat data dapat berada di steps/muat_data.py.
+Contoh ekuivalensi: memuat data dapat berada di muat_data.py pada struktur datar.
+AI harus mampu menjelaskan mengapa dua path berbeda memiliki fungsi sama.
+AI harus mampu menjelaskan konsekuensi dari setiap variasi struktur.
+AI harus mampu memilih variasi yang sesuai dengan konteks.
+AI harus mampu menghindari variasi yang menimbulkan ambiguitas.
+AI harus mampu menghindari variasi yang menyulitkan pengujian.
+AI harus mampu menghindari variasi yang menyulitkan deployment.
+AI harus mampu menghindari variasi yang menyulitkan onboarding.
+AI harus mampu menghindari variasi yang menyulitkan otomasi.
+
+BAGIAN 2: DEFINISI FUNGSI ACUAN
+Untuk membandingkan variasi, digunakan fungsi acuan berikut.
+F1: Memuat data mentah dari sumber.
+F2: Membersihkan dan memvalidasi data.
+F3: Melatih model.
+F4: Mengevaluasi model.
+F5: Menyajikan prediksi melalui API.
+F6: Mengelola konfigurasi lingkungan.
+F7: Menyediakan pengujian unit.
+F8: Menyediakan pengujian integrasi.
+F9: Menyediakan dokumentasi.
+F10: Menyediakan skrip otomasi.
+F11: Menyimpan artefak model dan checkpoint.
+F12: Menyimpan laporan evaluasi.
+F13: Menyediakan konfigurasi deployment.
+F14: Menyediakan contoh data kecil.
+F15: Menyediakan pengelolaan dependensi.
+Setiap variasi struktur di bawah ini harus memenuhi F1 sampai F15.
+Perbedaan hanya terletak pada lokasi dan pengelompokan.
+AI harus memeriksa kelengkapan fungsi, bukan hanya nama folder.
+
+BAGIAN 3: VARIASI A — STRUKTUR BERBASIS PERAN
+Struktur ini mengelompokkan file berdasarkan peran teknis.
+Kode data, kode model, dan kode layanan dipisahkan.
+Struktur ini umum pada proyek menengah.
+Struktur ini mudah dipahami pemula.
+Struktur ini mudah diotomasi.
+Struktur ini mudah diuji per peran.
+Struktur ini cocok untuk tim kecil sampai menengah.
+
+proyek-a/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
+├── configs/
+│   ├── default.yaml
+│   ├── development.yaml
+│   └── production.yaml
+├── data/
+│   ├── raw/
+│   │   └── .gitkeep
+│   ├── processed/
+│   │   └── .gitkeep
+│   └── samples/
+│       └── contoh.csv
+├── src/
+│   ├── data/
+│   │   ├── pemuat.py
+│   │   ├── pembersih.py
+│   │   └── validasi.py
+│   ├── model/
+│   │   ├── pelatihan.py
+│   │   ├── evaluasi.py
+│   │   └── prediksi.py
+│   └── layanan/
+│       └── api.py
+├── tests/
+│   ├── unit/
+│   │   ├── test_pemuat.py
+│   │   ├── test_pembersih.py
+│   │   └── test_pelatihan.py
+│   └── integrasi/
+│       └── test_api.py
+├── docs/
+│   ├── index.md
+│   └── arsitektur.md
+├── scripts/
+│   ├── latih.sh
+│   └── evaluasi.sh
+├── artifacts/
+│   └── checkpoints/
+│       └── .gitkeep
+├── reports/
+│   └── laporan-evaluasi.md
+└── deployments/
+    └── docker-compose.yml
+
+Pemetaan Variasi A:
+F1 -> src/data/pemuat.py
+F2 -> src/data/pembersih.py dan src/data/validasi.py
+F3 -> src/model/pelatihan.py
+F4 -> src/model/evaluasi.py
+F5 -> src/layanan/api.py
+F6 -> configs/default.yaml dan configs/development.yaml
+F7 -> tests/unit/
+F8 -> tests/integrasi/
+F9 -> docs/
+F10 -> scripts/
+F11 -> artifacts/checkpoints/
+F12 -> reports/laporan-evaluasi.md
+F13 -> deployments/docker-compose.yml
+F14 -> data/samples/contoh.csv
+F15 -> requirements.txt
+
+BAGIAN 4: VARIASI B — STRUKTUR BERBASIS FITUR ATAU DOMAIN
+Struktur ini mengelompokkan file berdasarkan fitur bisnis.
+Setiap fitur memiliki data, model, layanan, dan tes sendiri.
+Struktur ini cocok untuk proyek yang berkembang.
+Struktur ini mengurangi ketergantungan antar tim.
+Struktur ini memudahkan pemisahan kepemilikan kode.
+Struktur ini menuntut disiplin batas antar fitur.
+
+proyek-b/
+├── README.md
+├── pyproject.toml
+├── .gitignore
+├── konfigurasi/
+│   ├── default.yaml
+│   ├── development.yaml
+│   └── production.yaml
+├── data/
+│   ├── mentah/
+│   │   └── .gitkeep
+│   ├── olahan/
+│   │   └── .gitkeep
+│   └── contoh/
+│       └── contoh.csv
+├── fitur/
+│   ├── data/
+│   │   ├── pemuat.py
+│   │   ├── pembersih.py
+│   │   └── validasi.py
+│   ├── model/
+│   │   ├── pelatihan.py
+│   │   ├── evaluasi.py
+│   │   └── prediksi.py
+│   └── layanan/
+│       └── api.py
+├── tes/
+│   ├── unit/
+│   │   ├── test_pemuat.py
+│   │   └── test_pelatihan.py
+│   └── integrasi/
+│       └── test_api.py
+├── dokumentasi/
+│   ├── index.md
+│   └── arsitektur.md
+├── skrip/
+│   ├── latih.sh
+│   └── evaluasi.sh
+├── artefak/
+│   └── checkpoints/
+│       └── .gitkeep
+├── laporan/
+│   └── laporan-evaluasi.md
+└── deploy/
+    └── docker-compose.yml
+
+Pemetaan Variasi B:
+F1 -> fitur/data/pemuat.py
+F2 -> fitur/data/pembersih.py dan fitur/data/validasi.py
+F3 -> fitur/model/pelatihan.py
+F4 -> fitur/model/evaluasi.py
+F5 -> fitur/layanan/api.py
+F6 -> konfigurasi/default.yaml
+F7 -> tes/unit/
+F8 -> tes/integrasi/
+F9 -> dokumentasi/
+F10 -> skrip/
+F11 -> artefak/checkpoints/
+F12 -> laporan/laporan-evaluasi.md
+F13 -> deploy/docker-compose.yml
+F14 -> data/contoh/contoh.csv
+F15 -> pyproject.toml
+
+BAGIAN 5: VARIASI C — STRUKTUR BERBASIS LAPISAN
+Struktur ini memisahkan presentasi, domain, infrastruktur, dan aplikasi.
+Struktur ini umum pada arsitektur bersih.
+Struktur ini menekankan arah dependensi.
+Presentasi bergantung pada aplikasi.
+Aplikasi bergantung pada domain.
+Infrastruktur mengimplementasikan antarmuka domain.
+Domain tidak bergantung pada lapisan lain.
+Struktur ini cocok untuk sistem yang kompleks.
+Struktur ini menuntut pemahaman arsitektur.
+
+proyek-c/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── konfigurasi/
+│   ├── default.yaml
+│   └── production.yaml
+├── data/
+│   ├── mentah/
+│   │   └── .gitkeep
+│   ├── olahan/
+│   │   └── .gitkeep
+│   └── contoh/
+│       └── contoh.csv
+├── presentasi/
+│   └── api.py
+├── aplikasi/
+│   ├── gunakan_latih.py
+│   ├── gunakan_evaluasi.py
+│   └── gunakan_prediksi.py
+├── domain/
+│   ├── entitas.py
+│   ├── aturan.py
+│   └── antarmuka.py
+├── infrastruktur/
+│   ├── pemuat.py
+│   ├── pembersih.py
+│   ├── validasi.py
+│   ├── pelatihan.py
+│   └── evaluasi.py
+├── tes/
+│   ├── unit/
+│   │   ├── test_pemuat.py
+│   │   └── test_aturan.py
+│   └── integrasi/
+│       └── test_api.py
+├── dokumentasi/
+│   ├── index.md
+│   └── arsitektur.md
+├── skrip/
+│   └── latih.sh
+├── artefak/
+│   └── checkpoints/
+│       └── .gitkeep
+├── laporan/
+│   └── laporan-evaluasi.md
+└── deploy/
+    └── docker-compose.yml
+
+Pemetaan Variasi C:
+F1 -> infrastruktur/pemuat.py
+F2 -> infrastruktur/pembersih.py dan infrastruktur/validasi.py
+F3 -> infrastruktur/pelatihan.py dan aplikasi/gunakan_latih.py
+F4 -> infrastruktur/evaluasi.py dan aplikasi/gunakan_evaluasi.py
+F5 -> presentasi/api.py dan aplikasi/gunakan_prediksi.py
+F6 -> konfigurasi/default.yaml
+F7 -> tes/unit/
+F8 -> tes/integrasi/
+F9 -> dokumentasi/
+F10 -> skrip/
+F11 -> artefak/checkpoints/
+F12 -> laporan/laporan-evaluasi.md
+F13 -> deploy/docker-compose.yml
+F14 -> data/contoh/contoh.csv
+F15 -> requirements.txt
+
+BAGIAN 6: VARIASI D — STRUKTUR BERBASIS PAKET MONOREPO
+Struktur ini memisahkan aplikasi dan pustaka bersama.
+Struktur ini cocok untuk banyak aplikasi.
+Struktur ini mengurangi duplikasi kode.
+Struktur ini menuntut pengelolaan versi.
+Struktur ini menuntut batas dependensi yang jelas.
+Aplikasi boleh bergantung pada pustaka.
+Pustaka tidak boleh bergantung pada aplikasi.
+
+proyek-d/
+├── README.md
+├── package.json
+├── pnpm-workspace.yaml
+├── .gitignore
+├── apps/
+│   ├── api/
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── main.py
+│   │   │   └── konfigurasi.py
+│   │   └── tests/
+│   │       └── test_api.py
+│   └── pekerja/
+│       ├── README.md
+│       └── src/
+│           └── pekerja.py
+├── packages/
+│   ├── pustaka-data/
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── pemuat.py
+│   │   │   ├── pembersih.py
+│   │   │   └── validasi.py
+│   │   └── tests/
+│   │       └── test_pemuat.py
+│   ├── pustaka-model/
+│   │   ├── README.md
+│   │   ├── src/
+│   │   │   ├── pelatihan.py
+│   │   │   ├── evaluasi.py
+│   │   │   └── prediksi.py
+│   │   └── tests/
+│   │       └── test_pelatihan.py
+│   └── pustaka-konfigurasi/
+│       ├── README.md
+│       └── src/
+│           └── pemuat_konfigurasi.py
+├── configs/
+│   ├── default.yaml
+│   └── production.yaml
+├── data/
+│   ├── raw/
+│   │   └── .gitkeep
+│   ├── processed/
+│   │   └── .gitkeep
+│   └── samples/
+│       └── contoh.csv
+├── tests/
+│   ├── integrasi/
+│   │   └── test_alur.py
+│   └── kontrak/
+│       └── test_skema.py
+├── docs/
+│   ├── index.md
+│   └── struktur-folder.md
+├── scripts/
+│   └── latih.sh
+├── artifacts/
+│   └── checkpoints/
+│       └── .gitkeep
+├── reports/
+│   └── laporan-evaluasi.md
+└── deployments/
+    └── kubernetes/
+        └── api.yaml
+
+Pemetaan Variasi D:
+F1 -> packages/pustaka-data/src/pemuat.py
+F2 -> packages/pustaka-data/src/pembersih.py dan validasi.py
+F3 -> packages/pustaka-model/src/pelatihan.py
+F4 -> packages/pustaka-model/src/evaluasi.py
+F5 -> apps/api/src/main.py dan packages/pustaka-model/src/prediksi.py
+F6 -> configs/default.yaml dan packages/pustaka-konfigurasi/src/pemuat_konfigurasi.py
+F7 -> packages/pustaka-data/tests/ dan packages/pustaka-model/tests/
+F8 -> tests/integrasi/
+F9 -> docs/
+F10 -> scripts/
+F11 -> artifacts/checkpoints/
+F12 -> reports/laporan-evaluasi.md
+F13 -> deployments/kubernetes/api.yaml
+F14 -> data/samples/contoh.csv
+F15 -> package.json
+
+BAGIAN 7: VARIASI E — STRUKTUR DATAR SEDERHANA
+Struktur ini menempatkan banyak file di satu folder.
+Struktur ini cocok untuk prototipe kecil.
+Struktur ini mudah dijalankan.
+Struktur ini cepat dibuat.
+Struktur ini sulit dirawat jika proyek membesar.
+Struktur ini tetap harus memenuhi fungsi acuan.
+Struktur ini mengandalkan nama file yang jelas.
+
+proyek-e/
+├── README.md
+├── requirements.txt
+├── config.yaml
+├── data_mentah.csv
+├── data_contoh.csv
+├── muat_data.py
+├── bersihkan_data.py
+├── validasi_data.py
+├── latih_model.py
+├── evaluasi_model.py
+├── prediksi.py
+├── api.py
+├── test_muat_data.py
+├── test_latih_model.py
+├── test_api.py
+├── dokumentasi.md
+├── latih.sh
+├── evaluasi.sh
+├── model_checkpoint.pkl
+├── laporan_evaluasi.md
+└── docker-compose.yml
+
+Pemetaan Variasi E:
+F1 -> muat_data.py
+F2 -> bersihkan_data.py dan validasi_data.py
+F3 -> latih_model.py
+F4 -> evaluasi_model.py
+F5 -> api.py dan prediksi.py
+F6 -> config.yaml
+F7 -> test_muat_data.py dan test_latih_model.py
+F8 -> test_api.py
+F9 -> dokumentasi.md
+F10 -> latih.sh dan evaluasi.sh
+F11 -> model_checkpoint.pkl
+F12 -> laporan_evaluasi.md
+F13 -> docker-compose.yml
+F14 -> data_contoh.csv
+F15 -> requirements.txt
+
+BAGIAN 8: VARI

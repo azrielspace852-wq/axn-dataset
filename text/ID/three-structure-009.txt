@@ -1,0 +1,914 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 9
+Bahasa: Indonesia
+Fokus: Proyek Android dengan Java, Kotlin, dan Gradle — pendalaman performa, pengujian tingkat lanjut, dan rekayasa rilis.
+Cakupan: Profiling, benchmarking, startup optimization, jank, memori, baterai, jaringan, ANR, crash, observability, piramida pengujian lanjutan, property-based testing, fuzzing, screenshot testing, contract testing, release engineering, versioning, staged rollout, monitoring pasca-rilis, dan incident response.
+
+Tujuan: Melatih AI agar memahami Android bukan hanya dari sisi kode dan struktur, tetapi juga dari sisi performa, kualitas, dan operasional rilis. AI harus mampu membaca struktur untuk menyimpulkan kesiapan performa, kesiapan pengujian, dan kesiapan rilis. AI harus mampu merancang struktur folder yang mendukung profiling, benchmarking, observability, dan incident response.
+
+BAGIAN 1: NARASI PENDALAMAN
+Pada generasi sebelumnya, AI belajar struktur Android dasar, modular, produksi, mekanisme Gradle, dan arsitektur aplikasi.
+Pada generasi kesembilan ini, AI belajar tiga pilar yang menentukan kualitas aplikasi Android di tangan pengguna.
+Pilar pertama adalah performa.
+Pilar kedua adalah pengujian.
+Pilar ketiga adalah rekayasa rilis.
+Performa menentukan apakah pengguna merasa aplikasi cepat atau lambat.
+Pengujian menentukan apakah perubahan aman atau berisiko.
+Rekayasa rilis menentukan apakah aplikasi sampai ke pengguna dengan aman.
+Ketiga pilar ini saling terkait.
+Performa tanpa pengujian mudah rusak.
+Pengujian tanpa performa tidak menjamin pengalaman pengguna.
+Rilis tanpa observability tidak dapat dipulihkan saat bermasalah.
+Struktur folder harus mencerminkan ketiga pilar ini.
+Struktur folder yang baik menyediakan tempat untuk benchmark.
+Struktur folder yang baik menyediakan tempat untuk laporan performa.
+Struktur folder yang baik menyediakan tempat untuk profil.
+Struktur folder yang baik menyediakan tempat untuk tes berlapis.
+Struktur folder yang baik menyediakan tempat untuk fixture dan data uji.
+Struktur folder yang baik menyediakan tempat untuk catatan rilis.
+Struktur folder yang baik menyediakan tempat untuk rencana rollback.
+Struktur folder yang baik menyediakan tempat untuk runbook insiden.
+Struktur folder yang baik menyediakan tempat untuk dashboard observability.
+Struktur folder yang baik menyediakan tempat untuk konfigurasi alert.
+AI harus memahami bahwa performa bukan tambahan di akhir.
+Performa harus diukur sejak awal.
+Performa harus diuji di setiap rilis.
+Performa harus dipantau setelah rilis.
+AI harus memahami bahwa pengujian bukan sekadar menambah tes.
+Pengujian harus terstruktur.
+Pengujian harus cepat dan deterministik.
+Pengujian harus mencerminkan risiko.
+AI harus memahami bahwa rilis bukan sekadar mengunggah AAB.
+Rilis harus direncanakan.
+Rilis harus dipantau.
+Rilis harus dapat dipulihkan.
+Rilis harus didokumentasikan.
+
+BAGIAN 2: ISTILAH PENTING PERFORMA ANDROID
+Startup adalah waktu dari peluncuran ikon sampai layar pertama tampil.
+Cold start adalah startup dari proses baru.
+Warm start adalah startup dari proses yang masih hidup.
+Hot start adalah startup dari Activity yang masih di memori.
+Time to Initial Display (TTID) adalah waktu sampai frame pertama tampil.
+Time to Full Display (TTFD) adalah waktu sampai konten lengkap tampil.
+Startup library mengelola urutan inisialisasi komponen.
+App Startup dapat mengurangi inisialisasi berlebihan.
+ContentProvider otomatis diinisialisasi sebelum Application.
+ContentProvider yang tidak perlu harus dihapus atau dibuat lazy.
+Jank adalah frame yang terlambat.
+Frame drop adalah frame yang dilewati.
+Frame time adalah waktu untuk merender satu frame.
+Budget frame adalah 16.6 ms untuk 60 Hz.
+Budget frame adalah 8.3 ms untuk 120 Hz.
+Jank rate adalah persentase frame yang melewati budget.
+FrameMetrics mencatat waktu per frame.
+Macrobenchmark mengukur jank di tingkat aplikasi.
+Microbenchmark mengukur fungsi tertentu.
+Perfetto adalah alat tracing sistem Android.
+Systrace adalah alat tracing lama.
+Android Studio Profiler menyediakan CPU, memori, jaringan, dan energi.
+Memory leak adalah objek yang tidak dapat di-GC karena referensi yang tersisa.
+LeakCanary mendeteksi memory leak pada debug.
+Heap dump menganalisis penggunaan memori.
+Allocation tracking mencatat alokasi memori.
+Bitmap besar adalah penyebab umum OutOfMemoryError.
+Glide, Coil, dan Picasso menangani pemuatan gambar dengan cache.
+ImageDecoder menggantikan BitmapFactory pada API modern.
+Battery drain dipengaruhi oleh wake lock, sensor, dan jaringan.
+WorkManager menjadwalkan tugas dengan mempertimbangkan baterai.
+Doze mode membatasi tugas latar belakang.
+App Standby membatasi aplikasi yang jarang dipakai.
+Foreground Service harus dipakai hanya jika benar-benar perlu.
+Battery Historian menganalisis konsumsi baterai.
+Energy Profiler mengukur konsumsi energi.
+Network request boros baterai jika sering atau besar.
+Batching mengurangi jumlah request.
+Compression mengurangi ukuran request.
+Caching mengurangi request berulang.
+HTTP/2 dan HTTP/3 mengurangi latensi.
+OkHttp mendukung connection pooling.
+Retrofit mendukung caching HTTP.
+ANR adalah Application Not Responding.
+ANR terjadi jika main thread diblokir lebih dari 5 detik.
+ANR dapat terjadi karena I/O di main thread.
+ANR dapat terjadi karena kunci yang tidak dilepas.
+ANR dapat dianalisis dari traces di /data/anr/.
+StrictMode mendeteksi I/O, disk write, dan network di main thread.
+StrictMode harus diaktifkan pada debug.
+Crash adalah penghentian aplikasi yang tidak terduga.
+Crash dapat berupa Java exception, native crash, atau ANR.
+Crashlytics, Sentry, dan Bugsnag menangani pelaporan crash.
+Mapping R8 harus diunggah agar stack trace dapat dibaca.
+Native symbol harus diunggah agar native crash dapat dibaca.
+ANR trace harus dikumpulkan untuk analisis.
+Observability mencakup log, metrik, trace, dan event.
+Log harus terstruktur.
+Metrik harus memiliki nama yang konsisten.
+Trace harus memiliki span untuk operasi penting.
+Event harus memiliki properti yang jelas.
+Dashboard menampilkan metrik penting.
+Alert memberi tahu saat metrik melewati ambang.
+Runbook menjelaskan cara menangani insiden.
+
+BAGIAN 3: ISTILAH PENTING PENGUJIAN ANDROID
+Piramida pengujian memiliki unit, integrasi, dan end-to-end.
+Unit test cepat dan murah.
+Integration test menengah.
+End-to-end test lambat dan mahal.
+Test pyramid menyarankan banyak unit test, sedikit e2e.
+Test trophy menyarankan banyak integration test.
+Pilihan piramida bergantung pada konteks.
+Property-based testing menguji properti yang harus selalu benar.
+Fuzzing memasukkan input acak untuk menemukan crash.
+Mutation testing menguji kualitas tes dengan mutan.
+Contract testing memastikan antarmuka cocok antar modul.
+Screenshot testing membandingkan tampilan dengan referensi.
+Golden test adalah istilah lain untuk screenshot testing.
+Paparazzi dan Roborazzi adalah alat screenshot testing.
+Robolectric menjalankan tes Android di JVM.
+Espresso menguji UI di perangkat.
+Compose Test menguji UI Compose.
+UI Automator menguji interaksi lintas aplikasi.
+Test Orchestrator mengisolasi tes instrumen.
+Android Test Orchestrator menjalankan setiap tes di proses terpisah.
+Flank adalah runner tes instrumen paralel.
+Firebase Test Lab menjalankan tes di banyak perangkat.
+Gradle Managed Devices menjalankan tes di perangkat yang dikelola Gradle.
+Hermetic test tidak bergantung pada lingkungan eksternal.
+Deterministic test selalu memberi hasil yang sama.
+Flaky test memberi hasil tidak konsisten.
+Flaky test harus diisolasi dan diperbaiki.
+Test sharding membagi tes ke banyak mesin.
+Test caching menghindari tes yang tidak berubah.
+Test impact analysis hanya menjalankan tes terkait perubahan.
+Jacoco mengukur cakupan kode.
+Kover mengukur cakupan untuk Kotlin.
+Coverage bukan tujuan, tetapi indikator.
+Coverage tinggi tanpa asersi tidak berarti.
+Asersi harus jelas dan spesifik.
+Test harus memiliki satu alasan gagal.
+Test harus mudah dibaca.
+Test harus mengekspresikan perilaku, bukan implementasi.
+Test harus stabil terhadap refaktor.
+Test harus memiliki nama yang deskriptif.
+Test harus menghindari sleep.
+Test harus memakai idling resource.
+Test harus memakai fake clock.
+Test harus memakai test dispatcher.
+Test harus memakai fixture yang bersih.
+Test harus dibersihkan setelah selesai.
+Test harus dapat dijalankan paralel.
+
+BAGIAN 4: ISTILAH PENTING REKAYASA RILIS ANDROID
+Version code harus naik setiap rilis.
+Version name mengikuti semantic versioning.
+Semantic versioning memiliki MAJOR, MINOR, PATCH.
+Tag Git harus cocok dengan version name.
+Changelog mencatat perubahan yang terlihat pengguna.
+Catatan rilis mencatat detail teknis.
+Play Console mengelola rilis.
+Play App Signing memisahkan kunci aplikasi dan kunci upload.
+Upload key dapat dirotasi.
+App signing key tidak dapat dirotasi tanpa permintaan khusus.
+Internal testing track untuk penguji internal.
+Closed testing track untuk penguji terbatas.
+Open testing track untuk publik terbatas.
+Production track untuk semua pengguna.
+Staged rollout merilis ke persentase pengguna.
+Staged rollout dapat dihentikan.
+Staged rollout dapat dilanjutkan.
+Staged rollout harus dipantau.
+Halt rollout menghentikan peluncuran.
+Rollback di Play Store dilakukan dengan merilis versi baru.
+Rollback harus direncanakan.
+Rollback harus diuji.
+Rollback harus didokumentasikan.
+Kill switch mematikan fitur tanpa rilis.
+Feature flag memungkinkan kill switch.
+Remote config memungkinkan perubahan tanpa rilis.
+Remote config harus divalidasi.
+Remote config harus memiliki default.
+Pre-launch report menjalankan tes otomatis di Play Console.
+Pre-launch report mendeteksi crash dan masalah performa.
+Pre-launch report harus diperiksa sebelum rilis.
+Internal app sharing memungkinkan distribusi cepat ke penguji.
+Firebase App Distribution memungkinkan distribusi ke penguji.
+TestFlight adalah padanan iOS, bukan Android.
+App Bundle Explorer menampilkan ukuran per konfigurasi.
+Play Console vitals menampilkan crash, ANR, dan startup.
+Play Console vitals harus dipantau setelah rilis.
+Android vitals memberi peringatan jika melewati ambang.
+Peringatan vitals harus ditangani.
+Incident response membutuhkan runbook.
+Runbook menjelaskan langkah saat insiden.
+Post-mortem menjelaskan penyebab dan perbaikan.
+Post-mortem harus blameless.
+Post-mortem harus menghasilkan tindakan.
+Action item harus dilacak.
+
+BAGIAN 5: STRUKTUR POHON ANDROID PERFORMA, PENGUJIAN, DAN RILIS
+proyek-android-operasional/
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── PRIVACY.md
+├── RELEASE.md
+├── INCIDENT.md
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── release.yml
+│   │   ├── nightly-benchmark.yml
+│   │   ├── nightly-instrumentation.yml
+│   │   ├── nightly-screenshot.yml
+│   │   ├── nightly-fuzz.yml
+│   │   ├── security-scan.yml
+│   │   └── dependabot.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   ├── feature_request.md
+│   │   ├── performance_regression.md
+│   │   └── incident_report.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── CODEOWNERS
+├── gradle/
+│   ├── libs.versions.toml
+│   ├── verification-metadata.xml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiConventionPlugin.kt
+│           ├── AndroidPustakaConventionPlugin.kt
+│           ├── AndroidFeatureConventionPlugin.kt
+│           ├── AndroidBenchmarkConventionPlugin.kt
+│           ├── AndroidScreenshotConventionPlugin.kt
+│           └── AndroidTestConventionPlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── consumer-rules.pro
+│   ├── baseline-prof.txt
+│   ├── startup-prof.txt
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── java/com/contoh/operasional/
+│   │   │   │   ├── Aplikasi.kt
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   ├── startup/
+│   │   │   │   │   ├── InisialisasiAwal.kt
+│   │   │   │   │   ├── InisialisasiLatar.kt
+│   │   │   │   │   └── UrutanStartup.kt
+│   │   │   │   ├── observability/
+│   │   │   │   │   ├── Pencatat.kt
+│   │   │   │   │   ├── PelaporCrash.kt
+│   │   │   │   │   ├── PelaporANR.kt
+│   │   │   │   │   ├── Analitik.kt
+│   │   │   │   │   ├── MetrikStartup.kt
+│   │   │   │   │   └── TraceAwal.kt
+│   │   │   │   ├── performa/
+│   │   │   │   │   ├── PemantauFrame.kt
+│   │   │   │   │   ├── PemantauMemori.kt
+│   │   │   │   │   └── PemantauJaringan.kt
+│   │   │   │   ├── rilis/
+│   │   │   │   │   ├── KonfigurasiRilis.kt
+│   │   │   │   │   ├── FiturFlag.kt
+│   │   │   │   │   └── KillSwitch.kt
+│   │   │   │   └── di/
+│   │   │   │       └── ModulAplikasi.kt
+│   │   │   └── res/
+│   │   │       ├── values/
+│   │   │       │   ├── strings.xml
+│   │   │       │   ├── colors.xml
+│   │   │       │   ├── dimens.xml
+│   │   │       │   ├── themes.xml
+│   │   │       │   └── locales_config.xml
+│   │   │       ├── values-b+in/strings.xml
+│   │   │       ├── values-b+en/strings.xml
+│   │   │       ├── values-night/themes.xml
+│   │   │       ├── layout/
+│   │   │       ├── drawable/
+│   │   │       ├── mipmap-anydpi-v26/
+│   │   │       └── xml/
+│   │   │           ├── backup_rules.xml
+│   │   │           ├── data_extraction_rules.xml
+│   │   │           └── network_security_config.xml
+│   │   ├── debug/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── java/com/contoh/operasional/
+│   │   │       ├── DebugStartup.kt
+│   │   │       └── StrictModeConfig.kt
+│   │   ├── release/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── java/com/contoh/operasional/
+│   │   │       └── ReleaseStartup.kt
+│   │   ├── test/
+│   │   │   └── java/com/contoh/operasional/
+│   │   │       ├── unit/
+│   │   │       │   ├── FiturFlagTest.kt
+│   │   │       │   └── UrutanStartupTest.kt
+│   │   │       ├── properti/
+│   │   │       │   └── KonfigurasiRilisPropertiTest.kt
+│   │   │       └── contract/
+│   │   │           └── SkemaFiturFlagTest.kt
+│   │   └── androidTest/
+│   │       ├── java/com/contoh/operasional/
+│   │       │   ├── e2e/
+│   │       │   │   └── AlurUtamaE2ETest.kt
+│   │       │   ├── integrasi/
+│   │       │   │   └── StartupIntegrasiTest.kt
+│   │       │   └── HiltTestRunner.kt
+│   │       └── assets/
+│   │           └── data_uji.json
+├── feature/
+│   ├── beranda/
+│   │   ├── api/
+│   │   └── impl/
+│   │       ├── src/main/kotlin/com/contoh/beranda/
+│   │       │   └── BerandaViewModel.kt
+│   │       ├── src/test/kotlin/com/contoh/beranda/
+│   │       │   └── BerandaViewModelTest.kt
+│   │       └── src/testScreenshot/kotlin/com/contoh/beranda/
+│   │           └── BerandaScreenshotTest.kt
+│   └── detail/
+│       ├── api/
+│       └── impl/
+│           └── src/test/kotlin/com/contoh/detail/
+│               └── DetailViewModelTest.kt
+├── core/
+│   ├── common/
+│   │   └── src/main/kotlin/com/contoh/core/common/
+│   │       ├── Hasil.kt
+│   │       ├── Dispatcher.kt
+│   │       └── Waktu.kt
+│   ├── domain/
+│   │   └── src/main/kotlin/com/contoh/core/domain/
+│   │       ├── model/
+│   │       ├── repositori/
+│   │       └── gunakan/
+│   ├── data/
+│   │   └── src/main/kotlin/com/contoh/core/data/
+│   │       ├── lokal/
+│   │       ├── jarak-jauh/
+│   │       ├── repositori/
+│   │       └── di/
+│   ├── ui/
+│   │   └── src/main/kotlin/com/contoh/core/ui/
+│   │       ├── tema/
+│   │       ├── komponen/
+│   │       └── aksesibilitas/
+│   ├── observability/
+│   │   └── src/main/kotlin/com/contoh/core/observability/
+│   │       ├── Pencatat.kt
+│   │       ├── Metrik.kt
+│   │       ├── Trace.kt
+│   │       └── Event.kt
+│   ├── performa/
+│   │   └── src/main/kotlin/com/contoh/core/performa/
+│   │       ├── PengukurWaktu.kt
+│   │       ├── PelacakFrame.kt
+│   │       └── PenganalisisMemori.kt
+│   ├── jaringan/
+│   │   └── src/main/kotlin/com/contoh/core/jaringan/
+│   │       ├── KlienHttp.kt
+│   │       ├── CacheHttp.kt
+│   │       ├── Batching.kt
+│   │       └── Pencegat.kt
+│   ├── baterai/
+│   │   └── src/main/kotlin/com/contoh/core/baterai/
+│   │       ├── PenjadwalHemat.kt
+│   │       ├── PemantauBaterai.kt
+│   │       └── WorkManagerKonfigurasi.kt
+│   ├── keamanan/
+│   │   └── src/main/kotlin/com/contoh/core/keamanan/
+│   │       ├── PenyimpananAman.kt
+│   │       ├── Penyamaran.kt
+│   │       └── PemeriksaIntegritas.kt
+│   └── pengujian/
+│       └── src/main/kotlin/com/contoh/core/pengujian/
+│           ├── AturanTes.kt
+│           ├── DispatcherTes.kt
+│           ├── FakeWaktu.kt
+│           ├── AturanScreenshot.kt
+│           └── FuzzerData.kt
+├── testing/
+│   ├── fixtures/
+│   │   └── src/main/kotlin/com/contoh/testing/fixtures/
+│   │       ├── DataPengguna.kt
+│   │       ├── DataKesalahan.kt
+│   │       └── DataJaringan.kt
+│   ├── screenshot/
+│   │   └── src/main/kotlin/com/contoh/testing/screenshot/
+│   │       ├── KonfigurasiScreenshot.kt
+│   │       ├── PerangkatVirtual.kt
+│   │       └── TemaUji.kt
+│   ├── fuzzing/
+│   │   └── src/main/kotlin/com/contoh/testing/fuzzing/
+│   │       ├── FuzzInput.kt
+│   │       └── FuzzKontrak.kt
+│   └── contract/
+│       └── src/main/kotlin/com/contoh/testing/contract/
+│           ├── KontrakApi.kt
+│           └── ValidatorKontrak.kt
+├── benchmark/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/benchmark/
+│           ├── StartupCold.kt
+│           ├── StartupWarm.kt
+│           ├── DaftarJank.kt
+│           ├── DetailJank.kt
+│           └── BaselineProfileGenerator.kt
+├── baselineprofile/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/baselineprofile/
+│           └── GeneratorProfil.kt
+├── microbenchmark/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       └── java/com/contoh/microbenchmark/
+│           ├── ParserBenchmark.kt
+│           └── MapperBenchmark.kt
+├── screenshot/
+│   ├── build.gradle.kts
+│   └── src/test/
+│       └── kotlin/com/contoh/screenshot/
+│           ├── BerandaScreenshot.kt
+│           ├── DetailScreenshot.kt
+│           └── PengaturanScreenshot.kt
+├── performance/
+│   ├── baseline/
+│   │   ├── startup-cold.json
+│   │   ├── startup-warm.json
+│   │   ├── jank-beranda.json
+│   │   └── memori-daftar.json
+│   ├── laporan/
+│   │   ├── 1.0.0.md
+│   │   ├── 1.1.0.md
+│   │   └── 1.2.0.md
+│   └── README.md
+├── observability/
+│   ├── dashboard/
+│   │   ├── startup.json
+│   │   ├── crash.json
+│   │   ├── anr.json
+│   │   ├── jank.json
+│   │   └── jaringan.json
+│   ├── alert/
+│   │   ├── crash-rate.yaml
+│   │   ├── anr-rate.yaml
+│   │   ├── startup-p95.yaml
+│   │   └── jank-rate.yaml
+│   └── runbook/
+│       ├── crash.md
+│       ├── anr.md
+│       ├── startup-regresi.md
+│       └── rollout-bermasalah.md
+├── incidents/
+│   ├── template.md
+│   ├── 2024-01-10-crash-login.md
+│   ├── 2024-03-22-anr-daftar.md
+│   └── 2024-05-04-startup-lambat.md
+├── dist/
+│   ├── catatan-rilis/
+│   │   ├── 1.0.0.md
+│   │   ├── 1.1.0.md
+│   │   └── 1.2.0.md
+│   ├── rollout/
+│   │   ├── 1.1.0.md
+│   │   └── 1.2.0.md
+│   └── rollback/
+│       ├── 1.1.0.md
+│       └── 1.2.0.md
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── struktur-folder.md
+│   ├── performa.md
+│   ├── pengujian.md
+│   ├── rilis.md
+│   ├── observability.md
+│   ├── incident-response.md
+│   ├── aksesibilitas.md
+│   ├── internasionalisasi.md
+│   ├── keamanan.md
+│   ├── keputusan/
+│   │   ├── 0001-baseline-profile.md
+│   │   ├── 0002-screenshot-testing.md
+│   │   └── 0003-staged-rollout.md
+│   └── api/
+│       └── referensi.md
+├── tools/
+│   ├── pemeriksa/
+│   │   └── src/main/kotlin/com/contoh/tools/
+│   │       ├── PeriksaStruktur.kt
+│   │       ├── PeriksaPerforma.kt
+│   │       └── PeriksaRilis.kt
+│   └── generator/
+│       ├── buat-modul-fitur.sh
+│       └── buat-catatan-rilis.sh
+└── scripts/
+    ├── build-debug.sh
+    ├── build-release.sh
+    ├── jalankan-tes-unit.sh
+    ├── jalankan-tes-instrumen.sh
+    ├── jalankan-benchmark.sh
+    ├── jalankan-screenshot.sh
+    ├── verifikasi-rilis.sh
+    └── README.md
+
+BAGIAN 6: PENJELASAN FOLDER PERFORMA
+benchmark/ memuat modul Macrobenchmark.
+benchmark/src/main/java/com/contoh/benchmark/StartupCold.kt mengukur cold start.
+benchmark/src/main/java/com/contoh/benchmark/StartupWarm.kt mengukur warm start.
+benchmark/src/main/java/com/contoh/benchmark/DaftarJank.kt mengukur jank layar daftar.
+benchmark/src/main/java/com/contoh/benchmark/BaselineProfileGenerator.kt menghasilkan baseline profile.
+microbenchmark/ memuat Microbenchmark untuk fungsi tertentu.
+baselineprofile/ memuat generator baseline profile yang dapat dijalankan di perangkat.
+app/baseline-prof.txt memuat baseline profile yang dipakai aplikasi.
+app/startup-prof.txt memuat startup profile.
+performance/baseline/ menyimpan hasil benchmark acuan.
+performance/laporan/ menyimpan laporan performa per rilis.
+performance/README.md menjelaskan cara menjalankan benchmark.
+docs/performa.md menjelaskan pedoman performa.
+core/performa/ menyediakan utilitas pengukuran.
+core/performa/PengukurWaktu.kt mengukur durasi operasi.
+core/performa/PelacakFrame.kt mencatat frame time.
+core/performa/PenganalisisMemori.kt menganalisis penggunaan memori.
+app/performa/PemantauFrame.kt memantau jank di runtime.
+app/performa/PemantauMemori.kt memantau memori di runtime.
+app/performa/PemantauJaringan.kt memantau request jaringan.
+app/startup/ memuat urutan inisialisasi.
+app/startup/InisialisasiAwal.kt untuk inisialisasi kritis.
+app/startup/InisialisasiLatar.kt untuk inisialisasi non-kritis.
+app/startup/UrutanStartup.kt mengatur urutan startup.
+
+BAGIAN 7: PENJELASAN FOLDER PENGUJIAN
+app/src/test/ memuat tes unit aplikasi.
+app/src/test/java/com/contoh/operasional/unit/ memuat tes unit.
+app/src/test/java/com/contoh/operasional/properti/ memuat property-based test.
+app/src/test/java/com/contoh/operasional/contract/ memuat contract test.
+app/src/androidTest/ memuat tes instrumen.
+app/src/androidTest/java/com/contoh/operasional/e2e/ memuat tes end-to-end.
+app/src/androidTest/java/com/contoh/operasional/integrasi/ memuat tes integrasi.
+app/src/androidTest/java/com/contoh/operasional/HiltTestRunner.kt menjalankan tes dengan Hilt.
+feature/<nama>/impl/src/test/ memuat tes unit fitur.
+feature/<nama>/impl/src/testScreenshot/ memuat tes screenshot fitur.
+testing/fixtures/ memuat data contoh untuk tes.
+testing/screenshot/ memuat konfigurasi screenshot testing.
+testing/fuzzing/ memuat utilitas fuzzing.
+testing/contract/ memuat kontrak dan validator.
+screenshot/ memuat tes screenshot tingkat aplikasi.
+core/pengujian/ memuat utilitas pengujian bersama.
+core/pengujian/AturanTes.kt menyediakan aturan Main dispatcher.
+core/pengujian/DispatcherTes.kt menyediakan dispatcher untuk tes.
+core/pengujian/FakeWaktu.kt menyediakan waktu palsu.
+core/pengujian/AturanScreenshot.kt menyediakan aturan screenshot.
+core/pengujian/FuzzerData.kt menyediakan data fuzzing.
+docs/pengujian.md menjelaskan piramida pengujian dan pedoman.
+
+BAGIAN 8: PENJELASAN FOLDER OBSERVABILITY
+observability/dashboard/ menyimpan definisi dashboard.
+observability/dashboard/startup.json mendefinisikan dashboard startup.
+observability/dashboard/crash.json mendefinisikan dashboard crash.
+observability/dashboard/anr.json mendefinisikan dashboard ANR.
+observability/dashboard/jank.json mendefinisikan dashboard jank.
+observability/dashboard/jaringan.json mendefinisikan dashboard jaringan.
+observability/alert/ menyimpan definisi alert.
+observability/alert/crash-rate.yaml mendefinisikan alert crash rate.
+observability/alert/anr-rate.yaml mendefinisikan alert ANR rate.
+observability/alert/startup-p95.yaml mendefinisikan alert startup p95.
+observability/alert/jank-rate.yaml mendefinisikan alert jank rate.
+observability/runbook/ menyimpan runbook.
+observability/runbook/crash.md menjelaskan langkah saat crash naik.
+observability/runbook/anr.md menjelaskan langkah saat ANR naik.
+observability/runbook/startup-regresi.md menjelaskan langkah saat startup melambat.
+observability/runbook/rollout-bermasalah.md menjelaskan langkah saat rollout bermasalah.
+core/observability/ menyediakan antarmuka pencatatan, metrik, trace, dan event.
+app/observability/ menyediakan implementasi.
+docs/observability.md menjelaskan pedoman observability.
+
+BAGIAN 9: PENJELASAN FOLDER RILIS DAN INSIDEN
+dist/catatan-rilis/ menyimpan catatan rilis per versi.
+dist/rollout/ menyimpan rencana rollout per versi.
+dist/rollback/ menyimpan rencana rollback per versi.
+incidents/ menyimpan catatan insiden.
+incidents/template.md adalah templat post-mortem.
+incidents/2024-01-10-crash-login.md adalah contoh insiden.
+docs/rilis.md menjelaskan langkah rilis.
+docs/incident-response.md menjelaskan langkah insiden.
+RELEASE.md adalah panduan rilis tingkat atas.
+INCIDENT.md adalah panduan insiden tingkat atas.
+app/rilis/KonfigurasiRilis.kt mengatur konfigurasi rilis.
+app/rilis/FiturFlag.kt mengatur feature flag.
+app/rilis/KillSwitch.kt mengatur kill switch.
+scripts/verifikasi-rilis.sh memverifikasi artefak rilis.
+.github/workflows/release.yml menjalankan pipeline rilis.
+
+BAGIAN 10: STRUKTUR BENCHMARK DETAIL
+Benchmark harus dijalankan pada perangkat referensi.
+Benchmark harus mencatat versi aplikasi.
+Benchmark harus mencatat versi Android.
+Benchmark harus mencatat model perangkat.
+Benchmark harus mencatat kondisi baterai.
+Benchmark harus mencatat kondisi jaringan.
+Benchmark harus dijalankan beberapa kali.
+Benchmark harus memakai median atau persentil.
+Benchmark harus dibandingkan dengan baseline.
+Baseline harus diperbarui saat ada perubahan yang disengaja.
+Regresi harus dideteksi otomatis.
+Regresi harus dilaporkan di PR.
+Regresi harus ditangani sebelum rilis.
+Macrobenchmark harus mencakup startup, jank, dan memori.
+Microbenchmark harus mencakup fungsi kritis.
+Baseline profile harus diverifikasi dengan Macrobenchmark.
+Startup profile harus diverifikasi dengan Macrobenchmark.
+Jank harus diverifikasi dengan FrameMetrics.
+Memori harus diverifikasi dengan heap dump.
+Baterai harus diverifikasi dengan Battery Historian.
+Jaringan harus diverifikasi dengan Network Profiler.
+
+BAGIAN 11: STRUKTUR PENGUJIAN DETAIL
+Tes unit harus cepat.
+Tes unit harus deterministik.
+Tes unit harus mengekspresikan perilaku.
+Tes unit harus memakai fake.
+Tes unit harus memakai test dispatcher.
+Tes unit harus memakai fake clock.
+Tes unit harus memakai fixture kecil.
+Tes unit harus dijalankan setiap commit.
+Property-based test harus memakai generator.
+Property-based test harus memeriksa invarian.
+Property-based test harus meminimalkan counterexample.
+Property-based test harus dijalankan di CI.
+Fuzz test harus memakai input acak.
+Fuzz test harus memeriksa crash.
+Fuzz test harus dijalankan nightly.
+Contract test harus memeriksa skema.
+Contract test harus memeriksa kompatibilitas.
+Contract test harus dijalankan di CI.
+Integration test harus memeriksa interaksi.
+Integration test harus memakai HiltTestRunner.
+Integration test harus memakai basis data in-memory.
+Integration test harus memakai MockWebServer.
+Integration test harus dijalankan di CI.
+End-to-end test harus memeriksa alur kritis.
+End-to-end test harus memakai idling resource.
+End-to-end test harus dijalankan nightly.
+End-to-end test harus memakai data uji stabil.
+Screenshot test harus memeriksa regresi visual.
+Screenshot test harus memakai referensi terkontrol.
+Screenshot test harus diperbarui saat UI berubah sengaja.
+Screenshot test harus dijalankan di CI.
+Aksesibilitas test harus memeriksa contentDescription.
+Aksesibilitas test harus memeriksa ukuran sentuh.
+Aksesibilitas test harus memeriksa kontras.
+Aksesibilitas test harus dijalankan di CI.
+Performa test harus memeriksa startup dan jank.
+Performa test harus dijalankan di perangkat referensi.
+Performa test harus membandingkan dengan baseline.
+Performa test harus dijalankan nightly.
+
+BAGIAN 12: STRUKTUR RILIS DETAIL
+Rilis harus direncanakan.
+Rilis harus memiliki changelog.
+Rilis harus memiliki catatan rilis.
+Rilis harus memiliki versionCode yang naik.
+Rilis harus memiliki versionName yang sesuai.
+Rilis harus memiliki tag Git.
+Rilis harus memiliki AAB yang ditandatangani.
+Rilis harus memiliki mapping R8.
+Rilis harus memiliki simbol native.
+Rilis harus diunggah ke track internal terlebih dahulu.
+Rilis harus diuji pada track internal.
+Rilis harus dipromosikan ke closed testing.
+Rilis harus dipantau di closed testing.
+Rilis harus dipromosikan ke open testing.
+Rilis harus dipantau di open testing.
+Rilis harus dipromosikan ke produksi dengan staged rollout.
+Rilis harus dipantau di produksi.
+Rilis harus dihentikan jika ada masalah.
+Rilis harus dilanjutkan setelah masalah teratasi.
+Rilis harus didokumentasikan di dist/rollout/.
+Rollback harus direncanakan.
+Rollback harus didokumentasikan di dist/rollback/.
+Rollback harus diuji.
+Rollback harus dieksekusi dengan hati-hati.
+Rollback harus dipantau.
+Rollback harus menghasilkan post-mortem.
+
+BAGIAN 13: STRUKTUR OBSERVABILITY DETAIL
+Log harus terstruktur.
+Log harus memiliki level.
+Log harus memiliki tag.
+Log harus memiliki timestamp.
+Log harus memiliki konteks.
+Log harus menyamarkan data sensitif.
+Metrik harus memiliki nama yang konsisten.
+Metrik harus memiliki unit.
+Metrik harus memiliki tag.
+Metrik harus dikirim ke backend.
+Trace harus memiliki span.
+Trace harus memiliki parent-child.
+Trace harus memiliki durasi.
+Trace harus dikirim ke backend.
+Event harus memiliki nama.
+Event harus memiliki properti.
+Event harus dikirim ke backend.
+Dashboard harus menampilkan metrik utama.
+Dashboard harus menampilkan tren.
+Dashboard harus menampilkan perbandingan versi.
+Alert harus memiliki ambang.
+Alert harus memiliki durasi.
+Alert harus memiliki kanal notifikasi.
+Alert harus memiliki runbook.
+Runbook harus menjelaskan diagnosis.
+Runbook harus menjelaskan mitigasi.
+Runbook harus menjelaskan eskalasi.
+Runbook harus diperbarui setelah insiden.
+
+BAGIAN 14: VARIASI STRUKTUR OPERASIONAL
+Variasi O1: Startup kecil.
+Ciri: benchmark minimal, observability minimal.
+Cocok untuk MVP.
+Risiko: regresi tidak terdeteksi.
+
+Variasi O2: Startup menengah.
+Ciri: benchmark startup, observability dasar.
+Cocok untuk aplikasi dengan pengguna awal.
+Risiko: jank tidak terdeteksi.
+
+Variasi O3: Enterprise.
+Ciri: benchmark lengkap, observability lengkap, incident response.
+Cocok untuk aplikasi dengan banyak pengguna.
+Risiko: biaya operasional tinggi.
+
+Variasi O4: Fintech.
+Ciri: benchmark lengkap, observability lengkap, keamanan ekstensif, audit.
+Cocok untuk aplikasi dengan regulasi ketat.
+Risiko: kompleksitas tinggi.
+
+Variasi O5: Health.
+Ciri: benchmark lengkap, observability lengkap, privasi ekstensif, aksesibilitas ekstensif.
+Cocok untuk aplikasi dengan data sensitif.
+Risiko: kompleksitas tinggi.
+
+Variasi O6: Game.
+Ciri: benchmark frame, observability performa, profiling GPU.
+Cocok untuk aplikasi dengan grafik intensif.
+Risiko: perangkat referensi beragam.
+
+Variasi O7: Media.
+Ciri: benchmark pemutaran, observability buffering, observability unduhan.
+Cocok untuk aplikasi streaming.
+Risiko: kondisi jaringan beragam.
+
+Variasi O8: IoT.
+Ciri: benchmark koneksi, observability perangkat, observability firmware.
+Cocok untuk aplikasi companion.
+Risiko: perangkat beragam.
+
+BAGIAN 15: LATIHAN PENALARAN GENERASI 9
+Latihan 1: Deteksi startup lambat.
+Diberikan aplikasi dengan cold start 3 detik.
+AI harus menyarankan profiling startup.
+AI harus menyarankan baseline profile.
+AI harus menyarankan App Startup.
+AI harus menyarankan lazy initialization.
+
+Latihan 2: Deteksi jank.
+Diberikan layar daftar dengan jank rate 20 persen.
+AI harus menyarankan FrameMetrics.
+AI harus menyarankan Macrobenchmark.
+AI harus menyarankan optimasi rendering.
+
+Latihan 3: Deteksi memory leak.
+Diberikan aplikasi dengan memori naik terus.
+AI harus menyarankan LeakCanary.
+AI harus menyarankan heap dump.
+AI harus menyarankan analisis referensi.
+
+Latihan 4: Deteksi baterai boros.
+Diberikan aplikasi dengan konsumsi baterai tinggi.
+AI harus menyarankan Battery Historian.
+AI harus menyarankan WorkManager.
+AI harus menyarankan batching.
+
+Latihan 5: Deteksi ANR.
+Diberikan aplikasi dengan ANR di main thread.
+AI harus menyarankan StrictMode.
+AI harus menyarankan pemindahan I/O ke background.
+AI harus menyarankan analisis traces.
+
+Latihan 6: Deteksi crash tanpa mapping.
+Diberikan crash rilis tanpa deobfuscation.
+AI harus menyarankan unggah mapping R8.
+AI harus menyarankan unggah simbol native.
+
+Latihan 7: Deteksi tes tidak lengkap.
+Diberikan aplikasi dengan hanya tes instrumen.
+AI harus menyarankan tes unit.
+AI harus menyarankan piramida pengujian.
+
+Latihan 8: Deteksi tes flaky.
+Diberikan tes yang kadang gagal.
+AI harus menyarankan isolasi.
+AI harus menyarankan fake clock.
+AI harus menyarankan test dispatcher.
+
+Latihan 9: Deteksi screenshot test tidak ada.
+Diberikan UI berubah tanpa deteksi.
+AI harus menyarankan screenshot testing.
+AI harus menyarankan Paparazzi atau Roborazzi.
+
+Latihan 10: Deteksi contract test tidak ada.
+Diberikan API berubah tanpa deteksi.
+AI harus menyarankan contract testing.
+AI harus menyarankan validator skema.
+
+Latihan 11: Deteksi rilis tanpa rollback.
+Diberikan aplikasi dengan rilis tanpa rencana rollback.
+AI harus menyarankan rencana rollback.
+AI harus menyarankan dokumentasi rollback.
+
+Latihan 12: Deteksi rilis tanpa staged rollout.
+Diberikan aplikasi dengan rilis langsung ke 100 persen.
+AI harus menyarankan staged rollout.
+AI harus menyarankan pemantauan.
+
+Latihan 13: Deteksi observability tidak lengkap.
+Diberikan aplikasi tanpa dashboard dan alert.
+AI harus menyarankan dashboard.
+AI harus menyarankan alert.
+AI harus menyarankan runbook.
+
+Latihan 14: Deteksi incident response tidak ada.
+Diberikan aplikasi tanpa runbook.
+AI harus menyarankan runbook.
+AI harus menyarankan post-mortem.
+AI harus menyarankan action item.
+
+Latihan 15: Deteksi aksesibilitas tidak ada.
+Diberikan aplikasi tanpa tes aksesibilitas.
+AI harus menyarankan tes aksesibilitas.
+AI harus menyarankan contentDescription.
+
+BAGIAN 16: ATURAN UNTUK AI
+AI harus memahami performa sebelum menyarankan struktur.
+AI harus memahami pengujian sebelum menyarankan struktur.
+AI harus memahami rilis sebelum menyarankan struktur.
+AI harus memahami observability sebelum menyarankan struktur.
+AI harus memahami incident response sebelum menyarankan struktur.
+AI harus memahami aksesibilitas sebelum menyarankan struktur.
+AI harus memahami i18n sebelum menyarankan struktur.
+AI harus memahami keamanan sebelum menyarankan struktur.
+AI harus memahami privasi sebelum menyarankan struktur.
+AI harus selalu mengutamakan pengalaman pengguna.
+AI harus selalu mengutamakan stabilitas.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan privasi.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan i18n.
+AI harus selalu mengutamakan dokumentasi.
+AI harus selalu mengutamakan pengujian.
+AI harus selalu mengutamakan observability.
+AI harus selalu mengutamakan rencana rollback.
+
+BAGIAN 17: RINGKASAN GENERASI 9
+Generasi kesembilan memperdalam performa, pengujian, dan rekayasa rilis Android.
+AI belajar startup optimization.
+AI belajar jank detection.
+AI belajar memori dan baterai.
+AI belajar jaringan.
+AI belajar ANR dan crash.
+AI belajar observability.
+AI belajar piramida pengujian lanjutan.
+AI belajar property-based testing, fuzzing, screenshot testing, contract testing.
+AI belajar rekayasa rilis.
+AI belajar versioning, staged rollout, monitoring, incident response.
+AI belajar struktur folder yang mendukung performa, pengujian, dan rilis.
+AI dilatih untuk membaca struktur untuk menyimpulkan kesiapan operasional.
+AI dilatih untuk menyarankan perbaikan yang aman dan terukur.
+Dengan generasi kesembilan ini, AI memiliki pemahaman lengkap tentang kualitas dan operasional Android.
+AI dapat menavigasi struktur proyek Android dengan pemahaman performa, pengujian, dan rilis.
+AI dapat menjelaskan alasan operasional di balik setiap keputusan struktur.
+AI dapat menyarankan struktur yang siap produksi, siap uji, dan siap pulih.
+Akhir generasi 9.

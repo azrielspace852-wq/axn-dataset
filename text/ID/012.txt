@@ -1,0 +1,138 @@
+=========================================================
+  PENGERTIAN        : JAVASCRIPT (javascript/js)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman javascript (JAVASCRIPT/JS),
+                      contoh contoh bahasa nya, kegunaan nya, kelebihan dan
+                      kekurangan, sejarah, pencipta, asal usul, asal negara,
+                      tahun di ciptakan, versi, perbedaan dengan java (JAVA)
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+JavaScript (sering disingkat JS) adalah bahasa pemrograman tingkat tinggi yang bersifat dinamis, interpreted (dijalankan langsung oleh mesin), dan multiparadigma. JavaScript mendukung gaya pemrograman berbasis objek (object-oriented), fungsional (functional), dan berbasis event (event-driven)[reference:0]. 
+
+JavaScript pada dasarnya bukanlah "bahasa pemrograman" dalam arti tradisional yang harus dikompilasi terlebih dahulu. Kode JavaScript ditulis dalam bentuk teks dan dapat langsung diinterpretasikan oleh browser web atau runtime seperti Node.js[reference:1]. Bersama HTML (struktur) dan CSS (tampilan), JavaScript adalah salah satu dari tiga teknologi inti World Wide Web. Jika HTML adalah kerangka dan CSS adalah cat, maka JavaScript adalah "otot" yang membuat halaman web menjadi hidup, interaktif, dan dinamis.
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+JavaScript diciptakan oleh Brendan Eich, seorang teknolog Amerika kelahiran Pittsburgh, Pennsylvania, pada tahun 1961.
+
+Asal Negara: Amerika Serikat (dikembangkan di Netscape Communications Corporation).
+Tahun Diciptakan: 1995[reference:5][reference:6].
+
+Sejarah penciptaannya sangat unik: Eich ditugaskan oleh Netscape untuk membuat bahasa skrip yang dapat berjalan di browser Netscape Navigator. Proses penciptaan bahasa ini terbilang sangat cepat, hanya dalam waktu sekitar 10 hari pada Mei 1995[reference:7]. Bahasa ini awalnya diberi nama Mocha, lalu berganti nama menjadi LiveScript, dan akhirnya diubah menjadi JavaScript pada saat dirilis bersama Netscape Navigator 2.0 pada musim gugur 1995[reference:8][reference:9]. 
+
+Perubahan nama menjadi "JavaScript" saat itu murni alasan pemasaran, untuk membonceng popularitas bahasa Java yang sedang naik daun, meskipun secara teknis keduanya sama sekali berbeda. Pada tahun 1997, JavaScript distandarisasi oleh ECMA International (European Computer Manufacturers Association) dan menjadi standar internasional dengan nama resmi ECMAScript[reference:10].
+
+3. SEJARAH VERSI (ECMASCRIPT)
+JavaScript distandarisasi dengan nama ECMAScript. Berikut tonggak penting evolusinya:
+
+- ES1 (1997): Standar pertama.
+- ES3 (1999): Menambahkan regular expressions, try/catch, dan formatting.
+- ES5 (2009): Pembaruan besar setelah bertahun-tahun stagnasi. Menambahkan mode ketat (strict mode), JSON support, dan metode Array seperti `forEach`, `map`, `filter`.
+- ES6 / ES2015: Revolusi besar. Memperkenalkan `let`/`const`, arrow functions, classes, template literals, destructuring, dan modules (import/export)[reference:11]. Sejak ES6, standar baru dirilis setiap tahun.
+- ES2025: Finalisasi fitur seperti Set methods (union, intersection), Iterator Helpers, RegExp.escape, dan Promise.try[reference:12].
+- ES2026 (ES17): Versi terbaru yang stabil. Menambahkan `Map.prototype.getOrInsert()`, `Array.fromAsync()`, dan fitur-fitur API yang lebih spesifik[reference:13][reference:14][reference:15].
+
+Saat ini, JavaScript mengikuti standar "ECMAScript Living Standard" yang terus diperbarui setiap tahun oleh TC39, komite yang mengawasi evolusi bahasa ini.
+
+4. SINTAKS DAN CONTOH BAHASA
+JavaScript modern (ES6+) memiliki sintaks yang ringkas dan ekspresif.
+
+a. Variabel dan Tipe Data (let & const)
+```javascript
+let nama = "Azriel"; // Variabel yang bisa diubah
+const umur = 25;     // Konstanta, tidak bisa diubah
+console.log(`Halo, nama saya ${nama} dan umur saya ${umur} tahun.`);
+```
+
+b. Fungsi dan Arrow Function
+
+```javascript
+// Fungsi tradisional
+function tambah(a, b) {
+    return a + b;
+}
+
+// Arrow function (ES6)
+const kali = (a, b) => a * b;
+
+console.log(tambah(5, 3)); // 8
+console.log(kali(5, 3));   // 15
+```
+
+c. Objek dan Array Destructuring
+
+```javascript
+const user = { nama: "Budi", umur: 30, kota: "Jakarta" };
+const { nama, kota } = user; // Destructuring objek
+console.log(nama, kota); // "Budi" "Jakarta"
+
+const angka = [1, 2, 3, 4];
+const [pertama, kedua, ...sisanya] = angka; // Destructuring array & rest operator
+console.log(pertama, kedua, sisanya); // 1 2 [3, 4]
+```
+
+d. Manipulasi DOM (Contoh Interaksi Web)
+
+```javascript
+const tombol = document.querySelector("#tombolSaya");
+tombol.addEventListener("click", () => {
+    document.body.style.backgroundColor = "lightblue";
+    alert("Warna latar telah diubah!");
+});
+```
+
+e. Fitur ES2025/2026 (Contoh Iterator Helpers & Map.getOrInsert)
+
+```javascript
+// Iterator Helpers (ES2025)
+const angkaGenap = [1, 2, 3, 4, 5].values().filter(n => n % 2 === 0);
+console.log([...angkaGenap]); // [2, 4]
+
+// Map.getOrInsert (ES2026)
+const stokBarang = new Map();
+stokBarang.getOrInsert("apel", 0);
+console.log(stokBarang.get("apel")); // 0 (jika tidak ada, diisi 0)
+```
+
+5. KEGUNAAN JAVASCRIPT
+   JavaScript memiliki cakupan penggunaan yang sangat luas:
+
+· Pengembangan Web Front-End: Membuat halaman web interaktif, animasi, validasi formulir, dan manipulasi DOM secara real-time.
+· Pengembangan Web Back-End: Dengan runtime Node.js, JavaScript dapat digunakan untuk membangun server, API, dan aplikasi backend berskala besar.
+· Pengembangan Aplikasi Mobile: Framework seperti React Native dan Ionic memungkinkan pembuatan aplikasi Android/iOS menggunakan JavaScript.
+· Pengembangan Game: Library seperti Phaser dan Three.js memungkinkan pembuatan game 2D dan 3D yang berjalan di browser.
+· Internet of Things (IoT): JavaScript dapat digunakan untuk memprogram perangkat keras seperti Arduino dan Raspberry Pi.
+· Machine Learning: Library seperti TensorFlow.js memungkinkan penerapan model machine learning langsung di browser atau Node.js.
+
+6. KELEBIHAN DAN KEKURANGAN JAVASCRIPT
+
+Kelebihan:
+
+· Mudah Dipelajari: Sintaksnya relatif sederhana dan fleksibel, menjadikannya bahasa pemrograman pertama yang ideal bagi pemula.
+· Eksekusi Cepat di Sisi Klien: Kode berjalan langsung di browser tanpa perlu komunikasi ke server, mengurangi beban server dan mempercepat respons.
+· Ekosistem yang Sangat Besar: Tersedia ribuan library dan framework (React, Vue, Angular, Express) serta komunitas pengembang yang sangat aktif.
+· Fleksibel dan Serbaguna: Dapat digunakan untuk front-end, back-end, mobile, desktop, hingga game.
+· Selalu Diperbarui: Standar ECMAScript terus berkembang setiap tahun, menghadirkan fitur-fitur baru yang membuat bahasa ini semakin kuat.
+
+Kekurangan:
+
+· Masalah Keamanan (Client-Side): Karena kode JavaScript dapat dilihat oleh siapa saja di browser, kode tersebut rentan dieksploitasi untuk serangan seperti Cross-Site Scripting (XSS) dan Cross-Site Request Forgery (CSRF).
+· Perbedaan Interpretasi Antar-Browser: Meskipun sudah jauh membaik, beberapa browser (terutama versi lama) masih dapat menginterpretasikan kode JavaScript secara berbeda, sehingga pengujian lintas browser tetap diperlukan.
+· Debugging yang Menantang: Meskipun alat pengembang (DevTools) sudah canggih, sifatnya yang loosely typed (tipe data longgar) dan asinkron dapat membuat debugging menjadi lebih rumit dibandingkan bahasa yang strictly typed.
+· Kurang Optimal untuk Tugas CPU-Intensif: JavaScript bukan pilihan terbaik untuk pemrosesan video, analisis data besar, atau komputasi berat lainnya yang membutuhkan kinerja tinggi dan multithreading asli.
+
+7. PERBEDAAN JAVASCRIPT DENGAN JAVA
+   Meskipun namanya mirip, JavaScript dan Java adalah dua bahasa yang sama sekali berbeda, seperti "kucing dan ikan". Perbedaan utamanya:
+
+· Filosofi dan Penggunaan: Java adalah bahasa pemrograman statis yang kuat untuk membangun aplikasi skala besar (enterprise, Android). JavaScript adalah bahasa skrip dinamis yang ringan, awalnya dirancang untuk tugas-tugas kecil di browser, namun kini telah berkembang pesat.
+· Eksekusi: Kode Java harus dikompilasi terlebih dahulu menjadi bytecode sebelum dapat dijalankan di Java Virtual Machine (JVM). Kode JavaScript ditulis sebagai teks dan diinterpretasikan langsung oleh browser atau mesin JavaScript (seperti V8).
+· Sistem Tipe: Java menggunakan static typing (tipe data harus dideklarasikan dan diperiksa saat kompilasi). JavaScript menggunakan dynamic typing (tipe data ditentukan saat runtime dan bersifat longgar).
+· Hubungan: JavaScript BUKANLAH subset dari Java. Keduanya dikembangkan oleh perusahaan yang berbeda (Netscape vs Sun Microsystems) dan memiliki model kompilasi, sistem tipe, serta library yang sepenuhnya berbeda.
+
+8. KESIMPULAN
+   JavaScript adalah bahasa pemrograman yang telah bertransformasi dari "bahasa mainan" untuk browser menjadi tulang punggung pengembangan web modern dan ekosistem perangkat lunak yang sangat luas. Diciptakan oleh Brendan Eich pada 1995 dalam waktu singkat, JavaScript kini distandarisasi sebagai ECMAScript dan terus berevolusi setiap tahun melalui fitur-fitur baru seperti yang terlihat pada ES2025 dan ES2026. Dengan kelebihan dalam fleksibilitas, kecepatan di sisi klien, dan ekosistem yang masif, JavaScript tetap menjadi keterampilan fundamental bagi setiap pengembang. Meskipun memiliki tantangan dalam hal keamanan dan debugging, JavaScript terus beradaptasi dan memperluas domain penggunaannya, dari front-end hingga back-end, mobile, dan machine learning.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa pemrograman JavaScript, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi terbaru, dan perbedaannya dengan Java. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

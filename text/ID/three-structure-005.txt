@@ -1,0 +1,910 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 5
+Bahasa: Indonesia
+Fokus: Proyek aplikasi Android menggunakan Java, Kotlin, dan Gradle.
+Tujuan: Melatih AI memahami struktur folder khas Android, peran Gradle, pemisahan source set, modularisasi, konvensi resource, pengujian, dan variasi struktur antar proyek Android.
+
+BAGIAN 1: NARASI KONSEP DASAR ANDROID
+Proyek Android adalah proyek perangkat lunak yang dibangun untuk platform Android.
+Proyek Android umumnya menggunakan Gradle sebagai sistem build.
+Gradle mengelola dependensi, konfigurasi build, varian, dan tugas build.
+Proyek Android dapat ditulis dengan Java, Kotlin, atau campuran keduanya.
+Kotlin adalah bahasa yang direkomendasikan Google untuk proyek Android baru.
+Java masih banyak dipakai pada proyek lama dan proyek enterprise.
+Struktur folder proyek Android memiliki konvensi yang kuat.
+Konvensi ini ditentukan oleh Android Gradle Plugin (AGP).
+AGP mengharapkan lokasi tertentu untuk manifest, kode, resource, dan tes.
+Jika konvensi dilanggar, AGP dapat gagal build atau menghasilkan artefak yang salah.
+AI harus memahami konvensi ini sebelum menyarankan struktur baru.
+AI harus membedakan konvensi wajib dan preferensi gaya.
+Konvensi wajib tidak boleh diubah tanpa alasan kuat.
+Preferensi gaya dapat disesuaikan dengan konteks tim.
+AI harus memahami perbedaan antara modul aplikasi dan modul pustaka.
+Modul aplikasi menghasilkan APK atau AAB.
+Modul pustaka menghasilkan AAR yang dapat dipakai modul lain.
+Modul fitur (dynamic feature) menghasilkan modul yang dapat diunduh terpisah.
+Modul inti menyediakan kode bersama.
+Modul uji khusus menyediakan utilitas pengujian.
+
+BAGIAN 2: ISTILAH PENTING ANDROID
+APK adalah paket aplikasi Android untuk distribusi langsung.
+AAB adalah Android App Bundle untuk distribusi melalui Play Store.
+AGP adalah Android Gradle Plugin.
+Gradle Wrapper adalah skrip pembungkus Gradle untuk konsistensi versi.
+Version catalog adalah file TOML untuk mengelola versi dependensi.
+Convention plugin adalah plugin Gradle bersama untuk konfigurasi berulang.
+Build variant adalah kombinasi build type dan product flavor.
+Build type umum: debug, release.
+Product flavor memisahkan varian bisnis, misalnya free dan paid.
+Source set adalah kumpulan folder sumber untuk varian tertentu.
+Source set utama adalah main.
+Source set tes unit adalah test.
+Source set tes instrumen adalah androidTest.
+Source set debug dan release memungkinkan override per build type.
+Flavor dapat menambahkan source set sendiri.
+Manifest adalah file AndroidManifest.xml yang mendeklarasikan komponen aplikasi.
+Resource adalah aset statis seperti layout, string, warna, gambar, dan dimensi.
+R class dihasilkan dari resource.
+View binding dan data binding dihasilkan dari layout.
+Compose adalah toolkit UI modern dari Jetpack.
+Activity adalah komponen UI yang memiliki layar.
+Fragment adalah bagian UI yang dapat dipakai ulang.
+ViewModel menyimpan state UI dan bertahan dari perubahan konfigurasi.
+Repository adalah lapisan akses data.
+Use case adalah lapisan logika bisnis opsional.
+Data source adalah sumber data lokal atau jarak jauh.
+Room adalah pustaka basis data lokal.
+Retrofit adalah pustaka klien HTTP.
+Hilt adalah pustaka dependency injection.
+Koin adalah alternatif dependency injection.
+Coroutines adalah model konkurensi Kotlin.
+Flow adalah aliran data reaktif Kotlin.
+LiveData adalah aliran data reaktif Android.
+Navigation Component mengelola navigasi antar layar.
+WorkManager menjalankan tugas latar belakang.
+DataStore menyimpan preferensi kunci-nilai.
+SharedPreferences adalah penyimpanan preferensi lama.
+ProGuard dan R8 adalah alat penyusutan kode.
+Lint adalah alat pemeriksaan statis Android.
+Detekt adalah alat pemeriksaan statis Kotlin.
+Ktlint adalah alat format Kotlin.
+Spotless dapat menyeragamkan format kode.
+Jacoco mengukur cakupan tes.
+Espresso adalah kerangka tes UI.
+JUnit adalah kerangka tes unit.
+Mockito dan MockK adalah pustaka tiruan.
+Robolectric menjalankan tes Android di JVM.
+
+BAGIAN 3: STRUKTUR STANDAR PROYEK ANDROID SATU MODUL
+Struktur ini adalah titik awal paling umum.
+Struktur ini cocok untuk aplikasi kecil sampai menengah.
+Struktur ini memakai satu modul aplikasi.
+Struktur ini mudah dipahami pemula.
+Struktur ini mudah dimigrasikan ke struktur modular nanti.
+
+proyek-android-satu-modul/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── consumer-rules.pro
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/
+│       │   │   └── com/contoh/aplikasi/
+│       │   │       ├── AplikasiUtama.kt
+│       │   │       ├── MainActivity.kt
+│       │   │       ├── data/
+│       │   │       │   ├── lokal/
+│       │   │       │   │   ├── BasisData.kt
+│       │   │       │   │   ├── DaoPengguna.kt
+│       │   │       │   │   └── EntitasPengguna.kt
+│       │   │       │   ├── jarak-jauh/
+│       │   │       │   │   ├── ApiLayanan.kt
+│       │   │       │   │   └── DtoPengguna.kt
+│       │   │       │   └── repositori/
+│       │   │       │       └── RepositoriPengguna.kt
+│       │   │       ├── domain/
+│       │   │       │   ├── model/
+│       │   │       │   │   └── Pengguna.kt
+│       │   │       │   └── gunakan/
+│       │   │       │       └── AmbilPengguna.kt
+│       │   │       ├── ui/
+│       │   │       │   ├── beranda/
+│       │   │       │   │   ├── BerandaActivity.kt
+│       │   │       │   │   ├── BerandaViewModel.kt
+│       │   │       │   │   └── BerandaStatus.kt
+│       │   │       │   ├── detail/
+│       │   │       │   │   ├── DetailActivity.kt
+│       │   │       │   │   └── DetailViewModel.kt
+│       │   │       │   └── komponen/
+│       │   │       │       └── TombolUtama.kt
+│       │   │       ├── di/
+│       │   │       │   └── ModulAplikasi.kt
+│       │   │       └── utilitas/
+│       │   │           ├── Hasil.kt
+│       │   │           └── Ekstensi.kt
+│       │   └── res/
+│       │       ├── drawable/
+│       │       ├── layout/
+│       │       ├── mipmap-anydpi-v26/
+│       │       ├── mipmap-hdpi/
+│       │       ├── mipmap-mdpi/
+│       │       ├── mipmap-xhdpi/
+│       │       ├── mipmap-xxhdpi/
+│       │       ├── mipmap-xxxhdpi/
+│       │       ├── values/
+│       │       │   ├── colors.xml
+│       │       │   ├── dimens.xml
+│       │       │   ├── strings.xml
+│       │       │   ├── styles.xml
+│       │       │   └── themes.xml
+│       │       ├── values-night/
+│       │       │   └── themes.xml
+│       │       ├── xml/
+│       │       │   ├── backup_rules.xml
+│       │       │   ├── data_extraction_rules.xml
+│       │       │   └── network_security_config.xml
+│       │       └── raw/
+│       ├── debug/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/
+│       │   │   └── com/contoh/aplikasi/
+│       │   │       └── DebugAktivitas.kt
+│       │   └── res/
+│       │       └── values/
+│       │           └── strings.xml
+│       ├── release/
+│       │   ├── java/
+│       │   └── res/
+│       ├── test/
+│       │   └── java/
+│       │       └── com/contoh/aplikasi/
+│       │           ├── data/
+│       │           │   └── RepositoriPenggunaTest.kt
+│       │           └── ui/
+│       │               └── BerandaViewModelTest.kt
+│       └── androidTest/
+│           └── java/
+│               └── com/contoh/aplikasi/
+│                   ├── BerandaActivityTest.kt
+│                   └── HalamanDetailTest.kt
+
+Pemetaan fungsi Android dasar:
+Manifest ada di src/main/AndroidManifest.xml.
+Kode utama ada di src/main/java/ atau src/main/kotlin/.
+Resource ada di src/main/res/.
+Tes unit ada di src/test/.
+Tes instrumen ada di src/androidTest/.
+Konfigurasi build modul ada di app/build.gradle.kts.
+Konfigurasi build proyek ada di build.gradle.kts.
+Daftar modul ada di settings.gradle.kts.
+Versi Gradle ada di gradle/wrapper/gradle-wrapper.properties.
+Katalog versi ada di gradle/libs.versions.toml.
+Aturan proguard ada di app/proguard-rules.pro.
+
+BAGIAN 4: STRUKTUR MODULAR MULTI-MODUL
+Struktur modular cocok untuk aplikasi menengah sampai besar.
+Struktur modular memisahkan fitur dan lapisan.
+Struktur modular mempercepat build inkremental.
+Struktur modular memudahkan pemisahan tim.
+Struktur modular menuntut disiplin batas dependensi.
+Modul fitur tidak boleh bergantung pada modul fitur lain.
+Modul fitur boleh bergantung pada modul core dan domain.
+Modul core tidak boleh bergantung pada modul fitur.
+Modul aplikasi bergantung pada modul fitur.
+Modul aplikasi menyatukan semua fitur.
+
+proyek-android-modular/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiPlugin.kt
+│           ├── AndroidPustakaPlugin.kt
+│           └── AndroidComposePlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       ├── java/com/contoh/aplikasi/
+│       │   ├── AplikasiUtama.kt
+│       │   ├── MainActivity.kt
+│       │   └── navigasi/
+│       │       └── GrafikNavigasi.kt
+│       └── res/
+│           ├── drawable/
+│           ├── mipmap-anydpi-v26/
+│           ├── values/
+│           └── xml/
+├── feature/
+│   ├── beranda/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       ├── AndroidManifest.xml
+│   │       ├── java/com/contoh/beranda/
+│   │       │   ├── BerandaRoute.kt
+│   │       │   ├── BerandaScreen.kt
+│   │       │   └── BerandaViewModel.kt
+│   │       └── res/
+│   │           └── values/strings.xml
+│   ├── detail/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       ├── AndroidManifest.xml
+│   │       ├── java/com/contoh/detail/
+│   │       │   ├── DetailRoute.kt
+│   │       │   ├── DetailScreen.kt
+│   │       │   └── DetailViewModel.kt
+│   │       └── res/
+│   │           └── values/strings.xml
+│   └── pengaturan/
+│       ├── build.gradle.kts
+│       └── src/main/
+│           ├── AndroidManifest.xml
+│           └── java/com/contoh/pengaturan/
+│               ├── PengaturanRoute.kt
+│               └── PengaturanViewModel.kt
+├── core/
+│   ├── common/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       └── java/com/contoh/core/common/
+│   │           ├── Hasil.kt
+│   │           └── Ekstensi.kt
+│   ├── data/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       └── java/com/contoh/core/data/
+│   │           ├── lokal/
+│   │           │   ├── BasisData.kt
+│   │           │   └── DaoPengguna.kt
+│   │           ├── jarak-jauh/
+│   │           │   ├── ApiLayanan.kt
+│   │           │   └── DtoPengguna.kt
+│   │           └── repositori/
+│   │               └── RepositoriPengguna.kt
+│   ├── domain/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       └── java/com/contoh/core/domain/
+│   │           ├── model/
+│   │           │   └── Pengguna.kt
+│   │           └── gunakan/
+│   │               └── AmbilPengguna.kt
+│   ├── ui/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       └── java/com/contoh/core/ui/
+│   │           ├── tema/
+│   │           │   ├── Warna.kt
+│   │           │   ├── Tema.kt
+│   │           │   └── Tipografi.kt
+│   │           └── komponen/
+│   │               └── TombolUtama.kt
+│   ├── navigasi/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       └── java/com/contoh/core/navigasi/
+│   │           └── Rute.kt
+│   └── pengujian/
+│       ├── build.gradle.kts
+│       └── src/main/
+│           └── java/com/contoh/core/pengujian/
+│               └── AturanTes.kt
+├── testing/
+│   └── fixtures/
+│       ├── build.gradle.kts
+│       └── src/main/
+│           └── java/com/contoh/testing/fixtures/
+│               └── DataPengguna.kt
+└── docs/
+    ├── index.md
+    ├── arsitektur.md
+    └── struktur-folder.md
+
+Pemetaan fungsi modular:
+Modul aplikasi ada di app/.
+Modul fitur ada di feature/.
+Modul inti ada di core/.
+Modul pengujian bersama ada di testing/fixtures/.
+Konvensi plugin ada di build-logic/.
+Katalog versi ada di gradle/libs.versions.toml.
+Dokumentasi ada di docs/.
+
+BAGIAN 5: VARIASI STRUKTUR ANDROID
+Variasi Android 1: Java murni.
+Ciri: folder java/ berisi file .java.
+Ciri: tidak memakai coroutines atau Compose.
+Cocok untuk proyek lama.
+Struktur mirip dengan standar, hanya ekstensi berbeda.
+Tes unit memakai JUnit dan Mockito.
+Tes UI memakai Espresso.
+
+Variasi Android 2: Kotlin murni.
+Ciri: folder java/ atau kotlin/ berisi file .kt.
+Ciri: memakai coroutines, Flow, Compose atau View.
+Cocok untuk proyek baru.
+Struktur mirip dengan standar.
+
+Variasi Android 3: Java dan Kotlin campuran.
+Ciri: folder java/ berisi file .java dan .kt sekaligus.
+Ciri: modul lama tetap Java, modul baru Kotlin.
+Cocok untuk migrasi bertahap.
+AI harus mendeteksi konfigurasi kotlinOptions dan konfigurasi Java.
+AI harus menyarankan konsistensi per modul.
+
+Variasi Android 4: Compose murni.
+Ciri: layout XML tidak dipakai.
+Ciri: UI ditulis di file .kt dengan fungsi @Composable.
+Ciri: folder ui/ berisi screen dan komponen Compose.
+Cocok untuk proyek baru.
+Struktur mirip dengan standar, tanpa folder layout/.
+
+Variasi Android 5: View system murni.
+Ciri: layout XML berada di res/layout/.
+Ciri: Activity dan Fragment memakai findViewById atau ViewBinding.
+Cocok untuk proyek lama atau proyek dengan kebutuhan khusus.
+Struktur mirip dengan standar.
+
+Variasi Android 6: Multi-flavor.
+Ciri: ada product flavor di app/build.gradle.kts.
+Ciri: source set flavor seperti src/free/ dan src/paid/.
+Cocok untuk aplikasi dengan beberapa varian bisnis.
+AI harus memahami urutan prioritas source set.
+AI harus mendeteksi konfigurasi flavor di Gradle.
+
+Variasi Android 7: Dynamic feature.
+Ciri: ada folder feature/ dengan modul dynamic feature.
+Ciri: modul fitur diunduh sesuai permintaan.
+Cocok untuk aplikasi besar dengan fitur opsional.
+AI harus memahami dependensi dynamic feature.
+
+Variasi Android 8: Multi-platform Kotlin.
+Ciri: ada folder shared/ dengan Kotlin Multiplatform.
+Ciri: kode bersama di shared/src/commonMain/.
+Ciri: target Android di shared/src/androidMain/.
+Cocok untuk aplikasi yang juga menargetkan iOS atau web.
+AI harus memahami source set multiplatform.
+
+Variasi Android 9: Wear OS.
+Ciri: ada modul wear/.
+Ciri: ada konfigurasi wear di Gradle.
+Cocok untuk aplikasi jam tangan.
+AI harus memahami perbedaan resource dan layar.
+
+Variasi Android 10: Android TV.
+Ciri: ada modul tv/.
+Ciri: resource layout khusus TV.
+Cocok untuk aplikasi televisi.
+
+BAGIAN 6: DETAIL GRADLE
+File settings.gradle.kts menentukan modul yang dibangun.
+File settings.gradle.kts menentukan plugin management.
+File settings.gradle.kts menentukan dependency resolution management.
+File build.gradle.kts tingkat proyek menentukan plugin yang dipakai.
+File build.gradle.kts tingkat modul menentukan konfigurasi modul.
+File gradle.properties menyimpan properti Gradle.
+File gradle.properties dapat menyimpan JVM args, AndroidX flag, dan konfigurasi Kotlin.
+File gradle/wrapper/gradle-wrapper.properties menentukan versi Gradle.
+File gradle/libs.versions.toml menentukan versi dependensi dan plugin.
+Version catalog memudahkan pembaruan dependensi.
+Version catalog memudahkan konsistensi antar modul.
+Convention plugin memusatkan konfigurasi build.
+Convention plugin mengurangi duplikasi di setiap modul.
+Convention plugin ditulis di build-logic/.
+Convention plugin didaftarkan di settings.gradle.kts.
+Build type debug biasanya mengaktifkan debug simbol.
+Build type release biasanya mengaktifkan minify dan shrink resources.
+Build type release biasanya memakai signing config.
+Signing config tidak boleh memuat rahasia di repositori.
+Signing config harus memakai variabel lingkungan atau file lokal.
+Product flavor memisahkan dimensi bisnis.
+Flavor dimension mendefinisikan sumbu variasi.
+Contoh dimensi: environment, tier, store.
+Setiap flavor dapat memiliki source set sendiri.
+Setiap flavor dapat memiliki manifest sendiri.
+Setiap flavor dapat memiliki resource sendiri.
+Setiap flavor dapat memiliki dependensi sendiri.
+Build variant adalah kombinasi build type dan flavor.
+Build variant menghasilkan artefak berbeda.
+Tes dapat dijalankan per varian.
+CI dapat membangun varian tertentu.
+Modul pustaka tidak memiliki build type aplikasi.
+Modul pustaka dapat memiliki build type jika perlu.
+Modul pustaka memiliki konfigurasi publishing.
+Modul pustaka memiliki aturan proguard sendiri.
+Modul pustaka memiliki consumer rules.
+Modul pustaka tidak boleh memiliki signing config aplikasi.
+Modul aplikasi memiliki applicationId.
+Modul pustaka memiliki namespace.
+Modul aplikasi memiliki versi dan versionCode.
+Modul aplikasi memiliki minSdk, targetSdk, dan compileSdk.
+Modul pustaka memiliki minSdk dan compileSdk.
+Modul aplikasi mendeklarasikan dependencies ke modul lain.
+Modul pustaka mendeklarasikan dependencies ke modul lain.
+Dependensi implementation tidak terekspos ke konsumen.
+Dependensi api terekspos ke konsumen.
+Gunakan implementation secara default.
+Gunakan api hanya jika perlu.
+Hindari dependensi melingkar.
+Hindari dependensi ke modul fitur lain dari modul fitur.
+Hindari dependensi ke modul aplikasi dari modul pustaka.
+Hindari duplikasi dependensi di banyak modul.
+Gunakan version catalog untuk semua dependensi.
+Gunakan convention plugin untuk konfigurasi berulang.
+Gunakan plugin id yang sesuai dengan versi AGP.
+Gunakan plugin Kotlin versi yang kompatibel.
+Gunakan plugin KSP untuk Room dan sejenisnya.
+Gunakan plugin KAPT hanya jika diperlukan.
+Gunakan plugin Compose compiler jika memakai Compose.
+Gunakan plugin Hilt jika memakai Hilt.
+Gunakan plugin Detekt dan Ktlint jika memakai Kotlin.
+Gunakan plugin Spotless untuk format.
+Gunakan plugin Jacoco untuk cakupan.
+Gunakan plugin Firebase jika memakai layanan Firebase.
+
+BAGIAN 7: DETAIL SOURCE SET
+src/main/ adalah source set utama.
+src/main/AndroidManifest.xml adalah manifest utama.
+src/main/java/ memuat kode Java dan Kotlin.
+src/main/kotlin/ dapat menjadi alternatif java/.
+Jika java/ dan kotlin/ dipakai bersamaan, AGP menggabungkan keduanya.
+src/main/res/ memuat resource utama.
+src/main/assets/ memuat aset mentah.
+src/main/jniLibs/ memuat pustaka native.
+src/main/aidl/ memuat definisi AIDL.
+src/main/rs/ memuat skrip RenderScript.
+src/main/res/values/strings.xml memuat teks.
+src/main/res/values/colors.xml memuat warna.
+src/main/res/values/themes.xml memuat tema.
+src/main/res/values/styles.xml memuat gaya.
+src/main/res/values/dimens.xml memuat dimensi.
+src/main/res/values-night/ memuat resource mode gelap.
+src/main/res/values-v21/ memuat resource khusus API 21 dan seterusnya.
+src/main/res/layout/ memuat layout XML.
+src/main/res/drawable/ memuat gambar vektor atau bitmap.
+src/main/res/mipmap/ memuat ikon peluncur.
+src/main/res/menu/ memuat definisi menu.
+src/main/res/xml/ memuat konfigurasi XML.
+src/main/res/raw/ memuat file mentah yang dapat dibaca aplikasi.
+src/main/res/font/ memuat font.
+src/main/res/anim/ memuat animasi.
+src/main/res/animator/ memuat animator.
+src/main/res/color/ memuat color state list.
+src/main/res/navigation/ memuat grafik navigasi.
+src/main/res/transition/ memuat transisi.
+src/main/res/interpolator/ memuat interpolator.
+src/test/ adalah source set tes unit.
+src/test/ berjalan di JVM tanpa perangkat.
+src/test/java/ memuat tes unit Java atau Kotlin.
+src/test/resources/ memuat data tes.
+src/androidTest/ adalah source set tes instrumen.
+src/androidTest/ berjalan di perangkat atau emulator.
+src/androidTest/java/ memuat tes instrumen.
+src/androidTest/assets/ memuat aset tes.
+src/debug/ adalah source set build type debug.
+src/debug/AndroidManifest.xml dapat menambahkan komponen debug.
+src/debug/res/ dapat menimpa resource debug.
+src/release/ adalah source set build type release.
+src/release/AndroidManifest.xml dapat menyesuaikan manifest rilis.
+src/<flavor>/ adalah source set product flavor.
+src/<flavor>/java/ memuat kode flavor.
+src/<flavor>/res/ memuat resource flavor.
+src/<flavor>/AndroidManifest.xml dapat menyesuaikan manifest flavor.
+src/<buildType><Flavor>/ menggabungkan build type dan flavor.
+Urutan prioritas source set menentukan penimpaan.
+Source set yang lebih spesifik menimpa yang lebih umum.
+AI harus memahami urutan prioritas ini saat mendeteksi duplikasi.
+AI harus memahami bahwa file di flavor dapat menimpa file di main.
+
+BAGIAN 8: STRUKTUR PAKET DI DALAM JAVA ATAU KOTLIN
+Package adalah pengelompokan logis kode.
+Package harus mencerminkan domain atau fitur.
+Package harus konsisten di seluruh modul.
+Package harus mengikuti konvensi bahasa.
+Package Java dan Kotlin biasanya memakai huruf kecil.
+Package tidak boleh memakai tanda hubung.
+Package tidak boleh memakai spasi.
+Package sebaiknya tidak terlalu dalam.
+Package sebaiknya tidak terlalu datar.
+Struktur package umum berbasis lapisan:
+com.contoh.aplikasi.data
+com.contoh.aplikasi.domain
+com.contoh.aplikasi.ui
+com.contoh.aplikasi.di
+com.contoh.aplikasi.utilitas
+Struktur package umum berbasis fitur:
+com.contoh.aplikasi.fitur.beranda
+com.contoh.aplikasi.fitur.detail
+com.contoh.aplikasi.fitur.pengaturan
+com.contoh.aplikasi.inti.data
+com.contoh.aplikasi.inti.ui
+AI harus mengenali kedua gaya ini.
+AI harus konsisten jika menyarankan perubahan.
+AI harus memahami bahwa package Android biasanya diawali applicationId.
+AI harus memahami bahwa package di modul pustaka boleh berbeda.
+AI harus memahami bahwa namespace di build.gradle.kts harus cocok dengan package.
+AI harus memeriksa apakah R class dihasilkan dengan namespace yang benar.
+AI harus memahami bahwa package dapat berbeda antar modul.
+AI harus memahami bahwa package dapat berbeda antar flavor.
+
+BAGIAN 9: STRUKTUR RESOURCE
+Resource dikelompokkan berdasarkan jenis.
+Resource string harus berada di values/strings.xml.
+String yang terlihat pengguna harus berada di strings.xml.
+String tidak boleh ditulis langsung di layout.
+String tidak boleh ditulis langsung di kode UI.
+Resource warna harus berada di values/colors.xml.
+Resource tema harus berada di values/themes.xml.
+Resource gaya harus berada di values/styles.xml.
+Resource dimensi harus berada di values/dimens.xml.
+Resource mode gelap harus berada di values-night/.
+Resource untuk API tertentu harus berada di values-vXX/.
+Layout harus berada di res/layout/.
+Layout alternatif untuk orientasi harus berada di res/layout-land/.
+Layout alternatif untuk ukuran layar harus berada di res/layout-sw600dp/.
+Layout alternatif untuk tablet harus berada di res/layout-sw720dp/.
+Drawable harus berada di res/drawable/.
+Drawable vektor harus dipakai untuk ikon sederhana.
+Ikon peluncur harus berada di res/mipmap-*/.
+Menu harus berada di res/menu/.
+Navigasi harus berada di res/navigation/.
+Animasi harus berada di res/anim/.
+Font harus berada di res/font/.
+Konfigurasi XML harus berada di res/xml/.
+File mentah harus berada di res/raw/.
+Aset yang tidak diproses harus berada di assets/.
+Resource harus diberi nama huruf kecil dan garis bawah.
+Resource tidak boleh memakai huruf besar.
+Resource tidak boleh memakai tanda hubung.
+Resource harus deskriptif.
+Resource harus menghindari singkatan yang tidak jelas.
+Resource harus memisahkan teks dan format.
+Resource harus memakai format string untuk nilai dinamis.
+Resource harus memakai plural untuk jumlah.
+Resource harus memakai string-array untuk daftar.
+Resource harus memakai dimensi untuk ukuran.
+Resource harus memakai color state list untuk warna dinamis.
+Resource harus memakai selector untuk status tombol.
+Resource harus memakai layer-list untuk gambar bertumpuk.
+Resource harus memakai shape untuk latar belakang sederhana.
+Resource harus memakai adaptive icon untuk ikon modern.
+Resource harus memakai night mode untuk tema gelap.
+Resource harus memakai dynamic color jika didukung.
+
+BAGIAN 10: ANTI-POLA STRUKTUR ANDROID
+Anti-pola Android A1: Kode di folder res/.
+Ciri: file .kt atau .java berada di res/.
+Masalah: AGP tidak akan mengompilasi dengan benar.
+Perbaikan: pindahkan ke java/ atau kotlin/.
+
+Anti-pola Android A2: Resource di folder java/.
+Ciri: file .xml layout berada di java/.
+Masalah: resource tidak dikenali.
+Perbaikan: pindahkan ke res/.
+
+Anti-pola Android A3: Manifest ganda tanpa alasan.
+Ciri: ada AndroidManifest.xml di banyak tempat tanpa kebutuhan flavor.
+Masalah: membingungkan, rawan konflik merge.
+Perbaikan: pertahankan manifest utama dan manifest flavor yang diperlukan.
+
+Anti-pola Android A4: String ditulis langsung di kode.
+Ciri: "Halo" ditulis langsung di file .kt.
+Masalah: sulit diterjemahkan, sulit diubah.
+Perbaikan: pindahkan ke strings.xml.
+
+Anti-pola Android A5: Dimensi ditulis langsung di layout.
+Ciri: 16dp ditulis langsung di banyak layout.
+Masalah: sulit dikonsistenkan.
+Perbaikan: gunakan dimens.xml.
+
+Anti-pola Android A6: Warna ditulis langsung di layout.
+Ciri: #FF0000 ditulis langsung di layout.
+Masalah: sulit diubah, tidak mendukung tema.
+Perbaikan: gunakan colors.xml dan referensi.
+
+Anti-pola Android A7: File besar di satu Activity.
+Ciri: MainActivity.kt berisi ratusan baris.
+Masalah: sulit diuji, sulit dirawat.
+Perbaikan: pindahkan logika ke ViewModel, use case, repositori.
+
+Anti-pola Android A8: Logika bisnis di Activity atau Fragment.
+Ciri: aturan bisnis berada di Activity.
+Masalah: sulit diuji tanpa perangkat.
+Perbaikan: pindahkan ke ViewModel atau domain.
+
+Anti-pola Android A9: Akses jaringan di main thread.
+Ciri: panggilan Retrofit langsung di Activity.
+Masalah: ANR, UI macet.
+Perbaikan: gunakan coroutines atau Flow di ViewModel.
+
+Anti-pola Android A10: Rahasia di BuildConfig atau repositori.
+Ciri: API key ditulis langsung di build.gradle.kts.
+Masalah: kebocoran rahasia.
+Perbaikan: gunakan local.properties, gradle.properties lokal, atau variabel lingkungan.
+
+Anti-pola Android A11: Keystore dilacak Git.
+Ciri: file .jks atau .keystore ada di repositori.
+Masalah: risiko keamanan serius.
+Perbaikan: hapus dari Git, rotasi keystore, gunakan manajer rahasia.
+
+Anti-pola Android A12: google-services.json dilacak Git.
+Ciri: file google-services.json ada di repositori.
+Masalah: risiko konfigurasi Firebase terbuka.
+Perbaikan: hapus dari Git, gunakan variabel lingkungan atau file lokal.
+
+Anti-pola Android A13: Dependensi duplikat di banyak modul.
+Ciri: setiap modul mendeklarasikan versi berbeda.
+Masalah: konflik versi, build gagal.
+Perbaikan: gunakan version catalog dan convention plugin.
+
+Anti-pola Android A14: Dependensi melingkar antar modul.
+Ciri: modul A bergantung pada B, B bergantung pada A.
+Masalah: build gagal, sulit dirawat.
+Perbaikan: pindahkan kode bersama ke modul core.
+
+Anti-pola Android A15: Modul fitur bergantung pada modul fitur lain.
+Ciri: feature/beranda bergantung pada feature/detail.
+Masalah: batas fitur kabur.
+Perbaikan: gunakan modul navigasi atau kontrak.
+
+Anti-pola Android A16: Modul core bergantung pada modul fitur.
+Ciri: core/data bergantung pada feature/beranda.
+Masalah: dependensi terbalik.
+Perbaikan: pindahkan kode ke modul yang tepat.
+
+Anti-pola Android A17: Tes instrumen untuk logika murni.
+Ciri: tes logika bisnis berada di androidTest/.
+Masalah: tes lambat, mahal, rapuh.
+Perbaikan: pindahkan ke test/ sebagai tes unit.
+
+Anti-pola Android A18: Tidak ada tes unit.
+Ciri: hanya ada androidTest/ atau tidak ada tes sama sekali.
+Masalah: regresi tidak terdeteksi.
+Perbaikan: tambahkan tes unit untuk ViewModel, use case, repositori.
+
+Anti-pola Android A19: Build varian tidak konsisten.
+Ciri: sebagian modul memakai flavor, sebagian tidak.
+Masalah: membingungkan, sulit diotomasi.
+Perbaikan: tetapkan konvensi varian.
+
+Anti-pola Android A20: Nama resource tidak konsisten.
+Ciri: campuran camelCase dan snake_case.
+Masalah: sulit dicari, membingungkan.
+Perbaikan: gunakan snake_case untuk resource.
+
+Anti-pola Android A21: Package tidak cocok dengan namespace.
+Ciri: namespace di build.gradle.kts berbeda dengan package file.
+Masalah: R class tidak ditemukan.
+Perbaikan: samakan namespace dengan package atau sebaliknya.
+
+Anti-pola Android A22: applicationId berubah tanpa strategi.
+Ciri: applicationId diubah pada rilis baru.
+Masalah: aplikasi dianggap baru oleh Play Store.
+Perbaikan: applicationId harus stabil setelah rilis.
+
+Anti-pola Android A23: minSdk tidak konsisten antar modul.
+Ciri: modul aplikasi 24, modul pustaka 21.
+Masalah: kompatibilitas tidak jelas.
+Perbaikan: samakan minSdk atau dokumentasikan perbedaan.
+
+Anti-pola Android A24: compileSdk tidak konsisten antar modul.
+Ciri: modul aplikasi 34, modul pustaka 33.
+Masalah: build gagal atau tidak kompatibel.
+Perbaikan: samakan compileSdk di semua modul.
+
+Anti-pola Android A25: ProGuard tidak dikonfigurasi.
+Ciri: rilis tanpa aturan proguard.
+Masalah: kode disusutkan secara agresif, crash.
+Perbaikan: konfigurasi proguard-rules.pro dan consumer-rules.pro.
+
+Anti-pola Android A26: Tes di modul aplikasi terlalu banyak.
+Ciri: semua tes berada di app/.
+Masalah: build tes lambat, sulit diisolasi.
+Perbaikan: pindahkan tes ke modul yang diuji.
+
+Anti-pola Android A27: Kode mati tetap ada.
+Ciri: file tidak dipakai tetapi masih ada.
+Masalah: membingungkan, menambah ukuran.
+Perbaikan: hapus setelah verifikasi.
+
+Anti-pola Android A28: Folder tidak dipakai.
+Ciri: ada folder ui/ tetapi kosong.
+Masalah: membingungkan.
+Perbaikan: hapus atau isi sesuai tujuan.
+
+BAGIAN 11: POLA REFAKTOR ANDROID
+Pola Android R1: Migrasi Java ke Kotlin per file.
+Migrasikan satu file per commit.
+Uji setelah setiap migrasi.
+Perbarui dependensi Kotlin jika perlu.
+Perbarui konfigurasi plugin.
+
+Pola Android R2: Migrasi View ke ViewBinding.
+Aktifkan viewBinding di build.gradle.kts.
+Ganti findViewById dengan binding.
+Uji setelah migrasi.
+
+Pola Android R3: Migrasi View ke Compose.
+Tambahkan Compose di samping View.
+Migrasikan layar satu per satu.
+Pertahankan navigasi lama saat transisi.
+Uji setelah setiap layar.
+
+Pola Android R4: Modularisasi bertahap.
+Pindahkan kode ke modul baru satu domain per commit.
+Perbarui dependensi di settings.gradle.kts.
+Perbarui convention plugin.
+Uji build dan tes setelah setiap modul.
+
+Pola Android R5: Pemisahan fitur dan core.
+Pindahkan kode yang dipakai ulang ke core.
+Pindahkan kode fitur ke feature.
+Perbarui dependensi.
+Pastikan tidak ada dependensi melingkar.
+
+Pola Android R6: Pemindahan resource.
+Pindahkan resource ke modul yang tepat.
+Perbarui referensi R class.
+Periksa namespace.
+Uji build.
+
+Pola Android R7: Migrasi ke version catalog.
+Tambahkan gradle/libs.versions.toml.
+Pindahkan versi dan library ke katalog.
+Perbarui build.gradle.kts.
+Uji build.
+
+Pola Android R8: Migrasi ke convention plugin.
+Buat build-logic/.
+Pindahkan konfigurasi berulang ke plugin.
+Terapkan plugin di setiap modul.
+Uji build.
+
+Pola Android R9: Penghapusan modul.
+Pastikan tidak ada dependensi.
+Hapus dari settings.gradle.kts.
+Hapus folder modul.
+Perbarui dokumentasi.
+Uji build.
+
+Pola Android R10: Rename package.
+Gunakan IDE untuk rename package.
+Perbarui namespace di build.gradle.kts.
+Perbarui applicationId jika perlu.
+Perbarui AndroidManifest.xml.
+Uji build.
+
+BAGIAN 12: LATIHAN PENALARAN ANDROID
+Latihan 1: Deteksi anti-pola.
+Diberikan struktur dengan file .kt di res/layout/.
+AI harus mendeteksi A1.
+AI harus menyarankan memindahkan ke java/.
+
+Latihan 2: Deteksi rahasia.
+Diberikan file google-services.json di app/.
+AI harus mendeteksi A12.
+AI harus menyarankan menghapus dari Git dan menggunakan variabel lingkungan.
+
+Latihan 3: Deteksi dependensi melingkar.
+Diberikan feature/beranda bergantung pada feature/detail, dan sebaliknya.
+AI harus mendeteksi A14 dan A15.
+AI harus menyarankan modul navigasi atau kontrak.
+
+Latihan 4: Pilih struktur.
+Diberikan aplikasi kecil satu pengembang.
+AI harus menyarankan struktur satu modul.
+Diberikan aplikasi menengah dengan tiga tim.
+AI harus menyarankan struktur modular.
+
+Latihan 5: Migrasi Java ke Kotlin.
+Diberikan modul Java murni.
+AI harus menyarankan migrasi bertahap per file.
+AI harus menyarankan pengujian setelah setiap file.
+AI harus menyarankan pembaruan dependensi.
+
+Latihan 6: Version catalog.
+Diberikan banyak modul dengan versi berbeda.
+AI harus menyarankan gradle/libs.versions.toml.
+AI harus menyarankan pembaruan build.gradle.kts.
+AI harus menyarankan pengujian build.
+
+Latihan 7: Source set.
+Diberikan kebutuhan string berbeda untuk flavor free dan paid.
+AI harus menyarankan src/free/res/values/strings.xml dan src/paid/res/values/strings.xml.
+AI harus menjelaskan urutan prioritas source set.
+
+Latihan 8: Tes.
+Diberikan ViewModel dengan logika bisnis.
+AI harus menyarankan tes unit di src/test/.
+AI harus menyarankan penggunaan coroutines test.
+AI harus menyarankan menghindari tes instrumen untuk logika murni.
+
+Latihan 9: ProGuard.
+Diberikan rilis dengan crash setelah minify.
+AI harus menyarankan pemeriksaan proguard-rules.pro.
+AI harus menyarankan penambahan aturan untuk pustaka yang dipakai.
+AI harus menyarankan pengujian rilis.
+
+Latihan 10: Modularisasi.
+Diberikan aplikasi dengan satu modul berisi 300 file.
+AI harus menyarankan modularisasi bertahap.
+AI harus menyarankan pemisahan core, domain, data, ui, dan fitur.
+AI harus menyarankan pengujian setelah setiap modul.
+
+BAGIAN 13: RINGKASAN GENERASI 5
+Proyek Android memiliki konvensi struktur yang kuat.
+AGP menentukan lokasi manifest, kode, resource, dan tes.
+Java dan Kotlin dapat dicampur, tetapi harus konsisten per modul.
+Gradle mengelola build, dependensi, varian, dan plugin.
+Version catalog memusatkan versi dependensi.
+Convention plugin memusatkan konfigurasi build.
+Source set utama adalah main, test, dan androidTest.
+Source set tambahan adalah debug, release, dan flavor.
+Resource dikelompokkan berdasarkan jenis.
+Package harus cocok dengan namespace.
+Struktur satu modul cocok untuk aplikasi kecil.
+Struktur modular cocok untuk aplikasi menengah sampai besar.
+Modul aplikasi menyatukan fitur.
+Modul fitur berisi layar dan ViewModel.
+Modul core berisi kode bersama.
+Modul domain berisi model dan use case.
+Modul data berisi repositori dan sumber data.
+Modul ui berisi tema dan komponen.
+Modul navigasi berisi rute.
+Modul pengujian berisi utilitas tes.
+Anti-pola Android harus dikenali dan diperbaiki.
+Anti-pola keamanan adalah prioritas tertinggi.
+Anti-pola dependensi melingkar harus dihindari.
+Anti-pola tes yang salah tempat harus diperbaiki.
+Pola refaktor Android membantu migrasi aman.
+AI harus memahami konvensi Android sebelum menyarankan struktur.
+AI harus memahami Gradle dan varian.
+AI harus memahami Java dan Kotlin.
+AI harus memahami resource dan manifest.
+AI harus memahami pengujian Android.
+AI harus memahami modularisasi.
+AI harus selalu mengutamakan keamanan rahasia.
+AI harus selalu mengutamakan konsistensi namespace.
+AI harus selalu mengutamakan keterbacaan resource.
+AI harus selalu mengutamakan pengujian.
+AI harus selalu mengutamakan dokumentasi.
+Dengan generasi kelima ini, AI dilatih untuk memahami struktur proyek Android yang khas.
+AI dilatih untuk mendeteksi anti-pola Android.
+AI dilatih untuk menyarankan refaktor Android yang aman.
+AI dilatih untuk memilih struktur sesuai ukuran dan kebutuhan proyek Android.
+AI dilatih untuk memahami Gradle, version catalog, dan convention plugin.
+AI dilatih untuk memahami source set dan varian.
+AI dilatih untuk memahami Java, Kotlin, dan Compose.
+AI dilatih untuk memahami resource, manifest, dan paket.
+Akhir generasi 5.

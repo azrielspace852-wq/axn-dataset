@@ -1,0 +1,151 @@
+```text
+=========================================================
+  PENGERTIAN        : SQLite (sqlite)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian sqlite (SQLite), contoh contoh bahasa nya,
+                      kegunaan nya, kelebihan dan kekurangan, sejarah,
+                      pencipta, asal usul, asal negara, tahun di ciptakan,
+                      versi, perbedaan dengan SQL (sql), framework
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+SQLite adalah pustaka perangkat lunak (software library) yang ditulis dalam bahasa C dan menyediakan mesin basis data relasional (RDBMS) yang dapat disematkan langsung ke dalam aplikasi. Berbeda dari MySQL, PostgreSQL, atau Oracle yang berjalan sebagai proses server terpisah dan berkomunikasi melalui jaringan, SQLite berjalan di dalam proses aplikasi itu sendiri. Seluruh basis data—tabel, indeks, trigger, dan data—disimpan dalam satu file tunggal yang independen terhadap platform.
+
+SQLite adalah mesin basis data yang paling banyak digunakan di dunia. Ia tertanam di hampir semua ponsel pintar (Android dan iOS), browser web (Firefox, Chrome), sistem operasi, perangkat IoT, dan aplikasi desktop. SQLite mengimplementasikan sebagian besar standar SQL-92 dan mematuhi properti ACID (Atomicity, Consistency, Isolation, Durability), sehingga transaksi yang dilakukan tetap andal meskipun terjadi kegagalan sistem atau pemadaman listrik. Kode sumbernya berada di domain publik (public domain), sehingga dapat digunakan secara bebas tanpa lisensi, baik untuk proyek open source maupun proprietary.
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+SQLite diciptakan oleh D. Richard Hipp, seorang programmer Amerika Serikat kelahiran Charlotte, Carolina Utara. Hipp merancang SQLite pada musim semi tahun 2000 ketika ia bekerja untuk General Dynamics, sebuah perusahaan pertahanan yang saat itu memiliki kontrak dengan Angkatan Laut Amerika Serikat (US Navy).
+
+Asal Negara: Amerika Serikat.
+Tahun Diciptakan: 2000.
+
+Latar belakang penciptaannya bersifat sangat praktis: Hipp sedang mengerjakan perangkat lunak untuk sistem kendali kerusakan (damage-control system) di atas kapal perusak berpeluru kendali. Sistem tersebut awalnya menggunakan basis data IBM Informix yang berjalan di server HP-UX. Masalahnya, instalasi dan administrasi basis data tersebut bisa memakan waktu berhari-hari, dan sistem harus tetap berfungsi bahkan ketika kapal kehilangan koneksi ke server. Hipp membutuhkan mesin basis data yang ringan, andal, dan tidak memerlukan administrasi. Ia kemudian menulis sendiri pustaka kecil yang dapat langsung tertanam di dalam program. Versi 1.0 dirilis pada Agustus 2000. Pada September 2001, SQLite 2.0 menggantikan penyimpanan berbasis gdbm dengan implementasi B-tree kustom dan menambahkan dukungan transaksi. Versi 3.0, yang menjadi fondasi SQLite modern, dirilis pada Juni 2004 dengan dukungan internasionalisasi dan manifest typing.
+
+Saat ini, Hipp dan sebagian pengembang utama SQLite bekerja di Hwaci, sebuah perusahaan perangkat lunak Amerika Serikat yang mendukung pengembangan SQLite secara berkelanjutan.
+
+3. VERSI DAN RILIS TERKINI
+SQLite tidak mengikuti siklus rilis besar seperti sistem operasi atau bahasa pemrograman. Versi-versi dirilis secara inkremental dengan format penomoran `3.X.Y`. Hingga November 2026, rilis terbaru adalah sebagai berikut:
+
+- SQLite 3.53.0 (9 April 2026): Memperbaiki bug korupsi WAL-reset, menambahkan pustaka Query Result Formatter (QRF), dan peningkatan pada perintah `ALTER TABLE` (dapat menambah/menghapus constraint NOT NULL dan CHECK) serta fungsi `json_array_insert()`.
+- SQLite 3.53.4 (24 Juli 2026): Rilis pemeliharaan dengan perbaikan bug yang sebagian besar ditemukan oleh AI.
+- SQLite 3.54.0 (9 Oktober 2026): Pembaruan besar pada antarmuka baris perintah (CLI), peningkatan query planner, dan perbaikan performa sekitar 4% (berdasarkan benchmark `speedtest1`). Rilis ini juga menghentikan dukungan untuk Windows XP dan versi Windows yang lebih lama; SQLite untuk Windows kini memerlukan Windows Vista atau lebih baru.
+- SQLite 3.54.1 (16 Oktober 2026): Rilis tambalan (patch) yang memperbaiki kemungkinan heap-buffer overflow pada build 32-bit yang ditemukan di 3.54.0.
+
+SQLite sangat stabil dan kompatibel ke belakang (backward compatible). Basis data yang dibuat dengan versi lama umumnya dapat dibuka dan digunakan oleh versi yang lebih baru tanpa migrasi.
+
+4. SINTAKS DAN CONTOH
+SQLite menggunakan sintaks SQL yang sangat mirip dengan standar SQL-92, dengan beberapa ekstensi dan penyederhanaan khas. Berikut beberapa contoh operasi dasar.
+
+a. Membuat Tabel dan Menyisipkan Data
+```sql
+CREATE TABLE pengguna (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nama TEXT NOT NULL,
+    email TEXT UNIQUE,
+    aktif INTEGER DEFAULT 1
+);
+
+INSERT INTO pengguna (nama, email) VALUES ('Azriel', 'azriel@example.com');
+INSERT INTO pengguna (nama, email) VALUES ('Budi', 'budi@example.com');
+```
+
+b. Kueri dengan Filter dan Urutan
+
+```sql
+SELECT nama, email
+FROM pengguna
+WHERE aktif = 1
+ORDER BY nama ASC;
+```
+
+c. Menggabungkan Tabel (JOIN)
+
+```sql
+SELECT p.nama, o.total
+FROM pengguna p
+JOIN pesanan o ON p.id = o.pengguna_id
+WHERE o.total > 50000;
+```
+
+d. Transaksi (ACID)
+SQLite mendukung transaksi penuh. Perintah BEGIN, COMMIT, dan ROLLBACK memastikan bahwa serangkaian operasi diperlakukan sebagai satu unit yang atomik.
+
+```sql
+BEGIN TRANSACTION;
+UPDATE pengguna SET aktif = 0 WHERE id = 2;
+INSERT INTO log (pesan) VALUES ('Pengguna dinonaktifkan');
+COMMIT;
+```
+
+e. Fitur Khas SQLite: PRAGMA dan AUTOINCREMENT
+SQLite memiliki perintah PRAGMA untuk mengatur perilaku mesin, misalnya PRAGMA journal_mode = WAL; untuk mengaktifkan Write-Ahead Logging yang meningkatkan konkurensi baca-tulis. Kata kunci AUTOINCREMENT memastikan nilai primary key selalu meningkat dan tidak pernah digunakan ulang, meskipun ada penghapusan baris.
+
+5. KEGUNAAN SQLITE
+   SQLite dirancang untuk skenario di mana kesederhanaan, keandalan, dan kemandirian lebih penting daripada konkurensi tinggi atau skalabilitas enterprise. Kegunaan utamanya meliputi:
+
+· Aplikasi Seluler (Mobile Apps): SQLite adalah basis data bawaan di Android dan iOS. Hampir semua aplikasi yang menyimpan data terstruktur di perangkat—mulai dari aplikasi pesan, catatan, hingga game—menggunakan SQLite di balik layar.
+· Aplikasi Desktop: Banyak aplikasi desktop menggunakan SQLite sebagai format file penyimpanan. File proyek, katalog media, dan basis data lokal disimpan dalam satu file SQLite yang dapat dengan mudah dibuka, dicadangkan, atau dikirim melalui email.
+· Perangkat IoT dan Embedded Systems: SQLite tidak memerlukan administrasi dan dapat berjalan tanpa pengawasan manusia, sehingga cocok untuk perangkat seperti kotak set-top, televisi, kamera, jam tangan, termostat, mobil, drone, dan sensor jarak jauh.
+· Situs Web Trafik Rendah hingga Menengah: SQLite mampu menangani situs dengan kurang dari 100.000 kunjungan per hari (perkiraan konservatif; SQLite telah terbukti menangani 10 kali lipat angka tersebut). Situs web sqlite.org sendiri menggunakan SQLite dan melayani sekitar 400.000–500.000 permintaan HTTP per hari pada satu mesin virtual.
+· Analisis Data dan Prototipe: SQLite sangat ideal untuk memuat data ke dalam memori dan menjalankan kueri SQL untuk eksplorasi, pemfilteran, dan agregasi, tanpa perlu menyiapkan server basis data.
+· Pengujian dan Pengembangan: Karena tidak memerlukan konfigurasi, SQLite sering digunakan sebagai basis data pengembangan atau pengujian sebelum beralih ke PostgreSQL atau MySQL di produksi.
+
+6. KELEBIHAN DAN KEKURANGAN SQLITE
+
+Kelebihan SQLite:
+
+· Zero Configuration (Nol Konfigurasi): Tidak ada proses server yang perlu diinstal, dikonfigurasi, atau dijalankan. Cukup sertakan pustaka, dan basis data siap digunakan.
+· Serverless (Tanpa Server): SQLite berjalan di dalam proses aplikasi, sehingga tidak ada latensi jaringan atau overhead komunikasi client-server.
+· Satu File Portabel: Seluruh basis data—skema dan data—disimpan dalam satu file lintas platform. File ini dapat disalin, dicadangkan, atau dikirim melalui email, dan dapat dibuka di sistem operasi mana pun.
+· Sangat Ringan: Pustaka SQLite berukuran kurang dari 600 KiB (dapat dikompilasi lebih kecil lagi dengan fitur yang dinonaktifkan), sehingga cocok untuk perangkat dengan sumber daya terbatas.
+· ACID-Compliant: SQLite memenuhi properti Atomicity, Consistency, Isolation, dan Durability. Transaksi aman bahkan jika aplikasi crash atau daya listrik terputus.
+· Domain Publik: Tidak ada lisensi, tidak ada biaya, dan tidak ada batasan hukum untuk penggunaan komersial maupun non-komersial.
+· Keandalan Tinggi: Karena kesederhanaannya, SQLite memiliki permukaan bug yang lebih kecil. Pengujian ekstensif dan basis kode yang relatif kecil membuatnya sangat andal untuk penyimpanan data jangka panjang.
+· Kinerja Baca Sangat Baik: Untuk operasi baca (SELECT), SQLite sangat cepat karena tidak ada overhead jaringan dan data di-cache langsung di memori proses.
+
+Kekurangan SQLite:
+
+· Model Konkurensi Single-Writer: SQLite hanya mengizinkan satu penulis (writer) pada satu waktu. Pembaca (reader) dapat mengakses basis data secara bersamaan dalam mode WAL, tetapi penulisan berskala besar atau konkurensi tulis yang tinggi akan menjadi hambatan. Ini membuat SQLite kurang cocok untuk aplikasi web dengan banyak pengguna yang menulis secara simultan.
+· Tidak Ada Akses Jaringan: SQLite tidak memiliki lapisan server, sehingga tidak dapat diakses melalui jaringan secara langsung. Setiap aplikasi yang menggunakan basis data harus berada di sistem file yang sama dengan file basis data.
+· Tidak Ada Autentikasi Pengguna: SQLite tidak memiliki sistem manajemen pengguna atau kontrol akses berbasis peran. Keamanan bergantung pada izin sistem file.
+· Fitur SQL Terbatas: SQLite tidak mendukung stored procedures, dan beberapa fitur SQL lanjutan seperti RIGHT JOIN (sebelum versi tertentu) dan tipe data yang ketat (strict typing) tidak tersedia secara default. Tipe data bersifat "advisory"; kolom INTEGER dapat menyimpan string, meskipun fitur STRICT TABLE dapat diaktifkan.
+· Tidak Cocok untuk Data Sangat Besar: Meskipun SQLite dapat menangani basis data berukuran gigabyte, ia tidak dirancang untuk skala tera- atau peta-byte seperti PostgreSQL atau Oracle.
+· Keterbatasan dalam Lingkungan Multi-Proses: Jika beberapa proses mengakses file basis data yang sama secara bersamaan, mekanisme penguncian SQLite dapat menjadi sumber kontensi, terutama pada sistem file jaringan (NFS).
+
+7. PERBEDAAN SQLITE DENGAN SQL
+   Ini adalah perbedaan yang paling sering disalahpahami. SQL dan SQLite berada pada lapisan yang berbeda:
+
+· SQL adalah bahasa. SQL (Structured Query Language) adalah standar ANSI/ISO yang mendefinisikan sintaks dan semantik untuk mengelola basis data relasional. SQL adalah spesifikasi, bukan perangkat lunak. Ia tidak memiliki mesin eksekusi sendiri.
+· SQLite adalah mesin basis data (RDBMS). SQLite adalah implementasi konkret yang "berbicara" dalam bahasa SQL. Ia adalah pustaka perangkat lunak yang menyediakan mesin untuk menyimpan, mengambil, dan mengelola data.
+
+Analoginya: SQL adalah "bahasa Indonesia", sedangkan SQLite adalah "salah satu penutur bahasa Indonesia". Penutur lain termasuk MySQL, PostgreSQL, Oracle, dan Microsoft SQL Server. Setiap penutur memiliki dialek dan karakteristiknya sendiri, tetapi semuanya menggunakan bahasa dasar yang sama.
+
+Perbedaan teknis utama antara SQLite dan RDBMS client-server (MySQL, PostgreSQL, SQL Server):
+
+· Arsitektur: SQLite bersifat embedded (tertanam dalam aplikasi), sedangkan MySQL/PostgreSQL bersifat client-server (aplikasi terhubung ke proses server terpisah melalui jaringan).
+· Konkurensi: SQLite mendukung banyak pembaca tetapi hanya satu penulis pada satu waktu. RDBMS client-server mendukung konkurensi tulis yang tinggi dengan penguncian baris (row-level locking) dan isolasi transaksi yang lebih canggih.
+· Tipe Data: SQLite menggunakan manifest typing (tipe data melekat pada nilai, bukan pada kolom), sedangkan RDBMS standar menggunakan static typing (tipe data ditentukan oleh kolom).
+· Fitur: SQLite tidak memiliki stored procedures, sistem pengguna, atau replikasi bawaan. RDBMS client-server menyediakan fitur-fitur tersebut sebagai bagian dari platform.
+· Skalabilitas: SQLite cocok untuk data lokal berukuran hingga beberapa gigabyte. RDBMS client-server dirancang untuk data enterprise berukuran tera-byte dan beban kerja dengan banyak pengguna.
+
+8. FRAMEWORK DAN EKOSISTEM SQLITE
+   Meskipun SQLite dapat digunakan langsung melalui API C-nya, sebagian besar pengembang mengaksesnya melalui binding bahasa pemrograman atau framework ORM (Object-Relational Mapper) yang menyediakan antarmuka tingkat tinggi. Berikut beberapa framework dan pustaka yang aktif digunakan hingga 2026:
+
+· Python: sqlite3 (modul bawaan standar), SQLAlchemy (ORM matang dengan dukungan SQLite), NextORM (ORM modern dengan dukungan async penuh, type annotations, dan provider SQLite melalui aiosqlite), OrmKit (ORM berbasis Rust untuk Python dengan driver SQLite melalui rusqlite), Encino ORM (ORM asinkron dengan antarmuka terpadu untuk SQLite, MySQL, PostgreSQL, dan lainnya).
+· Go: liteorm (ORM modern berbasis Go generik, CGo-free, dengan driver SQLite murni Go), GORM (ORM populer yang mendukung SQLite melalui driver).
+· .NET: SQLite.Framework (ORM ringan untuk .NET, Avalonia, dan aplikasi AOT, dengan kueri LINQ dan dukungan async), Entity Framework Core (melalui penyedia Microsoft.EntityFrameworkCore.Sqlite).
+· Rust: rusqlite (binding Rust ke pustaka SQLite C), Rustango (framework web dengan dukungan SQLite sebagai salah satu backend basis data).
+· JavaScript/TypeScript: better-sqlite3 (binding sinkron yang cepat untuk Node.js), Drizzle ORM (mendukung SQLite sebagai salah satu dialek), Prisma (melalui konektor SQLite).
+· Dart/Flutter: sqflite (plugin SQLite untuk Flutter), Drift (ORM reaktif untuk SQLite di Dart, dengan kueri type-safe).
+
+Pemilihan framework bergantung pada bahasa pemrograman, kebutuhan akan async, preferensi terhadap ORM versus query builder, dan target platform (seluler, desktop, atau server).
+
+9. KESIMPULAN
+   SQLite adalah keajaiban kecil dalam dunia basis data: sebuah mesin relasional penuh yang ditulis dalam bahasa C, berukuran kurang dari satu megabyte, dan dapat disematkan ke dalam aplikasi apa pun tanpa konfigurasi. Diciptakan oleh D. Richard Hipp pada tahun 2000 untuk kebutuhan Angkatan Laut Amerika Serikat, SQLite kini menjadi mesin basis data paling banyak digunakan di dunia, tertanam di ponsel, browser, mobil, dan perangkat IoT. Keunggulannya terletak pada kesederhanaan, portabilitas file tunggal, kepatuhan ACID, dan sifat domain publiknya. Keterbatasannya—terutama model konkurensi single-writer dan ketiadaan akses jaringan—bukanlah cacat, melainkan konsekuensi dari desain yang sengaja memilih kesederhanaan di atas fitur enterprise. Memahami perbedaan fundamental antara SQL (bahasa) dan SQLite (mesin) adalah kunci untuk menggunakan keduanya dengan tepat. Dengan ekosistem framework yang terus berkembang di berbagai bahasa pemrograman, SQLite tetap menjadi pilihan utama untuk penyimpanan data lokal yang andal, efisien, dan mudah dikelola.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian SQLite, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi terbaru, perbedaannya dengan SQL, dan ekosistem framework. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+
+```

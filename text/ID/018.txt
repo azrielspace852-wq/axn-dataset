@@ -1,0 +1,172 @@
+```text
+=========================================================
+  PENGERTIAN        : TYPESCRIPT (TypeScript/typescript)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman typescript (TYPESCRIPT/TypeScript),
+                      contoh contoh bahasa nya, kegunaan nya, kelebihan dan
+                      kekurangan, sejarah, pencipta, asal usul, asal negara,
+                      tahun di ciptakan, versi, perbedaan dengan JAVASCRIPT
+                      (javascript/js), framework
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+TypeScript adalah bahasa pemrograman tingkat tinggi yang dikembangkan oleh Microsoft dan berfungsi sebagai superset dari JavaScript. Artinya, TypeScript mencakup seluruh fitur JavaScript yang ada, lalu menambahkan lapisan tambahan di atasnya berupa sistem tipe statis (static type system) dengan anotasi tipe yang bersifat opsional[reference:0]. TypeScript dirancang khusus untuk pengembangan aplikasi berskala besar, di mana kompleksitas kode dan jumlah pengembang yang terlibat menuntut adanya jaminan konsistensi dan deteksi dini terhadap kesalahan[reference:1].
+
+Kode TypeScript tidak dijalankan langsung oleh browser atau Node.js. Ia harus ditranspilasi (transpile) terlebih dahulu menjadi JavaScript murni menggunakan TypeScript Compiler (`tsc`) atau alat lain seperti Babel[reference:2]. Karena merupakan superset, setiap kode JavaScript yang valid pada dasarnya juga merupakan kode TypeScript yang valid, sehingga migrasi dari JavaScript ke TypeScript dapat dilakukan secara bertahap (progressive adoption)[reference:3].
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+TypeScript dikembangkan oleh Microsoft, dengan Anders Hejlsberg sebagai arsitek utama. Hejlsberg adalah nama di balik bahasa pemrograman C# dan juga pencipta Delphi serta Turbo Pascal[reference:4]. Pengembangan internal berlangsung selama dua tahun sebelum akhirnya dirilis kepada publik pada Oktober 2012 dengan versi 0.8[reference:5].
+
+Asal Negara: Amerika Serikat (Microsoft).
+Tahun Diciptakan: 2012 (rilis publik pertama 1 Oktober 2012)[reference:6].
+
+Latar belakang penciptaannya adalah keterbatasan JavaScript dalam menangani basis kode yang besar dan kompleks. Tim Microsoft dan pelanggan eksternal mereka membutuhkan alat yang dapat membantu mengelola pengembangan komponen dalam JavaScript tanpa harus meninggalkan kompatibilitas dengan standar ECMAScript dan ekosistemnya. Solusinya adalah sebuah kompiler yang mengubah superset JavaScript dengan anotasi tipe dan kelas (file TypeScript) kembali menjadi kode ECMAScript 5 yang vanilla[reference:7]. TypeScript pun menjadi proyek open source dengan lisensi Apache 2.0[reference:8].
+
+3. VERSI DAN RILIS TERKINI
+TypeScript mengikuti siklus rilis yang teratur. Berikut tonggak penting evolusinya:
+- TypeScript 0.8 (Oktober 2012): Rilis publik pertama.
+- TypeScript 1.0 (April 2014): Rilis stabil pertama yang diumumkan di konferensi Build Microsoft[reference:9].
+- TypeScript 2.0 (September 2016): Memperkenalkan null safety dan analisis alur tipe[reference:10].
+- TypeScript 3.0 (Juli 2018): Menambahkan tuple dalam rest parameters dan spread expressions[reference:11].
+- TypeScript 4.0 (Agustus 2020): Variadic Tuple Types dan Custom JSX Factories[reference:12].
+- TypeScript 5.0 (Maret 2023): Dukungan penuh untuk decorators standar[reference:13].
+- TypeScript 6.0 (23 Maret 2026): Versi transisi terakhir yang kompilernya masih ditulis dalam JavaScript/TypeScript. Versi ini menjadi jembatan menuju era baru[reference:14].
+- TypeScript 7.0.2 (8 Juli 2026): Rilis stabil terbaru hingga November 2026. Ini adalah tonggak bersejarah karena kompiler dan language service TypeScript ditulis ulang sepenuhnya dalam bahasa Go (Proyek "Corsa"). Penulisan ulang ini menghasilkan peningkatan kecepatan build penuh sekitar 8 hingga 12 kali lipat dibandingkan TypeScript 6.0. Sebagai contoh, type-checking pada basis kode Visual Studio Code turun dari 125,7 detik menjadi hanya 10,6 detik[reference:15][reference:16].
+
+4. SINTAKS DAN CONTOH
+TypeScript menambahkan sejumlah ekstensi sintaks di atas JavaScript, antara lain: anotasi tipe, inferensi tipe, interface, enumerated types (enum), generics, namespace, tuple, dan decorators[reference:17].
+
+a. Anotasi Tipe dan Inferensi
+TypeScript dapat secara otomatis menyimpulkan tipe (type inference) dari nilai yang diberikan, tetapi Anda juga dapat menentukan tipe secara eksplisit.
+```typescript
+let helloWorld = "Hello World"; // Diinferensikan sebagai string
+let umur: number = 25; // Anotasi tipe eksplisit
+// umur = "dua puluh lima"; // Error: Type 'string' is not assignable to type 'number'
+```
+
+b. Interface
+Interface mendefinisikan "bentuk" atau kontrak dari sebuah objek, memastikan objek tersebut memiliki properti dan metode dengan tipe yang sesuai.
+
+```typescript
+interface User {
+    name: string;
+    id: number;
+    email?: string; // Properti opsional
+}
+
+const user: User = {
+    name: "Azriel",
+    id: 1,
+    // email tidak wajib diisi
+};
+
+// const userSalah: User = { name: "Budi" }; // Error: properti 'id' hilang
+```
+
+c. Generic
+Generic memungkinkan pembuatan komponen (fungsi, kelas, interface) yang dapat bekerja dengan berbagai tipe data tanpa kehilangan informasi tipe. Ini menciptakan kode yang dapat digunakan kembali (reusable) dan type-safe.
+
+```typescript
+interface Response<T> {
+    code: number;
+    data: T;
+    message?: string;
+}
+
+function wrapResponse<T>(data: T): Response<T> {
+    return { code: 200, data };
+}
+
+const stringResponse = wrapResponse("Berhasil");
+// Tipe stringResponse adalah Response<string>
+const numberResponse = wrapResponse(100);
+// Tipe numberResponse adalah Response<number>
+```
+
+d. Decorator (TypeScript 5.0+)
+Decorator adalah fungsi khusus yang dapat dilampirkan pada deklarasi kelas, metode, properti, atau parameter untuk memodifikasi perilakunya. Decorator sangat umum digunakan di framework seperti Angular dan NestJS untuk metadata dan dependency injection.
+
+```typescript
+function Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    const originalMethod = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.log(`Memanggil metode: ${propertyKey}`);
+        return originalMethod.apply(this, args);
+    };
+}
+
+class Contoh {
+    @Log
+    sapa(nama: string) {
+        return `Halo, ${nama}`;
+    }
+}
+
+const contoh = new Contoh();
+contoh.sapa("Azriel"); // Output: "Memanggil metode: sapa" lalu "Halo, Azriel"
+```
+
+5. KEGUNAAN TYPESCRIPT
+   TypeScript digunakan secara luas di hampir semua bidang pengembangan perangkat lunak yang melibatkan JavaScript:
+
+· Pengembangan Aplikasi Web Front-End: Hampir semua framework front-end modern (React, Vue, Angular, Svelte) mendukung TypeScript, dan banyak yang menjadikannya pilihan default untuk scaffolding proyek baru.
+· Pengembangan Back-End (Node.js): Dengan framework seperti NestJS, Express, atau Fastify, TypeScript memberikan keamanan tipe pada logika server, akses basis data, dan API.
+· Aplikasi Skala Enterprise: TypeScript sangat ideal untuk tim besar yang bekerja pada basis kode yang kompleks dan berumur panjang, karena tipe berfungsi sebagai dokumentasi hidup dan kontrak antar-modul.
+· Alat Pengembangan (Tooling): TypeScript digunakan untuk membangun alat CLI, sistem build, dan ekstensi editor (seperti VS Code).
+· Pengembangan Game: Library seperti Phaser dan Three.js dapat digunakan dengan TypeScript untuk pengalaman pengembangan game yang lebih terstruktur.
+
+6. KELEBIHAN DAN KEKURANGAN TYPESCRIPT
+
+Kelebihan TypeScript:
+
+· Deteksi Kesalahan Dini: TypeScript menangkap kesalahan terkait tipe pada saat kompilasi, sebelum kode dijalankan. Studi Microsoft menunjukkan TypeScript dapat menangkap 15%–38% error runtime yang umum.
+· Meningkatkan Produktivitas dan Pengalaman Pengembang: Dukungan autocompletion, navigasi kode, dan refactoring yang aman di editor modern (seperti VS Code) sangat meningkat berkat informasi tipe.
+· Kode Lebih Mudah Dipelihara dan Dipahami: Tipe bertindak sebagai dokumentasi yang tidak bisa basi. Interface dan anotasi tipe membuat maksud kode lebih jelas, memudahkan kolaborasi tim.
+· Adopsi Bertahap (Progressive Adoption): Karena JavaScript adalah TypeScript yang valid, Anda dapat menambahkan TypeScript ke proyek JavaScript yang sudah ada file per file, tanpa perlu menulis ulang semuanya sekaligus.
+· Ekosistem yang Matang: Hampir semua library JavaScript populer memiliki file deklarasi tipe (@types/*) yang dikelola oleh komunitas DefinitelyTyped (lebih dari 7.000 paket).
+
+Kekurangan TypeScript:
+
+· Membutuhkan Langkah Build Tambahan: TypeScript tidak dapat dijalankan langsung; ia harus dikompilasi menjadi JavaScript. Ini menambah kompleksitas pada proses build dan memerlukan konfigurasi (tsconfig.json).
+· Kurva Belajar: Bagi pengembang yang hanya terbiasa dengan JavaScript dinamis, konsep seperti generics, union types, dan type guards bisa terasa asing dan membutuhkan waktu untuk dikuasai.
+· Verbositas: Kode TypeScript cenderung lebih panjang karena adanya anotasi tipe, meskipun inferensi tipe mengurangi sebagian boilerplate.
+· "Kebocoran" Tipe (Type Assertions): Terkadang pengembang menggunakan as atau any secara berlebihan untuk "membungkam" kompilator, yang justru menghilangkan manfaat keamanan tipe.
+
+7. PERBEDAAN TYPESCRIPT DENGAN JAVASCRIPT
+   Ini adalah perbedaan paling fundamental. Analogi yang tepat: JavaScript adalah bahasa "apa adanya", sedangkan TypeScript adalah JavaScript yang "diberi aturan dan jaring pengaman".
+
+· Sistem Tipe: JavaScript menggunakan dynamic typing (tipe diperiksa saat runtime). TypeScript menambahkan static typing (tipe diperiksa saat kompilasi).
+· Waktu Eksekusi: JavaScript dieksekusi langsung oleh mesin JavaScript (browser/Node.js). TypeScript tidak dieksekusi; ia ditranspilasi menjadi JavaScript terlebih dahulu.
+· Deteksi Kesalahan: Kesalahan tipe di JavaScript baru ketahuan saat baris kode dijalankan (atau tidak ketahuan sama sekali). Di TypeScript, kesalahan tipe dilaporkan saat kompilasi, jauh sebelum kode menyentuh pengguna.
+· Tooling: JavaScript memiliki dukungan editor yang terbatas. TypeScript memberikan IntelliSense yang kaya, refactoring yang andal, dan navigasi kode yang presisi karena kompilator memahami tipe data.
+· Hubungan: TypeScript adalah superset dari JavaScript. Setiap file .js yang valid dapat diubah namanya menjadi .ts dan (dengan konfigurasi yang tepat) akan dikompilasi tanpa masalah.
+
+8. FRAMEWORK DAN EKOSISTEM TYPESCRIPT
+   Ekosistem TypeScript sangat luas dan terus berkembang. Berdasarkan data adopsi repositori GitHub pada Oktober 2026, TypeScript digunakan di 86,5% repositori JavaScript/TypeScript publik, menjadikannya bahasa yang dominan. Berikut beberapa framework dan alat populer yang dibangun dengan atau sangat mendukung TypeScript:
+
+· Front-End:
+  · React: Library UI paling populer, dengan dukungan TypeScript yang sangat baik (file .tsx). Adopsi 39,4%.
+  · Next.js: Framework React full-stack untuk SSR/SSG dan SEO, menjadi pilihan default untuk banyak proyek baru.
+  · Angular: Framework enterprise yang dibangun sepenuhnya dengan TypeScript. Cocok untuk aplikasi terstruktur berskala besar.
+  · Vue 3: Ditulis ulang dengan TypeScript dan menawarkan dukungan tipe yang sangat baik.
+  · SvelteKit: Framework berbasis Svelte dengan dukungan TypeScript bawaan.
+  · SolidJS: Framework reaktif yang sedang naik daun, dengan adopsi mingguan yang tumbuh pesat.
+· Back-End:
+  · NestJS: Framework Node.js yang terinspirasi Angular, menggunakan TypeScript secara native untuk arsitektur modular dan dependency injection.
+  · Fastify: Framework HTTP berperforma tinggi dengan dukungan TypeScript yang kuat.
+  · Hono: Framework ultrafast untuk edge runtime, sangat populer di ekosistem TypeScript modern.
+· Alat Pendukung:
+  · Vite: Build tool generasi baru yang sangat cepat, dengan adopsi 23,9%.
+  · Vitest: Framework pengujian yang cepat dan kompatibel dengan Vite, adopsi 28,8%.
+  · Zod: Library validasi skema yang type-safe, adopsi 15,3%.
+  · Drizzle ORM / Prisma: ORM modern yang memberikan keamanan tipe dari basis data hingga aplikasi.
+
+9. KESIMPULAN
+   TypeScript adalah evolusi penting dari JavaScript yang menjawab kebutuhan pengembangan perangkat lunak modern akan keamanan tipe, skalabilitas, dan kolaborasi tim. Diciptakan oleh Anders Hejlsberg di Microsoft dan dirilis pada 2012, TypeScript telah bertransformasi dari proyek eksperimental menjadi standar de facto untuk pengembangan aplikasi JavaScript berskala besar. Dengan rilis TypeScript 7.0 pada Juli 2026, yang ditulis ulang dalam Go dan menawarkan peningkatan kecepatan hingga 12 kali lipat, TypeScript memasuki era baru kinerja dan efisiensi. Perbedaannya dengan JavaScript bukanlah soal persaingan, melainkan hubungan simbiosis: TypeScript memberi JavaScript "kerangka" dan "jaring pengaman" yang diperlukan untuk proyek-proyek kompleks, sambil tetap mempertahankan kompatibilitas penuh dengan ekosistem JavaScript yang masif. Bagi pengembang modern, menguasai TypeScript bukan lagi pilihan, melainkan keterampilan esensial untuk membangun perangkat lunak yang andal dan mudah dipelihara.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa pemrograman TypeScript, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, versi terbaru, perbedaannya dengan JavaScript, dan ekosistem framework. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.
+
+```

@@ -1,0 +1,993 @@
+NARASI DAN STRUKTUR FOLDER POHON UNTUK PRA-PELATIHAN MODEL AI
+Generasi 7
+Bahasa: Indonesia
+Fokus: Proyek Android dengan Java, Kotlin, dan Gradle — pendalaman tingkat lanjut dengan penjelasan detail.
+Cakupan: Anatomi Gradle Android secara rinci, mekanisme build variant, aturan penggabungan source set, resolusi dependensi, konfigurasi Kotlin dan Compose compiler, KSP, Hilt, Room, pengujian berlapis, manifest merging, resolusi resource, R8/ProGuard, build cache, dan Kotlin Multiplatform.
+
+Tujuan: Melatih AI agar tidak hanya mengenali struktur, tetapi memahami mekanisme internal Gradle Android, aturan penggabungan, urutan prioritas, siklus hidup build, dan konsekuensi teknis dari setiap keputusan struktur. AI harus dapat menjawab pertanyaan "mengapa" dan "bagaimana", bukan hanya "apa" dan "di mana".
+
+BAGIAN 1: NARASI PENDALAMAN
+Pada generasi sebelumnya, AI belajar struktur Android dasar, modular, dan produksi.
+Pada generasi ketujuh ini, AI belajar mekanisme internal di balik struktur tersebut.
+AI harus memahami bahwa Gradle bukan sekadar daftar dependensi.
+Gradle adalah mesin build yang mengeksekusi task dalam graf terarah.
+Gradle membangun model proyek melalui fase inisialisasi, konfigurasi, dan eksekusi.
+Fase inisialisasi menentukan modul yang akan dibangun.
+Fase konfigurasi mengevaluasi build script dan membentuk task graph.
+Fase eksekusi menjalankan task sesuai urutan dependensi.
+Android Gradle Plugin menambahkan task khusus Android pada setiap fase.
+AGP menghasilkan task untuk kompilasi, resource, packaging, signing, dan pengujian.
+Setiap task memiliki input dan output yang dapat di-cache.
+Jika input tidak berubah, Gradle dapat melewati task atau mengambil hasil dari cache.
+Pemahaman ini penting agar AI dapat menyarankan struktur yang mendukung build inkremental.
+Struktur folder yang stabil membantu Gradle mendeteksi perubahan secara tepat.
+Struktur folder yang berantakan memaksa Gradle mengulang pekerjaan.
+Struktur folder yang salah tempat dapat memicu kompilasi ulang yang tidak perlu.
+AI harus memahami hubungan antara lokasi file dan task Gradle yang terpicu.
+AI harus memahami kapan perubahan file memicu rebuild penuh.
+AI harus memahami kapan perubahan resource memicu rebuild parsial.
+AI harus memahami kapan perubahan dependensi memicu resolusi ulang.
+AI harus memahami kapan perubahan konfigurasi build memicu rekonfigurasi.
+AI harus memahami implikasi praktis dari build cache.
+AI harus memahami implikasi praktis dari configuration cache.
+AI harus memahami implikasi praktis dari parallel execution.
+AI harus memahami implikasi praktis dari file besar di repositori.
+AI harus memahami implikasi praktis dari banyak modul.
+AI harus memahami implikasi praktis dari convention plugin.
+AI harus memahami implikasi praktis dari version catalog.
+
+BAGIAN 2: ANATOMI FILE GRADLE ANDROID SECARA RINCI
+settings.gradle.kts adalah titik masuk konfigurasi Gradle.
+settings.gradle.kts mendeklarasikan pluginManagement.
+pluginManagement menentukan repositori plugin dan resolusi strategi.
+settings.gradle.kts mendeklarasikan dependencyResolutionManagement.
+dependencyResolutionManagement menentukan repositori dependensi.
+settings.gradle.kts mendeklarasikan included modules.
+Setiap modul yang dibangun harus tercantum di sini.
+settings.gradle.kts dapat mendeklarasikan version catalog.
+settings.gradle.kts dapat mendeklarasikan convention plugin.
+settings.gradle.kts dapat mendeklarasikan feature preview Gradle.
+settings.gradle.kts dapat mendeklarasikan build cache lokal.
+settings.gradle.kts dapat mendeklarasikan repository content filtering.
+build.gradle.kts tingkat proyek mendeklarasikan plugin yang dipakai bersama.
+build.gradle.kts tingkat proyek dapat mendeklarasikan konfigurasi subprojects.
+build.gradle.kts tingkat proyek dapat mendeklarasikan konfigurasi allprojects.
+Praktik modern menghindari konfigurasi lintas proyek secara langsung.
+Praktik modern memindahkan konfigurasi ke convention plugin.
+build.gradle.kts tingkat modul mendeklarasikan plugin yang diterapkan.
+build.gradle.kts tingkat modul mendeklarasikan konfigurasi Android.
+build.gradle.kts tingkat modul mendeklarasikan konfigurasi Kotlin.
+build.gradle.kts tingkat modul mendeklarasikan dependensi.
+build.gradle.kts tingkat modul mendeklarasikan varian.
+build.gradle.kts tingkat modul mendeklarasikan signing config.
+build.gradle.kts tingkat modul mendeklarasikan packaging.
+build.gradle.kts tingkat modul mendeklarasikan lint.
+build.gradle.kts tingkat modul mendeklarasikan tes.
+gradle.properties menyimpan properti yang berlaku untuk semua build.
+gradle.properties dapat menyimpan JVM args untuk Gradle daemon.
+gradle.properties dapat menyimpan flag AndroidX.
+gradle.properties dapat menyimpan flag Kotlin.
+gradle.properties dapat menyimpan flag build cache.
+gradle.properties dapat menyimpan flag configuration cache.
+gradle.properties dapat menyimpan flag parallel execution.
+gradle.properties dapat menyimpan flag non-transitive R class.
+gradle.properties dapat menyimpan kredensial repositori privat.
+Kredensial repositori privat sebaiknya berada di file terpisah yang tidak dilacak.
+gradle/libs.versions.toml adalah version catalog.
+Version catalog memiliki bagian versions, libraries, plugins, dan bundles.
+Versions mendefinisikan versi secara terpusat.
+Libraries mendefinisikan koordinat dependensi.
+Plugins mendefinisikan plugin Gradle.
+Bundles mengelompokkan library agar dapat dirujuk bersama.
+Version catalog dapat diakses di build.gradle.kts dengan libs.
+Version catalog dapat diakses di convention plugin dengan libs.
+Version catalog memudahkan pembaruan dan audit dependensi.
+Version catalog menghindari duplikasi versi.
+Version catalog menghindari konflik versi tersembunyi.
+gradle/wrapper/gradle-wrapper.properties menentukan versi Gradle.
+Versi Gradle harus kompatibel dengan AGP.
+Versi Gradle harus kompatibel dengan plugin Kotlin.
+Versi Gradle harus kompatibel dengan JDK.
+Ketidakcocokan versi menyebabkan build gagal.
+Tim harus menyepakati satu versi Gradle.
+Wrapper memastikan semua kontributor memakai versi sama.
+Wrapper memastikan CI memakai versi sama.
+gradle/verification-metadata.xml memverifikasi checksum dependensi.
+Verifikasi checksum meningkatkan keamanan rantai pasok.
+Verifikasi checksum mencegah dependensi dimanipulasi.
+Verifikasi checksum menuntut pembaruan saat dependensi baru ditambahkan.
+
+BAGIAN 3: MEKANISME BUILD VARIANT SECARA RINCI
+Build variant adalah produk dari dimensi flavor dan build type.
+Build type mendefinisikan cara build dilakukan.
+Build type debug mengaktifkan debugging.
+Build type debug biasanya tidak menyusutkan kode.
+Build type debug biasanya tidak menandatangani dengan keystore rilis.
+Build type release mengaktifkan penyusutan.
+Build type release mengaktifkan resource shrinking.
+Build type release memakai signing config rilis.
+Build type release memakai proguard rules rilis.
+Product flavor mendefinisikan dimensi bisnis.
+Flavor dimension adalah sumbu variasi.
+Contoh dimensi: environment, store, tier, device.
+Setiap dimensi dapat memiliki beberapa nilai.
+Jumlah varian sama dengan produk dari nilai flavor dikali jumlah build type.
+Jika ada 3 flavor dan 2 build type, ada 6 varian.
+Jika ada 2 dimensi dengan 2 nilai masing-masing dan 2 build type, ada 8 varian.
+Jumlah varian yang besar memperlambat build.
+Jumlah varian yang besar memperbesar ruang penyimpanan.
+Jumlah varian yang besar mempersulit pengujian.
+Strategi mengurangi varian: hanya membuat varian yang diperlukan.
+Strategi mengurangi varian: memakai flavor dimension minimum.
+Strategi mengurangi varian: memakai variant filter untuk melewati varian yang tidak dipakai.
+Variant filter dapat menghapus varian yang tidak perlu dibangun.
+Variant filter harus didokumentasikan.
+Setiap varian memiliki source set sendiri.
+Source set utama adalah main.
+Source set build type adalah debug dan release.
+Source set flavor adalah nama flavor.
+Source set kombinasi adalah buildTypeFlavor.
+Source set juga mencakup test dan androidTest per varian.
+Source set per varian memungkinkan override kode dan resource.
+Source set per varian memungkinkan penambahan kode khusus.
+Source set per varian memungkinkan penambahan resource khusus.
+Source set per varian memungkinkan penambahan manifest khusus.
+Urutan prioritas penggabungan menentukan file mana yang menang.
+Source set yang lebih spesifik menang atas yang lebih umum.
+Urutan umum: kombinasi > flavor > build type > main.
+Namun urutan persis bergantung pada kombinasi.
+AGP menggabungkan manifest, resource, kode, dan aset dengan aturan berbeda.
+Manifest digabung dengan aturan merge.
+Resource digabung dengan aturan override.
+Kode digabung dengan aturan kompilasi.
+Aset digabung dengan aturan override.
+Duplikasi resource di source set berbeda dapat menyebabkan konflik.
+Konflik resource harus diselesaikan dengan menghapus duplikasi.
+Konflik manifest harus diselesaikan dengan tools:replace atau tools:remove.
+AI harus memahami aturan ini sebelum menyarankan pemindahan file.
+AI harus memahami bahwa memindahkan file ke source set yang salah dapat mengubah perilaku build.
+AI harus memahami bahwa menambahkan file di source set yang lebih spesifik menimpa file di source set umum.
+AI harus memahami bahwa file yang ditimpa tidak dihapus, hanya diabaikan pada varian tersebut.
+AI harus memahami bahwa kode di source set berbeda dapat memiliki API berbeda.
+AI harus memahami bahwa resource di source set berbeda dapat memiliki nilai berbeda.
+AI harus memahami bahwa string di flavor dapat menimpa string di main.
+AI harus memahami bahwa manifest di flavor dapat menambahkan komponen.
+AI harus memahami bahwa manifest di flavor dapat menghapus komponen dengan tools:node="remove".
+
+BAGIAN 4: RESOLUSI DEPENDENSI SECARA RINCI
+Dependensi Gradle memiliki konfigurasi.
+Konfigurasi implementation tidak terekspos ke konsumen modul.
+Konfigurasi api terekspos ke konsumen modul.
+Konfigurasi compileOnly hanya tersedia saat kompilasi.
+Konfigurasi runtimeOnly hanya tersedia saat runtime.
+Konfigurasi testImplementation hanya untuk tes unit.
+Konfigurasi androidTestImplementation hanya untuk tes instrumen.
+Konfigurasi debugImplementation hanya untuk build debug.
+Konfigurasi releaseImplementation hanya untuk build release.
+Konfigurasi ksp hanya untuk pemroses KSP.
+Konfigurasi kapt hanya untuk pemroses KAPT.
+Konfigurasi annotationProcessor hanya untuk pemroses Java.
+Konfigurasi implementation lebih disukai daripada api.
+Konfigurasi api hanya dipakai jika tipe diekspos di antarmuka publik.
+Konfigurasi api yang berlebihan memperlambat kompilasi konsumen.
+Konfigurasi api yang berlebihan memperbesar classpath.
+Konfigurasi implementation mengurangi kompilasi ulang konsumen.
+Resolusi dependensi memilih versi jika ada konflik.
+Gradle secara default memilih versi tertinggi.
+Strategi resolusi dapat diubah dengan resolutionStrategy.
+Strategi resolusi dapat memaksa versi tertentu.
+Strategi resolusi dapat menolak versi tertentu.
+Strategi resolusi dapat mengganti modul dengan modul lain.
+Strategi resolusi dapat mengecualikan dependensi transitif.
+Pengecualian dependensi harus didokumentasikan.
+Pengecualian dependensi dapat menyebabkan NoClassDefFoundError saat runtime.
+Dependensi transitif dapat membawa versi yang tidak diinginkan.
+Dependensi transitif dapat membawa lisensi yang tidak diinginkan.
+Dependensi transitif dapat membawa kerentanan.
+Audit dependensi penting untuk keamanan.
+Gradle dependency locking menyimpan versi terkunci.
+Lock file mencegah perubahan versi tak terduga.
+Lock file harus dilacak di repositori.
+Lock file harus diperbarui saat dependensi berubah.
+Verification metadata memverifikasi checksum.
+Verification metadata mencegah dependensi dimanipulasi.
+Verification metadata harus diperbarui saat dependensi berubah.
+Repositori dependensi harus eksplisit.
+Repositori dependensi sebaiknya tidak terlalu banyak.
+Repositori dependensi harus mendukung HTTPS.
+Repositori dependensi harus memiliki content filtering jika perlu.
+Repositori dependensi harus dihindari untuk snapshot pada rilis.
+Snapshot dapat berubah sewaktu-waktu.
+Snapshot merusak reproduksibilitas build.
+Rilis harus memakai versi tetap.
+Versi tetap memudahkan rollback.
+Versi tetap memudahkan audit.
+
+BAGIAN 5: KONFIGURASI KOTLIN SECARA RINCI
+Plugin Kotlin Android mendeklarasikan konfigurasi Kotlin.
+Konfigurasi kotlinOptions menentukan JVM target.
+JVM target harus cocok dengan konfigurasi Java.
+JVM target harus kompatibel dengan JDK yang dipakai.
+Konfigurasi kotlinOptions dapat mengaktifkan freeCompilerArgs.
+Free compiler args dapat mengaktifkan fitur eksperimental.
+Free compiler args harus didokumentasikan.
+Konfigurasi compilerOptions modern menggantikan kotlinOptions.
+CompilerOptions memiliki opsi optIn untuk API eksperimental.
+OptIn harus didokumentasikan pada level modul.
+OptIn harus dihindari pada API yang belum stabil.
+Konfigurasi jvmToolchain menentukan JDK untuk kompilasi.
+JvmToolchain harus konsisten antar modul.
+JvmToolchain harus sesuai dengan JDK di CI.
+Konfigurasi Compose compiler plugin menentukan versi compiler Compose.
+Versi Compose compiler harus cocok dengan versi Kotlin.
+Ketidakcocokan menyebabkan build gagal.
+Konfigurasi Compose compiler dapat mengaktifkan metrics.
+Metrics membantu mengukur stabilitas composable.
+Konfigurasi Compose compiler dapat mengaktifkan strong skipping.
+Strong skipping mengoptimalkan komposisi ulang.
+Strong skipping harus diuji terhadap perilaku UI.
+Konfigurasi Compose compiler dapat mengaktifkan reports.
+Reports membantu memahami stabilitas tipe.
+Reports harus diperiksa secara berkala.
+Konfigurasi Kotlin serialization plugin menambahkan serialisasi.
+Serialisasi membutuhkan @Serializable pada kelas.
+Serialisasi harus memakai versi plugin yang cocok.
+Konfigurasi KSP menggantikan KAPT untuk banyak pemroses.
+KSP lebih cepat daripada KAPT.
+KSP tidak mendukung semua pemroses.
+Room dan Hilt mendukung KSP.
+Pemroses lama mungkin belum mendukung KSP.
+KSP harus dikonfigurasi di setiap modul yang memakai pemroses.
+KSP harus memakai versi plugin yang cocok.
+KSP harus memakai versi pustaka yang kompatibel.
+Konfigurasi KAPT masih dipakai untuk pemroses lama.
+KAPT memperlambat build.
+KAPT harus dimigrasikan ke KSP jika memungkinkan.
+Detekt menganalisis kode Kotlin.
+Detekt harus dikonfigurasi dengan file konfigurasi.
+Detekt harus dijalankan di CI.
+Detekt harus memiliki baseline untuk kode lama.
+Ktlint memformat kode Kotlin.
+Ktlint harus dijalankan di CI.
+Ktlint harus dikonfigurasi dengan file editorconfig.
+Spotless dapat mengintegrasikan Ktlint dan formatter lain.
+Spotless harus dijalankan di CI.
+Format otomatis harus dijalankan sebelum commit.
+Pre-commit hook dapat menjalankan formatter.
+
+BAGIAN 6: MEKANISME HILT DAN ROOM SECARA RINCI
+Hilt adalah pustaka dependency injection untuk Android.
+Hilt membutuhkan plugin Hilt Gradle.
+Hilt membutuhkan pemroses KSP atau KAPT.
+Hilt membutuhkan kelas Application beranotasi @HiltAndroidApp.
+Hilt membutuhkan Activity, Fragment, atau ViewModel beranotasi @AndroidEntryPoint.
+Hilt menyediakan modul melalui @Module dan @InstallIn.
+Hilt menyediakan binding melalui @Provides atau @Binds.
+Hilt memvalidasi graf dependensi saat kompilasi.
+Kesalahan Hilt muncul saat kompilasi, bukan runtime.
+Hilt mempercepat diagnosis kesalahan dependensi.
+Hilt membutuhkan modul Hilt di setiap modul Android.
+Hilt membutuhkan tes yang memakai HiltTestRunner.
+Hilt membutuhkan konfigurasi khusus untuk tes instrumen.
+Hilt tidak boleh dipakai di modul JVM murni tanpa penyesuaian.
+Hilt harus dipisahkan dari logika domain.
+Hilt adalah detail infrastruktur, bukan domain.
+Modul domain sebaiknya tidak bergantung pada Hilt.
+Modul data boleh bergantung pada Hilt.
+Modul aplikasi boleh bergantung pada Hilt.
+Room adalah pustaka basis data lokal.
+Room membutuhkan pemroses KSP atau KAPT.
+Room membutuhkan @Database, @Entity, @Dao.
+Room membutuhkan skema yang dapat diekspor.
+Skema Room harus disimpan di folder schemas/.
+Skema Room harus dilacak di repositori.
+Skema Room memungkinkan migrasi yang dapat diuji.
+Room mendukung migrasi otomatis untuk perubahan sederhana.
+Room membutuhkan migrasi manual untuk perubahan kompleks.
+Migrasi harus diuji dengan MigrationTestHelper.
+Migrasi harus dijalankan pada data contoh.
+Migrasi gagal menyebabkan crash saat update aplikasi.
+Migrasi harus diuji di CI.
+Room dapat memakai SQLCipher untuk enkripsi.
+Enkripsi membutuhkan kunci yang aman.
+Kunci enkripsi tidak boleh berada di kode.
+Kunci enkripsi harus berada di penyimpanan aman.
+Room harus dipisahkan dari domain.
+Room adalah detail infrastruktur.
+Repositori menyembunyikan Room dari domain.
+Repositori mengembalikan model domain, bukan entitas Room.
+Pemetaan antara entitas dan model harus diuji.
+Pemetaan harus konsisten.
+Pemetaan harus terdokumentasi.
+
+BAGIAN 7: PENGUJIAN ANDROID BERLAPIS SECARA RINCI
+Piramida pengujian Android memiliki tiga lapisan utama.
+Lapisan dasar adalah tes unit JVM.
+Tes unit JVM cepat dan murah.
+Tes unit JVM tidak membutuhkan perangkat.
+Tes unit JVM menguji logika murni.
+Tes unit JVM menguji ViewModel dengan coroutines test.
+Tes unit JVM menguji use case.
+Tes unit JVM menguji repositori dengan fake.
+Tes unit JVM menguji mapper.
+Tes unit JVM menguji validator.
+Tes unit JVM harus menjadi mayoritas tes.
+Lapisan tengah adalah tes integrasi.
+Tes integrasi dapat berjalan di JVM dengan Robolectric.
+Tes integrasi dapat berjalan di perangkat dengan androidTest.
+Tes integrasi menguji interaksi antar komponen.
+Tes integrasi menguji Room dengan basis data in-memory.
+Tes integrasi menguji Retrofit dengan MockWebServer.
+Tes integrasi menguji Hilt dengan HiltTestRunner.
+Tes integrasi menguji navigasi.
+Tes integrasi lebih lambat tetapi lebih realistis.
+Lapisan atas adalah tes end-to-end.
+Tes end-to-end berjalan di perangkat atau emulator.
+Tes end-to-end memakai Espresso atau Compose Test.
+Tes end-to-end menguji alur pengguna utama.
+Tes end-to-end lebih lambat dan lebih rapuh.
+Tes end-to-end harus fokus pada alur kritis.
+Tes end-to-end harus dijalankan pada nightly.
+Tes end-to-end harus memakai data uji yang stabil.
+Tes end-to-end harus memakai idling resource untuk menunggu.
+Tes end-to-end harus menghindari sleep.
+Tes end-to-end harus memakai test tags untuk Compose.
+Screenshot testing membandingkan tampilan dengan referensi.
+Screenshot testing membantu mendeteksi regresi visual.
+Screenshot testing harus diperbarui saat UI berubah dengan sengaja.
+Screenshot testing harus dijalankan di CI.
+Screenshot testing membutuhkan konfigurasi perangkat atau renderer.
+Paparazzi dan Roborazzi adalah opsi screenshot testing.
+Paparazzi berjalan di JVM.
+Roborazzi berjalan dengan Robolectric.
+Screenshot testing harus konsisten di semua mesin.
+Screenshot testing harus memakai font yang sama.
+Screenshot testing harus memakai locale yang sama.
+Screenshot testing harus memakai waktu yang sama jika ada waktu.
+Tes aksesibilitas dapat memakai Espresso Accessibility Checks.
+Tes aksesibilitas harus dijalankan pada layar utama.
+Tes aksesibilitas harus memeriksa contentDescription.
+Tes aksesibilitas harus memeriksa ukuran sentuh.
+Tes aksesibilitas harus memeriksa kontras.
+Tes performa memakai Macrobenchmark.
+Tes performa memakai Microbenchmark.
+Tes performa mengukur startup.
+Tes performa mengukur frame.
+Tes performa harus dijalankan pada perangkat referensi.
+Tes performa harus dicatat untuk perbandingan antar rilis.
+Tes kontrak menguji API.
+Tes kontrak menguji skema.
+Tes kontrak harus dijalankan pada CI.
+Tes kontrak harus memakai fixture.
+Fixture harus kecil dan representatif.
+Fixture harus diisolasi per tes.
+Fixture harus dibersihkan setelah tes.
+Tes harus deterministik.
+Tes tidak boleh bergantung pada jaringan eksternal.
+Tes tidak boleh bergantung pada waktu sistem.
+Tes tidak boleh bergantung pada urutan eksekusi.
+Tes harus dapat dijalankan secara paralel.
+Tes harus dapat dijalankan ulang tanpa efek samping.
+
+BAGIAN 8: MANIFEST MERGING SECARA RINCI
+Manifest utama berada di src/main/AndroidManifest.xml.
+Manifest build type berada di src/<buildType>/AndroidManifest.xml.
+Manifest flavor berada di src/<flavor>/AndroidManifest.xml.
+Manifest kombinasi berada di src/<buildType><Flavor>/AndroidManifest.xml.
+Manifest library digabung dari dependensi AAR.
+Manifest library dapat menambahkan permission.
+Manifest library dapat menambahkan komponen.
+Manifest library dapat menambahkan meta-data.
+Manifest library dapat menambahkan provider.
+Manifest library dapat menambahkan service.
+Manifest library dapat menambahkan receiver.
+Manifest library dapat menambahkan activity.
+Manifest library dapat menambahkan uses-feature.
+Penggabungan manifest memakai prioritas.
+Prioritas build type lebih tinggi dari main.
+Prioritas flavor lebih tinggi dari build type dalam kombinasi tertentu.
+Prioritas library lebih rendah dari aplikasi.
+Konflik antar manifest harus diselesaikan.
+Konflik dapat diselesaikan dengan tools:replace.
+Konflik dapat diselesaikan dengan tools:remove.
+Konflik dapat diselesaikan dengan tools:node.
+Konflik yang tidak diselesaikan menyebabkan build gagal.
+Laporan merging dapat diperiksa di build/outputs/logs/.
+Laporan merging membantu diagnosis konflik.
+Permission harus diminimalkan.
+Permission yang tidak perlu harus dihapus dengan tools:node="remove".
+Permission berbahaya harus dijelaskan ke pengguna.
+Permission baru pada Android versi baru harus diperiksa.
+Exported component harus dideklarasikan secara eksplisit.
+Exported component harus dilindungi dengan permission jika perlu.
+Exported component tanpa perlindungan adalah risiko keamanan.
+Intent filter harus dideklarasikan dengan hati-hati.
+Intent filter dapat membuka aktivitas ke aplikasi lain.
+Deep link harus divalidasi.
+Deep link harus memakai App Links jika memungkinkan.
+App Links memverifikasi domain.
+App Links mengurangi risiko intent hijacking.
+
+BAGIAN 9: RESOLUSI RESOURCE SECARA RINCI
+Resource dipilih berdasarkan konfigurasi perangkat.
+Konfigurasi mencakup bahasa, orientasi, ukuran layar, dan mode malam.
+Resource default berada di values/, layout/, drawable/.
+Resource alternatif berada di values-xx/, layout-xx/, drawable-xx/.
+Resource alternatif harus lengkap jika dipakai.
+Resource yang hilang pada konfigurasi tertentu jatuh ke default.
+Resource default harus selalu ada.
+Resource string default harus ada di values/strings.xml.
+Resource string bahasa lain harus ada di values-b+xx/strings.xml.
+Resource string harus memakai format yang valid.
+Resource string harus memakai plural untuk jumlah.
+Resource string harus memakai argumen bernama jika memungkinkan.
+Resource dimensi harus memakai satuan yang konsisten.
+Resource warna harus memakai referensi ke colors.xml.
+Resource tema harus memakai parent yang jelas.
+Resource tema harus mendukung mode gelap.
+Resource tema harus mendukung dynamic color jika diinginkan.
+Resource drawable harus memakai vektor jika memungkinkan.
+Resource drawable vektor harus kompatibel dengan minSdk.
+Resource drawable bitmap harus menyediakan kerapatan yang cukup.
+Resource mipmap harus menyediakan ikon adaptif.
+Resource layout harus memakai ConstraintLayout atau Compose.
+Resource layout harus menghindari nesting berlebihan.
+Resource layout harus memakai include untuk bagian berulang.
+Resource layout harus memakai ViewStub untuk bagian opsional.
+Resource layout harus memakai data binding atau view binding.
+Resource menu harus memakai ikon yang konsisten.
+Resource navigasi harus memakai argumen bertipe.
+Resource XML harus valid terhadap skema.
+Resource yang tidak dipakai harus dihapus.
+Resource shrinking dapat menghapus resource tidak dipakai pada rilis.
+Resource shrinking membutuhkan konfigurasi keep.
+Resource shrinking harus diuji pada build rilis.
+
+BAGIAN 10: R8 DAN PROGUARD SECARA RINCI
+R8 adalah penyusut dan pengoptimal kode.
+R8 menggantikan ProGuard pada AGP modern.
+R8 menyusutkan kode tidak terpakai.
+R8 mengganti nama kelas dan metode.
+R8 mengoptimalkan bytecode.
+R8 menghasilkan mapping file.
+Mapping file harus diunggah ke Play Console.
+Mapping file harus diunggah ke crash reporter.
+Mapping file harus disimpan untuk audit.
+Mapping file harus diberi versi.
+R8 full mode mengoptimalkan lebih agresif.
+R8 full mode membutuhkan aturan keep yang lebih teliti.
+R8 full mode harus diuji pada build rilis.
+R8 dapat merusak refleksi jika aturan keep tidak lengkap.
+Refleksi harus didokumentasikan.
+Refleksi harus memakai anotasi keep.
+Serialisasi JSON membutuhkan aturan keep.
+Pustaka pihak ketiga menyediakan consumer rules.
+Consumer rules digabung otomatis.
+Consumer rules harus diperiksa saat menambah pustaka.
+Aturan keep harus minimal.
+Aturan keep yang berlebihan memperbesar APK.
+Aturan keep yang berlebihan mengurangi manfaat R8.
+Aturan keep harus diuji dengan build rilis.
+Build rilis harus diuji pada perangkat nyata.
+Build rilis harus diuji pada varian utama.
+Build rilis harus diuji dengan data nyata.
+Build rilis harus diuji dengan crash reporter aktif.
+Build rilis harus diuji dengan analytics aktif.
+
+BAGIAN 11: BUILD CACHE DAN CONFIGURATION CACHE SECARA RINCI
+Build cache menyimpan hasil task.
+Build cache lokal berada di direktori pengguna.
+Build cache remote berada di server.
+Build cache remote memungkinkan berbagi antar mesin dan CI.
+Build cache harus aman.
+Build cache tidak boleh memuat rahasia.
+Build cache harus dapat dibersihkan.
+Build cache harus memiliki ukuran maksimum.
+Build cache harus diaktifkan di gradle.properties.
+Build cache harus diaktifkan di CI.
+Configuration cache menyimpan hasil konfigurasi.
+Configuration cache mempercepat build berikutnya.
+Configuration cache tidak kompatibel dengan semua plugin.
+Configuration cache harus diuji pada proyek.
+Configuration cache harus diaktifkan bertahap.
+Configuration cache dapat menampilkan peringatan.
+Peringatan configuration cache harus diselesaikan.
+Peringatan configuration cache menunjukkan ketidakcocokan plugin.
+Parallel execution menjalankan task paralel.
+Parallel execution mempercepat build multi-modul.
+Parallel execution membutuhkan modul yang independen.
+Parallel execution dapat memperbesar penggunaan memori.
+Parallel execution harus dikonfigurasi sesuai mesin.
+Gradle daemon menjaga proses Gradle tetap hidup.
+Gradle daemon mempercepat build berulang.
+Gradle daemon harus dikonfigurasi dengan memori yang cukup.
+Gradle daemon harus dimatikan pada CI tertentu.
+Gradle scan menganalisis performa build.
+Gradle scan membantu menemukan bottleneck.
+Gradle scan dapat diunggah ke server.
+Gradle scan harus dipakai pada build lambat.
+
+BAGIAN 12: KOTLIN MULTIPLATFORM SECARA RINCI
+Kotlin Multiplatform berbagi kode antar platform.
+Modul shared memiliki source set commonMain.
+Source set commonMain memuat kode lintas platform.
+Source set androidMain memuat kode khusus Android.
+Source set iosMain memuat kode khusus iOS.
+Source set jvmMain memuat kode khusus JVM.
+Source set commonTest memuat tes lintas platform.
+Source set androidTest memuat tes khusus Android.
+Expect dan actual mendeklarasikan API lintas platform.
+Expect mendeklarasikan di commonMain.
+Actual mengimplementasikan di setiap platform.
+Expect harus minimal.
+Expect harus stabil.
+Expect harus didokumentasikan.
+Dependensi di commonMain harus mendukung multiplatform.
+Dependensi di androidMain dapat memakai dependensi Android.
+Dependensi di iosMain dapat memakai dependensi iOS.
+Build shared modul menghasilkan artefak untuk setiap target.
+Build Android mengonsumsi artefak Android dari shared.
+Build iOS mengonsumsi framework dari shared.
+Compose Multiplatform berbagi UI.
+Compose Multiplatform membutuhkan konfigurasi khusus.
+Compose Multiplatform harus diuji di setiap target.
+Compose Multiplatform harus mempertimbangkan perbedaan platform.
+Compose Multiplatform tidak selalu cocok untuk semua aplikasi.
+Struktur shared harus jelas.
+Struktur shared harus memisahkan platform code.
+Struktur shared harus memisahkan tes per platform.
+Struktur shared harus didokumentasikan.
+
+BAGIAN 13: STRUKTUR POHON ANDROID DETAIL GENERASI 7
+proyek-android-lanjut/
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── .gitignore
+├── .gitattributes
+├── .editorconfig
+├── gradle.properties
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── local.properties.example
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── release.yml
+│   │   ├── nightly.yml
+│   │   └── codeql.yml
+│   └── CODEOWNERS
+├── gradle/
+│   ├── libs.versions.toml
+│   ├── verification-metadata.xml
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── build-logic/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── convention/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/
+│           ├── AndroidAplikasiConventionPlugin.kt
+│           ├── AndroidPustakaConventionPlugin.kt
+│           ├── AndroidComposeConventionPlugin.kt
+│           ├── AndroidFeatureConventionPlugin.kt
+│           ├── AndroidHiltConventionPlugin.kt
+│           ├── AndroidRoomConventionPlugin.kt
+│           ├── AndroidJvmConventionPlugin.kt
+│           └── AndroidKmpConventionPlugin.kt
+├── app/
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── consumer-rules.pro
+│   ├── baseline-prof.txt
+│   ├── schemas/
+│   │   └── com.contoh.produksi.data.AppDatabase/
+│   │       └── 1.json
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/com/contoh/produksi/
+│       │   │   ├── AplikasiProduksi.kt
+│       │   │   ├── MainActivity.kt
+│       │   │   ├── navigasi/
+│       │   │   │   ├── GrafikUtama.kt
+│       │   │   │   └── Navigator.kt
+│       │   │   └── di/
+│       │   │       └── ModulAplikasi.kt
+│       │   └── res/
+│       │       ├── values/
+│       │       │   ├── strings.xml
+│       │       │   ├── colors.xml
+│       │       │   ├── dimens.xml
+│       │       │   ├── themes.xml
+│       │       │   └── locales_config.xml
+│       │       ├── values-b+in/strings.xml
+│       │       ├── values-b+en/strings.xml
+│       │       ├── values-night/themes.xml
+│       │       ├── layout/
+│       │       ├── drawable/
+│       │       ├── mipmap-anydpi-v26/
+│       │       └── xml/
+│       │           ├── backup_rules.xml
+│       │           ├── data_extraction_rules.xml
+│       │           └── network_security_config.xml
+│       ├── debug/
+│       │   └── res/values/strings.xml
+│       ├── release/
+│       │   └── res/values/strings.xml
+│       ├── test/
+│       │   └── java/com/contoh/produksi/
+│       │       └── NavigatorTest.kt
+│       └── androidTest/
+│           ├── java/com/contoh/produksi/
+│           │   ├── AlurUtamaTest.kt
+│           │   └── HiltTestRunner.kt
+│           └── assets/data_uji.json
+├── feature/
+│   ├── beranda/
+│   │   ├── build.gradle.kts
+│   │   ├── api/
+│   │   │   ├── build.gradle.kts
+│   │   │   └── src/main/kotlin/com/contoh/beranda/api/
+│   │   │       ├── RuteBeranda.kt
+│   │   │       └── KontrakBeranda.kt
+│   │   └── impl/
+│   │       ├── build.gradle.kts
+│   │       └── src/main/
+│   │           ├── AndroidManifest.xml
+│   │           ├── kotlin/com/contoh/beranda/impl/
+│   │           │   ├── BerandaScreen.kt
+│   │           │   ├── BerandaViewModel.kt
+│   │           │   └── BerandaNavigasi.kt
+│   │           └── res/values/strings.xml
+│   └── detail/
+│       ├── build.gradle.kts
+│       ├── api/
+│       │   └── build.gradle.kts
+│       └── impl/
+│           ├── build.gradle.kts
+│           └── src/main/
+│               └── kotlin/com/contoh/detail/impl/
+│                   └── DetailScreen.kt
+├── core/
+│   ├── common/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/common/
+│   │       ├── Hasil.kt
+│   │       ├── Ekstensi.kt
+│   │       └── Dispatcher.kt
+│   ├── domain/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/domain/
+│   │       ├── model/
+│   │       │   └── Pengguna.kt
+│   │       ├── repositori/
+│   │       │   └── AntarmukaRepositoriPengguna.kt
+│   │       └── gunakan/
+│   │           └── AmbilPengguna.kt
+│   ├── data/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       ├── kotlin/com/contoh/core/data/
+│   │       │   ├── lokal/
+│   │       │   │   ├── BasisData.kt
+│   │       │   │   ├── DaoPengguna.kt
+│   │       │   │   └── EntitasPengguna.kt
+│   │       │   ├── jarak-jauh/
+│   │       │   │   ├── ApiLayanan.kt
+│   │       │   │   └── DtoPengguna.kt
+│   │       │   ├── repositori/
+│   │       │   │   └── RepositoriPenggunaImpl.kt
+│   │       │   ├── mapper/
+│   │       │   │   └── PemetaanPengguna.kt
+│   │       │   └── di/
+│   │       │       ├── ModulData.kt
+│   │       │       ├── ModulBasisData.kt
+│   │       │       └── ModulJaringan.kt
+│   │       └── schemas/
+│   │           └── com.contoh.core.data.AppDatabase/
+│   │               └── 1.json
+│   ├── ui/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/ui/
+│   │       ├── tema/
+│   │       │   ├── Warna.kt
+│   │       │   ├── Tema.kt
+│   │       │   └── Tipografi.kt
+│   │       ├── komponen/
+│   │       │   ├── TombolUtama.kt
+│   │       │   └── Kartu.kt
+│   │       └── aksesibilitas/
+│   │           └── Deskripsi.kt
+│   ├── navigasi/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/navigasi/
+│   │       ├── Rute.kt
+│   │       └── KontrakNavigasi.kt
+│   ├── jaringan/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/jaringan/
+│   │       ├── KlienHttp.kt
+│   │       └── PenanganKesalahan.kt
+│   ├── keamanan/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/keamanan/
+│   │       ├── PenyimpananAman.kt
+│   │       └── Penyamaran.kt
+│   ├── observability/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/core/observability/
+│   │       ├── Pencatat.kt
+│   │       └── Analitik.kt
+│   └── pengujian/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/com/contoh/core/pengujian/
+│           ├── AturanTes.kt
+│           └── DispatcherTes.kt
+├── testing/
+│   ├── fixtures/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/com/contoh/testing/fixtures/
+│   │       └── DataPengguna.kt
+│   └── screenshot/
+│       ├── build.gradle.kts
+│       └── src/main/kotlin/com/contoh/testing/screenshot/
+│           └── KonfigurasiScreenshot.kt
+├── shared/
+│   ├── settings.gradle.kts
+│   ├── build.gradle.kts
+│   └── src/
+│       ├── commonMain/kotlin/com/contoh/shared/
+│       │   ├── model/
+│       │   │   └── Pengguna.kt
+│       │   └── logika/
+│       │       └── ValidatorPengguna.kt
+│       ├── androidMain/kotlin/com/contoh/shared/
+│       │   └── platform/
+│       │       └── PenyimpananAndroid.kt
+│       └── commonTest/kotlin/com/contoh/shared/
+│           └── ValidatorPenggunaTest.kt
+├── benchmark/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/benchmark/
+│           └── StartupBenchmark.kt
+├── baselineprofile/
+│   ├── build.gradle.kts
+│   └── src/main/
+│       ├── AndroidManifest.xml
+│       └── java/com/contoh/baselineprofile/
+│           └── GeneratorProfil.kt
+├── docs/
+│   ├── index.md
+│   ├── arsitektur.md
+│   ├── struktur-folder.md
+│   ├── gradle.md
+│   ├── varian.md
+│   ├── source-set.md
+│   ├── dependensi.md
+│   ├── pengujian.md
+│   ├── manifest-merging.md
+│   ├── resource.md
+│   ├── r8.md
+│   ├── cache.md
+│   ├── kmp.md
+│   └── keputusan/
+│       ├── 0001-modularisasi.md
+│       ├── 0002-version-catalog.md
+│       └── 0003-convention-plugin.md
+└── scripts/
+    ├── build-debug.sh
+    ├── build-release.sh
+    ├── jalankan-tes.sh
+    ├── periksa-struktur.sh
+    └── README.md
+
+BAGIAN 14: PEMETAAN FILE PENTING PADA GENERASI 7
+settings.gradle.kts menentukan modul dan plugin management.
+build.gradle.kts tingkat proyek menentukan plugin bersama.
+build.gradle.kts tingkat modul menentukan konfigurasi modul.
+gradle.properties menyimpan properti Gradle.
+gradle/libs.versions.toml menyimpan versi dependensi.
+gradle/verification-metadata.xml memverifikasi checksum.
+gradle/wrapper/gradle-wrapper.properties menentukan versi Gradle.
+build-logic/ menyimpan convention plugin.
+app/build.gradle.kts menentukan konfigurasi aplikasi.
+app/proguard-rules.pro menyimpan aturan R8 modul aplikasi.
+app/consumer-rules.pro menyimpan aturan R8 yang diekspos.
+app/baseline-prof.txt menyimpan baseline profile.
+app/schemas/ menyimpan skema Room aplikasi.
+core/data/src/main/schemas/ menyimpan skema Room modul data.
+feature/<nama>/api/ menyimpan kontrak fitur.
+feature/<nama>/impl/ menyimpan implementasi fitur.
+core/domain/ menyimpan model dan antarmuka repositori.
+core/data/ menyimpan implementasi repositori dan mapper.
+core/ui/ menyimpan tema, komponen, dan aksesibilitas.
+core/navigasi/ menyimpan rute dan kontrak navigasi.
+core/jaringan/ menyimpan klien HTTP dan penanganan kesalahan.
+core/keamanan/ menyimpan penyimpanan aman dan penyamaran.
+core/observability/ menyimpan pencatat dan analitik.
+core/pengujian/ menyimpan utilitas pengujian.
+testing/fixtures/ menyimpan data contoh.
+testing/screenshot/ menyimpan konfigurasi screenshot testing.
+shared/src/commonMain/ menyimpan kode lintas platform.
+shared/src/androidMain/ menyimpan kode khusus Android.
+benchmark/ menyimpan Macrobenchmark.
+baselineprofile/ menyimpan generator baseline profile.
+docs/gradle.md menjelaskan Gradle secara rinci.
+docs/varian.md menjelaskan build variant secara rinci.
+docs/source-set.md menjelaskan source set dan prioritas.
+docs/dependensi.md menjelaskan resolusi dependensi.
+docs/pengujian.md menjelaskan piramida pengujian.
+docs/manifest-merging.md menjelaskan penggabungan manifest.
+docs/resource.md menjelaskan resolusi resource.
+docs/r8.md menjelaskan R8 dan ProGuard.
+docs/cache.md menjelaskan build cache dan configuration cache.
+docs/kmp.md menjelaskan Kotlin Multiplatform.
+docs/keputusan/ menyimpan catatan keputusan arsitektur.
+scripts/ menyimpan skrip otomasi.
+
+BAGIAN 15: LATIHAN PENALARAN DETAIL GENERASI 7
+Latihan 1: Prioritas source set.
+Diberikan string "Halo" di main dan "Hai" di debug.
+AI harus menyimpulkan bahwa build debug memakai "Hai".
+AI harus menyimpulkan bahwa build release memakai "Halo".
+AI harus menjelaskan urutan prioritas source set.
+
+Latihan 2: Konflik manifest.
+Diberikan library menambahkan permission INTERNET, aplikasi tidak membutuhkannya.
+AI harus menyarankan tools:node="remove" pada manifest aplikasi.
+AI harus menyarankan pemeriksaan laporan merging.
+
+Latihan 3: Dependensi api vs implementation.
+Diberikan modul A mengekspos tipe dari pustaka X di antarmuka publik.
+AI harus menyarankan api untuk X di modul A.
+Diberikan modul A tidak mengekspos tipe pustaka Y.
+AI harus menyarankan implementation untuk Y.
+
+Latihan 4: Konflik versi.
+Diberikan modul A memakai Retrofit 2.9, modul B memakai Retrofit 2.11.
+AI harus menyarankan version catalog untuk menyatukan versi.
+AI harus menyarankan resolutionStrategy jika perlu.
+
+Latihan 5: Migrasi KAPT ke KSP.
+Diberikan modul memakai KAPT untuk Room dan Hilt.
+AI harus menyarankan migrasi ke KSP.
+AI harus menyarankan pengujian setelah migrasi.
+AI harus menyarankan pemeriksaan kompatibilitas.
+
+Latihan 6: Konfigurasi R8.
+Diberikan crash rilis pada kelas yang dipakai refleksi.
+AI harus menyarankan aturan keep untuk kelas tersebut.
+AI harus menyarankan pengujian ulang build rilis.
+
+Latihan 7: Build cache.
+Diberikan build lambat pada CI.
+AI harus menyarankan build cache remote.
+AI harus menyarankan configuration cache.
+AI harus menyarankan parallel execution.
+
+Latihan 8: Configuration cache.
+Diberikan peringatan configuration cache pada plugin lama.
+AI harus menyarankan isolasi plugin lama.
+AI harus menyarankan pembaruan plugin.
+AI harus menyarankan pengujian ulang.
+
+Latihan 9: Skema Room.
+Diberikan perubahan entitas tanpa migrasi.
+AI harus mendeteksi risiko crash.
+AI harus menyarankan migrasi.
+AI harus menyarankan pengujian migrasi.
+
+Latihan 10: Kotlin Multiplatform.
+Diberikan modul shared memakai dependensi Android di commonMain.
+AI harus mendeteksi pelanggaran.
+AI harus menyarankan pemindahan ke androidMain.
+
+Latihan 11: Screenshot testing.
+Diberikan UI berubah tanpa memperbarui referensi.
+AI harus menyarankan pembaruan referensi.
+AI harus menyarankan peninjauan perubahan visual.
+
+Latihan 12: Aksesibilitas.
+Diberikan tombol tanpa label.
+AI harus menyarankan label.
+AI harus menyarankan pengujian aksesibilitas.
+
+Latihan 13: Internasionalisasi.
+Diberikan string baru tanpa terjemahan.
+AI harus menyarankan penambahan ke values-b+xx.
+AI harus menyarankan pengujian pseudo-locale.
+
+Latihan 14: Varian.
+Diberikan 3 flavor dan 3 build type.
+AI harus menyimpulkan ada 9 varian.
+AI harus menyarankan variant filter jika hanya sebagian dipakai.
+
+Latihan 15: Resolusi konflik resource.
+Diberikan string sama di main dan flavor.
+AI harus menyimpulkan flavor menang.
+AI harus menyarankan pemeriksaan duplikasi.
+
+Latihan 16: Room dan Hilt.
+Diberikan modul data memakai Room dan Hilt.
+AI harus menyarankan KSP untuk keduanya.
+AI harus menyarankan konfigurasi di build.gradle.kts.
+AI harus menyarankan tes dengan HiltTestRunner.
+
+Latihan 17: Baseline profile.
+Diberikan aplikasi dengan startup lambat.
+AI harus menyarankan pembuatan baseline profile.
+AI harus menyarankan verifikasi dengan Macrobenchmark.
+
+Latihan 18: R8 full mode.
+Diberikan crash pada build rilis dengan R8 full mode.
+AI harus menyarankan aturan keep tambahan.
+AI harus menyarankan pengujian ulang.
+
+Latihan 19: Repositori dependensi.
+Diberikan repositori snapshot dipakai pada rilis.
+AI harus menyarankan versi tetap.
+AI harus menyarankan verifikasi checksum.
+
+Latihan 20: Struktur plugin.
+Diberikan konfigurasi duplikat di banyak modul.
+AI harus menyarankan convention plugin.
+AI harus menyarankan pemindahan konfigurasi.
+AI harus menyarankan pengujian build.
+
+BAGIAN 16: ATURAN DETAIL UNTUK AI
+AI harus memahami fase build Gradle.
+AI harus memahami task graph Gradle.
+AI harus memahami input dan output task.
+AI harus memahami build cache dan configuration cache.
+AI harus memahami source set dan prioritas.
+AI harus memahami manifest merging.
+AI harus memahami resource resolution.
+AI harus memahami R8 dan ProGuard.
+AI harus memahami KSP dan KAPT.
+AI harus memahami Hilt dan Room.
+AI harus memahami version catalog.
+AI harus memahami convention plugin.
+AI harus memahami Kotlin Multiplatform.
+AI harus memahami baseline profile.
+AI harus memahami pengujian berlapis.
+AI harus selalu mengutamakan keamanan.
+AI harus selalu mengutamakan reproduksibilitas.
+AI harus selalu mengutamakan keterbacaan.
+AI harus selalu mengutamakan konsistensi.
+AI harus selalu mengutamakan pengujian.
+AI harus selalu mengutamakan dokumentasi.
+AI harus selalu mengutamakan performa build.
+AI harus selalu mengutamakan aksesibilitas.
+AI harus selalu mengutamakan i18n.
+
+BAGIAN 17: RINGKASAN GENERASI 7
+Generasi ketujuh memperdalam mekanisme internal Gradle Android.
+AI belajar anatomi file Gradle.
+AI belajar build variant dan source set.
+AI belajar resolusi dependensi.
+AI belajar konfigurasi Kotlin dan Compose compiler.
+AI belajar Hilt dan Room.
+AI belajar pengujian berlapis.
+AI belajar manifest merging.
+AI belajar resolusi resource.
+AI belajar R8 dan ProGuard.
+AI belajar build cache dan configuration cache.
+AI belajar Kotlin Multiplatform.
+AI belajar baseline profile.
+AI dilatih untuk menjawab pertanyaan "mengapa" dan "bagaimana".
+AI dilatih untuk mendeteksi konsekuensi teknis dari struktur folder.
+AI dilatih untuk menyarankan struktur yang mendukung build inkremental.
+AI dilatih untuk menyarankan struktur yang aman, cepat, dan mudah dirawat.
+Dengan generasi ketujuh ini, AI memiliki pemahaman mendalam tentang Gradle Android.
+AI dapat menavigasi struktur proyek Android dengan pemahaman mekanisme di baliknya.
+AI dapat menjelaskan alasan teknis di balik setiap keputusan struktur.
+AI dapat menyarankan perbaikan yang mempertimbangkan mekanisme Gradle.
+Akhir generasi 7.

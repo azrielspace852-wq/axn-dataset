@@ -1,0 +1,232 @@
+=========================================================
+  PENGERTIAN        : CSS (css)
+  PENULIS           : AZRIEL
+  TANGGAL           : 04-2026-November
+  DESKRIPSI         : pengertian bahasa pemrograman css (css), contoh contoh bahasa nya,
+                      kegunaan nya, kelebihan dan kekurangan, sejarah, pencipta, asal usul,
+                      asal negara, tahun di ciptakan, versi
+  BAHASA (LANGUAGE) : Indonesia/ID (Indonesian)
+=========================================================
+
+1. PENGERTIAN UMUM
+CSS adalah singkatan dari Cascading Style Sheets, yaitu bahasa stylesheet yang digunakan untuk mendeskripsikan bagaimana dokumen terstruktur—seperti HTML dan XML—ditampilkan di layar, di atas kertas, atau pada media lainnya . CSS mengatur presentasi visual halaman web, meliputi tata letak (layout), warna, font, ukuran, jarak, border, bayangan, animasi, dan berbagai aspek estetika lainnya .
+
+CSS bukan bahasa pemrograman dalam arti memiliki logika, percabangan, atau perulangan seperti JavaScript atau Python. CSS adalah bahasa deklaratif berbasis aturan (rule-based) yang memberi tahu browser bagaimana elemen tertentu harus dirender. Tanpa CSS, halaman web hanya akan berupa teks polos dan elemen-elemen HTML yang tersusun secara default. CSS memisahkan konten (yang ditulis dalam HTML) dari presentasi (yang ditulis dalam CSS), sehingga halaman web menjadi lebih mudah dipelihara, konsisten, dan fleksibel .
+
+2. SEJARAH, PENCIPTA, DAN ASAL USUL
+CSS pertama kali diusulkan oleh Håkon Wium Lie, seorang ilmuwan komputer berkebangsaan Norwegia, pada tahun 1994 . Saat itu, Lie sedang bekerja di CERN (Organisasi Eropa untuk Riset Nuklir) di Jenewa, Swiss, bersama Tim Berners-Lee, pencipta World Wide Web . Lie menyadari bahwa HTML pada masa itu berkembang dengan cepat namun menjadi semakin berantakan karena banyaknya tag presentasi yang ditambahkan ke dalam markup. Ia mengusulkan CSS sebagai solusi untuk memisahkan struktur dokumen dari gaya presentasinya .
+
+Asal Negara: Norwegia (kebangsaan pencipta); pengembangan awal dilakukan di CERN, Swiss .
+Tahun Diciptakan: Diusulkan pada 1994; standar pertama (CSS1) diterbitkan pada 1996 .
+
+Pada awalnya, ada beberapa proposal bahasa stylesheet lain untuk web pada waktu yang hampir bersamaan. Namun, CSS-lah yang pertama kali mengandung konsep "cascading" atau "layer" (lapisan), yang memungkinkan gaya dari berbagai sumber—stylesheet penulis, stylesheet pengguna, dan stylesheet default browser—saling menimpa dan digabungkan secara terurut . Bersama Bert Bos, Lie terus mengembangkan CSS. W3C (World Wide Web Consortium) kemudian mengambil alih standarisasi CSS, dan pada Desember 1996, CSS Level 1 (CSS1) resmi menjadi Rekomendasi W3C .
+
+3. SEJARAH VERSI CSS
+CSS telah melalui beberapa tahap evolusi:
+
+- CSS Level 1 (CSS1) — 1996: Standar pertama yang mendefinisikan properti dasar seperti font, warna, margin, padding, border, dan selector sederhana .
+- CSS Level 2 (CSS2) — 1998: Menambahkan dukungan untuk media types (screen, print), positioning, z-index, dan selector yang lebih kaya .
+- CSS Level 2.1 — 2011: Revisi dari CSS2 yang memperbaiki bug dan menghapus fitur yang kurang didukung, menjadi standar yang sangat stabil dan lama digunakan.
+- CSS Level 3 (CSS3) — Sejak 1999 dan seterusnya: Berbeda dari versi sebelumnya, CSS3 tidak lagi berupa satu dokumen raksasa. Spesifikasi CSS dipecah menjadi banyak modul independen yang dapat berkembang dengan kecepatan masing-masing. Modul-modul ini mencakup Selectors Level 3, CSS Color Level 3, CSS Backgrounds and Borders Level 3, CSS Fonts Level 3, Media Queries, dan banyak lagi .
+- Setelah CSS3: Tidak ada "CSS4" sebagai satu standar resmi. Sejak CSS3, CSS Working Group (CSSWG) memilih pendekatan modular, di mana setiap modul memiliki nomor levelnya sendiri (Level 4, Level 5, dst.). Istilah "CSS4" tidak pernah ada dan tidak akan pernah ada sebagai versi tunggal . Setiap modul seperti CSS Color Level 4, CSS Fonts Level 4, CSS Selectors Level 4, dan CSS Box Model Level 4 dikembangkan dan distandarisasi secara terpisah .
+
+Versi Terkini (Snapshot): Untuk memberikan gambaran menyeluruh tentang keadaan CSS pada suatu waktu, W3C menerbitkan "CSS Snapshot". CSS Snapshot 2026, yang diterbitkan pada Juni 2026, mengumpulkan semua spesifikasi modul yang dianggap cukup stabil untuk membentuk definisi CSS saat itu . Snapshot ini bukan standar tunggal, melainkan profil dari modul-modul yang sudah mapan .
+
+4. SINTAKS DAN CONTOH BAHASA
+CSS terdiri dari aturan-aturan (rules). Setiap aturan memiliki dua bagian utama: selector (pemilih) dan declaration block (blok deklarasi) . Di dalam blok deklarasi terdapat pasangan properti dan nilai .
+
+Bentuk umum:
+```css
+selector {
+    properti: nilai;
+    properti-lain: nilai-lain;
+}
+```
+
+a. Selektor Elemen (Type Selector)
+Selektor ini memilih semua elemen dengan nama tag tertentu.
+
+```css
+/* Semua paragraf berwarna abu-abu gelap */
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Semua heading level 1 berukuran 2rem dan rata tengah */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+```
+
+b. Selektor Kelas (Class Selector)
+Selektor kelas diawali dengan tanda titik (.) dan memilih elemen yang memiliki atribut class tertentu. Satu kelas dapat digunakan pada banyak elemen .
+
+```css
+/* Elemen dengan class "tombol" memiliki latar biru dan teks putih */
+.tombol {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Elemen dengan class "peringatan" */
+.peringatan {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+}
+```
+
+c. Selektor ID (ID Selector)
+Selektor ID diawali dengan tanda pagar (#) dan memilih satu elemen unik dengan atribut id tertentu. Dalam satu halaman, setiap ID harus unik .
+
+```css
+/* Elemen dengan id "header-utama" */
+#header-utama {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 40px;
+}
+```
+
+d. Selektor Atribut (Attribute Selector)
+Memilih elemen berdasarkan keberadaan atau nilai atribut.
+
+```css
+/* Semua tautan yang memiliki atribut target */
+a[target] {
+    color: orange;
+}
+
+/* Input tipe teks */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+```
+
+e. Contoh Stylesheet Lengkap
+Berikut adalah contoh file CSS sederhana yang mengatur tampilan halaman profil:
+
+```css
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f4f9;
+    color: #222;
+    line-height: 1.5;
+}
+
+.kartu-profil {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.kartu-profil img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kartu-profil .info {
+    padding: 20px;
+}
+
+.kartu-profil h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.kartu-profil p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.tombol-kontak {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.tombol-kontak:hover {
+    background-color: #1e3c72;
+}
+```
+
+CSS di atas dapat diterapkan pada HTML berikut:
+
+```html
+<div class="kartu-profil">
+    <img src="foto.jpg" alt="Foto Profil">
+    <div class="info">
+        <h2>Azriel</h2>
+        <p>Penulis dan pengembang web.</p>
+        <a href="#" class="tombol-kontak">Hubungi</a>
+    </div>
+</div>
+```
+
+5. KEGUNAAN CSS
+   CSS memiliki kegunaan yang sangat luas dalam pengembangan web:
+
+· Memisahkan Konten dari Presentasi: HTML mengurus struktur dan makna konten, sedangkan CSS mengurus tampilan. Pemisahan ini membuat kode lebih bersih, mudah dibaca, dan mudah dipelihara .
+· Konsistensi Desain: Satu file CSS eksternal dapat digunakan oleh banyak halaman, memastikan tampilan yang seragam di seluruh situs. Jika ada perubahan desain, cukup ubah satu file, dan semua halaman yang terhubung akan ikut berubah .
+· Tata Letak yang Fleksibel: CSS menyediakan sistem layout modern seperti Flexbox dan Grid yang memungkinkan pembuatan tata letak kompleks dengan kode yang relatif sederhana.
+· Desain Responsif: Media queries memungkinkan halaman web menyesuaikan tampilannya berdasarkan ukuran layar perangkat, sehingga situs dapat diakses dengan baik di ponsel, tablet, dan desktop.
+· Efisiensi Bandwidth: File CSS berukuran kecil dan dapat di-cache oleh browser. Ketika pengguna berpindah antarhalaman, file CSS yang sama tidak perlu diunduh ulang, sehingga menghemat bandwidth dan mempercepat waktu muat .
+· Animasi dan Interaktivitas Visual: CSS menyediakan transisi (transition), animasi (animation), dan transformasi (transform) yang memungkinkan efek visual halus tanpa memerlukan JavaScript.
+· Meningkatkan SEO: Dengan memisahkan presentasi dari markup, ukuran file HTML menjadi lebih kecil dan strukturnya lebih bersih, yang membantu mesin pencari mengindeks konten dengan lebih efisien .
+
+6. KELEBIHAN DAN KEKURANGAN CSS
+
+Kelebihan CSS:
+
+· Mudah Dipelajari dan Digunakan: Sintaks dasar CSS sangat sederhana dan intuitif, sehingga pemula dapat segera melihat hasilnya .
+· Ukuran File Kecil: File CSS jauh lebih kecil dibandingkan jika gaya ditulis inline di setiap elemen HTML, sehingga menghemat bandwidth dan mempercepat pemuatan halaman .
+· Konsistensi dan Kemudahan Pemeliharaan: Dengan satu file CSS eksternal, perubahan desain dapat diterapkan secara global ke seluruh situs tanpa harus mengedit setiap halaman satu per satu .
+· Kemampuan yang Kaya: CSS modern mendukung layout kompleks (Grid, Flexbox), animasi, transisi, filter, dan efek visual yang dulu memerlukan gambar atau JavaScript .
+· Dukungan Komunitas dan Ekosistem: CSS didukung oleh semua browser modern, memiliki dokumentasi yang melimpah, dan menjadi dasar bagi berbagai framework seperti Bootstrap, Tailwind CSS, dan Bulma.
+· Aksesibilitas: CSS memungkinkan pengembang menyesuaikan tampilan untuk kebutuhan aksesibilitas, seperti mode kontras tinggi atau ukuran font yang dapat diperbesar.
+
+Kekurangan CSS:
+
+· Perbedaan Tampilan Antar-Browser: Meskipun sudah jauh lebih baik dibandingkan era 2000-an, beberapa properti CSS tertentu masih dapat dirender berbeda oleh browser yang berbeda, terutama pada browser lama atau versi tertentu .
+· Kurva Belajar untuk Layout Kompleks: Meskipun dasar CSS mudah, menguasai layout yang rumit, positioning, dan desain responsif memerlukan pemahaman yang mendalam dan pengalaman.
+· Tidak Ada Logika Pemrograman: CSS tidak memiliki variabel (sebelum CSS Custom Properties), fungsi, atau kontrol alur seperti bahasa pemrograman. Untuk perilaku dinamis, CSS harus dipadukan dengan JavaScript.
+· Kesulitan Debugging pada Proyek Besar: Pada proyek dengan stylesheet yang sangat besar, melacak mengapa suatu gaya diterapkan (atau tidak diterapkan) bisa menjadi tantangan, meskipun DevTools browser sangat membantu.
+· "Kekurangan" Parent Selector (Historis): Sebelum munculnya selektor :has(), CSS tidak memiliki cara langsung untuk memilih elemen induk berdasarkan keberadaan anaknya. Ini sering dianggap sebagai keterbatasan, meskipun kini sudah ada solusinya di browser modern .
+· Ketergantungan pada Browser: CSS hanya berfungsi jika browser mendukung properti yang digunakan. Fitur-fitur terbaru mungkin memerlukan waktu untuk diadopsi secara luas.
+
+7. PERKEMBANGAN TERKINI DAN MODUL MODERN
+   CSS terus berevolusi melalui modul-modulnya. Beberapa modul dan fitur yang aktif dikembangkan atau baru distabilkan hingga 2026 meliputi:
+
+· CSS Color Level 4 dan Level 5: Mendukung ruang warna modern seperti lab(), lch(), oklab(), dan color() yang memungkinkan representasi warna yang lebih kaya dan akurat .
+· CSS Selectors Level 4: Menambahkan selektor canggih seperti :is(), :where(), :has(), dan :nth-child(An+B of S) .
+· CSS Nesting: Memungkinkan penulisan aturan CSS bersarang secara native, menyerupai preprocessor seperti Sass, sehingga kode lebih ringkas dan terstruktur.
+· Container Queries: Memungkinkan gaya diterapkan berdasarkan ukuran kontainer induk, bukan hanya viewport, membuka jalan bagi komponen yang benar-benar responsif dan modular.
+· CSS Anchor Positioning: Modul yang memungkinkan penempatan elemen relatif terhadap "anchor" tertentu, sangat berguna untuk tooltip, popover, dan menu .
+· Popover API dan Invoker Commands: Meskipun bukan murni CSS, integrasi dengan HTML dan CSS memungkinkan pembuatan komponen UI seperti popover tanpa JavaScript yang rumit .
+
+8. KESIMPULAN
+   CSS adalah bahasa stylesheet fundamental yang menjadi tulang punggung desain web modern. Diciptakan oleh Håkon Wium Lie pada 1994 di CERN dan distandarisasi oleh W3C sejak 1996, CSS telah berevolusi dari standar tunggal (CSS1, CSS2) menjadi kumpulan modul independen yang terus berkembang. CSS memisahkan presentasi dari konten, memungkinkan pengembang membuat halaman web yang konsisten, responsif, efisien, dan estetis. Meskipun memiliki keterbatasan dalam hal logika dan potensi perbedaan rendering antar-browser, CSS tetap menjadi teknologi yang tak tergantikan dalam pengembangan web. Dengan hadirnya fitur-fitur modern seperti Grid, Flexbox, Custom Properties, Nesting, dan Container Queries, CSS terus memperluas batas apa yang mungkin dilakukan di sisi front-end, menjadikannya keterampilan esensial bagi setiap pengembang web.
+
+Catatan:
+Dokumen ini disusun secara lengkap dan detail sebagai pengertian bahasa stylesheet CSS, mencakup sejarah, sintaks, kegunaan, kelebihan, kekurangan, dan status versi terkini. Tanggal ditulis sesuai format yang diberikan, yaitu 04-2026-November.

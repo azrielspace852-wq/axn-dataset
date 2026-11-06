@@ -1,0 +1,14 @@
+tolong buatkan prompt lagi untuk Chat GPT untuk penyesuaian update yang telah di implementasikan
+dalam bahasa inggris format markdown di dalam : ```markdown ...```
+sempurnakan juga kata kata saya atau kalimat kalimat saya
+
+```text
+Sudah bagus.
+Tapi perlu beberapa penyesuaian.
+
+1. Jika tidak ada hasil pencarian. jangan tampilkan halaman search yang kosong
+   berikan animasi hasil pencarian tidak di temukan (sesuai bahasa yang di gunakan user) di area yang seharusnya menampilkan hasil
+
+2. AI tetap menjawab walaupun hasil pemcarian 0.
+   misalnya : menjawab jujur tentang hasil pencarian saat tidak di temukan, dsb.
+

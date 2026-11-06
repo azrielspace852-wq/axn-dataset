@@ -1,0 +1,253 @@
+Buatkan prompt untuk Chat GPT
+dalam bahasa inggris. format markdown
+di dalam blok: ```markdown ...```
+
+sempurnakan juga kata atau kalimat saya. agar lebih rapih dan mudah di pahami Chat GPT.
+jangan mengarang hal yang anda tidak tahu atau tidak yakin
+Bagian yang penting.
+letakkan di awal atau di akhir. jangan di tengah.
+
+```text
+Rencana AXION Account.
+
+untuk ARCH-AXION-Account-v1.0.md, AXION-Account-BIBLE/BLUEPRINT/ROADMAP.md
+
+1. Database
+ - firestore: kata sandi jika user login ke layanan lain, atau data akuj lainya.
+   (misalnya di guanakan untuk daftar di layanan di luar AXION maupun di dalam AXION, API KEY untuk developer)
+ - Cloudflare D1: aktifitas akun, email/akun di gunakan untuk login di mana saja, pesan.
+
+2. Auth
+ - Firebase Auth
+
+3. Domain email
+Untuk email Account
+ - @axnm.us.ci
+Catatan: InBound Only
+
+4. Host
+ - Cloudflare worker (Backend/endpoint API)
+ - Cloudflare pages (situs)
+
+5. Aplication
+ - .apk
+ - .exe
+ - .rpm/.deb
+ - .pkg
+ - site (web)
+
+6. Domain
+ - account.axn.us.ci: site (bukan worker)
+ - api.account.axn.us.ci: API, Backend (worker lapis 2)
+ - admin.account.axn.us.ci (dashboard admin)
+ - ii.account.axn.us.ci (lapis 1 pertama)
+ - i.account.axn.us.ci (lapis 1 kedua)
+
+7. worker
+ - tetap mempertahankan arsitektur 3 lapis
+  - lapis 1 memanggil Firebase auth & firestore.
+  - lapis 2 (penghubung lapis 1) memanggil lapis 1
+  - lapis 3 (yang terhubung langsung dengan aplikasi/situs) memanggil lapis 2
+ - jumlah:
+  - lapis 1: 2 worker
+  - lapis 2: 1 worker
+  - lapis 3: 1 worker
+Catatan: 
+ - worker lapis 3 atau server yang ingin memanggin lapis 2.
+   bukan dengan http biasa. tapi dengan API, dan API KEY.
+ - lapis 1 dan 2 harus bisa menangani request:
+  - buat akun
+  - hapus akun
+  - buat password baru
+  - authentication
+  - login
+  - dll
+
+8. UI/UX (site & app)
+ - rapih
+ - profesional
+ - modern
+ - smooth
+ - responsife
+ - dark/light theme
+ - tidak membuat mata lelah
+
+9. bahasa
+ - system: (mengikuti sistem)
+ - indonesia
+ - english
+ - spanyol
+ - japan
+ - russian
+ - korean
+ - melayu
+ - mandarin
+ - arab
+default: system
+Catatan:
+ - pastikan jika pengguna mengganti bahasa. transisi nya mulus, dab ter-terjemahkan semua tanpa kendala.
+
+10. theme
+ - dark
+ - light
+ - dark glass
+ - light glass
+Catatan:
+ - pastikan transisi mulus saat pengguna mengganti tema
+ - pastikan tema benar benar terganti
+
+11. LICENSE
+ - GPLv3
+
+12. penyimpanan pesan email
+ - hanya 5 hari di simpan di D1
+ - dan di simpan di perangkat masing masing.
+
+13. penyimpanan aktifitas
+ - di simpan selama 30 hari
+
+14. Daftar AXION Account memerlukan:
+ - nama
+ - kelamin
+ - tanggal lahir
+ - membuat email. atau buat otomatis berdasarkan nama
+
+15. Deteksi pembajakan akun
+ - keamanan akun pengguna adalah prioritas
+rancang arsitektur nya. yang sangat kuat untuk keamanan akun.
+
+16. Keamanan data.
+ - keamanan data pengguna juga mendapatkan prioritas yang tinggi.
+
+17. Dokumentasi
+ - dokumentasi harus jujur dan lengkap.
+ - privacy policy yang transparan.
+
+18. Pembedaan README.md dan dokumentasi layanan.
+ - README.md:
+  - untuk dokumentasi source code, arsitektur, dan aplikasi/situs
+  - profesional, rapih.
+  - dan di rancang khusus untuk Github
+  - tidak menyertakan data internal yang sensitif
+  - di buat untuk developer
+ - dokumentasi layanan:
+  - untuk dokumentasi layanan.
+  - tanpa arsitektur teknis yang mendalam.
+  - di buat untuk semua orang agar dapat membaca nya, tanpa bingung istilag istilah teknis.
+  - fitur, kebijakan.
+  - keamanan.
+  - tidak menyertakan data internal yang sensitif
+  - dan lain lain.
+
+19. Deteksi multi akun
+ - Deteksi multi akun yang kuat dan akurat.
+karna hanya maksimal 2 akun aktif per divace.
+
+20. Deteksi divace/IP
+ - untuk lapisan keamanan
+
+21. Verifikasi keamanan
+ - jika pengguna login ke layanan yang menyediakan login dengan AXION Account. tidak dengan email.
+   maka akan kirim notifikasi keamanan. dan langsung membuka nya jika perangkat pengguna sedang di gunakan.
+ - di sisi yang sedang melakukan login. akan mendapatkan nomor verifikasi (1, 2, 3 karakter).
+ - lalu di sisi perangkat pemilik. akan membuka halaman verifikasi secara otomatis jika perangkat sedang di gunakan.
+   lalu memberi tahu pengguna jika ada yang mencoba login di layanan tertentu.
+   dan ada tombol. ya itu saya, dan bukan jangan izinkan
+  - jika pengguna klik bukan saya. jangan izinkan. maka login akan di batalkan dengan alasan tersebut.
+  - jika pengguna klik ya itu saya. maka proses login akan di lanjutkan.
+    dan pengguna akan di minta klik salah satu nomor yang tertera (acak) dan salah satu nya adalah yang di berikan di sisi yang meminta login.
+    jika benar. maka login berhasil
+    jika salah. maka gagal dan di minta ulang dari awal.
+    kode angka 1-2 karakter tersebut hanya sekali pakai. dan akan langsung di hapus jika berhasil/gagal.
+
+22. firebase auth
+ - untuk login via email saja.
+
+23. Tautkan nomor telepon
+ - Tidak tersedia untuk saat ini
+ 
+24. Perbedaan login
+ - perlu di bedakan
+  - login ke AXION Account kembali menggunakan email atau tanpa email.
+    misalnya user habis logout dari AXION Account. lalu ingin login kembali.
+  - login ke layanan lain via AXION Account menggunakan email maupun tanpa email.
+    misalnya user login dengan AXION Account atau AXION Account email.
+    ke layanan di luar AXION Account.
+ - jika pengguna membuat sandi/username untuk login ke layanan tersebut (jika via email)
+   maka sandi/username akan di simpan di firestore dan di perangkat pengguna.
+
+25. Isi otomatis
+ - jika pengguna ingin login kembali di layanan di luar AXION Account atau di dalam AXION Account.
+   maka aplikasi native AXION Account harus bisa isi otomatis username/sandi.
+   selama masih di perangkat yang sama.
+
+26. Recpvery Code
+ - di gunakan untuk kode cadangan.
+   saat pengguna login kembali
+ - di simpan di firestore bersama API KEY.
+
+27. TOTP
+ - agar pengguna bisa menggunakan aplikasi authenticator untuk pemulihan akun.
+
+28. pemulihan akum
+ada 2 pemulihan akun
+ - pemuluhan akun di AXION Account jika misal pengguna hapus dsta aplikasi, ganti hardware, atau reset perangkat, dll
+ - pemulihan akun di layanan di luar AXION Account. misalnya user login di layanan lain menggunakan non email ataupun dengan email.
+   misal user hapus data aplikasi dari layanan tersebut, ganti hardware, atau reset perangkat, dll
+
+29. akurasi deteksi.
+ - deteksi harus sangat akurat.
+ - jangan sampai pengguna tidak bersalah. malah terdeteksi anomali, atau melanggar.
+
+30. Firebase Project
+ - menggunakan 2 project Firebase
+(berarti juga 2 firestore dan 2 firebase auth)
+  1 di pegang worker lapis 1 (i)
+  1 lagi di pegang worker lapi 1 (ii)
+
+31. D1 & firestore
+ - menggunakan 2 database D1.
+  - per database 500MB-50MB(untuk indexing)
+  - 1 di pegang lapis 1 (i), dan 1 lagi di pegang lapis 1 (ii)
+  - di hubungi dengan service bindings
+ - menggunakan 2 database firestore.
+  - per database 1GiB-100MiB(untuk indexing)
+Alasan kapasitas terlalu kecil:
+ - analitik perkembangan jumlah/penggunaan user
+ - jika sudah hampir penuh dan user mulai bertambah banyak.
+   akan di lakukan upgrade database, atau tambah database.
+
+32. CPU Time worker (waktu eksekusi kode)
+ - 10ms
+dan cloudflare tidak mengizinkan mengatur konfigurasi CPU Time walaupun >=10ms
+
+34. Durable Object
+untuk eksekusi kode dengan waktu lama.
+ - maks 30s per request
+ - maks 125mb memory per menit.
+ - maks 13.000GB-s per hari
+ - maks 100.000 request per hari
+Catatan:
+ - aktifkan Durable Object hanya saat di perlukan
+ - dan di non aktifkan saat tidak di butuhkan
+Alasan mengapa hanya 125mb memory per menit:
+ - Agar 13.000GB-s per hari cukup dan tidak melibihi.
+ - memory 125mb sudah sangat cukup untuk menangani request.
+
+jadi. jika request dari worker time out.
+maka akan di oper ke Durable Object.
+
+35. cloudflareQueues
+ - untuk antrean job.
+ - setiap request akan di tulis di queues.
+ - baru saat job selesai. akan di hapus.
+berguna juga untuk oper dari worker ke DO (Durable Object). saat CPU time worker time out.
+
+36. KV.
+cloudflare KV.
+ - di gunakan untuk Caching request yang sama berulang kali.
+agar tidak membebani database.
+
+37. Account Visibility
+ - user bisa mengatur. apakah username bisa di akses publik atau hanya privat, dan jika publik apakah menyertakan email atau tidak.
+  - jika publik. maka profil pengguna dapat di lihat publik dan bisa lihat username dan email(jika pengguna mengaktifkan nya)
