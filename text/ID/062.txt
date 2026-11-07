@@ -1,0 +1,220 @@
+001. Bahasa Indonesia adalah fondasi berpikir yang memungkinkan gagasan rumit diuraikan menjadi bagian-bagian yang dapat dipahami.
+002. Setiap kata yang dipilih dengan tepat membuat penjelasan teknis lebih mudah diikuti dan diuji.
+003. Membaca berbagai jenis teks Indonesia melatih kepekaan terhadap konteks, tujuan, dan pembaca.
+004. Menulis dalam bahasa Indonesia adalah latihan menyusun logika, bukan sekadar merangkai kalimat agar tampak panjang.
+005. Kalimat yang jelas mengurangi beban pembaca dan mempercepat pemahaman terhadap masalah.
+006. Paragraf yang runtut mencerminkan cara berpikir yang teratur dan siap diuji.
+007. Kosakata yang luas membantu memberi nama variabel, fungsi, dan konsep dengan lebih tepat.
+008. Namun kosakata saja tidak cukup; diperlukan latihan memecah masalah menjadi langkah-langkah kecil.
+009. Bahasa manusia dan bahasa pemrograman bertemu dalam kemampuan menjelaskan urutan proses secara logis.
+010. Pemrogram yang penasaran tidak berhenti pada pertanyaan apakah program berjalan, tetapi bertanya mengapa program itu bekerja.
+011. Rasa ingin tahu yang sehat mendorong pemeriksaan asumsi, termasuk asumsi yang tampak terlalu jelas untuk dipertanyakan.
+012. Asumsi yang tidak diperiksa sering menjadi tempat persembunyian kesalahan yang paling sulit ditemukan.
+013. Menuliskan asumsi membuatnya dapat diuji, dibantah, atau diperbaiki dengan bukti.
+014. Eksperimen kecil lebih berharga daripada rencana besar yang tidak pernah dijalankan.
+015. Versi sederhana yang dapat dijalankan memberi umpan balik nyata, sedangkan kesempurnaan dalam kepala tidak memberi umpan balik apa pun.
+016. Prototipe awal tidak perlu indah; prototipe awal perlu cukup jelas untuk menguji satu gagasan.
+017. Setelah prototipe berjalan, catat apa yang diharapkan, apa yang terjadi, dan mengapa keduanya berbeda.
+018. Perbedaan antara harapan dan kenyataan adalah sumber pelajaran yang sangat kaya.
+019. Mengubah satu hal pada satu waktu membuat penyebab perubahan lebih mudah dipahami.
+020. Mengubah terlalu banyak variabel sekaligus sering menghasilkan kebingungan yang tampak seperti pengetahuan.
+021. Pengukuran sederhana, seperti menghitung kegagalan pada sekumpulan input, dapat membantu membandingkan dua pendekatan.
+022. Optimasi tanpa pengukuran cenderung menambah kerumitan tanpa manfaat yang jelas.
+023. Sebaliknya, pengukuran tanpa penalaran dapat menghasilkan angka yang benar tetapi keputusan yang salah.
+024. Pemrogram yang matang menggabungkan pengukuran dengan pertanyaan tentang apa yang penting dan apa yang mungkin terlewat.
+025. Kode yang mudah dibaca membantu eksperimen berikutnya karena perubahan kecil tidak menimbulkan teka-teki besar.
+026. Nama variabel yang jelas adalah bentuk dokumentasi paling murah dan paling sering dibaca.
+027. Komentar sebaiknya menjelaskan alasan di balik keputusan, bukan mengulang apa yang sudah terlihat dari kode.
+028. Merapikan kode setelah eksperimen adalah bagian dari belajar, bukan pekerjaan tambahan yang boleh diabaikan.
+029. Refaktorisasi bertujuan memperjelas struktur tanpa mengubah perilaku penting yang sudah diuji.
+030. Tanpa pengujian, refaktorisasi mudah berubah menjadi perbaikan yang merusak.
+031. Pengujian memberi keberanian untuk memperbaiki kode karena ada cara memeriksa apakah perilaku penting masih terjaga.
+032. Uji sederhana yang menguji perilaku penting sudah memberi nilai besar bagi kualitas program.
+033. Mulailah menguji hal yang paling mudah salah dan paling penting bagi pengguna.
+034. Uji yang gagal adalah undangan untuk menyelidiki, bukan alasan untuk panik.
+035. Debugging mengajarkan kerendahan hati karena kenyataan sering tidak sesuai dengan dugaan.
+036. Gejala perlu dipisahkan dari penyebab agar penyelidikan tidak berputar pada tempat yang sama.
+037. Penyebab pertama yang terlihat belum tentu penyebab sebenarnya; perlu bukti dan pemeriksaan bertahap.
+038. Membaca pesan kesalahan dengan tenang adalah keterampilan dasar yang mempercepat penyelesaian masalah.
+039. Pesan kesalahan yang baik menjelaskan apa yang terjadi, mengapa terjadi, dan langkah apa yang bisa dicoba.
+040. Antarmuka yang jelas mengurangi beban berpikir pengguna dan memberi kepastian tentang keadaan sistem.
+041. Kejelasan adalah bentuk hormat kepada waktu dan perhatian orang lain.
+042. Program yang baik tidak hanya benar secara logika, tetapi juga dapat dipahami oleh orang yang merawatnya.
+043. Dokumentasi yang baik menjelaskan tujuan, cara pakai, batasan, dan contoh kecil yang relevan.
+044. Contoh dalam dokumentasi bukan untuk ditiru mentah-mentah, tetapi untuk menunjukkan cara berpikir dan cara memakai alat.
+045. Pembaca yang baik mengubah contoh, menguji batasnya, dan mencari kemungkinan lain.
+046. Menyalin kode tanpa memahami alasan di baliknya membuat masalah kecil menjadi besar saat konteks berubah.
+047. Mengadaptasi ide orang lain dengan pemahaman sendiri adalah bentuk belajar yang lebih dewasa.
+048. Belajar dari kode orang lain tetap penting, tetapi bacalah dengan sikap kritis terhadap alasan, batasan, dan alternatifnya.
+049. Kreativitas teknis tumbuh dari kombinasi rasa ingin tahu, latihan, dan keberanian mencoba hal kecil yang belum pasti.
+050. Membuat sesuatu yang baru tidak selalu berarti menemukan hal yang belum pernah ada.
+051. Kadang kebaruan lahir dari menggabungkan ide lama dengan cara yang lebih sesuai dengan kebutuhan nyata.
+052. Kebaruan yang bertanggung jawab membawa pemahaman atau manfaat yang lebih baik, bukan sekadar perbedaan tanpa alasan.
+053. Proyek kecil yang menjawab pertanyaan pribadi sering menghasilkan pembelajaran yang lebih kuat daripada proyek tiruan.
+054. Alat bantu sederhana untuk diri sendiri melatih kemandirian dan kepekaan terhadap masalah nyata.
+055. Skrip kecil yang menghemat waktu dapat menjadi awal kebiasaan bereksperimen.
+056. Mengotomatiskan pekerjaan berulang melatih kemampuan melihat pola dan merancang langkah yang dapat diulang.
+057. Pola yang ditemukan dari pengalaman sendiri biasanya lebih melekat daripada pola yang dihafal dari daftar contoh.
+058. Namun pola tidak boleh menjadi belenggu yang menghalangi solusi baru.
+059. Pertanyaan “bagaimana jika dibalik?” sering membuka sudut pandang baru dalam memecahkan masalah.
+060. Pertanyaan “bagian mana yang paling sering berubah?” membantu menentukan letak batas desain yang wajar.
+061. Pertanyaan “apa bukti bahwa ini berhasil?” menjaga eksperimen tetap jujur dan tidak sekadar mengikuti perasaan.
+062. Tanpa bukti, klaim tentang perbaikan mudah berubah menjadi cerita yang meyakinkan tetapi belum teruji.
+063. Catatan eksperimen yang rapi membantu seseorang belajar dari kesalahan tanpa mengulang kesalahan yang sama.
+064. Catatan keputusan penting beserta alasannya membantu orang lain dan diri sendiri di masa depan memahami konteks.
+065. Seiring waktu, catatan eksperimen menjadi semacam memori panjang bagi proses belajar.
+066. Memori panjang itu membantu melihat pola kemajuan, kebiasaan buruk, dan ide yang layak dilanjutkan.
+067. Kemajuan kecil yang konsisten sering mengalahkan lonjakan besar yang jarang terjadi.
+068. Mencatat kemajuan kecil membuat usaha tidak terasa sia-sia ketika hasil besar belum muncul.
+069. Perayaan atas kemajuan kecil menjaga motivasi dan memperkuat kebiasaan belajar.
+070. Motivasi yang stabil lebih berguna daripada semangat sesaat yang cepat habis.
+071. Kebiasaan harian yang sederhana memberi dampak jangka panjang yang lebih besar daripada usaha besar yang tidak teratur.
+072. Membaca satu bagian kode atau menulis satu paragraf setiap hari melatih ketekunan tanpa terasa berat.
+073. Ketekunan bukan menunggu tanpa tindakan; ketekunan adalah tetap melakukan langkah kecil meskipun hasil belum terlihat.
+074. Kesabaran membantu pemrogram menerima bahwa pemahaman sering dibangun secara bertahap.
+075. Namun kesabaran juga perlu disertai keberanian untuk segera menguji gagasan agar tidak berlarut dalam keraguan.
+076. Keseimbangan antara keyakinan dan keraguan adalah bagian dari kematangan berpikir.
+077. Keyakinan yang terlalu cepat menutup pintu bagi bukti baru dan ide yang lebih baik.
+078. Keraguan yang berlebihan menghambat tindakan dan membuat pembelajaran berhenti sebelum dimulai.
+079. Kematangan berpikir tampak dalam kemampuan memilih masalah, menentukan batas, dan berhenti ketika cukup.
+080. Tidak semua hal harus diselesaikan sampai sempurna; kadang versi yang cukup baik perlu dilepas untuk diuji.
+081. Umpan balik dari penggunaan nyata sering lebih berharga daripada perbaikan yang dilakukan dalam ruang tertutup.
+082. Namun pelepasan versi juga perlu tanggung jawab, terutama jika menyangkut data pribadi atau keselamatan.
+083. Etika dalam membuat kode berarti memikirkan dampak, bukan hanya apakah program berjalan.
+084. Pemrogram yang baik bertanya siapa yang terbantu, siapa yang mungkin dirugikan, dan data apa yang dikumpulkan.
+085. Rasa ingin tahu yang etis tidak mengeksploitasi celah hanya karena bisa, tetapi mempertimbangkan akibatnya.
+086. Eksperimen yang baik menghormati batas, privasi, dan izin orang lain.
+087. Bahasa Indonesia yang santun membantu menyampaikan temuan, kritik, dan ajakan bereksperimen tanpa menimbulkan permusuhan.
+088. Santun bukan berarti lemah; santun berarti memilih cara yang membuat gagasan lebih mudah diterima.
+089. Gagasan teknis yang baik tetap perlu disampaikan dengan jelas agar bermanfaat bagi orang lain.
+090. Menjelaskan kepada pemula melatih kemampuan menyederhanakan tanpa merendahkan.
+091. Pemula yang bertanya sering membuka asumsi yang sudah lama tidak diperiksa oleh orang berpengalaman.
+092. Karena itu, pertanyaan sederhana layak dihormati dan dijawab dengan serius.
+093. Belajar dari pemula berarti belajar melihat kembali hal-hal yang sudah dianggap biasa.
+094. Kebiasaan bertanya “mengapa” dan “bagaimana jika” menjaga pikiran tetap lentur.
+095. Pikiran yang lentur tidak mudah terjebak pada satu cara hanya karena cara itu pernah berhasil.
+096. Keberhasilan masa lalu adalah petunjuk, bukan jaminan untuk masa depan.
+097. Setiap konteks baru menuntut pemeriksaan baru, meskipun masalahnya terlihat mirip.
+098. Menyalin solusi lama ke masalah baru tanpa memahami perbedaan konteks sering menimbulkan kesalahan.
+099. Memahami prinsip di balik solusi lama membantu menyesuaikannya dengan konteks baru.
+100. Prinsip lebih tahan lama daripada contoh, tetapi prinsip juga perlu diuji dalam praktik.
+101. Praktik tanpa prinsip mudah menjadi hafalan; prinsip tanpa praktik mudah menjadi teori kosong.
+102. Gabungkan keduanya dengan proyek kecil yang terus berkembang dan dievaluasi.
+103. Proyek kecil yang berkembang melatih kesabaran karena perbaikan biasanya terjadi bertahap.
+104. Setiap tambahan kerumitan sebaiknya memiliki alasan yang jelas dan dapat diuji.
+105. Jangan menambahkan fitur hanya karena terlihat menarik; tambahkan fitur karena ada masalah yang ingin diselesaikan.
+106. Fitur yang tidak digunakan adalah beban perawatan yang tidak perlu.
+107. Sebaliknya, fitur kecil yang benar-benar membantu dapat memberi dampak besar bagi pengguna.
+108. Empati terhadap pengguna membantu pemrogram memilih masalah yang layak diselesaikan.
+109. Empati juga membantu menulis pesan kesalahan yang manusiawi, bukan pesan yang membingungkan.
+110. Antarmuka yang baik memberi kejelasan tentang keadaan sistem dan langkah berikutnya.
+111. Program yang ramah pengguna mengurangi kebutuhan pengguna menebak maksud sistem.
+112. Kejelasan struktur program membantu pemrogram lain menemukan bagian yang perlu diubah.
+113. Abstraksi yang tepat menyembunyikan detail yang tidak perlu tanpa menyembunyikan hal penting.
+114. Abstraksi yang berlebihan membuat program sulit dipahami karena terlalu banyak lapisan yang harus dilacak.
+115. Pemilihan tingkat abstraksi adalah keputusan desain yang perlu diuji terhadap kebutuhan nyata.
+116. Desain yang baik memberi ruang untuk perubahan tanpa membuat seluruh program harus ditulis ulang.
+117. Perubahan bukan musuh; perubahan adalah alasan mengapa desain perlu cukup jelas dan cukup lentur.
+118. Lentur bukan berarti serba tidak jelas; lentur berarti bagian-bagian penting dipisahkan dengan tanggung jawab yang jelas.
+119. Tanggung jawab yang jelas memudahkan pengujian karena setiap bagian dapat diperiksa secara terpisah.
+120. Pengujian yang terpisah membantu menemukan kesalahan lebih cepat dan lebih tepat.
+121. Kesalahan yang ditemukan lebih awal lebih murah daripada kesalahan yang tersembunyi sampai sistem dipakai banyak orang.
+122. Kasus tepi sering menyimpan pelajaran paling penting karena di situlah asumsi yang tidak disadari menjadi terlihat.
+123. Data yang aneh, input kosong, angka negatif, dan teks yang terlalu panjang adalah teman belajar yang baik.
+124. Program yang berhasil dijalankan sekali belum tentu benar; ia baru lebih dipercaya setelah diuji pada berbagai kondisi.
+125. Kepercayaan pada program tumbuh dari bukti, bukan dari perasaan bahwa kode terlihat rapi.
+126. Kode yang rapi membantu, tetapi kerapian tanpa pengujian belum cukup untuk menjamin perilaku yang benar.
+127. Sebaliknya, pengujian tanpa kode yang jelas menyulitkan perawatan dalam jangka panjang.
+128. Kejelasan dan pengujian saling melengkapi dalam membangun program yang dapat dipercaya.
+129. Menulis pseudokode dalam bahasa Indonesia adalah latihan menghubungkan bahasa manusia dengan struktur program.
+130. Pseudokode yang jelas dapat diterjemahkan ke banyak bahasa pemrograman tanpa kehilangan maksud utama.
+131. Bahasa pemrograman berubah, tetapi kemampuan memecah masalah dan menjelaskan langkah tetap berguna.
+132. Karena itu, jangan hanya belajar menghafal sintaks; belajarlah melihat pola masalah yang lebih umum.
+133. Pola masalah yang umum misalnya mencari, mengurutkan, memfilter, menggabungkan, dan memvalidasi.
+134. Mengenali pola membantu, tetapi jangan biarkan pola menghalangi solusi baru.
+135. Kadang solusi terbaik tidak berasal dari pola yang biasa, melainkan dari pertanyaan yang belum pernah diajukan.
+136. Pertanyaan yang baik sering lebih berharga daripada jawaban cepat yang belum diuji.
+137. Pertanyaan yang terlalu luas perlu dipersempit agar hasil eksperimen dapat ditafsirkan.
+138. Setelah pertanyaan menyempit, tentukan hasil seperti apa yang akan dianggap sebagai petunjuk.
+139. Jika hasilnya tidak jelas, ubah eksperimen menjadi lebih kecil dan lebih terukur.
+140. Kegagalan eksperimen bukan pemborosan jika menghasilkan pengetahuan tentang batas pendekatan.
+141. Kadang jawaban yang benar adalah membuang pendekatan lama dan mencoba cara yang lebih sederhana.
+142. Kesederhanaan sering muncul setelah eksperimen, bukan sebelum eksperimen.
+143. Jangan mengejar kode yang terlihat pintar; kejar kode yang dapat dipahami, diuji, dan diperbaiki.
+144. Kode yang terlihat pintar tetapi sulit dipahami sering menyulitkan penulisnya sendiri beberapa minggu kemudian.
+145. Membaca ulang kode sendiri setelah jeda adalah cara baik untuk menguji kejelasan.
+146. Jika kode sendiri terasa asing, tambahkan penjelasan atau sederhanakan strukturnya.
+147. Menulis ulang bukan tanda tulisan awal gagal; menulis ulang adalah bagian alami dari berpikir.
+148. Kode juga sering perlu ditulis ulang setelah pemahaman bertambah.
+149. Pemahaman yang bertambah mengubah cara melihat masalah dan cara memilih solusi.
+150. Karena itu, jangan terlalu cepat menganggap versi pertama sebagai bentuk akhir.
+151. Namun jangan pula terus menulis ulang tanpa pernah menguji hasilnya.
+152. Siklus belajar yang sehat adalah bertanya, membuat versi kecil, menjalankan, mengamati, mencatat, lalu memperbaiki.
+153. Ulangi siklus itu dengan sabar dan jujur, tanpa berpura-pura bahwa hasil sudah lebih baik daripada kenyataannya.
+154. Kejujuran pada hasil eksperimen adalah fondasi kepercayaan pada diri sendiri dan pada karya.
+155. Karya yang dapat dipercaya tumbuh dari kebiasaan memeriksa, bukan dari kebiasaan mengklaim.
+156. Rasa penasaran yang dijaga akan membuat seseorang terus belajar bahkan setelah menemukan jawaban.
+157. Jiwa eksperimental yang sehat membuat seseorang berani mencoba hal baru tanpa meremehkan hal lama.
+158. Jiwa pemrogram yang matang membuat seseorang membangun, menguji, menjelaskan, dan mempertanggungjawabkan karyanya.
+159. Bahasa Indonesia memberi ruang untuk berpikir dengan nuansa sehingga gagasan teknis dapat disampaikan lebih manusiawi.
+160. Tulisan yang baik tidak hanya indah secara bahasa, tetapi juga jujur dan berguna bagi pembacanya.
+161. Program yang baik tidak hanya benar secara logika, tetapi juga jelas bagi orang yang merawatnya.
+162. Gabungan keduanya membentuk pembelajar yang mampu menciptakan hal baru dengan alasan yang dapat diuji.
+163. Setiap baris kode dan setiap paragraf tulisan adalah kesempatan melatih kejelasan, kejujuran, dan keberanian.
+164. Kejelasan membantu gagasan dipahami, kejujuran membantu gagasan dipercaya, dan keberanian membantu gagasan diuji.
+165. Ketiganya diperlukan untuk membentuk pemrogram yang penasaran, eksperimental, dan bertanggung jawab.
+166. Belajar bahasa Indonesia secara aktif berarti berani menulis ulang kalimat agar lebih tepat dan lebih ringkas.
+167. Menulis ulang kalimat melatih kepekaan terhadap kata mubazir dan hubungan antar gagasan.
+168. Kalimat efektif menghindari kata yang tidak perlu sehingga maksud cepat dipahami.
+169. Paragraf yang teratur mencerminkan alur berpikir yang teratur.
+170. Memperbaiki tulisan sering berarti memperbaiki cara berpikir.
+171. Membiasakan diri menjelaskan kode dengan bahasa sendiri adalah cara menguji apakah pemahaman benar-benar ada.
+172. Jika seseorang tidak dapat menjelaskan sebuah program dengan sederhana, mungkin ada bagian yang belum dipahami.
+173. Penjelasan sederhana bukan berarti dangkal; penjelasan sederhana menunjukkan inti yang sudah dipahami.
+174. Inti yang dipahami membantu pemrogram membuat keputusan desain yang lebih baik.
+175. Keputusan desain yang baik mempertimbangkan kebutuhan sekarang dan kemungkinan perubahan di masa depan.
+176. Namun perkiraan masa depan tidak boleh menjadi alasan membuat desain yang terlalu rumit.
+177. Desain yang terlalu rumit sering menghambat pembelajaran dan membuat perubahan kecil terasa berat.
+178. Mulailah dari yang paling sederhana yang memenuhi kebutuhan, lalu kembangkan berdasarkan bukti.
+179. Pengembangan berdasarkan bukti mengurangi risiko membuat fitur yang tidak dibutuhkan.
+180. Fitur yang tidak dibutuhkan menambah beban perawatan dan mengaburkan tujuan program.
+181. Tujuan program yang jelas membantu memilih apa yang perlu dikerjakan dan apa yang perlu ditunda.
+182. Menunda bukan berarti mengabaikan; menunda berarti memilih urutan kerja yang lebih masuk akal.
+183. Urutan kerja yang masuk akal membantu menjaga fokus dan mengurangi pekerjaan yang sia-sia.
+184. Fokus adalah keterampilan yang perlu dilatih karena gangguan dapat memecah pemahaman.
+185. Menuliskan rencana kecil sebelum mulai membantu menjaga fokus dan memberi arah.
+186. Rencana kecil tidak perlu kaku; ia boleh berubah ketika eksperimen memberi petunjuk baru.
+187. Perubahan rencana berdasarkan bukti adalah tanda berpikir, bukan tanda ketidakkonsistenan.
+188. Konsistensi yang sehat adalah konsistensi pada tujuan belajar, bukan pada cara yang sudah terbukti tidak cocok.
+189. Belajar dari kesalahan berarti mengubah cara, bukan mengulang kebiasaan yang sama.
+190. Kebiasaan yang baik perlu dijaga karena dampaknya baru terasa setelah diulang.
+191. Kebiasaan membaca, menulis, menguji, dan mencatat saling memperkuat dalam proses belajar.
+192. Membaca memperluas bahan berpikir, menulis memperjelas gagasan, menguji memberi bukti, dan mencatat menjaga pelajaran.
+193. Dengan begitu, pembelajaran tidak berhenti pada peniruan contoh, tetapi berkembang menjadi penciptaan yang sadar.
+194. Penciptaan yang sadar tidak takut pada ketidakpastian karena ia tahu cara membuat langkah kecil yang dapat diuji.
+195. Langkah kecil mengurangi risiko, mempercepat umpan balik, dan menjaga semangat tetap hidup.
+196. Jika langkah terlalu besar, pecah menjadi bagian yang lebih sederhana dan dapat diselesaikan.
+197. Memecah masalah adalah keterampilan inti yang menghubungkan bahasa, logika, dan eksperimen.
+198. Mulailah dari input, proses, dan output yang paling sederhana, lalu tambahkan kerumitan sedikit demi sedikit.
+199. Setiap tambahan sebaiknya dapat dijelaskan alasannya dan dapat diperiksa hasilnya.
+200. Penjelasan alasan dan pemeriksaan hasil membuat karya lebih mudah dipercaya dan dikembangkan.
+201. Pada akhirnya, belajar adalah perjalanan membuat sesuatu yang baru dari rasa ingin tahu yang dijaga dengan disiplin.
+202. Disiplin menjaga rasa ingin tahu tetap terarah, sementara rasa ingin tahu menjaga disiplin tetap hidup.
+203. Keduanya membuat seseorang tidak cepat puas pada tiruan dan tidak gegabah dalam mencoba.
+204. Bahasa Indonesia menjadi rumah bagi proses berpikir itu, tempat gagasan dirawat, diuji, dan dibagikan.
+205. Dalam bahasa yang jernih, masalah yang rumit dapat dipecah menjadi bagian yang lebih mudah dipahami.
+206. Dalam eksperimen yang jujur, pemahaman yang masih samar dapat diuji dan diperbaiki.
+207. Dengan menulis, menguji, dan merefleksikan, pembelajaran berubah dari hafalan menjadi kemampuan.
+208. Kemampuan itu tidak hanya terlihat saat program berjalan, tetapi juga saat program gagal dan perlu diperbaiki.
+209. Kemampuan itu juga terlihat saat seseorang menjelaskan pilihan desainnya dengan alasan yang dapat diperiksa.
+210. Semakin sering latihan itu dilakukan, semakin kuat kebiasaan menciptakan solusi sendiri yang bertanggung jawab.
+211. Kebiasaan itulah yang membentuk pemrogram penasaran, eksperimental, dan mampu membuat hal baru tanpa sekadar meniru contoh.
+212. Meniru boleh menjadi langkah awal, tetapi berhenti pada tiruan membuat kemampuan berhenti berkembang.
+213. Programmer yang eksperimental mencoba mengubah satu hal kecil, mengamati hasilnya, lalu mencatat apa yang berubah.
+214. Catatan eksperimen yang rapi membantu seseorang belajar dari kesalahan tanpa harus mengulang kesalahan yang sama.
+215. Kesalahan bukan tanda kegagalan permanen; kesalahan adalah data tentang cara kerja sistem dan cara berpikir yang perlu diperbaiki.
+216. Membaca pesan kesalahan dengan tenang adalah keterampilan dasar, karena pesan itu sering menunjukkan tempat pertama yang harus diperiksa.
+217. Kode yang dibuat dari pemahaman sendiri biasanya lebih mudah dirawat daripada kode yang disalin tanpa dipahami.
+218. Kebaruan lahir dari keberanian mencoba kombinasi yang belum umum, bukan dari keinginan untuk terlihat berbeda tanpa alasan.
+219. Sebelum membuat program besar, buatlah versi kecil yang bisa dijalankan, diamati, dan diperbaiki.
+220. Setiap program adalah model dari sebagian dunia; tugas programmer adalah memilih bagian dunia mana yang perlu dimodelkan.
