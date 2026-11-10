@@ -1,0 +1,261 @@
+Matematika adalah ilmu tentang bilangan, besaran, bentuk, pola, dan hubungan antarkonsep.
+Matematika membantu manusia menghitung, mengukur, membandingkan, dan menyelesaikan masalah.
+Matematika dasar mencakup pengenalan angka, operasi hitung, pengukuran, dan pola sederhana.
+Perkalian adalah salah satu operasi dasar dalam matematika.
+Perkalian dapat dipandang sebagai penjumlahan berulang.
+Perkalian menggabungkan sejumlah kelompok yang sama banyak.
+Hasil perkalian disebut hasil kali atau produk.
+Bilangan yang dikalikan disebut faktor.
+Tanda perkalian dapat ditulis dengan simbol × atau titik tengah.
+Tanda sama dengan ditulis dengan simbol =.
+Rumus perkalian dasar adalah a × b = c.
+Dalam rumus a × b = c, a dan b adalah faktor, sedangkan c adalah hasil kali.
+Perkalian a × b berarti menjumlahkan a sebanyak b kali.
+Contoh makna 3 × 4 adalah 4 + 4 + 4.
+Contoh makna 5 × 2 adalah 2 + 2 + 2 + 2 + 2.
+Perkalian bersifat komutatif, artinya a × b = b × a.
+Contoh komutatif: 3 × 4 = 4 × 3.
+Perkalian bersifat asosiatif, artinya (a × b) × c = a × (b × c).
+Contoh asosiatif: (2 × 3) × 4 = 2 × (3 × 4).
+Perkalian memiliki unsur identitas, yaitu satu.
+Setiap bilangan dikali satu hasilnya bilangan itu sendiri.
+Contoh identitas: 7 × 1 = 7.
+Contoh identitas: 25 × 1 = 25.
+Setiap bilangan dikali nol hasilnya nol.
+Contoh: 9 × 0 = 0.
+Contoh: 48 × 0 = 0.
+Perkalian bersifat distributif terhadap pertambahan.
+Rumus distributif: a × (b + c) = (a × b) + (a × c).
+Contoh distributif: 3 × (4 + 5) = (3 × 4) + (3 × 5).
+Perkalian dengan bilangan positif menghasilkan bilangan positif jika kedua faktor positif.
+Perkalian bilangan positif dengan bilangan negatif menghasilkan bilangan negatif.
+Perkalian dua bilangan negatif menghasilkan bilangan positif.
+Contoh: 4 × (-3) = -12.
+Contoh: (-4) × (-3) = 12.
+Perkalian dengan bilangan negatif dapat dipahami melalui pola bilangan.
+Tabel perkalian membantu menghafal hasil perkalian dasar.
+Tabel perkalian satu sampai sepuluh sering digunakan dalam latihan dasar.
+1 × 1 = 1.
+1 × 2 = 2.
+1 × 3 = 3.
+1 × 4 = 4.
+1 × 5 = 5.
+1 × 6 = 6.
+1 × 7 = 7.
+1 × 8 = 8.
+1 × 9 = 9.
+1 × 10 = 10.
+2 × 1 = 2.
+2 × 2 = 4.
+2 × 3 = 6.
+2 × 4 = 8.
+2 × 5 = 10.
+2 × 6 = 12.
+2 × 7 = 14.
+2 × 8 = 16.
+2 × 9 = 18.
+2 × 10 = 20.
+3 × 1 = 3.
+3 × 2 = 6.
+3 × 3 = 9.
+3 × 4 = 12.
+3 × 5 = 15.
+3 × 6 = 18.
+3 × 7 = 21.
+3 × 8 = 24.
+3 × 9 = 27.
+3 × 10 = 30.
+4 × 1 = 4.
+4 × 2 = 8.
+4 × 3 = 12.
+4 × 4 = 16.
+4 × 5 = 20.
+4 × 6 = 24.
+4 × 7 = 28.
+4 × 8 = 32.
+4 × 9 = 36.
+4 × 10 = 40.
+5 × 1 = 5.
+5 × 2 = 10.
+5 × 3 = 15.
+5 × 4 = 20.
+5 × 5 = 25.
+5 × 6 = 30.
+5 × 7 = 35.
+5 × 8 = 40.
+5 × 9 = 45.
+5 × 10 = 50.
+6 × 1 = 6.
+6 × 2 = 12.
+6 × 3 = 18.
+6 × 4 = 24.
+6 × 5 = 30.
+6 × 6 = 36.
+6 × 7 = 42.
+6 × 8 = 48.
+6 × 9 = 54.
+6 × 10 = 60.
+7 × 1 = 7.
+7 × 2 = 14.
+7 × 3 = 21.
+7 × 4 = 28.
+7 × 5 = 35.
+7 × 6 = 42.
+7 × 7 = 49.
+7 × 8 = 56.
+7 × 9 = 63.
+7 × 10 = 70.
+8 × 1 = 8.
+8 × 2 = 16.
+8 × 3 = 24.
+8 × 4 = 32.
+8 × 5 = 40.
+8 × 6 = 48.
+8 × 7 = 56.
+8 × 8 = 64.
+8 × 9 = 72.
+8 × 10 = 80.
+9 × 1 = 9.
+9 × 2 = 18.
+9 × 3 = 27.
+9 × 4 = 36.
+9 × 5 = 45.
+9 × 6 = 54.
+9 × 7 = 63.
+9 × 8 = 72.
+9 × 9 = 81.
+9 × 10 = 90.
+10 × 1 = 10.
+10 × 2 = 20.
+10 × 3 = 30.
+10 × 4 = 40.
+10 × 5 = 50.
+10 × 6 = 60.
+10 × 7 = 70.
+10 × 8 = 80.
+10 × 9 = 90.
+10 × 10 = 100.
+Perkalian bilangan dua digit dapat dihitung dengan memecah nilai tempat.
+Contoh: 12 × 3 berarti 10 × 3 ditambah 2 × 3.
+10 × 3 = 30 dan 2 × 3 = 6, sehingga 12 × 3 = 36.
+Contoh: 14 × 2 berarti 10 × 2 ditambah 4 × 2.
+10 × 2 = 20 dan 4 × 2 = 8, sehingga 14 × 2 = 28.
+Contoh: 23 × 4 berarti 20 × 4 ditambah 3 × 4.
+20 × 4 = 80 dan 3 × 4 = 12, sehingga 23 × 4 = 92.
+Contoh: 32 × 3 berarti 30 × 3 ditambah 2 × 3.
+30 × 3 = 90 dan 2 × 3 = 6, sehingga 32 × 3 = 96.
+Contoh: 41 × 5 berarti 40 × 5 ditambah 1 × 5.
+40 × 5 = 200 dan 1 × 5 = 5, sehingga 41 × 5 = 205.
+Perkalian dua bilangan dua digit dapat menggunakan sifat distributif.
+Contoh: 12 × 15 berarti 12 × 10 ditambah 12 × 5.
+12 × 10 = 120 dan 12 × 5 = 60, sehingga 12 × 15 = 180.
+Contoh: 21 × 13 berarti 21 × 10 ditambah 21 × 3.
+21 × 10 = 210 dan 21 × 3 = 63, sehingga 21 × 13 = 273.
+Contoh: 24 × 12 berarti 24 × 10 ditambah 24 × 2.
+24 × 10 = 240 dan 24 × 2 = 48, sehingga 24 × 12 = 288.
+Contoh: 35 × 11 berarti 35 × 10 ditambah 35 × 1.
+35 × 10 = 350 dan 35 × 1 = 35, sehingga 35 × 11 = 385.
+Contoh: 42 × 14 berarti 42 × 10 ditambah 42 × 4.
+42 × 10 = 420 dan 42 × 4 = 168, sehingga 42 × 14 = 588.
+Perkalian bersusun membantu merapikan perkalian bilangan besar.
+Pada perkalian bersusun, satuan dikalikan terlebih dahulu, lalu puluhan.
+Jika hasil suatu nilai tempat sepuluh atau lebih, simpan ke nilai tempat berikutnya.
+Contoh perkalian bersusun: 23 × 4.
+Satuan: 3 × 4 = 12, tulis 2 simpan 1 puluhan.
+Puluhan: 2 × 4 = 8, lalu tambahkan 1 simpanan menjadi 9.
+Hasil: 92.
+Jadi, 23 × 4 = 92.
+Contoh perkalian bersusun: 36 × 5.
+Satuan: 6 × 5 = 30, tulis 0 simpan 3 puluhan.
+Puluhan: 3 × 5 = 15, lalu tambahkan 3 simpanan menjadi 18.
+Hasil: 180.
+Jadi, 36 × 5 = 180.
+Contoh perkalian bersusun: 47 × 6.
+Satuan: 7 × 6 = 42, tulis 2 simpan 4 puluhan.
+Puluhan: 4 × 6 = 24, lalu tambahkan 4 simpanan menjadi 28.
+Hasil: 282.
+Jadi, 47 × 6 = 282.
+Contoh perkalian bersusun: 58 × 7.
+Satuan: 8 × 7 = 56, tulis 6 simpan 5 puluhan.
+Puluhan: 5 × 7 = 35, lalu tambahkan 5 simpanan menjadi 40.
+Hasil: 406.
+Jadi, 58 × 7 = 406.
+Contoh perkalian bersusun: 69 × 8.
+Satuan: 9 × 8 = 72, tulis 2 simpan 7 puluhan.
+Puluhan: 6 × 8 = 48, lalu tambahkan 7 simpanan menjadi 55.
+Hasil: 552.
+Jadi, 69 × 8 = 552.
+Pemeriksaan perkalian dapat dilakukan dengan pembagian.
+Jika a × b = c, maka c ÷ b = a dan c ÷ a = b.
+Contoh: karena 12 × 4 = 48, maka 48 ÷ 4 = 12 dan 48 ÷ 12 = 4.
+Contoh: karena 25 × 3 = 75, maka 75 ÷ 3 = 25 dan 75 ÷ 25 = 3.
+Pemeriksaan membantu mengetahui apakah hasil perkalian benar.
+Perkalian dapat digunakan dalam soal cerita sederhana.
+Jika Ana memiliki 3 kotak berisi 4 pensil, jumlah pensil adalah 3 × 4 = 12.
+Jika Budi membeli 5 bungkus berisi 6 kelereng, jumlah kelereng adalah 5 × 6 = 30.
+Jika Citra membaca 4 buku yang masing-masing berisi 10 halaman, total halaman adalah 4 × 10 = 40.
+Jika Dedi berjalan 7 putaran dengan jarak 5 meter per putaran, total jarak adalah 7 × 5 = 35 meter.
+Jika Eka menyimpan 8 kotak berisi 9 buku, jumlah buku adalah 8 × 9 = 72.
+Jika Fani memiliki 6 plastik berisi 12 permen, jumlah permen adalah 6 × 12 = 72.
+Jika Gilang menabung 15 ribu rupiah selama 4 minggu, total tabungan adalah 15 × 4 = 60 ribu rupiah.
+Jika Hana mengumpulkan 9 lembar stiker dengan 8 stiker per lembar, jumlah stiker adalah 9 × 8 = 72.
+Jika Irfan menjual 12 roti per hari selama 5 hari, jumlah roti terjual adalah 12 × 5 = 60.
+Jika Jihan memiliki 7 vas dengan 6 bunga per vas, jumlah bunga adalah 7 × 6 = 42.
+Perkalian sering digunakan saat menghitung total harga barang.
+Jika harga satu buku 8 ribu rupiah dan membeli 5 buku, total harga adalah 8 × 5 = 40 ribu rupiah.
+Jika harga satu pensil 3 ribu rupiah dan membeli 12 pensil, total harga adalah 3 × 12 = 36 ribu rupiah.
+Perkalian digunakan saat menghitung luas persegi panjang.
+Luas persegi panjang adalah panjang × lebar.
+Jika panjang 6 cm dan lebar 4 cm, luasnya adalah 6 × 4 = 24 cm persegi.
+Jika panjang 9 cm dan lebar 5 cm, luasnya adalah 9 × 5 = 45 cm persegi.
+Perkalian digunakan saat menghitung jumlah kursi dalam beberapa baris.
+Jika ada 8 baris dengan 10 kursi per baris, jumlah kursi adalah 8 × 10 = 80.
+Perkalian digunakan saat menghitung volume kotak sederhana.
+Volume balok adalah panjang × lebar × tinggi.
+Jika panjang 4 cm, lebar 3 cm, dan tinggi 2 cm, volumenya adalah 4 × 3 × 2 = 24 cm kubik.
+Perkalian dapat membantu mempercepat penjumlahan berulang.
+Daripada menjumlahkan 6 + 6 + 6 + 6, cukup menghitung 6 × 4 = 24.
+Daripada menjumlahkan 9 + 9 + 9, cukup menghitung 9 × 3 = 27.
+Perkalian dengan 10 mudah dilakukan dengan menambahkan nol pada bilangan.
+Contoh: 7 × 10 = 70.
+Contoh: 12 × 10 = 120.
+Contoh: 35 × 10 = 350.
+Perkalian dengan 100 mudah dilakukan dengan menambahkan dua nol pada bilangan.
+Contoh: 4 × 100 = 400.
+Contoh: 15 × 100 = 1500.
+Perkalian dengan 5 dapat dibantu dengan membagi dua lalu mengalikan sepuluh.
+Contoh: 8 × 5 sama dengan 8 ÷ 2 × 10 = 4 × 10 = 40.
+Contoh: 14 × 5 sama dengan 14 ÷ 2 × 10 = 7 × 10 = 70.
+Perkalian dengan 9 dapat dibantu dengan mengalikan sepuluh lalu mengurangi bilangan aslinya.
+Contoh: 6 × 9 sama dengan 6 × 10 - 6 = 60 - 6 = 54.
+Contoh: 8 × 9 sama dengan 8 × 10 - 8 = 80 - 8 = 72.
+Perkalian dapat dipecah menjadi faktor yang lebih mudah.
+Contoh: 12 × 6 dapat dipecah menjadi 6 × 6 + 6 × 6.
+6 × 6 = 36, sehingga 36 + 36 = 72.
+Jadi, 12 × 6 = 72.
+Contoh: 15 × 4 dapat dipecah menjadi 10 × 4 + 5 × 4.
+10 × 4 = 40 dan 5 × 4 = 20, sehingga 40 + 20 = 60.
+Jadi, 15 × 4 = 60.
+Contoh: 18 × 3 dapat dipecah menjadi 10 × 3 + 8 × 3.
+10 × 3 = 30 dan 8 × 3 = 24, sehingga 30 + 24 = 54.
+Jadi, 18 × 3 = 54.
+Contoh: 22 × 4 dapat dipecah menjadi 20 × 4 + 2 × 4.
+20 × 4 = 80 dan 2 × 4 = 8, sehingga 80 + 8 = 88.
+Jadi, 22 × 4 = 88.
+Contoh: 25 × 6 dapat dipecah menjadi 20 × 6 + 5 × 6.
+20 × 6 = 120 dan 5 × 6 = 30, sehingga 120 + 30 = 150.
+Jadi, 25 × 6 = 150.
+Perkalian dapat digunakan untuk memeriksa kewajaran hasil.
+Jika mengalikan dua bilangan positif yang lebih besar dari satu, hasilnya harus lebih besar dari kedua faktor.
+Contoh: 6 × 7 = 42, hasilnya lebih besar dari 6 dan lebih besar dari 7.
+Jika mengalikan bilangan dengan nol, hasilnya harus nol.
+Contoh: 15 × 0 = 0.
+Jika mengalikan bilangan dengan satu, hasilnya harus bilangan itu sendiri.
+Contoh: 23 × 1 = 23.
+Latihan perkalian sebaiknya dimulai dari tabel perkalian kecil.
+Setelah tabel perkalian dikuasai, latihan dilanjutkan dengan perkalian dua digit.
+Setelah dua digit, latihan dapat dilanjutkan dengan perkalian tiga digit.
+Membaca soal dengan teliti membantu menentukan faktor yang akan dikalikan.
+Menuliskan langkah hitung membantu mengurangi kesalahan.
+Memeriksa hasil dengan pembagian adalah kebiasaan yang baik.
+Dengan memahami rumus a × b = c, perkalian dapat dilakukan secara sistematis.

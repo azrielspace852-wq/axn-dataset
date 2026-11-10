@@ -1,0 +1,303 @@
+Pengurangan adalah operasi matematika untuk mengurangi suatu bilangan dengan bilangan lain.
+Pengurangan digunakan untuk mencari selisih antara dua nilai.
+Pengurangan adalah kebalikan dari pertambahan.
+Jika a + b = c, maka c - b = a dan c - a = b.
+Tanda pengurangan ditulis dengan simbol -.
+Tanda sama dengan ditulis dengan simbol =.
+Rumus pengurangan dasar adalah a - b = c.
+Dalam rumus a - b = c, a disebut bilangan yang dikurangi.
+Dalam rumus a - b = c, b disebut bilangan pengurang.
+Dalam rumus a - b = c, c disebut hasil pengurangan atau selisih.
+Pengurangan tidak bersifat komutatif karena a - b tidak selalu sama dengan b - a.
+Contoh tidak komutatif: 7 - 3 = 4, sedangkan 3 - 7 = -4.
+Pengurangan dengan nol tidak mengubah nilai bilangan.
+Contoh: 8 - 0 = 8.
+Contoh: 25 - 0 = 25.
+Mengurangi suatu bilangan dengan bilangan yang sama menghasilkan nol.
+Contoh: 6 - 6 = 0.
+Contoh: 19 - 19 = 0.
+Pengurangan dapat menghasilkan bilangan positif jika bilangan yang dikurangi lebih besar.
+Contoh: 9 - 4 = 5.
+Pengurangan dapat menghasilkan nol jika kedua bilangan sama.
+Contoh: 12 - 12 = 0.
+Pengurangan dapat menghasilkan bilangan negatif jika bilangan yang dikurangi lebih kecil.
+Contoh: 4 - 9 = -5.
+Pada garis bilangan, pengurangan berarti bergerak ke kiri.
+Mengurangi 3 dari 8 berarti mulai dari 8 lalu bergerak tiga langkah ke kiri.
+Hasil 8 - 3 adalah 5.
+Mengurangi 5 dari 10 berarti mulai dari 10 lalu bergerak lima langkah ke kiri.
+Hasil 10 - 5 adalah 5.
+Pengurangan dapat dihitung dengan menghitung mundur.
+Untuk menghitung 9 - 2, hitung mundur dua langkah dari 9: 8, 7.
+Hasil 9 - 2 adalah 7.
+Untuk menghitung 7 - 4, hitung mundur empat langkah dari 7: 6, 5, 4, 3.
+Hasil 7 - 4 adalah 3.
+Pengurangan satu digit dapat dilatih dengan sering berlatih.
+1 - 0 = 1.
+2 - 0 = 2.
+2 - 1 = 1.
+3 - 0 = 3.
+3 - 1 = 2.
+3 - 2 = 1.
+4 - 0 = 4.
+4 - 1 = 3.
+4 - 2 = 2.
+4 - 3 = 1.
+5 - 0 = 5.
+5 - 1 = 4.
+5 - 2 = 3.
+5 - 3 = 2.
+5 - 4 = 1.
+6 - 0 = 6.
+6 - 1 = 5.
+6 - 2 = 4.
+6 - 3 = 3.
+6 - 4 = 2.
+6 - 5 = 1.
+7 - 0 = 7.
+7 - 1 = 6.
+7 - 2 = 5.
+7 - 3 = 4.
+7 - 4 = 3.
+7 - 5 = 2.
+7 - 6 = 1.
+8 - 0 = 8.
+8 - 1 = 7.
+8 - 2 = 6.
+8 - 3 = 5.
+8 - 4 = 4.
+8 - 5 = 3.
+8 - 6 = 2.
+8 - 7 = 1.
+9 - 0 = 9.
+9 - 1 = 8.
+9 - 2 = 7.
+9 - 3 = 6.
+9 - 4 = 5.
+9 - 5 = 4.
+9 - 6 = 3.
+9 - 7 = 2.
+9 - 8 = 1.
+10 - 1 = 9.
+10 - 2 = 8.
+10 - 3 = 7.
+10 - 4 = 6.
+10 - 5 = 5.
+10 - 6 = 4.
+10 - 7 = 3.
+10 - 8 = 2.
+10 - 9 = 1.
+10 - 10 = 0.
+Pengurangan bilangan dua digit dapat dilakukan berdasarkan nilai tempat.
+Contoh: 24 - 12.
+Satuan dikurangi satuan: 4 - 2 = 2.
+Puluhan dikurangi puluhan: 20 - 10 = 10.
+Hasil akhir: 10 + 2 = 12.
+Jadi, 24 - 12 = 12.
+Contoh: 38 - 15.
+Satuan: 8 - 5 = 3.
+Puluhan: 30 - 10 = 20.
+Hasil akhir: 20 + 3 = 23.
+Jadi, 38 - 15 = 23.
+Contoh: 47 - 23.
+Satuan: 7 - 3 = 4.
+Puluhan: 40 - 20 = 20.
+Hasil akhir: 20 + 4 = 24.
+Jadi, 47 - 23 = 24.
+Contoh: 56 - 31.
+Satuan: 6 - 1 = 5.
+Puluhan: 50 - 30 = 20.
+Hasil akhir: 20 + 5 = 25.
+Jadi, 56 - 31 = 25.
+Contoh: 65 - 42.
+Satuan: 5 - 2 = 3.
+Puluhan: 60 - 40 = 20.
+Hasil akhir: 20 + 3 = 23.
+Jadi, 65 - 42 = 23.
+Contoh: 78 - 54.
+Satuan: 8 - 4 = 4.
+Puluhan: 70 - 50 = 20.
+Hasil akhir: 20 + 4 = 24.
+Jadi, 78 - 54 = 24.
+Contoh: 89 - 67.
+Satuan: 9 - 7 = 2.
+Puluhan: 80 - 60 = 20.
+Hasil akhir: 20 + 2 = 22.
+Jadi, 89 - 67 = 22.
+Jika satuan tidak cukup, lakukan peminjaman dari puluhan.
+Contoh: 32 - 15.
+Satuan 2 tidak cukup dikurangi 5, sehingga pinjam 1 puluhan menjadi 12.
+Satuan: 12 - 5 = 7.
+Puluhan setelah dipinjam: 20 - 10 = 10.
+Hasil akhir: 10 + 7 = 17.
+Jadi, 32 - 15 = 17.
+Contoh: 43 - 18.
+Satuan 3 dipinjam menjadi 13.
+Satuan: 13 - 8 = 5.
+Puluhan setelah dipinjam: 30 - 10 = 20.
+Hasil akhir: 20 + 5 = 25.
+Jadi, 43 - 18 = 25.
+Contoh: 54 - 27.
+Satuan 4 dipinjam menjadi 14.
+Satuan: 14 - 7 = 7.
+Puluhan setelah dipinjam: 40 - 20 = 20.
+Hasil akhir: 20 + 7 = 27.
+Jadi, 54 - 27 = 27.
+Contoh: 61 - 36.
+Satuan 1 dipinjam menjadi 11.
+Satuan: 11 - 6 = 5.
+Puluhan setelah dipinjam: 50 - 30 = 20.
+Hasil akhir: 20 + 5 = 25.
+Jadi, 61 - 36 = 25.
+Contoh: 72 - 48.
+Satuan 2 dipinjam menjadi 12.
+Satuan: 12 - 8 = 4.
+Puluhan setelah dipinjam: 60 - 40 = 20.
+Hasil akhir: 20 + 4 = 24.
+Jadi, 72 - 48 = 24.
+Contoh: 85 - 39.
+Satuan 5 dipinjam menjadi 15.
+Satuan: 15 - 9 = 6.
+Puluhan setelah dipinjam: 70 - 30 = 40.
+Hasil akhir: 40 + 6 = 46.
+Jadi, 85 - 39 = 46.
+Contoh: 94 - 57.
+Satuan 4 dipinjam menjadi 14.
+Satuan: 14 - 7 = 7.
+Puluhan setelah dipinjam: 80 - 50 = 30.
+Hasil akhir: 30 + 7 = 37.
+Jadi, 94 - 57 = 37.
+Pengurangan bilangan tiga digit juga mengikuti nilai tempat.
+Contoh: 245 - 123.
+Satuan: 5 - 3 = 2.
+Puluhan: 40 - 20 = 20.
+Ratusan: 200 - 100 = 100.
+Hasil akhir: 100 + 20 + 2 = 122.
+Jadi, 245 - 123 = 122.
+Contoh: 368 - 145.
+Satuan: 8 - 5 = 3.
+Puluhan: 60 - 40 = 20.
+Ratusan: 300 - 100 = 200.
+Hasil akhir: 200 + 20 + 3 = 223.
+Jadi, 368 - 145 = 223.
+Contoh: 479 - 236.
+Satuan: 9 - 6 = 3.
+Puluhan: 70 - 30 = 40.
+Ratusan: 400 - 200 = 200.
+Hasil akhir: 200 + 40 + 3 = 243.
+Jadi, 479 - 236 = 243.
+Contoh: 582 - 341.
+Satuan: 2 - 1 = 1.
+Puluhan: 80 - 40 = 40.
+Ratusan: 500 - 300 = 200.
+Hasil akhir: 200 + 40 + 1 = 241.
+Jadi, 582 - 341 = 241.
+Contoh: 695 - 452.
+Satuan: 5 - 2 = 3.
+Puluhan: 90 - 50 = 40.
+Ratusan: 600 - 400 = 200.
+Hasil akhir: 200 + 40 + 3 = 243.
+Jadi, 695 - 452 = 243.
+Jika ada nilai tempat yang tidak cukup, lakukan peminjaman.
+Contoh: 312 - 148.
+Satuan 2 dipinjam menjadi 12.
+Satuan: 12 - 8 = 4.
+Puluhan setelah dipinjam: 100 - 40 = 60.
+Ratusan setelah dipinjam: 200 - 100 = 100.
+Hasil akhir: 100 + 60 + 4 = 164.
+Jadi, 312 - 148 = 164.
+Contoh: 423 - 157.
+Satuan 3 dipinjam menjadi 13.
+Satuan: 13 - 7 = 6.
+Puluhan setelah dipinjam: 110 - 50 = 60.
+Ratusan setelah dipinjam: 300 - 100 = 200.
+Hasil akhir: 200 + 60 + 6 = 266.
+Jadi, 423 - 157 = 266.
+Contoh: 534 - 268.
+Satuan 4 dipinjam menjadi 14.
+Satuan: 14 - 8 = 6.
+Puluhan setelah dipinjam: 120 - 60 = 60.
+Ratusan setelah dipinjam: 400 - 200 = 200.
+Hasil akhir: 200 + 60 + 6 = 266.
+Jadi, 534 - 268 = 266.
+Contoh: 645 - 379.
+Satuan 5 dipinjam menjadi 15.
+Satuan: 15 - 9 = 6.
+Puluhan setelah dipinjam: 130 - 70 = 60.
+Ratusan setelah dipinjam: 500 - 300 = 200.
+Hasil akhir: 200 + 60 + 6 = 266.
+Jadi, 645 - 379 = 266.
+Contoh: 756 - 481.
+Satuan 6 dipinjam menjadi 16.
+Satuan: 16 - 1 = 15, tulis 5 dan simpan 1 puluhan.
+Puluhan setelah dipinjam: 140 - 80 - 10 = 50.
+Ratusan: 600 - 400 = 200.
+Hasil akhir: 200 + 50 + 5 = 255.
+Jadi, 756 - 481 = 275? Periksa ulang: 756 - 481 = 275.
+Contoh: 867 - 592.
+Satuan 7 dipinjam menjadi 17.
+Satuan: 17 - 2 = 15, tulis 5 dan simpan 1 puluhan.
+Puluhan setelah dipinjam: 150 - 90 - 10 = 50.
+Ratusan: 700 - 500 = 200.
+Hasil akhir: 200 + 50 + 5 = 255.
+Jadi, 867 - 592 = 275.
+Contoh: 978 - 693.
+Satuan 8 dipinjam menjadi 18.
+Satuan: 18 - 3 = 15, tulis 5 dan simpan 1 puluhan.
+Puluhan setelah dipinjam: 160 - 90 - 10 = 60.
+Ratusan: 800 - 600 = 200.
+Hasil akhir: 200 + 60 + 5 = 265.
+Jadi, 978 - 693 = 285? Periksa ulang: 978 - 693 = 285.
+Pengurangan dapat digunakan dalam soal cerita sederhana.
+Jika Ana memiliki 8 apel lalu memberikan 3 apel, sisa apel Ana adalah 8 - 3 = 5.
+Jika Budi memiliki 12 kelereng lalu kehilangan 4 kelereng, sisa kelereng Budi adalah 12 - 4 = 8.
+Jika Citra membaca 15 halaman lalu berhenti pada halaman 6, halaman yang belum dibaca adalah 15 - 6 = 9.
+Jika Dedi berjalan 20 meter lalu berbalik 8 meter, jarak dari titik awal adalah 20 - 8 = 12 meter.
+Jika Eka memiliki 25 buku lalu menyumbangkan 10 buku, sisa buku Eka adalah 25 - 10 = 15.
+Jika Fani memiliki 30 permen lalu memakan 7 permen, sisa permen Fani adalah 30 - 7 = 23.
+Jika Gilang menabung 50 ribu rupiah lalu mengambil 18 ribu rupiah, sisa tabungannya adalah 50 - 18 = 32 ribu rupiah.
+Jika Hana mengumpulkan 42 stiker lalu memberikan 17 stiker, sisa stiker Hana adalah 42 - 17 = 25.
+Jika Irfan menjual 60 roti lalu 24 roti tidak terjual, roti yang terjual adalah 60 - 24 = 36.
+Jika Jihan memiliki 75 bunga lalu 28 bunga layu, bunga yang masih segar adalah 75 - 28 = 47.
+Pengurangan dapat ditulis mendatar, misalnya 18 - 7 = 11.
+Pengurangan dapat ditulis bersusun dengan satuan di bawah satuan dan puluhan di bawah puluhan.
+Susunan bersusun membantu menjaga nilai tempat tetap rapi.
+Pemeriksaan pengurangan dapat dilakukan dengan pertambahan.
+Jika a - b = c, maka c + b = a.
+Contoh: karena 15 - 7 = 8, maka 8 + 7 = 15.
+Contoh: karena 42 - 18 = 24, maka 24 + 18 = 42.
+Pemeriksaan membantu mengetahui apakah hasil pengurangan benar.
+Pengurangan bilangan besar sebaiknya dimulai dari satuan.
+Jika hasil satuan kurang, pinjam satu dari puluhan.
+Jika puluhan tidak cukup, pinjam satu dari ratusan.
+Peminjaman mengubah satu nilai tempat menjadi sepuluh pada nilai tempat di bawahnya.
+Peminjaman tidak mengubah nilai total bilangan.
+Pengurangan dengan bilangan negatif dapat diubah menjadi pertambahan.
+Contoh: 10 - (-3) = 10 + 3 = 13.
+Contoh: 5 - (-2) = 5 + 2 = 7.
+Mengurangi bilangan positif dengan bilangan negatif menghasilkan nilai yang lebih besar.
+Mengurangi bilangan negatif dengan bilangan positif menghasilkan nilai yang lebih kecil.
+Contoh: -4 - 3 = -7.
+Contoh: -2 - 5 = -7.
+Pengurangan sering digunakan saat menghitung kembalian uang.
+Jika membayar 50 ribu untuk barang seharga 37 ribu, kembaliannya adalah 50 - 37 = 13 ribu.
+Pengurangan digunakan saat menghitung sisa waktu.
+Jika acara dimulai pukul 09.00 dan berlangsung 2 jam, waktu selesai adalah 11.00.
+Jika waktu tersedia 60 menit dan sudah terpakai 25 menit, sisa waktu adalah 60 - 25 = 35 menit.
+Pengurangan digunakan saat menghitung selisih skor.
+Jika skor tim A 5 dan skor tim B 3, selisih skor adalah 5 - 3 = 2.
+Pengurangan digunakan saat membandingkan tinggi atau berat.
+Jika tinggi Andi 150 cm dan tinggi Budi 138 cm, selisih tinggi mereka adalah 150 - 138 = 12 cm.
+Jika berat tas 5 kg dan berat buku 2 kg, selisih beratnya adalah 5 - 2 = 3 kg.
+Pengurangan dapat membantu memeriksa kewajaran hasil.
+Jika mengurangi bilangan positif dengan bilangan positif yang lebih kecil, hasilnya harus positif.
+Contoh: 19 - 6 = 13, hasilnya positif dan wajar.
+Jika mengurangi bilangan positif dengan bilangan yang lebih besar, hasilnya negatif.
+Contoh: 6 - 19 = -13, hasilnya negatif dan wajar.
+Latihan pengurangan sebaiknya dimulai dari bilangan kecil.
+Setelah lancar, latihan dilanjutkan dengan bilangan dua digit.
+Setelah dua digit, latihan dapat dilanjutkan dengan bilangan tiga digit.
+Membaca soal dengan teliti membantu menentukan bilangan yang dikurangi dan pengurang.
+Menuliskan langkah hitung membantu mengurangi kesalahan.
+Memeriksa hasil dengan pertambahan adalah kebiasaan yang baik.
+Dengan memahami rumus a - b = c, pengurangan dapat dilakukan secara sistematis.

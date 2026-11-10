@@ -1,0 +1,496 @@
+Matematika adalah ilmu tentang bilangan, besaran, bentuk, pola, dan hubungan antarkonsep.
+Matematika membantu manusia menghitung, mengukur, membandingkan, dan menyelesaikan masalah.
+Matematika menengah mencakup aljabar, bilangan berpangkat, akar, perbandingan, geometri, statistika, dan peluang sederhana.
+Matematika menengah mulai menggunakan variabel, rumus, dan langkah penyelesaian yang lebih sistematis.
+Matematika melatih ketelitian, penalaran, dan kemampuan memeriksa hasil.
+Aljabar menggunakan huruf sebagai variabel untuk mewakili bilangan yang belum diketahui.
+Persamaan linear satu variabel berbentuk ax + b = c dengan a tidak sama dengan nol.
+Penyelesaian persamaan linear dilakukan dengan mengisolasi variabel.
+Contoh: 2x + 3 = 11, maka 2x = 8 dan x = 4.
+Contoh: 3x - 5 = 10, maka 3x = 15 dan x = 5.
+Contoh: 4x + 2 = 18, maka 4x = 16 dan x = 4.
+Contoh: 5x - 7 = 23, maka 5x = 30 dan x = 6.
+Contoh: 2(x + 3) = 14, maka x + 3 = 7 dan x = 4.
+Contoh: 3(x - 2) = 12, maka x - 2 = 4 dan x = 6.
+Contoh: x/4 = 5, maka x = 20.
+Contoh: 2x/3 = 8, maka 2x = 24 dan x = 12.
+Pertidaksamaan linear satu variabel diselesaikan dengan aturan yang mirip persamaan.
+Jika kedua ruas dikali atau dibagi bilangan negatif, arah tanda pertidaksamaan berubah.
+Contoh: 2x + 3 < 11, maka 2x < 8 dan x < 4.
+Contoh: 3x - 6 > 9, maka 3x > 15 dan x > 5.
+Sistem persamaan linear dua variabel dapat diselesaikan dengan substitusi atau eliminasi.
+Contoh: x + y = 10 dan x - y = 2, maka x = 6 dan y = 4.
+Contoh: 2x + y = 11 dan x - y = 1, maka x = 4 dan y = 3.
+Bilangan berpangkat ditulis a^n yang berarti a dikalikan sebanyak n kali.
+Sifat pangkat: a^m × a^n = a^(m+n).
+Sifat pangkat: a^m ÷ a^n = a^(m-n) untuk a tidak sama dengan nol.
+Sifat pangkat: (a^m)^n = a^(m×n).
+Sifat pangkat: (a×b)^n = a^n × b^n.
+Sifat pangkat: (a/b)^n = a^n/b^n untuk b tidak sama dengan nol.
+Sifat pangkat: a^0 = 1 untuk a tidak sama dengan nol.
+Sifat pangkat: a^(-n) = 1/a^n untuk a tidak sama dengan nol.
+Contoh: 2^3 × 2^2 = 8 × 4 = 32.
+Contoh: 5^4 ÷ 5^2 = 625 ÷ 25 = 25.
+Contoh: (3^2)^3 = 9^3 = 729.
+Contoh: (2×3)^2 = 6^2 = 36.
+Contoh: (4/2)^3 = 2^3 = 8.
+Contoh: 7^0 = 1.
+Contoh: 2^(-3) = 1/8.
+Akar kuadrat mencari bilangan yang jika dikuadratkan menghasilkan bilangan di dalam akar.
+Sifat akar: akar(a×b) = akar(a) × akar(b).
+Sifat akar: akar(a/b) = akar(a)/akar(b) untuk b tidak sama dengan nol.
+Contoh: akar(36) = 6.
+Contoh: akar(81) = 9.
+Contoh: akar(121) = 11.
+Contoh: akar(144) = 12.
+Contoh: akar(225) = 15.
+Contoh: akar(16×25) = akar(400) = 20.
+Contoh: akar(49/64) = 7/8.
+Persen berarti per seratus, sehingga p% = p/100.
+Rumus persen dari suatu bilangan: p% dari N = (p/100) × N.
+Contoh: 20% dari 150 = 0,20 × 150 = 30.
+Contoh: 15% dari 200 = 0,15 × 200 = 30.
+Contoh: 12,5% dari 80 = 0,125 × 80 = 10.
+Diskon dihitung dengan mengalikan persen diskon dengan harga awal.
+Jika harga awal 80.000 dan diskon 25%, maka diskon = 0,25 × 80.000 = 20.000.
+Harga setelah diskon = 80.000 - 20.000 = 60.000.
+Kenaikan harga dihitung dengan mengalikan persen kenaikan dengan harga awal.
+Jika harga awal 50.000 naik 10%, maka kenaikan = 0,10 × 50.000 = 5.000.
+Harga setelah kenaikan = 50.000 + 5.000 = 55.000.
+Perbandingan menyatakan hubungan dua atau lebih besaran.
+Jika perbandingan a:b dan jumlah bagian diketahui, tentukan nilai satu bagian lalu kalikan.
+Contoh: perbandingan 2:3 dengan total 40, maka satu bagian = 40 ÷ 5 = 8.
+Bagian pertama = 2 × 8 = 16 dan bagian kedua = 3 × 8 = 24.
+Skala adalah perbandingan ukuran pada gambar dengan ukuran sebenarnya.
+Jika skala 1:100 dan panjang gambar 5 cm, maka panjang sebenarnya 5 × 100 = 500 cm.
+Panjang 500 cm sama dengan 5 meter.
+Geometri membahas bentuk, ukuran, keliling, luas, dan volume.
+Luas persegi panjang = panjang × lebar.
+Keliling persegi panjang = 2 × (panjang + lebar).
+Contoh: persegi panjang 8 cm × 5 cm memiliki luas 40 cm persegi.
+Keliling persegi panjang tersebut = 2 × (8 + 5) = 26 cm.
+Luas segitiga = 1/2 × alas × tinggi.
+Contoh: segitiga dengan alas 10 cm dan tinggi 6 cm memiliki luas 1/2 × 10 × 6 = 30 cm persegi.
+Luas lingkaran = π × r × r.
+Keliling lingkaran = 2 × π × r.
+Dengan π = 3,14, lingkaran berjari-jari 7 cm memiliki luas 3,14 × 7 × 7 = 153,86 cm persegi.
+Keliling lingkaran berjari-jari 7 cm = 2 × 3,14 × 7 = 43,96 cm.
+Lingkaran berjari-jari 10 cm memiliki luas 3,14 × 10 × 10 = 314 cm persegi.
+Keliling lingkaran berjari-jari 10 cm = 2 × 3,14 × 10 = 62,8 cm.
+Lingkaran berjari-jari 14 cm memiliki luas 3,14 × 14 × 14 = 615,44 cm persegi.
+Keliling lingkaran berjari-jari 14 cm = 2 × 3,14 × 14 = 87,92 cm.
+Teorema Pythagoras berlaku pada segitiga siku-siku: c^2 = a^2 + b^2.
+Sisi c adalah sisi miring, sedangkan a dan b adalah sisi tegak lurus.
+Contoh: segitiga dengan sisi 3 dan 4 memiliki sisi miring akar(3^2 + 4^2) = akar(25) = 5.
+Contoh: segitiga dengan sisi 6 dan 8 memiliki sisi miring akar(36 + 64) = akar(100) = 10.
+Contoh: segitiga dengan sisi 5 dan 12 memiliki sisi miring akar(25 + 144) = akar(169) = 13.
+Contoh: segitiga dengan sisi 8 dan 15 memiliki sisi miring akar(64 + 225) = akar(289) = 17.
+Contoh: segitiga dengan sisi 7 dan 24 memiliki sisi miring akar(49 + 576) = akar(625) = 25.
+Jarak dua titik pada bidang koordinat dapat dihitung dengan rumus jarak.
+Jarak antara (x1,y1) dan (x2,y2) = akar((x2-x1)^2 + (y2-y1)^2).
+Contoh: jarak (0,0) ke (3,4) = akar(3^2 + 4^2) = akar(25) = 5.
+Statistika dasar membahas mean, median, dan modus.
+Mean atau rata-rata = jumlah data ÷ banyak data.
+Median adalah nilai tengah setelah data diurutkan.
+Modus adalah data yang paling sering muncul.
+Contoh: data 5,6,6,7,8 memiliki jumlah 32 dan banyak data 5, sehingga mean = 32 ÷ 5 = 6,4.
+Median data 5,6,6,7,8 adalah 6.
+Modus data 5,6,6,7,8 adalah 6.
+Contoh: data 2,4,4,6,9 memiliki jumlah 25 dan banyak data 5, sehingga mean = 25 ÷ 5 = 5.
+Median data 2,4,4,6,9 adalah 4.
+Modus data 2,4,4,6,9 adalah 4.
+Contoh: data 10,12,12,14,17 memiliki jumlah 65 dan banyak data 5, sehingga mean = 65 ÷ 5 = 13.
+Median data 10,12,12,14,17 adalah 12.
+Modus data 10,12,12,14,17 adalah 12.
+Peluang sederhana dihitung dengan rumus P(A) = banyak kejadian A ÷ banyak seluruh kejadian.
+Contoh: peluang muncul angka pada koin adalah 1 ÷ 2 = 1/2.
+Contoh: peluang muncul mata dadu genap adalah 3 ÷ 6 = 1/2.
+Contoh: peluang muncul mata dadu lebih dari 4 adalah 2 ÷ 6 = 1/3.
+Contoh: peluang muncul mata dadu prima adalah 3 ÷ 6 = 1/2.
+Gradien garis melalui dua titik dihitung dengan m = (y2-y1)/(x2-x1).
+Contoh: titik (2,3) dan (6,11) memiliki gradien (11-3)/(6-2) = 8/4 = 2.
+Persamaan garis lurus umumnya berbentuk y = mx + c.
+Jika gradien 2 dan melalui (2,3), maka 3 = 2×2 + c sehingga c = -1.
+Persamaan garisnya adalah y = 2x - 1.
+Contoh: titik (1,4) dan (3,10) memiliki gradien (10-4)/(3-1) = 6/2 = 3.
+Jika gradien 3 dan melalui (1,4), maka 4 = 3×1 + c sehingga c = 1.
+Persamaan garisnya adalah y = 3x + 1.
+Persamaan kuadrat berbentuk ax^2 + bx + c = 0 dengan a tidak sama dengan nol.
+Rumus kuadrat: x = (-b ± akar(b^2 - 4ac))/(2a).
+Contoh: x^2 - 5x + 6 = 0 memiliki akar x = 2 dan x = 3.
+Contoh: x^2 - 7x + 10 = 0 memiliki akar x = 2 dan x = 5.
+Contoh: x^2 - 4 = 0 memiliki akar x = 2 dan x = -2.
+Pemfaktoran bentuk x^2 + (p+q)x + pq = (x+p)(x+q).
+Contoh: x^2 + 5x + 6 = (x+2)(x+3).
+Contoh: x^2 + 7x + 12 = (x+3)(x+4).
+Contoh: x^2 - 9 = (x-3)(x+3).
+Menghitung kombinasi rumus berarti menggabungkan beberapa langkah secara berurutan.
+Contoh kombinasi: hitung luas persegi panjang 12 cm × 7 cm, lalu kurangi luas segitiga dengan alas 6 cm dan tinggi 5 cm.
+Luas persegi panjang = 12 × 7 = 84 cm persegi.
+Luas segitiga = 1/2 × 6 × 5 = 15 cm persegi.
+Luas sisa = 84 - 15 = 69 cm persegi.
+Contoh kombinasi: hitung keliling lingkaran berjari-jari 7 cm, lalu tambahkan 10 cm.
+Keliling lingkaran = 2 × 3,14 × 7 = 43,96 cm.
+Hasil akhir = 43,96 + 10 = 53,96 cm.
+Contoh kombinasi: hitung 25% dari 80, lalu tambahkan 15.
+25% dari 80 = 0,25 × 80 = 20.
+Hasil akhir = 20 + 15 = 35.
+Contoh kombinasi: hitung diskon 20% dari 150.000, lalu tambahkan biaya kirim 10.000.
+Diskon = 0,20 × 150.000 = 30.000.
+Harga setelah diskon = 150.000 - 30.000 = 120.000.
+Total bayar = 120.000 + 10.000 = 130.000.
+Contoh kombinasi: hitung mean dari data 4,6,8,10,12, lalu kalikan dengan 3.
+Jumlah data = 4+6+8+10+12 = 40.
+Mean = 40 ÷ 5 = 8.
+Hasil akhir = 8 × 3 = 24.
+Contoh kombinasi: hitung akar(16×25), lalu kurangi 5.
+akar(16×25) = akar(400) = 20.
+Hasil akhir = 20 - 5 = 15.
+Contoh kombinasi: hitung 2^3 × 2^2, lalu bagi 4.
+2^3 × 2^2 = 8 × 4 = 32.
+Hasil akhir = 32 ÷ 4 = 8.
+Contoh kombinasi: hitung sisi miring segitiga 6 dan 8, lalu tambahkan keliling persegi panjang 5×4.
+Sisi miring = akar(6^2 + 8^2) = akar(100) = 10.
+Keliling persegi panjang = 2 × (5+4) = 18.
+Hasil akhir = 10 + 18 = 28.
+Contoh kombinasi: hitung luas lingkaran r=10 dengan π=3,14, lalu bagi 2.
+Luas = 3,14 × 10 × 10 = 314.
+Hasil akhir = 314 ÷ 2 = 157.
+Contoh kombinasi: selesaikan 2x+3=11, lalu hitung x^2.
+2x+3=11 sehingga x=4.
+x^2 = 4^2 = 16.
+Contoh kombinasi: selesaikan 3x-5=10, lalu hitung 2x+1.
+3x-5=10 sehingga x=5.
+2x+1 = 2×5+1 = 11.
+Contoh kombinasi: hitung gradien titik (2,3) dan (6,11), lalu hitung nilai y pada x=10 untuk y=2x-1.
+Gradien = 2 dan persamaan y=2x-1.
+Pada x=10, y=2×10-1=19.
+Contoh kombinasi: hitung peluang dadu genap, lalu kalikan dengan 30.
+Peluang dadu genap = 1/2.
+Hasil = 1/2 × 30 = 15.
+Contoh kombinasi: hitung 15% dari 200, lalu kurangi 10.
+15% dari 200 = 30.
+Hasil akhir = 30 - 10 = 20.
+Contoh kombinasi: hitung perbandingan 2:3 dengan total 40, lalu tambahkan 4 pada bagian pertama.
+Bagian pertama = 16.
+Hasil akhir = 16 + 4 = 20.
+Contoh kombinasi: hitung median data 3,5,7,9,11, lalu kalikan 2.
+Median = 7.
+Hasil akhir = 7 × 2 = 14.
+Contoh kombinasi: hitung modus data 2,3,3,4,5, lalu tambahkan mean data.
+Modus = 3.
+Mean = (2+3+3+4+5) ÷ 5 = 17 ÷ 5 = 3,4.
+Hasil akhir = 3 + 3,4 = 6,4.
+Contoh kombinasi: hitung x dari x/4=5, lalu hitung x+12.
+x = 20.
+x+12 = 32.
+Contoh kombinasi: hitung 5^0 + 2^3, lalu bagi 3.
+5^0 = 1 dan 2^3 = 8.
+Hasil = (1+8) ÷ 3 = 3.
+Contoh kombinasi: hitung akar(49/64), lalu kalikan 8.
+akar(49/64) = 7/8.
+Hasil = 7/8 × 8 = 7.
+Contoh kombinasi: hitung luas segitiga alas 12 tinggi 9, lalu bagi 3.
+Luas = 1/2 × 12 × 9 = 54.
+Hasil = 54 ÷ 3 = 18.
+Contoh kombinasi: hitung keliling persegi panjang 10×6, lalu kurangi 8.
+Keliling = 2 × (10+6) = 32.
+Hasil = 32 - 8 = 24.
+Contoh kombinasi: hitung 3(x-2)=12, lalu hitung x^2 - 1.
+x = 6.
+x^2 - 1 = 36 - 1 = 35.
+Contoh kombinasi: hitung (4/2)^3, lalu tambahkan 2^2.
+(4/2)^3 = 2^3 = 8.
+2^2 = 4.
+Hasil = 8 + 4 = 12.
+Contoh kombinasi: hitung jarak (0,0) ke (3,4), lalu kalikan 3.
+Jarak = 5.
+Hasil = 5 × 3 = 15.
+Contoh kombinasi: hitung 20% dari 150, lalu bagi 3.
+20% dari 150 = 30.
+Hasil = 30 ÷ 3 = 10.
+Contoh kombinasi: hitung 2x + y = 11 dan x - y = 1, lalu hitung x × y.
+Penyelesaian x=4 dan y=3.
+x × y = 12.
+Contoh kombinasi: hitung x^2 - 5x + 6 = 0, lalu jumlahkan akar-akarnya.
+Akar x=2 dan x=3.
+Jumlah akar = 5.
+Contoh kombinasi: hitung (x+2)(x+3), lalu substitusi x=4.
+(x+2)(x+3) = x^2 + 5x + 6.
+Pada x=4, hasil = 16 + 20 + 6 = 42.
+Contoh kombinasi: hitung rata-rata 8,10,12, lalu tambahkan median data 6,8,10.
+Mean = (8+10+12) ÷ 3 = 10.
+Median 6,8,10 = 8.
+Hasil = 10 + 8 = 18.
+Contoh kombinasi: hitung peluang dadu lebih dari 4, lalu kalikan 18.
+Peluang = 1/3.
+Hasil = 1/3 × 18 = 6.
+Contoh kombinasi: hitung gradien (1,4) dan (3,10), lalu hitung y pada x=5 untuk y=3x+1.
+Gradien = 3.
+Pada x=5, y=3×5+1=16.
+Contoh kombinasi: hitung 2^3 × 2^2 ÷ 2^3.
+2^3 × 2^2 = 32.
+32 ÷ 8 = 4.
+Contoh kombinasi: hitung akar(225) + akar(144), lalu bagi 3.
+akar(225)=15 dan akar(144)=12.
+Hasil = (15+12) ÷ 3 = 9.
+Contoh kombinasi: hitung diskon 25% dari 80.000, lalu tambahkan 5.000.
+Diskon = 20.000.
+Harga setelah diskon = 60.000.
+Total = 60.000 + 5.000 = 65.000.
+Contoh kombinasi: hitung luas persegi panjang 15×8, lalu kurangi luas lingkaran r=7 dengan π=3,14.
+Luas persegi panjang = 120.
+Luas lingkaran = 153,86.
+Hasil = 120 - 153,86 = -33,86.
+Contoh kombinasi: hitung mean data 10,20,30,40,50, lalu bagi 5.
+Jumlah = 150 dan mean = 30.
+Hasil = 30 ÷ 5 = 6.
+Contoh kombinasi: hitung 3x + 6 = 21, lalu hitung x/3.
+3x = 15 sehingga x=5.
+x/3 = 5/3.
+Contoh kombinasi: hitung 4^2 + 3^2, lalu akarkan hasilnya.
+4^2 + 3^2 = 16+9=25.
+akar(25)=5.
+Contoh kombinasi: hitung 10% dari 250, lalu tambahkan 15% dari 200.
+10% dari 250 = 25.
+15% dari 200 = 30.
+Hasil = 55.
+Contoh kombinasi: hitung median data 4,8,6,10,12 setelah diurutkan.
+Data urut 4,6,8,10,12 sehingga median = 8.
+Jika median dikali 2, hasilnya 16.
+Contoh kombinasi: hitung modus data 7,8,8,9,10, lalu kurangi mean data.
+Modus = 8.
+Mean = (7+8+8+9+10) ÷ 5 = 42 ÷ 5 = 8,4.
+Hasil = 8 - 8,4 = -0,4.
+Contoh kombinasi: hitung persamaan y=2x-1 pada x=6, lalu bandingkan dengan 10.
+y=2×6-1=11.
+Selisih dengan 10 = 1.
+Contoh kombinasi: hitung (x+3)(x-3), lalu substitusi x=5.
+(x+3)(x-3)=x^2-9.
+Pada x=5, hasil = 25-9=16.
+Contoh kombinasi: hitung x^2 - 7x + 10 = 0, lalu kalikan akar-akarnya.
+Akar x=2 dan x=5.
+Hasil kali = 10.
+Contoh kombinasi: hitung 25% dari 120, lalu bagi 5.
+25% dari 120 = 30.
+Hasil = 30 ÷ 5 = 6.
+Contoh kombinasi: hitung keliling lingkaran r=14, lalu bulatkan ke satuan terdekat.
+Keliling = 2×3,14×14 = 87,92 cm.
+Pembulatan ke satuan terdekat = 88 cm.
+Contoh kombinasi: hitung luas segitiga alas 20 tinggi 15, lalu bagi 10.
+Luas = 1/2×20×15 = 150.
+Hasil = 150 ÷ 10 = 15.
+Contoh kombinasi: hitung 2^5, lalu kurangi 2^3.
+2^5 = 32 dan 2^3 = 8.
+Hasil = 24.
+Contoh kombinasi: hitung akar(81) × akar(49), lalu bagi 7.
+akar(81)=9 dan akar(49)=7.
+Hasil = (9×7) ÷ 7 = 9.
+Contoh kombinasi: hitung rata-rata 6,8,10,12, lalu tambahkan 3.
+Jumlah = 36 dan mean = 9.
+Hasil = 9 + 3 = 12.
+Contoh kombinasi: hitung peluang koin angka, lalu kalikan 40.
+Peluang = 1/2.
+Hasil = 20.
+Contoh kombinasi: hitung 3x - 4 = 11, lalu hitung x + 8.
+3x = 15 sehingga x=5.
+x+8 = 13.
+Contoh kombinasi: hitung 5(x+2)=35, lalu hitung x^2.
+x+2=7 sehingga x=5.
+x^2=25.
+Contoh kombinasi: hitung 2x + 3y = 12 jika y=2, lalu tentukan x.
+2x + 6 = 12 sehingga 2x=6 dan x=3.
+Contoh kombinasi: hitung x + y = 15 dan x - y = 5, lalu hitung x^2 - y^2.
+Penyelesaian x=10 dan y=5.
+x^2 - y^2 = 100 - 25 = 75.
+Contoh kombinasi: hitung jarak (1,2) ke (4,6), lalu kalikan 2.
+Jarak = akar((4-1)^2+(6-2)^2)=akar(9+16)=akar(25)=5.
+Hasil = 10.
+Contoh kombinasi: hitung 40% dari 250, lalu kurangi 25% dari 200.
+40% dari 250 = 100.
+25% dari 200 = 50.
+Hasil = 50.
+Contoh kombinasi: hitung luas lingkaran r=7, lalu bagi kelilingnya.
+Luas = 153,86 dan keliling = 43,96.
+Hasil = 153,86 ÷ 43,96 = 3,5.
+Contoh kombinasi: hitung 12^2, lalu kurangi 5^2.
+12^2 = 144 dan 5^2 = 25.
+Hasil = 119.
+Contoh kombinasi: hitung (8+4) ÷ 3, lalu tambahkan 2^3.
+(8+4) ÷ 3 = 4.
+2^3 = 8.
+Hasil = 12.
+Contoh kombinasi: hitung mean data 5,10,15,20,25, lalu kalikan 2.
+Jumlah = 75 dan mean = 15.
+Hasil = 30.
+Contoh kombinasi: hitung median data 11,13,15,17,19, lalu kurangi 5.
+Median = 15.
+Hasil = 10.
+Contoh kombinasi: hitung modus data 4,5,5,6,7, lalu tambahkan 10.
+Modus = 5.
+Hasil = 15.
+Contoh kombinasi: hitung peluang dadu angka 3, lalu kalikan 24.
+Peluang = 1/6.
+Hasil = 4.
+Contoh kombinasi: hitung y=3x+1 pada x=4, lalu kurangi 5.
+y=13.
+Hasil = 8.
+Contoh kombinasi: hitung (x-2)(x+5), lalu substitusi x=3.
+(x-2)(x+5)=x^2+3x-10.
+Pada x=3, hasil = 9+9-10=8.
+Contoh kombinasi: hitung x^2 - 9 = 0, lalu jumlahkan akar positifnya dengan 7.
+Akar x=3 dan x=-3.
+Akar positif = 3.
+Hasil = 3 + 7 = 10.
+Contoh kombinasi: hitung akar(64) + akar(36), lalu bagi 5.
+akar(64)=8 dan akar(36)=6.
+Hasil = (8+6) ÷ 5 = 2,8.
+Contoh kombinasi: hitung 2^4 + 3^2, lalu akarkan hasilnya.
+2^4=16 dan 3^2=9.
+Jumlah=25 dan akar=5.
+Contoh kombinasi: hitung 30% dari 90, lalu tambahkan 3.
+30% dari 90 = 27.
+Hasil = 30.
+Contoh kombinasi: hitung keliling persegi panjang 14×9, lalu bagi 2.
+Keliling = 2×(14+9)=46.
+Hasil = 23.
+Contoh kombinasi: hitung luas persegi panjang 18×5, lalu tambahkan luas segitiga alas 6 tinggi 4.
+Luas persegi panjang = 90.
+Luas segitiga = 12.
+Hasil = 102.
+Contoh kombinasi: hitung 5x+2=27, lalu hitung x^2+1.
+5x=25 sehingga x=5.
+x^2+1=26.
+Contoh kombinasi: hitung 2(x-3)=10, lalu hitung x+6.
+x-3=5 sehingga x=8.
+x+6=14.
+Contoh kombinasi: hitung 3x+4y=18 jika x=2, lalu tentukan y.
+6+4y=18 sehingga 4y=12 dan y=3.
+Contoh kombinasi: hitung x+y=20 dan x-y=4, lalu hitung x×y.
+Penyelesaian x=12 dan y=8.
+Hasil = 96.
+Contoh kombinasi: hitung gradien (0,0) dan (4,8), lalu hitung y pada x=3 untuk y=2x.
+Gradien = 2 dan persamaan y=2x.
+Pada x=3, y=6.
+Contoh kombinasi: hitung peluang dadu genap, lalu kurangi peluang dadu angka 1.
+Peluang genap = 1/2 dan peluang angka 1 = 1/6.
+Hasil = 1/2 - 1/6 = 1/3.
+Contoh kombinasi: hitung mean data 2,4,6,8,10, lalu tambahkan median data 1,3,5.
+Mean = 6 dan median = 3.
+Hasil = 9.
+Contoh kombinasi: hitung modus data 9,8,8,7,6, lalu kalikan 3.
+Modus = 8.
+Hasil = 24.
+Contoh kombinasi: hitung 4^3 ÷ 4^1, lalu tambahkan 7.
+4^3 ÷ 4^1 = 64 ÷ 4 = 16.
+Hasil = 23.
+Contoh kombinasi: hitung akar(196), lalu kurangi akar(100).
+akar(196)=14 dan akar(100)=10.
+Hasil = 4.
+Contoh kombinasi: hitung 15% dari 300, lalu bagi 9.
+15% dari 300 = 45.
+Hasil = 5.
+Contoh kombinasi: hitung luas lingkaran r=21 dengan π=22/7, lalu bagi 11.
+Luas = 22/7 × 21 × 21 = 1386.
+Hasil = 1386 ÷ 11 = 126.
+Contoh kombinasi: hitung keliling lingkaran r=21 dengan π=22/7, lalu kurangi 6.
+Keliling = 2 × 22/7 × 21 = 132.
+Hasil = 126.
+Contoh kombinasi: hitung sisi miring segitiga 9 dan 12, lalu tambahkan 5.
+Sisi miring = akar(81+144)=akar(225)=15.
+Hasil = 20.
+Contoh kombinasi: hitung 2^6, lalu kurangi 2^4.
+2^6=64 dan 2^4=16.
+Hasil = 48.
+Contoh kombinasi: hitung x^2 - 5x + 6 = 0, lalu hitung selisih akar-akarnya.
+Akar x=2 dan x=3.
+Selisih = 1.
+Contoh kombinasi: hitung (x+4)(x-1), lalu substitusi x=2.
+(x+4)(x-1)=x^2+3x-4.
+Pada x=2, hasil = 4+6-4=6.
+Contoh kombinasi: hitung 3x - 7 = 14, lalu hitung x/7.
+3x=21 sehingga x=7.
+x/7=1.
+Contoh kombinasi: hitung 2x+5=17, lalu hitung x^2 - 4.
+2x=12 sehingga x=6.
+x^2-4=36-4=32.
+Contoh kombinasi: hitung 5(x-1)=20, lalu hitung x+9.
+x-1=4 sehingga x=5.
+x+9=14.
+Contoh kombinasi: hitung x+y=18 dan x-y=6, lalu hitung x^2+y^2.
+Penyelesaian x=12 dan y=6.
+x^2+y^2=144+36=180.
+Contoh kombinasi: hitung rata-rata 5,7,9,11, lalu tambahkan 4.
+Jumlah=32 dan mean=8.
+Hasil=12.
+Contoh kombinasi: hitung median data 2,4,6,8,10, lalu bagi 2.
+Median=6.
+Hasil=3.
+Contoh kombinasi: hitung peluang koin gambar, lalu kalikan 50.
+Peluang=1/2.
+Hasil=25.
+Contoh kombinasi: hitung y=4x-3 pada x=2, lalu tambahkan 5.
+y=5.
+Hasil=10.
+Contoh kombinasi: hitung akar(144) + akar(81), lalu bagi 5.
+akar(144)=12 dan akar(81)=9.
+Hasil=(12+9)÷5=4,2.
+Contoh kombinasi: hitung 25% dari 200, lalu tambahkan 25% dari 400.
+25% dari 200=50.
+25% dari 400=100.
+Hasil=150.
+Contoh kombinasi: hitung luas persegi panjang 20×10, lalu kurangi luas segitiga alas 10 tinggi 8.
+Luas persegi panjang=200.
+Luas segitiga=40.
+Hasil=160.
+Contoh kombinasi: hitung keliling persegi panjang 20×10, lalu bagi 6.
+Keliling=2×(20+10)=60.
+Hasil=10.
+Contoh kombinasi: hitung 2^3 + 3^3, lalu akarkan hasilnya.
+2^3=8 dan 3^3=27.
+Jumlah=35 dan akar(35) tidak bulat.
+Contoh kombinasi: hitung 4^2 + 5^2, lalu akarkan hasilnya.
+4^2=16 dan 5^2=25.
+Jumlah=41 dan akar(41) tidak bulat.
+Contoh kombinasi: hitung 6^2 + 8^2, lalu akarkan hasilnya.
+6^2=36 dan 8^2=64.
+Jumlah=100 dan akar=10.
+Contoh kombinasi: hitung 5^2 + 12^2, lalu akarkan hasilnya.
+5^2=25 dan 12^2=144.
+Jumlah=169 dan akar=13.
+Contoh kombinasi: hitung 8^2 + 15^2, lalu akarkan hasilnya.
+8^2=64 dan 15^2=225.
+Jumlah=289 dan akar=17.
+Contoh kombinasi: hitung 7^2 + 24^2, lalu akarkan hasilnya.
+7^2=49 dan 24^2=576.
+Jumlah=625 dan akar=25.
+Contoh kombinasi: hitung 2(x+4)=18, lalu hitung x^2+2x.
+x+4=9 sehingga x=5.
+x^2+2x=25+10=35.
+Contoh kombinasi: hitung 3(x-2)=15, lalu hitung x^2-3x.
+x-2=5 sehingga x=7.
+x^2-3x=49-21=28.
+Contoh kombinasi: hitung x/5=6, lalu hitung 2x+8.
+x=30.
+2x+8=68.
+Contoh kombinasi: hitung 2x/5=8, lalu hitung x+7.
+2x=40 sehingga x=20.
+x+7=27.
+Contoh kombinasi: hitung 4x+3=19, lalu hitung 5x-2.
+4x=16 sehingga x=4.
+5x-2=18.
+Contoh kombinasi: hitung 6x-5=25, lalu hitung x/5.
+6x=30 sehingga x=5.
+x/5=1.
+Contoh kombinasi: hitung 7x+2=30, lalu hitung x^2.
+7x=28 sehingga x=4.
+x^2=16.
+Contoh kombinasi: hitung 8x-4=28, lalu hitung x+11.
+8x=32 sehingga x=4.
+x+11=15.
+Contoh kombinasi: hitung 9x+9=90, lalu hitung x/3.
+9x=81 sehingga x=9.
+x/3=3.
+Contoh kombinasi: hitung 10x-10=40, lalu hitung x^2-1.
+10x=50 sehingga x=5.
+x^2-1=24.

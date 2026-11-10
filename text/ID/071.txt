@@ -1,0 +1,196 @@
+Matematika adalah ilmu tentang bilangan, besaran, bentuk, pola, dan hubungan antarkonsep.
+Matematika membantu manusia menghitung, mengukur, membandingkan, dan menyelesaikan masalah.
+Matematika dasar mencakup pengenalan angka, operasi hitung, pengukuran, dan pola sederhana.
+Matematika digunakan dalam perdagangan, pengukuran, jadwal, dan kehidupan sehari-hari.
+Matematika melatih ketelitian dan kemampuan berpikir sistematis.
+Operasi hitung dasar dalam matematika meliputi pertambahan, pengurangan, perkalian, dan pembagian.
+Pembagian adalah salah satu operasi dasar dalam matematika.
+Pembagian digunakan untuk membagi suatu bilangan menjadi beberapa bagian sama banyak.
+Pembagian juga dapat dipandang sebagai kebalikan dari perkalian.
+Hasil pembagian disebut hasil bagi atau kuosien.
+Bilangan yang dibagi disebut bilangan yang dibagi atau dividen.
+Bilangan pembagi disebut pembagi atau divisor.
+Tanda pembagian dapat ditulis dengan simbol ÷ atau garis miring.
+Tanda sama dengan ditulis dengan simbol =.
+Rumus pembagian dasar adalah a ÷ b = c.
+Dalam rumus a ÷ b = c, a adalah bilangan yang dibagi, b adalah pembagi, dan c adalah hasil bagi.
+Jika pembagian tidak habis, terdapat sisa.
+Hubungan pembagian dan sisa ditulis a = b × c + sisa.
+Sisa pembagian selalu lebih kecil dari pembagi.
+Pembagian habis terjadi jika sisa pembagian sama dengan nol.
+Pembagian tidak habis terjadi jika sisa pembagian lebih besar dari nol.
+Pembagian tidak bersifat komutatif karena a ÷ b tidak selalu sama dengan b ÷ a.
+Contoh tidak komutatif: 12 ÷ 3 = 4, sedangkan 3 ÷ 12 bukan bilangan bulat.
+Pembagian tidak bersifat asosiatif karena (a ÷ b) ÷ c tidak selalu sama dengan a ÷ (b ÷ c).
+Setiap bilangan dibagi satu hasilnya bilangan itu sendiri.
+Contoh: 7 ÷ 1 = 7.
+Contoh: 25 ÷ 1 = 25.
+Nol dibagi dengan bilangan bukan nol hasilnya nol.
+Contoh: 0 ÷ 5 = 0.
+Contoh: 0 ÷ 12 = 0.
+Pembagian dengan nol tidak terdefinisi.
+Contoh: 5 ÷ 0 tidak memiliki hasil dalam bilangan biasa.
+Pembagian nol dengan nol juga tidak terdefinisi.
+Pembagian dapat diperiksa dengan perkalian.
+Jika a ÷ b = c, maka c × b = a.
+Contoh: karena 12 ÷ 3 = 4, maka 4 × 3 = 12.
+Contoh: karena 20 ÷ 5 = 4, maka 4 × 5 = 20.
+Pembagian bilangan positif dengan bilangan positif menghasilkan bilangan positif.
+Pembagian bilangan positif dengan bilangan negatif menghasilkan bilangan negatif.
+Pembagian bilangan negatif dengan bilangan positif menghasilkan bilangan negatif.
+Pembagian dua bilangan negatif menghasilkan bilangan positif.
+Contoh: 10 ÷ 2 = 5.
+Contoh: 10 ÷ (-2) = -5.
+Contoh: (-10) ÷ 2 = -5.
+Contoh: (-10) ÷ (-2) = 5.
+Pembagian dapat digunakan untuk mencari banyak kelompok yang sama.
+Jika 12 kelereng dibagi ke dalam 3 kelompok sama banyak, setiap kelompok berisi 4 kelereng.
+Pembagian dapat digunakan untuk mencari banyak anggota dalam setiap kelompok.
+Jika 15 buku dibagi rata kepada 5 anak, setiap anak mendapat 3 buku.
+Pembagian dapat digunakan untuk mencari harga satu barang.
+Jika 6 pensil berharga 24 ribu rupiah, harga satu pensil adalah 24 ÷ 6 = 4 ribu rupiah.
+Pembagian dapat digunakan untuk mencari panjang setiap bagian.
+Jika tali sepanjang 18 meter dibagi menjadi 3 bagian sama panjang, setiap bagian panjangnya 18 ÷ 3 = 6 meter.
+Pembagian dapat digunakan untuk mencari rata-rata sederhana.
+Jika jumlah 20 dibagi menjadi 4 bagian sama besar, setiap bagian bernilai 20 ÷ 4 = 5.
+Pembagian bilangan dua digit dapat dimulai dengan memahami perkalian terkait.
+Contoh: 18 ÷ 3 = 6 karena 6 × 3 = 18.
+Contoh: 24 ÷ 4 = 6 karena 6 × 4 = 24.
+Contoh: 30 ÷ 5 = 6 karena 6 × 5 = 30.
+Contoh: 36 ÷ 6 = 6 karena 6 × 6 = 36.
+Contoh: 42 ÷ 7 = 6 karena 6 × 7 = 42.
+Contoh: 48 ÷ 8 = 6 karena 6 × 8 = 48.
+Contoh: 54 ÷ 9 = 6 karena 6 × 9 = 54.
+Contoh: 60 ÷ 10 = 6 karena 6 × 10 = 60.
+Contoh: 21 ÷ 3 = 7 karena 7 × 3 = 21.
+Contoh: 28 ÷ 4 = 7 karena 7 × 4 = 28.
+Contoh: 35 ÷ 5 = 7 karena 7 × 5 = 35.
+Contoh: 42 ÷ 6 = 7 karena 7 × 6 = 42.
+Contoh: 49 ÷ 7 = 7 karena 7 × 7 = 49.
+Contoh: 56 ÷ 8 = 7 karena 7 × 8 = 56.
+Contoh: 63 ÷ 9 = 7 karena 7 × 9 = 63.
+Contoh: 70 ÷ 10 = 7 karena 7 × 10 = 70.
+Contoh: 16 ÷ 2 = 8 karena 8 × 2 = 16.
+Contoh: 24 ÷ 3 = 8 karena 8 × 3 = 24.
+Contoh: 32 ÷ 4 = 8 karena 8 × 4 = 32.
+Contoh: 40 ÷ 5 = 8 karena 8 × 5 = 40.
+Contoh: 48 ÷ 6 = 8 karena 8 × 6 = 48.
+Contoh: 56 ÷ 7 = 8 karena 8 × 7 = 56.
+Contoh: 64 ÷ 8 = 8 karena 8 × 8 = 64.
+Contoh: 72 ÷ 9 = 8 karena 8 × 9 = 72.
+Contoh: 80 ÷ 10 = 8 karena 8 × 10 = 80.
+Contoh: 18 ÷ 2 = 9 karena 9 × 2 = 18.
+Contoh: 27 ÷ 3 = 9 karena 9 × 3 = 27.
+Contoh: 36 ÷ 4 = 9 karena 9 × 4 = 36.
+Contoh: 45 ÷ 5 = 9 karena 9 × 5 = 45.
+Contoh: 54 ÷ 6 = 9 karena 9 × 6 = 54.
+Contoh: 63 ÷ 7 = 9 karena 9 × 7 = 63.
+Contoh: 72 ÷ 8 = 9 karena 9 × 8 = 72.
+Contoh: 81 ÷ 9 = 9 karena 9 × 9 = 81.
+Contoh: 90 ÷ 10 = 9 karena 9 × 10 = 90.
+Contoh: 20 ÷ 2 = 10 karena 10 × 2 = 20.
+Contoh: 30 ÷ 3 = 10 karena 10 × 3 = 30.
+Contoh: 40 ÷ 4 = 10 karena 10 × 4 = 40.
+Contoh: 50 ÷ 5 = 10 karena 10 × 5 = 50.
+Contoh: 60 ÷ 6 = 10 karena 10 × 6 = 60.
+Contoh: 70 ÷ 7 = 10 karena 10 × 7 = 70.
+Contoh: 80 ÷ 8 = 10 karena 10 × 8 = 80.
+Contoh: 90 ÷ 9 = 10 karena 10 × 9 = 90.
+Contoh: 100 ÷ 10 = 10 karena 10 × 10 = 100.
+Pembagian dengan sisa dapat ditulis dalam bentuk hasil bagi dan sisa.
+Contoh: 17 ÷ 5 = 3 sisa 2 karena 3 × 5 + 2 = 17.
+Contoh: 19 ÷ 4 = 4 sisa 3 karena 4 × 4 + 3 = 19.
+Contoh: 23 ÷ 6 = 3 sisa 5 karena 3 × 6 + 5 = 23.
+Contoh: 29 ÷ 7 = 4 sisa 1 karena 4 × 7 + 1 = 29.
+Contoh: 34 ÷ 8 = 4 sisa 2 karena 4 × 8 + 2 = 34.
+Contoh: 41 ÷ 9 = 4 sisa 5 karena 4 × 9 + 5 = 41.
+Contoh: 47 ÷ 10 = 4 sisa 7 karena 4 × 10 + 7 = 47.
+Contoh: 52 ÷ 6 = 8 sisa 4 karena 8 × 6 + 4 = 52.
+Contoh: 63 ÷ 8 = 7 sisa 7 karena 7 × 8 + 7 = 63.
+Contoh: 74 ÷ 9 = 8 sisa 2 karena 8 × 9 + 2 = 74.
+Contoh: 85 ÷ 10 = 8 sisa 5 karena 8 × 10 + 5 = 85.
+Contoh: 96 ÷ 7 = 13 sisa 5 karena 13 × 7 + 5 = 96.
+Pembagian bersusun membantu menyelesaikan pembagian bilangan besar.
+Pada pembagian bersusun, bagi angka dari nilai tempat tertinggi terlebih dahulu.
+Contoh pembagian bersusun: 84 ÷ 4.
+Delapan puluh dibagi 4 menghasilkan 20.
+Empat dibagi 4 menghasilkan 1.
+Hasil akhir 84 ÷ 4 = 21.
+Contoh pembagian bersusun: 96 ÷ 3.
+Sembilan puluh dibagi 3 menghasilkan 30.
+Enam dibagi 3 menghasilkan 2.
+Hasil akhir 96 ÷ 3 = 32.
+Contoh pembagian bersusun: 128 ÷ 4.
+Seratus dua puluh dibagi 4 menghasilkan 30.
+Delapan dibagi 4 menghasilkan 2.
+Hasil akhir 128 ÷ 4 = 32.
+Contoh pembagian bersusun: 156 ÷ 6.
+Seratus lima puluh dibagi 6 menghasilkan 25.
+Enam dibagi 6 menghasilkan 1.
+Hasil akhir 156 ÷ 6 = 26.
+Contoh pembagian bersusun: 225 ÷ 5.
+Dua ratus dibagi 5 menghasilkan 40.
+Dua puluh lima dibagi 5 menghasilkan 5.
+Hasil akhir 225 ÷ 5 = 45.
+Contoh pembagian bersusun: 312 ÷ 8.
+Tiga ratus dua puluh dibagi 8 menghasilkan 40.
+Delapan dibagi 8 menghasilkan 1.
+Hasil akhir 312 ÷ 8 = 39.
+Contoh pembagian bersusun: 432 ÷ 9.
+Empat ratus tiga puluh dua dibagi 9 menghasilkan 48.
+Hasil akhir 432 ÷ 9 = 48.
+Contoh pembagian bersusun: 504 ÷ 7.
+Empat ratus sembilan puluh dibagi 7 menghasilkan 70.
+Empat belas dibagi 7 menghasilkan 2.
+Hasil akhir 504 ÷ 7 = 72.
+Contoh pembagian bersusun: 625 ÷ 5.
+Enam ratus dibagi 5 menghasilkan 120.
+Dua puluh lima dibagi 5 menghasilkan 5.
+Hasil akhir 625 ÷ 5 = 125.
+Contoh pembagian bersusun: 738 ÷ 6.
+Tujuh ratus dua puluh dibagi 6 menghasilkan 120.
+Delapan belas dibagi 6 menghasilkan 3.
+Hasil akhir 738 ÷ 6 = 123.
+Pembagian dapat digunakan dalam soal cerita sederhana.
+Jika Ana memiliki 12 apel dan membaginya kepada 3 teman sama banyak, setiap teman mendapat 4 apel.
+Jika Budi memiliki 20 kelereng dan membaginya ke dalam 5 kantong sama banyak, setiap kantong berisi 4 kelereng.
+Jika Citra membaca 30 halaman dalam 6 hari sama banyak, setiap hari ia membaca 5 halaman.
+Jika Dedi berjalan 24 meter dalam 4 putaran sama panjang, setiap putaran sepanjang 6 meter.
+Jika Eka memiliki 36 buku dan menatanya dalam 6 rak sama banyak, setiap rak berisi 6 buku.
+Jika Fani memiliki 45 permen dan membaginya kepada 9 anak sama banyak, setiap anak mendapat 5 permen.
+Jika Gilang menabung 60 ribu rupiah selama 5 minggu sama banyak, setiap minggu ia menabung 12 ribu rupiah.
+Jika Hana mengumpulkan 72 stiker dan menempelkannya pada 8 halaman sama banyak, setiap halaman berisi 9 stiker.
+Jika Irfan menjual 84 roti dalam 7 hari sama banyak, setiap hari ia menjual 12 roti.
+Jika Jihan memiliki 96 bunga dan membaginya ke dalam 12 vas sama banyak, setiap vas berisi 8 bunga.
+Pembagian dapat digunakan untuk menghitung banyak kemasan.
+Jika 48 kue dimasukkan ke dalam kemasan berisi 6 kue, jumlah kemasan adalah 48 ÷ 6 = 8.
+Jika 56 pensil dimasukkan ke dalam kotak berisi 8 pensil, jumlah kotak adalah 56 ÷ 8 = 7.
+Jika 63 buku disusun dalam tumpukan berisi 9 buku, jumlah tumpukan adalah 63 ÷ 9 = 7.
+Jika 72 botol dimasukkan ke dalam keranjang berisi 12 botol, jumlah keranjang adalah 72 ÷ 12 = 6.
+Pembagian dapat digunakan untuk mencari waktu yang diperlukan.
+Jika jarak 60 km ditempuh dengan kecepatan 15 km per jam, waktu yang diperlukan adalah 60 ÷ 15 = 4 jam.
+Jika 80 halaman dibaca dengan kecepatan 10 halaman per hari, waktu yang diperlukan adalah 80 ÷ 10 = 8 hari.
+Pembagian dapat digunakan untuk mencari kecepatan rata-rata sederhana.
+Jika jarak 100 km ditempuh dalam 2 jam, kecepatan rata-ratanya adalah 100 ÷ 2 = 50 km per jam.
+Jika jarak 120 meter ditempuh dalam 4 menit, kecepatan rata-ratanya adalah 120 ÷ 4 = 30 meter per menit.
+Pembagian dapat digunakan untuk mencari banyak baris atau kolom.
+Jika 36 kursi disusun dalam 6 baris sama banyak, setiap baris berisi 36 ÷ 6 = 6 kursi.
+Jika 40 tanaman disusun dalam 5 baris sama banyak, setiap baris berisi 40 ÷ 5 = 8 tanaman.
+Pembagian dapat digunakan untuk mencari harga satuan.
+Jika 8 buku berharga 64 ribu rupiah, harga satu buku adalah 64 ÷ 8 = 8 ribu rupiah.
+Jika 12 pensil berharga 36 ribu rupiah, harga satu pensil adalah 36 ÷ 12 = 3 ribu rupiah.
+Pembagian dapat digunakan untuk mencari berat satuan.
+Jika 5 kantong berisi total 20 kg, berat satu kantong adalah 20 ÷ 5 = 4 kg.
+Jika 9 kotak berisi total 72 kg, berat satu kotak adalah 72 ÷ 9 = 8 kg.
+Pembagian dapat digunakan untuk mencari panjang satuan.
+Jika 7 potong tali total panjangnya 42 meter, panjang satu potong adalah 42 ÷ 7 = 6 meter.
+Jika 8 pita total panjangnya 96 cm, panjang satu pita adalah 96 ÷ 8 = 12 cm.
+Latihan pembagian sebaiknya dimulai dari pembagian habis dengan bilangan kecil.
+Setelah pembagian habis dikuasai, latihan dapat dilanjutkan dengan pembagian bersisa.
+Setelah pembagian bersisa, latihan dapat dilanjutkan dengan pembagian bilangan dua digit.
+Setelah dua digit, latihan dapat dilanjutkan dengan pembagian bilangan tiga digit.
+Membaca soal dengan teliti membantu menentukan bilangan yang dibagi dan pembagi.
+Menuliskan langkah pembagian membantu mengurangi kesalahan.
+Memeriksa hasil pembagian dengan perkalian adalah kebiasaan yang baik.
+Jika ada sisa, pemeriksaan dilakukan dengan mengalikan hasil bagi dan pembagi lalu menambahkan sisa.
+Dengan memahami rumus a ÷ b = c dan hubungan a = b × c + sisa, pembagian dapat dilakukan secara sistematis.

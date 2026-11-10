@@ -1,0 +1,323 @@
+Matematika adalah ilmu tentang bilangan, besaran, bentuk, pola, dan hubungan antarkonsep.
+Matematika membantu manusia menghitung, mengukur, membandingkan, dan menyelesaikan masalah.
+Matematika dasar mencakup pengenalan angka, operasi hitung, pengukuran, dan pola sederhana.
+Pertambahan adalah salah satu operasi dasar dalam matematika.
+Pertambahan menggabungkan dua bilangan atau lebih menjadi satu jumlah.
+Hasil pertambahan disebut jumlah atau total.
+Bilangan yang ditambahkan disebut suku atau angka yang dijumlahkan.
+Tanda pertambahan ditulis dengan simbol +.
+Tanda sama dengan ditulis dengan simbol =.
+Rumus pertambahan dasar adalah a + b = c.
+Dalam rumus a + b = c, a dan b adalah bilangan yang dijumlahkan, sedangkan c adalah hasilnya.
+Pertambahan bersifat komutatif, artinya a + b = b + a.
+Contoh komutatif: 2 + 3 = 3 + 2.
+Pertambahan bersifat asosiatif, artinya (a + b) + c = a + (b + c).
+Contoh asosiatif: (1 + 2) + 3 = 1 + (2 + 3).
+Pertambahan memiliki unsur identitas, yaitu nol.
+Setiap bilangan ditambah nol hasilnya bilangan itu sendiri.
+Contoh identitas: 5 + 0 = 5.
+Contoh identitas: 12 + 0 = 12.
+Pertambahan dengan bilangan positif akan menambah nilai.
+Pertambahan dengan bilangan negatif akan mengurangi nilai.
+Contoh: 5 + (-2) = 3.
+Pertambahan dapat dilakukan dengan menghitung maju.
+Untuk menghitung 4 + 3, mulai dari 4 lalu maju tiga langkah: 5, 6, 7.
+Hasil 4 + 3 adalah 7.
+Untuk menghitung 6 + 2, mulai dari 6 lalu maju dua langkah: 7, 8.
+Hasil 6 + 2 adalah 8.
+Untuk menghitung 9 + 1, mulai dari 9 lalu maju satu langkah: 10.
+Hasil 9 + 1 adalah 10.
+Pertambahan dapat dibantu dengan garis bilangan.
+Pada garis bilangan, pertambahan berarti bergerak ke kanan.
+Mengurangi berarti bergerak ke kiri pada garis bilangan.
+Pertambahan dapat dipecah menjadi bagian yang lebih mudah.
+Contoh: 7 + 5 dapat dipecah menjadi 7 + 3 + 2.
+Tujuh ditambah tiga sama dengan sepuluh, lalu sepuluh ditambah dua sama dengan dua belas.
+Jadi, 7 + 5 = 12.
+Contoh lain: 8 + 7 dapat dipecah menjadi 8 + 2 + 5.
+Delapan ditambah dua sama dengan sepuluh, lalu sepuluh ditambah lima sama dengan lima belas.
+Jadi, 8 + 7 = 15.
+Pertambahan dapat menggunakan pasangan bilangan yang membentuk sepuluh.
+Pasangan yang membentuk sepuluh antara lain 1 + 9, 2 + 8, 3 + 7, 4 + 6, dan 5 + 5.
+Pasangan sepuluh membantu menghitung lebih cepat.
+Contoh: 6 + 7 = 6 + 4 + 3 = 10 + 3 = 13.
+Contoh: 9 + 6 = 9 + 1 + 5 = 10 + 5 = 15.
+Pertambahan bilangan satu digit dapat dilatih dengan sering berlatih.
+1 + 1 = 2.
+1 + 2 = 3.
+1 + 3 = 4.
+1 + 4 = 5.
+1 + 5 = 6.
+1 + 6 = 7.
+1 + 7 = 8.
+1 + 8 = 9.
+1 + 9 = 10.
+2 + 1 = 3.
+2 + 2 = 4.
+2 + 3 = 5.
+2 + 4 = 6.
+2 + 5 = 7.
+2 + 6 = 8.
+2 + 7 = 9.
+2 + 8 = 10.
+2 + 9 = 11.
+3 + 1 = 4.
+3 + 2 = 5.
+3 + 3 = 6.
+3 + 4 = 7.
+3 + 5 = 8.
+3 + 6 = 9.
+3 + 7 = 10.
+3 + 8 = 11.
+3 + 9 = 12.
+4 + 1 = 5.
+4 + 2 = 6.
+4 + 3 = 7.
+4 + 4 = 8.
+4 + 5 = 9.
+4 + 6 = 10.
+4 + 7 = 11.
+4 + 8 = 12.
+4 + 9 = 13.
+5 + 1 = 6.
+5 + 2 = 7.
+5 + 3 = 8.
+5 + 4 = 9.
+5 + 5 = 10.
+5 + 6 = 11.
+5 + 7 = 12.
+5 + 8 = 13.
+5 + 9 = 14.
+6 + 1 = 7.
+6 + 2 = 8.
+6 + 3 = 9.
+6 + 4 = 10.
+6 + 5 = 11.
+6 + 6 = 12.
+6 + 7 = 13.
+6 + 8 = 14.
+6 + 9 = 15.
+7 + 1 = 8.
+7 + 2 = 9.
+7 + 3 = 10.
+7 + 4 = 11.
+7 + 5 = 12.
+7 + 6 = 13.
+7 + 7 = 14.
+7 + 8 = 15.
+7 + 9 = 16.
+8 + 1 = 9.
+8 + 2 = 10.
+8 + 3 = 11.
+8 + 4 = 12.
+8 + 5 = 13.
+8 + 6 = 14.
+8 + 7 = 15.
+8 + 8 = 16.
+8 + 9 = 17.
+9 + 1 = 10.
+9 + 2 = 11.
+9 + 3 = 12.
+9 + 4 = 13.
+9 + 5 = 14.
+9 + 6 = 15.
+9 + 7 = 16.
+9 + 8 = 17.
+9 + 9 = 18.
+Pertambahan bilangan dua digit dapat disusun berdasarkan nilai tempat.
+Contoh: 12 + 23.
+Satuan ditambah satuan: 2 + 3 = 5.
+Puluhan ditambah puluhan: 10 + 20 = 30.
+Hasil akhir: 30 + 5 = 35.
+Jadi, 12 + 23 = 35.
+Contoh: 24 + 15.
+Satuan: 4 + 5 = 9.
+Puluhan: 20 + 10 = 30.
+Hasil akhir: 30 + 9 = 39.
+Jadi, 24 + 15 = 39.
+Contoh: 36 + 21.
+Satuan: 6 + 1 = 7.
+Puluhan: 30 + 20 = 50.
+Hasil akhir: 50 + 7 = 57.
+Jadi, 36 + 21 = 57.
+Contoh: 47 + 32.
+Satuan: 7 + 2 = 9.
+Puluhan: 40 + 30 = 70.
+Hasil akhir: 70 + 9 = 79.
+Jadi, 47 + 32 = 79.
+Contoh: 58 + 24.
+Satuan: 8 + 4 = 12.
+Tulis 2 pada satuan dan simpan 1 puluhan.
+Puluhan: 50 + 20 + 10 = 80.
+Hasil akhir: 80 + 2 = 82.
+Jadi, 58 + 24 = 82.
+Contoh: 69 + 18.
+Satuan: 9 + 8 = 17.
+Tulis 7 pada satuan dan simpan 1 puluhan.
+Puluhan: 60 + 10 + 10 = 80.
+Hasil akhir: 80 + 7 = 87.
+Jadi, 69 + 18 = 87.
+Contoh: 75 + 16.
+Satuan: 5 + 6 = 11.
+Tulis 1 pada satuan dan simpan 1 puluhan.
+Puluhan: 70 + 10 + 10 = 90.
+Hasil akhir: 90 + 1 = 91.
+Jadi, 75 + 16 = 91.
+Contoh: 83 + 29.
+Satuan: 3 + 9 = 12.
+Tulis 2 pada satuan dan simpan 1 puluhan.
+Puluhan: 80 + 20 + 10 = 110.
+Hasil akhir: 110 + 2 = 112.
+Jadi, 83 + 29 = 112.
+Contoh: 96 + 47.
+Satuan: 6 + 7 = 13.
+Tulis 3 pada satuan dan simpan 1 puluhan.
+Puluhan: 90 + 40 + 10 = 140.
+Hasil akhir: 140 + 3 = 143.
+Jadi, 96 + 47 = 143.
+Pertambahan dapat digunakan dalam soal cerita sederhana.
+Jika Ana memiliki 3 apel dan diberi 2 apel, jumlah apel Ana adalah 3 + 2 = 5.
+Jika Budi memiliki 4 kelereng dan membeli 5 kelereng, jumlah kelereng Budi adalah 4 + 5 = 9.
+Jika Citra membaca 6 halaman pada pagi hari dan 7 halaman pada sore hari, jumlah halaman yang dibaca adalah 6 + 7 = 13.
+Jika Dedi berjalan 8 meter lalu 9 meter, total jarak yang ditempuh adalah 8 + 9 = 17 meter.
+Jika Eka menyimpan 10 buku dan mendapat 5 buku lagi, jumlah buku Eka adalah 10 + 5 = 15.
+Jika Fani memiliki 12 permen dan diberi 8 permen, jumlah permen Fani adalah 12 + 8 = 20.
+Jika Gilang menabung 25 ribu rupiah lalu 15 ribu rupiah, total tabungannya adalah 25 + 15 = 40 ribu rupiah.
+Jika Hana mengumpulkan 30 stiker lalu 27 stiker, jumlah stiker Hana adalah 30 + 27 = 57.
+Jika Irfan menjual 18 roti lalu 24 roti, jumlah roti yang terjual adalah 18 + 24 = 42.
+Jika Jihan memiliki 35 bunga dan menambah 19 bunga, jumlah bunga Jihan adalah 35 + 19 = 54.
+Pertambahan dapat ditulis dalam susunan bersusun.
+Susunan bersusun membantu merapikan penjumlahan berdasarkan satuan, puluhan, dan ratusan.
+Contoh susunan: 23 + 45.
+Satuan: 3 + 5 = 8.
+Puluhan: 2 + 4 = 6.
+Hasil: 68.
+Jadi, 23 + 45 = 68.
+Contoh susunan: 56 + 37.
+Satuan: 6 + 7 = 13, tulis 3 simpan 1.
+Puluhan: 5 + 3 + 1 = 9.
+Hasil: 93.
+Jadi, 56 + 37 = 93.
+Contoh susunan: 128 + 46.
+Satuan: 8 + 6 = 14, tulis 4 simpan 1.
+Puluhan: 2 + 4 + 1 = 7.
+Ratusan: 1 + 0 = 1.
+Hasil: 174.
+Jadi, 128 + 46 = 174.
+Contoh susunan: 245 + 137.
+Satuan: 5 + 7 = 12, tulis 2 simpan 1.
+Puluhan: 4 + 3 + 1 = 8.
+Ratusan: 2 + 1 = 3.
+Hasil: 382.
+Jadi, 245 + 137 = 382.
+Contoh susunan: 309 + 286.
+Satuan: 9 + 6 = 15, tulis 5 simpan 1.
+Puluhan: 0 + 8 + 1 = 9.
+Ratusan: 3 + 2 = 5.
+Hasil: 595.
+Jadi, 309 + 286 = 595.
+Contoh susunan: 478 + 365.
+Satuan: 8 + 5 = 13, tulis 3 simpan 1.
+Puluhan: 7 + 6 + 1 = 14, tulis 4 simpan 1.
+Ratusan: 4 + 3 + 1 = 8.
+Hasil: 843.
+Jadi, 478 + 365 = 843.
+Contoh susunan: 625 + 289.
+Satuan: 5 + 9 = 14, tulis 4 simpan 1.
+Puluhan: 2 + 8 + 1 = 11, tulis 1 simpan 1.
+Ratusan: 6 + 2 + 1 = 9.
+Hasil: 914.
+Jadi, 625 + 289 = 914.
+Contoh susunan: 784 + 158.
+Satuan: 4 + 8 = 12, tulis 2 simpan 1.
+Puluhan: 8 + 5 + 1 = 14, tulis 4 simpan 1.
+Ratusan: 7 + 1 + 1 = 9.
+Hasil: 942.
+Jadi, 784 + 158 = 942.
+Pertambahan dapat diperiksa dengan cara mengubah urutan bilangan.
+Karena pertambahan bersifat komutatif, 23 + 45 harus sama dengan 45 + 23.
+Hasil 45 + 23 adalah 68, sama dengan hasil 23 + 45.
+Pemeriksaan membantu mengurangi kesalahan hitung.
+Pertambahan juga dapat diperiksa dengan pengurangan.
+Jika a + b = c, maka c - b = a dan c - a = b.
+Contoh: karena 12 + 8 = 20, maka 20 - 8 = 12 dan 20 - 12 = 8.
+Pertambahan bilangan besar tetap mengikuti aturan nilai tempat.
+Pertambahan dapat dilakukan dari satuan terlebih dahulu, lalu puluhan, ratusan, dan seterusnya.
+Jika hasil satuan lebih dari sembilan, simpan satu ke nilai tempat berikutnya.
+Menyimpan satu disebut teknik menyimpan atau carrying.
+Teknik menyimpan membantu menjaga nilai tempat tetap benar.
+Pertambahan tanpa menyimpan terjadi jika jumlah setiap nilai tempat kurang dari sepuluh.
+Contoh tanpa menyimpan: 14 + 23 = 37.
+Pertambahan dengan menyimpan terjadi jika jumlah suatu nilai tempat sepuluh atau lebih.
+Contoh dengan menyimpan: 27 + 15 = 42.
+Pertambahan dapat dilatih dengan pola bilangan.
+Pola pertambahan satu: 1, 2, 3, 4, 5.
+Pola pertambahan dua: 2, 4, 6, 8, 10.
+Pola pertambahan lima: 5, 10, 15, 20, 25.
+Pola pertambahan sepuluh: 10, 20, 30, 40, 50.
+Pola membantu memperkirakan hasil pertambahan berikutnya.
+Pertambahan sering digunakan dalam kehidupan sehari-hari.
+Pertambahan digunakan saat menghitung uang belanja.
+Pertambahan digunakan saat menghitung jumlah barang.
+Pertambahan digunakan saat mengukur total jarak.
+Pertambahan digunakan saat menjumlahkan waktu.
+Pertambahan digunakan saat menggabungkan data dalam tabel.
+Pertambahan adalah keterampilan dasar yang penting sebelum mempelajari operasi lain.
+Pengurangan adalah operasi kebalikan dari pertambahan.
+Perkalian dapat dipandang sebagai pertambahan berulang.
+Contoh: 3 × 4 sama dengan 4 + 4 + 4 = 12.
+Pemahaman pertambahan membantu memahami perkalian.
+Pemahaman pertambahan membantu memahami pola dan aljabar sederhana.
+Untuk mengajarkan pertambahan, mulai dari benda konkret seperti kelereng atau jari.
+Setelah benda konkret, gunakan gambar, garis bilangan, lalu lambang angka.
+Latihan rutin dengan contoh bervariasi membantu memperkuat pemahaman.
+Kesalahan umum dalam pertambahan adalah lupa menyimpan saat hasil satuan lebih dari sembilan.
+Kesalahan lain adalah salah menempatkan nilai tempat.
+Memeriksa ulang hasil pertambahan penting dilakukan.
+Pertambahan dapat ditulis mendatar, misalnya 18 + 27 = 45.
+Pertambahan dapat ditulis bersusun, misalnya satuan di bawah satuan dan puluhan di bawah puluhan.
+Hasil pertambahan selalu berupa satu bilangan total.
+Pertambahan tidak mengubah jenis benda yang dijumlahkan.
+Tiga apel ditambah dua apel menghasilkan lima apel, bukan lima jeruk.
+Satuan benda perlu diperhatikan dalam soal cerita.
+Pertambahan bilangan cacah selalu menghasilkan bilangan cacah.
+Pertambahan bilangan bulat dapat menghasilkan bilangan positif, nol, atau negatif.
+Contoh: -3 + 5 = 2.
+Contoh: -4 + 1 = -3.
+Contoh: -2 + (-3) = -5.
+Pertambahan dengan nol tidak mengubah nilai bilangan.
+Pertambahan dapat dilakukan dengan mengelompokkan bilangan yang mudah dijumlahkan.
+Contoh: 17 + 8 + 3 dapat dikelompokkan menjadi 17 + 3 + 8.
+17 + 3 = 20, lalu 20 + 8 = 28.
+Jadi, 17 + 8 + 3 = 28.
+Contoh: 14 + 9 + 6 dapat dikelompokkan menjadi 14 + 6 + 9.
+14 + 6 = 20, lalu 20 + 9 = 29.
+Jadi, 14 + 9 + 6 = 29.
+Contoh: 21 + 15 + 9 dapat dihitung sebagai 21 + 15 = 36, lalu 36 + 9 = 45.
+Jadi, 21 + 15 + 9 = 45.
+Contoh: 32 + 18 + 25 dapat dihitung sebagai 32 + 18 = 50, lalu 50 + 25 = 75.
+Jadi, 32 + 18 + 25 = 75.
+Contoh: 46 + 24 + 17 dapat dihitung sebagai 46 + 24 = 70, lalu 70 + 17 = 87.
+Jadi, 46 + 24 + 17 = 87.
+Contoh: 53 + 27 + 19 dapat dihitung sebagai 53 + 27 = 80, lalu 80 + 19 = 99.
+Jadi, 53 + 27 + 19 = 99.
+Contoh: 64 + 36 + 28 dapat dihitung sebagai 64 + 36 = 100, lalu 100 + 28 = 128.
+Jadi, 64 + 36 + 28 = 128.
+Contoh: 71 + 29 + 45 dapat dihitung sebagai 71 + 29 = 100, lalu 100 + 45 = 145.
+Jadi, 71 + 29 + 45 = 145.
+Contoh: 85 + 15 + 37 dapat dihitung sebagai 85 + 15 = 100, lalu 100 + 37 = 137.
+Jadi, 85 + 15 + 37 = 137.
+Contoh: 92 + 8 + 54 dapat dihitung sebagai 92 + 8 = 100, lalu 100 + 54 = 154.
+Jadi, 92 + 8 + 54 = 154.
+Pertambahan dapat digunakan untuk memeriksa kewajaran hasil.
+Jika menjumlahkan dua bilangan positif, hasilnya harus lebih besar dari kedua bilangan tersebut.
+Contoh: 25 + 17 harus lebih besar dari 25 dan lebih besar dari 17.
+Hasil 25 + 17 = 42, sehingga hasil tersebut wajar.
+Jika menjumlahkan bilangan positif dan negatif, hasil dapat lebih kecil dari bilangan positifnya.
+Contoh: 20 + (-5) = 15.
+Pertambahan adalah keterampilan yang dapat ditingkatkan dengan latihan teratur.
+Latihan dimulai dari bilangan kecil, lalu meningkat ke bilangan yang lebih besar.
+Membaca soal dengan teliti membantu menentukan bilangan yang perlu dijumlahkan.
+Menuliskan langkah hitung membantu mengurangi kesalahan.
+Memeriksa kembali hasil adalah bagian penting dari proses menghitung.
+Dengan memahami rumus a + b = c dan nilai tempat, pertambahan dapat dilakukan secara sistematis.

@@ -1,0 +1,240 @@
+Angka adalah lambang tertulis yang digunakan untuk menyatakan jumlah, urutan, atau nilai.
+Bilangan adalah konsep nilai yang dapat diwakili oleh angka.
+Angka nol ditulis dengan lambang 0 dan menyatakan tidak ada jumlah.
+Angka satu ditulis dengan lambang 1 dan menyatakan satu satuan.
+Angka dua ditulis dengan lambang 2 dan menyatakan dua satuan.
+Angka tiga ditulis dengan lambang 3 dan menyatakan tiga satuan.
+Angka empat ditulis dengan lambang 4 dan menyatakan empat satuan.
+Angka lima ditulis dengan lambang 5 dan menyatakan lima satuan.
+Angka enam ditulis dengan lambang 6 dan menyatakan enam satuan.
+Angka tujuh ditulis dengan lambang 7 dan menyatakan tujuh satuan.
+Angka delapan ditulis dengan lambang 8 dan menyatakan delapan satuan.
+Angka sembilan ditulis dengan lambang 9 dan menyatakan sembilan satuan.
+Sepuluh angka dasar dari 0 sampai 9 disebut digit.
+Digit dapat digabungkan menjadi angka yang lebih besar, seperti 10, 25, atau 307.
+Urutan angka menunjukkan posisi, misalnya pertama, kedua, dan ketiga.
+Angka dapat menyatakan banyak benda, seperti tiga buku atau lima kursi.
+Angka dapat menyatakan ukuran, seperti panjang 2 meter atau berat 3 kilogram.
+Angka dapat menyatakan waktu, seperti pukul 07.30 atau tahun 2024.
+Angka positif lebih besar dari nol, misalnya 1, 4, dan 12.
+Angka negatif lebih kecil dari nol, misalnya -1, -5, dan -20.
+Nol bukan angka positif dan bukan angka negatif.
+Bilangan bulat mencakup bilangan negatif, nol, dan bilangan positif.
+Bilangan genap habis dibagi dua, misalnya 2, 4, 6, dan 8.
+Bilangan ganjil tidak habis dibagi dua, misalnya 1, 3, 5, dan 7.
+Penjumlahan menggabungkan nilai, misalnya 2 + 3 = 5.
+Pengurangan mencari selisih, misalnya 7 - 4 = 3.
+Perkalian mengulang penjumlahan, misalnya 3 × 4 = 12.
+Pembagian membagi nilai menjadi bagian sama, misalnya 8 ÷ 2 = 4.
+Tanda sama dengan (=) menyatakan dua nilai setara.
+Angka dapat ditulis dalam kata, misalnya 5 ditulis lima.
+Angka dapat ditulis dalam bentuk lambang, misalnya lima ditulis 5.
+Angka Romawi menggunakan lambang seperti I, V, X, L, C, D, dan M.
+Angka Arab adalah lambang 0 sampai 9 yang umum dipakai dalam penulisan modern.
+Pecahan menyatakan bagian dari keseluruhan, misalnya 1/2 atau 3/4.
+Desimal menggunakan tanda koma atau titik sesuai kebiasaan penulisan, misalnya 0,5 atau 0.5.
+Persen menyatakan perbandingan dari seratus, misalnya 50% berarti lima puluh per seratus.
+Angka dapat diurutkan dari terkecil ke terbesar.
+Angka dapat diurutkan dari terbesar ke terkecil.
+Garis bilangan membantu menunjukkan posisi angka positif dan negatif.
+Angka nol berperan penting dalam sistem nilai tempat.
+Nilai tempat satuan, puluhan, ratusan, dan seterusnya menentukan nilai digit.
+Pada angka 345, digit 3 bernilai tiga ratus, digit 4 bernilai empat puluh, dan digit 5 bernilai lima.
+Angka dapat digunakan untuk memberi nomor pada halaman, rumah, atau antrean.
+Angka dapat digunakan untuk mengukur suhu, misalnya 30 derajat Celsius.
+Angka dapat digunakan untuk menyatakan skor, misalnya skor pertandingan 2-1.
+Angka dapat digunakan untuk menyatakan kode, misalnya kode pos atau nomor telepon.
+Angka tidak sama dengan huruf meskipun keduanya dapat muncul dalam tulisan.
+Angka dapat dibaca dengan nilai tempatnya, misalnya 206 dibaca dua ratus enam.
+Angka dapat ditulis dengan pemisah ribuan, misalnya 1.000 atau 1,000 sesuai kebiasaan.
+Angka dapat muncul dalam tanggal, misalnya 17 Agustus 1945.
+Angka dapat muncul dalam alamat, misalnya Jalan Merdeka Nomor 10.
+Angka dapat muncul dalam resep, misalnya 200 gram tepung.
+Angka dapat muncul dalam jadwal, misalnya kereta berangkat pukul 08.15.
+Angka dapat membantu membandingkan jumlah, mana yang lebih banyak atau lebih sedikit.
+Angka dapat membantu menghitung benda satu per satu.
+Angka dapat membantu menyusun data dalam tabel.
+Angka dapat membantu membuat pola, misalnya 2, 4, 6, 8.
+Angka dapat membantu menyatakan peringkat, misalnya juara 1, juara 2, dan juara 3.
+Angka adalah bagian penting dari matematika, pengukuran, dan kehidupan sehari-hari.
+Memahami angka membantu membaca informasi yang mengandung jumlah dan nilai.
+Alfabet adalah kumpulan huruf yang digunakan untuk menulis suatu bahasa.
+Huruf adalah lambang tertulis yang mewakili bunyi dalam bahasa.
+Alfabet Indonesia menggunakan 26 huruf dasar dari A sampai Z.
+Huruf A adalah huruf pertama dalam alfabet Indonesia.
+Huruf B adalah huruf kedua dalam alfabet Indonesia.
+Huruf C adalah huruf ketiga dalam alfabet Indonesia.
+Huruf D adalah huruf keempat dalam alfabet Indonesia.
+Huruf E adalah huruf kelima dalam alfabet Indonesia.
+Huruf F adalah huruf keenam dalam alfabet Indonesia.
+Huruf G adalah huruf ketujuh dalam alfabet Indonesia.
+Huruf H adalah huruf kedelapan dalam alfabet Indonesia.
+Huruf I adalah huruf kesembilan dalam alfabet Indonesia.
+Huruf J adalah huruf kesepuluh dalam alfabet Indonesia.
+Huruf K adalah huruf kesebelas dalam alfabet Indonesia.
+Huruf L adalah huruf kedua belas dalam alfabet Indonesia.
+Huruf M adalah huruf ketiga belas dalam alfabet Indonesia.
+Huruf N adalah huruf keempat belas dalam alfabet Indonesia.
+Huruf O adalah huruf kelima belas dalam alfabet Indonesia.
+Huruf P adalah huruf keenam belas dalam alfabet Indonesia.
+Huruf Q adalah huruf ketujuh belas dalam alfabet Indonesia.
+Huruf R adalah huruf kedelapan belas dalam alfabet Indonesia.
+Huruf S adalah huruf kesembilan belas dalam alfabet Indonesia.
+Huruf T adalah huruf kedua puluh dalam alfabet Indonesia.
+Huruf U adalah huruf kedua puluh satu dalam alfabet Indonesia.
+Huruf V adalah huruf kedua puluh dua dalam alfabet Indonesia.
+Huruf W adalah huruf kedua puluh tiga dalam alfabet Indonesia.
+Huruf X adalah huruf kedua puluh empat dalam alfabet Indonesia.
+Huruf Y adalah huruf kedua puluh lima dalam alfabet Indonesia.
+Huruf Z adalah huruf kedua puluh enam dalam alfabet Indonesia.
+Huruf dapat ditulis dalam bentuk kapital, seperti A, B, dan C.
+Huruf dapat ditulis dalam bentuk kecil, seperti a, b, dan c.
+Huruf kapital sering digunakan pada awal kalimat dan awal nama diri.
+Huruf kecil umumnya digunakan di dalam kata selain pada awal kalimat atau nama diri.
+Vokal dalam alfabet Indonesia adalah A, E, I, O, dan U.
+Konsonan adalah huruf selain vokal, seperti B, C, D, dan F.
+Huruf Y umumnya berfungsi sebagai konsonan dalam bahasa Indonesia.
+Rangkaian huruf membentuk suku kata, misalnya ba, ci, dan du.
+Suku kata membentuk kata, misalnya ba-ju menjadi baju.
+Kata membentuk frasa, klausa, dan kalimat.
+Huruf membantu menuliskan bunyi bahasa menjadi teks yang dapat dibaca.
+Abjad adalah susunan huruf yang digunakan dalam sistem tulisan.
+Urutan alfabet membantu menyusun kata dalam kamus atau indeks.
+Daftar nama dapat diurutkan berdasarkan huruf awal.
+Huruf dapat digunakan sebagai singkatan, misalnya kg untuk kilogram.
+Huruf dapat digunakan sebagai lambang, misalnya A untuk amper.
+Huruf dapat muncul dalam akronim, misalnya UNESCO.
+Huruf dapat membantu mengeja nama, misalnya nama Budi dieja B-U-D-I.
+Mengeja adalah menyebut huruf satu per satu untuk membentuk kata.
+Huruf berbeda dari angka karena huruf mewakili bunyi dan membentuk kata.
+Huruf dapat digabung dengan angka dalam kode, misalnya A1 atau B2.
+Huruf dapat memiliki bentuk cetak dan bentuk tulis tangan.
+Bentuk huruf dapat berbeda antarbahasa meskipun bunyinya mirip.
+Alfabet Latin adalah sistem huruf yang digunakan dalam bahasa Indonesia.
+Alfabet Yunani menggunakan huruf seperti alfa, beta, dan gamma.
+Alfabet Kiril menggunakan huruf seperti А, Б, dan В.
+Aksara Jawa, Bali, dan Sunda adalah sistem tulisan yang berbeda dari alfabet Latin.
+Huruf besar dan huruf kecil memiliki peran dalam ejaan dan tata tulis.
+Tanda baca membantu memisahkan dan mengatur huruf serta kata dalam kalimat.
+Membaca huruf dengan benar membantu memahami kata dan kalimat.
+Menulis huruf dengan rapi membantu orang lain membaca tulisan.
+Simbol adalah tanda yang mewakili makna, ide, atau nilai tertentu.
+Tanda baca adalah simbol yang membantu mengatur tulisan.
+Titik (.) digunakan untuk mengakhiri kalimat pernyataan.
+Koma (,) digunakan untuk memisahkan bagian dalam kalimat atau daftar.
+Tanda tanya (?) digunakan untuk mengakhiri kalimat tanya.
+Tanda seru (!) digunakan untuk menyatakan seruan atau penekanan.
+Titik dua (:) digunakan untuk memperkenalkan rincian atau kutipan.
+Titik koma (;) digunakan untuk memisahkan bagian kalimat yang berkaitan.
+Tanda hubung (-) digunakan untuk menyambung kata atau memisahkan suku kata.
+Tanda pisah (—) digunakan untuk memberi jeda atau penekanan.
+Tanda petik (“ ”) digunakan untuk mengapit kutipan atau judul.
+Tanda petik tunggal (‘ ’) digunakan untuk kutipan di dalam kutipan.
+Tanda kurung ( ) digunakan untuk menambahkan keterangan.
+Tanda kurung siku [ ] digunakan untuk keterangan tambahan atau suntingan.
+Tanda kurung kurawal { } digunakan dalam penulisan matematika atau kode.
+Garis miring (/) digunakan untuk memisahkan pilihan atau bagian.
+Garis miring terbalik (\) digunakan dalam penulisan kode dan alamat file.
+Garis bawah (_) digunakan dalam penulisan kode, nama file, atau tautan.
+Tanda bintang (*) dapat digunakan sebagai penanda atau dalam operasi matematika.
+Tanda ampersand (&) sering digunakan untuk menyatakan “dan”.
+Tanda at (@) digunakan dalam alamat surel dan media sosial.
+Tanda pagar (#) digunakan sebagai penanda nomor atau tagar.
+Tanda persen (%) digunakan untuk menyatakan perbandingan per seratus.
+Tanda plus (+) digunakan untuk penjumlahan atau nilai positif.
+Tanda minus (-) digunakan untuk pengurangan atau nilai negatif.
+Tanda kali (×) digunakan untuk perkalian.
+Tanda bagi (÷) digunakan untuk pembagian.
+Tanda sama dengan (=) menyatakan kesetaraan nilai.
+Tanda tidak sama dengan (≠) menyatakan dua nilai berbeda.
+Tanda lebih besar (>) menyatakan nilai di kiri lebih besar.
+Tanda lebih kecil (<) menyatakan nilai di kiri lebih kecil.
+Tanda lebih besar atau sama dengan (≥) menyatakan perbandingan tidak kurang dari.
+Tanda lebih kecil atau sama dengan (≤) menyatakan perbandingan tidak lebih dari.
+Tanda tambah-kurang (±) menyatakan nilai perkiraan atau dua kemungkinan.
+Simbol matematika membantu menulis operasi secara ringkas.
+Simbol mata uang seperti Rp, $, €, dan ¥ menunjukkan jenis uang.
+Simbol derajat (°) digunakan untuk suhu atau sudut.
+Simbol persen dan permil membantu menyatakan perbandingan.
+Simbol panah (→) menunjukkan arah atau hubungan.
+Simbol centang (✓) menunjukkan persetujuan atau kebenaran.
+Simbol silang (✗) menunjukkan penolakan atau kesalahan.
+Simbol lingkaran (○) dapat menandai pilihan atau posisi.
+Simbol kotak (□) dapat menandai isian atau tempat kosong.
+Simbol bintang (★) dapat menunjukkan penilaian atau pentingnya sesuatu.
+Simbol hati (♥) dapat menunjukkan rasa suka atau cinta.
+Simbol musik (♪) dapat menunjukkan nada atau bunyi musik.
+Simbol peringatan (⚠) menunjukkan perlu kehati-hatian.
+Simbol dilarang (🚫) menunjukkan larangan.
+Simbol informasi (ℹ) menunjukkan keterangan atau petunjuk.
+Simbol tanda centang dan silang sering dipakai dalam daftar periksa.
+Simbol dapat berbeda makna tergantung konteks dan budaya.
+Simbol tidak selalu dibaca seperti huruf atau angka.
+Simbol dapat berdiri sendiri sebagai tanda, misalnya tanda panah di jalan.
+Simbol dapat digabung dengan huruf dan angka dalam kode.
+Simbol membantu menyampaikan informasi secara singkat.
+Simbol membantu membuat tulisan lebih terstruktur.
+Simbol dalam peta menunjukkan lokasi, jalan, atau fasilitas.
+Simbol dalam rambu lalu lintas memberikan petunjuk kepada pengguna jalan.
+Simbol dalam matematika harus dibaca sesuai aturan operasinya.
+Memahami simbol membantu membaca teks, data, dan lingkungan sekitar.
+Emoji adalah simbol gambar kecil yang digunakan dalam teks digital.
+Emoji dapat mewakili wajah, benda, hewan, tempat, cuaca, atau kegiatan.
+Emoji bukan huruf dan bukan angka, melainkan simbol bergambar.
+Emoji dapat menyampaikan emosi, misalnya 😀 untuk senang.
+Emoji 😢 dapat menyampaikan kesedihan.
+Emoji 😡 dapat menyampaikan kemarahan.
+Emoji 😮 dapat menyampaikan keterkejutan.
+Emoji 😴 dapat menyampaikan rasa kantuk.
+Emoji 👍 dapat menyampaikan persetujuan atau pujian.
+Emoji 👎 dapat menyampaikan ketidaksetujuan.
+Emoji ❤️ dapat menyampaikan rasa cinta atau suka.
+Emoji 🔥 dapat menyampaikan semangat atau sesuatu yang populer.
+Emoji ⭐ dapat menyampaikan penilaian atau hal istimewa.
+Emoji ✅ dapat menyampaikan bahwa sesuatu benar atau selesai.
+Emoji ❌ dapat menyampaikan bahwa sesuatu salah atau ditolak.
+Emoji ⚠️ dapat menyampaikan peringatan.
+Emoji ℹ️ dapat menyampaikan informasi.
+Emoji 📌 dapat menyampaikan penanda atau hal penting.
+Emoji 📚 dapat mewakili buku atau kegiatan membaca.
+Emoji ✏️ dapat mewakili menulis atau alat tulis.
+Emoji 🎉 dapat menyampaikan perayaan atau kegembiraan.
+Emoji 🎂 dapat mewakili ulang tahun atau kue.
+Emoji ☀️ dapat mewakili matahari atau cuaca cerah.
+Emoji 🌧️ dapat mewakili hujan.
+Emoji 🌙 dapat mewakili bulan atau malam.
+Emoji 🌳 dapat mewakili pohon atau alam.
+Emoji 🐱 dapat mewakili kucing.
+Emoji 🐶 dapat mewakili anjing.
+Emoji 🍎 dapat mewakili apel atau buah.
+Emoji 🍚 dapat mewakili nasi atau makanan.
+Emoji 🚗 dapat mewakili mobil atau perjalanan.
+Emoji 🏠 dapat mewakili rumah.
+Emoji 📱 dapat mewakili telepon seluler.
+Emoji 💻 dapat mewakili komputer atau laptop.
+Emoji ⏰ dapat mewakili jam atau waktu.
+Emoji 📅 dapat mewakili kalender atau tanggal.
+Emoji 📍 dapat mewakili lokasi.
+Emoji 🔍 dapat mewakili pencarian atau pemeriksaan.
+Emoji 💡 dapat mewakili ide atau gagasan.
+Emoji 🎵 dapat mewakili musik atau nada.
+Emoji ⚽ dapat mewakili sepak bola atau olahraga.
+Emoji 🏆 dapat mewakili trofi atau kemenangan.
+Emoji 🎓 dapat mewakili pendidikan atau kelulusan.
+Emoji 💼 dapat mewakili pekerjaan atau tas kerja.
+Emoji 🛒 dapat mewakili belanja atau keranjang.
+Emoji 🏥 dapat mewakili rumah sakit atau layanan kesehatan.
+Emoji 🚦 dapat mewakili lampu lalu lintas.
+Emoji 🚫 dapat menyampaikan larangan.
+Emoji ➡️ dapat menyampaikan arah ke kanan.
+Emoji ⬅️ dapat menyampaikan arah ke kiri.
+Emoji ⬆️ dapat menyampaikan arah ke atas.
+Emoji ⬇️ dapat menyampaikan arah ke bawah.
+Emoji dapat digunakan untuk menambah nuansa dalam pesan singkat.
+Makna emoji dapat berubah tergantung konteks kalimat.
+Emoji yang sama dapat dipahami berbeda oleh pengguna yang berbeda.
+Emoji tidak selalu menggantikan kata secara tepat.
+Dalam tulisan resmi, emoji sebaiknya digunakan dengan hati-hati.
+Emoji dapat membantu menyampaikan nada emosi yang sulit ditulis dengan kata.
+Emoji adalah bagian dari komunikasi digital modern.
+Memahami emoji membantu membaca pesan digital dengan lebih baik.

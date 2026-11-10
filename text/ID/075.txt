@@ -1,0 +1,264 @@
+Rumus matematika adalah cara singkat menuliskan hubungan antarbesaran dengan menggunakan lambang.
+Rumus matematika membantu menyelesaikan soal secara teratur karena setiap langkah memiliki aturan.
+Rumus matematika dasar sampai menengah mencakup operasi bilangan, pecahan, persen, aljabar, geometri, statistika, peluang, dan aritmetika sosial.
+Rumus matematika menengah biasanya memuat variabel, pangkat, akar, persamaan, pertidaksamaan, fungsi, dan bangun ruang.
+Rumus matematika tidak boleh digunakan tanpa memahami makna lambang dan syarat berlakunya.
+Rumus matematika perlu disesuaikan dengan satuan yang digunakan dalam soal.
+Contoh penggunaan rumus dasar adalah menghitung total harga dengan mengalikan harga satuan dan jumlah barang.
+Contoh penggunaan rumus menengah adalah menentukan akar persamaan kuadrat dengan rumus abc.
+Rumus pertambahan ditulis a + b = c.
+Rumus pengurangan ditulis a - b = c.
+Rumus perkalian ditulis a × b = c.
+Rumus pembagian ditulis a ÷ b = c dengan b tidak nol.
+Rumus sifat komutatif pertambahan adalah a + b = b + a.
+Rumus sifat komutatif perkalian adalah a × b = b × a.
+Rumus sifat asosiatif pertambahan adalah (a + b) + c = a + (b + c).
+Rumus sifat asosiatif perkalian adalah (a × b) × c = a × (b × c).
+Rumus distributif perkalian terhadap pertambahan adalah a × (b + c) = (a × b) + (a × c).
+Rumus distributif perkalian terhadap pengurangan adalah a × (b - c) = (a × b) - (a × c).
+Urutan operasi hitung menempatkan tanda kurung pada prioritas pertama.
+Operasi perkalian dan pembagian dikerjakan sebelum pertambahan dan pengurangan.
+Contoh 6 + 4 × 3 menghasilkan 18 karena 4 × 3 dihitung lebih dahulu.
+Contoh (6 + 4) × 3 menghasilkan 30 karena kurung dihitung lebih dahulu.
+Rumus pecahan senilai diperoleh dengan mengalikan pembilang dan penyebut dengan bilangan yang sama.
+Rumus penjumlahan pecahan berpenyebut sama adalah a/c + b/c = (a + b)/c.
+Rumus pengurangan pecahan berpenyebut sama adalah a/c - b/c = (a - b)/c.
+Rumus penjumlahan pecahan berbeda penyebut dilakukan setelah menyamakan penyebut.
+Contoh 2/5 + 1/4 dihitung sebagai 8/20 + 5/20 = 13/20.
+Rumus perkalian pecahan adalah a/b × c/d = (a × c)/(b × d).
+Rumus pembagian pecahan adalah a/b ÷ c/d = a/b × d/c.
+Contoh 3/4 ÷ 2/5 dihitung sebagai 3/4 × 5/2 = 15/8.
+Rumus persen ditulis p% = p/100.
+Rumus nilai persen dari N adalah (p/100) × N.
+Contoh 45% dari 260 adalah 0,45 × 260 = 117.
+Rumus diskon adalah persen diskon × harga awal.
+Rumus harga setelah diskon adalah harga awal - nilai diskon.
+Contoh harga 320.000 dengan diskon 15% memiliki diskon 48.000 dan harga akhir 272.000.
+Rumus pajak sederhana adalah persen pajak × harga dasar.
+Contoh pajak 10% dari 450.000 adalah 45.000.
+Rumus untung adalah harga jual - harga beli.
+Rumus rugi adalah harga beli - harga jual.
+Rumus persentase untung adalah untung/harga beli × 100%.
+Contoh untung 30.000 dari harga beli 150.000 menghasilkan persentase untung 20%.
+Rumus persentase rugi adalah rugi/harga beli × 100%.
+Rumus bunga tunggal adalah pokok × suku bunga × waktu.
+Contoh bunga tunggal dari pokok 2.500.000 dengan bunga 4% selama 3 tahun adalah 300.000.
+Rumus perbandingan senilai menghubungkan dua besaran yang berubah searah.
+Rumus perbandingan berbalik nilai menghubungkan dua besaran yang berubah berlawanan arah.
+Contoh perbandingan senilai: jika 5 buku berharga 40.000, maka 8 buku berharga 64.000.
+Contoh perbandingan berbalik nilai: jika 6 pekerja menyelesaikan tugas dalam 10 hari, maka 12 pekerja menyelesaikannya dalam 5 hari.
+Rumus skala adalah jarak gambar dibagi jarak sebenarnya.
+Contoh skala 1:250 dengan panjang gambar 8 cm menghasilkan panjang sebenarnya 2.000 cm atau 20 meter.
+Rumus KPK mencari kelipatan persekutuan terkecil dari dua bilangan atau lebih.
+Rumus FPB mencari faktor persekutuan terbesar dari dua bilangan atau lebih.
+Contoh KPK dari 15 dan 20 adalah 60.
+Contoh FPB dari 42 dan 56 adalah 14.
+Rumus pangkat a^n berarti a dikalikan sebanyak n faktor.
+Rumus a^m × a^n = a^(m+n) berlaku untuk bilangan pokok yang sama.
+Rumus a^m ÷ a^n = a^(m-n) berlaku untuk bilangan pokok yang sama dan a tidak nol.
+Rumus (a^m)^n = a^(m × n) digunakan untuk pangkat bertingkat.
+Rumus (a × b)^n = a^n × b^n digunakan untuk pangkat dari perkalian.
+Rumus (a/b)^n = a^n/b^n berlaku untuk b tidak nol.
+Rumus a^0 = 1 berlaku untuk a tidak nol.
+Rumus a^(-n) = 1/a^n berlaku untuk a tidak nol.
+Contoh 4^2 × 4^3 = 4^5 = 1.024.
+Contoh 7^6 ÷ 7^3 = 7^3 = 343.
+Contoh (3^2)^3 = 3^6 = 729.
+Rumus akar kuadrat mencari bilangan yang jika dikuadratkan menghasilkan bilangan di dalam akar.
+Rumus akar(a × b) = akar(a) × akar(b) berlaku untuk a dan b tidak negatif.
+Rumus akar(a/b) = akar(a)/akar(b) berlaku untuk a tidak negatif dan b positif.
+Contoh akar(256) = 16 karena 16 × 16 = 256.
+Contoh akar(441) = 21 karena 21 × 21 = 441.
+Rumus persamaan linear satu variabel ditulis ax + b = c dengan a tidak nol.
+Penyelesaian ax + b = c dilakukan dengan mengurangi b lalu membagi dengan a.
+Contoh 6x + 5 = 35 menghasilkan 6x = 30 dan x = 5.
+Contoh 7x - 8 = 27 menghasilkan 7x = 35 dan x = 5.
+Rumus pertidaksamaan linear satu variabel diselesaikan seperti persamaan, tetapi arah tanda berubah jika dikali atau dibagi bilangan negatif.
+Contoh 4x + 3 < 23 menghasilkan 4x < 20 dan x < 5.
+Contoh -3x + 2 > 11 menghasilkan -3x > 9 dan x < -3.
+Rumus sistem persamaan linear dua variabel dapat diselesaikan dengan eliminasi.
+Contoh x + y = 16 dan x - y = 6 menghasilkan x = 11 dan y = 5.
+Contoh 3x + y = 20 dan x - y = 4 menghasilkan x = 6 dan y = 2.
+Rumus persamaan kuadrat ax^2 + bx + c = 0 memiliki akar x = (-b ± akar(b^2 - 4ac))/(2a).
+Diskriminan persamaan kuadrat adalah D = b^2 - 4ac.
+Jika D > 0, persamaan kuadrat memiliki dua akar real berbeda.
+Jika D = 0, persamaan kuadrat memiliki satu akar real kembar.
+Jika D < 0, persamaan kuadrat tidak memiliki akar real.
+Contoh x^2 - 9x + 20 = 0 memiliki akar x = 4 dan x = 5.
+Contoh x^2 - 12x + 36 = 0 memiliki akar kembar x = 6.
+Rumus pemfaktoran x^2 + (p + q)x + pq = (x + p)(x + q) membantu menyelesaikan persamaan kuadrat sederhana.
+Contoh x^2 + 11x + 30 = (x + 5)(x + 6).
+Rumus fungsi linear ditulis f(x) = mx + c dengan m sebagai gradien dan c sebagai konstanta.
+Rumus gradien melalui dua titik adalah m = (y2 - y1)/(x2 - x1).
+Contoh gradien melalui titik (3,7) dan (7,15) adalah (15 - 7)/(7 - 3) = 2.
+Persamaan garis dengan gradien m dan melalui titik (x1,y1) adalah y - y1 = m(x - x1).
+Contoh garis dengan gradien 4 melalui (2,5) memiliki persamaan y - 5 = 4(x - 2) atau y = 4x - 3.
+Rumus jarak dua titik adalah akar((x2 - x1)^2 + (y2 - y1)^2).
+Contoh jarak titik (2,3) ke (8,11) adalah akar(36 + 64) = 10.
+Rumus titik tengah dua titik adalah ((x1 + x2)/2, (y1 + y2)/2).
+Contoh titik tengah (3,5) dan (9,13) adalah (6,9).
+Rumus Pythagoras berlaku pada segitiga siku-siku dengan c^2 = a^2 + b^2.
+Contoh segitiga dengan sisi tegak 10 dan 24 memiliki sisi miring 26.
+Rumus keliling persegi adalah 4 × sisi.
+Rumus luas persegi adalah sisi × sisi.
+Contoh persegi dengan sisi 9 cm memiliki keliling 36 cm dan luas 81 cm persegi.
+Rumus keliling persegi panjang adalah 2 × (panjang + lebar).
+Rumus luas persegi panjang adalah panjang × lebar.
+Contoh persegi panjang 17 cm × 5 cm memiliki keliling 44 cm dan luas 85 cm persegi.
+Rumus luas segitiga adalah 1/2 × alas × tinggi.
+Contoh segitiga dengan alas 18 cm dan tinggi 11 cm memiliki luas 99 cm persegi.
+Rumus keliling segitiga adalah jumlah panjang ketiga sisinya.
+Contoh segitiga bersisi 9 cm, 12 cm, dan 15 cm memiliki keliling 36 cm.
+Rumus luas jajar genjang adalah alas × tinggi.
+Contoh jajar genjang dengan alas 16 cm dan tinggi 9 cm memiliki luas 144 cm persegi.
+Rumus keliling jajar genjang adalah 2 × (sisi sejajar pertama + sisi sejajar kedua).
+Rumus luas trapesium adalah 1/2 × (jumlah sisi sejajar) × tinggi.
+Contoh trapesium dengan sisi sejajar 12 cm dan 20 cm serta tinggi 8 cm memiliki luas 128 cm persegi.
+Rumus luas belah ketupat adalah 1/2 × diagonal pertama × diagonal kedua.
+Contoh belah ketupat dengan diagonal 16 cm dan 22 cm memiliki luas 176 cm persegi.
+Rumus luas layang-layang adalah 1/2 × diagonal pertama × diagonal kedua.
+Contoh layang-layang dengan diagonal 18 cm dan 24 cm memiliki luas 216 cm persegi.
+Rumus keliling lingkaran adalah 2 × π × r atau π × d.
+Rumus luas lingkaran adalah π × r × r.
+Contoh lingkaran berjari-jari 14 cm dengan π = 22/7 memiliki keliling 88 cm dan luas 616 cm persegi.
+Contoh lingkaran berdiameter 30 cm dengan π = 3,14 memiliki keliling 94,2 cm.
+Rumus panjang busur lingkaran adalah (sudut pusat/360) × keliling lingkaran.
+Rumus luas juring lingkaran adalah (sudut pusat/360) × luas lingkaran.
+Contoh juring dengan sudut pusat 120 derajat pada lingkaran berjari-jari 21 cm memiliki luas 462 cm persegi.
+Rumus volume kubus adalah sisi × sisi × sisi.
+Rumus luas permukaan kubus adalah 6 × sisi × sisi.
+Contoh kubus dengan sisi 7 cm memiliki volume 343 cm kubik dan luas permukaan 294 cm persegi.
+Rumus volume balok adalah panjang × lebar × tinggi.
+Rumus luas permukaan balok adalah 2 × (panjang × lebar + panjang × tinggi + lebar × tinggi).
+Contoh balok 9 cm × 6 cm × 5 cm memiliki volume 270 cm kubik.
+Rumus volume prisma adalah luas alas × tinggi prisma.
+Contoh prisma segitiga dengan luas alas 40 cm persegi dan tinggi 15 cm memiliki volume 600 cm kubik.
+Rumus volume limas adalah 1/3 × luas alas × tinggi limas.
+Contoh limas dengan luas alas 54 cm persegi dan tinggi 12 cm memiliki volume 216 cm kubik.
+Rumus volume tabung adalah π × r × r × t.
+Rumus luas permukaan tabung adalah 2 × π × r × (r + t).
+Contoh tabung berjari-jari 7 cm dan tinggi 20 cm dengan π = 22/7 memiliki volume 3.080 cm kubik.
+Rumus volume kerucut adalah 1/3 × π × r × r × t.
+Rumus luas permukaan kerucut adalah π × r × (r + s) dengan s sebagai garis pelukis.
+Contoh kerucut berjari-jari 8 cm dan tinggi 15 cm memiliki garis pelukis 17 cm.
+Rumus volume bola adalah 4/3 × π × r × r × r.
+Rumus luas permukaan bola adalah 4 × π × r × r.
+Contoh bola berjari-jari 6 cm dengan π = 3,14 memiliki volume 904,32 cm kubik.
+Rumus rata-rata atau mean adalah jumlah seluruh data dibagi banyak data.
+Contoh mean data 8,9,10,11,12 adalah 50 ÷ 5 = 10.
+Rumus median adalah nilai tengah data setelah diurutkan.
+Contoh median data 5,7,9,11,13 adalah 9.
+Rumus modus adalah nilai yang paling sering muncul dalam data.
+Contoh modus data 4,6,6,7,8 adalah 6.
+Rumus jangkauan data adalah nilai terbesar dikurangi nilai terkecil.
+Contoh jangkauan data 14,17,20,23,29 adalah 15.
+Rumus kuartil membagi data terurut menjadi empat bagian.
+Contoh data 3,6,9,12,15 memiliki kuartil pertama 6 dan kuartil ketiga 12.
+Rumus peluang kejadian adalah banyak kejadian yang diharapkan dibagi banyak seluruh kejadian.
+Contoh peluang muncul angka ganjil pada dadu adalah 3/6 = 1/2.
+Contoh peluang muncul angka kurang dari 3 pada dadu adalah 2/6 = 1/3.
+Rumus barisan aritmetika untuk suku ke-n adalah Un = a + (n - 1)b.
+Rumus jumlah n suku pertama barisan aritmetika adalah Sn = n/2 × (2a + (n - 1)b).
+Contoh barisan 4,9,14,19 memiliki suku ke-7 sama dengan 34.
+Rumus barisan geometri untuk suku ke-n adalah Un = a × r^(n - 1).
+Rumus jumlah n suku pertama barisan geometri adalah Sn = a(r^n - 1)/(r - 1) untuk r tidak sama dengan 1.
+Contoh barisan 3,9,27,81 memiliki rasio 3 dan suku ke-6 sama dengan 729.
+Rumus kecepatan adalah jarak dibagi waktu.
+Contoh kecepatan 150 km dalam 3 jam adalah 50 km per jam.
+Rumus jarak adalah kecepatan × waktu.
+Contoh jarak dengan kecepatan 70 km per jam selama 2,5 jam adalah 175 km.
+Rumus waktu adalah jarak dibagi kecepatan.
+Contoh waktu untuk jarak 210 km dengan kecepatan 42 km per jam adalah 5 jam.
+Rumus debit adalah volume dibagi waktu.
+Contoh debit 720 liter dalam 24 menit adalah 30 liter per menit.
+Rumus volume dari debit adalah debit × waktu.
+Contoh debit 18 liter per menit selama 9 menit menghasilkan volume 162 liter.
+Rumus konversi kilometer ke meter adalah dikali 1.000.
+Rumus konversi meter ke sentimeter adalah dikali 100.
+Rumus konversi sentimeter ke milimeter adalah dikali 10.
+Rumus konversi kilogram ke gram adalah dikali 1.000.
+Rumus konversi gram ke miligram adalah dikali 1.000.
+Rumus konversi jam ke menit adalah dikali 60.
+Rumus konversi menit ke detik adalah dikali 60.
+Rumus luas permukaan gabungan dihitung dengan menjumlahkan luas bagian yang terlihat.
+Rumus volume gabungan dihitung dengan menjumlahkan volume bangun penyusunnya.
+Contoh kolam berbentuk balok 8 m × 5 m × 3 m memiliki volume 120 meter kubik.
+Contoh lantai berukuran 11 m × 9 m membutuhkan luas 99 meter persegi.
+Contoh taman berbentuk lingkaran berjari-jari 14 m memiliki luas 616 meter persegi dengan π = 22/7.
+Contoh biaya pemasangan rumput pada taman 616 meter persegi dengan harga 20.000 per meter persegi adalah 12.320.000 rupiah.
+Contoh campuran rumus: hitung luas persegi panjang 18 × 7, lalu kurangi luas segitiga alas 12 tinggi 8.
+Luas persegi panjang 18 × 7 = 126 dan luas segitiga 1/2 × 12 × 8 = 48, sehingga hasilnya 78.
+Contoh campuran rumus: hitung mean data 7,9,11,13,15, lalu kalikan hasilnya dengan 4.
+Mean data tersebut adalah 55 ÷ 5 = 11, sehingga hasil akhirnya 44.
+Contoh campuran rumus: hitung keliling lingkaran r = 14, lalu tambahkan keliling persegi sisi 12.
+Keliling lingkaran = 88 cm dan keliling persegi = 48 cm, sehingga totalnya 136 cm.
+Contoh campuran rumus: hitung volume balok 12 × 7 × 5, lalu bagi 4.
+Volume balok = 420 cm kubik, sehingga hasil pembagiannya 105 cm kubik.
+Contoh campuran rumus: hitung diskon 20% dari 500.000, lalu tambahkan pajak 10% dari harga setelah diskon.
+Diskon = 100.000, harga setelah diskon = 400.000, pajak = 40.000, total akhir = 440.000.
+Contoh campuran rumus: hitung gradien garis melalui (2,4) dan (6,12), lalu tentukan nilai fungsi pada x = 9.
+Gradien = 2 dan persamaan garisnya y = 2x, sehingga pada x = 9 nilainya 18.
+Contoh campuran rumus: selesaikan 5x - 9 = 26, lalu hitung x^2 + 2x.
+Nilai x = 7, sehingga x^2 + 2x = 49 + 14 = 63.
+Contoh campuran rumus: hitung akar(289), lalu kalikan dengan 3 dan kurangi 15.
+Akar 289 adalah 17, sehingga 3 × 17 - 15 = 36.
+Contoh campuran rumus: hitung 3^3 + 4^2, lalu bagi 5.
+3^3 = 27 dan 4^2 = 16, sehingga (27 + 16) ÷ 5 = 8,6.
+Contoh campuran rumus: hitung peluang muncul angka lebih dari 5 pada dadu, lalu kalikan dengan 48.
+Peluang angka lebih dari 5 adalah 1/6, sehingga hasilnya 8.
+Contoh campuran rumus: hitung perbandingan 4:7 dengan total 88, lalu tambahkan 6 pada bagian pertama.
+Satu bagian bernilai 8, bagian pertama 32, sehingga hasil akhirnya 38.
+Contoh campuran rumus: hitung FPB 72 dan 96, lalu kalikan dengan KPK 8 dan 12.
+FPB 72 dan 96 adalah 24, KPK 8 dan 12 adalah 24, sehingga hasilnya 576.
+Contoh campuran rumus: hitung luas trapesium sisi sejajar 15 dan 21 dengan tinggi 10, lalu bagi 6.
+Luas trapesium = 1/2 × 36 × 10 = 180, sehingga hasil pembagiannya 30.
+Contoh campuran rumus: hitung volume tabung r = 14 dan t = 10 dengan π = 22/7, lalu bagi 22.
+Volume tabung = 22/7 × 196 × 10 = 6.160, sehingga hasil pembagiannya 280.
+Contoh campuran rumus: hitung bunga tunggal pokok 3.000.000 dengan bunga 6% selama 2 tahun, lalu tambahkan pokok.
+Bunga = 3.000.000 × 0,06 × 2 = 360.000, sehingga totalnya 3.360.000.
+Contoh campuran rumus: hitung jarak dari kecepatan 80 km per jam selama 3 jam, lalu bagi 4.
+Jarak = 80 × 3 = 240 km, sehingga hasil pembagiannya 60 km.
+Contoh campuran rumus: hitung debit 540 liter per jam selama 2 jam, lalu kurangi 180 liter.
+Volume = 540 × 2 = 1.080 liter, sehingga hasil akhirnya 900 liter.
+Contoh campuran rumus: hitung luas lingkaran r = 21 dengan π = 22/7, lalu bagi kelilingnya.
+Luas lingkaran = 1.386 cm persegi dan keliling = 132 cm, sehingga hasilnya 10,5.
+Contoh campuran rumus: hitung volume kubus sisi 8, lalu tambahkan volume balok 10 × 5 × 4.
+Volume kubus = 512 cm kubik dan volume balok = 200 cm kubik, sehingga totalnya 712 cm kubik.
+Contoh campuran rumus: hitung median data 6,10,14,18,22, lalu kalikan dengan 3.
+Median data tersebut adalah 14, sehingga hasilnya 42.
+Contoh campuran rumus: hitung modus data 5,7,7,9,10, lalu tambahkan mean data.
+Modus = 7 dan mean = 38 ÷ 5 = 7,6, sehingga hasilnya 14,6.
+Contoh campuran rumus: selesaikan x + y = 25 dan x - y = 7, lalu hitung x × y.
+Penyelesaian x = 16 dan y = 9, sehingga hasil kalinya 144.
+Contoh campuran rumus: selesaikan 2x + y = 19 dan x - y = 2, lalu hitung x + 2y.
+Penyelesaian x = 7 dan y = 5, sehingga x + 2y = 17.
+Contoh campuran rumus: hitung x^2 - 11x + 30 = 0, lalu jumlahkan akar-akarnya.
+Akar x = 5 dan x = 6, sehingga jumlahnya 11.
+Contoh campuran rumus: hitung (x + 5)(x - 5), lalu substitusi x = 8.
+(x + 5)(x - 5) = x^2 - 25, sehingga pada x = 8 hasilnya 39.
+Contoh campuran rumus: hitung jarak titik (0,0) ke (9,12), lalu bagi 3.
+Jarak = akar(81 + 144) = 15, sehingga hasilnya 5.
+Contoh campuran rumus: hitung keliling persegi panjang 24 × 16, lalu bagi 8.
+Keliling = 2 × (24 + 16) = 80, sehingga hasilnya 10.
+Contoh campuran rumus: hitung luas segitiga alas 24 tinggi 15, lalu bagi 9.
+Luas = 1/2 × 24 × 15 = 180, sehingga hasilnya 20.
+Contoh campuran rumus: hitung 5^2 + 12^2, lalu akarkan hasilnya.
+5^2 = 25 dan 12^2 = 144, sehingga akar(169) = 13.
+Contoh campuran rumus: hitung 8^2 + 15^2, lalu akarkan hasilnya.
+8^2 = 64 dan 15^2 = 225, sehingga akar(289) = 17.
+Contoh campuran rumus: hitung 20% dari 350.000, lalu kurangi 15.000.
+20% dari 350.000 = 70.000, sehingga hasil akhirnya 55.000.
+Contoh campuran rumus: hitung 12,5% dari 480, lalu tambahkan 40.
+12,5% dari 480 = 60, sehingga hasil akhirnya 100.
+Contoh campuran rumus: hitung rata-rata data 12,14,16,18,20, lalu bagi 4.
+Mean = 80 ÷ 5 = 16, sehingga hasilnya 4.
+Contoh campuran rumus: hitung volume bola r = 9 dengan π = 3,14, lalu bagi 3.
+Volume = 4/3 × 3,14 × 729 = 3.052,08, sehingga hasilnya 1.017,36.
+Contoh campuran rumus: hitung luas permukaan kubus sisi 11, lalu bagi 6.
+Luas permukaan = 6 × 121 = 726, sehingga hasilnya 121.
+Contoh campuran rumus: hitung panjang busur lingkaran r = 28 dengan sudut 45 derajat dan π = 22/7.
+Keliling = 176 cm, panjang busur = 45/360 × 176 = 22 cm.
+Contoh campuran rumus: hitung luas juring lingkaran r = 28 dengan sudut 90 derajat dan π = 22/7.
+Luas lingkaran = 2.464 cm persegi, luas juring = 90/360 × 2.464 = 616 cm persegi.
+Rumus matematika dasar sampai menengah sebaiknya dipelajari bertahap dari bilangan sampai fungsi dan bangun ruang.
+Langkah menyelesaikan soal rumus adalah menulis diketahui, ditanya, rumus, perhitungan, dan kesimpulan.

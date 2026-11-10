@@ -1,0 +1,206 @@
+Rumus matematika adalah penyataan matematis yang menggunakan simbol, angka, dan variabel untuk menunjukkan hubungan antarbesaran.
+Dalam pemodelan matematika, rumus berfungsi sebagai representasi ringkas dari aturan kuantitatif yang berlaku secara umum.
+Persamaan matematis memuat tanda sama dengan yang menghubungkan dua ekspresi bernilai setara.
+Variabel dalam rumus matematika merepresentasikan nilai yang dapat berubah atau belum diketahui secara pasti.
+Konstanta adalah nilai tetap dalam ekspresi matematis yang tidak mengalami perubahan nilai.
+Koefisien merupakan faktor pengali numerik yang ditempatkan di depan sebuah variabel.
+Ekspresi aljabar terdiri dari kombinasi variabel, konstanta, dan operator aritmetika tanpa tanda kesamaan.
+Fungsi matematika memetakan setiap elemen dari himpunan domain ke satu elemen tunggal pada himpunan kodomain.
+Notasi matematika diciptakan untuk mempermudah komunikasi ide-ide kuantitatif yang kompleks secara ringkas.
+Teorema adalah pernyataan matematis yang telah dibuktikan kebenarannya berdasarkan aksioma dan deduksi logis.
+Aksioma merupakan pernyataan dasar yang diterima sebagai kebenaran tanpa memerlukan pembuktian formal.
+Identitas matematis adalah persamaan yang selalu bernilai benar untuk setiap nilai variabel yang dimasukkan.
+Sistem persamaan linier terdiri dari sekumpulan persamaan berderajat satu yang dicari solusi bersama untuk variabel-variabelnya.
+Rumus kuadrat memberikan solusi eksplisit untuk mencari akar-akar dari persamaan berderajat dua.
+Aturan eksponen menjelaskan sifat-sifat perkalian, pembagian, dan pemangkatan dari bilangan berpangkat.
+Logaritma merupakan operasi kebalikan atau invers dari perpangkatan.
+Trigonometri mempelajari hubungan antara panjang sisi dan besar sudut dalam bangun segitiga.
+Kalkulus diferensial berfokus pada laju perubahan suatu fungsi terhadap perubahan variabel bebasnya.
+Kalkulus integral berfokus pada pengakumulasi nilai dan penentuan luas daerah di bawah kurva fungsi.
+Matriks adalah susunan persegi panjang dari angka atau simbol yang diatur dalam baris dan kolom.
+Vektor adalah besaran geometri yang memiliki nilai magnitudo dan arah.
+Statistika inferensial menggunakan rumus probabilitas untuk menarik kesimpulan populasi dari sampel data.
+Probabilitas mengukur tingkat kemungkinan terjadinya suatu peristiwa matematis.
+Kombinatorika menghitung banyaknya susunan atau kombinasi elemen yang mungkin terjadi.
+Barisan aritmetika memiliki selisih yang konstan di antara suku-suku yang berurutan.
+Barisan geometri memiliki rasio pembanding yang tetap di antara suku-suku yang berurutan.
+Deret matematika adalah jumlah dari suku-suku dalam suatu barisan terurut.
+Pertidaksamaan matematis menyatakan hubungan ketidaksamaan antara dua ekspresi menggunakan simbol kurang dari atau lebih dari.
+Domain fungsi merujuk pada himpunan semua input yang valid untuk suatu fungsi matematika.
+Kodomain fungsi adalah himpunan semua output potensial yang dihasilkan oleh fungsi tersebut.
+Simbol tambah (+) menandakan operasi penjumlahan dua bilangan atau ekspresi.
+Simbol kurang (-) menandakan operasi pengurangan atau nilai negatif suatu bilangan.
+Simbol kali (x atau *) menandakan operasi perkalian berulang.
+Simbol bagi (/ atau :) menandakan operasi pembagian bilangan.
+Simbol sama dengan (=) menyatakan bahwa nilai di ruas kiri setara dengan nilai di ruas kanan.
+Simbol tidak sama dengan (≠) menyatakan bahwa nilai dua ekspresi tidak setara.
+Simbol kurang dari (<) menunjukkan bahwa nilai di ruas kiri lebih kecil daripada ruas kanan.
+Simbol lebih dari (>) menunjukkan bahwa nilai di ruas kiri lebih besar daripada ruas kanan.
+Simbol kurang dari atau sama dengan (≤) menunjukkan nilai maksimum batas kiri terhadap ruas kanan.
+Simbol lebih dari atau sama dengan (≥) menunjukkan nilai minimum batas kiri terhadap ruas kanan.
+Simbol kurang lebih (±) mengindikasikan dua kemungkinan nilai yaitu positif dan negatif.
+Simbol akar kuadrat (√) menunjukkan operasi penarikan akar derajat dua dari suatu bilangan.
+Simbol pi (π) merepresentasikan konstanta rasio keliling lingkaran terhadap diameternya yaitu sekitar 3.14159.
+Simbol euler (e) merepresentasikan basis logaritma natural dengan nilai konstan sekitar 2.71828.
+Simbol sigma (∑) menandakan penjumlahan beruntun dari sekumpulan suku berurutan.
+Simbol pi kapital (∏) menandakan perkalian beruntun dari sekumpulan faktor.
+Simbol faktorial (!) menyatakan perkalian semua bilangan bulat positif hingga bilangan n.
+Simbol tak hingga (∞) menggambarkan konsep kuantitas yang tidak terbatas.
+Simbol mutlak (|x|) memberikan nilai non-negatif dari suatu ekspresi bilangan real.
+Simbol delta (Δ) mewakili perubahan atau selisih kuantitas dalam matematika.
+Simbol integral (∫) melambangkan operasi pengintegralan fungsi.
+Simbol turunan dy/dx melambangkan laju perubahan variabel y terhadap variabel x.
+Simbol elemen dari (∈) menyatakan bahwa suatu anggota termasuk dalam sebuah himpunan.
+Simbol bukan elemen dari (∉) menyatakan bahwa suatu anggota tidak termasuk dalam himpunan.
+Simbol himpunan kosong (Ø atau {}) merepresentasikan himpunan yang tidak memiliki anggota sama sekali.
+Simbol irisan (∩) menyatakan himpunan anggota yang dimiliki bersama oleh dua himpunan.
+Simbol gabungan (∪) menyatakan himpunan yang memuat seluruh anggota dari dua himpunan.
+Simbol subhimpunan (⊆) menunjukkan bahwa seluruh anggota himpunan pertama ada di dalam himpunan kedua.
+Simbol tegak lurus (⊥) menandakan dua garis atau vektor yang membentuk sudut sembilan puluh derajat.
+Simbol sejajar (∥) menandakan dua garis sejajar yang tidak akan pernah berpotongan.
+Simbol sebangun (∼) menandakan dua bangun datar yang memiliki bentuk sama dengan proporsi ukuran sebanding.
+Simbol kongruen (≅) menyatakan dua bangun datar yang identik dalam bentuk dan ukuran.
+Simbol theta (θ) sering digunakan untuk mewakili variabel sudut dalam trigonometri.
+Simbol derajat (°) menyatakan satuan ukuran sudut lingkaran.
+Simbol radian (rad) menyatakan satuan ukuran sudut berdasarkan panjang busur lingkaran.
+Rumus keliling persegi panjang adalah K = 2 x (p + l), di mana p adalah panjang dan l adalah lebar.
+Rumus luas persegi panjang adalah L = p x l, di mana p adalah panjang dan l adalah lebar.
+Rumus keliling lingkaran adalah K = 2 x π x r atau K = π x d, di mana r adalah jari-jari dan d adalah diameter.
+Rumus luas lingkaran adalah L = π x r^2, di mana r adalah panjang jari-jari lingkaran.
+Rumus luas segitiga adalah L = 0.5 x a x t, di mana a adalah alas dan t adalah tinggi segitiga.
+Teorema Pythagoras menyatakan c^2 = a^2 + b^2 untuk segitiga siku-siku dengan hipotenusa c.
+Rumus keliling segitiga adalah K = a + b + c, di mana a, b, dan c adalah panjang ketiga sisinya.
+Rumus luas jajargenjang adalah L = a x t, di mana a adalah panjang alas dan t adalah tinggi siku-siku.
+Rumus luas trapesium adalah L = 0.5 x (a + b) x t, di mana a dan b adalah panjang sisi-sisi sejajar.
+Rumus luas layang-layang adalah L = 0.5 x d1 x d2, di mana d1 dan d2 adalah panjang diagonal-diagonalnya.
+Rumus volume kubus adalah V = s^3, di mana s adalah panjang rusuk kubus.
+Rumus luas permukaan kubus adalah LP = 6 x s^2, di mana s adalah panjang sisi kubus.
+Rumus volume balok adalah V = p x l x t, di mana p adalah panjang, l adalah lebar, dan t adalah tinggi.
+Rumus luas permukaan balok adalah LP = 2 x (p*l + p*t + l*t).
+Rumus volume tabung adalah V = π x r^2 x t, di mana r adalah jari-jari dan t adalah tinggi tabung.
+Rumus luas permukaan tabung adalah LP = 2 x π x r x (r + t).
+Rumus volume kerucut adalah V = (1/3) x π x r^2 x t.
+Rumus luas permukaan kerucut adalah LP = π x r x (r + s), di mana s adalah garis pelukis.
+Rumus volume bola adalah V = (4/3) x π x r^3.
+Rumus luas permukaan bola adalah LP = 4 x π x r^2.
+Rumus persamaan garis lurus bentuk kemiringan-titik adalah y - y1 = m(x - x1).
+Rumus gradien garis lurus melalui dua titik adalah m = (y2 - y1) / (x2 - x1).
+Rumus umum persamaan kuadrat adalah ax^2 + bx + c = 0 dengan syarat a tidak sama dengan nol.
+Rumus abc untuk mencari akar persamaan kuadrat adalah x = (-b ± √(b^2 - 4ac)) / (2a).
+Diskriminan persamaan kuadrat dihitung dengan rumus D = b^2 - 4ac.
+Rumus suku ke-n barisan aritmetika adalah Un = a + (n - 1)b, di mana a adalah suku pertama dan b adalah beda.
+Rumus jumlah n suku pertama deret aritmetika adalah Sn = (n/2) x (2a + (n - 1)b).
+Rumus suku ke-n barisan geometri adalah Un = a x r^(n-1), di mana r adalah rasio.
+Rumus jumlah n suku pertama deret geometri adalah Sn = a(1 - r^n) / (1 - r) untuk r < 1.
+Rumus deret geometri tak hingga konvergen adalah S_inf = a / (1 - r) dengan syarat |r| < 1.
+Identitas trigonometri dasar menyatakan sin^2(θ) + cos^2(θ) = 1.
+Fungsi tangen didefinisikan sebagai rasio sinus terhadap kosinus: tan(θ) = sin(θ) / cos(θ).
+Fungsi sekan didefinisikan sebagai kebalikan kosinus: sec(θ) = 1 / cos(θ).
+Fungsi kosekan didefinisikan sebagai kebalikan sinus: csc(θ) = 1 / sin(θ).
+Fungsi kotangen didefinisikan sebagai kebalikan tangen: cot(θ) = cos(θ) / sin(θ).
+Aturan sinus dalam segitiga sembarang menyatakan a / sin(A) = b / sin(B) = c / sin(C).
+Aturan kosinus menyatakan c^2 = a^2 + b^2 - 2ab cos(C).
+Rumus sin(A + B) adalah sin(A)cos(B) + cos(A)sin(B).
+Rumus cos(A + B) adalah cos(A)cos(B) - sin(A)sin(B).
+Rumus tan(A + B) adalah (tan(A) + tan(B)) / (1 - tan(A)tan(B)).
+Sifat perkalian logaritma menyatakan log_b(x * y) = log_b(x) + log_b(y).
+Sifat pembagian logaritma menyatakan log_b(x / y) = log_b(x) - log_b(y).
+Sifat pangkat logaritma menyatakan log_b(x^k) = k * log_b(x).
+Rumus basis logaritma berubah adalah log_b(x) = log_c(x) / log_c(b).
+Turunan dari fungsi pangkat f(x) = x^n adalah f'(x) = n * x^(n-1).
+Turunan dari fungsi konstanta c adalah nol.
+Aturan perkalian turunan menyatakan d/dx [u * v] = u'v + uv'.
+Aturan pembagian turunan menyatakan d/dx [u / v] = (u'v - uv') / v^2.
+Aturan rantai kalkulus menyatakan d/dx [f(g(x))] = f'(g(x)) * g'(x).
+Integral tak tentu dari x^n dx adalah (1 / (n + 1)) * x^(n+1) + C untuk n ≠ -1.
+Integral dari 1/x dx adalah ln|x| + C.
+Integral dari e^x dx adalah e^x + C.
+Integral dari cos(x) dx adalah sin(x) + C.
+Integral dari sin(x) dx adalah -cos(x) + C.
+Rumus rata-rata aritmetika (mean) adalah jumlah seluruh nilai data dibagi dengan banyaknya data.
+Median adalah nilai tengah dari sekumpulan data yang telah diurutkan dari yang terkecil ke terbesar.
+Modus adalah nilai yang paling sering muncul dalam sekumpulan data.
+Rumus varians sampel adalah s^2 = ∑(xi - x_bar)^2 / (n - 1).
+Simpangan baku (deviasi standar) adalah akar kuadrat dari varians.
+Rumus kombinasi n elemen diambil k adalah C(n, k) = n! / (k! * (n - k)!).
+Rumus permutasi n elemen diambil k adalah P(n, k) = n! / ((n - k)!).
+Peluang kejadian A didefinisikan sebagai P(A) = n(A) / n(S), di mana n(S) adalah jumlah ruang sampel.
+Peluang komplemen kejadian A adalah P(A') = 1 - P(A).
+Determinan matriks 2x2 [[a, b], [c, d]] dihitung dengan rumus ad - bc.
+Invers matriks 2x2 A = [[a, b], [c, d]] adalah (1 / (ad - bc)) * [[d, -b], [-c, a]].
+Vektor posisi r dalam ruang dua dimensi dinyatakan sebagai r = x*i + y*j.
+Panjang atau magnitudo vektor v = (x, y) dihitung dengan √(x^2 + y^2).
+Perkalian titik (dot product) dua vektor v1=(x1,y1) dan v2=(x2,y2) adalah x1*x2 + y1*y2.
+Perkalian silang (cross product) dua vektor menghasilkan vektor yang tegak lurus terhadap kedua vektor penyusunnya.
+Bunga tunggal dihitung dengan rumus I = P x r x t, di mana P adalah modal awal, r suku bunga, dan t waktu.
+Perhitungan luas lingkaran dengan jari-jari 7 cm menggunakan rumus L = π * r^2 menghasilkan L = (22/7) * 7^2 = 154 cm^2.
+Perhitungan keliling lingkaran dengan jari-jari 14 cm menggunakan rumus K = 2 * π * r menghasilkan K = 2 * (22/7) * 14 = 88 cm.
+Perhitungan luas segitiga dengan alas 10 cm dan tinggi 8 cm menggunakan L = 0.5 * a * t menghasilkan L = 0.5 * 10 * 8 = 40 cm^2.
+Mencari hipotenusa segitiga siku-siku dengan sisi tegak 3 cm dan 4 cm menggunakan c = √(3^2 + 4^2) = √(9 + 16) = √25 = 5 cm.
+Perhitungan volume kubus dengan sisi 5 cm menggunakan rumus V = s^3 menghasilkan V = 5^3 = 125 cm^3.
+Perhitungan luas permukaan kubus dengan sisi 4 cm menggunakan LP = 6 * s^2 menghasilkan LP = 6 * 4^2 = 96 cm^2.
+Perhitungan volume balok dengan p=6 cm, l=4 cm, t=3 cm menggunakan V = p*l*t menghasilkan V = 6*4*3 = 72 cm^3.
+Perhitungan luas permukaan balok p=5 cm, l=3 cm, t=2 cm menghasilkan LP = 2*(5*3 + 5*2 + 3*2) = 2*(15 + 10 + 6) = 62 cm^2.
+Perhitungan volume tabung dengan r=7 cm dan t=10 cm menggunakan V = π * r^2 * t menghasilkan V = (22/7) * 49 * 10 = 1540 cm^3.
+Perhitungan volume kerucut dengan r=7 cm dan t=12 cm menggunakan V = (1/3)*π*r^2*t menghasilkan V = (1/3)*(22/7)*49*12 = 616 cm^3.
+Perhitungan volume bola dengan r=21 cm menggunakan V = (4/3)*π*r^3 menghasilkan V = (4/3)*(22/7)*9261 = 38808 cm^3.
+Mencari akar persamaan kuadrat x^2 - 5x + 6 = 0 menggunakan faktorasi menghasilkan (x - 2)(x - 3) = 0 sehingga x = 2 atau x = 3.
+Mencari akar x^2 - 4 = 0 menggunakan perbedaan kuadrat menghasilkan (x - 2)(x + 2) = 0 sehingga x = 2 atau x = -2.
+Menghitung diskriminan persamaan kuadrat 2x^2 + 3x - 2 = 0 menggunakan D = b^2 - 4ac menghasilkan D = 3^2 - 4(2)(-2) = 9 + 16 = 25.
+Menghitung suku ke-10 barisan aritmetika dengan a=3 dan b=4 menggunakan Un = a + (n-1)b menghasilkan U10 = 3 + (10-1)*4 = 39.
+Menghitung jumlah 5 suku pertama deret aritmetika a=2, b=3 menggunakan Sn = (n/2)*(2a+(n-1)b) menghasilkan S5 = (5/2)*(4+12) = 40.
+Menghitung suku ke-5 barisan geometri dengan a=2 dan r=3 menggunakan Un = a*r^(n-1) menghasilkan U5 = 2 * 3^4 = 2 * 81 = 162.
+Menghitung jumlah deret geometri tak hingga dengan a=6 dan r=0.5 menggunakan S = a/(1-r) menghasilkan S = 6 / (1 - 0.5) = 12.
+Menghitung nilai logaritma log2(32) dilakukan dengan mencari x sehingga 2^x = 32 yang memberikan hasil x = 5.
+Menghitung ekspresi log3(9) + log3(3) menggunakan sifat penjumlahan logaritma menghasilkan log3(27) = 3.
+Mencari turunan pertama fungsi f(x) = 3x^4 - 2x^2 + 5x menggunakan aturan pangkat menghasilkan f'(x) = 12x^3 - 4x + 5.
+Mencari turunan pertama fungsi f(x) = (2x + 1)^3 menggunakan aturan rantai menghasilkan f'(x) = 3(2x + 1)^2 * 2 = 6(2x + 1)^2.
+Menghitung integral tak tentu ∫ (4x^3 + 2x) dx menghasilkan x^4 + x^2 + C.
+Menghitung integral tentu ∫[0 sampai 2] (3x^2) dx memberikan nilai [x^3] dari 0 sampai 2 yaitu 2^3 - 0 = 8.
+Menghitung kombinasi C(5, 2) menggunakan rumus n!/(k!(n-k)!) menghasilkan 5! / (2! * 3!) = (120) / (2 * 6) = 10.
+Menghitung permutasi P(5, 2) menggunakan rumus n!/(n-k)! menghasilkan 5! / 3! = 120 / 6 = 20.
+Mencari nilai sin(30°) dalam trigonometri standar menghasilkan nilai 0.5 atau 1/2.
+Mencari nilai cos(60°) dalam trigonometri standar menghasilkan nilai 0.5 atau 1/2.
+Mencari nilai tan(45°) dalam trigonometri standar menghasilkan nilai 1.
+Menghitung nilai sin(90°) dalam trigonometri standar menghasilkan nilai 1.
+Menghitung nilai cos(0°) dalam trigonometri standar menghasilkan nilai 1.
+Menghitung rata-rata dari data [1] menggunakan (4+6+8+10+12)/5 menghasilkan 40 / 5 = 8.
+Mencari median dari sekumpulan data [2] memberikan nilai tengah yaitu 9.
+Mencari modus dari data [2, 3] memberikan nilai 3 karena muncul sebanyak tiga kali.
+Menghitung determinan matriks [[2, 3], [1, 4]] menggunakan ad - bc menghasilkan (3*4) - (2*1) = 12 - 2 = 10.
+Menghitung perkalian titik vektor v1=(2, 3) dan v2=(4, -1) menghasilkan (2*4) + (3*-1) = 8 - 3 = 5.
+Menghitung magnitudo vektor v=(6, 8) menggunakan √(6^2 + 8^2) menghasilkan √(36 + 64) = √100 = 10.
+Menghitung peluang munculnya angka genap pada pelemparan dadu 6 sisi yaitu P = 3/6 = 0.5.
+Menghitung komplemen peluang jika P(A) = 0.35 maka P(A') = 1 - 0.35 = 0.65.
+Menghitung bunga tunggal modal Rp1.000.000 dengan suku bunga 5% per tahun selama 2 tahun: I = 1000000 * 0.05 * 2 = Rp100.000.
+Menghitung keliling persegi dengan sisi 9 cm menggunakan rumus K = 4 * s menghasilkan K = 4 * 9 = 36 cm.
+Menghitung luas persegi dengan sisi 9 cm menggunakan rumus L = s^2 menghasilkan L = 9^2 = 81 cm^2.
+Menghitung luas belah ketupat dengan diagonal d1=8 cm dan d2=10 cm menggunakan L = 0.5 * 8 * 10 = 40 cm^2.
+Menghitung keliling belah ketupat dengan panjang sisi 7 cm menggunakan K = 4 * s menghasilkan K = 28 cm.
+Menghitung luas trapesium dengan sisi sejajar 6 cm dan 10 cm serta tinggi 5 cm menggunakan L = 0.5*(6+10)*5 = 40 cm^2.
+Menghitung volume prisma segitiga dengan luas alas 15 cm^2 dan tinggi 8 cm menggunakan V = L_alas * t = 15 * 8 = 120 cm^3.
+Menghitung volume limas segi empat dengan luas alas 24 cm^2 dan tinggi 9 cm menggunakan V = (1/3)*L_alas*t = (1/3)*24*9 = 72 cm^3.
+Menghitung gradien garis yang melalui titik (1, 2) dan (3, 8) menggunakan m = (8 - 2)/(3 - 1) = 6 / 2 = 3.
+Menentukan persamaan garis dengan gradien m=2 melalui titik (0, 3) menghasilkan y - 3 = 2(x - 0) atau y = 2x + 3.
+Menghitung nilai dari 2^5 menghasilkan 32.
+Menghitung nilai dari 3^4 menghasilkan 81.
+Menghitung nilai dari √144 menghasilkan 12.
+Menghitung nilai dari 5! (5 faktorial) menggunakan 5*4*3*2*1 menghasilkan 120.
+Menghitung nilai dari 0! (nol faktorial) yang berdasarkan definisi matematis berharga 1.
+Menghitung ekspresi e^0 yang berdasarkan sifat eksponen berharga 1.
+Menghitung nilai log10(1000) yang memberikan hasil 3.
+Menghitung nilai dari cos(90°) dalam trigonometri standar yang menghasilkan nilai 0.
+Menghitung nilai dari sin(0°) dalam trigonometri standar yang menghasilkan nilai 0.
+Menghitung turunan dari f(x) = 5x^3 yaitu f'(x) = 15x^2.
+Menghitung turunan dari f(x) = sin(x) yaitu f'(x) = cos(x).
+Menghitung turunan dari f(x) = cos(x) yaitu f'(x) = -sin(x).
+Menghitung turunan dari f(x) = e^x yaitu f'(x) = e^x.
+Menghitung integral ∫ 2x dx yang menghasilkan x^2 + C.
+Menghitung integral ∫ cos(x) dx yang menghasilkan sin(x) + C.
+Menghitung simpangan rata-rata dari data [1, 3] dengan mean 4: (|2-4| + |4-4| + |6-4|)/3 = (2 + 0 + 2)/3 = 4/3.
+Menghitung jangkauan (range) dari data [2, 3] yaitu nilai maksimum dikurangi nilai minimum: 15 - 2 = 13.
+Menghitung invers matriks 2x2 [[3, 4], [2]]: determinan = 6 - 5 = 1, sehingga inversnya adalah [[3, -1], [-5, 2]].
+Menghitung hasil tambah vektor (1, 3) dan (4, 2) menghasilkan (1+4, 3+2) = (5, 5).
+Menghitung hasil kurang vektor (5, 7) dan (2, 3) menghasilkan (5-2, 7-3) = (3, 4).
+Menghitung rasio barisan geometri [2] yaitu r = 6 / 3 = 2.
+Menghitung beda barisan aritmetika  yaitu b = 9 - 5 = 4.
