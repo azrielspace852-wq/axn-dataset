@@ -1,0 +1,230 @@
+Hasil 56 + 79 adalah 135.
+Selisih 312 − 147 adalah 165.
+Perkalian 13 × 17 menghasilkan 221.
+Pembagian 225 oleh 15 menghasilkan 15.
+Operasi 6 + 7 × 8 dikerjakan sebagai 6 + 56 = 62.
+Operasi (6 + 7) × 8 dikerjakan sebagai 13 × 8 = 104.
+Operasi 120 − 48 ÷ 8 menghasilkan 120 − 6 = 114.
+Operasi 5 × (11 − 4) + 9 menghasilkan 35 + 9 = 44.
+Operasi 180 ÷ (9 × 2) menghasilkan 180 ÷ 18 = 10.
+Operasi 2 + 3 × (4 + 6) menghasilkan 2 + 30 = 32.
+Hasil −41 + 57 adalah 16.
+Hasil −38 − 24 adalah −62.
+Hasil (−7) × 9 adalah −63.
+Hasil (−8) × (−7) adalah 56.
+Hasil −108 ÷ 9 adalah −12.
+Hasil −96 ÷ (−12) adalah 8.
+Nilai |−54| sama dengan 54.
+Lawan dari −29 adalah 29.
+Suhu −11 °C naik 7 °C menjadi −4 °C.
+FPB dari 54 dan 90 adalah 18.
+KPK dari 12 dan 18 adalah 36.
+Faktorisasi prima 126 adalah 2 × 3² × 7.
+Faktorisasi prima 105 adalah 3 × 5 × 7.
+Bilangan 87 habis dibagi 3 karena 8 + 7 = 15.
+Bilangan 216 habis dibagi 4 karena dua angka terakhirnya 16.
+Bilangan 738 habis dibagi 9 karena 7 + 3 + 8 = 18.
+Bilangan prima antara 40 dan 50 adalah 41, 43, dan 47.
+Faktor dari 48 adalah 1, 2, 3, 4, 6, 8, 12, 16, 24, dan 48.
+Pecahan 21/28 disederhanakan menjadi 3/4.
+Pecahan 36/48 disederhanakan menjadi 3/4.
+Hasil 3/7 + 2/5 adalah 15/35 + 14/35 = 29/35.
+Hasil 5/6 − 3/8 adalah 20/24 − 9/24 = 11/24.
+Hasil 3/8 × 4/9 adalah 12/72 = 1/6.
+Hasil 7/10 ÷ 14/15 adalah 7/10 × 15/14 = 3/4.
+Bentuk desimal 5/8 adalah 0,625.
+Bentuk pecahan 0,45 adalah 9/20.
+Bentuk persen 13/25 adalah 52%.
+Bentuk desimal 84% adalah 0,84.
+Hitung 35% dari 260, yaitu 91.
+Hitung 18% dari 150, yaitu 27.
+Harga Rp420.000 didiskon 20% menjadi Rp336.000.
+Harga Rp150.000 naik 12% menjadi Rp168.000.
+Persentase 27 dari 135 adalah 20%.
+Perbandingan 4 : 9 dengan jumlah 78 menghasilkan 24 dan 54.
+Perbandingan 3 : 4 : 5 dengan total 144 menghasilkan 36, 48, dan 60.
+Skala 1 : 400 dengan gambar 7 cm mewakili 28 m.
+Jarak peta 5 cm berskala 1 : 300.000 mewakili 15 km.
+Berat bruto 60 kg dengan tara 3% memberi neto 58,2 kg.
+Harga beli Rp360.000 dijual Rp450.000 menghasilkan untung 25%.
+Harga beli Rp500.000 dijual Rp425.000 menghasilkan rugi 15%.
+Bunga tunggal 8% per tahun atas Rp1.200.000 selama 6 bulan adalah Rp48.000.
+Tabungan Rp2.000.000 berbunga majemuk 5% selama dua tahun menjadi Rp2.205.000.
+Kecepatan 75 km/jam selama 48 menit menempuh 60 km.
+Kecepatan 18 m/detik selama 90 detik menempuh 1.620 m.
+Debit 36 liter/menit selama 15 menit mengalirkan 540 liter.
+Lima mesin menyelesaikan pekerjaan dalam 12 hari, enam mesin memerlukan 10 hari.
+Dua belas pekerja menyelesaikan proyek dalam 20 hari, lima belas pekerja memerlukan 16 hari.
+Bentuk 7x + 4x disederhanakan menjadi 11x.
+Bentuk 12b − 5b + 3b disederhanakan menjadi 10b.
+Hasil 5(3x + 4) adalah 15x + 20.
+Hasil 6(2y − 3) adalah 12y − 18.
+Hasil (x + 5)(x + 3) adalah x² + 8x + 15.
+Hasil (x − 6)(x + 2) adalah x² − 4x − 12.
+Hasil (3x + 2)² adalah 9x² + 12x + 4.
+Hasil (4x − 3)² adalah 16x² − 24x + 9.
+Faktor dari x² + 9x + 20 adalah (x + 4)(x + 5).
+Faktor dari x² − 25 adalah (x − 5)(x + 5).
+Selesaikan 5x + 7 = 42 sehingga x = 7.
+Selesaikan 9x − 6 = 39 sehingga x = 5.
+Selesaikan 4(x + 3) = 32 sehingga x = 5.
+Selesaikan x/5 + 2 = 9 sehingga x = 35.
+Selesaikan 8x + 3 = 5x + 18 sehingga x = 5.
+Selesaikan 3(2x − 4) = 7x + 1 sehingga x = −13.
+Pertidaksamaan 4x − 7 > 13 memberi x > 5.
+Pertidaksamaan 6x + 5 ≤ 29 memberi x ≤ 4.
+Pertidaksamaan −3x < 18 memberi x > −6.
+Pertidaksamaan 9 − 2x ≥ 15 memberi x ≤ −3.
+Sistem x + y = 22 dan x − y = 6 memberi x = 14 dan y = 8.
+Sistem 2x + y = 17 dan x + y = 10 memberi x = 7 dan y = 3.
+Sistem y = x + 4 dan 3x + y = 20 memberi x = 4 dan y = 8.
+Grafik, substitusi, dan eliminasi adalah tiga cara menyelesaikan SPLDV.
+Sistem persamaan linear dua variabel tanpa penyelesaian muncul saat kedua garis sejajar.
+Dua bilangan berjumlah 45 dan selisihnya 13, sehingga bilangan itu 29 dan 16.
+Tiga buku dan dua pulpen berharga Rp26.000; jika pulpen Rp2.500 maka buku Rp7.000.
+Umur ayah lima kali umur anak; selisih umur 32 tahun berarti anak 8 tahun dan ayah 40 tahun.
+Persamaan x² − 7x + 12 = 0 berakar 3 dan 4.
+Persamaan x² + 2x − 15 = 0 berakar 3 dan −5.
+Persamaan 3x² − 10x + 8 = 0 berakar 2 dan 4/3.
+Diskriminan x² − 7x + 12 adalah 49 − 48 = 1 sehingga akarnya real dan berbeda.
+Diskriminan x² + 2x + 9 adalah 4 − 36 = −32 sehingga tidak berakar real.
+Jumlah akar x² − 11x + 30 = 0 adalah 11.
+Hasil kali akar x² − 11x + 30 = 0 adalah 30.
+Titik puncak y = x² − 6x + 4 berada di (3, −5).
+Grafik y = −x² + 2x + 3 membuka ke bawah karena a negatif.
+Fungsi y = 3x² − 12x + 1 memiliki sumbu simetri x = 2.
+2⁵ × 2⁴ sama dengan 2⁹ = 512.
+6⁸ ÷ 6⁵ sama dengan 6³ = 216.
+(5²)³ sama dengan 5⁶ = 15.625.
+9⁰ bernilai 1.
+3^(−4) sama dengan 1/81.
+25^(1/2) sama dengan 5.
+64^(1/3) sama dengan 4.
+81^(3/4) sama dengan 27.
+√225 sama dengan 15.
+√(49 × 9) sama dengan 7 × 3 = 21.
+√98 disederhanakan menjadi 7√2.
+√180 disederhanakan menjadi 6√5.
+3√7 + 5√7 sama dengan 8√7.
+9√5 − 2√5 sama dengan 7√5.
+2√3 × 5√3 sama dengan 10 × 3 = 30.
+6/√3 dirasionalkan menjadi 2√3.
+3/(√6 + √2) dirasionalkan menjadi 3(√6 − √2)/4.
+Notasi ilmiah 0,00062 adalah 6,2 × 10⁻⁴.
+Bilangan 4,8 × 10⁵ sama dengan 480.000.
+³log 27 = 3.
+²log 64 = 6.
+⁵log 1 = 0.
+log 10.000 = 4.
+²log 8 + ²log 2 sama dengan ²log 16 = 4.
+³log 45 − ³log 5 sama dengan ³log 9 = 2.
+²log 3⁵ sama dengan 5 × ²log 3.
+⁸log 2 sama dengan 1/3.
+Barisan 7, 12, 17, 22 memiliki beda 5.
+Suku ke-15 barisan 7, 12, 17, ... adalah 77.
+Jumlah 10 suku pertama barisan itu adalah 295.
+Suku ke-20 barisan 4, 7, 10, ... adalah 61.
+Barisan 5, 10, 20, 40 memiliki rasio 2.
+Suku ke-8 barisan 5, 10, 20, ... adalah 640.
+Jumlah 5 suku pertama barisan 5, 10, 20, ... adalah 155.
+Deret geometri tak hingga dengan a = 12 dan r = 1/3 berjumlah 18.
+Beda barisan aritmetika dicari dengan mengurangkan suku kedua oleh suku pertama.
+Rasio barisan geometri dicari dengan membagi suku kedua oleh suku pertama.
+Luas persegi bersisi 13 cm adalah 169 cm².
+Keliling persegi bersisi 13 cm adalah 52 cm.
+Luas persegi panjang 18 cm × 7 cm adalah 126 cm².
+Keliling persegi panjang 18 cm × 7 cm adalah 50 cm.
+Luas segitiga beralas 16 cm dan tinggi 11 cm adalah 88 cm².
+Segitiga bersisi 9 cm, 12 cm, dan 15 cm memiliki luas 54 cm².
+Luas trapesium bersisi sejajar 12 cm dan 18 cm serta tinggi 8 cm adalah 120 cm².
+Luas belah ketupat dengan diagonal 18 cm dan 24 cm adalah 216 cm².
+Luas layang-layang dengan diagonal 15 cm dan 24 cm adalah 180 cm².
+Keliling jajargenjang bersisi 14 cm dan 10 cm adalah 48 cm.
+Luas lingkaran berjari-jari 21 cm adalah 1.386 cm².
+Keliling lingkaran berjari-jari 21 cm adalah 132 cm.
+Luas juring berudut 120° pada lingkaran berjari-jari 21 cm adalah 462 cm².
+Panjang busur berudut 120° pada lingkaran berjari-jari 21 cm adalah 44 cm.
+Sudut pusat besarnya dua kali sudut keliling yang menghadap busur yang sama.
+Sudut keliling yang menghadap diameter besarnya 90°.
+Jumlah sudut dalam segi tujuh adalah (7 − 2) × 180° = 900°.
+Besar tiap sudut dalam segi sembilan beraturan adalah 140°.
+Besar sudut luar segi dua belas beraturan adalah 30°.
+Segitiga dengan kaki 10 cm dan 24 cm memiliki sisi miring 26 cm.
+Segitiga dengan kaki 12 cm dan 16 cm memiliki sisi miring 20 cm.
+Jika sisi miring 41 cm dan satu kaki 9 cm, kaki lainnya 40 cm.
+Jarak titik (0, 0) ke (9, 12) adalah 15 satuan.
+Gradien garis melalui (3, 4) dan (7, 12) adalah 2.
+Gradien garis melalui (2, 7) dan (5, 1) adalah −2.
+Persamaan garis bergradien 4 melalui (0, −5) adalah y = 4x − 5.
+Garis y = 5x + 9 memotong sumbu y di titik (0, 9).
+Garis y = 3x + 6 memotong sumbu x di titik (−2, 0).
+Garis tegak lurus y = 2x + 3 memiliki gradien −1/2.
+Volume kubus bersisi 7 cm adalah 343 cm³.
+Luas permukaan kubus bersisi 7 cm adalah 294 cm².
+Volume balok 10 cm × 6 cm × 5 cm adalah 300 cm³.
+Luas permukaan balok 10 cm × 6 cm × 5 cm adalah 280 cm².
+Volume tabung berjari-jari 14 cm dan tinggi 5 cm adalah 3.080 cm³.
+Volume kerucut berjari-jari 7 cm dan tinggi 12 cm adalah 616 cm³.
+Volume bola berjari-jari 6 cm adalah 288π cm³.
+Luas permukaan bola berjari-jari 6 cm adalah 144π cm².
+Volume limas beralas persegi 9 cm dan tinggi 10 cm adalah 270 cm³.
+Volume prisma dengan luas alas 30 cm² dan tinggi 12 cm adalah 360 cm³.
+Rata-rata data 14, 16, 18, 20, 22 adalah 18.
+Median data 10, 12, 14, 16, 18, 20 adalah 15.
+Modus data 5, 6, 6, 7, 8, 8, 8 adalah 8.
+Jangkauan data 7, 11, 15, 22, 30 adalah 23.
+Ragam data 3, 5, 7, 9, 11 adalah 8.
+Simpangan baku data 3, 5, 7, 9, 11 adalah 2√2.
+Rata-rata 20 siswa 72 dan 30 siswa 82 menghasilkan rata-rata gabungan 78.
+Kuartil bawah data 3, 6, 9, 12, 15, 18, 21, 24 adalah 7,5.
+Jangkauan antarkuartil data tersebut adalah 12.
+Peluang muncul angka lebih dari 3 pada satu dadu adalah 1/2.
+Peluang muncul jumlah 8 pada dua dadu adalah 5/36.
+Peluang satu gambar dan satu angka pada dua koin adalah 1/2.
+Peluang terambil kartu hati dari 52 kartu adalah 1/4.
+Peluang terambil bola putih dari 7 bola putih dan 5 bola hitam adalah 7/12.
+Peluang komplemen dari 0,28 adalah 0,72.
+Frekuensi harapan dengan peluang 0,35 pada 400 percobaan adalah 140.
+Peluang gabungan dua kejadian saling lepas 0,4 dan 0,5 adalah 0,9.
+Peluang irisan dua kejadian saling bebas 0,6 dan 0,5 adalah 0,3.
+Konversi 4,2 km sama dengan 4.200 m.
+Konversi 3.500 gram sama dengan 3,5 kg.
+Konversi 90 menit sama dengan 1,5 jam.
+Konversi 3,75 liter sama dengan 3.750 mL.
+Konversi 54 km/jam sama dengan 15 m/detik.
+Satu are sama dengan 100 m².
+Satu meter kubik sama dengan 1.000 liter.
+Hasil 4 jam 40 menit ditambah 2 jam 35 menit adalah 7 jam 15 menit.
+Hasil 6 kg 200 g dikurangi 3 kg 850 g adalah 2 kg 350 g.
+Hasil 3,68 + 2,45 adalah 6,13.
+Hasil 9,2 − 4,75 adalah 4,45.
+Hasil 1,5 × 2,4 adalah 3,6.
+Hasil 7,2 ÷ 1,2 adalah 6.
+Taksiran 397 × 4 diperoleh dari 400 × 4 = 1.600.
+Pembulatan 6,48 ke satu angka desimal menghasilkan 6,5.
+Dua per tiga dari 270 adalah 180.
+Bilangan 0,125 sama dengan 1/8 atau 12,5%.
+Mobil menempuh 300 km dengan 25 liter bensin sehingga konsumsinya 12 km per liter.
+Upah 12 hari sebesar Rp1.080.000 berarti upah per hari Rp90.000.
+Tabungan Rp800.000 bertambah 7,5% sehingga menjadi Rp860.000.
+Delapan kotak beratnya 18 kg sehingga tiap kotak 2,25 kg.
+Debit air 720 liter dalam 6 menit sama dengan 120 liter per menit.
+Suhu lima hari berturut-turut 26, 28, 27, 29, dan 30 memiliki rata-rata 28.
+Peluang terambil bola merah dari 4 bola merah dan 6 bola biru adalah 2/5.
+Keliling lingkaran berdiameter 28 cm adalah 88 cm.
+Luas lingkaran berdiameter 28 cm adalah 616 cm².
+Volume bola berjari-jari 3,5 cm adalah sekitar 179,67 cm³.
+Luas selimut tabung berjari-jari 10,5 cm dan tinggi 8 cm adalah 528 cm².
+Garis pelukis kerucut berjari-jari 5 cm dan tinggi 12 cm adalah 13 cm.
+Luas selimut kerucut berjari-jari 5 cm dan tinggi 12 cm adalah 65π atau sekitar 204,1 cm².
+Bentuk √20 + √45 disederhanakan menjadi 2√5 + 3√5 = 5√5.
+Kuadrat dari √7 adalah 7.
+Kuadrat dari 3√2 adalah 18.
+Nilai √(25/36) sama dengan 5/6.
+Hasil 4√6 × 2√3 adalah 8√18 = 24√2.
+Persamaan |x − 4| = 6 memiliki penyelesaian x = 10 atau x = −2.
+Persamaan 5^x = 125 memiliki penyelesaian x = 3.
+Persamaan 2^(x+2) = 32 memberi x + 2 = 5 sehingga x = 3.
+Pertidaksamaan x² − 6x < 0 terpenuhi pada 0 < x < 6.
+Pertidaksamaan x² − 9 ≥ 0 terpenuhi pada x ≤ −3 atau x ≥ 3.
+Kecepatan rata-rata perjalanan 50 km/jam dan 75 km/jam adalah 60 km/jam.

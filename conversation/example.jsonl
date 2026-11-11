@@ -1,0 +1,25 @@
+## low, medium, high, max.
+{"thinking-level":"...","role": [{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+low, medium, high, max, ultra
+
+# tanpa thinking level (otomatis):
+{"role": [{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]} 
+
+# untuk request ringan/sederhana (menon aktifkan reasoning):
+{"role": [{"user":"...","assistant":"..."}]}
+
+# ---
+
+# untuk instructions:
+
+## low, medium, high, max.
+{"thinking-level":"...","role": [{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+
+# tanpa thinking level (otomatis):
+{"role": [{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+
+# untuk pertanyaan ringan/sederhana (menon aktifkan reasoning):
+{"role": [{"system":"...","user":"...","assistant":"..."}]}
+
+## Semua nya harus di campur, dan harus ada semua.
+## agar model tidak terpusat pada beberapa tag saja.

@@ -1,0 +1,240 @@
+Bilangan bulat terdiri atas bilangan negatif, nol, dan bilangan positif.
+Urutan pengerjaan operasi hitung: kerjakan kurung, lalu pangkat atau akar, lalu kali atau bagi, terakhir tambah atau kurang.
+Hitung 12 + 3 × 4 dengan mendahulukan perkalian sehingga hasilnya 12 + 12 = 24.
+Hitung (12 + 3) × 4 dengan mendahulukan kurung sehingga hasilnya 15 × 4 = 60.
+Hitung 25 − 8 ÷ 2 dengan mendahulukan pembagian sehingga hasilnya 25 − 4 = 21.
+Hitung 7 × (6 − 2) + 5 sehingga 7 × 4 + 5 = 33.
+Sifat komutatif penjumlahan menyatakan a + b = b + a.
+Sifat asosiatif perkalian menyatakan (a × b) × c = a × (b × c).
+Sifat distributif menyatakan a × (b + c) = a × b + a × c.
+Contoh distributif: 6 × (10 + 3) = 60 + 18 = 78.
+Perkalian dua bilangan negatif menghasilkan bilangan positif, misalnya (−4) × (−5) = 20.
+Perkalian bilangan negatif dengan positif menghasilkan negatif, misalnya (−4) × 5 = −20.
+Jumlahkan −18 + 7 sehingga hasilnya −11.
+Hitung −9 − (−4) yang sama dengan −9 + 4 = −5.
+Nilai mutlak selalu tidak negatif, contohnya |−7| = 7.
+Pecahan senilai diperoleh dengan mengali atau membagi pembilang dan penyebut dengan bilangan sama, misalnya 2/4 = 1/2.
+Jumlahkan 1/3 + 1/4 dengan menyamakan penyebut menjadi 4/12 + 3/12 = 7/12.
+Kurangkan 5/6 − 1/3 dengan menyamakan penyebut menjadi 5/6 − 2/6 = 3/6 = 1/2.
+Kalikan 2/3 × 3/5 sehingga diperoleh 6/15 = 2/5.
+Bagi 3/4 oleh 2/5 dengan membalik pecahan kedua menjadi 3/4 × 5/2 = 15/8.
+Pecahan campuran 2 1/3 sama dengan 7/3.
+Desimal 0,75 sama dengan 75/100 atau 3/4.
+Persen berarti per seratus, sehingga 45% = 45/100 = 0,45.
+Hitung 20% dari 150 dengan 0,2 × 150 = 30.
+Hitung 15% dari 80 dengan 0,15 × 80 = 12.
+Barang seharga Rp200.000 didiskon 25%, potongannya Rp50.000 dan harga bayar menjadi Rp150.000.
+Tentukan persentase 18 dari 60 dengan 18/60 × 100% = 30%.
+Kenaikan dari 40 menjadi 50 setara 10/40 × 100% = 25%.
+Penurunan dari 80 menjadi 60 setara 20/80 × 100% = 25%.
+Bunga tunggal dihitung B = M × r × t; modal Rp1.000.000, bunga 5% per tahun, dua tahun menghasilkan Rp100.000.
+Perbandingan 3 : 5 dengan jumlah 40 membagi menjadi 15 dan 25.
+Skala 1 : 200 dengan panjang gambar 4 cm mewakili 800 cm atau 8 m.
+Kecepatan sama dengan jarak dibagi waktu, sehingga 120 km dalam 2 jam berarti 60 km/jam.
+Waktu sama dengan jarak dibagi kecepatan, sehingga 150 km pada 50 km/jam memerlukan 3 jam.
+Jarak sama dengan kecepatan dikali waktu, sehingga 60 km/jam selama 2,5 jam menempuh 150 km.
+Variabel adalah lambang pengganti bilangan, misalnya x atau y.
+Selesaikan 3x + 5 = 20 sehingga 3x = 15 dan x = 5.
+Selesaikan 2x − 7 = 11 sehingga 2x = 18 dan x = 9.
+Selesaikan 5(x − 2) = 20 sehingga x − 2 = 4 dan x = 6.
+Selesaikan x/3 + 4 = 10 sehingga x/3 = 6 dan x = 18.
+Selesaikan 4x + 3 = 2x + 11 sehingga 2x = 8 dan x = 4.
+Pertidaksamaan 2x + 1 < 9 menghasilkan x < 4.
+Jika pertidaksamaan dikali bilangan negatif, tanda berbalik: −3x > 12 menjadi x < −4.
+Sistem x + y = 10 dan x − y = 4 memiliki penyelesaian x = 7 dan y = 3.
+Sistem 2x + y = 11 dan x + y = 7 memiliki penyelesaian x = 4 dan y = 3.
+Metode substitusi pada y = 2x dan x + y = 9 memberi 3x = 9 sehingga x = 3 dan y = 6.
+Metode eliminasi pada 3x + 2y = 16 dan x − 2y = 0 memberi y = 2 dan x = 4.
+Faktorkan x² + 5x + 6 menjadi (x + 2)(x + 3).
+Faktorkan x² − 9 menjadi (x − 3)(x + 3).
+Faktorkan x² − 7x + 12 menjadi (x − 3)(x − 4).
+Bentuk umum persamaan kuadrat adalah ax² + bx + c = 0 dengan a ≠ 0.
+Rumus abc: x = (−b ± √(b² − 4ac)) / 2a.
+Persamaan x² − 5x + 6 = 0 berakar x = 2 dan x = 3.
+Diskriminan dihitung D = b² − 4ac.
+Jika D > 0 terdapat dua akar real berbeda, jika D = 0 akar kembar, jika D < 0 tidak ada akar real.
+Untuk x² + 2x + 5 nilai diskriminannya 4 − 20 = −16 sehingga tidak memiliki akar real.
+Jumlah akar persamaan kuadrat adalah −b/a dan hasil kali akarnya c/a.
+Grafik fungsi kuadrat y = ax² + bx + c memiliki sumbu simetri x = −b/(2a).
+Fungsi y = x² − 4x + 3 memiliki sumbu simetri x = 2 dan nilai minimum −1.
+Titik puncak fungsi y = x² − 4x + 3 adalah (2, −1).
+Sifat pangkat: a^m × a^n = a^(m+n).
+Sifat pangkat: a^m ÷ a^n = a^(m−n).
+Sifat pangkat: (a^m)^n = a^(mn).
+Bilangan berpangkat nol bernilai 1 untuk a ≠ 0.
+Pangkat negatif berarti kebalikan, a^(−n) = 1/a^n.
+Hitung 2³ × 2² = 2⁵ = 32.
+Hitung (3²)³ = 3⁶ = 729.
+Hitung 5^(−2) = 1/25 = 0,04.
+Akar kuadrat 144 adalah 12.
+√(16 × 25) = 4 × 5 = 20.
+√50 disederhanakan menjadi 5√2 karena 50 = 25 × 2.
+Merasionalkan 3/√2 menghasilkan 3√2/2.
+Notasi ilmiah 0,00045 ditulis 4,5 × 10⁻⁴.
+Suku ke-n barisan aritmetika dihitung Un = a + (n−1)b.
+Barisan 3, 7, 11, ... memiliki beda 4 sehingga U10 = 3 + 9 × 4 = 39.
+Jumlah n suku pertama aritmetika Sn = n/2 (2a + (n−1)b).
+Untuk barisan 3, 7, 11, ... jumlah 10 suku pertama adalah 5(6 + 36) = 210.
+Suku ke-n barisan geometri dihitung Un = a × r^(n−1).
+Barisan 2, 6, 18, ... memiliki rasio 3 sehingga U6 = 2 × 3⁵ = 486.
+Jumlah n suku geometri Sn = a(rⁿ − 1)/(r − 1) untuk r ≠ 1.
+Jumlah empat suku pertama 2, 6, 18, 54 adalah 80.
+Luas persegi bersisi 7 cm adalah 49 cm².
+Keliling persegi bersisi 7 cm adalah 28 cm.
+Luas persegi panjang 12 cm × 8 cm adalah 96 cm².
+Keliling persegi panjang 12 cm × 8 cm adalah 2(12 + 8) = 40 cm.
+Luas segitiga beralas 10 cm dan tinggi 6 cm adalah 30 cm².
+Keliling segitiga adalah jumlah panjang ketiga sisinya.
+Luas jajargenjang beralas 9 cm dan tinggi 5 cm adalah 45 cm².
+Luas trapesium dengan sisi sejajar 8 cm dan 14 cm serta tinggi 5 cm adalah 55 cm².
+Luas belah ketupat dengan diagonal 10 cm dan 12 cm adalah 60 cm².
+Keliling lingkaran berjari-jari 7 cm adalah 44 cm dengan π = 22/7.
+Luas lingkaran berjari-jari 7 cm adalah 154 cm².
+Panjang busur berudut 90° pada lingkaran berjari-jari 14 cm adalah 22 cm.
+Luas juring berudut 90° pada lingkaran berjari-jari 14 cm adalah 154 cm².
+Jumlah sudut dalam segitiga adalah 180°.
+Jumlah sudut dalam segi-n adalah (n − 2) × 180°, sehingga segi lima berjumlah 540°.
+Besar sudut luar segi banyak beraturan adalah 360°/n.
+Teorema Pythagoras menyatakan c² = a² + b² pada segitiga siku-siku.
+Segitiga dengan kaki 3 cm dan 4 cm memiliki sisi miring 5 cm.
+Segitiga dengan kaki 6 cm dan 8 cm memiliki sisi miring 10 cm.
+Jika sisi miring 13 cm dan satu kaki 5 cm, kaki lainnya 12 cm.
+Tripel Pythagoras antara lain 3-4-5, 5-12-13, 8-15-17, dan 7-24-25.
+Volume kubus bersisi 4 cm adalah 64 cm³.
+Luas permukaan kubus bersisi 4 cm adalah 96 cm².
+Volume balok 5 cm × 4 cm × 3 cm adalah 60 cm³.
+Luas permukaan balok 5 cm × 4 cm × 3 cm adalah 2(20 + 15 + 12) = 94 cm².
+Volume tabung berjari-jari 7 cm dan tinggi 10 cm adalah 1.540 cm³.
+Luas permukaan tabung berjari-jari 7 cm dan tinggi 10 cm adalah 748 cm².
+Volume kerucut berjari-jari 7 cm dan tinggi 9 cm adalah 462 cm³.
+Volume bola berjari-jari 3 cm adalah 36π cm³ atau sekitar 113,04 cm³.
+Luas permukaan bola berjari-jari 3 cm adalah 36π cm².
+Volume limas dengan luas alas 36 cm² dan tinggi 10 cm adalah 120 cm³.
+Volume prisma dihitung dengan mengalikan luas alas dengan tinggi.
+Jika semua panjang rusuk diperbesar dua kali, volume bangun menjadi delapan kali.
+Rata-rata dihitung dengan membagi jumlah data dengan banyak data.
+Rata-rata data 6, 7, 8, 9, 10 adalah 40/5 = 8.
+Median data 3, 5, 7, 9, 11 adalah 7.
+Median data 2, 4, 6, 8 adalah (4 + 6)/2 = 5.
+Modus data 2, 3, 3, 4, 5 adalah 3.
+Jangkauan data dengan nilai terbesar 15 dan terkecil 4 adalah 11.
+Kuartil membagi data terurut menjadi empat bagian sama banyak.
+Pada data 1, 2, 3, 4, 5, 6, 7, 8 diperoleh Q1 = 2,5 dan Q3 = 6,5.
+Simpangan rata-rata adalah jumlah selisih mutlak terhadap rata-rata dibagi banyak data.
+Ragam dihitung dengan menjumlahkan kuadrat selisih terhadap rata-rata lalu dibagi banyak data.
+Simpangan baku adalah akar kuadrat dari ragam.
+Data 4, 6, 8 memiliki rata-rata 6 dan ragam 8/3 atau sekitar 2,67.
+Rata-rata gabungan dihitung (n₁x̄₁ + n₂x̄₂)/(n₁ + n₂).
+Dua puluh siswa rata-rata 70 dan tiga puluh siswa rata-rata 80 menghasilkan rata-rata gabungan 76.
+Peluang kejadian sama dengan banyak hasil yang diharapkan dibagi banyak hasil yang mungkin.
+Peluang muncul angka 4 pada satu dadu adalah 1/6.
+Peluang muncul bilangan genap pada satu dadu adalah 3/6 = 1/2.
+Peluang muncul gambar pada satu koin adalah 1/2.
+Peluang dua koin keduanya muncul gambar adalah 1/4.
+Peluang komplemen dihitung P(A') = 1 − P(A).
+Jika P(A) = 0,3 maka peluang komplemennya 0,7.
+Frekuensi harapan sama dengan peluang kejadian dikali banyak percobaan.
+Peluang 0,2 pada 500 percobaan menghasilkan frekuensi harapan 100.
+Peluang kejadian mustahil adalah 0 dan peluang kejadian pasti adalah 1.
+Tiga buku dijual Rp15.000 sehingga harga satu buku Rp5.000.
+Jika empat pensil berharga Rp6.000, maka sepuluh pensil berharga Rp15.000.
+Enam pekerja menyelesaikan pekerjaan dalam 12 hari, sehingga delapan pekerja memerlukan 9 hari.
+Campuran dua bagian gula dan tiga bagian tepung seberat 500 g memuat 200 g gula.
+Umur ayah tiga kali umur anak dan jumlahnya 48 tahun, sehingga anak 12 tahun dan ayah 36 tahun.
+Taman berbentuk persegi panjang berkeliling 60 m dengan panjang 20 m memiliki lebar 10 m.
+Luas taman berukuran 20 m × 10 m adalah 200 m².
+Uang Rp500.000 dibagi dengan perbandingan 3 : 2 menjadi Rp300.000 dan Rp200.000.
+Suhu 10°C turun 3°C setiap jam selama 4 jam sehingga menjadi −2°C.
+Kapal menyelam 20 m lalu naik 8 m sehingga berada 12 m di bawah permukaan laut.
+Rata-rata lima bilangan adalah 12 sehingga jumlah kelima bilangan tersebut 60.
+Jika empat bilangan berjumlah 44, bilangan kelima agar rata-rata 12 adalah 16.
+FPB dari 24 dan 36 adalah 12, sedangkan KPK keduanya 72.
+Faktorisasi prima 60 adalah 2² × 3 × 5.
+Bilangan prima terkecil adalah 2, diikuti 3, 5, 7, 11, dan 13.
+Suatu bilangan habis dibagi 3 jika jumlah angka-angkanya kelipatan 3.
+Suatu bilangan habis dibagi 4 jika dua angka terakhirnya membentuk kelipatan 4.
+Suatu bilangan habis dibagi 9 jika jumlah angka-angkanya kelipatan 9.
+KPK digunakan untuk menyamakan penyebut pecahan.
+KPK dari 4 dan 6 adalah 12 sehingga 1/4 + 1/6 = 3/12 + 2/12 = 5/12.
+Logaritma ᵃlog b = c berarti aᶜ = b.
+²log 8 = 3 karena 2³ = 8.
+³log 81 = 4 karena 3⁴ = 81.
+Logaritma basis 10 dari 100 adalah 2.
+Sifat logaritma: ᵃlog (b × c) = ᵃlog b + ᵃlog c.
+Sifat logaritma: ᵃlog (b/c) = ᵃlog b − ᵃlog c.
+Sifat logaritma: ᵃlog bⁿ = n × ᵃlog b.
+²log 16 = ²log 2⁴ = 4.
+Sinus sudut adalah perbandingan sisi depan terhadap sisi miring.
+Kosinus sudut adalah perbandingan sisi samping terhadap sisi miring.
+Tangen sudut adalah perbandingan sisi depan terhadap sisi samping.
+Nilai sin 30° = 1/2, cos 30° = √3/2, dan tan 30° = √3/3.
+Nilai sin 45° = cos 45° = √2/2.
+Nilai sin 60° = √3/2 dan cos 60° = 1/2.
+Identitas trigonometri dasar menyatakan sin²θ + cos²θ = 1.
+Tangen dapat ditulis sebagai perbandingan sinus dan kosinus, tan θ = sin θ / cos θ.
+Segitiga siku-siku dengan sudut 30° dan sisi miring 10 cm memiliki sisi depan 5 cm.
+Gradien garis melalui (1, 2) dan (3, 6) adalah (6 − 2)/(3 − 1) = 2.
+Persamaan garis y = mx + c memiliki gradien m dan memotong sumbu y di titik (0, c).
+Garis dengan gradien 2 melalui (0, 3) memiliki persamaan y = 2x + 3.
+Dua garis sejajar memiliki gradien yang sama.
+Dua garis saling tegak lurus jika hasil kali gradiennya −1.
+Jika satu garis bergradien 2, garis yang tegak lurus padanya bergradien −1/2.
+Jarak dua titik dihitung √((x₂ − x₁)² + (y₂ − y₁)²).
+Jarak (1, 2) ke (4, 6) adalah √(9 + 16) = 5 satuan.
+Titik tengah dua titik dihitung ((x₁ + x₂)/2, (y₁ + y₂)/2).
+Titik tengah (2, 4) dan (6, 8) adalah (4, 6).
+Hasil 17 × 23 adalah 391.
+Hasil 144 ÷ 12 adalah 12.
+Kuadrat dari 15 adalah 225.
+Nilai 2⁷ adalah 128.
+Jumlah 999 + 1.001 adalah 2.000.
+Hasil 25 × 4 adalah 100.
+Tiga per empat dari 240 adalah 180.
+Bilangan 0,25 sama dengan 1/4 atau 25%.
+Hasil 1,5 × 4 adalah 6.
+Hasil 7,2 ÷ 0,8 adalah 9.
+Pembulatan 4,67 ke satu angka desimal menghasilkan 4,7.
+Taksiran 198 × 5 diperoleh dari 200 × 5 = 1.000.
+Hasil 100 − 37 adalah 63.
+Mobil menempuh 240 km dengan 20 liter bensin sehingga konsumsinya 12 km per liter.
+Jika satu liter bensin cukup untuk 12 km, perjalanan 240 km memerlukan 20 liter.
+Tali sepanjang 3/4 m dipotong 1/2 m menyisakan 1/4 m.
+Upah 8 hari sebesar Rp960.000 berarti upah per hari Rp120.000.
+Tabungan Rp400.000 bertambah 15% sehingga menjadi Rp460.000.
+Lima kotak beratnya 12,5 kg sehingga tiap kotak 2,5 kg.
+Debit air 600 liter dalam 4 menit sama dengan 150 liter per menit.
+Volume 600 liter dengan debit 150 liter per menit terisi dalam 4 menit.
+Suhu lima hari berturut-turut 27, 28, 26, 29, dan 30 memiliki rata-rata 28.
+Nilai 60, 70, 80, 90, 70, 80, 70 memiliki modus 70 dan rata-rata sekitar 74,3.
+Peluang terambil bola merah dari 5 bola merah dan 3 bola biru adalah 5/8.
+Peluang terambil bola biru dari 5 bola merah dan 3 bola biru adalah 3/8.
+Keliling lingkaran berjari-jari 10 cm adalah 62,8 cm dengan π = 3,14.
+Luas lingkaran berdiameter 20 cm adalah 314 cm².
+Volume bola berjari-jari 6 cm sekitar 904,3 cm³ dengan π = 3,14.
+Luas selimut tabung berjari-jari 7 cm dan tinggi 10 cm adalah 440 cm².
+Luas selimut kerucut dihitung πrs dengan s panjang garis pelukis.
+Garis pelukis kerucut dihitung s = √(r² + t²), sehingga r = 3 cm dan t = 4 cm memberi s = 5 cm.
+Luas selimut kerucut berjari-jari 3 cm dan tinggi 4 cm adalah 15π atau sekitar 47,1 cm².
+Bentuk √18 + √8 disederhanakan menjadi 3√2 + 2√2 = 5√2.
+Kuadrat dari √5 adalah 5.
+Kuadrat dari 2√3 adalah 12.
+Sifat akar menyatakan √(a/b) = √a/√b sehingga √(9/16) = 3/4.
+Hasil 2√3 × 3√2 adalah 6√6.
+Merasionalkan 1/(√3 − 1) menghasilkan (√3 + 1)/2.
+Persamaan |x| = 5 memiliki penyelesaian x = 5 atau x = −5.
+Persamaan |x − 3| = 2 memiliki penyelesaian x = 5 atau x = 1.
+Persamaan 2^x = 32 memiliki penyelesaian x = 5.
+Persamaan 3^(x+1) = 27 memberi x + 1 = 3 sehingga x = 2.
+Pertidaksamaan x² − 5x + 6 < 0 terpenuhi pada 2 < x < 3.
+Pertidaksamaan x² − 4 ≥ 0 terpenuhi pada x ≤ −2 atau x ≥ 2.
+Kecepatan rata-rata dua perjalanan sama panjang dihitung 2v₁v₂/(v₁ + v₂).
+Kecepatan 40 km/jam dan 60 km/jam memberi rata-rata 48 km/jam.
+Bunga majemuk dihitung M(1 + r)^t, sehingga Rp1.000.000 pada 10% selama dua tahun menjadi Rp1.210.000.
+Cicilan pinjaman dihitung dengan konsep bunga majemuk dan anuitas.
+Neto sama dengan bruto dikurangi tara; bruto 50 kg dengan tara 2% memberi neto 49 kg.
+Untung sama dengan harga jual dikurangi harga beli.
+Persentase untung sama dengan untung dibagi harga beli dikali 100%.
+Barang dibeli Rp80.000 dan dijual Rp100.000 menghasilkan untung 25%.
+Modal Rp100.000 dengan kerugian Rp20.000 berarti rugi 20%.
+Harga Rp250.000 setelah pajak 10% menjadi Rp275.000.
+PPN 11% dari Rp300.000 adalah Rp33.000.
