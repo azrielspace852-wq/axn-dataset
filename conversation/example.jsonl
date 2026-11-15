@@ -1,25 +1,27 @@
 ## low, medium, high, max.
-{"thinking-level":"...","role": [{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
-low, medium, high, max, ultra
+{"thinking-level":"...","role":[{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"thinking-level":"...","messages":[{"role":"user","content":"..."},{"role":"assistant","content":"<thinking>...</thinking><output>...</output>"}]}
 
 # tanpa thinking level (otomatis):
-{"role": [{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]} 
+{"role":[{"user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"messages":[{"role":"user","content":"..."},{"role":"assistant","content":"..."}]}
 
 # untuk request ringan/sederhana (menon aktifkan reasoning):
-{"role": [{"user":"...","assistant":"..."}]}
+{"role":[{"user":"...","assistant":"..."}]}
+{"messages":[{"role":"user","content":"..."},{"role":"assistant","content":"..."}]}
 
 # ---
 
-# untuk instructions:
+# untuk system prompt:
 
 ## low, medium, high, max.
-{"thinking-level":"...","role": [{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"thinking-level":"...","role":[{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"thinking-level":"...","messages":[{"role":"system","content":"..."},{"role":"user","content":"..."},{"role":"assistant","content":"<thinking>...</thinking><output>...</output>"}]}
 
 # tanpa thinking level (otomatis):
-{"role": [{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"role":[{"system":"...","user":"...","assistant":"<thinking>...</thinking>\n<output>...</output>"}]}
+{"messages":[{"role":"system","content":"..."},{"role":"user","content":"..."},{"role":"assistant","content":"<thinking>...</thinking><output>...</output>"}]}
 
 # untuk pertanyaan ringan/sederhana (menon aktifkan reasoning):
-{"role": [{"system":"...","user":"...","assistant":"..."}]}
-
-## Semua nya harus di campur, dan harus ada semua.
-## agar model tidak terpusat pada beberapa tag saja.
+{"role":[{"system":"...","user":"...","assistant":"..."}]}
+{"messages":[{"role":"system","content":"..."},{"role":"user","content":"..."},{"role":"assistant","content":"..."}]}
